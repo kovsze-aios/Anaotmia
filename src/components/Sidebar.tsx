@@ -51,22 +51,22 @@ const anatomyLinks = [
 ];
 
 const biologyLinks = [
-  { href: "/theory/biologia#cytologia", label: "🧬 Cytologia" },
-  { href: "/theory/biologia#genetyka", label: "🧬 Genetyka" },
-  { href: "/theory/biologia#metabolizm", label: "⚡ Metabolizm" },
-  { href: "/theory/biologia#botanika", label: "🌿 Botanika" },
-  { href: "/theory/biologia#zoologia", label: "🐾 Zoologia" },
-  { href: "/theory/biologia#czlowiek", label: "🧍 Anatomia i fizjologia człowieka" },
-  { href: "/theory/biologia#ekologia", label: "🌍 Ekologia" },
+  { href: "/theory/biologia", label: "🧬 Cytologia" },
+  { href: "/theory/biologia", label: "🧬 Genetyka" },
+  { href: "/theory/biologia", label: "⚡ Metabolizm" },
+  { href: "/theory/biologia", label: "🌿 Botanika" },
+  { href: "/theory/biologia", label: "🐾 Zoologia" },
+  { href: "/theory/biologia", label: "🧍 Anatomia i fizjologia człowieka" },
+  { href: "/theory/biologia", label: "🌍 Ekologia" },
 ];
 
 const chemistryLinks = [
-  { href: "/theory/chemia#atom", label: "⚛️ Budowa atomu" },
-  { href: "/theory/chemia#stechiometria", label: "⚖️ Stechiometria" },
-  { href: "/theory/chemia#nieorganiczna", label: "🧪 Chemia nieorganiczna" },
-  { href: "/theory/chemia#organiczna", label: "🔬 Chemia organiczna" },
-  { href: "/theory/chemia#fizyczna", label: "📊 Chemia fizyczna" },
-  { href: "/theory/chemia#reakcje", label: "⚗️ Reakcje i mechanizmy" },
+  { href: "/theory/chemia", label: "⚛️ Budowa atomu" },
+  { href: "/theory/chemia", label: "⚖️ Stechiometria" },
+  { href: "/theory/chemia", label: "🧪 Chemia nieorganiczna" },
+  { href: "/theory/chemia", label: "🔬 Chemia organiczna" },
+  { href: "/theory/chemia", label: "📊 Chemia fizyczna" },
+  { href: "/theory/chemia", label: "⚗️ Reakcje i mechanizmy" },
 ];
 
 /* ─── Sidebar panel (desktop persistent + mobile drawer) ─── */

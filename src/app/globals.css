@@ -1480,6 +1480,21 @@ main hr {
 
   .textbook-content {
     padding: 0 0 40px;
+    max-width: 100%;
+  }
+
+  .textbook-article__title {
+    padding: 0 16px;
+    font-size: 24px;
+  }
+
+  .textbook-article__content {
+    padding: 0 16px;
+  }
+
+  .textbook-article__quick-recall {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   .textbook-welcome__domains {
@@ -2130,6 +2145,8 @@ main hr {
 .app-layout {
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .app-main {
@@ -2137,6 +2154,8 @@ main hr {
   margin-left: 280px;
   padding-top: 30px;
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ===== Global Sidebar (desktop persistent) ===== */
