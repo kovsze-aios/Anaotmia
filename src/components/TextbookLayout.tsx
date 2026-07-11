@@ -37,9 +37,9 @@ export function TextbookLayout({
       >
         <div className="textbook-sidebar__header">
           <a href="/" className="textbook-sidebar__home">
-            <span>←</span> Home
+            <span>←</span> Strona główna
           </a>
-          <h2>Smart Textbook</h2>
+          <h2>Podręcznik</h2>
           <button
             className="textbook-sidebar__close"
             onClick={() => setSidebarOpen(false)}
