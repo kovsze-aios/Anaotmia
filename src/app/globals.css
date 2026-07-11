@@ -188,6 +188,8 @@
 
 /* Topbar */
 .l-topbar {
+  position: relative;
+  z-index: 50;
   width: 100%;
   height: 30px;
   background: #ffffff;
@@ -1583,6 +1585,8 @@ main hr {
 .topbar-dropdown {
   position: relative;
   display: inline-flex;
+  padding-bottom: 4px; /* extend hover zone below trigger */
+  margin-bottom: -4px; /* compensate so layout doesn't shift */
 }
 
 .topbar-dropdown__trigger {
@@ -1602,17 +1606,27 @@ main hr {
   line-height: 1;
 }
 
-.topbar-dropdown__menu {
+/* Invisible bridge that catches mouse between trigger and menu */
+.topbar-dropdown::after {
+  content: "";
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 8px;
+  right: 0;
+  height: 8px;
+  z-index: 51;
+}
+
+.topbar-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
   min-width: 220px;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  z-index: 100;
+  z-index: 50;
   padding: 6px 0;
   animation: dropdown-fade-in 0.15s ease;
 }

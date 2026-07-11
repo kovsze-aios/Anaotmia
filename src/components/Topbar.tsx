@@ -91,16 +91,6 @@ export function Topbar() {
               { href: "/matura/chemia?mode=year", label: "Chemia - Arkusz po roku" },
             ]}
           />
-
-          <a
-            href="https://www.buymeacoffee.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="topbar-coffee"
-            title="Postaw kawę"
-          >
-            ☕
-          </a>
         </div>
       </div>
     </div>
