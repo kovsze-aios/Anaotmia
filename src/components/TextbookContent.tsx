@@ -14,22 +14,6 @@ export function TextbookContent({ section }: TextbookContentProps) {
     <article className="textbook-article">
       <h1 className="textbook-article__title">{section.title}</h1>
 
-      {section.recallQuestions.length > 0 && (
-        <div className="textbook-article__quick-recall">
-          <p className="text-sm font-medium mb-2">
-            📝 Pytania aktywnego przypominania:
-          </p>
-          {section.recallQuestions.map((q) => (
-            <ActiveRecall
-              key={q.id}
-              question={q.question}
-              answer={q.answer}
-              examRef={q.examRef}
-            />
-          ))}
-        </div>
-      )}
-
       <div className="textbook-article__content">
         {section.content.map((block, index) => {
           switch (block.type) {
@@ -94,6 +78,22 @@ export function TextbookContent({ section }: TextbookContentProps) {
           }
         })}
       </div>
+
+      {section.recallQuestions.length > 0 && (
+        <div className="textbook-article__recall-section">
+          <h3 className="textbook-article__recall-header">
+            Sprawdź swoją wiedzę (Active Recall)
+          </h3>
+          {section.recallQuestions.map((q) => (
+            <ActiveRecall
+              key={q.id}
+              question={q.question}
+              answer={q.answer}
+              examRef={q.examRef}
+            />
+          ))}
+        </div>
+      )}
     </article>
   );
 }
