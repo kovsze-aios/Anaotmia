@@ -13,7 +13,7 @@ export const sensory: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Warstwy gałki ocznej (Ryc. 32, 33)",
+          text: "Warstwy gałki ocznej",
         },
         {
           type: "paragraph",
@@ -39,7 +39,7 @@ export const sensory: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Droga promieni świetlnych i elementy załamujące (Ryc. 34)",
+          text: "Droga promieni świetlnych i elementy załamujące",
         },
         {
           type: "paragraph",
@@ -68,7 +68,7 @@ export const sensory: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Aparat ochronny i ruchowy oka (Ryc. 35)",
+          text: "Aparat ochronny i ruchowy oka",
         },
         {
           type: "paragraph",
@@ -92,25 +92,25 @@ export const sensory: TextbookDomain = {
           id: "sen-5",
           question: "Jakie są trzy warstwy gałki ocznej (od zewnątrz)?",
           answer: "Włóknista (rogówka + twardówka), naczyniowa (tęczówka + ciało rzęskowe + naczyniówka), siatkówka (część wzrokowa + ślepa).",
-          examRef: "Ryc. 32",
+          examRef: "",
         },
         {
           id: "sen-6",
           question: "Które nerwy czaszkowe unerwiają mięśnie zewnętrzne oka?",
           answer: "III (okoruchowy), IV (bloczkowy — m. skośny górny), VI (odwodzący — m. prosty boczny).",
-          examRef: "Ryc. 35",
+          examRef: "",
         },
         {
           id: "sen-7",
           question: "Jaka jest droga odprowadzania łez z oka?",
           answer: "Gruczoł łzowy → punkty łzowe → kanaliki → woreczek łzowy → przewód nosowo-łzowy → jama nosowa.",
-          examRef: "Ryc. 35",
+          examRef: "",
         },
         {
           id: "sen-8",
           question: "Dlaczego tarcza nerwu wzrokowego nazywana jest plamą ślepą?",
           answer: "Ponieważ nie zawiera receptorów (czopków ani pręcików) — jest pozbawiona fotoreceptorów.",
-          examRef: "Ryc. 33",
+          examRef: "",
         },
       ],
     },
@@ -121,7 +121,7 @@ export const sensory: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Ucho środkowe (Ryc. 36, 37, 38)",
+          text: "Ucho środkowe",
         },
         {
           type: "paragraph",
@@ -134,7 +134,7 @@ export const sensory: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Ucho wewnętrzne (błędnik) — Ryc. 39",
+          text: "Ucho wewnętrzne (błędnik)",
         },
         {
           type: "paragraph",
@@ -171,31 +171,31 @@ export const sensory: TextbookDomain = {
           id: "sen-9",
           question: "Jakie kosteczki słuchowe znajdują się w uchu środkowym i jak są połączone?",
           answer: "Młoteczek (z błoną bębenkową) → kowadełko → strzemiączko (z okienkiem owalnym).",
-          examRef: "Ryc. 36, 37",
+          examRef: "",
         },
         {
           id: "sen-10",
           question: "Jaka jest funkcja trąbki słuchowej (Eustachiusza)?",
           answer: "Łączy ucho środkowe z gardłem — wyrównuje ciśnienie powietrza.",
-          examRef: "Ryc. 38",
+          examRef: "",
         },
         {
           id: "sen-11",
           question: "Gdzie znajduje się narząd Cortiego i co jest jego bodźcem?",
           answer: "W przewodzie ślimaka (błędnik błoniasty) — fala przychłonki pobudza komórki słuchowe.",
-          examRef: "Ryc. 39",
+          examRef: "",
         },
         {
           id: "sen-12",
           question: "Jaka jest różnica między przychłonką a śródchłonką?",
           answer: "Przychłonka (perilymph) w błędniku kostnym, śródchłonka (endolymph) w błędniku błoniastym.",
-          examRef: "Ryc. 39",
+          examRef: "",
         },
       ],
     },
     {
       id: "smak-wech",
-      title: "Smak i węch (Ryc. 40)",
+      title: "Smak i węch",
       content: [
         {
           type: "heading",
@@ -231,25 +231,25 @@ export const sensory: TextbookDomain = {
           id: "sen-13",
           question: "Który nerw czaszkowy unerwia czuciowo smak przednich 2/3 języka?",
           answer: "CN VII (twarzowy).",
-          examRef: "Ryc. 40",
+          examRef: "",
         },
         {
           id: "sen-14",
           question: "Który nerw unerwia czuciowo smak tylnej 1/3 języka?",
           answer: "CN IX (językowo-gardłowy).",
-          examRef: "Ryc. 40",
+          examRef: "",
         },
         {
           id: "sen-15",
           question: "Jaka jest droga włókien węchowych od jamy nosowej do mózgu?",
           answer: "Nabłonek węchowy → włókna węchowe (przez blaszkę sitową kości sitowej) → opuszka węchowa (bulbus olfactorius).",
-          examRef: "Ryc. 40",
+          examRef: "",
         },
         {
           id: "sen-16",
           question: "Które nerwy czaszkowe unerwiają smak i jaki jest ich zasięg?",
           answer: "CN VII (przednie 2/3 języka), CN IX (tylna 1/3), CN X (okolica nagłośni).",
-          examRef: "Ryc. 40",
+          examRef: "",
         },
       ],
     },

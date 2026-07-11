@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Topbar } from "@/components/Topbar";
-import { Footer } from "@/components/Footer";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import { getBiologiaRecords } from "@/data/biologia";
 
@@ -21,11 +19,8 @@ export default function MaturaBiologiaPage() {
   const topics = [...new Set(questions.map((q) => q.topicCategory))];
 
   return (
-    <main>
-      <div id="panel">
-        <Topbar />
-        <div className="matura-layout">
-          {/* Sidebar */}
+    <div className="matura-layout">
+      {/* Sidebar */}
           <aside className="matura-sidebar">
             <div className="matura-sidebar__header">
               <a href="/matura" className="matura-sidebar__back">
@@ -144,8 +139,5 @@ export default function MaturaBiologiaPage() {
             </div>
           </main>
         </div>
-        <Footer />
-      </div>
-    </main>
-  );
-}
+      );
+    }

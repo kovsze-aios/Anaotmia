@@ -25,7 +25,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Podział mózgowia — anatomiczny vs kliniczny (Ryc. 4, 5)",
+          text: "Podział mózgowia — anatomiczny vs kliniczny",
         },
         {
           type: "paragraph",
@@ -53,13 +53,13 @@ export const nervous: TextbookDomain = {
           id: "ner-13",
           question: "Wymień anatomiczny podział mózgowia (5 części).",
           answer: "Kresomózgowie, międzymózgowie, śródmózgowie, tyłomózgowie wtórne (most + móżdżek), rdzeniomózgowie (rdzeń przedłużony).",
-          examRef: "Ryc. 4",
+          examRef: "",
         },
         {
           id: "ner-14",
           question: "Jakie struktury wchodzą w skład pnia mózgu w podziale klinicznym?",
           answer: "Śródmózgowie, most, rdzeń przedłużony oraz jądra nerwów czaszkowych.",
-          examRef: "Ryc. 5",
+          examRef: "",
         },
       ],
     },
@@ -101,7 +101,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Miejscowa lokalizacja ośrodków korowych (Ryc. 6)",
+          text: "Miejscowa lokalizacja ośrodków korowych",
         },
         {
           type: "paragraph",
@@ -155,19 +155,19 @@ export const nervous: TextbookDomain = {
           id: "ner-15",
           question: "W którym płacie znajduje się ośrodek wzroku?",
           answer: "W płacie potylicznym.",
-          examRef: "Ryc. 6",
+          examRef: "",
         },
         {
           id: "ner-16",
           question: "W których płatach zlokalizowany jest ośrodek mowy?",
           answer: "W płacie czołowym i skroniowym.",
-          examRef: "Ryc. 6",
+          examRef: "",
         },
       ],
     },
     {
       id: "diencephalon-zbiorcza",
-      title: "Zwoje podstawy (jądra podstawne) i międzymózgowie (Ryc. 7, 8)",
+      title: "Zwoje podstawy (jądra podstawne) i międzymózgowie",
       content: [
         {
           type: "heading",
@@ -181,11 +181,11 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Mi niż międzymózgowie (diencephalon)",
+          text: "Międzymózgowie (diencephalon)",
         },
         {
           type: "paragraph",
-          text: "Mi niż międzymózgowie składa się z: wzgórza (thalamus), podwzgórza (hypothalamus), nadwzgórza (epithalamus). Podwzgórze łączy się z przednim płatem przysadki poprzez naczynia wrotne i aksony. Nadwzgórze zawiera szyszynkę (corpus pineale). W obrębie międzymózgowia znajduje się III komora mózgu.",
+          text: "Międzymózgowie składa się z: wzgórza (thalamus), podwzgórza (hypothalamus), nadwzgórza (epithalamus). Podwzgórze łączy się z przednim płatem przysadki poprzez naczynia wrotne i aksony. Nadwzgórze zawiera szyszynkę (corpus pineale). W obrębie międzymózgowia znajduje się III komora mózgu.",
         },
       ],
       recallQuestions: [
@@ -193,30 +193,30 @@ export const nervous: TextbookDomain = {
           id: "ner-17",
           question: "Do czego służy układ pozapiramidowy i jakie jądra do niego należą?",
           answer: "Regulacja napięcia mięśniowego i ruchy automatyczne. Jądro ogoniaste i jądro czerwienne (nucleus ruber).",
-          examRef: "Ryc. 7",
+          examRef: "",
         },
         {
           id: "ner-18",
           question: "Jakie części wchodzą w skład międzymózgowia?",
           answer: "Wzgórze (thalamus), podwzgórze (hypothalamus), nadwzgórze (epithalamus z szyszynką).",
-          examRef: "Ryc. 7, 8",
+          examRef: "",
         },
         {
           id: "ner-19",
           question: "Z czym łączy się podwzgórze i jaka komora znajduje się w międzymózgowiu?",
           answer: "Łączy się z przednim płatem przysadki przez naczynia wrotne i aksony. W międzymózgowiu znajduje się III komora.",
-          examRef: "Ryc. 8",
+          examRef: "",
         },
       ],
     },
     {
       id: "piemn-mozgu-mozdzek",
-      title: "Pień mózgu i móżdżek (Ryc. 9, 10, 11, 12)",
+      title: "Pień mózgu i móżdżek",
       content: [
         {
           type: "heading",
           level: 3,
-          text: "Śródmózgowie (mesencephalon) — Ryc. 9, 10",
+          text: "Śródmózgowie (mesencephalon)",
         },
         {
           type: "paragraph",
@@ -225,7 +225,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Most (pons) i rdzeń przedłużony (medulla oblongata) — Ryc. 11",
+          text: "Most (pons) i rdzeń przedłużony (medulla oblongata)",
         },
         {
           type: "paragraph",
@@ -238,7 +238,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Móżdżek (cerebellum) — Ryc. 12",
+          text: "Móżdżek (cerebellum)",
         },
         {
           type: "paragraph",
@@ -250,36 +250,36 @@ export const nervous: TextbookDomain = {
           id: "ner-20",
           question: "Jakie jądra nerwów czaszkowych znajdują się w śródmózgowiu?",
           answer: "III (okoruchowy) i IV (bloczkowy).",
-          examRef: "Ryc. 9, 10",
+          examRef: "",
         },
         {
           id: "ner-21",
           question: "Które nerwy czaszkowe mają jądra w rdzeniu przedłużonym?",
           answer: "IX (językowo-gardłowy), X (błędny), XI (dodatkowy), XII (podjęzykowy).",
-          examRef: "Ryc. 11",
+          examRef: "",
         },
         {
           id: "ner-22",
           question: "Jakie są funkcje móżdżku?",
           answer: "Stabilizacja, regulacja napięcia mięśniowego, koordynacja ruchowa.",
-          examRef: "Ryc. 12",
+          examRef: "",
         },
         {
           id: "ner-23",
           question: "Jakie ośrodki czynności życiowych znajdują się w rdzeniu przedłużonym?",
           answer: "Ośrodek oddechowy, krążenia i sercowy.",
-          examRef: "Ryc. 11",
+          examRef: "",
         },
       ],
     },
     {
       id: "rdzen-kregowy-opony",
-      title: "Rdzeń kręgowy i opony (Ryc. 13, 14, 15, 16, 17)",
+      title: "Rdzeń kręgowy i opony",
       content: [
         {
           type: "heading",
           level: 3,
-          text: "Topografia rdzenia kręgowego (Ryc. 13, 14)",
+          text: "Topografia rdzenia kręgowego",
         },
         {
           type: "paragraph",
@@ -288,7 +288,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Przekrój poprzeczny rdzenia (Ryc. 15)",
+          text: "Przekrój poprzeczny rdzenia",
         },
         {
           type: "paragraph",
@@ -297,7 +297,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Opony mózgowo-rdzeniowe (Ryc. 16)",
+          text: "Opony mózgowo-rdzeniowe",
         },
         {
           type: "paragraph",
@@ -306,7 +306,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Płyn mózgowo-rdzeniowy i komory (Ryc. 17)",
+          text: "Płyn mózgowo-rdzeniowy i komory",
         },
         {
           type: "paragraph",
@@ -330,25 +330,25 @@ export const nervous: TextbookDomain = {
           id: "ner-24",
           question: "Na jakim poziomie kończy się rdzeń kręgowy i do czego przyczepia się nić końcowa?",
           answer: "Na poziomie L1/L2, przyczepia się do kości guzicznej.",
-          examRef: "Ryc. 13, 14",
+          examRef: "",
         },
         {
           id: "ner-25",
           question: "Jakie funkcje pełnią sznury przednie, tylne i boczne w rdzeniu kręgowym?",
           answer: "Przednie — ruchowe, tylne — czuciowe, boczne — autonomiczne/współczulne.",
-          examRef: "Ryc. 15",
+          examRef: "",
         },
         {
           id: "ner-26",
           question: "Wymień trzy warstwy opon mózgowo-rdzeniowych od zewnątrz.",
           answer: "Opona twarda, pajęczynówka (z ziarnistościami), opona miękka.",
-          examRef: "Ryc. 16",
+          examRef: "",
         },
         {
           id: "ner-27",
           question: "Gdzie krąży płyn mózgowo-rdzeniowy i gdzie jest produkowany?",
           answer: "Krąży w przestrzeni podpajęczynówkowej, produkowany przez splot naczyniówkowy.",
-          examRef: "Ryc. 17",
+          examRef: "",
         },
       ],
     },
@@ -397,7 +397,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Droga piramidowa (Ryc. 18, 19)",
+          text: "Droga piramidowa",
         },
         {
           type: "paragraph",
@@ -406,7 +406,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Droga pozapiramidowa (Ryc. 20)",
+          text: "Droga pozapiramidowa",
         },
         {
           type: "paragraph",
@@ -415,7 +415,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Drogi czuciowe — 3-neuronowe (Ryc. 21)",
+          text: "Drogi czuciowe — 3-neuronowe",
         },
         {
           type: "paragraph",
@@ -431,7 +431,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Drogi autonomiczne (Ryc. 22)",
+          text: "Drogi autonomiczne",
         },
         {
           type: "paragraph",
@@ -489,25 +489,25 @@ export const nervous: TextbookDomain = {
           id: "ner-28",
           question: "Jakie są dwa rodzaje dróg czuciowych (3-neuronowych) i jaka jest ich droga?",
           answer: "Powierzchowne: receptor → róg tylny → wzgórze → płat ciemieniowy. Głębokie: receptor → jądra sznurów tylnych → wzgórze → płat ciemieniowy.",
-          examRef: "Ryc. 21",
+          examRef: "",
         },
         {
           id: "ner-29",
           question: "Ile neuronów tworzy drogę piramidową (ruchy dowolne)?",
           answer: "2 neurony. Droga korowo-jądrowa (do CN III-XII) i korowo-rdzeniowa (do rogów przednich).",
-          examRef: "Ryc. 18, 19",
+          examRef: "",
         },
         {
           id: "ner-30",
           question: "Wymień dwa miejsca wstrząsorodne (szokogenne) w układzie autonomicznym.",
           answer: "Splot słoneczny (solar plexus) i kłębek szyjny (glomus caroticum).",
-          examRef: "Ryc. 22",
+          examRef: "",
         },
       ],
     },
     {
       id: "nerwy-czaszkowe-sploty",
-      title: "Nerwy czaszkowe i sploty nerwów rdzeniowych (Ryc. 23–31)",
+      title: "Nerwy czaszkowe i sploty nerwów rdzeniowych",
       content: [
         {
           type: "heading",
@@ -521,7 +521,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Nerw trójdzielny (V) — Ryc. 23",
+          text: "Nerw trójdzielny (V)",
         },
         {
           type: "paragraph",
@@ -530,7 +530,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Nerw dodatkowy (XI) i podjęzykowy (XII) — Ryc. 24",
+          text: "Nerw dodatkowy (XI) i podjęzykowy (XII)",
         },
         {
           type: "paragraph",
@@ -539,7 +539,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Nerwy rdzeniowe — 31 par (Ryc. 25)",
+          text: "Nerwy rdzeniowe — 31 par",
         },
         {
           type: "paragraph",
@@ -548,7 +548,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Splot szyjny (C1-C4) — Ryc. 26",
+          text: "Splot szyjny (C1-C4)",
         },
         {
           type: "paragraph",
@@ -566,7 +566,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Nerwy międzyżebrowe (Th1-Th12) — Ryc. 27",
+          text: "Nerwy międzyżebrowe (Th1-Th12)",
         },
         {
           type: "paragraph",
@@ -575,7 +575,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Splot lędźwiowy (L1-L4) — Ryc. 28, 30",
+          text: "Splot lędźwiowy (L1-L4)",
         },
         {
           type: "paragraph",
@@ -584,7 +584,7 @@ export const nervous: TextbookDomain = {
         {
           type: "heading",
           level: 3,
-          text: "Splot krzyżowy (L5-S5) — Ryc. 29, 31",
+          text: "Splot krzyżowy (L5-S5)",
         },
         {
           type: "paragraph",
@@ -638,31 +638,31 @@ export const nervous: TextbookDomain = {
           id: "ner-31",
           question: "Wymień czysto czuciowe nerwy czaszkowe.",
           answer: "I (węchowy), II (wzrokowy) i VIII (przedsionkowo-ślimakowy).",
-          examRef: "Ryc. 23",
+          examRef: "",
         },
         {
           id: "ner-32",
           question: "Ile par nerwów rdzeniowych wychodzi z rdzenia kręgowego?",
           answer: "31 par: 8 szyjnych, 12 piersiowych, 5 lędźwiowych, 5 krzyżowych, 1 guziczny.",
-          examRef: "Ryc. 25",
+          examRef: "",
         },
         {
           id: "ner-33",
           question: "Jakie nerwy należą do splotu lędźwiowego i który jest narażony na uszkodzenie przy złamaniu miednicy?",
           answer: "Udowy i zasłonowy. Nerw zasłonowy jest narażony przy złamaniu miednicy.",
-          examRef: "Ryc. 28, 30",
+          examRef: "",
         },
         {
           id: "ner-34",
           question: "Jaki zakres ma splot krzyżowy i jakie nerwy z niego pochodzą?",
           answer: "L5-S5. Nerw kulszowy (największy w ciele) i strzałkowy głęboki (przednia część podudzia).",
-          examRef: "Ryc. 29, 31",
+          examRef: "",
         },
         {
           id: "ner-35",
           question: "Jaki mięsień unerwia nerw dodatkowy (XI)?",
           answer: "Mięsień mostkowo-obojczykowo-sutkowy (SCM) i czworoboczny (trapezius).",
-          examRef: "Ryc. 24",
+          examRef: "",
         },
       ],
     },
