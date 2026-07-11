@@ -28,10 +28,10 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
 
       {revealed && (
         <div className="active-recall-new__answer">
-          <div className="active-recall-new__answer-label">Odpowiedź oficjalna:</div>
+          <div className="active-recall-new__answer-label">Odpowiedz oficjalna:</div>
           <p className="active-recall-new__answer-text">{answer}</p>
           {examRef && (
-            <div className="active-recall-new__examref">Źródło: {examRef}</div>
+            <div className="active-recall-new__examref">Zrodlo: {examRef}</div>
           )}
         </div>
       )}
