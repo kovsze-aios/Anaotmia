@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { LayoutShell } from "@/components/LayoutShell";
 import "./globals.css";
 
 const plutoSansLight = localFont({
@@ -65,9 +64,7 @@ export default function RootLayout({
       lang="pl"
       className={`${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable}`}
     >
-      <body>
-        <LayoutShell>{children}</LayoutShell>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

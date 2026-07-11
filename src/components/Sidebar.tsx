@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 /* ─── Accordion group ─── */
 function AccordionGroup({
@@ -38,7 +38,7 @@ function AccordionGroup({
   );
 }
 
-/* ─── Sidebar nav links ─── */
+/* ─── Nav links ─── */
 const anatomyLinks = [
   { href: "/textbook?domain=osteology", label: "🦴 Osteologia i Artrologia" },
   { href: "/textbook?domain=myology", label: "💪 Miologia" },
@@ -55,9 +55,7 @@ const biologyLinks = [
   { href: "/theory/biologia", label: "🧬 Genetyka" },
   { href: "/theory/biologia", label: "⚡ Metabolizm" },
   { href: "/theory/biologia", label: "🌿 Botanika" },
-  { href: "/theory/biologia", label: "🐾 Zoologia" },
   { href: "/theory/biologia", label: "🧍 Anatomia i fizjologia człowieka" },
-  { href: "/theory/biologia", label: "🌍 Ekologia" },
 ];
 
 const chemistryLinks = [
@@ -65,69 +63,31 @@ const chemistryLinks = [
   { href: "/theory/chemia", label: "⚖️ Stechiometria" },
   { href: "/theory/chemia", label: "🧪 Chemia nieorganiczna" },
   { href: "/theory/chemia", label: "🔬 Chemia organiczna" },
-  { href: "/theory/chemia", label: "📊 Chemia fizyczna" },
-  { href: "/theory/chemia", label: "⚗️ Reakcje i mechanizmy" },
 ];
 
-/* ─── Sidebar panel (desktop persistent + mobile drawer) ─── */
-interface SidebarProps {
+/* ─── Mobile drawer only (no persistent desktop sidebar) ─── */
+export function SidebarDrawer({
+  open,
+  onClose,
+}: {
   open: boolean;
   onClose: () => void;
-}
-
-export function Sidebar({ open, onClose }: SidebarProps) {
+}) {
   return (
     <>
-      {/* Desktop: always-visible sidebar */}
-      <aside className="global-sidebar global-sidebar--desktop">
-        <div className="global-sidebar__header">
-          <Link href="/" className="global-sidebar__brand">
-            Medycyna
-          </Link>
-        </div>
-        <nav className="global-sidebar__nav">
-          <AccordionGroup label="Anatomia (Podręcznik Akademicki)">
-            {anatomyLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="sidebar-link">
-                {l.label}
-              </Link>
-            ))}
-          </AccordionGroup>
-          <AccordionGroup label="Biologia (Formuła 2015)">
-            {biologyLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="sidebar-link">
-                {l.label}
-              </Link>
-            ))}
-          </AccordionGroup>
-          <AccordionGroup label="Chemia (Formuła 2015)">
-            {chemistryLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="sidebar-link">
-                {l.label}
-              </Link>
-            ))}
-          </AccordionGroup>
-
-          <div className="global-sidebar__divider" />
-          <Link href="/" className="sidebar-link sidebar-link--home" onClick={onClose}>
-            🏠 Strona główna
-          </Link>
-        </nav>
-      </aside>
-
-      {/* Mobile backdrop */}
+      {/* Backdrop */}
       <div
         className={`drawer-backdrop ${open ? "drawer-backdrop--visible" : ""}`}
         onClick={onClose}
       />
 
-      {/* Mobile drawer */}
+      {/* Panel */}
       <aside
         className={`mobile-drawer ${open ? "mobile-drawer--open" : ""}`}
         aria-hidden={!open}
       >
         <div className="mobile-drawer__header">
-          <Link href="/" className="global-sidebar__brand" onClick={onClose}>
+          <Link href="/" className="drawer-brand" onClick={onClose}>
             Medycyna
           </Link>
           <button className="mobile-drawer__close" onClick={onClose}>✕</button>
