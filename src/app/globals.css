@@ -1465,3 +1465,88 @@ main hr {
     margin-right: 16px;
   }
 }
+
+/* ===== Minimalist Footer ===== */
+
+.footer-minimal {
+  width: 100%;
+  background: #ececec;
+  padding: 40px 0;
+}
+
+.footer-minimal__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Coffee button */
+.footer-minimal__coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+  color: #5a3e00;
+  font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  cursor: pointer;
+}
+
+.footer-minimal__coffee-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+  color: #3d2a00;
+}
+
+.footer-minimal__coffee-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Social icons row */
+.footer-minimal__socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-minimal__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d5d5d5;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.footer-minimal__social-link:hover {
+  background: #0099ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer-minimal__social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Attribution */
+.footer-minimal__attribution {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  font-family: var(--font-pluto-regular), Helvetica, Arial, sans-serif;
+}

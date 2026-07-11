@@ -70,7 +70,7 @@ const topics = [
 export function Topics() {
   return (
     <div className="topics">
-      <h2>Działy egzaminu Anatomia 2026 WF</h2>
+      <h2>Działy egzaminu Medycyna</h2>
       <p className="topics__subtitle">
         Kliknij dział, aby przejść do interaktywnego podręcznika z pytaniami
         Active Recall

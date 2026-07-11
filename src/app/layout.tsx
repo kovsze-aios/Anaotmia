@@ -32,9 +32,9 @@ const plutoLightItalic = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Anatomia 2026 WF — Inteligentny podręcznik do anatomii",
+  title: "Medycyna — Inteligentny podręcznik do anatomii",
   description:
-    "Darmowy, otwarto-źródłowy podręcznik do anatomii stworzony pod ramy egzaminu Anatomia 2026 WF. Active Recall, pytania egzaminacyjne i materiały z Bochenka i Reichera.",
+    "Darmowy, otwarto-źródłowy podręcznik do anatomii stworzony pod ramy egzaminu z anatomii. Active Recall, pytania egzaminacyjne i materiały z Bochenka i Reichera.",
   metadataBase: new URL("https://anatomia2026.pl"),
   icons: {
     icon: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    siteName: "Anatomia 2026 WF",
+    siteName: "Medycyna",
     url: "https://anatomia2026.pl",
     type: "website",
     images: "/seo/og-image",

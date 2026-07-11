@@ -11,7 +11,7 @@ export function Hero() {
             <strong> do anatomii</strong>
           </h1>
           <p>
-            Stworzony pod ramy egzaminu <strong>Anatomia 2026 WF</strong>.
+            Stworzony pod ramy egzaminu <strong>Medycyna</strong>.
             Oparty na sprawdzonych źródłach — Bochenek, Reicher, Lewiński.
           </p>
           <Link href="/textbook" className="btn btn-primary">

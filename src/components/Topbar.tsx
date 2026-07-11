@@ -5,7 +5,7 @@ export function Topbar() {
     <div className="l-topbar">
       <div className="l-topbar-container">
         <Link href="/" className="logo">
-          <span className="logo-text">Anatomia 2026</span>
+          <span className="logo-text">Medycyna</span>
         </Link>
 
         <div className="topbar-links">
