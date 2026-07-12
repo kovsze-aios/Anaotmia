@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#3A5062",
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="pl"
-      className={`${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable}`}
+      className={`dark ${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable}`}
     >
       <body>{children}</body>
     </html>
