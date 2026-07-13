@@ -253,5 +253,158 @@ export const sensory: TextbookDomain = {
         },
       ],
     },
+    {
+      id: "oko-szczegoly",
+      title: "Oko — szczegółowa anatomia i fizjologia",
+      content: [
+        {
+          type: "heading",
+          level: 3,
+          text: "Komory oka i krążenie cieczy wodnistej",
+        },
+        {
+          type: "paragraph",
+          text: "Gałka oczna zawiera trzy przestrzenie: komorę przednią (camera anterior — między rogówką a tęczówką), komorę tylną (camera posterior — między tęczówką a soczewką) oraz komorę ciała szklistego (camera vitrea — za soczewką, wypełniona ciałem szklistym). Ciecz wodnista (humor aquosus) jest produkowana przez wyrostki ciała rzęskowego do komory tylnej, przepływa przez źrenicę do komory przedniej i jest odprowadzana przez kąt tęczówkowo-rogówkowy (kąt przesączania) do kanału Schlemma (sinus venosus sclerae), a stamtąd do żył nadtwardówkowych. Zaburzenie odpływu cieczy wodnistej prowadzi do wzrostu ciśnienia śródgałkowego i jaskry (glaucoma).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Akomodacja i refrakcja",
+        },
+        {
+          type: "paragraph",
+          text: "Akomodacja to zdolność oka do ostrego widzenia przedmiotów znajdujących się w różnych odległościach. Odbywa się przez zmianę kształtu soczewki: skurcz mięśnia rzęskowego (unerwienie przywspółczulne — CN III, zwój rzęskowy) → rozluźnienie obwódki rzęskowej (włókna Zinna) → soczewka staje się bardziej wypukła (zwiększa moc optyczną) → oko nastawione do bliży. Rozkurcz mięśnia rzęskowego → napięcie obwódki rzęskowej → soczewka spłaszczona → oko nastawione do dali. Z wiekiem soczewka traci elastyczność — starczowzroczność (presbyopia). Rogówka ma największą siłę załamania (~43 dioptrie), soczewka ~15-20 dioptrii (w akomodacji). Całkowita moc optyczna oka ~60 D. Wady refrakcji: krótkowzroczność (myopia — obraz przed siatkówką, korygowane soczewką rozpraszającą −), dalekowzroczność (hyperopia — obraz za siatkówką, korygowane soczewką skupiającą +), astygmatyzm (nieprawidłowa krzywizna rogówki — korygowane soczewką cylindryczną).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Siatkówka — fotoreceptory i droga wzrokowa",
+        },
+        {
+          type: "paragraph",
+          text: "Siatkówka (retina) składa się z 10 warstw. Warstwa fotoreceptorów zawiera: czopki (~6 mln, widzenie barwne — 3 typy opsyn: S — niebieska 420 nm, M — zielona 530 nm, L — czerwona 560 nm; największe zagęszczenie w dołku środkowym — fovea centralis, miejsce najostrzejszego widzenia, same czopki, bez pręcików) i pręciki (~120 mln, widzenie skotopowe/nocne — zawierają rodopsynę, bardzo czułe na światło, nie rozróżniają barw). Fotoreceptory przekazują sygnał do komórek dwubiegunowych, te do komórek zwojowych, których aksony tworzą nerw wzrokowy (CN II). Droga wzrokowa: fotoreceptory → komórki dwubiegunowe → komórki zwojowe → n. wzrokowy → skrzyżowanie wzrokowe (chiasma opticum — krzyżują się włókna z przyśrodkowych połówek siatkówek, czyli z nosowych połówek pola widzenia) → pasmo wzrokowe (tractus opticus) → ciało kolankowate boczne (CGL) wzgórza → promienistość wzrokowa (radiatio optica — pętla Meyera dla górnych kwadrantów, włókna przez płat skroniowy) → kora wzrokowa w płacie potylicznym (pole 17 wg Brodmanna, okolica bruzdy ostrogowej).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Mięśnie zewnętrzne gałki ocznej i ich unerwienie",
+        },
+        {
+          type: "paragraph",
+          text: "Sześć mięśni zewnętrznych gałki ocznej: 4 mięśnie proste (górny, dolny, przyśrodkowy, boczny) i 2 mięśnie skośne (górny i dolny). Wszystkie przyczepiają się do twardówki, rozpoczynając się w pierścieniu ścięgnistym wspólnym (annulus tendineus communis Zinni) na szczycie oczodołu. Unerwienie: CN III (okoruchowy) — m. prosty górny, dolny, przyśrodkowy, m. skośny dolny i m. dźwigacz powieki górnej; CN IV (bloczkowy) — m. skośny górny (przechodzi przez bloczek — trochlea); CN VI (odwodzący) — m. prosty boczny. Wzór na zapamiętanie: LR₆SO₄AR₃ (Lateral Rectus — VI, Superior Oblique — IV, All Rest — III).",
+        },
+      ],
+      recallQuestions: [
+        {
+          id: "sen-17",
+          question: "Jak przebiega droga wzrokowa od siatkówki do kory mózgowej?",
+          answer: "Fotoreceptory → komórki dwubiegunowe → komórki zwojowe → n. wzrokowy → skrzyżowanie wzrokowe (włókna nosowe) → pasmo wzrokowe → CGL wzgórza → promienistość wzrokowa → kora wzrokowa (płat potyliczny, pole 17).",
+          examRef: "",
+        },
+        {
+          id: "sen-18",
+          question: "Które mięśnie zewnętrzne oka unerwione są przez nerwy czaszkowe III, IV i VI?",
+          answer: "CN III: prosty górny/dolny/przyśrodkowy, skośny dolny, dźwigacz powieki. CN IV: skośny górny. CN VI: prosty boczny. Formuła LR₆SO₄AR₃.",
+          examRef: "",
+        },
+        {
+          id: "sen-19",
+          question: "Wyjaśnij mechanizm akomodacji oka.",
+          answer: "Skurcz m. rzęskowego (przywspółczulny, CN III) → rozluźnienie włókien obwódki rzęskowej (Zinna) → soczewka staje się bardziej wypukła → zwiększenie mocy optycznej → widzenie z bliska. Rozkurcz m. rzęskowego → napięcie obwódki → soczewka spłaszczona → widzenie z daleka.",
+          examRef: "",
+        },
+      ],
+    },
+    {
+      id: "ucho-szczegoly",
+      title: "Ucho — szczegółowa anatomia błędnika",
+      content: [
+        {
+          type: "heading",
+          level: 3,
+          text: "Błędnik kostny i błoniasty — szczegółowa budowa",
+        },
+        {
+          type: "paragraph",
+          text: "Błędnik kostny (labyrinthus osseus) wypełniony jest przychłonką (perilymph — skład podobny do płynu zewnątrzkomórkowego, dużo Na⁺). Wewnątrz niego znajduje się błędnik błoniasty (labyrinthus membranaceus) wypełniony śródchłonką (endolymph — skład podobny do płynu wewnątrzkomórkowego, dużo K⁺). Śródchłonka produkowana jest przez prążek naczyniowy (stria vascularis) w przewodzie ślimakowym. Błędnik kostny zawiera: ślimak (cochlea — 2,5 skrętu), przedsionek (vestibulum — z woreczkiem i łagiewką) oraz trzy kanały półkoliste (canales semicirculares — przedni, tylny i boczny, ustawione w 3 prostopadłych płaszczyznach).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Narząd Cortiego — mechanizm słyszenia",
+        },
+        {
+          type: "paragraph",
+          text: "Narząd spiralny (narząd Cortiego) znajduje się na błonie podstawnej w przewodzie ślimakowym (ductus cochlearis — scala media). Zawiera komórki słuchowe (rzęsate): wewnętrzne (IHC — ~3500, właściwe receptory słuchu) i zewnętrzne (OHC — ~12000, wzmacniają sygnał, aktywne skurcze — wzmocnienie ślimakowe). Nad komórkami rzęsatymi znajduje się błona nakrywkowa (membrana tectoria). Drgania przychłonki → wychylenie błony podstawnej → zginanie stereocyliów komórek rzęsatych → otwarcie kanałów jonowych (mechanoelektryczna transdukcja) → depolaryzacja → uwolnienie neuroprzekaźnika (glutaminianu) → pobudzenie neuronów zwoju spiralnego → nerw ślimakowy (część CN VIII). Tonotopia: wysokie częstotliwości kodowane są u podstawy ślimaka, niskie na szczycie.",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Układ przedsionkowy — równowaga",
+        },
+        {
+          type: "paragraph",
+          text: "Receptory równowagi znajdują się w woreczku (sacculus), łagiewce (utriculus) — plamki woreczka i łagiewki (macula sacculi et utriculi), reagujące na przyspieszenie liniowe i grawitację, pokryte błoną statolitową z kryształkami CaCO₃ (otolity/statokonia) — oraz w bańkach kanałów półkolistych (cristae ampullares), reagujących na przyspieszenie kątowe (obrót głowy). Komórki rzęsate przedsionka przekazują sygnały do zwoju przedsionkowego (ganglion vestibulare Scarpae) → nerw przedsionkowy (część CN VIII) → jądra przedsionkowe w pniu mózgu → móżdżek, jądra ruchowe gałkoruchowe (odruch przedsionkowo-oczny VOR), rdzeń kręgowy (droga przedsionkowo-rdzeniowa).",
+        },
+      ],
+      recallQuestions: [
+        {
+          id: "sen-20",
+          question: "Jaka jest różnica między przychłonką a śródchłonką? Gdzie każda występuje?",
+          answer: "Przychłonka (perilymph) — w błędniku kostnym, bogata w Na⁺ (jak płyn zewnątrzkomórkowy). Śródchłonka (endolymph) — w błędniku błoniastym, bogata w K⁺ (jak płyn wewnątrzkomórkowy), produkowana przez prążek naczyniowy.",
+          examRef: "",
+        },
+        {
+          id: "sen-21",
+          question: "Gdzie znajduje się narząd Cortiego i jak zachodzi transdukcja dźwięku?",
+          answer: "W przewodzie ślimakowym (scala media) na błonie podstawnej. Drgania przychłonki → wychylenie błony podstawnej → zginanie stereocyliów komórek rzęsatych → otwarcie kanałów K⁺ → depolaryzacja → uwolnienie glutaminianu → pobudzenie CN VIII.",
+          examRef: "",
+        },
+        {
+          id: "sen-22",
+          question: "Które struktury w uchu wewnętrznym odpowiadają za równowagę?",
+          answer: "Woreczek i łagiewka (plamki — przyspieszenie liniowe, grawitacja, błona statolitowa z otolitami) oraz trzy kanały półkoliste (bańki — cristae ampullares, przyspieszenie kątowe). Sygnały → zwój przedsionkowy Scarpae → CN VIII → jądra przedsionkowe.",
+          examRef: "",
+        },
+      ],
+    },
+    {
+      id: "powloki-wspolne",
+      title: "Powłoka wspólna — skóra i jej przydatki",
+      content: [
+        {
+          type: "heading",
+          level: 3,
+          text: "Warstwy skóry",
+        },
+        {
+          type: "paragraph",
+          text: "Skóra (integumentum commune) jest największym narządem ciała (~1,5-2 m², ~15% masy ciała). Składa się z trzech warstw: (1) Naskórek (epidermis) — nabłonek wielowarstwowy płaski rogowaciejący, unaczyniony wyłącznie przez dyfuzję ze skóry właściwej. Składa się z 5 warstw (od głębokiej): warstwa podstawna (stratum basale — komórki macierzyste, melanocyty produkujące melaninę), warstwa kolczysta (stratum spinosum — desmosomy łączą komórki), warstwa ziarnista (stratum granulosum — ziarna keratohialiny), warstwa jasna (stratum lucidum — tylko w grubej skórze dłoni i podeszew), warstwa rogowa (stratum corneum — martwe keratynocyty, złuszczają się). (2) Skóra właściwa (dermis/corium) — tkanka łączna właściwa, zawiera włókna kolagenowe i elastyczne, naczynia krwionośne, zakończenia nerwowe, gruczoły. Dzieli się na warstwę brodawkowatą (stratum papillare — luźna, bogata w naczynia) i warstwę siateczkową (stratum reticulare — zbita, pęczki kolagenu). (3) Tkanka podskórna (hypodermis/tela subcutanea) — tkanka tłuszczowa, izolacja termiczna i magazynowanie energii.",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Gruczoły skórne i przydatki",
+        },
+        {
+          type: "paragraph",
+          text: "Gruczoły potowe ekrynowe — merokrynowe (wydzielające bez utraty cytoplazmy), rozmieszczone na całym ciele (najgęściej na dłoniach, podeszwach i czole), wydzielają wodnisty pot (regulacja temperatury, unerwienie współczulne cholinergiczne — wyjątek!). Gruczoły potowe apokrynowe — uchodzą do mieszków włosowych (pachy, pachwiny, okolice płciowe), wydzielają gęstszą substancję rozkładaną przez bakterie (zapach ciała), aktywowane w okresie dojrzewania. Gruczoły łojowe (glandulae sebaceae) — holokrynowe, uchodzą do mieszków włosowych, wydzielają sebum (łój skórny), który natłuszcza skórę i włosy. Gruczoły mlekowe (glandulae mammariae) — zmodyfikowane gruczoły potowe apokrynowe. Włosy składają się z łodygi (scapus), korzenia (radix) w mieszku włosowym i cebulki z brodawką włosa. Paznokcie — zrogowaciałe płytki na grzbiecie paliczków dalszych, wyrastają z macierzy paznokcia.",
+        },
+      ],
+      recallQuestions: [
+        {
+          id: "sen-23",
+          question: "Wymień warstwy naskórka od najgłębszej do najbardziej powierzchownej.",
+          answer: "Podstawna (bazalna) → kolczysta → ziarnista → jasna (tylko w skórze grubej) → rogowa. W warstwie podstawnej znajdują się melanocyty produkujące melaninę.",
+          examRef: "",
+        },
+        {
+          id: "sen-24",
+          question: "Jaka jest różnica w unerwieniu gruczołów potowych ekrynowych?",
+          answer: "Są unerwione przez układ współczulny, ale neuroprzekaźnikiem zazwojowym jest acetylocholina (wyjątek od reguły sympatyczno-noradrenergicznej).",
+          examRef: "",
+        },
+      ],
+    },
   ],
 };

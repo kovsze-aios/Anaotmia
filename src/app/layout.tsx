@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="pl"
-      className={`dark ${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable}`}
+      className={`${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable}`}
     >
       <body>{children}</body>
     </html>

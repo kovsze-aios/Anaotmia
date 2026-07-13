@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ActiveRecallProps {
   question: string;
@@ -10,17 +10,29 @@ interface ActiveRecallProps {
 
 export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   const [revealed, setRevealed] = useState(false);
+  const [dark, setDark] = useState(false);
 
-  /* Transform fill-in-the-blank gaps to NOIR-style underscores */
+  /* Watch for .dark class on <html> */
+  useEffect(() => {
+    const html = document.documentElement;
+    setDark(html.classList.contains("dark"));
+
+    const obs = new MutationObserver(() => {
+      setDark(html.classList.contains("dark"));
+    });
+    obs.observe(html, { attributes: true, attributeFilter: ["class"] });
+    return () => obs.disconnect();
+  }, []);
+
+  /* Transform fill-in-the-blank gaps */
   const renderQuestion = (text: string) => {
-    // Split on "__________" or "___" (3+ underscores) and render as styled gaps
     const parts = text.split(/(_{3,})/);
     return parts.map((part, i) => {
       if (/^_{3,}$/.test(part)) {
         return (
           <span
             key={i}
-            className="inline-block border-b-2 border-zinc-600 mx-1 min-w-[80px] text-center"
+            className="inline-block border-b-2 border-current mx-1 min-w-[80px] text-center opacity-50"
             style={{ letterSpacing: "2px" }}
           >
             {"__________"}
@@ -31,10 +43,27 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
     });
   };
 
+  /* Theme-aware answer box styles */
+  const answerBoxClass = dark
+    ? "bg-white text-black font-mono"    // NOIR: high-contrast white block
+    : "bg-zinc-900 text-zinc-100 font-mono"; // Light: stark dark container
+
+  const answerLabelClass = dark
+    ? "text-black"
+    : "text-zinc-100";
+
+  const answerTextClass = dark
+    ? "text-black"
+    : "text-zinc-100";
+
+  const examRefClass = dark
+    ? "text-zinc-600 border-zinc-300"
+    : "text-zinc-400 border-zinc-600";
+
   return (
     <div
       className={`active-recall-new transition-all duration-300 ease-in-out ${
-        revealed ? "ring-1 ring-zinc-700" : ""
+        revealed ? "ring-1 ring-zinc-400" : ""
       }`}
     >
       <button
@@ -55,13 +84,13 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
       </button>
 
       {revealed && (
-        <div className="active-recall-new__answer transition-all duration-300 ease-in-out">
-          <div className="active-recall-new__answer-label">
+        <div className={`active-recall-new__answer transition-all duration-300 ease-in-out ${answerBoxClass}`}>
+          <div className={`active-recall-new__answer-label ${answerLabelClass}`}>
             ▸ Klucz odpowiedzi
           </div>
-          <p className="active-recall-new__answer-text">{answer}</p>
+          <p className={`active-recall-new__answer-text ${answerTextClass}`}>{answer}</p>
           {examRef && (
-            <div className="active-recall-new__examref">
+            <div className={`active-recall-new__examref ${examRefClass}`}>
               Źródło: {examRef}
             </div>
           )}

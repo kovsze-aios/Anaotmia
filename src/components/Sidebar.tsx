@@ -6,6 +6,43 @@ import { useState } from "react";
 /* ─── Accordion group ─── */
 function AccordionGroup({
   label,
+  defaultExpanded = false,
+  children,
+}: {
+  label: string;
+  defaultExpanded?: boolean;
+  children: React.ReactNode;
+}) {
+  const [expanded, setExpanded] = useState(defaultExpanded);
+
+  return (
+    <div className="sidebar-accordion">
+      <button
+        className="sidebar-accordion__trigger"
+        onClick={() => setExpanded(!expanded)}
+        aria-expanded={expanded}
+      >
+        <span>{label}</span>
+        <span className="sidebar-accordion__chevron">
+          {expanded ? "▲" : "▼"}
+        </span>
+      </button>
+      <div
+        className="sidebar-accordion__body"
+        style={{
+          maxHeight: expanded ? "1200px" : "0",
+          opacity: expanded ? 1 : 0,
+        }}
+      >
+        <div className="sidebar-accordion__inner">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Sub-section accordion ─── */
+function SubAccordion({
+  label,
   children,
 }: {
   label: string;
@@ -14,9 +51,9 @@ function AccordionGroup({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="sidebar-accordion">
+    <div className="sidebar-subaccordion">
       <button
-        className="sidebar-accordion__trigger"
+        className="sidebar-subaccordion__trigger"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
       >
@@ -45,27 +82,27 @@ const anatomyLinks = [
   { href: "/textbook?domain=nervous", label: "🧠 Układ Nerwowy" },
   { href: "/textbook?domain=endocrine", label: "🔬 Układ Dokrewny" },
   { href: "/textbook?domain=cardiovascular-respiratory", label: "❤️ Układ Krążenia i Oddechowy" },
-  { href: "/textbook?domain=digestive", label: "🍇 Układ Pokarmowy" },
+  { href: "/textbook?domain=digestive", label: "🍽️ Układ Pokarmowy" },
   { href: "/textbook?domain=urinary-reproductive", label: "🫘 Układ Moczowo-Płciowy" },
   { href: "/textbook?domain=sensory", label: "👁️ Narządy Zmysłów" },
 ];
 
 const biologyLinks = [
-  { href: "/theory/biologia", label: "🧬 Cytologia" },
-  { href: "/theory/biologia", label: "🧬 Genetyka" },
-  { href: "/theory/biologia", label: "⚡ Metabolizm" },
-  { href: "/theory/biologia", label: "🌿 Botanika" },
-  { href: "/theory/biologia", label: "🧍 Anatomia i fizjologia człowieka" },
+  { href: "/theory/biologia", label: "🧬 Cytologia — Budowa i funkcjonowanie komórki" },
+  { href: "/theory/biologia", label: "⚡ Metabolizm — Enzymy, oddychanie, fotosynteza" },
+  { href: "/theory/biologia", label: "🧬 Genetyka — Dziedziczenie i ekspresja genów" },
+  { href: "/theory/biologia", label: "🌿 Botanika — Tkanki i fizjologia roślin" },
+  { href: "/theory/biologia", label: "🧍 Fizjologia człowieka — Układy narządów" },
 ];
 
 const chemistryLinks = [
-  { href: "/theory/chemia", label: "⚛️ Budowa atomu" },
-  { href: "/theory/chemia", label: "⚖️ Stechiometria" },
+  { href: "/theory/chemia", label: "⚛️ Budowa atomu i wiązania chemiczne" },
+  { href: "/theory/chemia", label: "⚖️ Stechiometria — Obliczenia chemiczne" },
   { href: "/theory/chemia", label: "🧪 Chemia nieorganiczna" },
   { href: "/theory/chemia", label: "🔬 Chemia organiczna" },
 ];
 
-/* ─── Mobile drawer only (no persistent desktop sidebar) ─── */
+/* ─── Mobile drawer ─── */
 export function SidebarDrawer({
   open,
   onClose,
@@ -93,27 +130,54 @@ export function SidebarDrawer({
           <button className="mobile-drawer__close" onClick={onClose}>✕</button>
         </div>
         <nav className="mobile-drawer__nav">
-          <AccordionGroup label="Anatomia (Podręcznik Akademicki)">
+
+          {/* ─── 🩺 ANATOMIA ─── */}
+          <div className="drawer-section-label">🩺 ANATOMIA</div>
+          <AccordionGroup label="Podręcznik akademicki (8 rozdziałów)" defaultExpanded={false}>
             {anatomyLinks.map((l) => (
               <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </AccordionGroup>
-          <AccordionGroup label="Biologia (Formuła 2015)">
+
+          <div className="mobile-drawer__divider" />
+
+          {/* ─── 🌿 BIOLOGIA ─── */}
+          <div className="drawer-section-label">🌿 BIOLOGIA (Formuła 2015)</div>
+          <SubAccordion label="Działy teoretyczne">
             {biologyLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-          </AccordionGroup>
-          <AccordionGroup label="Chemia (Formuła 2015)">
-            {chemistryLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
+          </SubAccordion>
+          <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
+            📝 Zadania maturalne CKE
+          </Link>
+
+          <div className="mobile-drawer__divider" />
+
+          {/* ─── 🧪 CHEMIA ─── */}
+          <div className="drawer-section-label">🧪 CHEMIA (Formuła 2015)</div>
+          <SubAccordion label="Chemia nieorganiczna">
+            {chemistryLinks.filter(l => l.label.includes("nieorganiczna") || l.label.includes("atomu") || l.label.includes("Stechiometria")).map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-          </AccordionGroup>
+          </SubAccordion>
+          <SubAccordion label="Chemia organiczna">
+            {chemistryLinks.filter(l => l.label.includes("organiczna")).map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+          </SubAccordion>
+          <Link href="/matura/chemia" className="drawer-link" onClick={onClose}>
+            📝 Zadania maturalne CKE
+          </Link>
+
           <div className="mobile-drawer__divider" />
           <Link href="/" className="drawer-link drawer-link--home" onClick={onClose}>
             🏠 Strona główna
