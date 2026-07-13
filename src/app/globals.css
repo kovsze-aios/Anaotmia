@@ -300,11 +300,16 @@
 .l-hero {
   width: 100%;
   height: 574px;
-  background: #09090b;
+  background: #fafafa;
   margin-bottom: 40px;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid #18181b;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.dark .l-hero {
+  background: #09090b;
+  border-bottom-color: #18181b;
 }
 
 .l-hero .l-container {
@@ -326,11 +331,15 @@
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 48px;
   line-height: 57.6px;
-  color: #ffffff;
+  color: #18181b;
   margin: 0 0 26px;
   position: relative;
   z-index: 1;
   font-weight: 300;
+}
+
+.dark .hero h1 {
+  color: #ffffff;
 }
 
 .hero h1 strong {
@@ -341,10 +350,14 @@
 .hero p {
   font-size: 18px;
   line-height: 26px;
-  color: #ffffff;
+  color: #52525b;
   margin: 0 0 30px;
   position: relative;
   z-index: 1;
+}
+
+.dark .hero p {
+  color: #ffffff;
 }
 
 .hero-social-proof {
@@ -842,17 +855,25 @@ footer {
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 38px;
-  color: #f4f4f5;
+  color: #18181b;
   text-align: center;
   margin: 0 0 16px;
+}
+
+.dark .topics h2 {
+  color: #f4f4f5;
 }
 
 .topics__subtitle {
   text-align: center;
   font-size: 16px;
-  color: #a1a1aa;
+  color: #52525b;
   margin: 0 0 40px;
   line-height: 24px;
+}
+
+.dark .topics__subtitle {
+  color: #a1a1aa;
 }
 
 .topics__topicboxes {
@@ -879,14 +900,24 @@ footer {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  background: #09090b;
+  background: #ffffff;
   border-radius: 4px;
   overflow: hidden;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid #18181b;
+  border: 1px solid #e4e4e7;
+}
+
+.dark .topicbox {
+  background: #09090b;
+  border-color: #18181b;
 }
 
 .topicbox:hover {
+  border-color: #a1a1aa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark .topicbox:hover {
   border-color: #3f3f46;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
@@ -913,26 +944,42 @@ footer {
 .topicbox__title {
   font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #f4f4f5;
+  color: #18181b;
   margin-bottom: 10px;
+}
+
+.dark .topicbox__title {
+  color: #f4f4f5;
 }
 
 .topicbox__description {
   font-size: 14px;
   line-height: 20px;
-  color: #a1a1aa;
+  color: #52525b;
   margin-bottom: 16px;
   flex: 1;
 }
 
+.dark .topicbox__description {
+  color: #a1a1aa;
+}
+
 .topicbox__description strong {
+  color: #18181b;
+}
+
+.dark .topicbox__description strong {
   color: #f4f4f5;
 }
 
 .topicbox__cta {
-  color: #a1a1aa;
+  color: #52525b;
   font-size: 14px;
   font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
+}
+
+.dark .topicbox__cta {
+  color: #a1a1aa;
 }
 
 /* Recommendations */
@@ -993,15 +1040,129 @@ main hr {
   margin: 0;
 }
 
+/* Multi-Subject Selector Cards */
+.topics__subjectboxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.subject-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  border: 1px solid #e4e4e7;
+}
+
+.subject-card:hover {
+  border-color: #a1a1aa;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.dark .subject-card {
+  background: #09090b;
+  border-color: #18181b;
+}
+
+.dark .subject-card:hover {
+  border-color: #3f3f46;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+.subject-card__img {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subject-card__icon {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.subject-card__content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.subject-card__subtitle {
+  font-size: 12px;
+  font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #71717a;
+  margin-bottom: 4px;
+}
+
+.dark .subject-card__subtitle {
+  color: #a1a1aa;
+}
+
+.subject-card__title {
+  font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  color: #18181b;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.dark .subject-card__title {
+  color: #f4f4f5;
+}
+
+.subject-card__desc {
+  font-size: 14px;
+  line-height: 20px;
+  color: #52525b;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.dark .subject-card__desc {
+  color: #a1a1aa;
+}
+
+.subject-card__desc strong {
+  color: #18181b;
+}
+
+.dark .subject-card__desc strong {
+  color: #f4f4f5;
+}
+
+.subject-card__cta {
+  color: #52525b;
+  font-size: 14px;
+  font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
+}
+
+.dark .subject-card__cta {
+  color: #a1a1aa;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
-  .topics__topicboxes {
+  .topics__subjectboxes {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
   .topics__topicboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .topics__subjectboxes {
     grid-template-columns: 1fr;
   }
 }
@@ -1617,9 +1778,14 @@ main hr {
 
 .footer-minimal {
   width: 100%;
-  background: #09090b;
+  background: #fafafa;
   padding: 40px 0;
-  border-top: 1px solid #18181b;
+  border-top: 1px solid #e4e4e7;
+}
+
+.dark .footer-minimal {
+  background: #09090b;
+  border-top-color: #18181b;
 }
 
 .footer-minimal__inner {
@@ -1636,8 +1802,8 @@ main hr {
   align-items: center;
   gap: 10px;
   padding: 14px 32px;
-  background: #18181b;
-  color: #f4f4f5;
+  background: #f4f4f5;
+  color: #18181b;
   font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -1650,6 +1816,18 @@ main hr {
 
 .footer-minimal__coffee-btn:hover {
   transform: translateY(-2px) scale(1.03);
+  background: #e4e4e7;
+  border-color: #a1a1aa;
+  color: #18181b;
+}
+
+.dark .footer-minimal__coffee-btn {
+  background: #18181b;
+  color: #f4f4f5;
+  border-color: #27272a;
+}
+
+.dark .footer-minimal__coffee-btn:hover {
   background: #27272a;
   border-color: #3f3f46;
   color: #ffffff;

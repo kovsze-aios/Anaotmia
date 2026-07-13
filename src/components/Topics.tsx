@@ -1,10 +1,40 @@
 import Link from "next/link";
 
-const topics = [
+const subjectCards = [
+  {
+    title: "Anatomia",
+    subtitle: "Podręcznik akademicki",
+    description:
+      "8 działów anatomicznych — od osteologii po narządy zmysłów. <strong>Pełen zakres egzaminu WF.</strong>",
+    href: "/textbook",
+    icon: "🩺",
+    color: "#3a5062",
+  },
+  {
+    title: "Biologia",
+    subtitle: "Matura Formuła 2015",
+    description:
+      "Cytologia, Metabolizm, Genetyka, Botanika i Fizjologia człowieka. <strong>Teoria + arkusze CKE.</strong>",
+    href: "/theory/biologia",
+    icon: "🌿",
+    color: "#2e7d32",
+  },
+  {
+    title: "Chemia",
+    subtitle: "Matura Formuła 2015",
+    description:
+      "Chemia nieorganiczna i organiczna. <strong>Stechiometria, reakcje, arkusze CKE.</strong>",
+    href: "/theory/chemia",
+    icon: "🧪",
+    color: "#6a1b9a",
+  },
+];
+
+const anatomyTopics = [
   {
     title: "Osteologia i Artrologia",
     description:
-      "Kości, stawy i więzadła &mdash; budowa szkieletu, klasyfikacja stawów, mechanika ruchu. <strong>Podstawa egzaminu WF.</strong>",
+      "Kości, stawy i więzadła — budowa szkieletu, klasyfikacja stawów, mechanika ruchu. <strong>Podstawa egzaminu WF.</strong>",
     domain: "osteology",
     icon: "🦴",
     color: "#4a90d9",
@@ -44,7 +74,7 @@ const topics = [
   {
     title: "Układ Pokarmowy",
     description:
-      "Od jamy ustnej po odbytnicę &mdash; <strong>budowa i funkcja</strong> przewodu pokarmowego i gruczołów trawiennych.",
+      "Od jamy ustnej po odbytnicę — <strong>budowa i funkcja</strong> przewodu pokarmowego i gruczołów trawiennych.",
     domain: "digestive",
     icon: "🍽️",
     color: "#1abc9c",
@@ -60,7 +90,7 @@ const topics = [
   {
     title: "Narządy Zmysłów",
     description:
-      "Oko, ucho, skóra &mdash; <strong>budowa receptorów</strong> i dróg przewodzenia. Ostatni, ale równie ważny dział.",
+      "Oko, ucho, skóra — <strong>budowa receptorów</strong> i dróg przewodzenia. Ostatni, ale równie ważny dział.",
     domain: "sensory",
     icon: "👁️",
     color: "#3498db",
@@ -70,13 +100,46 @@ const topics = [
 export function Topics() {
   return (
     <div className="topics">
-      <h2>Działy egzaminu Medycyna</h2>
+      {/* ─── Multi-Subject Selector ─── */}
+      <h2>Wybierz przedmiot</h2>
       <p className="topics__subtitle">
-        Kliknij dział, aby przejść do interaktywnego podręcznika z pytaniami
-        Active Recall
+        Kliknij kartę przedmiotu, aby przejść do interaktywnego podręcznika z
+        pytaniami Active Recall
+      </p>
+
+      <div className="topics__subjectboxes">
+        {subjectCards.map((card) => (
+          <Link
+            key={card.title}
+            href={card.href}
+            className="subject-card"
+          >
+            <div
+              className="subject-card__img"
+              style={{ background: card.color }}
+            >
+              <span className="subject-card__icon">{card.icon}</span>
+            </div>
+            <div className="subject-card__content">
+              <div className="subject-card__subtitle">{card.subtitle}</div>
+              <div className="subject-card__title">{card.title}</div>
+              <div
+                className="subject-card__desc"
+                dangerouslySetInnerHTML={{ __html: card.description }}
+              />
+              <div className="subject-card__cta">Przejdź do przedmiotu →</div>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* ─── Anatomy Sub-Chapter Grid ─── */}
+      <h2 style={{ marginTop: "60px" }}>Działy egzaminu — Anatomia</h2>
+      <p className="topics__subtitle">
+        Lub wybierz bezpośrednio interesujący Cię dział anatomiczny
       </p>
       <div className="topics__topicboxes">
-        {topics.map((topic) => (
+        {anatomyTopics.map((topic) => (
           <Link
             key={topic.domain}
             href={`/textbook?domain=${topic.domain}`}

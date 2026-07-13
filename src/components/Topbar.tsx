@@ -44,15 +44,14 @@ export function Topbar() {
             <span className="logo-text">Medycyna</span>
           </Link>
 
-          {/* Premium pill theme toggle */}
+          {/* Premium text-only theme toggle */}
           <button
             onClick={toggleTheme}
             className="theme-pill"
             aria-label={dark ? "Przełącz na tryb jasny" : "Przełącz na tryb ciemny"}
             title={dark ? "Tryb jasny" : "Tryb NOIR"}
           >
-            <span className="theme-pill__icon">{dark ? "☀️" : "🌙"}</span>
-            <span className="theme-pill__label">{dark ? "Jasny" : "NOIR"}</span>
+            <span className="theme-pill__label">{dark ? "JASNY" : "NOIR"}</span>
           </button>
         </div>
       </div>
