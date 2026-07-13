@@ -341,5 +341,82 @@ export const cardiovascularRespiratory: TextbookDomain = {
         },
       ],
     },
+    {
+      id: "aorta-galezie",
+      title: "Aorta i jej gałęzie — pełne drzewo tętnicze",
+      content: [
+        {
+          type: "heading",
+          level: 3,
+          text: "Aorta wstępująca i łuk aorty",
+        },
+        {
+          type: "paragraph",
+          text: "Aorta wstępująca (aorta ascendens) rozpoczyna się od ujścia aorty w lewej komorze (ostium aortae), na wysokości przyczepu III żebra lewego. Jej początkowy odcinek tworzy opuszkę aorty (bulbus aortae), z której odchodzą tętnice wieńcowe: prawa (arteria coronaria dextra — zaopatruje prawy przedsionek, prawą komorę, tylną część przegrody międzykomorowej i węzeł zatokowo-przedsionkowy u 60% ludzi) i lewa (arteria coronaria sinistra — dzieli się na gałąź międzykomorową przednią LAD i gałąź okalającą LCx, zaopatruje lewy przedsionek, lewą komorę i przednią część przegrody). Z łuku aorty (arcus aortae) odchodzą 3 pnie (kolejno od prawej): (1) pień ramienno-głowowy (truncus brachiocephalicus) — dzieli się na tętnicę szyjną wspólną prawą i tętnicę podobojczykową prawą, (2) tętnica szyjna wspólna lewa (arteria carotis communis sinistra), (3) tętnica podobojczykowa lewa (arteria subclavia sinistra).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Tętnice głowy i szyi",
+        },
+        {
+          type: "paragraph",
+          text: "Tętnica szyjna wspólna na wysokości górnego brzegu chrząstki tarczowatej (C4) dzieli się w zatoce szyjnej (sinus caroticus — baroreceptor ciśnienia) na tętnicę szyjną wewnętrzną (arteria carotis interna — zaopatruje mózgowie i oczodół, wchodzi do czaszki przez kanał tętnicy szyjnej w kości skroniowej, oddając tętnicę oczną) i tętnicę szyjną zewnętrzną (arteria carotis externa — unaczynia twarz i szyję). Gałęzie tętnicy szyjnej zewnętrznej (kolejno): tarczowa górna (a. thyroidea superior), językowa (a. lingualis), twarzowa (a. facialis — przebiega przez brzeg żuchwy, puls wyczuwalny), gardłowa wstępująca (a. pharyngea ascendens), potyliczna (a. occipitalis), uszna tylna (a. auricularis posterior), szczękowa (a. maxillaris — oddaje tętnicę oponową środkową wchodzącą przez otwór kolcowy), skroniowa powierzchowna (a. temporalis superficialis — wyczuwalna przed skrawkiem ucha).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Aorta piersiowa i brzuszna — gałęzie",
+        },
+        {
+          type: "paragraph",
+          text: "Aorta piersiowa (aorta thoracica) oddaje gałęzie trzewne (gałęzie oskrzelowe — unaczynienie odżywcze płuc, przełykowe, śródpiersiowe, osierdziowe) i gałęzie ścienne (tętnice międzyżebrowe tylne — 9 par w przestrzeniach 3-11, tętnice podżebrowe, tętnice przeponowe górne). Po przejściu przez rozwór aortowy przepony (Th12) aorta brzuszna (aorta abdominalis) oddaje gałęzie nieparzyste (do przewodu pokarmowego): pień trzewny (truncus coeliacus — zaopatruje wątrobę, żołądek, śledzionę, trzustkę, dwunastnicę), tętnicę krezkową górną (a. mesenterica superior — zaopatruje jelito cienkie i 2/3 jelita grubego do zgięcia śledzionowego) i tętnicę krezkową dolną (a. mesenterica inferior — zaopatruje dalszą 1/3 jelita grubego). Gałęzie parzyste aorty brzusznej: tętnice nerkowe (aa. renales), tętnice nadnerczowe środkowe, tętnice jądrowe/jajnikowe (aa. testiculares/ovaricae). Aorta brzuszna kończy się podziałem na tętnice biodrowe wspólne (aa. iliacae communes), każda dzieli się na tętnicę biodrową wewnętrzną (a. iliaca interna — narządy miednicy) i zewnętrzną (a. iliaca externa — przechodzi w tętnicę udową pod więzadłem pachwinowym).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Krążenie wieńcowe — szczegóły",
+        },
+        {
+          type: "paragraph",
+          text: "Tętnica wieńcowa prawa (RCA) odchodzi od prawej zatoki aorty, biegnie w bruździe przedsionkowo-komorowej prawej, oddając gałąź węzła zatokowo-przedsionkowego (60% przypadków), gałąź stożka tętniczego, gałęzie brzeżne dla prawej komory, tętnicę węzła przedsionkowo-komorowego, a następnie dzieli się na gałąź międzykomorową tylną (PDA — posterior descending artery) i gałąź tylną lewej komory. RCA zaopatruje prawy przedsionek, prawą komorę, tylną 1/3 przegrody międzykomorowej, węzły SA i AV. Tętnica wieńcowa lewa (LCA) odchodzi od lewej zatoki aorty, krótki pień dzieli się na gałąź międzykomorową przednią (LAD — left anterior descending, biegnie w bruździe międzykomorowej przedniej, zaopatruje przednią część przegrody i przednią ścianę lewej komory — najczęściej zamykana w zawale) i gałąź okalającą (LCx — biegnie w bruździe przedsionkowo-komorowej lewej, zaopatruje boczną i tylną ścianę lewej komory). Żyły serca: zatoka wieńcowa (sinus coronarius) uchodzi do prawego przedsionka, zbierając krew z żyły wielkiej serca, średniej, małej i tylnej lewej komory.",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Układ przewodzący serca",
+        },
+        {
+          type: "paragraph",
+          text: "Automatyzm serca zapewnia układ przewodzący zbudowany ze zmodyfikowanych kardiomiocytów. Składa się z: (1) Węzeł zatokowo-przedsionkowy (SA node, sinoatrial node) — główny rozrusznik serca (pacemaker), znajduje się w ścianie prawego przedsionka przy ujściu żyły głównej górnej, generuje rytm zatokowy ~70/min. (2) Węzeł przedsionkowo-komorowy (AV node) — w dolnej części przegrody międzyprzedsionkowej, opóźnia przewodzenie o ~0,1 s, umożliwiając pełny skurcz przedsionków przed skurczem komór. (3) Pęczek Hisa (fasciculus atrioventricularis) — przebija szkielet serca i dzieli się na dwie odnogi: prawą (dla prawej komory) i lewą (dla lewej, dzielącą się na wiązkę przednią i tylną). (4) Włókna Purkiniego — końcowe rozgałęzienia w mięśniu komór, szybkie przewodzenie. Unerwienie autonomiczne: współczulne (przyspiesza rytm — przez nerwy sercowe szyjne i piersiowe z pnia współczulnego), przywspółczulne (zwalnia rytm — przez nerw błędny X).",
+        },
+      ],
+      recallQuestions: [
+        {
+          id: "cr-18",
+          question: "Wymień trzy gałęzie odchodzące od łuku aorty w kolejności od strony prawej.",
+          answer: "(1) Pień ramienno-głowowy, (2) tętnica szyjna wspólna lewa, (3) tętnica podobojczykowa lewa.",
+          examRef: "",
+        },
+        {
+          id: "cr-19",
+          question: "Która gałąź tętnicy wieńcowej lewej jest najczęściej zamykana w zawale serca?",
+          answer: "Gałąź międzykomorowa przednia (LAD — left anterior descending) — zaopatruje przednią ścianę lewej komory i przednią część przegrody międzykomorowej.",
+          examRef: "",
+        },
+        {
+          id: "cr-20",
+          question: "Opisz kolejność przewodzenia impulsu w układzie przewodzącym serca.",
+          answer: "Węzeł SA (generuje impuls ~70/min) → mięśniówka przedsionków → węzeł AV (opóźnienie ~0,1 s) → pęczek Hisa → odnogi prawej i lewej → włókna Purkiniego → mięśniówka komór.",
+          examRef: "",
+        },
+        {
+          id: "cr-21",
+          question: "Które nerwy autonomiczne regulują czynność serca i jak?",
+          answer: "Współczulny (z pnia współczulnego przez nerwy sercowe) — przyspiesza rytm i zwiększa siłę skurczu. Przywspółczulny (nerw błędny X) — zwalnia rytm i zmniejsza siłę skurczu.",
+          examRef: "",
+        },
+      ],
+    },
   ],
 };

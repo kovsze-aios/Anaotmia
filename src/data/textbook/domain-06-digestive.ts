@@ -269,5 +269,58 @@ export const digestive: TextbookDomain = {
         },
       ],
     },
+    {
+      id: "otrzewna-i-sieci",
+      title: "Otrzewna, sieci i krezki — anatomia jamy brzusznej",
+      content: [
+        {
+          type: "heading",
+          level: 3,
+          text: "Otrzewna — budowa i funkcje",
+        },
+        {
+          type: "paragraph",
+          text: "Otrzewna (peritoneum) jest największą błoną surowiczą ciała. Składa się z otrzewnej ściennej (peritoneum parietale — wyściełającej ściany jamy brzusznej i miednicy) i otrzewnej trzewnej (peritoneum viscerale — pokrywającej narządy). Między nimi znajduje się jama otrzewnej (cavitas peritonealis) wypełniona cienką warstwą płynu surowiczego (~50 ml), który zmniejsza tarcie między narządami. Narządy wewnątrzotrzewnowe (pokryte otrzewną ze wszystkich stron, zawieszone na krezce): żołądek, jelito czcze i kręte, poprzecznica, esica, wątroba, śledziona. Narządy zewnątrzotrzewnowe (pokryte otrzewną tylko z przodu — retroperitonealne): nerki, nadnercza, dwunastnica, trzustka, aorta, żyła główna dolna, odbytnica. Sieć większa (omentum majus) — podwójna warstwa otrzewnej zwisająca z krzywizny większej żołądka jak fartuch, przykrywająca jelita, bogata w tkankę tłuszczową i limfatyczną (strażnik brzucha — ogranicza rozprzestrzenianie zapalenia). Sieć mniejsza (omentum minus) — między krzywizną mniejszą żołądka a wątrobą (więzadło wątrobowo-żołądkowe i wątrobowo-dwunastnicze).",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Krezki i więzadła — zawieszenia narządów",
+        },
+        {
+          type: "paragraph",
+          text: "Krezka (mesenterium) — dwuwarstwowa struktura otrzewnej, przez którą do jelit docierają naczynia krwionośne, limfatyczne i nerwy. Krezka jelita cienkiego (radix mesenterii) przyczepia się do tylnej ściany jamy brzusznej wzdłuż linii od zgięcia dwunastniczo-czczego (lewa strona L2) do zastawki krętniczo-kątniczej (prawy dół biodrowy). Ma kształt wachlarza — wzdłuż tej linii szerokość ~15 cm, przy jelicie dłuższa (~6 m jelita). Krezka okrężnicy poprzecznej (mesocolon transversum), krezka esicy (mesocolon sigmoideum). Więzadła wątroby: sierpowate (lig. falciforme hepatis — łączy wątrobę z przeponą i przednią ścianą brzucha, zawiera więzadło obłe wątroby — pozostałość żyły pępkowej), wieńcowe (lig. coronarium — obszar goły wątroby area nuda), trójkątne prawe i lewe. Więzadło żołądkowo-śledzionowe i śledzionowo-nerkowe.",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "Kaletki sieciowe i zachyłki otrzewnej",
+        },
+        {
+          type: "paragraph",
+          text: "Kaletka sieciowa (bursa omentalis) — przestrzeń za żołądkiem i siecią mniejszą, ograniczona od tyłu przez trzustkę i otrzewną ścienną. Łączy się z główną jamą otrzewnej przez otwór sieciowy (foramen omentale/epiploicum Winslowa), ograniczony od przodu przez więzadło wątrobowo-dwunastnicze (zawierające triadę wrotną: żyłę wrotną, tętnicę wątrobową właściwą i przewód żółciowy wspólny), od tyłu przez żyłę główną dolną, od góry przez płat ogoniasty wątroby, od dołu przez dwunastnicę. Zachyłki otrzewnej: pęcherzowo-odbytniczy (excavatio rectovesicalis — u mężczyzn, najniższy punkt jamy otrzewnej), odbytniczo-maciczny (excavatio rectouterina — zatoka Douglasa u kobiet, najniższy punkt), pęcherzowo-maciczny (excavatio vesicouterina). W tych zachyłkach może gromadzić się płyn (krew, ropa, przesięk) w stanach patologicznych.",
+        },
+      ],
+      recallQuestions: [
+        {
+          id: "dig-13",
+          question: "Jakie struktury znajdują się w więzadle wątrobowo-dwunastniczym (triada wrotna)?",
+          answer: "Żyła wrotna (z tyłu), tętnica wątrobowa właściwa (z przodu po lewej), przewód żółciowy wspólny (z przodu po prawej).",
+          examRef: "",
+        },
+        {
+          id: "dig-14",
+          question: "Jaka jest różnica między narządami wewnątrzotrzewnowymi a zewnątrzotrzewnowymi? Podaj przykłady.",
+          answer: "Wewnątrzotrzewnowe: pokryte otrzewną ze wszystkich stron, zawieszone na krezce (żołądek, jelito czcze i kręte, poprzecznica, wątroba, śledziona). Zewnątrzotrzewnowe (retroperitonealne): pokryte otrzewną tylko z przodu (nerki, dwunastnica, trzustka, aorta, żyła główna dolna).",
+          examRef: "",
+        },
+        {
+          id: "dig-15",
+          question: "Co to jest sieć większa i jaką pełni funkcję?",
+          answer: "Podwójna warstwa otrzewnej zwisająca z krzywizny większej żołądka, bogata w tkankę tłuszczową. Ogranicza rozprzestrzenianie zapalenia (strażnik brzucha) — przy zapaleniu wyrostka robaczkowego otacza go, ograniczając zapalenie otrzewnej do miejsca.",
+          examRef: "",
+        },
+      ],
+    },
   ],
 };

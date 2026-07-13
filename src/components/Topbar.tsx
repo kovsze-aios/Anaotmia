@@ -14,7 +14,7 @@ export function Topbar() {
     setDark(html.classList.contains("dark"));
   }, []);
 
-  /* Toggle .dark on <html> and persist */
+  /* Toggle .dark on <html> */
   const toggleTheme = () => {
     const html = document.documentElement;
     const next = !html.classList.contains("dark");
@@ -44,14 +44,15 @@ export function Topbar() {
             <span className="logo-text">Medycyna</span>
           </Link>
 
-          {/* Theme toggle — far right */}
+          {/* Premium pill theme toggle */}
           <button
-            className="theme-toggle-btn"
             onClick={toggleTheme}
+            className="theme-pill"
             aria-label={dark ? "Przełącz na tryb jasny" : "Przełącz na tryb ciemny"}
             title={dark ? "Tryb jasny" : "Tryb NOIR"}
           >
-            {dark ? "☀️" : "🌙"}
+            <span className="theme-pill__icon">{dark ? "☀️" : "🌙"}</span>
+            <span className="theme-pill__label">{dark ? "Jasny" : "NOIR"}</span>
           </button>
         </div>
       </div>

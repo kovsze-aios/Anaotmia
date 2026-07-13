@@ -132,8 +132,8 @@ export function SidebarDrawer({
         <nav className="mobile-drawer__nav">
 
           {/* ─── 🩺 ANATOMIA ─── */}
-          <div className="drawer-section-label">🩺 ANATOMIA</div>
-          <AccordionGroup label="Podręcznik akademicki (8 rozdziałów)" defaultExpanded={false}>
+          <div className="drawer-section-label">🩺 ANATOMIA — Podręcznik akademicki</div>
+          <AccordionGroup label="8 rozdziałów anatomicznych" defaultExpanded={false}>
             {anatomyLinks.map((l) => (
               <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
@@ -144,8 +144,8 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🌿 BIOLOGIA ─── */}
-          <div className="drawer-section-label">🌿 BIOLOGIA (Formuła 2015)</div>
-          <SubAccordion label="Działy teoretyczne">
+          <div className="drawer-section-label">🌿 BIOLOGIA — Matura Formuła 2015</div>
+          <SubAccordion label="Cytologia · Metabolizm · Genetyka">
             {biologyLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
@@ -153,14 +153,14 @@ export function SidebarDrawer({
             ))}
           </SubAccordion>
           <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
-            📝 Zadania maturalne CKE
+            📝 Arkusze CKE — Biologia
           </Link>
 
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🧪 CHEMIA ─── */}
-          <div className="drawer-section-label">🧪 CHEMIA (Formuła 2015)</div>
-          <SubAccordion label="Chemia nieorganiczna">
+          <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
+          <SubAccordion label="Chemia nieorganiczna i obliczenia">
             {chemistryLinks.filter(l => l.label.includes("nieorganiczna") || l.label.includes("atomu") || l.label.includes("Stechiometria")).map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
@@ -175,7 +175,7 @@ export function SidebarDrawer({
             ))}
           </SubAccordion>
           <Link href="/matura/chemia" className="drawer-link" onClick={onClose}>
-            📝 Zadania maturalne CKE
+            📝 Arkusze CKE — Chemia
           </Link>
 
           <div className="mobile-drawer__divider" />
