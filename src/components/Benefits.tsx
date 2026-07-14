@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { CheckIcon } from "./icons";
 
 export function Benefits() {
