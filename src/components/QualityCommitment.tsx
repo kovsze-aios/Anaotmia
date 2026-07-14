@@ -7,6 +7,7 @@ export function QualityCommitment() {
       <div className="quality">
         <div className="quality__item">
           <div className="quality__img">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/research.webp"
               alt=""
@@ -20,6 +21,7 @@ export function QualityCommitment() {
         </div>
         <div className="quality__item">
           <div className="quality__img">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/reviewed.webp"
               alt=""
@@ -33,6 +35,7 @@ export function QualityCommitment() {
         </div>
         <div className="quality__item">
           <div className="quality__img">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/trophy.webp" alt="" width={100} height={100} />
           </div>
           <p className="quality__desc">

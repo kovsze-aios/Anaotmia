@@ -15,10 +15,10 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   /* Watch for .dark class on <html> */
   useEffect(() => {
     const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+    requestAnimationFrame(() => setDark(html.classList.contains("dark")));
 
     const obs = new MutationObserver(() => {
-      setDark(html.classList.contains("dark"));
+      requestAnimationFrame(() => setDark(html.classList.contains("dark")));
     });
     obs.observe(html, { attributes: true, attributeFilter: ["class"] });
     return () => obs.disconnect();

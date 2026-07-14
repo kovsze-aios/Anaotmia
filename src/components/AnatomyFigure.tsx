@@ -16,7 +16,8 @@ export function AnatomyFigure({
   return (
     <figure className="anatomy-figure">
       <div className="anatomy-figure__image-wrapper">
-        <img
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
           src={src}
           alt={caption}
           width={width}

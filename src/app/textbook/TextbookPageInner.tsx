@@ -33,8 +33,8 @@ export function TextbookPageInner() {
       const domain = getDomain(domainParam);
       if (domain && domain.sections.length > 0) {
         const first = domain.sections[0];
-        setActiveSectionId(first.id);
-        setActiveSection(first);
+        requestAnimationFrame(() => setActiveSectionId(first.id));
+        requestAnimationFrame(() => setActiveSection(first));
       }
     }
   }, [searchParams]);
