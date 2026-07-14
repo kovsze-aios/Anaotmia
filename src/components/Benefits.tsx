@@ -6,6 +6,7 @@ export function Benefits() {
       {/* Row 1: Spend less time studying */}
       <div className="benefits__row benefits__row--equal">
         <div className="image">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/home_face-7897ee9d.jpg"
             alt="Student studying anatomy"
@@ -99,6 +100,7 @@ export function Benefits() {
       {/* Row 3: Learn anywhere, anytime */}
       <div className="benefits__row benefits__row--equal">
         <div className="image">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/home_devices.webp"
             alt="Kenhub on multiple devices"
