@@ -133,7 +133,9 @@ async function main() {
             });
           }
         });
-      } catch(e) {}
+      } catch {
+        // Ignore font loading errors
+      }
     });
 
     // SVG sprite
@@ -218,7 +220,7 @@ async function main() {
   if (spriteUrl) {
     console.log(`\n📥 Downloading SVG sprite...`);
     const spriteDest = path.join(IMAGES_DIR, 'icons-sprite.svg');
-    await downloadFile(spriteUrl, spriteDest).then(() => console.log('  ✅ SVG sprite saved')).catch(e => console.log(`  ❌ SVG sprite: ${e.message}`));
+    await downloadFile(spriteUrl, spriteDest).then(() => console.log('  ✅ SVG sprite saved')).catch(_e => console.log(`  ❌ SVG sprite: ${_e.message}`));
   }
 
   await browser.close();
