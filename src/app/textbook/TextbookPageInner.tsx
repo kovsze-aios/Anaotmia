@@ -28,13 +28,16 @@ export function TextbookPageInner() {
 
   // Auto-select first section of domain from query param
   useEffect(() => {
+
     const domainParam = searchParams.get("domain");
     if (domainParam) {
       const domain = getDomain(domainParam);
       if (domain && domain.sections.length > 0) {
         const first = domain.sections[0];
-        setActiveSectionId(first.id);
-        setActiveSection(first);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setActiveSectionId((prev) => prev !== first.id ? first.id : prev);
+
+        setActiveSection((prev) => prev?.id !== first.id ? first : prev);
       }
     }
   }, [searchParams]);

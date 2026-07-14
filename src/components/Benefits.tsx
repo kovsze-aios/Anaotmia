@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { CheckIcon } from "./icons";
 
 export function Benefits() {
@@ -6,7 +7,7 @@ export function Benefits() {
       {/* Row 1: Spend less time studying */}
       <div className="benefits__row benefits__row--equal">
         <div className="image">
-          <img
+          <Image
             src="/images/home_face-7897ee9d.jpg"
             alt="Student studying anatomy"
             width={320}
@@ -99,7 +100,7 @@ export function Benefits() {
       {/* Row 3: Learn anywhere, anytime */}
       <div className="benefits__row benefits__row--equal">
         <div className="image">
-          <img
+          <Image
             src="/images/home_devices.webp"
             alt="Kenhub on multiple devices"
             width={382}
