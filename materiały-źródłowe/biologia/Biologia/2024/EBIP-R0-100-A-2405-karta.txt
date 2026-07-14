@@ -1,0 +1,51 @@
+                                      PESEL
+
+        EBIP-R0-100-2405                    Miejsce na naklejk.
+      WYPELNIA ZDAJCY                Sprawd, czy kod na naklejce to
+
+                                                E-100.
+
+                                       Jeeli tak - przyklej naklejk.
+                                    Jeeli nie - zglo to nauczycielowi.
+
+                WYPELNIA EGZAMINATOR         N
+
+ Nr     Punkty   Nr         Punkty     Nr      Punkty
+zad.  012       zad.      012         zad.   012
+
+ 1.1  0 12       8.1      01          15.1   0 12
+
+1.2 0 1         8.2 0 1               15.2 0 1 2
+
+20 12           9.1 0 1 2             16.1 0 1 2
+
+3.1 0 1         9.2 0 1               16.2 0 1 2
+
+3.2 0 1 2       10.1 0 1              17 0 1
+
+3.3 0 1         10.2 0 1 2            18.1 0 1
+
+401             11 0 1 2              18.2 0 1 2
+
+5.1 0 1         12.1 0 1 2            19.1 0 1
+
+5.2 0 1         12.2 0 1              19.2 0 1
+
+5.3 0 1         12.3 0 1              20.1 0 1
+
+5.4 0 1         12.4 0 1              20.2 0 1
+
+5.5 0 1         13.1 0 1              21 0 1
+
+6.1 0 1         13.2 0 1              22 0 1
+
+6.2 0 1         14.1 0 1              23.1 0 1 2
+
+6.3 0 1         14.2 0 1 2            23.2 0 1
+
+701
+KOD EGZAMINATORA
+          Czytelny podpis egzaminatora
+
+      KOD ZDAJCEGO
+

@@ -1,0 +1,1146 @@
+KOD              WYPELNIA ZDAJCY            Arkusz zawiera informacje prawnie chronione
+                                     PESEL  do momentu rozpoczcia egzaminu.
+
+                                                      Miejsce na naklejk.
+                                               Sprawd, czy kod na naklejce to
+
+                                                         E-100.
+
+                                                 Jeeli tak - przyklej naklejk.
+                                             Jeeli nie - zglo to nauczycielowi.
+
+EGZAMIN MATURALNY Z BIOLOGII
+
+POZIOM ROZSZERZONY
+
+DATA: 12 maja 2022 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS PRACY: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 25 stron (zadania 1-20). Ewentualny brak
+    zglo przewodniczcemu zespolu nadzorujcego egzamin.
+
+2. Odpowiedzi zapisz w miejscu na to przeznaczonym przy kadym zadaniu.
+3. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym tuszem/atramentem.
+4. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+5. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+6. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL i przyklej naklejk
+
+    z kodem.
+7. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+8. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na egzamin
+
+    maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora prostego.
+
+                                            EBIP-R0-100-2205
+
+Uklad graficzny
+© CKE 2021
+Zadanie 1.
+Na poniszym schemacie przedstawiono wybrane procesy (1-5) zachodzce w komórce
+zwierzcej.
+
+Uwaga: Nie uwzgldniono czci substratów i produktów poszczególnych przemian oraz
+stechiometrii przedstawionych reakcji.
+
+glukoza
+
+1  2
+
+             3
+
+pirogronian           acetylo-CoA
+
+                                   NAD+, FAD            H2O
+
+                      4                              5
+
+                                   NADH + H+, FADH2     O2
+
+Zadanie 1.1. (0-2)
+Uzupelnij tabel - podaj nazw oraz okrel lokalizacj w komórce kadego z etapów
+oddychania tlenowego oznaczonych na schemacie numerami 1 oraz 5.
+
+   Oznaczenie etapu      Nazwa etapu                 Lokalizacja etapu
+oddychania tlenowego                                     w komórce
+
+       ze schematu
+               1
+
+               5
+
+Zadanie 1.2. (0-2)
+Okrel pozostale produkty przemian metabolicznych oznaczonych na schemacie
+numerami 2-4. W odpowiednie pola tabeli wpisz liter T (tak), jeli bezporednim
+produktem danej przemiany jest ATP lub CO2, albo N (nie) - jeli nim nie jest.
+
+                      Oznaczenie     Produkty
+                       przemiany   ATP CO2
+                      ze schematu
+
+                              2
+
+                              3
+
+                              4
+
+                         Strona 2 z 25
+
+                                                             EBIP-R0_100
+Zadanie 2.
+Poniej przedstawiono wzór pewnego oligopeptydu. W polach oznaczonych numerami 1-4
+przedstawiono cztery róne ugrupowania atomów wystpujce w bialkach.
+
+                          1                                   3
+
+                                               2
+
+                                                                 4
+
+Zadanie 2.1. (0-1)
+Które z powyszych ugrupowa atomów stanowi wizanie powstajce pomidzy
+aminokwasami podczas syntezy peptydów w komórce? Zaznacz wlaciw odpowied
+sporód podanych oraz podaj nazw tego wizania.
+
+             A. 1            B. 2                    C. 3           D. 4
+
+Nazwa wizania: ....................................................................................................................
+
+Zadanie 2.2. (0-1)
+Zapisz sekwencj aminokwasow przedstawionego na schemacie oligopeptydu od
+koca aminowego do karboksylowego, poslugujc si pelnymi nazwami
+aminokwasów lub ich oznaczeniami literowymi.
+
+................................................................................................................................................
+
+Zadanie 3. (0-1)
+Okrel, który cukier - sacharoza czy skrobia - jest form transportow asymilatów
+u rolin. Odpowied uzasadnij, porównujc wlaciwoci obu cukrów.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania              1.1. 1.2. 2.1. 2.2. 3.
+                          Maks. liczba pkt
+               Wypelnia                           2        2     1  1     1
+             egzaminator  Uzyskana liczba pkt
+
+                             Strona 3 z 25
+
+EBIP-R0_100
+Zadanie 4.
+Atrazyna jest zwizkiem chemicznym swoicie reagujcym z fotosystemem II. Ta substancja
+prowadzi do zahamowania dzialania fotosystemu II, co skutkuje zatrzymaniem syntezy ATP
+w chloroplastach.
+Na poniszym schemacie przedstawiono reakcje zachodzce w fazie fotosyntezy zalenej
+od wiatla. Symbolami PS I oraz PS II oznaczono - odpowiednio - fotosystemy I i II.
+
+                                lacuch transportu elektronów
+
+wiatlo                                                      stroma
+
+    blona
+tylakoidu
+
+                                                            wntrze
+                                                            tylakoidu
+
+                                        reduktaza  syntaza
+                                         NADP+       ATP
+
+           plastochinon  cytochrom
+
+                                                   Na podstawie: courses.lumenlearning.com
+
+Zadanie 4.1. (0-1)
+Na podstawie schematu wyjanij, dlaczego do syntezy ATP w chloroplastach
+niezbdny jest przeplyw elektronów przez lacuch transportu elektronów w blonie
+tylakoidu.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 4.2. (0-1)
+Okrel, czy atrazyna zaburza syntez ATP równie w mitochondriach. Odpowied
+uzasadnij.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                         Strona 4 z 25
+
+                                                            EBIP-R0_100
+Zadanie 5.
+Mitogeny to czsteczki sygnalowe, które wi si z receptorami na powierzchni komórki.
+Zwizanie mitogenu z odpowiednim receptorem blonowym uruchamia szlaki sygnalizacyjne
+w komórce, umoliwiajce przejcie komórki z fazy G1 cyklu komórkowego do fazy S.
+Jednym z czynników hamujcych to przejcie jest aktywna forma bialka Rb, które blokuje
+transkrypcj genów kodujcych bialka niezbdne do podzialu komórki.
+
+Mutacja w genie RB1 zlokalizowanym na chromosomie 13, kodujcym bialko Rb, jest
+najczstsz przyczyn retinoblastomy (siatkówczaka) - zloliwego nowotworu siatkówki
+wystpujcego u dzieci z czstoci 1/20 000 ywych urodze. Do rozwoju choroby
+dochodzi, gdy w komórce siatkówki zostanie calkowicie zahamowana produkcja bialka Rb
+na skutek uszkodzenia lub usunicia obu kopii genu RB1.
+
+Choroba moe mie podloe dziedziczne. W przypadku odziedziczenia jednego
+uszkodzonego allelu genu RB1 od rodzica drugi zwykle ulega mutacji spontanicznej
+w komórkach siatkówki podczas rozwoju osobniczego. Dzieci, które odziedziczyly
+uszkodzony allel genu RB1, maj wrodzon sklonno do rozwoju siatkówczaka - ryzyko
+zachorowania wynosi a 90%.
+
+                                                                       Na podstawie: B. Alberts i in., Podstawy biologii komórki, Warszawa 2017.
+
+Zadanie 5.1. (0-1)
+W której fazie cyklu komórkowego zachodzi replikacja DNA? Zaznacz wlaciw
+odpowied sporód podanych.
+
+A. faza G1                B. faza S               C. faza G2        D. faza M
+
+Zadanie 5.2. (0-1)
+Okrel wplyw aktywnego bialka Rb na czsto podzialów komórkowych.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 5.3. (0-1)
+Sporód pary rodziców, którzy zglosili si do poradni genetycznej, przyszly ojciec nie ma
+mutacji w genie RB1, ale przyszla matka odziedziczyla uszkodzony allel RB1 po swoim ojcu.
+
+Ile wynosi prawdopodobiestwo, e u dziecka tej pary rodziców rozwinie si
+siatkówczak? Zaznacz wlaciw odpowied sporód podanych.
+
+A. 0%                     B. 25%     C. 45%          D. 75%         E. 90%
+
+                          Nr zadania           4.1. 4.2. 5.1. 5.2. 5.3.
+                          Maks. liczba pkt
+               Wypelnia                        1  1           1  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                                  Strona 5 z 25
+
+EBIP-R0_100
+Zadanie 6.
+Jeden z antybiotyków - streptomycyna - lczy si bezporednio z mal podjednostk
+rybosomu. Zaburza to syntez bialek bakteryjnych. Jednak nie wszystkie bakterie s
+wraliwe na streptomycyn. U bakterii Mycobacterium tuberculosis oporno na
+streptomycyn warunkuje mutacja w genie kodujcym podjednostk 16S rRNA.
+
+W celu ustalenia wlaciwej dawki antybiotyku stosowanego w leczeniu chorób bakteryjnych
+okrela si wartoci:
+· MIC (ang. minimum inhibitory concentration) - minimalne stenie antybiotyku, które
+
+    calkowicie hamuje wzrost szczepu bakterii w poywce plynnej
+· MBC (ang. minimum bactericidal concentration) - najmniejsze stenie w pelni
+
+    bakteriobójcze dla danego szczepu.
+
+W celu ustalenia wartoci MIC i MBC przygotowano osiem probówek z poywk zawierajc
+tak sam, niewielk liczb komórek pewnego szczepu bakterii. Po dodaniu do siedmiu
+probówek rónych iloci streptomycyny wszystkie osiem umieszczono w inkubatorze.
+Material z probówek, w których nie wykryto wzrostu bakterii, przeniesiono na poywk stal
+bez streptomycyny. Poniszy schemat ilustruje wyniki tego dowiadczenia.
+
+                                             stenie streptomycyny [mg/l]
+
+         4,0  2,0                            1,0  0,5       0,25 0,125 0,06           0
+
+         przeniesienie próbek                                                wzrost bakterii
+           na poywk stal                                                  w poywce plynnej
+                                                                          ze streptomycyn
+         bez streptomycyny
+                                                                              (zmtnienie)
+                         brak wzrostu bakterii
+                                                                            wzrost kolonii
+                                                                            bakteryjnych
+
+Na podstawie: J. Baj, Mikrobiologia, Warszawa 2018; W. Irving i in., Krótkie wyklady. Mikrobiologia medyczna, Warszawa 2008;
+B. Springer i in., Mechanisms of Streptomycin Resistance: Selection of Mutations in the 16S rRNA Gene Conferring Resistance,
+
+                                                                                                                  ,,Antimicrob Agents Chemother" 45, 2001.
+
+Zadanie 6.1. (0-1)
+Na podstawie przedstawionych wyników dowiadczenia odczytaj wartoci MIC oraz
+MBC i wpisz je w wyznaczone poniej miejsca.
+
+warto MIC: ........................... mg/l            warto MBC: ....................... mg/l
+
+Zadanie 6.2. (0-1)
+Sporód podanych nazw chorób wybierz i zaznacz nazwy chorób bakteryjnych.
+
+A. AIDS  B. borelioza                        C. WZW typu C                D. grulica     E. tec
+
+                                             Strona 6 z 25
+
+                                                                                         EBIP-R0_100
+Zadanie 6.3. (0-1)
+Wyjanij, dlaczego mutacja w jednym z genów kodujcych rRNA bakterii
+M. tuberculosis moe powodowa nabycie przez szczep tych bakterii opornoci na
+streptomycyn.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 6.4. (0-1)
+Dokocz zdanie. Zaznacz odpowied A, B albo C oraz jej uzasadnienie 1., 2. albo 3.
+
+Rozprzestrzenianie si antybiotykoopornoci bezporednio midzy komórkami bakterii jest
+moliwe na drodze
+
+A. transformacji,               geny antybiotykoopornoci w wyniku cyklu
+B. transdukcji, poniewa   1. lizogenicznego bakteriofagów mog by
+C. koniugacji,
+                                wbudowane do genomu bakterii.
+                                geny antybiotykoopornoci mog znajdowa si
+                          2. w plazmidach, które s przekazywane innym
+                                komórkom bakteryjnym.
+                                wród pobranych egzogennych fragmentów DNA
+                          3. moe znale si taki, który zawiera geny
+                                antybiotykoopornoci.
+
+Zadanie 6.5. (0-2)
+Wyka, e wirusy nie s wraliwe na streptomycyn. W odpowiedzi uwzgldnij rónic
+w budowie wirusów i bakterii oraz mechanizm dzialania streptomycyny.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+                          Nr zadania           6.1. 6.2. 6.3. 6.4. 6.5.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1  1  2
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 7 z 25
+
+EBIP-R0_100
+Zadanie 7.
+Pelnik europejski (Trollius europaeus) to rolina zielna wystpujca glównie na mokrych
+lkach, przy brzegach strumieni oraz w wilgotnych lasach liciastych. Mimo e rolina
+produkuje duo nasion, rzadko spotyka si siewki w ssiedztwie kp pelnika, gdy ich
+rozwojowi nie sprzyja konkurencja ze strony innych gatunków lkowych. Odslanianie gleby
+wokól kp pelnika sprawia, e latwiej zachodzi kielkowanie jego nasion. Stanowiska pelnika
+chroni si take poprzez regularne koszenie lk, co zmniejsza udzial gatunków
+ekspansywnych, takich jak np. pokrzywa zwyczajna lub ostroe polny. W Polsce pelnik jest
+objty ochron gatunkow.
+
+Kwiaty pelnika s okazale, ólte i zapylane glównie przez kilka gatunków muchówek
+z rodzaju Chiastocheta. Muchówki wchodz do kwiatu, gdzie zjadaj pylek i nektar.
+W kwiecie dochodzi te do kopulacji tych owadów i skladania jaj. Wylgajce si larwy
+wgryzaj si do slupków i wyjadaj tam cz zawizków nasion. Przed przepoczwarzeniem
+larwy wydostaj si z kwiatów i spadaj na powierzchni gleby.
+
+Na poniszych ilustracjach przedstawiono pokrój ogólny pelnika oraz - w powikszeniu -
+typowy li lodygowy.
+
+Na podstawie: A. Kolos i A. Kolos, Trollius europaeus (Ranunculaceae) in north-eastern Poland,
+                     ,,Fragmenta Floristica et Geobotanica Polonica" 23(2), 2016; www.europeana.eu
+
+Zadanie 7.1. (0-1)
+Dokocz zdanie. Zaznacz odpowied A albo B oraz jej uzasadnienie 1., 2. albo 3.
+
+Pelnik europejski naley do klasy rolin         okazale kwiaty przystosowane do zapylania
+                                               przez owady.
+  A. jednoliciennych, 1.                       licie o nerwacji siateczkowatej osadzone
+                                    o czym 2.  na ogonkach liciowych.
+                                    wiadcz     zielna forma yciowa i przywizanie
+                                               do wilgotnych siedlisk.
+  B. dwuliciennych, 3.
+
+Strona 8 z 25
+
+                                               EBIP-R0_100
+Zadanie 7.2. (0-1)
+Wyka, e przedstawiona w tekcie zaleno midzy pelnikiem a muchówkami jest
+mutualizmem. Okrel, na czym polega mutualizm, oraz podaj przyklady korzyci lub
+strat odnoszonych przez wymienione organizmy.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 7.3. (0-1)
+Okrel typ przeobraenia wystpujcy u muchówki z rodzaju Chiastocheta. Odpowied
+uzasadnij.
+
+Typ przeobraenia: .................................................................................................................
+
+Uzasadnienie: .........................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 7.4. (0-2)
+Oce, czy dzialania opisane w tabeli stanowi ochron czynn pelnika europejskiego.
+Zaznacz T (tak), jeli dzialanie jest przykladem ochrony czynnej, albo N (nie) - jeli nim
+nie jest.
+
+1. Odslanianie gleby wokól kp pelnika europejskiego.                T N
+2. Wpisanie pelnika europejskiego na list gatunków chronionych.     T N
+3. Regularne koszenie lk ze stanowiskami pelnika europejskiego.     T N
+
+                          Nr zadania           7.1. 7.2. 7.3. 7.4.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1           2
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 9 z 25
+
+EBIP-R0_100
+Zadanie 8.
+Rozklad materialów zapasowych zgromadzonych w bielmie nasion jczmienia zachodzi
+stopniowo. Bielmo jest zrónicowane na zewntrzn warstw aleuronow, w której znajduj
+si glównie bialka, oraz bielmo skrobiowe, w którym s zgromadzone glównie polisacharydy.
+We wczesnej fazie kielkowania nasion s produkowane hormony aktywujce geny kodujce
+hydrolazy (peptydaz i -amylaz) wytwarzane przez warstw aleuronow.
+
+Przeprowadzono dowiadczenie, w którym badano wplyw zarodka na wytwarzanie enzymów
+rozkladajcych polisacharydy w ziarniaku jczmienia. Namoczone wczeniej ziarniaki
+przecito na dwie czci tak, aby tylko w jednej czci znajdowal si zarodek.
+Nastpnie na oddzielnych szalkach zawierajcych zestalony agarem kleik skrobiowy
+przygotowano dwie próby:
+
+· próba I - zawierala polówki ziarniaków z zarodkiem
+· próba II - zawierala polówki ziarniaków bez zarodka.
+
+W obu próbach polówki ziarniaków umieszczono powierzchni przecicia do podloa.
+Po czterech dniach naniesiono na podloe kilka kropli roztworu plynu Lugola.
+Zaobserwowano, e jedynie wokól polówek ziarniaków zawierajcych zarodki podloe nie
+zabarwilo si na granatowo.
+
+Wyniki dowiadczenia przedstawiono schematycznie na poniszym rysunku.
+
+próba I - polówki ziarniaków  próba II - polówki ziarniaków
+          z zarodkiem                    bez zarodka
+
+  polówki
+ziarniaków
+
+brak granatowego zabarwienia  granatowe zabarwienie podloa
+   podloa wokól ziarniaków     wokól ziarniaków po dodaniu
+    po dodaniu plynu Lugola               plynu Lugola
+
+Na podstawie: A. Szweykowska, J. Szweykowski, Botanika, Warszawa 1996.
+
+Zadanie 8.1. (0-1)
+Sformuluj wniosek na podstawie przedstawionych wyników dowiadczenia.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Strona 10 z 25
+
+                                                                      EBIP-R0_100
+Zadanie 8.2. (0-1)
+Dokocz zdanie. Zaznacz odpowied A albo B oraz jej uzasadnienie 1., 2. albo 3.
+
+Do wycignicia wniosków z przedstawionych bada
+
+A. wystarczy analiza                           1. próba I to próba badawcza i dzialal w niej
+      wyników z próby I,                             badany czynnik.
+                                      poniewa
+      konieczne s analiza                      2. próba II to próba kontrolna i sprawdza
+                                                     tylko, czy odczynniki dzialaly prawidlowo.
+B. i porównanie
+      wyników z prób I i II,                   3. rónica wyników midzy próbami I a II
+                                                     wiadczy o dzialaniu badanego czynnika.
+
+Zadanie 9. (0-1)
+W warunkach wysokiej wilgotnoci powietrza transpiracja rolin jest ograniczona, ale
+mimo to roliny nadal pobieraj wod z podloa. W takich warunkach na brzegach blaszki
+liciowej mona zaobserwowa krople wody wydzielanej przez roliny - to zjawisko
+nazywamy gutacj. Dzialaniem na rolin 4-procentowym wodnym roztworem siarczanu
+miedzi mona ograniczy gutacj. Jony miedzi s inhibitorami enzymów oddechowych.
+
+                                                                                   Na podstawie: red. M. Kozlowska, Fizjologia rolin, Pozna 2007.
+
+Wyjanij, dlaczego inhibitory enzymów oddechowych ograniczaj gutacj.
+W odpowiedzi odwolaj si do mechanizmu parcia korzeniowego.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania           8.1. 8.2. 9.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 11 z 25
+
+EBIP-R0_100
+Zadanie 10.
+Mikrotubule s dynamicznymi strukturami, które mog wydlua si lub skraca w wyniku
+polimeryzacji lub depolimeryzacji czsteczek tubuliny.
+
+Na rysunku przedstawiono mikrotubul, z której do cytozolu s uwalniane czsteczki
+tubuliny, co prowadzi do skrócenia tej mikrotubuli.
+
+Na podstawie: B. Alberts i in., Podstawy biologii komórki, Warszawa 2017;
+                                           mpibpc.mpg.de/grubmueller/microtubules
+
+Zadanie 10.1. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce podzialów komórkowych s prawdziwe.
+Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+      Mikrotubule wrzeciona podzialowego w komórkach, zarówno
+1. zwierzcych, jak i rolinnych, s wytwarzane w centrosomach z udzialem P F
+
+      centrioli.
+
+2. Zablokowanie polimeryzacji mikrotubul moe hamowa niekontrolowane       P F
+      podzialy komórkowe w obrbie guza nowotworowego.
+
+3. Zarówno w mitozie, jak i w mejozie mikrotubule wrzeciona podzialowego  P F
+      wi si z centromerami chromosomów metafazowych.
+
+Zadanie 10.2. (0-1)
+Uzupelnij ponisze zdania tak, aby zawieraly poprawny opis przebiegu mejozy.
+Podkrel w kadym nawiasie wlaciwe okrelenie.
+
+Podczas II podzialu mejotycznego skracanie si mikrotubul zachodzi w czasie
+(metafazy / anafazy) i umoliwia rozejcie si (chromatyd siostrzanych / biwalentów)
+do przeciwleglych biegunów komórki. II podzial mejotyczny zapewnia wlaciw
+(ilo DNA / ploidalno jder) w komórkach potomnych.
+
+Zadanie 10.3. (0-1)
+Jak funkcj pelni mikrotubule w ruchu komórek? Zaznacz wlaciw odpowied
+sporód podanych.
+
+A. Mikrotubule tworz wewntrzny szkielet wici.
+B. Podjednostki tubuliny hydrolizuj ATP dostarczajcy energii do ruchu wici.
+C. Skracanie si mikrotubul wici skutkuje cigniciem za sob calej komórki.
+D. Polimeryzacja mikrotubul powoduje wydluanie wici i odpychanie si komórki od podloa.
+
+Strona 12 z 25
+
+                                                                          EBIP-R0_100
+Zadanie 11.
+Pobieranie przez komórk wody z otoczenia powoduje przyrost objtoci komórki, który jest
+poredni miar wielkoci potencjalu wody w komórce. Aby okreli potencjal wody
+w mikiszu spichrzowym bulw ziemniaka, przeprowadzono dowiadczenie, podczas którego
+mierzono zmiany objtoci tej tkanki w zalenoci od stenia w roztworze
+zewntrzkomórkowym sacharozy - substancji osmotycznie czynnej.
+
+Na poniszym wykresie przedstawiono wyniki dowiadczenia.
+
+             zmiana objtoci tkanki rolinnej [%]  10
+
+                                                 5             R
+
+                                                 0
+
+                                                 -5
+
+                                                 -10
+
+                                                 -15     0,25         0,5    0,75          1,0
+                                                      0
+
+                                                         stenie sacharozy w roztworze
+
+                                                         zewntrzkomórkowym [mol/l]
+
+                                                                                       Na podstawie: www.athenology.com
+
+Zadanie 11.1. (0-1)
+Uzupelnij ponisze zdania tak, aby powstal poprawny opis przebiegu wykonanego
+dowiadczenia. Podkrel w kadym nawiasie wlaciwe okrelenie.
+
+Z bulwy ziemniaka wycito 18 kostek o (jednakowych / rónych) wymiarach. Nastpnie
+przygotowano wodne roztwory sacharozy o (jednakowych / dwóch rónych / kilku rónych)
+steniach, w których na godzin umieszczono wczeniej przygotowane kostki. W celu
+obliczenia rednich zmian objtoci kostek zmierzono ich wymiary za pomoc suwmiarki
+(tylko na pocztku / tylko na kocu / na pocztku i na kocu) dowiadczenia.
+
+Zadanie 11.2. (0-1)
+Oce, czy ponisze stwierdzenia dotyczce potencjalu wody s prawdziwe. Zaznacz P,
+jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Punkt R na wykresie oznacza wyrównanie potencjalu wody w komórce                                      P F
+      i rodowisku zewntrznym.
+
+2. W cytoplazmie komórki umieszczonej w wodzie destylowanej jest wyszy P F
+      potencjal wody w porównaniu do jej otoczenia.
+
+               Wypelnia                          Nr zadania           10.1.  10.2.  10.3.  11.1.  11.2.
+             egzaminator                         Maks. liczba pkt       2      1      1      1      1
+
+                                                 Uzyskana liczba pkt
+
+                                                         Strona 13 z 25
+
+EBIP-R0_100
+Zadanie 11.3. (0-1)
+Wyjanij, dlaczego badana tkanka umieszczona w roztworze sacharozy o steniu
+równym bd wikszym od 0,2 mol/l zmniejszyla swoj objto. W odpowiedzi
+uwzgldnij zjawisko osmozy.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 12.
+                                                           W Ameryce Pólnocnej wiewiórka czerwona
+                                                           (Tamiasciurus hudsonicus) i wiewiórka szara
+                                                           (Sciurus carolinensis) wspólwystpuj w wielu
+                                                           regionach. Na Wyspach Brytyjskich jedynym
+                                                           rodzimym gatunkiem wiewiórki jest wiewiórka
+                                                           pospolita (Sciurus vulgaris), przedstawiona na
+                                                           zdjciu obok. Wiewiórki szare zostaly
+                                                           wprowadzone na Wyspy Brytyjskie w 1876 roku.
+                                                           Od tamtej pory liczebno wiewiórek pospolitych
+                                                           zaczla si zmniejsza. Jedn z przyczyn jest
+                                                           przenoszenie wirusa ospy przez wiewiórki szare,
+                                                           które nie wykazuj przy tym objawów choroby.
+                                                           Dla wikszoci wiewiórek pospolitych ta infekcja
+
+jest miertelna. Oba gatunki wiewiórek, szara i pospolita, wykorzystuj podobne zasoby
+pokarmowe, przy czym wiewiórka szara efektywniej wykorzystuje oldzie.
+
+                                                 Na podstawie: J.R. Freeland, Ekologia molekularna, Warszawa 2008; sitn.hms.harvard.edu
+
+Zadanie 12.1. (0-1)
+Na podstawie przedstawionych informacji okrel, czy wiewiórki Ameryki Pólnocnej
+- wiewiórka czerwona i wiewiórka szara - s klasyfikowane w jednym, czy - w dwóch
+rodzajach. Odpowied uzasadnij.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Strona 14 z 25
+
+                EBIP-R0_100
+Zadanie 12.2. (0-2)
+Podaj dwie róne widoczne na zdjciu cechy morfologiczne wiewiórki pospolitej, które
+pozwalaj jednoznacznie zaklasyfikowa ten gatunek do ssaków.
+
+1. .................................................................. 2. ..................................................................
+
+Zadanie 12.3. (0-1)
+Dokocz zdanie. Zaznacz odpowied A albo B oraz jej uzasadnienie 1., 2. albo 3.
+
+Spadek liczebnoci populacji wiewiórki pospolitej na Wyspach Brytyjskich jest wynikiem m.in.
+
+A. konkurencji                                 1. nie wynika z ograniczenia jej niszy
+      midzygatunkowej,                               ekologicznej przez inny gatunek.
+                                      poniewa
+                                               2. osobniki tego gatunku konkuruj ze sob
+B. konkurencji                                       o miejsca bytowania.
+      wewntrzgatunkowej,
+                                               3. jej nisza ekologiczna pokrywa si
+                                                     czciowo z nisz wiewiórki szarej.
+
+Zadanie 13. (0-1)
+Budowa uzbienia ssaków zaley od rodzaju pobieranego pokarmu. Glównym skladnikiem
+diety szympansów s owoce i licie, ale zjadaj one take jaja oraz poluj na ptaki i male
+ssaki. Wiewiórki, nalece do gryzoni, maj wydatne siekacze pozwalajce na zgryzanie
+twardych lupin orzechów. Z kolei przeuwacze, do których naley np. bydlo domowe,
+ucieraj cikostrawny pokarm rolinny dziki rozbudowanym przedtrzonowcom
+i trzonowcom.
+
+Wzór zbowy opisuje uklad i liczb poszczególnych rodzajów zbów w polowie
+szczki i uchwy. Poniej podano przyklad wzoru zbowego doroslego psa, majcego
+w jednej polowie szczki: trzy siekacze, jeden kiel, cztery przedtrzonowce i dwa trzonowce.
+W porównaniu ze szczk w uchwie psa wystpuje jeden dodatkowy zb trzonowy.
+
+                                                         3 1 4 2
+                                                         3 1 4 3
+
+Do kadego z poniszych przedstawicieli ssaków przyporzdkuj wlaciwy typ
+uzbienia. Wpisz odpowiednie oznaczenie literowe wzoru zbowego sporód
+podanych (A-D) przy odpowiednim gatunku.
+
+A.                                B.                       C.              D.
+
+0 0 3 3                           2 1 2 3                  1 0 2 3         1 0 0 3
+3 0 3 3                           2 1 2 3                  1 0 1 3         0 0 0 3
+
+szympans: ......................  wiewiórka: ......................  krowa: .........................
+
+                                  Nr zadania           11.3. 12.1. 12.2. 12.3. 13.
+                                  Maks. liczba pkt
+               Wypelnia                                1   1         2  1  1
+             egzaminator          Uzyskana liczba pkt
+
+                                           Strona 15 z 25
+
+EBIP-R0_100
+Zadanie 14.
+Wytworzony w wtrobie czlowieka cholesterol jest transportowany w krwiobiegu w postaci
+zwizanej z bialkiem jako lipoproteina o malej gstoci - LDL. Warunkiem wniknicia LDL do
+komórki jest jej przylczenie do receptora blonowego i utworzenie kompleksu LDL-receptor.
+Te kompleksy trafiaj nastpnie do endosomów, gdzie niskie pH sprzyja odlczaniu si LDL
+od receptora. Nastpnie LDL jest transportowana do lizosomu, w którym maj miejsce jej
+enzymatyczny rozklad i uwolnienie cholesterolu.
+
+Synteza blonowych receptorów LDL zaley od iloci cholesterolu w komórkach. Gdy
+cholesterolu w komórkach jest duo, nie powstaj nowe receptory LDL, przez co pobieranie
+LDL jest ograniczone. Na poniszym schematycznym rysunku przedstawiono pobieranie
+LDL i procesy prowadzce do uzyskania wolnego cholesterolu przez komórk.
+
+                                                                      blona komórkowa
+
+                             jdro                cytozol
+                     komórkowe
+                                     siateczka
+receptor LDL                         ródplazmatyczna
+
+                                                                       cholesterol
+
+                                                              lizosom
+LDL
+
+                     endosom         wolne aminokwasy
+
+                     Na podstawie: J.M. Berg, J.L. Tymoczko, L. Stryer, Biochemia, Warszawa 2007;
+                                                B. Alberts i in., Podstawy biologii komórki, Warszawa 2019.
+
+Zadanie 14.1. (0-1)
+Dokocz zdanie. Zaznacz odpowied A albo B oraz jej uzasadnienie 1., 2. albo 3.
+
+Przedstawiony na rysunku transport czsteczki LDL do wntrza komórki to przyklad
+
+A. endocytozy,       1. bezporednio przez blon s transportowane
+                           male czsteczki.
+
+                     poniewa 2. uczestniczy w nim fragment blony komórkowej,
+                                            otaczajcy pobierane czsteczki.
+
+B. dyfuzji prostej,  3. pobierane czsteczki cholesterolu nie s trawione
+                           w komórce.
+
+                     Strona 16 z 25
+
+                                                                                    EBIP-R0_100
+Zadanie 14.2. (0-1)
+Oce, czy ponisze stwierdzenia dotyczce cholesterolu w organizmie czlowieka
+s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Cholesterol jest prekursorem hormonów steroidowych, takich jak                 P F
+      np. testosteron i estrogeny.                                                P F
+
+2. Cholesterol jest jednym ze skladników ólci wytwarzanej przez wtrob.
+
+Zadanie 14.3. (0-1)
+Okrel wplyw cholesterolu na wlaciwoci fizyczne blony komórkowej i funkcje
+pelnione przez t blon.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 14.4. (0-1)
+Uzupelnij ponisze zdania tak, aby zawieraly poprawny opis regulacji iloci
+pobieranego cholesterolu przez komórk. Podkrel w kadym nawiasie wlaciwe
+okrelenie.
+
+Wzrost stenia cholesterolu w komórce (aktywuje / hamuje) syntez receptorów LDL. Dziki
+temu komórka pobiera (mniej / wicej) cholesterolu z krwiobiegu. Taki mechanizm regulacji
+nazywa si (dodatnim / ujemnym) sprzeniem zwrotnym.
+
+Zadanie 14.5. (0-1)
+Okrel wplyw delecji obu alleli genu kodujcego receptor LDL na pobieranie
+cholesterolu przez komórk. Odpowied uzasadnij.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           14.1.  14.2.  14.3.  14.4.  14.5.
+             egzaminator  Maks. liczba pkt       1      1      1      1      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 17 z 25
+
+EBIP-R0_100
+Zadanie 15.
+Wspólny przodek wyszych naczelnych utracil w wyniku mutacji zdolno do syntezy
+witaminy C. Ta mutacja zaszla w genie kodujcym oksydaz gulonolaktonow - enzym
+katalizujcy ostatni etap syntezy kwasu askorbinowego. Przy duej poday witaminy C
+w pokarmie zostal oslabiony dobór eliminujcy osobniki niezdolne do jej syntezy, a dryf
+genetyczny utrwalil t - zasadniczo nieszkodliw - mutacj.
+
+Czynnik transkrypcyjny HIF-1 uruchamia ekspresj genów odpowiedzialnych za adaptacj
+organizmu do zmniejszonego stenia tlenu (hipoksji). Efekty dzialania HIF-1 obejmuj m.in.
+rozrost naczy krwiononych w tkankach. Bialko HIF-1 jest stale produkowane przez
+komórk, ale w warunkach normalnego stenia tlenu jest szybko degradowane, a proces
+jego rozkladu rozpoczyna si od hydroksylacji jednej z dwóch reszt proliny. Specyficzne
+hydroksylazy katalizujce t reakcj wymagaj do dzialania obecnoci witaminy C.
+
+Due dawki witaminy C s stosowane w leczeniu nowotworów rozwijajcych si w wyniku
+nieprawidlowej regulacji poziomu HIF-1.
+
+                                                                             Na podstawie: H. Pontzer, Stworzeni do ruchu, ,,wiat Nauki" 2, 2019;
+                                                                 H.J. Knowles i in., Effect of ascorbate on the activity of hypoxia-inducible factor
+
+                                                                                                        and cancer cells, ,,Cancer Research" 63(8), 2003.
+
+Zadanie 15.1. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce witaminy C s prawdziwe. Zaznacz P, jeli
+stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Skutkiem mutacji w genie kodujcym oksydaz gulonolaktonow jest         P F
+      zablokowanie szlaku metabolicznego syntezy witaminy C.             P F
+                                                                         P F
+2. Dieta bogata w witamin C byla jedn z przyczyn utrwalenia mutacji
+      uniemoliwiajcej syntez tej witaminy u przodka wyszych naczelnych.
+
+3. Witamina C moe dziki wlaciwociom przeciwutleniajcym obnia
+      stenie wolnych rodników w komórkach.
+
+Zadanie 15.2. (0-1)
+Uzupelnij ponisze zdania tak, aby zawieraly prawdziwe informacje. Podkrel
+w kadym nawiasie wlaciwe okrelenie.
+
+Due dawki witaminy C powoduj (wzrost / spadek) aktywnoci hydroksylaz HIF-1, co
+prowadzi do (wzrostu / spadku) stenia HIF-1 w komórkach nowotworowych. Dziki temu
+zostaje (pobudzony / zahamowany) rozwój naczy krwiononych w guzie nowotworowym.
+
+Zadanie 15.3. (0-1)
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+
+Charakterystycznym objawem niedoboru witaminy C jest
+A. utrata ostroci widzenia.
+B. zmniejszenie krzepliwoci krwi.
+C. sucho i nadmierne rogowacenie skóry.
+D. oslabienie i pkanie cian naczy krwiononych.
+
+                                                    Strona 18 z 25
+
+                                                                         EBIP-R0_100
+Zadanie 16. (0-1)
+Wiele gatunków mew dokarmia swoje pisklta poprzez zwracanie (regurgitacj) czci
+zjedzonego pokarmu. Glodne pisklta, aby uzyska pokarm od rodzica powracajcego
+do gniazda, odruchowo uderzaj w jego dziób, czym wywoluj zwrot pokarmu.
+
+Z wykorzystaniem sztucznych modeli ptasich glów postanowiono sprawdzi, jakie cechy
+morfologiczne glowy doroslej mewy wyzwalaj opisane zachowanie pisklt. W badaniach
+wzito pod uwag nastpujce cechy:
+
+· ksztalt glowy
+· kolor upierzenia
+· obecno oczu
+· ksztalt dzioba
+· wystpowanie plamki na dziobie.
+
+Na poniszym wykresie przedstawiono wyniki dowiadczenia.
+
+wystpowanie odruchu u pisklt      100%                               91% 98% 99%
+    [% w stosunku do kontroli]  (kontrola)
+
+                                             62%
+
+                                                  35%
+
+         plamka na dziobie
+
+                                                       modele glowy doroslych mew
+
+              Na podstawie: D. Sadava, D.M. Hillis, H.C. Heller, M.R. Berenbaum, Life - The Science of Biology, Sunderland 2014.
+
+Okrel, która z badanych cech morfologicznych glowy doroslych mew jest
+najwaniejsza w wywolaniu opisanego odruchu u pisklt.
+................................................................................................................................................
+
+                                             Nr zadania           15.1. 15.2. 15.3. 16.
+                                             Maks. liczba pkt
+                                  Wypelnia                        2  1  1  1
+                                egzaminator  Uzyskana liczba pkt
+
+                                                  Strona 19 z 25
+
+EBIP-R0_100
+Zadanie 17.
+Populacje biegusów alaskaskich w pólnocnej czci zasigu geograficznego gatunku maj
+nietypowy stosunek liczebnoci samców i samic wynoszcy 3:1, zamiast typowego - 1:1.
+Postawiono nastpujc hipotez:
+
+,,Maly udzial samic w populacjach biegusów jest spowodowany tym, e czciej padaj one
+ofiar sokolów wdrownych".
+
+W celu weryfikacji tej hipotezy zebrano pióra po biegusach upolowanych przez sokoly,
+a nastpnie wyizolowano z nich DNA i przeprowadzono PCR w celu amplifikacji fragmentów
+genów CHD, zlokalizowanych na chromosomach plci Z i W (odpowiednio: CHD-Z i CHD-W).
+Samice biegusów s heterogametyczne (ZW), a samce - homogametyczne (ZZ).
+
+Rejony niekodujce w genach CHD-Z i CHD-W maj rón dlugo, co powoduje,
+e produkty amplifikacji rejonów niekodujcych genów CHD-Z i CHD-W take róni si
+dlugoci. Elektroforetyczne rozdzielenie produktów PCR pozwolilo okreli ple ptaków,
+z których pochodzily zebrane pióra.
+
+Wyniki bada przedstawiono na poniszym wykresie.
+
+                                     80
+
+udzial osobników poszczególnej plci  70
+   [%]
+                                     60
+
+                                     50
+
+                                     40
+
+                                     30                                samice
+                                                                       samce
+                                     20
+
+                                     10
+
+                                     0
+
+                                         biegusy bdce populacja ywych
+
+                                         ofiarami sokolów  biegusów
+
+                 Na podstawie: S. Nebel i in., Molecular sexing of prey remains [...] in a wintering population of western sandpipers,
+                                                                                                          ,,Proceedings of the Royal Society B" 271, 2004.
+
+Zadanie 17.1. (0-1)
+Rozstrzygnij, czy postawiona hipoteza zostala przyjta, czy - odrzucona. Odpowied
+uzasadnij, odwolujc si do wyników bada przedstawionych na wykresie.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                                         Strona 20 z 25
+
+                                                                               EBIP-R0_100
+Zadanie 17.2. (0-1)
+Który obraz elu agarozowego odpowiada prawidlowemu wynikowi
+elektroforetycznego rozdzielenia powielonych fragmentów genów CHD-Z i CHD-W
+u samca () i samicy ()? Zaznacz wlaciw odpowied sporód podanych.
+
+A.           B.           C.                                 D.
+
+                                                                  
+
+Zadanie 17.3. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce techniki PCR s prawdziwe. Zaznacz P,
+jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+      Do powielenia fragmentów genów technik PCR naley uy m.in.       P F
+1. termostabilnej polimerazy DNA oraz czterech rónych                 P F
+                                                                      P F
+      deoksyrybonukleotydów.
+2. Technika PCR umoliwia powielenie wybranych fragmentów
+
+      genomowego DNA dziki uyciu specyficznych starterów.
+
+3. Rozdzielenie podwójnej helisy DNA podczas stosowania techniki PCR
+      zachodzi dziki ligazom DNA.
+
+               Wypelnia   Nr zadania           17.1.  17.2.  17.3.
+             egzaminator  Maks. liczba pkt       1      1      2
+
+                          Uzyskana liczba pkt
+
+                          Strona 21 z 25
+
+EBIP-R0_100
+Zadanie 18.
+Autosomalny gen HTT koduje bialko - huntingtyn. Niezmutowany allel h koduje huntingtyn
+o prawidlowej strukturze, podczas gdy zmutowany allel H skutkuje powstaniem niewlaciwej
+formy huntingtyny, warunkujcej chorob Huntingtona. Allel H ma charakter dominujcy,
+a obecno nawet tylko jednej jego kopii w genomie jest przyczyn powanych zaburze
+fizycznych i umyslowych, które powoduj mier w przecigu 15-20 lat od wystpienia
+objawów.
+
+W genie HTT stosunkowo czsto pojawia si mutacja polegajca na wystpowaniu
+dodatkowych kodonów CAG. Wywolujcy chorob allel H ma wicej ni 35 takich trójek
+nukleotydów. W wikszoci przypadków objawy choroby rozwijaj si midzy czwart
+a szóst dekad ycia.
+
+                                                                                                Na podstawie: journals.viamedica.pl; www.huntington.pl
+
+Zadanie 18.1. (0-1)
+Podaj nazw rodzaju mutacji genowej wystpujcej w allelu H, polegajcej na
+obecnoci dodatkowych kodonów CAG.
+
+................................................................................................................................................
+
+Zadanie 18.2. (0-1)
+Opisz, na czym polega zmiana w I-rzdowej strukturze bialka huntingtyny bdca
+skutkiem obecnoci dodatkowych kodonów CAG.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 18.3. (0-2)
+Okrel prawdopodobiestwo wystpienia choroby Huntingtona u dziecka
+heterozygotycznej matki pod wzgldem genu HTT oraz ojca bdcego homozygot
+recesywn pod wzgldem tego genu. Odpowied uzasadnij, zapisujc genotypy
+rodziców oraz krzyówk genetyczn.
+
+Genotyp matki: ......................................  Genotyp ojca: ........................................
+
+Krzyówka:
+
+Prawdopodobiestwo wystpienia choroby Huntingtona: ........................................................
+
+           Strona 22 z 25
+
+                                                       EBIP-R0_100
+Zadanie 18.4. (0-1)
+Wyjanij, dlaczego w populacji ludzkiej utrzymuje si allel H warunkujcy chorob
+Huntingtona, mimo e jest on dominujcy, a choroba - miertelna.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 19. (0-1)
+W kameruskim jeziorze wulkanicznym Barombi Mbo yje 15 gatunków ryb, z czego 11
+naley do pielgnic - ryb z rodziny Cichlidae. Badania mitochondrialnego DNA wykazaly,
+e endemiczne pielgnice z Barombi Mbo stanowi grup monofiletyczn - wszystkie s
+ze sob bliej spokrewnione ni z jakimkolwiek gatunkiem wystpujcym w ssiednich
+rzekach.
+
+Ze wzgldu na regularny stokowy ksztalt misy jeziornej, bdcej kraterem wygaslego
+wulkanu, historyczne wahania poziomu wody nie mogly doprowadzi do podzialu jeziora
+na kilka mniejszych. W obrbie jeziora nie wystpuj te inne bariery geograficzne
+utrudniajce kontakt tych aktywnych ryb. Jezioro Barombi Mbo jest prawie calkowicie
+odizolowane od lokalnego systemu rzek.
+
+    Na podstawie: U.K. Schliewen i B. Klee, [...] speciation in Cameroonian crater lake cichlids, ,,Frontiers in Zoology" 1(5), 2004.
+
+Na podstawie przedstawionych informacji dokocz zdanie. Zaznacz odpowied
+A albo B oraz odpowied 1., 2. albo 3.
+
+Zrónicowanie gatunkowe pielgnic w jeziorze Barombi Mbo powstalo na drodze
+
+A. specjacji                                 1. kilkunastu migracjach gatunków rzecznych
+      allopatrycznej,                              do jeziora.
+                              polegajcej na
+                                             2. radiacji ewolucyjnej pielgnic w obrbie
+B. specjacji                                       jeziora.
+      sympatrycznej,
+                                             3. krzyowaniu si blisko spokrewnionych
+                                                   gatunków ryb.
+
+                          Nr zadania           18.1. 18.2. 18.3. 18.4. 19.
+                          Maks. liczba pkt
+               Wypelnia                        1             1  2  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                                             Strona 23 z 25
+
+EBIP-R0_100
+Zadanie 20.
+Mied w ladowych ilociach jest niezbdna do wzrostu rolin, ale dua zawarto tego
+pierwiastka w glebie hamuje wzrost korzeni. Przeprowadzono badania, których celem bylo
+okrelenie wplywu wysokiego stenia miedzi w podlou na wzrost korzeni u trawy mietlicy
+rozlogowej (Agrostis stolonifera). W badaniu uwzgldniono populacje rosnce przez okres
+od 4 do 70 lat na glebie skaonej miedzi.
+
+Badane roliny uprawiano z wykorzystaniem poywek zawierajcych mied w duym
+steniu. Jako wskanik tolerancji na mied mierzono wzrost korzeni. Badania wykazaly,
+e wzrost korzeni byl w najmniejszym stopniu ograniczony u traw pochodzcych ze starych
+populacji, rosncych na glebach zanieczyszczonych miedzi przez dlugi czas.
+
+Tolerancja na mied jest cech ilociow warunkowan przez geny kumulatywne. Dzialanie
+tych genów sumuje si podczas ksztaltowania cechy fenotypowej.
+
+                           Na podstawie: L. Wu i in., The potential for evolution of heavy metal tolerance in plants, ,,Heredity" 34, 1975.
+
+Zadanie 20.1. (0-1)
+Dokocz zdanie. Zaznacz odpowied A, B albo C oraz jej uzasadnienie 1., 2. albo 3.
+
+W tekcie opisano skutki dzialania
+
+A. doboru                           1. wysokie stenie miedzi w glebie utrzymywalo
+      kierunkowego,                       si na przestrzeni wielu lat.
+
+B. doboru              poniewa 2. wyniki bada wskazuj na zrónicowany poziom
+rónicujcego,                        tolerancji na mied midzy populacjami.
+
+C. doboru                           3. wraz z czasem wzrasta odporno populacji
+      stabilizujcego,                     na skaenie gleby miedzi.
+
+Zadanie 20.2. (0-1)
+Wyjanij, dlaczego najwyszy poziom tolerancji uzyskaly roliny z najstarszych
+populacji. W odpowiedzi uwzgldnij dzialanie doboru naturalnego.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+                         Wypelnia   Nr zadania           20.1.  20.2.
+                       egzaminator  Maks. liczba pkt       1      1
+
+                                    Uzyskana liczba pkt
+
+                                    Strona 24 z 25
+
+                                                                           EBIP-R0_100
+             BRUDNOPIS (nie podlega ocenie)
+
+             Strona 25 z 25
+
+EBIP-R0_100
+

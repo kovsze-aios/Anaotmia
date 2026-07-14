@@ -1,0 +1,1838 @@
+Rodzaj dokumentu: Zasady oceniania rozwiza
+              zada
+
+Egzamin:          Egzamin maturalny
+
+Przedmiot:        Chemia
+
+Poziom:           Poziom rozszerzony
+
+Formy arkusza:    ECHP-R0-100, ECHP-R0-200, ECHP-R0-300,
+                  ECHP-R0-340, ECHP-R0-400, ECHP-R0-700,
+                  ECHU-R0-100
+
+Termin egzaminu:  16 maja 2024 r.
+
+Data publikacji   28 czerwca 2024 r.
+dokumentu:
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Ogólne zasady oceniania
+
+W zasadach oceniania zawarto przyklady poprawnych rozwiza zada otwartych. Te
+rozwizania okrelaj zakres merytoryczny odpowiedzi i nie musz by cislym wzorcem
+oczekiwanych sformulowa (za wyjtkiem np. nazw, symboli pierwiastków, wzorów zwizków
+chemicznych). Akceptowane s wszystkie odpowiedzi merytorycznie poprawne i
+spelniajce warunki zadania - równie te nieprzewidziane jako przykladowe odpowiedzi
+w schematach punktowania.
+
+· Zdajcy otrzymuje punkty tylko za poprawne rozwizania, precyzyjnie odpowiadajce
+    poleceniom zawartym w zadaniach. Rozwizanie zadania na podstawie bldnego
+    merytorycznie zaloenia uznaje si w caloci za niepoprawne.
+
+· Gdy do jednego polecenia zdajcy podaje kilka odpowiedzi (sporód których jedna jest
+    poprawna, a inne - bldne), nie otrzymuje punktów za adn z nich. Jeeli informacje
+    zamieszczone w odpowiedzi (równie dodatkowe, które nie wynikaj z treci polecenia)
+    wiadcz o zasadniczych brakach w rozumieniu zagadnienia, którego dotyczy zadanie,
+    i zaprzeczaj udzielonej poprawnej odpowiedzi, to za tak odpowied zdajcy równie
+    nie otrzymuje punktów.
+
+· W zadaniach wymagajcych sformulowania wypowiedzi argumentacyjnej, takiej jak
+    wyjanienie, uzasadnienie - dla rozpatrywanego zjawiska, procesu, wlaciwoci
+    w zakresie okrelonym w poleceniu - naley przedstawi wlaciwy zwizek
+    przyczynowo-skutkowy. Oprócz poprawnoci merytorycznej oceniana jest poprawno
+    poslugiwania si nomenklatur chemiczn, umiejtne odwolanie si do materialu
+    ródlowego, jeeli taki zostal przedstawiony, oraz spójno, logika i klarowno toku
+    rozumowania. Sformulowanie odpowiedzi niejasnej lub czciowo niezrozumialej
+    skutkuje utrat punktu.
+
+· W rozwizaniach zada rachunkowych poprawno wykonania oblicze i wynik s
+    oceniane pozytywnie tylko wtedy, gdy zostala zastosowana poprawna metoda
+    rozwizania. Oznacza to, e maksymaln liczb punktów zdajcy uzyskuje tylko za tak
+    odpowied, na podstawie której mona oceni poprawno jego toku rozumowania.
+    Nieprzedstawienie toku rozumowania skutkuje utrat punktów nawet wtedy, gdy zdajcy
+    podal poprawne wyniki porednie i wynik kocowy. Wynik liczbowy wielkoci mianowanej
+    podany bez jednostki lub z niepoprawnym jej zapisem jest traktowany jako wynik bldny.
+       o Za rozwizanie niedokoczone, czyli takie, w którym nie przedstawiono zwizku
+             miedzy wielkociami danymi a wielkoci szukan, zdajcy uzyskuje 0 punktów.
+       o Zastosowanie bldnych wartoci liczbowych wielkoci niewymienionych
+             w informacji wprowadzajcej, treci zadania, poleceniu lub tablicach i niebdcych
+             wynikiem oblicze naley traktowa jako bld metody.
+       o Zastosowanie bldnych wartoci liczbowych wielkoci podanych w informacji
+             wprowadzajcej, treci zadania, poleceniu lub tablicach naley traktowa jako bld
+             rachunkowy, o ile nie zmienia to istoty analizowanego problemu, a zwlaszcza nie
+             powoduje jego uproszczenia.
+       o Za rozwizanie, w którym popelniono bldy obliczeniowe, które w konsekwencji
+             prowadz do uproszczenia analizowanego problemu, zdajcy uzyskuje 0 punktów.
+       o Uycie w obliczeniach bldnej wartoci masy molowej uznaje si za bld metody,
+             chyba e zdajcy przedstawil sposób jej obliczenia - zgodny ze stechiometri
+             wzoru - jednoznacznie wskazujcy na bld wylcznie rachunkowy.
+       o Wynik kocowy musi by prawidlowo przybliony, a jeli jest to wskazane
+             w zadaniu - podany z dan dokladnoci.
+
+Strona 2 z 36
+                                                                                                         Zasady oceniania rozwiza zada
+
+· W zadaniach, w których naley dokona wyboru, kad form jednoznacznego
+    wskazania (np. numer dowiadczenia, wzory lub nazwy reagentów) naley uzna za
+    poprawne rozwizanie tego zadania, o ile podane wzory lub nazwy chemiczne nie
+    zawieraj bldu. Oznacza to, e np. podanie w odpowiedzi poprawnego wzoru zamiast
+    nazwy nie skutkuje utrat punktu (mimo formalnej niezgodnoci z poleceniem), ale
+    napisanie (lub przepisanie z treci zadania) bldnego wzoru lub nazwy - nawet jeeli
+    byla podana w treci zadania - skutkuje utrat punktu.
+
+· Jeeli polecenie brzmi: Napisz równanie reakcji w formie ..., to w odpowiedzi zdajcy
+    powinien napisa równanie reakcji w podanej formie z uwzgldnieniem bilansu masy
+    i ladunku. Za zapis równania reakcji ze wspólczynnikami ulamkowymi albo bdcymi
+    wielokrotnoci wspólczynników najprostszych zdajcy nie traci punktu, o ile ten zapis
+    spelnia warunki zadania. Za zapis równania reakcji, w którym poprawnie dobrano
+    wspólczynniki stechiometryczne, ale nie uwzgldniono warunków zadania (np.
+    rodowiska reakcji), zdajcy nie uzyskuje oceny pozytywnej.
+
+Notacja chemiczna:
+· We wszystkich typach wzorów chemicznych wymagajcych przedstawienia struktury
+
+    czsteczki substancji nieorganicznej lub organicznej (wzory strukturalne, szkieletowe,
+    pólstrukturalne, grupowe, uproszczone) oceniana jest poprawno wynikajcej z ich
+    zapisu wizalnoci atomów oraz poprawno przedstawionej sekwencji atomów lub grup
+    atomów. Wzory zapisane w sposób ignorujcy wizalno atomów (np. podstawnik
+    obecny w czsteczce zwizku organicznego lczcy si wizaniem z atomem wodoru
+    zamiast z atomem wgla, z którym ten atom wodoru jest zwizany) oceniane s
+    negatywnie.
+· We wzorze strukturalnym naley zapisa symbole wszystkich atomów tworzcych
+    czsteczk i zaznaczy kresk wszystkie wizania wystpujce w czsteczce
+    z uwzgldnieniem ich krotnoci. We wzorze strukturalnym nie wymaga si odwzorowania
+    ksztaltu czsteczki, czyli zachowania wlaciwych któw midzy wizaniami.
+· Wzór pólstrukturalny (grupowy) lub uproszczony zwizku organicznego zawiera
+    informacj, jakie grupy i w jakiej sekwencji tworz czsteczk tego zwizku. W takim
+    wzorze dopuszcza si niezaznaczenie pojedynczego wizania C-C i C-H oraz
+    sumaryczny zapis wzoru grupy etylowej C2H5- zamiast CH3-CH2-. Dopuszcza si take
+    kady sumaryczny zapis wzoru grupy funkcyjnej, o ile jest jednoznaczny i nie sugeruje
+    istnienia wizania midzy niewlaciwymi atomami (np. nie dopuszcza si dla grupy
+    hydroksylowej zapisu -HO zamiast poprawnego -OH, dla grupy aldehydowej zapisu
+    -COH zamiast poprawnego -CHO, a dla grupy nitrowej zapisu NO2- zamiast poprawnego
+    O2N-). Ponadto dopuszcza si zapisy: CH3- zamiast H3C-, NH2- zamiast H2N-.
+· We wzorach elektronowych elektrony mog by przedstawiane w formie kropek, a pary
+    elektronowe - równie w formie kresek. Jeeli we wzorze kreskowym zaznaczona jest
+    polaryzacja wiza, to jej kierunek musi by poprawny.
+· Za napisanie wzorów strukturalnych zamiast wzorów pólstrukturalnych (grupowych) lub
+    uproszczonych zdajcy nie traci punktów. Za napisanie wzorów elektronowych zamiast
+    wzorów strukturalnych, pólstrukturalnych (grupowych) lub uproszczonych zdajcy nie
+    traci punktów.
+· Zapis ,,", ,," w równaniach reakcji nie jest wymagany.
+· W równaniach reakcji, w których ustala si stan równowagi, brak ,," nie powoduje utraty
+    punktów. W równaniach reakcji, w których naley okreli kierunek przemiany (np. reakcji
+    redoks), zapis ,,", uyty zamiast zapisu ,,", powoduje utrat punktów.
+
+                                                                                                                                      Strona 3 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Jeli wymaganie szczególowe dotyczy materialu III etapu edukacyjnego, dopisano (G).
+
+Zadanie 1.1. (0-2)
+
+                    Wymagania egzaminacyjne 20241
+
+             Wymagania ogólne                                    Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    2. Struktura atomu - jdro i elektrony. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              1) okrela liczb czstek elementarnych
+wiedzy do rozwizywania problemów.                   w atomie [...];
+                                                    2) stosuje zasady rozmieszczania elektronów
+                                                    na orbitalach w atomach pierwiastków
+                                                    wieloelektronowych;
+                                                    4) okrela przynaleno pierwiastków do
+                                                    bloków konfiguracyjnych: s, p i d ukladu
+                                                    okresowego [...].
+
+                                                    6. Reakcje utleniania i redukcji. Zdajcy:
+                                                    4) przewiduje typowe stopnie utlenienia
+                                                    pierwiastków na podstawie konfiguracji
+                                                    elektronowej ich atomów.
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie dwóch wierszy tabeli - podanie w odpowiedniej kolejnoci
+
+          symboli pierwiastków X i A oraz dla kadego z nich: najwyszego stopnia utlenienia
+          w zwizkach chemicznych i liczby elektronów niesparowanych w atomie.
+1 pkt - poprawne uzupelnienie jednego wiersza tabeli - podanie symbolu pierwiastka,
+          najwyszego stopnia utlenienia w zwizkach chemicznych i liczby elektronów
+          niesparowanych w atomie
+ALBO
+1 pkt - poprawne uzupelnienie dwóch kolumn tabeli - podanie symboli pierwiastków
+          i najwyszych stopni utlenienia w zwizkach chemicznych albo symboli pierwiastków
+          i liczby elektronów niesparowanych w ich atomach.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie          Symbol pierwiastka                Najwyszy stopie      Liczba elektronów
+   Pierwiastek A       P LUB fosfor                 utlenienia w zwizkach  niesparowanych
+
+                                                          chemicznych            w atomie
+
+                                                            V ALBO 5                  3
+
+Pierwiastek X       Cr LUB chrom                    VI ALBO 6              6
+
+1 Rozporzdzenie Ministra Edukacji i Nauki z dnia 1 sierpnia 2022 r. w sprawie wymaga egzaminacyjnych dla
+egzaminu maturalnego przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U.2022 poz. 1698).
+
+Strona 4 z 36
+                                                      Zasady oceniania rozwiza zada
+
+Zadanie 1.2. (0-1)
+
+                        Wymagania egzaminacyjne 2024
+
+             Wymagania ogólne                          Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          2. Struktura atomu - jdro i elektrony. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    2) stosuje zasady rozmieszczania elektronów
+wiedzy do rozwizywania problemów.         na orbitalach w atomach pierwiastków
+                                          wieloelektronowych;
+                                          3) zapisuje konfiguracje elektronowe atomów
+                                          pierwiastków do Z=36 i jonów o podanym
+                                          ladunku, uwzgldniajc rozmieszczenie
+                                          elektronów na podpowlokach (zapisy
+                                          konfiguracji: [...] schematy klatkowe).
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu konfiguracji elektronowej kationu chromu Cr3+
+
+          w stanie podstawowym z uwzgldnieniem numeru powloki i symboli podpowlok.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+                                                        
+
+1s  2s              2p  3s                3p          3d
+
+Uwaga: Elektrony niesparowane musz mie zgodny spin.
+
+Zadanie 1.3. (0-3)
+
+                        Wymagania egzaminacyjne 2024
+
+             Wymaganie ogólne                          Wymagania szczególowe
+
+II. Rozumowanie i zastosowanie nabytej    6. Reakcje utleniania i redukcji. Zdajcy:
+wiedzy do rozwizywania problemów.         2) oblicza stopnie utlenienia pierwiastków
+                                          w [...] czsteczce zwizku nieorganicznego
+                                          [...];
+                                          4) przewiduje typowe stopnie utlenienia
+                                          pierwiastków na podstawie konfiguracji
+                                          elektronowej ich atomów.
+
+                                          8. Niemetale. Zdajcy:
+                                          8) opisuje typowe wlaciwoci chemiczne
+                                          tlenków o liczbach atomowych od 1 do 20 oraz
+                                          24 [...], w tym zachowanie wobec wody [...]
+                                          i zasad [...]; zapisuje odpowiednie równania
+                                          reakcji.
+
+                                                          Strona 5 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zasady oceniania
+3 pkt - poprawne uzupelnienie tabeli i poprawne zapisanie we wlaciwej formie dwóch
+
+          równa reakcji.
+2 pkt - poprawne uzupelnienie tabeli i poprawne zapisanie we wlaciwej formie jednego
+
+          równania reakcji
+ALBO
+2 pkt - brak uzupelnienia tabeli lub bldne uzupelnienie tabeli i poprawne zapisanie dwóch
+
+          równa reakcji.
+1 pkt - poprawne uzupelnienie tabeli i bldne zapisanie dwóch równa reakcji
+ALBO
+2 pkt - bldne uzupelnienie tabeli i poprawne zapisanie jednego równania reakcji.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Przykladowe rozwizania      Wzór sumaryczny                                 Wzór sumaryczny
+                           tlenku pierwiastka A                           tlenku pierwiastka X
+     Wzór sumaryczny     na najwyszym stopniu                     na najwyszym stopniu utlenienia
+  wodorku pierwiastka A
+                                  utlenienia                                 XO3 ALBO CrO3
+        AH3 LUB H3A
+             ALBO           A4O10 ALBO P4O10
+
+        PH3 LUB H3P
+
+Równanie reakcji 1.: P4O10 + 6H2O  4H3PO4
+
+               ALBO
+
+               A4O10 + 6H2O  4H3AO4
+
+                               -        2--
+Równanie reakcji 2.: CrO3 + 2OH  CrO4 + H2O
+
+               ALBO
+
+                            -        2-
+               XO3 + 2OH  XO4 + H2O
+
+               ALBO
+
+                         +           -                  2-     +
+               CrO3 + 2K + 2OH  CrO4 + 2K + H2O
+
+               ALBO
+
+                         +        -                 2-      +
+               XO3 + 2K + 2OH  XO4 + 2K + H2O
+
+Uwaga: W tabeli wzór tlenku pierwiastka A musi by zapisany w postaci A4O10 lub P4O10.
+          W równaniu reakcji tego tlenku z wod dopuszcza si zapis wzoru tlenku
+          w postaci A2O5 albo P2O5.
+
+Strona 6 z 36
+                                                  Zasady oceniania rozwiza zada
+
+Zadanie 2.1. (0-2)
+
+                    Wymagania egzaminacyjne 2024
+
+              Wymagania ogólne                        Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          1. Atomy, czsteczki i stechiometria
+II. Rozumowanie i zastosowanie nabytej    chemiczna. Zdajcy:
+wiedzy do rozwizywania problemów.         1) stosuje pojcie mola [...];
+                                          2) odczytuje w ukladzie okresowym masy
+                                          atomowe pierwiastków i na ich podstawie
+                                          oblicza mas molow zwizków chemicznych
+                                          (nieorganicznych i organicznych) o podanych
+                                          wzorach (lub nazwach).
+
+                                          3. Wizania chemiczne. Zdajcy:
+                                          6) opisuje i przewiduje wplyw rodzaju
+                                          wizania ([...] kowalencyjne [...]) na
+                                          wlaciwoci fizyczne substancji
+                                          nieorganicznych [...].
+
+Zasady oceniania
+2 pkt - poprawne napisanie wartoci redniej prdkoci czsteczek tlenku wgla(II),
+
+         poprawne rozstrzygnicie i uzasadnienie.
+1 pkt - poprawne napisanie wartoci redniej prdkoci czsteczek tlenku wgla(II), bldne
+
+         rozstrzygnicie i uzasadnienie
+ALBO
+2 pkt - bldne napisanie wartoci redniej prdkoci czsteczek tlenku wgla(II), poprawne
+
+         rozstrzygnicie i uzasadnienie.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+rednia prdko czsteczek tlenku wgla(II): 493 m  s-1.
+
+Rozstrzygnicie dotyczce redniej prdkoci czsteczek wodoru: wiksza
+
+Przykladowe uzasadnienia:
+    · Poniewa czsteczki lejsze poruszaj si szybciej ni czsteczki cisze.
+
+ALBO
+    · H2 < CO
+
+ALBO
+    · H2 < N2
+
+                                                                         Strona 7 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zadanie 2.2. (0-1)
+
+                    Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    1. Atomy, czsteczki i stechiometria
+II. Rozumowanie i zastosowanie nabytej              chemiczna. Zdajcy:
+wiedzy do rozwizywania problemów.                   1) stosuje pojcie mola [...];
+                                                    2) odczytuje w ukladzie okresowym masy
+                                                    atomowe pierwiastków i na ich podstawie
+                                                    oblicza mas molow zwizków
+                                                    chemicznych (nieorganicznych
+                                                    i organicznych) o podanych wzorach (lub
+                                                    nazwach).
+
+                                                    3. Wizania chemiczne. Zdajcy:
+                                                    6) opisuje i przewiduje wplyw rodzaju
+                                                    wizania ([...] kowalencyjne [...]) na
+                                                    wlaciwoci fizyczne substancji
+                                                    nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne wskazanie dwóch odpowiedzi.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+  1. W danej temperaturze rednia prdko czsteczek gazu jest odwrotnie P
+        proporcjonalna do pierwiastka kwadratowego z masy molowej.
+  2. W danych warunkach cinienia i temperatury iloraz masy molowej P
+        i gstoci ma tak sam warto dla wszystkich gazów doskonalych.
+
+Zadanie 3. (0-1)
+
+                    Wymagania egzaminacyjne 2024
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    3. Wizania chemiczne. Zdajcy:
+                                                    6) opisuje i przewiduje wplyw rodzaju
+                                                    wizania (jonowe [...]) na wlaciwoci
+                                                    fizyczne substancji nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie dwóch zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Strona 8 z 36
+                                                Zasady oceniania rozwiza zada
+
+Rozwizanie
+Energia sieciowa  chlorku litu wynosi okolo (640 / 740 / 840) kJ mol-1, a energia
+sieciowa  bromku sodu wynosi okolo (640 / 740 / 840) kJ mol-1.
+Temperatura topnienia chlorku sodu jest równa 801 °C, a temperatura topnienia jodku sodu
+jest równa (662 / 882) °C.
+
+Zadanie 4. (0-1)
+
+                  Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          3. Wizania chemiczne. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    6) opisuje i przewiduje wplyw rodzaju
+wiedzy do rozwizywania problemów.         wizania (jonowe [...]) na wlaciwoci
+                                          fizyczne substancji nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne wyjanienie zawierajce odniesienie do ladunków jonów w MgO i LiF.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Przykladowe rozwizania
+
+· Im wiksze s wartoci ladunków przycigajcych si jonów, tym sila oddzialywania
+   wiksza.
+
+· Jony dwudodatnie i dwuujemne (Mg2+ i O2-) przycigaj si silniej, ni jony jednododatnie
+   i jednoujemne (Li+ i F-).
+
+· Im wiksze s wartoci ladunków oddzialujcych jonów, tym wiksza warto energii
+   sieciowej.
+
+Zadanie 5. (0-1)
+
+                  Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          3. Wizania chemiczne. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    1) przedstawia sposób, w jaki atomy
+wiedzy do rozwizywania problemów.         pierwiastków bloku s i p osigaj trwale
+                                          konfiguracje elektronowe [...];
+                                          4) rozpoznaje typ hybrydyzacji
+                                          (sp, sp2 , sp3 ) w prostych czsteczkach
+                                          zwizków nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie dwóch zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+                                                                          Strona 9 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Rozwizanie
+W odmianie -GeO2 liczba koordynacyjna dla atomu germanu wynosi (dwa / cztery / sze).
+W strukturze odmiany -GeO2 dla orbitali walencyjnych atomu germanu zaklada si
+hybrydyzacj (sp2 / sp3).
+
+Zadanie 6.1. (0-2)
+
+                                           Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.            4. Kinetyka i statyka chemiczna. Zdajcy:
+                                                    1) definiuje termin: szybko reakcji (jako
+II. Rozumowanie i zastosowanie nabytej              zmiana stenia reagenta czasie).
+wiedzy do rozwizywania problemów.
+                                                    5. Roztwory i reakcje zachodzce
+                                                    w roztworach wodnych. Zdajcy:
+                                                    1) wykonuje obliczenia zwizane [...]
+                                                    z zastosowaniem poj: stenie [...]
+                                                    molowe [...].
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie tabeli i poprawne narysowanie wykresu.
+1 pkt - poprawne uzupelnienie tabeli i bldne narysowanie wykresu albo brak wykresu.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie                                   0        10            20               30
+ Czas, min.                                0,048    0,036         0,025  0,013 ALBO 0,016
+ Stenie molowe H2O2, moldm-3
+
+0,05
+
+0,04Stenie molowe H2O2, mol  dm-3
+      Stenie molowe H2O2, mol  dm-3
+0,03
+
+0,02
+
+0,01
+
+0
+
+                                     0  5  10       15            20     25          30
+
+                                                    Czas, minuty
+
+Uwaga 1.: Wpisane przez zdajcego do tabeli wartoci ste mog by podane z tolerancj
+             +/- 0,001.
+
+Strona 10 z 36
+                                                  Zasady oceniania rozwiza zada
+
+Uwaga 2.: Zapisy w polu na obliczenia nie podlegaj ocenie.
+Uwaga 3: Wykres musi zawiera 4 punkty polczone pojedyncz lini (krzyw albo
+
+             odcinkami tworzcymi laman) przedstawiajc zaleno funkcji malejcej
+             w calym zakresie. Punkty na wykresie musz by zgodne z wartociami zawartymi
+             w tabeli.
+Uwaga 4: Jeeli zdajcy wypelni tabel z wiksz dokladnoci i adekwatnie do tych
+             wartoci wykona poprawnie wykres, otrzymuje za cale zadanie 1 pkt.
+Uwaga 5: Jeeli zdajcy wypelni tabel bldnymi wartociami i adekwatnie do tych wartoci
+             wykona wykres, otrzymuje za cale zadanie 0 pkt.
+
+Zadanie 6.2. (0-1)
+
+                    Wymagania egzaminacyjne 2024
+
+              Wymagania ogólne                        Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          4. Kinetyka i statyka chemiczna. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    1) definiuje termin: szybko reakcji (jako
+wiedzy do rozwizywania problemów.         zmiana stenia reagenta czasie);
+                                          5) przewiduje wplyw: stenia substratów [...]
+                                          i temperatury na szybko reakcji [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie dwóch zda.
+
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Szybko reakcji rozkladu nadtlenku wodoru wraz z uplywem czasu (ronie / maleje /
+nie ulega zmianie).
+Szybko reakcji rozkladu nadtlenku wodoru w temperaturze 40 C jest (wiksza ni /
+mniejsza ni / taka sama jak) w temperaturze 20 C.
+
+Zadanie 7. (0-2)
+
+                    Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          5. Roztwory i reakcje zachodzce
+II. Rozumowanie i zastosowanie nabytej    w roztworach wodnych. Zdajcy:
+wiedzy do rozwizywania problemów.         1) wykonuje obliczenia zwizane
+                                          z przygotowaniem, rozcieczaniem [...]
+                                          roztworów z zastosowaniem poj: stenie
+                                          [...] molowe;
+                                          4) przewiduje odczyn roztworu po reakcji
+                                          [...] substancji zmieszanych w ilociach [...]
+                                          niestechiometrycznych;
+                                          7) pisze równania reakcji: zobojtniania [...].
+
+                                                                          Strona 11 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie
+
+          wartoci liczbowej wyniku.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         · popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego
+LUB
+
+         · podanie wyniku z inn jednostk
+ALBO
+1 pkt - wyznaczenie zalenoci pozwalajcej obliczy liczb moli jonów wodorowych, które
+
+         nie zostaly zobojtnione, zawierajcej odniesienie do stechiometrii reakcji i objtoci
+         roztworu Ba(OH)2.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizania
+
+Sposób 1.
+
+                        Ba(OH)2 + 2HCl  BaCl2 + 2H2O
+
+Stenie pocztkowe i liczba moli jonów H+:
+
+H+= 10-1,5 = 0,0316 dm3 mol
+H+= 0,0316 dm3 mol  0,025 dm3 = 0,00079 mol
+Liczba moli wprowadzonych jonów wodorotlenkowych OH-= 2  0,02  V= 0,04  V
+Stenie kocowe jonów H+:
+
+H+ = 10-3,7 = 0,0002 dm3 mol     V = 0,0195 dm3 = 19,5 (cm3)
+0,0002 = 0,00079 - 0,04  V 
+
+                      0,025 + V
+
+Sposób 2.
+
+                        Ba(OH)2 + 2HCl  BaCl2 + 2H2O
+
+[H+] = 10-1,5 = 0,0316 mol · dm-3
+
+HCl = H+ = 0,0316 mol · dm-3 · 0,025 dm3 = 7,9 · 10-4 mol
+
+OH- = 2 · 0,02 mol · dm-3 · Ba(OH)2= 0,04 mol · dm-3 · Ba(OH)2
+
+[H+] = 10-3,7= 0,0002 mol · dm-3                   = 8 · 10-4 mol - 0,04 mol · dm-3 · Ba(OH)2
+H+ = 
+ 0,0002 mol · dm-3= 0,025 dm3 H+ - OH- +  Ba(OH)2                       0,025 + Ba(OH)2
+
+                                  Ba(OH)2 = 0,01978dm3
+
+Ba(OH)2 = ,  ()
+
+Strona 12 z 36
+                                                        Zasady oceniania rozwiza zada
+
+Sposób 3.
+
+                          H3O+ + OH-  2H2O
+
+                    H3O+                  OH-
+0 mol 7,9 · 10-4                          2  0,02 · V
+
+ mol -2  0,02 · V                         -2  0,02 · V
+
+k mol 0,0002·(0,025 + V) -
+
+7,9 · 10-4 - 2  0,02 · V = 2  10-4 · (0,025 + V)
+V = 0,0195 dm3
+VBa(OH)2 = ,  ()
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+          Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej
+          poprawnej metody i poprawnych oblicze.
+
+Zadanie 8.1. (0-1)
+
+                    Wymagania egzaminacyjne 2024
+
+             Wymagania ogólne                          Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          3. Wizania chemiczne. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    6) opisuje i przewiduje wplyw rodzaju wizania
+wiedzy do rozwizywania problemów.         ([...] kowalencyjne [...]) na wlaciwoci
+                                          fizyczne substancji nieorganicznych [...].
+
+                                          8. Niemetale. Zdajcy:
+                                          11) opisuje typowe wlaciwoci chemiczne
+                                          kwasów [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie dwóch zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Czsteczka chlorowodoru jest (niepolarna / polarna), poniewa wica para elektronowa
+jest (silniej przycigana przez atom chloru / silniej przycigana przez atom
+wodoru / z jednakow sil przycigana przez oba atomy). Stony kwas siarkowy(VI)
+wypiera chlorowodór z chlorków, poniewa chlorowodór jest (lotny / nietrwaly).
+
+                                                                          Strona 13 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zadanie 8.2. (0-1)
+
+             Wymagania ogólne                                    Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    3. Wizania chemiczne. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              6) opisuje i przewiduje wplyw rodzaju wizania
+wiedzy do rozwizywania problemów.                   ([...] kowalencyjne [...]) na wlaciwoci
+                                                    fizyczne substancji nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                         13,7 g chlorowodoru       721 g chlorowodoru
+           Rozpuszczalno,        w 1 dm3 rozpuszczalnika  w 1 dm3 rozpuszczalnika
+
+  g HCl w 1 dm3 rozpuszczalnika             benzen                    woda
+
+       Nazwa rozpuszczalnika
+
+Zadanie 8.3. (0-1)
+
+               Wymagania ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    6. Kwasy i zasady (G). Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              5) wyjania, na czym polega dysocjacja
+wiedzy do rozwizywania problemów.                   elektrolityczna [...] kwasów [...].
+
+Zasady oceniania
+1 pkt - poprawne wyjanienie uwzgldniajce porównanie wlaciwoci obu
+
+          rozpuszczalników pod ktem ich oddzialywania z substancj rozpuszczon.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+W wodzie - rozpuszczalniku polarnym - chlorowodór, którego czsteczki s polarne ulega
+dysocjacji. Chlorowodór rozpuszczony w benzenie nie ulega dysocjacji (albo ulega dysocjacji
+w niewielkim stopniu), poniewa czsteczki benzenu s niepolarne.
+
+Strona 14 z 36
+                                                                       Zasady oceniania rozwiza zada
+
+Zadanie 9. (0-2)
+
+                         Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          5. Roztwory i reakcje zachodzce
+II. Rozumowanie i zastosowanie nabytej    w roztworach wodnych. Zdajcy:
+wiedzy do rozwizywania problemów.         1) wykonuje obliczenia zwizane
+                                          z przygotowaniem, rozcieczaniem
+                                          i zataniem roztworów z zastosowaniem
+                                          poj: stenie procentowe i molowe.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze prowadzcych do
+
+          wartoci stenia oraz podanie wyniku w procentach.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         · popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego
+LUB
+
+         · podanie wyniku nie w procentach
+ALBO
+1 pkt - zastosowanie poprawnej metody prowadzcej do obliczenia wartoci masy MnCl2
+
+          w otrzymanym roztworze.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizania
+Sposób 1.
+
+cp1 = cmM 100 % d = 0,678  126  100  8,0 % r 1070
+mr1= drVr1 = 150  1,07 = 160,5 g
+
+ms1 = cp1 mr1 100 = 12,84 g
+
+msh =  126  6  = 3,82 g
+
+       198
+
+cp2= ms1+msh m  100 % = 12,84 + 3,82  100 % = 10 (%) r1+ mh 160,5 + 6
+
+Sposób 2.
+Vr1=150 cm3 = 0,150 dm3
+dr1 = 1,07 g  cm-3
+r1 = r1  r1 = 150  1,07 = 160,5 g
+ns1 = Cm Vr1 = 0,678  0,150 = 0,1017 mol
+
+                                                                       Strona 15 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+ms1= ns1 M = 0,1017  126 = 12,81 g
+       126  6
+
+msh= 198 =3,82 g
+cp2 = ms1 + ms2 m  100 % = 12,81 + 3,82  100 % = ,  (%)   (%) r1 + mr2 160,5 + 6
+
+Sposób 3.
+
+ =  0,678  126  100  = 8%
+
+           1070    126
+
+% MnCl2 w hydracie = 198  100 % = 63,64 %
+
+    8 %                    63,64 - a
+
+                     a
+
+    63,64 %                a - 8
+
+r = 160,5 g               =  (%)
+63,64 -  160,5
+
+  -8 = 6
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+          Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej
+          poprawnej metody i poprawnych oblicze.
+
+Zadanie 10. (0-2)
+
+                        Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    6. Reakcje utleniania i redukcji. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              2) oblicza stopnie utlenienia pierwiastków
+wiedzy do rozwizywania problemów.                   w jonie i czsteczce zwizku
+                                                    nieorganicznego [...];
+                                                    5) stosuje zasady bilansu
+                                                    elektronowo - dobiera wspólczynniki
+                                                    stechiometryczne w równaniach reakcji
+                                                    utleniania-redukcji (w formie czsteczkowej
+                                                    i jonowej).
+
+Strona 16 z 36
+                                                                                                         Zasady oceniania rozwiza zada
+
+Zasady oceniania
+2 pkt - poprawne napisanie we wlaciwej formie równania reakcji utleniania oraz poprawne
+
+         uzupelnienie schematu reakcji.
+1 pkt - poprawne napisanie we wlaciwej formie równania reakcji utleniania oraz
+
+         niepoprawne uzupelnienie lub brak uzupelnienia schematu reakcji
+ALBO
+1 pkt - niepoprawne napisanie w formie jonowo-elektronowej równania reakcji utleniania
+
+         albo brak równania oraz poprawne uzupelnienie schematu reakcji.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+Równanie procesu utleniania: Fe(OH)3 + 5OH-  FeO42- + 4H2O + 3e-
+
+Sumaryczne równanie: 2Fe(OH)3 + 3ClO- + 4OH-  2FeO42- + 3Cl- + 5H2O
+
+Uwaga: Równanie reakcji utleniania, w którym zdajcy uyl jonów Fe3+, uznaje si za bldne.
+
+Zadanie 11.1. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          5. Roztwory i reakcje zachodzce
+II. Rozumowanie i zastosowanie nabytej    w roztworach wodnych. Zdajcy:
+wiedzy do rozwizywania problemów.         8) projektuje i przeprowadza dowiadczenia
+                                          pozwalajce otrzyma rónymi metodami
+                                          [...] sole.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu - poprawne napisanie we wlaciwej formie
+
+         równania reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+(1)Ca(OH)2 + 2NH4+  Ca2+ + 2NH3 + 2H2O
+
+Zadanie 11.2. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+             Wymagania ogólne                          Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          1. Substancje i ich wlaciwoci (G). Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    7) opisuje proste metody rozdzialu mieszanin
+wiedzy do rozwizywania problemów.         [...].
+
+III. Opanowanie czynnoci praktycznych.
+
+                                                   Strona 17 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zasady oceniania
+1 pkt - poprawny wybór metody.
+
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+                sczenie        odparowanie               ekstrakcja
+
+Zadanie 11.3. (0-1)
+
+                          Wymagania egzaminacyjne 2024
+
+              Wymagania ogólne                                  Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    5. Roztwory i reakcje zachodzce
+II. Rozumowanie i zastosowanie nabytej              w roztworach wodnych. Zdajcy:
+wiedzy do rozwizywania problemów.                   8) projektuje i przeprowadza dowiadczenia
+                                                    pozwalajce otrzyma rónymi metodami [...]
+III. Opanowanie czynnoci praktycznych.              sole.
+
+Zasady oceniania
+1 pkt - poprawny wybór wszystkich zwizków spelniajcych warunek zadania.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                KOH                       KCl  NH4NO3
+                     HCl
+
+Zadanie 12.1. (0-1)
+
+                          Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    4. Kinetyka i statyka chemiczna. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              6) wykazuje si znajomoci i rozumieniem
+wiedzy do rozwizywania problemów.                   poj: stan równowagi dynamicznej i stala
+                                                    równowagi; zapisuje wyraenie na stal
+                                                    równowagi podanej reakcji.
+
+Zasady oceniania
+1 pkt - poprawne wskazanie dwóch odpowiedzi.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+Zwikszenie cinienia w warunkach izotermicznych (T = const) w opisanym
+
+1. ukladzie bdcym w stanie równowagi bdzie skutkowalo wzrostem              F
+
+wydajnoci reakcji otrzymywania tlenku wgla(II) i pary wodnej.
+
+     Obnienie temperatury w warunkach izobarycznych (p = const) w opisanym
+2. ukladzie bdcym w stanie równowagi bdzie skutkowalo zmniejszeniem P
+
+     wartoci stalej równowagi reakcji otrzymywania tlenku wgla(II) i pary
+     wodnej.
+
+Strona 18 z 36
+                                                      Zasady oceniania rozwiza zada
+
+Zadanie 12.2. (0-2)
+
+                        Wymagania egzaminacyjne 2024
+
+             Wymagania ogólne                          Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          4. Kinetyka i statyka chemiczna. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    6) wykazuje si znajomoci i rozumieniem
+wiedzy do rozwizywania problemów.         poj: stan równowagi dynamicznej i stala
+                                          równowagi; zapisuje wyraenie na stal
+                                          równowagi podanej reakcji.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody prowadzcej do obliczenia pocztkowych liczb moli
+
+          CO2 i H2, poprawne wykonanie oblicze oraz podanie wyniku w molach.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         · popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego
+LUB
+
+         · podanie wyniku z bldn jednostk
+ALBO
+2 pkt - ustalenie zalenoci opisujcej stenia reagentów w stanie równowagi, napisanie
+
+          wyraenia opisujcego stal równowagi z jedn niewiadom albo ukladu równa
+          i niewykonanie oblicze.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizania
+
+Sposób 1.
+
+pocztek                  CO2                H2    CO     H2O
+zmiana                  10-x                x       0      0
+równowaga               -0,6x             -0,6x  +0,6x
+                       10-1,6x            0,4x    0,6x  +0,6x
+                                                         0,6x
+
+            (0,6x)2
+1 = (10 - 1,6x)(0,4x)
+
+0,36x2 = 4x - 0,64x2
+x2 - 4x = 0
+
+x(x - 4) = 0  x = 4
+nH2 = 4 (mol); nCO2 = 10 - 4 = 6 (mol)
+
+Sposób 2.                CO2                H2    CO     H2O
+                           y                x       0      0
+ pocztek                                  -0,6x  +0,6x
+ zmiana                 -0,6x             0,4x    0,6x  +0,6x
+ równowaga             y - 0,6x                          0,6x
+
+                                                        Strona 19 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+           (0,6x)2
+1 = (y - 0,6x)(0,4x)
+
+0,36x2 = 0,4xy - 0,24x2
+0,4xy = 0,6x2
+
+0,4y = 0,6x
+
+     3
+y = 2x
+
+                      3                             5
+ +  = 10  x + 2  = 10  2  = 10
+
+ =  (mol) i  =  (mol)
+
+Zadanie 13.1. (0-1)
+
+                         Wymagania egzaminacyjne 2024
+
+               Wymaganie ogólne                                   Wymaganie szczególowe
+III. Opanowanie czynnoci praktycznych.
+                                                       5. Roztwory i reakcje zachodzce
+                                                       w roztworach wodnych. Zdajcy:
+                                                       5) uzasadnia [...] przyczyn kwasowego
+                                                       odczynu roztworów kwasów, zasadowego
+                                                       odczynu wodnych roztworów niektórych
+                                                       wodorotlenków (zasad) oraz odczynu
+                                                       niektórych roztworów soli (hydroliza).
+
+Zasady oceniania
+1 pkt - poprawne przyporzdkowanie trzech lub dwóch numerów probówek do wzorów
+
+          badanych soli.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+                             Wzór soli                 Numer probówki
+                         NaHCO3                                  3
+                         ZnCl2                                   1
+                         CH3COONH4                               2
+
+Strona 20 z 36
+                                                   Zasady oceniania rozwiza zada
+
+Zadanie 13.2. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymaganie szczególowe
+II. Rozumowanie i zastosowanie nabytej
+wiedzy do rozwizywania problemów.         5. Roztwory i reakcje zachodzce
+                                          w roztworach wodnych. Zdajcy:
+III. Opanowanie czynnoci praktycznych.    5) uzasadnia [...] przyczyn kwasowego
+                                          odczynu roztworów kwasów, zasadowego
+                                          odczynu wodnych roztworów niektórych
+                                          wodorotlenków (zasad) oraz odczynu
+                                          niektórych roztworów soli (hydroliza).
+
+Zasady oceniania
+1 pkt - poprawne wskazanie dwóch odpowiedzi.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                                                                          F
+       W roztworze znajdujcym si w probówce 1. reakcji z wod ulegly aniony,  P
+
+  1. a w roztworze, który umieszczono w probówce 3., reakcji z wod ulegly
+       kationy.
+
+  2. W roztworze, który umieszczono w probówce 2., reakcji z wod ulegly
+       zarówno kationy, jak i aniony.
+
+Zadanie 14. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                      Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          9. Wglowodory. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    7) [...] przewiduje produkty reakcji
+wiedzy do rozwizywania problemów.         przylczenia czsteczek niesymetrycznych
+                                          do niesymetrycznych alkenów na podstawie
+                                          reguly Markownikowa [...];
+                                          10) wyjania na prostych przykladach
+                                          mechanizmy reakcji [...] eliminacji [...].
+
+Zasady oceniania
+1 pkt - napisanie poprawnej nazwy zwizku A i narysowanie poprawnego wzoru zwizku B.
+
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                                Wzór zwizku B:
+ Nazwa systematyczna zwizku A:
+                  3-bromopentan                     H3C CH CH2 CH2 CH3
+                                                             Br
+
+                                                                             Strona 21 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zadanie 15. (0-1)
+
+               Wymagania ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    9. Wglowodory. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              7) opisuje wlaciwoci chemiczne alkenów,
+wiedzy do rozwizywania problemów.                   na przykladzie nastpujcych reakcji:
+                                                    przylczanie (addycja): [...] H2O; przewiduje
+                                                    produkty reakcji przylczenia czsteczek
+                                                    niesymetrycznych do niesymetrycznych
+                                                    alkenów na podstawie reguly
+                                                    Markownikowa (produkty glówne i uboczne)
+                                                    [...].
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie i napisanie poprawnego uzasadnienia odwolujcego si do
+
+          konsekwencji rónicy w budowie czsteczek.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Przykladowe rozwizania
+
+Rozstrzygnicie: Nie
+Przykladowe uzasadnienia:
+
+   · (Zgodnie z regul Markownikowa) atom wodoru przylcza si do atomu wgla przy
+       wizaniu podwójnym zwizanego z wiksz liczb atomów wodoru czyli w przypadku
+       zwizku Y - do atomu nr 3, a w przypadku zwizku Q - do atomu nr 1.
+
+   · Poniewa (w addycji) atom wodoru przylcza si do atomu wgla przy wizaniu
+       podwójnym zwizanego z wiksz liczb atomów wodoru, to w reakcji zwizku Y
+       powstanie alkohol III-rzdowy, a zwizku Q - II-rzdowy.
+
+   · Zgodnie z regul Markownikowa reakcje zajd w ten sposób, e glównym produktem
+       addycji wody do zwizku Y bdzie 2-metylobutan-2-ol, a do zwizku Q -
+       3-metylobutan-2-ol.
+
+   · (Zgodnie z regul Markownikowa) grupy -OH przylczaj si do atomu wgla przy
+       wizaniu podwójnym polczonego z mniejsz liczb atomów wodoru, czyli
+       w przypadku alkenu Y powstanie alkohol III-rzdowy, a w przypadku alkenu Q -
+       alkohol II-rzdowy.
+
+Uwaga: Jeeli w uzasadnieniu zdajcy dokonuje wylcznie zapisu dwóch równa reakcji
+          albo wylcznie opisu produktów reakcji, to tak odpowied uznaje si za
+          niewystarczajc.
+
+Strona 22 z 36
+                                                                                     Zasady oceniania rozwiza zada
+
+Zadanie 16.1. (0-1)
+
+                                   Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                                   Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                                       9. Wglowodory. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej                                 1) [...] podaje nazw wglowodoru ([...]
+wiedzy do rozwizywania problemów.                                      alkenu [...] - do 10 atomów wgla
+                                                                       w czsteczce) zapisanego wzorem [...]
+                                                                       pólstrukturalnym.
+
+                                                                       11. Zwizki karbonylowe - aldehydy
+                                                                       i ketony. Zdajcy:
+                                                                       2) rysuje wzory strukturalne i pólstrukturalne
+                                                                       [...] ketonów [...].
+
+Zasady oceniania
+1 pkt - napisanie poprawnej nazwy alkenu i narysowanie poprawnego wzoru ketonu.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                                                             Wzór ketonu:  ALBO     H3C-CO-CH3
+ Nazwa systematyczna alkenu:                                                    O
+
+                  2-metylobut-2-en                                     H3C C CH3
+
+Zadanie 16.2. (0-1)
+
+                                   Wymagania egzaminacyjne 2024
+
+              Wymagania ogólne                                                     Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                                       4. Kinetyka i statyka chemiczna. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej                                 9) interpretuje wartoci stalej dysocjacji [...].
+wiedzy do rozwizywania problemów.
+                                                                       12. Kwasy karboksylowe. Zdajcy:
+                                                                       4) [...] projektuje i przeprowadza
+                                                                       dowiadczenia pozwalajce otrzyma sole
+                                                                       kwasów karboksylowych (w reakcjach
+                                                                       kwasów z [...] wodorotlenkami metali [...]).
+
+Zasady oceniania
+1 pkt - poprawne napisanie wzoru organicznego produktu reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Przykladowe rozwizania
+
+                                                             -+        KCH3COO             +        -
+CH3COOK ALBO                                                     ALBO                ALBO K CH3COO
+                                   CH3COO K
+
+ALBO                            -
+
+      CH3COO
+
+                                                                                              Strona 23 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zadanie 17. (0-1)
+
+                   Wymagania egzaminacyjne 2024
+
+              Wymaganie ogólne                                  Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania problemów.                   6) opisuje wlaciwoci chemiczne alkanów,
+                                                    na przykladzie nastpujcych reakcji:
+                                                    spalanie [...] (pisze odpowiednie równania
+                                                    reakcji).
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu - napisanie poprawnego równania reakcji spalania
+
+         PVC.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+CH2 CHCl + 10O2  8CO2 + 4H2O + 4HCl
+
+                        4
+
+Zadanie 18. (0-2)
+
+                   Wymagania egzaminacyjne 2024
+
+              Wymaganie ogólne                                  Wymagania szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              1. Atomy, czsteczki i stechiometria
+wiedzy do rozwizywania problemów.                   chemiczna. Zdajcy:
+                                                    5) dokonuje interpretacji jakociowej
+                                                    i ilociowej równania reakcji w ujciu
+                                                    molowym, masowym i objtociowym (dla
+                                                    gazów);
+                                                    6) wykonuje obliczenia z uwzgldnieniem
+                                                    wydajnoci reakcji i mola dotyczce: mas
+                                                    substratów i produktów [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody prowadzcej do obliczenia masy karbidu, poprawne
+
+          wykonanie oblicze oraz podanie wyniku z jednostk.
+1 pkt - zastosowanie poprawnej metody prowadzcej do obliczenia masy karbidu, ale:
+
+         · popelnienie bldów rachunkowych
+LUB
+
+         · podanie wyniku z bldn jednostk
+ALBO
+2 pkt - zastosowanie poprawnej metody prowadzcej do obliczenia wartoci:
+
+         · masy albo liczby moli acetylenku wapnia (CaC2) z uwzgldnieniem wydajnoci
+              reakcji
+
+         · masy karbidu bez uwzgldnienia wydajnoci, a z uwzgldnieniem zawartoci
+              zanieczyszcze
+
+          oraz poprawne wykonanie oblicze oraz podanie wyniku.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Strona 24 z 36
+                                                    Zasady oceniania rozwiza zada
+
+Przykladowe rozwizania
+
+Sposób 1.
+
+CaC2 = 64 g  mol-1 CH2=CHCl = 62,5 g  mol-1 PVC = CH2=CHCl = 100 g
+
+64 =        => x = 102,4 g
+
+62,5 100 g
+
+W = 78 % => CaC2 = 102,4 g 0,78 = 131,3 g  karbidu = 131,3 g 0,82 = 160 (g)
+
+Sposób 2.                                           1 = 82 %
+CaC2 = 64 g  mol-1 2= = 62,5 g  mol-1
+1 - procent masy acetylenku wapnia w masie karbidu
+2 - wydajno reakcji 2 = 78 %
+
+                                                  
+
+PVC = CH2=CHCl = CaC2 = , = 1,6 (mol)
+
+CaC2 = 1,6  64 = 102,4 g
+
+c = 1  2 = 0,82  0,78 = 0,6396
+               102,4
+
+karbidu = 0,6396 = ,  ()
+
+Sposób 3.
+nPVC = 100 = 1,6 (mol)
+
+            62,5
+
+CaC2 = 1,6  0,78 = 2,05 (mol)
+
+CaC2 = 2,05  64 = 131,2 (g)
+karbidu = 131,2  0,82 = 160 (g)
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+
+             Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej
+             poprawnej metody i poprawnych oblicze.
+
+                                                                             Strona 25 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zadanie 19.1. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+II. Rozumowanie i zastosowanie nabytej              9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania problemów.                   12) [...] tlumaczy dlaczego benzen,
+                                                    w przeciwiestwie do alkenów, nie odbarwia
+III. Opanowanie czynnoci praktycznych.              [...] roztworu manganianu(VII) potasu;
+                                                    14) projektuje dowiadczenia dowodzce
+                                                    rónic we wlaciwociach wglowodorów
+                                                    nasyconych [...] i aromatycznych;
+                                                    przewiduje obserwacje, formuluje wnioski
+                                                    i ilustruje je równaniami reakcji.
+
+                                                    XIV. Estry i tluszcze. Zdajcy:
+                                                    6) zapisuje cigi przemian (i odpowiednie
+                                                    równania reakcji) wice ze sob
+                                                    wlaciwoci poznanych wglowodorów i ich
+                                                    pochodnych.
+
+Zasady oceniania
+1 pkt - poprawne napisanie dwóch wzorów produktów reakcji zachodzcej w etapie I
+
+          dowiadczenia.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                                             Wzór produktu organicznego  O
+         Wzór zwizku manganu                          OH OH                        C OH
+                                                    HC CH2 ALBO
+      MnO2 ALBO MnO(OH)2
+
+Zadanie 19.2. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+II. Rozumowanie i zastosowanie nabytej              9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania problemów.                   13) opisuje wlaciwoci wglowodorów
+                                                    aromatycznych, na przykladzie reakcji
+III. Opanowanie czynnoci praktycznych.              benzenu [... ]: [...] nitrowanie; pisze
+                                                    odpowiednie równania reakcji.
+
+Zasady oceniania
+1 pkt - poprawne napisanie równania reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Strona 26 z 36
+                                                                        Zasady oceniania rozwiza zada
+
+Rozwizanie                                        NO2 + H2O
+
+                             (st. H2SO4)
+
+              + HNO3
+
+ALBO                                C6H5NO2 + H2O
+
+                           (H2SO4)
+
+C6H6 + HNO3 
+
+Zadanie 20.1. (0-1)
+
+                                          Wymagania egzaminacyjne 2024
+
+               Wymaganie ogólne                                         Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                             9. Wglowodory. Zdajcy:
+                                                             10) wyjania na prostych przykladach
+                                                             mechanizmy reakcji [...].
+
+Zasady oceniania
+1 pkt - poprawne wskazanie etapu decydujcego o szybkoci reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+(Etap) 1.
+
+Zadanie 20.2. (0-1)
+
+                                          Wymagania egzaminacyjne 2024
+
+      Wymaganie ogólne                                       Wymaganie szczególowe
+
+I. Wykorzystanie i tworzenie informacji.                     9. Wglowodory. Zdajcy:
+                                                             10) wyjania na prostych przykladach
+                                                             mechanizmy reakcji [...]; zapisuje
+                                                             odpowiednie równania reakcji.
+
+Zasady oceniania
+1 pkt - poprawne napisanie we wlaciwej formie równania reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+                                          (H3O+)             + -
+CH3-CO-CH3 + H2O + I2  CH3-CO-CH2I + H3O + I
+
+ALBO
+
+            (H3O+)                                 + -
+CH3-CO-CH3 + I2  CH3-CO-CH2I + H + I
+
+                                                                          Strona 27 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zadanie 20.3. (0-1)
+
+                        Wymagania egzaminacyjne 2024
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    4. Kinetyka i statyka chemiczna. Zdajcy:
+                                                    5) przewiduje wplyw: [...] obecnoci
+                                                    katalizatora [...] na szybko reakcji [...].
+
+Zasady oceniania
+1 pkt - napisanie poprawnego wzoru katalizatora oraz napisanie poprawnego wyjanienia
+
+          odnoszcego si do pelnienia roli katalizatora przez produkt reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Katalizator: H3O+ ALBO H+
+
+Rozstrzygnicie:
+             · Reakcj jodowania acetonu zaliczamy do reakcji autokatalitycznych (poniewa
+                  jeden z produktów reakcji (jony H3O+) jest jej katalizatorem).
+
+ALBO
+             · Tak (jest to reakcja autokatalityczna).
+
+Zadanie 21. (0-1)
+
+                        Wymagania egzaminacyjne 2024
+
+              Wymagania ogólne                                  Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    12. Kwasy karboksylowe. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej              1) wskazuje grup karboksylow [...] we
+wiedzy do rozwizywania problemów.                   wzorach kwasów karboksylowych ([...]
+                                                    aromatycznych]) [...];
+                                                    4) zapisuje równania reakcji z udzialem
+                                                    kwasów karboksylowych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu - napisanie poprawnego równania reakcji
+
+         otrzymywania chlorku benzoilu.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+                        O                             O
+                                                    C
+                     C      + SOCl2       temp.            + SO2  + HCl
+                                                       Cl
+                        OH
+
+Strona 28 z 36
+                                                   Zasady oceniania rozwiza zada
+
+Zadanie 22. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+              Wymaganie ogólne                        Wymagania szczególowe
+
+II. Rozumowanie i zastosowanie nabytej    4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania problemów.         6) wykazuje si znajomoci i rozumieniem
+                                          poj: stan równowagi dynamicznej i stala
+                                          równowagi [...].
+
+                                          13. Estry i tluszcze. Zdajcy:
+                                          1) opisuje struktur czsteczek estrów
+                                          i wizania estrowego.
+
+Zasady oceniania
+1 pkt - napisanie poprawnego wyjanienia odwolujcego si do porównania przebiegu obu
+
+          reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Przykladowe rozwizania
+
+    · Reakcja z chlorkiem kwasowym jest (praktycznie) nieodwracalna, a reakcja
+         z kwasem karboksylowym jest odwracalna.
+
+    · W reakcji z chlorkiem kwasowym jeden z produktów (HCl lub chlorowodór) opuszcza
+         rodowisko reakcji, a w reakcji z kwasem karboksylowym woda nie opuszcza
+         rodowiska reakcji.
+
+    · W reakcji pomidzy chlorkiem kwasowym i alkoholem obok estru powstaje
+         chlorowodór, który - w przeciwiestwie do wody - moe opuszcza uklad, wic
+         reakcja jest (praktycznie) nieodwracalna.
+
+    · W reakcji pomidzy kwasem karboksylowym i alkoholem powstaje woda, która -
+         w przeciwiestwie do chlorowodoru - nie opuszcza rodowiska reakcji i ustala si
+         stan równowagi.
+
+    · Gdy produkt reakcji opuszcza rodowisko, to reakcja jest jednokierunkowa - tak jest
+         w przypadku uycia chlorku kwasowego. Jeli produkt nie opuszcza rodowiska, to
+         reakcja staje si odwracalna - jak w przypadku uycia kwasu.
+
+Zadanie 23.1. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+             Wymagania ogólne                          Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          13. Estry i tluszcze. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    1) opisuje struktur czsteczek estrów
+wiedzy do rozwizywania problemów.         i wizania estrowego;
+                                          6) zapisuje cigi przemian [...] wice ze
+                                          sob wlaciwoci poznanych wglowodorów
+                                          i ich pochodnych.
+
+Zasady oceniania
+1 pkt - poprawne narysowanie wzorów pólstrukturalnych kwasu karboksylowego i alkoholu.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+                                                   Strona 29 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.  Wzór alkoholu
+                                                               CH2
+Rozwizanie                                                            OH
+      Wzór chlorku kwasu karboksylowego
+                                           O
+                               CH C
+                                      CH Cl
+
+Zadanie 23.2. (0-1)
+
+                     Wymagania egzaminacyjne 2024
+
+             Wymagania ogólne                                    Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    1 . Hydroksylowe pochodne wglowodorów -
+II. Rozumowanie i zastosowanie nabytej              alkohole i fenole. Zdajcy:
+wiedzy do rozwizywania problemów.                   1) zalicza substancje do alkoholi [...].
+
+                                                    13. Estry i tluszcze. Zdajcy:
+                                                    3) wyjania przebieg reakcji [...] z wod
+                                                    w rodowisku o odczynie kwasowym,
+                                                    i z roztworem wodorotlenku sodu [...];
+                                                    6) zapisuje cigi przemian [...] wice ze
+                                                    sob wlaciwoci poznanych wglowodorów
+                                                    i ich pochodnych.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie dwóch zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Cynamonian benzylu powstaje zarówno w reakcji chlorku kwasowego z alkoholem,
+jak równie w reakcji zwizku (A / C) ze zwizkiem (D / F). W rodowisku zasady sodowej
+cynamonian benzylu ulega hydrolizie, w której jednym z produktów jest zwizek (A / B / E).
+
+Strona 30 z 36
+                                                 Zasady oceniania rozwiza zada
+
+Zadanie 24. (0-2)
+
+                   Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                       Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          9. Wglowodory. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    7) opisuje wlaciwoci chemiczne alkenów,
+wiedzy do rozwizywania problemów.         na przykladzie nastpujcych reakcji:
+                                          przylczanie (addycja): [...] HBr [...];
+                                          przewiduje produkty reakcji przylczenia
+                                          czsteczek niesymetrycznych do
+                                          niesymetrycznych alkenów na podstawie
+                                          reguly Markownikowa (produkty glówne
+                                          i uboczne) [...].
+
+                                          13. Estry i tluszcze. Zdajcy:
+                                          1) opisuje struktur czsteczek estrów
+                                          i wizania estrowego;
+                                          6) zapisuje cigi przemian (i odpowiednie
+                                          równania reakcji) wice ze sob
+                                          wlaciwoci poznanych wglowodorów i ich
+                                          pochodnych.
+
+Zasady oceniania
+2 pkt - poprawne narysowanie wzorów podstrukturalnych (grupowych) trzech zwizków.
+1 pkt - poprawne narysowanie wzorów podstrukturalnych (grupowych) dwóch zwizków.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+
+Zwizek A           Zwizek B                      Zwizek C
+
+H2C CH CH3         H3C CH CH3                    H3C CH CH3
+                             Br                            OH
+
+Zadanie 25. (0-2)
+
+                   Wymagania egzaminacyjne 2024
+
+              Wymagania ogólne                        Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          9. Wglowodory. Zdajcy:
+II. Rozumowanie i zastosowanie nabytej    10) wyjania na prostych przykladach
+wiedzy do rozwizywania problemów.         mechanizmy reakcji substytucji, addycji [...].
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie dwóch wierszy tabeli.
+1 pkt - poprawne uzupelnienie jednego wiersza tabeli
+ALBO
+4 pkt - poprawne uzupelnienie jednej kolumny tabeli.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+                                                                          Strona 31 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Rozwizanie         Typ reakcji                      Mechanizm reakcji
+                     addycja                            elektrofilowy
+  Reakcja 1.                                            nukleofilowy
+  Reakcja 2.       substytucja
+
+Zadanie 26. (0-2)
+
+                   Wymagania egzaminacyjne 2024
+
+               Wymaganie ogólne                                 Wymagania szczególowe
+III. Opanowanie czynnoci praktycznych.
+                                                    11. Zwizki karbonylowe - aldehydy i ketony.
+                                                    Zdajcy:
+                                                    3) planuje i przeprowadza dowiadczenie,
+                                                    którego celem jest odrónienie aldehydu od
+                                                    ketonu [...] (z odczynnikiem [...] Trommera).
+
+                                                    12. Kwasy karboksylowe. Zdajcy:
+                                                    4) zapisuje równania reakcji z udzialem
+                                                    kwasów karboksylowych (których produktami
+                                                    s sole [...]); projektuje i przeprowadza
+                                                    dowiadczenia pozwalajce otrzymywa sole
+                                                    kwasów karboksylowych (w reakcjach
+                                                    kwasów z [...] wodorotlenkami metali [...]).
+
+                                                    14. Zwizki organiczne zawierajce azot.
+                                                    Zdajcy:
+                                                    7) wykazuje [...], e produktem kondensacji
+                                                    mocznika jest zwizek zawierajcy
+                                                    w czsteczce wizanie peptydowe;
+                                                    13) planuje i wykonuje dowiadczenie,
+                                                    którego wynik dowiedzie obecnoci wizania
+                                                    peptydowego w analizowanym zwizku
+                                                    (reakcja biuretowa).
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie wszystkich pól schematu i poprawny opis moliwych do
+
+          zaobserwowania zmian w przemianach 1. i 2.
+1 pkt - poprawne uzupelnienie wszystkich pól schematu i niepoprawny opis moliwych do
+
+          zaobserwowania zmian w przemianach 1. i 2. albo brak opisu zmian
+ALBO
+2 pkt - bldne uzupelnienie schematu albo brak uzupelnienia schematu i poprawny opis
+
+          moliwych do zaobserwowania zmian w przemianach 1. i 2.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Strona 32 z 36
+                                                                         Zasady oceniania rozwiza zada
+
+Przykladowe rozwizanie
+
+Cu2+  CH3COOH(aq)       Zalkalizowana   CH3CH2CHO(aq)                    Cu2O
+      LUB kwas octowy     zawiesina     LUB propanal
+                           Cu(OH)2
+                    1.                            2.
+
+                                        3.
+                                                 H2NCONHCONH2(aq)
+
+                                                 LUB dimocznik
+
+                                                 LUB biuret
+
+                                                 Zwizek kompleksowy
+                                               o fioletoworóowej barwie
+
+Obserwacje:
+Przemiana 1.: Powstal niebieski (klarowny) roztwór.
+Przemiana 2.: Powstal ceglasty osad
+
+Zadanie 27. (0-2)
+
+                        Wymagania egzaminacyjne 2024
+
+               Wymaganie ogólne                    Wymagania szczególowe
+
+II. Rozumowanie i zastosowanie nabytej  1. Atomy, czsteczki i stechiometria
+wiedzy do rozwizywania problemów.       chemiczna. Zdajcy:
+                                        4) ustala wzór [...] rzeczywisty zwizku
+                                        chemicznego ([...] organicznego) [...];
+                                        6) wykonuje obliczenia z uwzgldnieniem
+                                        [...] mola dotyczce: mas substratów
+                                        i produktów (stechiometria wzorów i równa
+                                        chemicznych), objtoci gazów
+                                        w warunkach normalnych.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze i podanie
+
+         poprawnego wzoru aminy.
+1 pkt - zastosowanie poprawnej metody, wykonanie oblicze, ale:
+
+         · popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego
+LUB
+
+         · podanie bldnego wzoru aminy lub brak wzoru aminy.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+                                                                         Strona 33 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Przykladowe rozwizania
+
+Sposób 1.
+
+117 g aminy - x  22,4 dm3 azotu
+7,85 g aminy - 4,51 dm3 azotu
+x = 3
+117 g - 3  16g = 69 g
+12n + 2n - 1 = 69  n = 5
+
+Liczba grup aminowych w czsteczce: 3 ALBO C5H9(NH2)3
+Wzór sumaryczny aminy: C5H9(NH2)3 ALBO C5H15N3
+
+Sposób 2.
+
+CnH2n+2-a(NH2)a + a HNO2  CnH2n+2-a(OH)a + a N2 + a H2O
+
+7,85 g ---------------------------- 4,51 dm3
+
+117 g ---------------------------- a · 22,4 dm3
+
+                             a= 3
+
+117= 12 · n + 1 · (2 · n + 2 - a) + (14 + 2 · 1) · a= 14 · n + 15 · a + 2
+115= 14 · n + 15 · 3= 14 · n + 45
+70= 14 · n  n= 5
+
+C5H9(NH2)3, czyli: C5H15N3
+
+Zadanie 28. (0-1)
+
+                                       Wymagania egzaminacyjne 2024
+
+              Wymaganie ogólne                                  Wymagania szczególowe
+II. Rozumowanie i zastosowanie nabytej
+wiedzy do rozwizywania problemów.                   4. Kinetyka i statyka chemiczna. Zdajcy:
+                                                    8) klasyfikuje substancje do kwasów lub
+                                                    zasad zgodnie z teori Brönsteda-Lowry'ego.
+
+                                                    14. Zwizki organiczne zawierajce azot.
+                                                    Zdajcy:
+                                                    4) zapisuje równania reakcji otrzymywania
+                                                    [...] amin aromatycznych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu - napisanie we wlaciwej formie równania reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                             OH-                    CH3
+                                                     NH2 + H2O
+              CH3
+
+                                  +
+
+                       NH3
+                                    +
+
+kwas 1                                 zasada 2     zasada 1               kwas 2
+
+Strona 34 z 36
+                                                 Zasady oceniania rozwiza zada
+
+Zadanie 29. (0-1)
+
+                   Wymagania egzaminacyjne 2024
+
+              Wymaganie ogólne                        Wymagania szczególowe
+
+II. Rozumowanie i zastosowanie nabytej    6. Reakcje utleniania i redukcji. Zdajcy:
+wiedzy do rozwizywania problemów.         2) oblicza stopnie utlenienia pierwiastków
+                                          w [...] czsteczce zwizku [...] organicznego.
+
+                                          9. Wglowodory. Zdajcy:
+                                          13) opisuje wlaciwoci wglowodorów
+                                          aromatycznych, na przykladzie
+                                          reakcji [...] toluenu: [...] reakcje z [...] Br2 [...]
+                                          w obecnoci wiatla [...]; pisze odpowiednie
+                                          równania reakcji.
+
+Zasady oceniania
+1 pkt - poprawne narysowanie wzoru produktu reakcji i poprawne uzupelnienie zdania.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+            Wzór produktu:     ALBO       CH2Br
+                CH2Br
+                          NH2                              +-
+
+                                                    NH3 Br
+
+Opisana przemiana (jest / nie jest) reakcj utlenienia-redukcji.
+Uwaga: Dopuszczalne jest uycie wzorów produktów reakcji substytucji elektrofilowej bromu.
+
+Zadanie 30. (0-2)
+
+                   Wymagania egzaminacyjne 2024
+
+               Wymagania ogólne                       Wymagania szczególowe
+I. Wykorzystanie i tworzenie informacji.  4. Kinetyka i statyka chemiczna. Zdajcy:
+                                          9) interpretuje wartoci [...] pH [...].
+II. Rozumowanie i zastosowanie nabytej
+wiedzy do rozwizywania problemów.         14. Zwizki organiczne zawierajce azot.
+                                          Zdajcy:
+                                          10) opisuje wlaciwoci kwasowo-zasadowe
+                                          aminokwasów oraz mechanizm powstawania
+                                          jonów obojnaczych.
+
+                                                               Strona 35 z 36
+Egzamin maturalny z chemii - termin glówny 2024 r.
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie schematów - narysowanie wzorów pólstrukturalnych trzech
+
+         jonów fenyloalaniny.
+1 pkt - poprawne uzupelnienie schematów - narysowanie wzorów pólstrukturalnych dwóch
+
+         jonów fenyloalaniny.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie                  probówka II                        probówka III
+             probówka I
+
+H3HN2+N         HC CCHO3OH  H3HN2+N                 HC CCHO3O  H2HN2N  HC CCHO3O
+                  CH2                                 CH2                CH2
+
+Strona 36 z 36
+

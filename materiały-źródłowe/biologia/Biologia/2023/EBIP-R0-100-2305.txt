@@ -1,0 +1,1195 @@
+KOD  WYPELNIA ZDAJCY            Arkusz zawiera informacje prawnie chronione
+                         PESEL  do momentu rozpoczcia egzaminu.
+
+                                          Miejsce na naklejk.
+                                   Sprawd, czy kod na naklejce to
+
+                                             E-100.
+
+                                     Jeeli tak - przyklej naklejk.
+                                 Jeeli nie - zglo to nauczycielowi.
+
+Egzamin maturalny               Formula 2015
+
+BIOLOGIA
+
+Poziom rozszerzony
+
+                                                          Symbol arkusza
+
+                                          EBIP-R0-100-2305
+
+DATA: 11 maja 2023 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS TRWANIA: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Przed rozpoczciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawd, czy nauczyciel przekazal Ci wlaciwy arkusz egzaminacyjny,
+    tj. arkusz we wlaciwej formule, z wlaciwego przedmiotu na wlaciwym
+    poziomie.
+
+2. Jeeli przekazano Ci niewlaciwy arkusz - natychmiast zglo to nauczycielowi.
+    Nie rozrywaj banderol.
+
+3. Jeeli przekazano Ci wlaciwy arkusz - rozerwij banderole po otrzymaniu
+    takiego polecenia od nauczyciela. Zapoznaj si z instrukcj na stronie 2.
+
+Uklad graficzny
+© CKE 2022
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 30 stron (zadania 1-17).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego egzamin.
+
+2. Na pierwszej stronie arkusza oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejk z kodem.
+
+3. Odpowiedzi zapisz w miejscu na to przeznaczonym przy kadym zadaniu.
+4. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym tuszem/atramentem.
+5. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+6. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+7. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+8. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na egzamin
+
+    maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora prostego. Upewnij si, czy
+    przekazano Ci broszur z okladk tak jak widoczna poniej.
+
+Strona 2 z 30
+
+               EBIP-R0_100
+             Zadania egzaminacyjne s wydrukowane
+                        na nastpnych stronach.
+
+             Strona 3 z 30
+
+EBIP-R0_100
+Zadanie 1.
+Kolejnymi etapami oddychania tlenowego s: glikoliza, reakcja pomostowa, cykl Krebsa oraz
+lacuch oddechowy.
+
+Reakcj pomostow - oksydacyjn dekarboksylacj pirogronianu do acetylo-CoA -
+katalizuje kompleks dehydrogenazy pirogronianowej, zawierajcy trzy enzymy: E1, E2 i E3.
+Sumaryczna reakcja katalizowana przez ten kompleks w warunkach tlenowych jest
+nastpujca:
+
+                 pirogronian + CoA-SH + NAD+  acetylo-CoA + CO2 + NADH + H+
+
+Na schemacie przedstawiono wspóldzialanie trzech enzymów wchodzcych w sklad
+kompleksu dehydrogenazy pirogronianowej.
+
+     O
+
+     C-                                    CoA SH
+H3C     COO                                         O
+                        E1  E2
+pirogronian
+
+        CO2                                C                  CoA
+
+                            E3 H3C S
+
+                                           acetylo-CoA
+
+                                                               NAD+ NADH + H+
+
+                                                                       Na podstawie: B. Alberts i in., Podstawy biologii komórki, Warszawa 2016.
+
+Zadanie 1.1. (0-1)
+Uzupelnij tabel - do kadego wymienionego typu reakcji zachodzcej podczas
+przeksztalcania pirogronianu do acetylo-CoA przyporzdkuj odpowiednie oznaczenie
+enzymu (E1, E2 albo E3), który t reakcj przeprowadza.
+
+           Typ reakcji      Oznaczenie enzymu (E1 / E2 / E3)
+     transacetylacja
+     dehydrogenacja
+     dekarboksylacja
+
+                            Strona 4 z 30
+
+                                                              EBIP-R0_100
+Zadanie 1.2. (0-1)
+W której czci komórki eukariotycznej znajduje si aktywny kompleks
+dehydrogenazy pirogronianowej? Zaznacz wlaciw odpowied sporód podanych.
+
+A. cytozol
+B. macierz mitochondrialna
+C. zewntrzna blona mitochondrium
+D. wewntrzna blona mitochondrium
+E. przestrze midzyblonowa w mitochondrium
+
+Zadanie 1.3. (0-1)
+Wyka, e funkcjonowanie kompleksu dehydrogenazy pirogronianowej jest konieczne
+do polczenia szlaku glikolizy z cyklem Krebsa.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 1.4. (0-1)
+Wyka, e zmniejszenie aktywnoci kompleksu dehydrogenazy pirogronianowej
+prowadzi do wzrostu stenia mleczanu w komórce minia szkieletowego.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+                          Nr zadania           1.1. 1.2. 1.3. 1.4.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 5 z 30
+
+EBIP-R0_100
+Zadanie 2.
+Goryczka wiosenna (Gentiana verna) to niewielka rolina o bardzo duych kwiatach
+w stosunku do calego organizmu. Kolor jej kwiatów jest intensywnie niebieski. W kwiecie
+znajduj si jeden okólek prcików i slupek zbudowany z dwóch owocolistków. Goryczka
+wiosenna jest rolin zapylan przez owady - glównie motyle i trzmiele.
+
+Poniej przedstawiono zdjcie goryczki wiosennej (I) oraz schemat budowy jej kwiatu
+w przekroju podlunym (II).
+
+I                                                            II
+
+                                                                 A
+
+                                                                 prcik
+
+                                                                    B
+
+                                                                 zalnia
+
+   Na podstawie: A. Szweykowska i J. Szweykowski, Botanika, Warszawa 2013.
+                                                      ródlo fotografii: Wikimedia Commons.
+
+Zadanie 2.1. (0-1)
+Podaj nazwy elementów okwiatu goryczki wiosennej oznaczonych na rysunku literami
+A i B.
+
+   A. .....................................................      B. ......................................................
+
+Zadanie 2.2. (0-1)
+Uzupelnij ponisze zdania tak, aby zawieraly informacje prawdziwe. Podkrel
+w kadym nawiasie wlaciwe okrelenie.
+
+Goryczka wiosenna naley do (nagonasiennych / okrytonasiennych). W przemianie pokole
+goryczki wiosennej pokoleniem dominujcym jest (gametofit / sporofit).
+
+   Strona 6 z 30
+
+                                                                        EBIP-R0_100
+Zadanie 2.3. (0-1)
+Wyka, e produkcja barwnika w kwiatach jest korzystna dla goryczki wiosennej mimo
+kosztów energetycznych, zwizanych z syntez tego barwnika.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 3.
+Naprzemienno zaplodnienia i mejozy wystpuje u wszystkich eukariontów rozmnaajcych
+si plciowo, jednak cykle yciowe poszczególnych grup taksonomicznych mog si znacznie
+róni. Poniej przedstawiono w uproszczony sposób przemian pokole u rolin (A) oraz
+metagenez u zwierzt - krkoplawów (B).
+
+Zadanie 3.1. (0-1)
+Uzupelnij schematy A i B - w kadym cyklu yciowym obok wlaciwej strzalki zaznacz
+symbolem ,,R!" etap, podczas którego zachodzi mejoza.
+
+             A. roliny                             B. krkoplawy
+
+                    sporofit  zarodniki                            polip     strobila
+             zygota                                     zygota
+
+                              gametofit                                      meduza
+
+             gamety                                        gamety
+
+Zadanie 3.2. (0-1)
+Wyka, e mejoza jest niezbdna do zamknicia cyklu yciowego eukariontów
+rozmnaajcych si plciowo.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                              Nr zadania           2.1. 2.2. 2.3. 3.1. 3.2.
+                              Maks. liczba pkt
+               Wypelnia                            1    1  1              1  1
+             egzaminator      Uzyskana liczba pkt
+
+                                         Strona 7 z 30
+
+EBIP-R0_100
+Zadanie 4.
+Aby zbada wplyw nawadniania i nawoenia mineralnego zwizkami azotu, fosforu i potasu
+(NPK) na budow anatomiczn i morfologiczn oraz na plonowanie borówki wysokiej
+(Vaccinium corymbosum), wykonano nastpujce dowiadczenie. Prowadzono upraw
+borówki odmiany `Patriot' na glebie ubogiej w skladniki pokarmowe i substancje organiczne
+(zawarto humusu ok. 1,5%). Przed zaloeniem dowiadczenia zakwaszono gleb do pH
+4,0-4,5.
+
+Upraw prowadzono w rónych warunkach wilgotnoci:
+
+· W1 (nisza wilgotno) - 50-60%
+
+· W2 (wysza wilgotno) - 90-95%
+
+oraz przy rónej dostpnoci mineralów:
+
+· bez nawoenia
+
+· z nawoeniem 390 kg NPK/ha (w proporcjach 6 : 3 : 4).
+
+W tabeli przedstawiono wyniki bada wplywu wilgotnoci i nawoenia NPK na budow
+morfologiczn i na plon jagód 5-letnich rolin borówki wysokiej.
+
+                              Wilgotno W1          Wilgotno W2
+
+   rednie wartoci parametrów  bez   nawoenie       bez   nawoenie
+
+Wysoko roliny [cm]            nawoenia NPK         nawoenia NPK
+Liczba pdów jednorocznych na
+krzewie                       69,9           74,6  72,6  84,6
+Lczna dlugo pdów
+jednorocznych [cm/krzew]      5,3            7,3   6,3   9,3
+Plony jagód [kg/krzew]
+                              179            290   253   349
+
+                              1,12           0,55  1,64  0,94
+
+Na podstawie: Z. Koszaski, E. Rumasz-Rudnicka, S. Friedrich, Wplyw nawadniania i nawoenia NPK na budow anatomiczn
+                    i morfologiczn oraz plonowanie borówki wysokiej (Vaccinium corymbosum L.), ,,Acta Agrophysica" 11(3), 2008.
+
+                              Strona 8 z 30
+
+                                                         EBIP-R0_100
+Zadanie 4.1. (0-1)
+Okrel, które stwierdzenia dotyczce opisu wyników przedstawionego dowiadczenia
+s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+       rednia lczna dlugo pdów jednorocznych na krzewie, przy tym
+1. samym poziomie nawoenia, byla wysza w przypadku uprawy na glebie P F
+
+       o wyszej wilgotnoci podloa.
+
+2. Przy tej samej wilgotnoci podloa rednia liczba pdów jednorocznych           P F
+       na krzewie byla wysza po zastosowaniu nawoenia NPK.
+
+Zadanie 4.2. (0-1)
+Na podstawie wyników przedstawionego dowiadczenia sformuluj wniosek dotyczcy
+wplywu obydwu czynników na plonowanie (owocowanie) borówki wysokiej.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 4.3. (0-1)
+Okrel rol trzech pierwiastków - N, P i K - dla funkcjonowania rolin. Do kadego
+wymienionego poniej pierwiastka przyporzdkuj odpowiedni opis sporód podanych
+(1., 2., 3. albo 4.).
+
+1. Ten pierwiastek wchodzi w sklad szkieletu DNA, z którym s zwizane zasady
+   pirymidynowe i purynowe.
+
+2. Ten pierwiastek wchodzi w sklad wszystkich aminokwasów budujcych bialka rolinne.
+3. Jon tego pierwiastka jest wizany przez uklad porfirynowy chlorofilu.
+4. Jony tego pierwiastka bior udzial w regulacji otwierania si aparatów szparkowych.
+
+             N: ................  P: ................     K: ................
+
+                                  Nr zadania           4.1. 4.2. 4.3.
+                                  Maks. liczba pkt
+               Wypelnia                                1  1  1
+             egzaminator          Uzyskana liczba pkt
+
+                                  Strona 9 z 30
+
+EBIP-R0_100
+Zadanie 5.
+Glówn funkcj enzymu RuBisCO (karboksylaza/oksygenaza rybulozo-1,5-bisfosforanowa)
+jest przylczanie dwutlenku wgla do rybulozo-1,5-bisfosforanu (RuBP) w cyklu Calvina.
+Jednak w wysokiej temperaturze i przy wysokim steniu O2 znacznie wzrasta aktywno
+RuBisCO polegajca na przylczaniu tlenu do RuBP, co daje pocztek fotooddychaniu.
+Skutkiem tego procesu jest znaczne zmniejszenie wydajnoci wizania CO2 przez rolin.
+
+U rolin rejonów tropikalnych i subtropikalnych przeprowadzajcych fotosyntez typu C4
+proces fotooddychania jest ograniczony. Jest to zwizane z dwustopniowym mechanizmem
+wizania dwutlenku wgla. Pierwotna asymilacja CO2 z wytworzeniem szczawiooctanu
+zachodzi w komórkach mezofilu, natomiast wlczanie CO2 do cyklu Calvina zachodzi
+w komórkach pochwy okolowizkowej. U niektórych rolin C4 w komórkach pochwy
+okolowizkowej nie ma fotosystemu II (PS II).
+
+Na schemacie przedstawiono w uproszczeniu przebieg fazy fotosyntezy niezalenej
+od wiatla (fazy ciemnej) u rolin C4.
+
+Uwaga: nie zachowano stechiometrii przedstawionych reakcji.
+
+                                          CO2         PEP - fosfoenolopirogronian
+
+                                                      PGA - 3-fosfoglicerynian
+
+                                                      RuBP - rybulozo-1,5-bisfosforan
+
+                PEP (C3)                              PGAl - aldehyd 3-fosfoglicerynowy
+
+              pirogronian  X
+                   (C3)
+                                                   PGA
+komórka
+mezofilu                   jablczan (C4)        A    cykl B   NADPH + H+
+                                  CO2     RuBP     Calvina     ATP + H2O
+         komórka pochwy
+          okolowizkowej                            C    PGAl    NADP+
+                                                               ADP + Pi
+
+    tkanka                                         produkt fotosyntezy
+przewodzca
+
+                                                                                        Na podstawie: W. Czechowski i in., Biologia, Warszawa 1994;
+                                                                                                                      N.A. Campbell, Biologia, Pozna 2013.
+
+Zadanie 5.1. (0-2)
+Podaj nazwy etapów cyklu Calvina oznaczonych na schemacie literami A, B i C.
+
+A. .....................................................................................
+
+B. .....................................................................................
+
+C. .....................................................................................
+
+                              Strona 10 z 30
+
+                                                                                EBIP-R0_100
+Zadanie 5.2. (0-1)
+Dokocz zdanie. Zaznacz odpowied A, B albo C oraz odpowied 1., 2. albo 3.
+
+Liter X na schemacie oznaczono
+
+A. enzym RuBisCO,               1. pierwotnym produktem karboksylacji
+                                      u rolin C4.
+
+B. acetylo-CoA,    który jest 2. kompleksem enzymatycznym,
+                                          odpowiadajcym za karboksylacj.
+
+C. szczawiooctan,               3. pierwotnym akceptorem CO2 u rolin C4,
+                                      podobnie jak RuBP u rolin C3.
+
+Zadanie 5.3. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce fotosyntezy typu C4 s prawdziwe.
+Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. CO2 jest transportowany do komórek pochwy okolowizkowej w postaci      P F
+      3-wglowego pirogronianu.                                            P F
+                                                                          P F
+2. Ze wzgldu na obecno RuBisCO nastpuje utlenianie RuBP, co daje
+      pocztek intensywnemu fotooddychaniu u rolin C4.
+
+3. Redukcja 3-fosfoglicerynianu do aldehydu 3-fosfoglicerynowego
+      zachodzi w komórkach mezofilu.
+
+Zadanie 5.4. (0-2)
+Wyka zwizek midzy ograniczeniem procesu fotooddychania u rolin C4 a:
+1. dwuetapowym mechanizmem wizania dwutlenku wgla
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+2. brakiem PS II w komórkach pochew okolowizkowych.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania           5.1. 5.2. 5.3. 5.4.
+                          Maks. liczba pkt
+               Wypelnia                         2  1  2  2
+             egzaminator  Uzyskana liczba pkt
+
+                                Strona 11 z 30
+
+EBIP-R0_100
+Zadanie 6.
+Licie jabloni, podobnie jak innych drzew liciastych klimatu umiarkowanego, rozwijaj si
+z pków na wiosn i s zrzucane dopiero jesieni. Naturalny proces zrzucania lici polega
+na rozwoju strefy odcinajcej u podstawy ogonka liciowego.
+
+Auksyny s hormonami rolinnymi produkowanymi m.in. przez wierzcholek wzrostu pdu
+oraz przez mlode licie.
+
+Postawiono nastpujc hipotez: Rozwój strefy odcinajcej lici jabloni jest hamowany
+przez auksyny wytwarzane w mlodych liciach.
+
+Na poniszym rysunku przedstawiono przebieg dowiadczenia przeprowadzonego w celu
+weryfikacji tej hipotezy. W dowiadczeniu wykorzystano roczne pdy jabloni z usunitym
+wierzcholkiem wzrostu oraz naturaln auksyn - kwas indolilooctowy (IAA).
+
+      Próba I
+
+                                    po kilku dniach  powstanie strefy
+          odcicie mlodego licia                      odcinajcej
+
+                                                                       wynik
+
+Próba II                                             pasta
+                                                     zawierajca
+                                                     auksyn - IAA
+
+                                                     po kilku dniach
+
+          odcicie mlodego licia                                        wynik
+
+          Na podstawie: W.K. Purves i in., Life. The Science of Biology, Sunderland 2001;
+          H. Fiserová i in., The Effect of Quercetine on Leaf Abscission of Apple Tree [...],
+
+                                                          ,,Plant, Soil and Environment" 52(12), 2006.
+
+Zadanie 6.1. (0-1)
+Na podstawie przedstawionych wyników bada sformuluj wniosek na temat wplywu
+auksyn produkowanych przez mlode licie na rozwój strefy odcinajcej lici jabloni.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                                 Strona 12 z 30
+
+                                                                       EBIP-R0_100
+Zadanie 6.2. (0-1)
+Przedstaw, na czym polega adaptacja w postaci zrzucania lici przed zim u drzew
+liciastych klimatu umiarkowanego. W odpowiedzi uwzgldnij dostpno wody
+dla tych rolin w okresie zimowym oraz rol lici w gospodarce wodnej rolin.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 7.
+Skóra plazów uczestniczy w wymianie gazowej zarówno w dobrze natlenionej wodzie, jak
+i w wilgotnym powietrzu. Oddychanie skórne plazów odgrywa istotn rol w wymianie
+gazowej tych zwierzt ze wzgldu na nisk efektywno wymiany gazowej w plucach.
+Stenie mocznika we krwi plazów jest duo wiksze ni we krwi ssaków. Plazy nie pij
+wody, ale wchlaniaj j przez skór.
+
+                                                                          Na podstawie: H. Szarski, Historia zwierzt krgowych, Warszawa 1998.
+
+Zadanie 7.1. (0-2)
+Wyjanij, dlaczego wymiana gazowa w plucach plazów jest mniej efektywna ni
+w plucach ssaków. W odpowiedzi uwzgldnij dwie rónice midzy wymienionymi
+gromadami: jedn w budowie pluc i jedn w mechanizmie ich wentylacji.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania           6.1. 6.2. 7.1.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  2
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 13 z 30
+
+EBIP-R0_100
+Zadanie 7.2. (0-1)
+Okrel, jakie znaczenie w pobieraniu wody przez plazy ma gromadzenie mocznika
+w ich plynach ustrojowych.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 8.
+Na rysunku przedstawiono polipa stulbi zielonej (Chlorohydra viridissima), która jest
+przedstawicielem typu parzydelkowców (Cnidaria).
+
+                             otwór gbowy
+
+gonada mska
+
+                                                   gonada eska
+             pk
+
+                                                                     Na podstawie: Cz. Blaszak (red.), Zoologia. Bezkrgowce, Warszawa 2014.
+
+Zadanie 8.1. (0-2)
+Okrel dwa sposoby rozmnaania si stulbi zielonej. Odpowiedzi uzasadnij,
+odnoszc si do cech jej budowy widocznych na rysunku.
+
+1. ............................................................................................................................................
+................................................................................................................................................
+
+2. ............................................................................................................................................
+................................................................................................................................................
+
+             Strona 14 z 30
+
+                                                                EBIP-R0_100
+Zadanie 8.2. (0-2)
+Okrel, które stwierdzenia dotyczce polipów parzydelkowców s prawdziwe.
+Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Cialo polipa jest zbudowane z warstwy ektodermy i z warstwy             P F
+       endodermy.                                                          P F
+                                                                           P F
+2. Otwór gbowy polipa pelni zarazem funkcj otworu odbytowego
+       i wydalniczego.
+
+3. Komórki parzydelkowe u polipów s zlokalizowane w endodermie.
+
+Zadanie 9.
+Wtroba czlowieka bierze udzial w przemianach substancji wchlonitych w przewodzie
+pokarmowym. Wtroba wytwarza dziennie okolo 1200 ml ólci, która jest nastpnie
+zagszczana i magazynowana w pcherzyku ólciowym. Enzymatyczny rozklad lipidów
+w przewodzie pokarmowym jest wspomagany przez ól.
+
+                                                                 Na podstawie: red. J.O.E. Clark, The Human Body: A Comprehensive Guide to
+                                                                                     the Structure and Functions of the Human Body, Leicester 1989.
+
+Zadanie 9.1. (0-1)
+Uzupelnij ponisz tabel tak, aby zawierala informacje prawdziwe dotyczce
+procesów zachodzcych w wtrobie. W kadym nawiasie podkrel wlaciwe
+okrelenie.
+
+ Substraty                               Proces                     Produkty
+aminokwasy                (dekarboksylacja / deaminacja)     ketokwasy + amoniak
+
+   glukoza                 (glikoliza / glikogenogeneza)             glikogen
+
+Zadanie 9.2. (0-1)
+Wyjanij, w jaki sposób ól wspomaga enzymatyczny rozklad lipidów w przewodzie
+pokarmowym.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania           7.2. 8.1. 8.2. 9.1. 9.2.
+                          Maks. liczba pkt
+               Wypelnia                        1  2       2  1   1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 15 z 30
+
+EBIP-R0_100
+Zadanie 10.
+Uklad oddechowy czlowieka tworz drogi oddechowe oraz pluca. Tchawica (rysunek A)
+stanowi odcinek dolnych dróg oddechowych. Piercienie obecne w cianie tchawicy maj
+ksztalt podkowiasty.
+
+U owadów tlen do komórek ciala jest dostarczany przez uklad tchawkowy. Tchawki
+(rysunek B) stanowi kanaly powietrzne, których cian tworzy nablonek bdcy
+przedlueniem epidermy pokrywajcej cialo owada. Ten nablonek wytwarza pokryt
+woskami kutykularn wyciólk tchawki, w której mona wyróni takie same warstwy jak
+w kutykuli tworzcej szkielet zewntrzny owada. Na przekroju tchawki s widoczne
+piercieniowe zgrubienia kutykuli.
+
+                                          A
+
+                                                               piercie tchawicy
+
+przelyk                                 tchawica
+
+            B
+
+                             tracheola
+
+przekrój przez
+tchawk
+(w powikszeniu)
+
+              Na podstawie: B.S. Beckett, Biology: A Modern Introduction, Oxford 1978;
+red. M. Makowiak, A. Michalak, Biologia. Jedno i rónorodno, Warszawa 2008.
+
+Strona 16 z 30
+
+                                                  EBIP-R0_100
+Zadanie 10.1. (0-1)
+Podaj nazw bialka stanowicego glówny skladnik piercieni tchawicy czlowieka oraz
+nazw polisacharydu stanowicego glówny skladnik zgrubie kutykuli w tchawkach
+owadów.
+
+Bialko stanowice glówny skladnik piercieni tchawicy czlowieka:
+
+................................................................................................................................................
+
+Polisacharyd stanowicy glówny skladnik zgrubie kutykuli w tchawkach owadów:
+
+................................................................................................................................................
+
+Zadanie 10.2. (0-2)
+Uzupelnij ponisze zdania tak, aby zawieraly informacje prawdziwe dotyczce budowy
+tchawicy czlowieka. W kadym nawiasie podkrel wlaciwe okrelenie.
+
+Tchawica czlowieka rozpoczyna si bezporednio za (gardlem / krtani), a na dolnym kocu
+dzieli si na (oskrzela glówne / oskrzeliki). Tylna ciana tchawicy jest splaszczona i tworz j
+minie (gladkie / poprzecznie prkowane).
+
+               Wypelnia   Nr zadania           10.1.  10.2.
+             egzaminator  Maks. liczba pkt       1      2
+
+                          Uzyskana liczba pkt
+
+                          Strona 17 z 30
+
+EBIP-R0_100
+Zadanie 11.
+Krzywa wizania tlenu przedstawia wysycenie czstkowe hemoglobiny w zalenoci
+od cinienia czstkowego tlenu. Wysyceniem czstkowym nazywa si stosunek liczby miejsc
+zawierajcych zwizany tlen do calkowitej liczby miejsc zdolnych do wizania tlenu
+w czsteczkach hemoglobiny.
+
+Na wizanie tlenu przez hemoglobin wplywaj róne czynniki, m.in. stenie
+2,3-bisfosfoglicerynianu (2,3-BPG) w erytrocytach.
+
+Na wykresie przedstawiono dwie krzywe wizania tlenu:
+
+· czarna krzywa przedstawia dane uzyskane z uyciem ludzkiej hemoglobiny oczyszczonej
+    (wyizolowanej z erytrocytów)
+
+· czerwona krzywa przedstawia dane uzyskane z uyciem ludzkiej hemoglobiny
+    znajdujcej si w erytrocytach.
+
+Na osi X zaznaczono typowe wartoci cinienia czstkowego tlenu wystpujce w plucach
+oraz w tkankach innych narzdów organizmu.
+
+             tkanki innych         pluca              oczyszczona
+               narzdów                                hemoglobina
+                                                    (brak 2,3-BPG)
+Y 1,0
+              8%                                      hemoglobina
+                                                     w erytrocytach
+       0,8                                         (2,3-BPG obecny)
+
+wysycenie czstkowe  0,6 66%
+    hemoglobiny
+                    0,4
+
+                    0,2
+
+                    0,0
+
+                         0 20  50  100             150  200
+
+                                   pO2 [mmHg]                        X
+
+                                        Na podstawie: J.M. Berg i in., Biochemia, Warszawa 2009.
+
+                                   Strona 18 z 30
+
+                                                                        EBIP-R0_100
+Zadanie 11.1. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce wizania tlenu przez hemoglobin s
+prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Oczyszczona hemoglobina ma wiksze powinowactwo do tlenu ni          P F
+      hemoglobina w erytrocytach.                                      P F
+                                                                       P F
+2. Przy cinieniu czstkowym tlenu równym 100 mmHg oczyszczona
+      hemoglobina wie o 8% wicej tlenu ni hemoglobina w erytrocytach.
+
+3. Maksymalne moliwe wysycenie czstkowe hemoglobiny tlenem zaley
+      od zwizania hemoglobiny z 2,3-BPG.
+
+Zadanie 11.2. (0-1)
+Wizanie 2,3-BPG z hemoglobin plodow jest znacznie slabsze ni z hemoglobin
+doroslego czlowieka. U ciarnych kobiet stenie 2,3-BPG w erytrocytach jest o 30%
+wysze ni u kobiet niebdcych w ciy.
+Uzupelnij ponisze zdanie tak, aby w poprawny sposób przedstawialo wplyw
+2,3-BPG na wizanie tlenu przez hemoglobin. W kadym nawiasie podkrel wlaciwe
+okrelenie.
+
+Podwyszone stenie 2,3-BPG w erytrocytach ciarnych kobiet jest przyczyn
+(obnionego / podwyszonego) powinowactwa hemoglobiny matki do tlenu,
+co (ulatwia / utrudnia) dyfuzj tlenu z czci macicznej loyska do czci plodowej loyska.
+
+Zadanie 11.3. (0-1)
+Podaj przyklad funkcji pelnionej przez hemoglobin w erytrocytach, innej ni
+transportowanie tlenu.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           11.1.  11.2.  11.3.
+             egzaminator  Maks. liczba pkt       2      1      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 19 z 30
+
+EBIP-R0_100
+Zadanie 12.
+Zlcze nerwowo-miniowe to synapsa znajdujca si midzy neuronem ruchowym
+a wlóknem miniowym. Warunkiem niezbdnym do uwolnienia w synapsie przekanika
+nerwowego, np. acetylocholiny, jest polczenie pcherzyków synaptycznych zawierajcych
+neurotransmiter z blon komórkow neuronu. Umoliwia je kompleks fuzyjny tworzony przez
+kilka bialek transblonowych (SNARE).
+
+Toksyna botulinowa jest wytwarzana przez beztlenowe bakterie Clostridium botulinum.
+Po dostaniu si do organizmu czlowieka toksyna botulinowa dociera do szczeliny
+synaptycznej, gdzie lczy si z receptorami w blonie neuronu i wnika do jego wntrza.
+Forma aktywna toksyny sklada si z dwóch podjednostek - lacucha lekkiego oraz lacucha
+cikiego - które s polczone mostkiem disiarczkowym. Po rozlczeniu si tych
+podjednostek lacuch lekki rozklada bialka z grupy SNARE. Ostatecznie dochodzi do
+zablokowania przewodzenia w zlczu nerwowo-miniowym, w wyniku czego minie
+ulegaj zwiotczeniu.
+
+Na poniszych schematach przedstawiono mechanizm przekazywania pobudzenia
+w synapsie nerwowo-miniowej osoby zdrowej (A) oraz mechanizm dzialania toksyny
+botulinowej (B). Strzalkami oznaczono kolejno zdarze przedstawionych na schematach.
+
+A                                                          B
+
+                      pcherzyk
+
+                      synaptyczny
+
+                                                                                  neuron
+
+  bialka                                                                          szczelina
+SNARE                                                                             synaptyczna
+
+           receptor                                                               komórka
+            toksyny                                                               miniowa
+         botulinowej
+                      acetylocholina receptor                 lacuch   lacuch
+                                           acetylocholiny       lekki   ciki
+
+                                                              toksyna botulinowa
+
+                      Na podstawie: P. Capek, T.J. Dickerson, Sensing the Deadliest Toxin: Technologies for
+                                                                    Botulinum Neurotoxin Detection, ,,Toxins" 2(1), 2010;
+
+                         A. Mazurkiewicz-Pisarek, A. Plucienniczak, Toksyna botulinowa - cudowna trucizna,
+                                                                                                   ,,Biotechnologia" 2(85), 2009.
+
+                                   Strona 20 z 30
+
+                                                                                  EBIP-R0_100
+Zadanie 12.1. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce dzialania toksyny botulinowej s
+prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. W procesie poraania mini przez toksyn botulinow dochodzi         P F
+      do przemieszczenia jej lacucha lekkiego do cytozolu neuronu.  P F
+                                                                    P F
+2. Po zwizaniu si z receptorem w szczelinie synaptycznej toksyna
+      botulinowa wnika do neuronu na drodze endocytozy.
+
+3. Toksyna botulinowa po przedostaniu si do szczeliny synaptycznej
+      blokuje receptory acetylocholiny w blonie komórki miniowej.
+
+Zadanie 12.2. (0-1)
+Na podstawie przedstawionych w tekcie informacji okrel najwysz rzdowo
+struktury bialka - toksyny botulinowej. Odpowied uzasadnij, odwolujc si do jednej
+cechy budowy tego bialka.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 12.3. (0-1)
+Uzupelnij tabel - uporzdkuj w odpowiedniej kolejnoci procesy fizjologiczne
+zachodzce w synapsie nerwowo-miniowej u zdrowego czlowieka. Wpisz numery
+2.-4. w odpowiednie miejsca tabeli.
+
+Proces fizjologiczny                                                Kolejno
+
+Dotarcie impulsu nerwowego do synapsy nerwowo-miniowej i utworzenie 1
+kompleksu fuzyjnego przez bialka transblonowe (SNARE).
+
+Depolaryzacja blony komórkowej komórki miniowej i powstanie potencjalu
+czynnociowego.
+
+Fuzja pcherzyków synaptycznych z blon presynaptyczn i uwolnienie
+acetylocholiny do szczeliny synaptycznej.
+
+Wizanie si acetylocholiny z miniowym receptorem blonowym.
+
+               Wypelnia   Nr zadania           12.1.  12.2.  12.3.
+             egzaminator  Maks. liczba pkt       2      1      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 21 z 30
+
+EBIP-R0_100
+Zadanie 13.
+U bydla rasy holsztysko-fryzyjskiej autosomalny dominujcy allel (A) genu ASL warunkuje
+wytwarzanie aktywnej syntetazy argininobursztynianowej - enzymu biorcego udzial w cyklu
+mocznikowym.
+
+Cytrulinemia to choroba genetyczna wywolywana przez recesywny allel (a) tego genu.
+Osobniki bdce nosicielami maj normalny fenotyp, natomiast cielta homozygotyczne
+przeywaj tylko pierwsze 5-6 dni po urodzeniu, a przyczyn mierci jest upoledzenie
+zdolnoci syntezy mocznika w organizmie.
+Opracowano test diagnostyczny, umoliwiajcy wykrywanie osobników, które s nosicielami
+wadliwego allelu - w celu wykluczenia ich z hodowli. W tecie na nosicielstwo cytrulinemii
+wykorzystuje si kilka technik inynierii genetycznej. Po uzyskaniu kopii fragmentu badanego
+genu, w iloci wystarczajcej do testu, przecina si otrzymany DNA za pomoc enzymów
+restrykcyjnych. Nastpnie rozdziela si uzyskane fragmenty ze wzgldu na ich dlugo
+i porównuje wyniki tego rozdzialu (metoda PCR-RFLP). W tym tecie wykorzystuje si fakt,
+e allele A i a róni si wystpowaniem w ich obrbie miejsca restrykcyjnego dla enzymu
+AvaII: to miejsce jest obecne w allelu dominujcym, natomiast nie ma go w allelu
+recesywnym.
+
+          Na podstawie: A. Kumar i in., Designing Multiplex PCR Tests for Simultaneous Screening of Bovine Leukocyte Adhesion
+               Deficiency, Bovine Citrullinemia and Factor XI Deficiency Genetic Diseases in Cattle, ,,Ruminant Science" 6(2), 2017;
+                                                                     K.M. Charon, M. witoski, Genetyka i genomika zwierzt, Warszawa 2012.
+
+Zadanie 13.1. (0-1)
+Zapisz wszystkie moliwe genotypy zdrowych osobników, stosujc podane w tekcie
+oznaczenia alleli genów warunkujcych produkcj syntetazy argininobursztynianowej.
+
+................................................................................................................................................
+
+Zadanie 13.2. (0-1)
+Wyjanij, dlaczego z hodowli bydla wyklucza si nosicieli zmutowanego allelu
+odpowiadajcego za rozwój tej choroby. W odpowiedzi uwzgldnij sposób
+dziedziczenia cytrulinemii.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Strona 22 z 30
+
+                EBIP-R0_100
+Zadanie 13.3. (0-1)
+Uporzdkuj opisane w zadaniu techniki inynierii genetycznej zgodnie z kolejnoci
+ich zastosowania w tecie na cytrulinemi. Wpisz numery 1.-3. we wlaciwe komórki
+tabeli.
+
+                              Nazwa techniki          Kolejno wykonania
+             cicie DNA enzymem restrykcyjnym
+             elektroforeza DNA
+             lacuchowa reakcja polimerazy (PCR)
+
+Zadanie 13.4. (0-1)
+Przyporzdkuj wymienionym genotypom A-C oznaczenia wyników 1.-3., otrzymanych
+po elektroforezie w tecie na cytrulinemi.
+Obraz uzyskany po elektroforezie:
+1. jeden prek z czsteczkami DNA zawierajcymi 185 pz [pary zasad].
+2. dwa prki z czsteczkami DNA zawierajcymi 103 pz albo 82 pz.
+3. trzy prki z czsteczkami DNA zawierajcymi 185 pz, 103 pz albo 82 pz.
+
+A. Homozygota dominujca: ...... B. Heterozygota: ...... C. Homozygota recesywna: ......
+
+Zadanie 13.5. (0-1)
+Wyjanij, dlaczego plody cielt, które s homozygotyczne pod wzgldem
+allelu a, rozwijaj si prawidlowo.
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           13.1.  13.2.  13.3.  13.4.  13.5.
+             egzaminator  Maks. liczba pkt       1      1      1      1      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 23 z 30
+
+EBIP-R0_100
+Zadanie 14.
+Wirus ospy wietrznej - VZV (Varicella Zoster Virus) - naley do grupy wirusów, których
+materialem genetycznym jest liniowy, dwuniciowy DNA. Jedynym naturalnym gospodarzem
+tego wirusa jest czlowiek. Pierwotna infekcja prowadzi do ospy wietrznej, która dotyka
+glównie dzieci, mlodzie i mlodych doroslych. Po przebyciu ospy wietrznej VZV pozostaje
+w organizmie w postaci utajonej w czuciowych zwojach nerwów rdzeniowych i czaszkowych.
+Wysoce zaraliwy VZV wystpuje na calym wiecie. Obecnie szczepionka przeciw ospie
+wietrznej zawiera oslabiony szczep wirusa ospy.
+
+Na schemacie przedstawiono budow wirusa VZV.
+
+                                                                             glikoproteiny
+
+                                                                             otoczka lipidowa
+                                                                             tegument (warstwa zawierajca bialka)
+                                                                             X
+
+                                                                             Y
+
+                                                                                    Na podstawie: www.creative-diagnostics.com; microbenotes.com
+
+Zadanie 14.1. (0-1)
+Rozpoznaj elementy budowy wirusa oznaczone na rysunku literami X i Y - podaj ich
+nazwy.
+
+        X. .................................................. Y. ...............................................
+
+Zadanie 14.2. (0-2)
+Okrel, które stwierdzenia dotyczce wirusa VZV s prawdziwe. Zaznacz P, jeli
+stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Do zakaenia wirusem VZV moe doj m.in. przez bezporedni kontakt P F
+       z osob zakaon.
+
+2. W wyniku szczepienia przeciw VZV nabywa si odporno sztuczn    P F
+       biern.
+
+3. W osoczu osób zaszczepionych przeciw ospie wietrznej wystpuj  P F
+       przeciwciala skierowane przeciw VZV.
+
+Strona 24 z 30
+
+                                                                 EBIP-R0_100
+Zadanie 15.
+Wargatek czyciciel (Labroides dimidiatus) ywi si pasoytniczymi bezkrgowcami, które
+przebijaj i rozrywaj skór oraz skrzela innych ryb. Wargatek jest dobrze widoczny w toni
+wodnej dziki czarnemu pasowi biegncemu od glowy do ogona oraz niebieskim plamom
+na tulowiu i na ogonie. Aby pozby si pasoytów, do wargatka czyciciela podplywaj ryby
+z okolo 50 rónych gatunków. Wród ryb zbliajcych si do wargatka znajduj si take
+drapieniki, które go nie atakuj, ale pozwalaj mu na usunicie pasoytów.
+Z wargatkiem wspólwystpuje inna ryba - aspidont (Aspidontus taeniatus) - która jest
+podobna morfologicznie do wargatka, ale prowadzi odmienny tryb ycia. Gdy do aspidonta
+zbliy si wiksza ryba, ten szybko atakuje i odgryza jej kawalek pletwy bd skóry, po czym
+ucieka do swojej kryjówki. Oba gatunki przedstawiono na poniszych ilustracjach.
+
+                                                      Aspidontus taeniatus
+
+                                                      Labroides dimidiatus
+
+                                                     Na podstawie: T. Kaleta, Zachowanie si zwierzt. Zarys problematyki, Warszawa 2014;
+                                                                        J. Morrissey i in., Introduction to the Biology of Marine Life, Sudbury 2009.
+
+Zadanie 15.1. (0-1)
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+Zaleno midzy wargatkiem czycicielem a ryb przez niego czyszczon to
+A. mutualizm.
+B. komensalizm.
+C. drapienictwo.
+D. pasoytnictwo.
+
+               Wypelnia   Nr zadania           14.1.  14.2.  15.1.
+             egzaminator  Maks. liczba pkt       1      2      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 25 z 30
+
+EBIP-R0_100
+Zadanie 15.2. (0-1)
+Na podstawie przedstawionych informacji okrel znaczenie adaptacyjne
+morfologicznego podobiestwa aspidonta do wargatka czyciciela.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 15.3. (0-1)
+Wyjanij, w jaki sposób w toku ewolucji doszlo do utrwalenia si wygldu aspidonta
+przedstawionego na rysunku. W odpowiedzi uwzgldnij mechanizm dzialania doboru
+naturalnego.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 16.
+Przedstawiony na poniszej fotografii rezerwat ,,Zbocza Plutowskie" utworzono w 1963 roku
+na prawym zboczu doliny dolnej Wisly. Celem podjtych dziala byla ochrona muraw
+kserotermicznych oraz zwizanych z nimi wiatlo- i cieplolubnych gatunków rolin. Przed
+utworzeniem rezerwatu na calej powierzchni zboczy przewaaly zbiorowiska muraw, które
+byly wykorzystywane gospodarczo - koszono traw i prowadzono wypas bydla. W cigu
+40 lat od utworzenia rezerwatu i od zaprzestania uytkowania gospodarczego
+zaobserwowano zmiany w skladzie rolinnoci, zwizane z wkraczaniem gatunków
+krzewiastych i gatunków azotolubnych.
+W 2000 roku na terenie rezerwatu zaczto wypasa owce. Obok pozytywnych efektów tego
+eksperymentu - utrzymanie si w wypasanych miejscach duych platów muraw
+kserotermicznych - zauwaono take jego negatywne skutki, m.in. zwikszenie erozji gleby
+i znaczny wzrost udzialu wilczomlecza sosnki (Euphorbia cyparissias) - gatunku, którego
+owce nie zjadaj ze wzgldu na gorzki smak. Zbyt intensywny wypas, który trwa przez caly
+sezon wegetacyjny, moe po dluszym czasie by przyczyn take zuboenia gatunkowego
+muraw i ograniczenia kwitnienia.
+
+Strona 26 z 30
+
+                EBIP-R0_100
+                             Na podstawie: L. Rutkowski i in., Stan zachowania i przeksztalcenia szaty rolinnej wybranych rezerwatów
+                                                     nad doln Wisl, w: Wycieczki geobotaniczne. Region Kujawsko-Pomorski, Toru 2004;
+                                                                               parki.kujawsko-pomorskie.pl; ródlo fotografii: Wikimedia Commons.
+
+Zadanie 16.1. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce rolinnoci muraw kserotermicznych
+znajdujcych si w rezerwacie ,,Zbocza Plutowskie" s prawdziwe. Zaznacz P, jeli
+stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Murawy kserotermiczne w rezerwacie ,,Zbocza Plutowskie" s               P F
+      ekosystemami, których utrzymanie wymaga dzialalnoci czlowieka.       P F
+                                                                           P F
+      Na murawach kserotermicznych w rezerwacie ,,Zbocza Plutowskie"
+2. po zaprzestaniu uytkowania gospodarczego doszlo do zmian skladu
+
+      gatunkowego ekosystemu.
+      Umiarkowane uytkowanie gospodarcze muraw kserotermicznych
+3. w rezerwacie ,,Zbocza Plutowskie" jest dzialaniem umoliwiajcym
+      zachowanie typowego skladu gatunkowego muraw kserotermicznych.
+
+Zadanie 16.2. (0-1)
+Wyjanij, dlaczego zaniechanie gospodarczego uytkowania zboczy wplynlo
+negatywnie na rolinno muraw kserotermicznych.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           15.2.  15.3.  16.1.  16.2.
+             egzaminator  Maks. liczba pkt       1      1      2      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 27 z 30
+
+EBIP-R0_100
+Zadanie 16.3. (0-2)
+Zaznacz dwa przyklady dziala z zakresu ochrony czynnej muraw kserotermicznych.
+
+A. Regularna glboka orka.
+B. Wycinka drzew i krzewów.
+C. Kontrolowany wypas zwierzt.
+D. Wprowadzenie do rezerwatu rolin uprawnych.
+E. Nawoenie muraw kserotermicznych zwizkami azotowymi.
+
+Zadanie 17.
+Morwin (Phocoena phocoena), obok kaszalota, orki i delfinów, naley do podrzdu waleni
+uzbionych. Jest jedynym gatunkiem walenia stale zasiedlajcym Baltyk. Najnowsze
+badania genetyczne wskazuj, e w Baltyku yje izolowana populacja tych zwierzt.
+Morwiny regularnie s spotykane u wybrzey Danii i Niemiec, natomiast w innych rejonach
+pojawiaj si rzadko. Nie podplywaj do lodzi i statków.
+
+Morwiny poruszaj si zwykle przy powierzchni, chyba e nurkuj za pokarmem.
+Zanurzenie trwa do 8-12 minut. Wynurzenie dla wydechu i zaczerpnicia powietrza jest
+krótkie i trwa zwykle od 1 do 2 sekund. Morwiny odywiaj si glównie rybami dennymi,
+ale w ich oldkach s równie znajdowane ryby pelagiczne: ledzie, witlinki, makrele
+i sardynki. Znajdowano równie glony (salat morsk) oraz skorupiaki. Morwiny lokalizuj
+swoje ofiary za pomoc echolokacji. Dziki niej mog równie orientowa si w przestrzeni
+pod wod. Morwiny wytwarzaj serie fal ultradwikowych, a echo odbite od podwodnych
+obiektów przetwarzaj na obrazy otaczajcej przestrzeni.
+
+Glówne przyczyny miertelnoci morwinów to: stosowanie w rybolówstwie baltyckim
+niektórych typów sieci, zaklócenia akustyczne, a w przeszloci take skucie lodem duych
+powierzchni Baltyku podczas srogich zim.
+
+                                                                   Na podstawie: M. Koss, Ssaki morskie Baltyku, ,,Biologia w Szkole" 11, 2015;
+                                                                                                                                                            morswin.pl
+
+Zadanie 17.1. (0-1)
+Uzupelnij ponisze zdania tak, aby zawieraly poprawny opis sieci pokarmowej.
+Podkrel w kadym nawiasie wlaciwe okrelenie.
+
+Morwin odywiajcy si salat morsk, skorupiakami i rybami zajmuje
+(jeden poziom troficzny / wiele poziomów troficznych).
+Morwin zjadajcy salat morsk jest konsumentem (I rzdu / II rzdu).
+
+Strona 28 z 30
+
+                EBIP-R0_100
+Zadanie 17.2. (0-2)
+Wyka, e do wzrostu miertelnoci morwinów moe si przyczyni:
+1. skucie lodem duych powierzchni Baltyku - .......................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+2. wzrost eglugi motorowej na Baltyku - ...............................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           16.3.  17.1.  17.2.
+             egzaminator  Maks. liczba pkt       2      1      2
+
+                          Uzyskana liczba pkt
+
+                          Strona 29 z 30
+
+EBIP-R0_100
+BRUDNOPIS (nie podlega ocenie)
+
+Strona 30 z 30
+
+                                EBIP-R0_100
+BIOLOGIA
+
+Poziom rozszerzony
+
+Formula 2015
+
+BIOLOGIA
+
+Poziom rozszerzony
+
+Formula 2015
+
+BIOLOGIA
+
+Poziom rozszerzony
+
+Formula 2015
+

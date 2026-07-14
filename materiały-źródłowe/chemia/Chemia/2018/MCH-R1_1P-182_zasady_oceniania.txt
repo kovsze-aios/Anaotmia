@@ -1,0 +1,1428 @@
+       EGZAMIN MATURALNY
+   W ROKU SZKOLNYM 2017/2018
+
+                   CHEMIA
+
+              POZIOM ROZSZERZONY
+                 FORMULA OD 2015
+                 (,,NOWA MATURA")
+
+ZASADY OCENIANIA ROZWIZA ZADA
+                   ARKUSZ MCH-R1
+
+                        MAJ 2018
+Ogólne zasady oceniania
+
+Zasady oceniania zawieraj przyklady poprawnych rozwiza zada otwartych. Rozwizania
+te okrelaj zakres merytoryczny odpowiedzi i nie musz by cislym wzorcem oczekiwanych
+sformulowa (za wyjtkiem np. nazw, symboli pierwiastków, wzorów zwizków
+chemicznych). Wszystkie merytorycznie poprawne odpowiedzi, spelniajce warunki
+zadania, ocenione s pozytywnie - równie te nieprzewidziane jako przykladowe odpowiedzi
+w schematach punktowania.
+
+· Zdajcy otrzymuje punkty tylko za poprawne rozwizania, precyzyjnie odpowiadajce
+    poleceniom zawartym w zadaniach.
+
+· Gdy do jednego polecenia zdajcy podaje kilka odpowiedzi (z których jedna jest poprawna,
+    a inne - bldne), nie otrzymuje punktów za adn z nich. Jeeli zamieszczone
+    w odpowiedzi informacje (równie dodatkowe, które nie wynikaj z treci polecenia)
+    wiadcz o zasadniczych brakach w rozumieniu omawianego zagadnienia i zaprzeczaj
+    udzielonej poprawnej odpowiedzi, to za odpowied tak zdajcy otrzymuje 0 punktów.
+
+· W zadaniach wymagajcych sformulowania wypowiedzi slownej, takiej jak wyjanienie,
+    uzasadnienie, opis zmian moliwych do zaobserwowania w czasie dowiadczenia, oprócz
+    poprawnoci merytorycznej oceniana jest poprawno poslugiwania si nomenklatur
+    chemiczn, umiejtne odwolanie si do materialu ródlowego, jeeli taki zostal
+    przedstawiony, oraz logika i klarowno toku rozumowania. Sformulowanie odpowiedzi
+    niejasnej lub czciowo niezrozumialej skutkuje utrat punktu.
+
+· W zadaniach, w których naley dokona wyboru - kad form jednoznacznego wskazania
+    (np. numer dowiadczenia, wzory lub nazwy reagentów) naley uzna za poprawne
+    rozwizanie tego zadania.
+
+· Rozwizanie zadania na podstawie bldnego merytorycznie zaloenia uznaje si w caloci
+    za niepoprawne.
+
+· Rozwizania zada dowiadczalnych (spostrzeenia i wnioski) oceniane s wylcznie
+    wtedy, gdy projekt dowiadczenia jest poprawny, czyli np. prawidlowo zostaly dobrane
+    odczynniki. Jeeli polecenie brzmi: Zaprojektuj dowiadczenie ...., to w odpowiedzi
+    zdajcy powinien wybra wlaciwy odczynnik z zaproponowanej listy i wykona kolejne
+    polecenia. Za spostrzeenia i wnioski bdce konsekwencj niewlaciwie
+    zaprojektowanego dowiadczenia (np. bldnego wyboru odczynnika) zdajcy nie otrzymuje
+    punktów.
+
+· W rozwizaniach zada rachunkowych oceniane s: metoda (przedstawiony tok
+    rozumowania wicy dane z szukan), wykonanie oblicze i podanie wyniku z poprawn
+    jednostk i odpowiedni dokladnoci. Poprawno wykonania oblicze i wynik s
+    oceniane tylko wtedy, gdy zostala zastosowana poprawna metoda rozwizania. Wynik
+    liczbowy wielkoci mianowanej podany bez jednostek lub z niepoprawnym ich zapisem
+    jest bldny.
+             o Zastosowanie bldnych wartoci liczbowych wielkoci niewymienionych
+                  w informacji wprowadzajcej, treci zadania, poleceniu lub tablicach
+                  i niebdcych wynikiem oblicze naley traktowa jako bld metody.
+             o Zastosowanie bldnych wartoci liczbowych wielkoci podanych w informacji
+                  wprowadzajcej, treci zadania, poleceniu lub tablicach naley traktowa jako
+                  bld rachunkowy, o ile nie zmienia to istoty analizowanego problemu,
+                  w szczególnoci nie powoduje jego uproszczenia.
+             o Uycie w obliczeniach bldnej wartoci masy molowej uznaje si za bld
+                  rachunkowy, jeeli jest ona jednoznacznie opisana w rozwizaniu zadania.
+
+                                                 Strona 2 z 29
+· Jeeli polecenie brzmi: Napisz równanie reakcji w formie ...., to w odpowiedzi zdajcy
+    powinien napisa równanie reakcji w podanej formie z uwzgldnieniem bilansu masy
+    i ladunku. Za zapis równania reakcji, w którym poprawnie dobrano wspólczynniki
+    stechiometryczne, ale nie uwzgldniono warunków zadania (np. rodowiska reakcji), nie
+    przyznaje si punktów.
+
+Notacja:
+· Za napisanie wzorów strukturalnych zamiast wzorów pólstrukturalnych (grupowych) nie
+
+    odejmuje si punktów.
+· We wzorach elektronowych pary elektronowe mog by przedstawione w formie
+
+    kropkowej lub kreskowej.
+· Jeeli we wzorze kreskowym zaznaczona jest polaryzacja wiza, to jej kierunek musi by
+
+    poprawny.
+· Zapis ,,", ,," w równaniach reakcji nie jest wymagany.
+· W równaniach reakcji, w których ustala si stan równowagi, brak ,," nie powoduje utraty
+
+    punktów.
+· W równaniach reakcji, w których naley okreli kierunek przemiany (np. reakcji redoks),
+
+    zapis ,," zamiast ,," powoduje utrat punktów.
+
+                                                 Strona 3 z 29
+Zadanie 1.1. (0-1)
+
+Wymagania ogólne          Wymagania szczególowe
+
+I. Wykorzystanie          IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.   2. Struktura atomu - jdro i elektrony. Zdajcy:
+II. Rozumowanie           2.4) okrela przynaleno pierwiastków do bloków
+i zastosowanie nabytej    konfiguracyjnych: s, p i d ukladu okresowego (konfiguracje
+wiedzy do rozwizywania    elektronów walencyjnych);
+problemów.                2.5) wskazuje na zwizek pomidzy budow atomu
+                          a poloeniem pierwiastka w ukladzie okresowym.
+                          6. Reakcje utleniania i redukcji. Zdajcy:
+                          6.4) przewiduje typowe stopnie utlenienia pierwiastków na
+                          podstawie konfiguracji elektronowej ich atomów.
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie wszystkich komórek tabeli.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied                            Numer grupy    Symbol bloku
+                         Symbol pierwiastka        11              d
+                                                   17              p
+pierwiastek X             Cu
+
+pierwiastek Z             Br
+
+Zadanie 1.2. (0-1)        IV etap edukacyjny - poziom rozszerzony
+                          2. Struktura atomu - jdro i elektrony. Zdajcy:
+  II. Rozumowanie         2.3) zapisuje konfiguracje elektronowe atomów pierwiastków
+  i zastosowanie nabytej  do Z=36 i jonów o podanym ladunku, uwzgldniajc
+  wiedzy do rozwizywania  rozmieszczenie elektronów na podpowlokach [...];
+  problemów.              2.5) wskazuje na zwizek pomidzy budow atomu
+                          a poloeniem pierwiastka w ukladzie okresowym.
+
+Schemat punktowania
+1 p. - za poprawne napisanie skróconej (z zastosowaniem symbolu argonu) konfiguracji
+
+       elektronowej jonu Cu2+.
+0 p. - za odpowied bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+[Ar] 3d9
+lub
+
+[Ar]     
+
+                    3d
+
+Uwaga! Zastosowanie zapisu klatkowego bez uwzgldnienia numeru powloki lub symbolu
+podpowloki powoduje utrat punktu.
+
+                              Strona 4 z 29
+Zadanie 1.3. (0-1)       IV etap edukacyjny - poziom rozszerzony
+                         3. Wizania chemiczne. Zdajcy:
+ II. Rozumowanie         3.4) zapisuje wzory elektronowe typowych czsteczek
+ i zastosowanie nabytej  zwizków kowalencyjnych [...];
+ wiedzy do rozwizywania
+ problemów.              3.6) okrela typ wizania (, ) w prostych czsteczkach.
+
+Schemat punktowania
+1 p. - za poprawne podanie liczby wiza  i  oraz wolnych par elektronowych
+
+       w czsteczce Br2.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied                Liczba     wolnych par elektronowych
+                             wiza                           6
+             wiza 
+                  1               0
+
+Zadanie 2. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                         1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+ II. Rozumowanie         1.1) stosuje pojcie mola (w oparciu o liczb Avogadra);
+ i zastosowanie nabytej  1.3) oblicza mas atomow pierwiastka na podstawie jego
+ wiedzy do rozwizywania  skladu izotopowego [...].
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawn metod obliczenia masy atomowej jednego z izotopów galu, poprawne
+
+       wykonanie oblicze i podanie wyniku z wlaciw dokladnoci i z wlaciw jednostk.
+0 p. - za bldne rozwizanie albo brak rozwizania.
+
+Przykladowe rozwizanie       mx = 70,919 u lub mx = 70,918 u
+
+69,723 = 2  mx + 3  68,926 
+
+                     5
+
+Zadanie 3. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                         1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+ II. Rozumowanie         1.1) stosuje pojcie mola (w oparciu o liczb Avogadra).
+ i zastosowanie nabytej
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawn metod obliczenia masy atomu galu, poprawne wykonanie oblicze
+
+       i podanie wyniku w gramach.
+0 p. - za bldne rozwizanie albo brak rozwizania.
+
+                             Strona 5 z 29
+Przykladowe rozwizanie
+m = 68,926 1,661 10-24 g  m = 1,14 10-22 (g)
+
+lub
+m = 68,926 uu = 11, 45 10-23 (g)
+
+     6, 02 1023 g
+
+Zadanie 4. (0-2)          IV etap edukacyjny - poziom rozszerzony
+                          7. Metale. Zdajcy:
+ I. Wykorzystanie         7.3) analizuje i porównuje wlaciwoci chemiczne [...] metali
+ i tworzenie informacji.  grup [...] 2.
+ II. Rozumowanie
+ i zastosowanie nabytej
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+2 p. - za poprawne napisanie w formie jonowej skróconej dwóch równa reakcji.
+1 p. - za poprawne napisanie w formie jonowej skróconej jednego równania reakcji.
+0 p. - za bldne napisanie równa reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+       stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie reakcji 1:
+Be + 2H3O+ + 2H2O [Be(H2O)4 ]2+ + H2
+lub
+Be + 2H+ + 4H2O [Be(H2O)4 ]2+ + H2
+
+Równanie reakcji 2:
+Be + 2OH- + 2H2O [Be(OH)4 ]2- + H2
+
+Zadanie 5. (0-1)          IV etap edukacyjny - poziom rozszerzony
+                          4. Kinetyka i statyka chemiczna. Zdajcy:
+ I. Wykorzystanie         4.3) stosuje pojcia egzoenergetyczny, endoenergetyczny [...]
+ i tworzenie informacji.  do opisu efektów energetycznych przemian;
+ II. Rozumowanie          4.6) wykazuje si znajomoci i rozumieniem poj: stan
+ i zastosowanie nabytej   równowagi dynamicznej [...];
+ wiedzy do rozwizywania   4.7) stosuje regul przekory do jakociowego okrelenia
+ problemów.               wplywu zmian temperatury, stenia reagentów [...] na uklad
+                          pozostajcy w stanie równowagi dynamicznej.
+
+Schemat punktowania
+1 p. - za poprawne wskazanie, czy opisana przemiana jest procesem egzoenergetycznym, czy
+
+       endoenergetycznym, wraz z uzasadnieniem, które odwoluje si do kierunku zmiany
+       wydajnoci reakcji pod wplywem zmiany temperatury.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+                          Strona 6 z 29
+Przyklady poprawnej odpowiedzi
+Przemiana jest procesem endoenergetycznym. Wraz ze wzrostem temperatury wzrasta
+zawarto (a wic stenie) CO, czyli zwiksza si wydajno reakcji.
+lub
+Przemiana jest procesem endoenergetycznym. Wraz ze wzrostem temperatury wzrasta procent
+objtociowy CO.
+lub
+Przemiana jest procesem endoenergetycznym, poniewa im wysza temperatura tym wicej
+CO w mieszaninie równowagowej.
+
+Uwaga! Stwierdzenie: H > 0 nie jest uzasadnieniem.
+Uwaga! Za uzasadnienie zawierajce stwierdzenie, e wraz ze wzrostem temperatury wzrasta
+objto CO, naley przyzna 0 punktów.
+
+Zadanie 6. (0-2)         IV etap edukacyjny - poziom rozszerzony
+                         1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+ II. Rozumowanie         1.6) wykonuje obliczenia z uwzgldnieniem [...] mola [...].
+ i zastosowanie nabytej
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+2 p. - za zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+       w procentach.
+1 p. - za zastosowanie poprawnej metody, ale:
+
+       - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+lub
+
+       - niepodanie wyniku w procentach.
+0 p. - za zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizania                            mCO 2 = 0,8 mola·44 g  mol -1 = 35,2 g
+Rozwizanie I:                                   mCO = 0,2 mola·28 g  mol -1 = 5,6 g
+% obj. CO2 = 80%  0,8 mola CO2 
+
+% obj. CO = 20%  0,2 mola CO 
+
+masa mieszaniny: 35,2 g + 5,6 g = 40,8 g
+44 g CO2 ---- 32 g tlenu
+35,2 g CO2 ---- x g tlenu  x = 25,6 g
+
+28 g CO ---- 16 g tlenu              y = 3,2 g
+5,6 g CO ---- y g tlenu 
+
+masa tlenu: 25,6 g + 3,2 g = 28,8 g
+
+% masowy tlenu = 28,8 g 100% = 70,59%
+                         40,8 g
+
+% masowy tlenu = 70,59(%)
+
+                                     Strona 7 z 29
+Rozwizanie II:                               %obj. CO = 20%  0,2 dm3 CO
+% obj. CO2 = 80%  0,8 dm3 CO2
+
+nCO2 = 0,8 71,6 = 0,011 mola  mCO 2 = 0,011 mola·44 g  mol -1 = 0,484 g
+
+nCO = 0,2 71,6 = 0,003 mola  mCO = 0,003 mola·28 g  mol -1 = 0,084 g
+
+masa mieszaniny: 0,484 g + 0,084 g = 0,568 g
+44 g CO2 ---- 32 g tlenu
+0,484 g CO2 ---- x g tlenu  x = 0,352 g
+
+28 g CO ---- 16 g tlenu                  y = 0,048 g
+0,084 g CO ---- y g tlenu 
+
+masa tlenu: 0,352 g + 0,048 g = 0,400 g
+
+%masowy tlenu = 0,4 g 100% = 70,42%
+                        0,568 g
+
+%masowy tlenu = 70,42(%)
+
+Rozwizanie III:
+
+mO w CO2 + mO w CO 100% = 16 1, 6 +16  0, 2 100% = 70, 59%
+mCO2 + mCO               44  0,8 + 28  0, 2
+
+% masowy tlenu = 70,59(%)
+
+Rozwizanie IV:
+
+nCO2 : nCO = 4 :1
+44 g CO2 ---- 32 g tlenu
+176 g CO2 ---- x g tlenu  x = 128 g
+
+28 g CO ---- 16 g tlenu
+
+masa mieszaniny: 176 g + 28 g = 204 g
+masa tlenu: 128 g + 16 g = 144 g
+% masowy tlenu = 144 g 100% = 70, 59%
+
+                         204 g
+
+% masowy tlenu = 70,59(%)
+
+Uwaga! Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+Uwaga! Za rozwizanie odnoszce si do warunków normalnych (Vmol = 22,4 dm3·mol-1 ),
+naley przyzna 0 pkt.
+
+Zadanie 7. (0-1)           IV etap edukacyjny - poziom rozszerzony
+                           5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ II. Rozumowanie           Zdajcy:
+ i zastosowanie nabytej    5.7) przewiduje odczyn roztworu po reakcji [...] substancji
+ wiedzy do rozwizywania    zmieszanych w ilociach stechiometrycznych [...];
+ problemów.                5.9) [...] bada odczyn roztworu;
+                           5.11) projektuje i przeprowadza dowiadczenia pozwalajce
+                           otrzyma rónymi metodami [...] wodorotlenki i sole.
+
+                                         Strona 8 z 29
+Schemat punktowania
+1 p. - za poprawne wskazanie trzech odpowiedzi.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+1. - F, 2. - F, 3. - P
+
+Zadanie 8.                IV etap edukacyjny - poziom rozszerzony
+                          8. Niemetale. Zdajcy:
+II. Rozumowanie           8.12) opisuje typowe wlaciwoci chemiczne kwasów,
+i zastosowanie nabytej    w tym zachowanie wobec [...] soli kwasów o mniejszej mocy;
+wiedzy do rozwizywania    planuje [...] odpowiednie dowiadczenia (formuluje
+problemów.                obserwacje i wnioski); ilustruje je równaniami reakcji.
+III. Opanowanie czynnoci
+praktycznych.
+
+Zadanie 8.1. (0-1)
+
+Schemat punktowania
+1 p. - za poprawny wybór odczynników i uzupelnienie schematu.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied         2. Na2CO3                 3. C6H5ONa
+    1. HCl
+
+Uwaga! Za odpowied, w której zdajcy zamieni miejscami odczynniki 1. i 2., naley przyzna
+1 pkt.
+Uwaga! Za odpowied, w której zdajcy wybierze Ca(OH)2 - nawet jako dodatkowy odczynnik
+- naley przyzna 0 pkt.
+
+Zadanie 8.2. (0-1)
+
+Schemat punktowania
+1 p. - za poprawny opis zmian przy poprawnym wyborze odczynników w zadaniu 8.1.
+0 p. - za bldny wybór odczynników w zadaniu 8.1. lub bldny opis zmian albo brak
+
+       odpowiedzi.
+
+Przyklady poprawnej odpowiedzi
+Kolba: Wydziela si gaz.
+lub Widoczne s pcherzyki gazu.
+lub Roztwór si pieni.
+
+Probówka: Zmtnienie zawartoci probówki.
+lub Powstaje zawiesina.
+lub Roztwór staje si mleczny.
+lub Nastpuje rozwarstwienie cieczy.
+lub Tworz si dwie warstwy cieczy.
+lub Pojawia si (charakterystyczny) zapach.
+
+                                     Strona 9 z 29
+Zadanie 8.3. (0-2)
+
+Schemat punktowania
+2 p. - za poprawne napisanie dwóch równa reakcji w formie jonowej skróconej przy
+
+       poprawnym wyborze wszystkich odczynników w zadaniu 8.1.
+1 p. - za poprawne napisanie tylko jednego równania reakcji w formie jonowej skróconej
+
+       (w kolbie albo w probówce) przy poprawnym wyborze wszystkich odczynników
+       w zadaniu 8.1.
+lub
+     - za poprawne napisanie tylko równania reakcji w formie jonowej skróconej zachodzcej
+       w kolbie przy poprawnym wyborze odczynników 1. i 2. w zadaniu 8.1.
+0 p. - za bldne napisanie dwóch równa reakcji (bldne wzory reagentów, bldne
+       wspólczynniki stechiometryczne, niewlaciwa forma zapisu) lub bldny wybór
+       odczynników w zadaniu 8.1. albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie reakcji zachodzcej w kolbie:
+CO32- + 2H+  CO2 + H2O
+
+lub
+CO32- + 2H3O+  CO2 + 3H2O
+
+lub z zapisem CO2·H2O
+
+Równanie reakcji zachodzcej w probówce:
+C6H5O - + CO2 + H2O  C6H5OH + HCO3-
+lub
+2C6H5O - + CO2 + H2O  2C6H5OH + CO32-
+lub z zapisem CO2·H2O
+
+Uwaga! Poniewa zadanie dotyczy wlaciwoci kwasu wglowego, wyjtkowo zdajcy nie traci
+punktu za uycie zapisu: H2CO3 zamiast CO2 + H2O.
+
+Zadanie 9.1. (0-1)       IV etap edukacyjny - poziom rozszerzony
+                         4. Kinetyka i statyka chemiczna. Zdajcy:
+ II. Rozumowanie         4.8) klasyfikuje substancje do kwasów lub zasad zgodnie
+ i zastosowanie nabytej  z teori Brønsteda-Lowry'ego.
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawne napisane równania autodysocjacji i podkrelenie wzoru kwasu Brønsteda.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied                      lub H2SO4 + H2SO4  H3SO4+ + HSO4-
+
+2H2SO4  H3SO4+ + HSO4-
+
+                         Strona 10 z 29
+Zadanie 9.2. (0-2)             IV etap edukacyjny - poziom rozszerzony
+                               4. Kinetyka i statyka chemiczna. Zdajcy:
+ II. Rozumowanie               4.6) wykazuje si znajomoci i rozumieniem poj: stan
+ i zastosowanie nabytej        równowagi dynamicznej i stala równowagi; zapisuje
+ wiedzy do rozwizywania        wyraenie na stal równowagi podanej reakcji.
+ problemów.                    5. Roztwory i reakcje zachodzce w roztworach wodnych.
+                               Zdajcy:
+                               5.6) stosuje termin stopie dysocjacji dla ilociowego opisu
+                               zjawiska dysocjacji elektrolitycznej.
+
+Schemat punktowania
+2 p. - za zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku.
+1 p. - za zastosowanie poprawnej metody, ale:
+
+     - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+lub
+
+     - podanie wyniku z jednostk.
+0 p. - za zastosowanie bldnej metody obliczenia (równie bldnego wyraenia na stal
+
+       dysocjacji) albo brak rozwizania.
+
+Uwaga! Zastosowanie uproszczonych zalenoci w obliczeniach jest bldn metod.
+
+Uwaga! Rozwizanie, w którym zdajcy zapisze wynik z wymagan dokladnoci, a nastpnie
+poda go z mniejsz dokladnoci, naley uzna za poprawne.
+
+Przykladowe rozwizania
+Rozwizanie I:
+masa molowa NaHSO4: 120 g·mol-1
+
+liczba moli NaHSO4: n = 0, 600 = 0, 005 mol
+                                120
+
+st. NaHSO4: c = 0, 005 = 0, 05 mol·dm-3
+                         0,1
+
+stala dysocjacji anionu wodorosiarczanowego(VI): Ka = 0,01 =  [H3O+ ][SO42- ]
+
+                                                              -[HSO4 ]
+
+jeeli stenie kationów H3O+ wynosi x, to:
+
+0, 01 = x  x
+        0, 05 - x
+
+Rozwizania tego równania kwadratowego to:
+
+x2 + 0, 01x - 0, 01 0, 05 = 0
+
+ = 0, 0021   =0,0458
+
+x1 = 0, 0179 x2 < 0
+Zatem:
+ H3O+  = 0, 0179 mol·dm-3  0,018 mol·dm-3 pH = - log(0,18 0,1) = 0, 745 +1 = 1, 745
+
+                               Strona 11 z 29
+Rozwizanie II:
+masa molowa NaHSO4: 120 g·mol-1
+liczba moli NaHSO4: n = 0, 600 = 0, 005 mol
+
+                                120
+st. NaHSO4: c = 0, 005 = 0, 05 mol·dm-3
+
+                         0,1
+
+stala dysocjacji anionu wodorosiarczanowego(VI): Ka = 0,01 =  [H3O+ ][SO42- ]
+
+                                                              [HSO4 ]-
+
+a stenie kationów H3O wynosi H3O  =c , wic: Ka =++ 2 c
+
+Rozwizania tego równania kwadratowego to:          1-
+
+ 2c + Ka - Ka = 0
+
+5 2 +  -1 = 0
+
+ = 21   = 4,58
+
+1 = 0,358 2 < 0
+
+Zatem:
+
+H3O+      =  c  =  0, 358  0, 05
+
+
+H3O+  = 0, 0179 mol·dm-3  0,018 mol·dm-3 pH = - log(0,18 0,1) = 0, 745 +1 = 1, 745
+
+Zadanie 10. (0-1)                 IV etap edukacyjny - poziom rozszerzony
+                                  4. Kinetyka i statyka chemiczna. Zdajcy:
+  II. Rozumowanie                 4.9) interpretuje wartoci [...] pH [...].
+  i zastosowanie nabytej          5. Roztwory i reakcje zachodzce w roztworach wodnych.
+  wiedzy do rozwizywania          Zdajcy:
+  problemów.                      5.8) uzasadnia (ilustrujc równaniami reakcji) przyczyn
+                                  kwasowego odczynu roztworów kwasów, zasadowego
+                                  odczynu wodnych roztworów niektórych wodorotlenków
+                                  (zasad) oraz odczynu niektórych roztworów soli (hydroliza);
+                                  5.9) [...] bada odczyn roztworu.
+
+Schemat punktowania
+1 p. - za poprawne uszeregowanie podanych wzorów.
+0 p. - za kad inn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+HCl, NH4Cl, KCl, NaNO2, KOH
+
+Uwaga! Za bldne przepisanie wzorów naley przyzna 0 punktów.
+
+                                  Strona 12 z 29
+Zadanie 11. (0-1)          IV etap edukacyjny - poziom rozszerzony
+                           5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ III. Opanowanie czynnoci  Zdajcy:
+ praktycznych.             5.9) podaje przyklady wskaników pH [...] i omawia ich
+                           zastosowanie. [...].
+
+Schemat punktowania
+1 p. - za poprawny wybór wskanika.
+0 p. - za odpowied bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+wskanik III
+
+Zadanie 12. (0-1)          IV etap edukacyjny - poziom rozszerzony
+                           5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ III. Opanowanie czynnoci  Zdajcy:
+ praktycznych.             5.8) uzasadnia (ilustrujc równaniami reakcji) przyczyn [...]
+                           odczynu niektórych roztworów soli (hydroliza);
+                           5.9) [...] bada odczyn roztworu;
+                           5.10) pisze równania reakcji: [...] hydrolizy soli w formie
+                           [...] jonowej ([...] skróconej).
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie zdania i uzasadnienie.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Przyklady poprawnej odpowiedzi
+W opisanym dowiadczeniu odczyn roztworu w punkcie równowanikowym jest
+(kwasowy / obojtny / zasadowy).
+
+Uzasadnienie:
+W wyniku reakcji jonów octanowych z czsteczkami wody wzrasta stenie jonów
+wodorotlenkowych.
+lub
+Zachodzi dysocjacja zasadowa jonu octanowego.
+lub
+Kwas octowy jest slabym kwasem, a sprzona z nim zasada (jon octanowy) ulega reakcji
+z wod.
+lub
+
+CH3COO- + H2O  CH3COOH + OH-
+lub
+Poniewa zachodzi reakcja hydrolizy soli (octanu sodu).
+lub
+Poniewa (w punkcie równowanikowym) obecne s niezdysocjowane czsteczki kwasu i jest
+nadmiar jonów OH-.
+
+Uwaga! Za uzasadnienie, w którym zdajcy odwola si jedynie do informacji: o pH=9 albo
+o powstawaniu soli mocnej zasady i slabego kwasu, naley przyzna 0 punktów.
+
+                           Strona 13 z 29
+Zadanie 13. (0-1)               IV etap edukacyjny - poziom rozszerzony
+                                5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ III. Opanowanie czynnoci       Zdajcy:
+ praktycznych.                  5.9) [...] bada odczyn roztworu;
+                                5.10) pisze równania reakcji: [...] hydrolizy soli w formie
+                                [...] jonowej ([...] skróconej).
+                                III etap edukacyjny
+                                6. Kwasy i zasady. Zdajcy:
+                                6.6) [...] zapisuje równania dysocjacji elektrolitycznej zasad
+                                i kwasów [...].
+                                7. Sole. Zdajcy:
+                                7.3) pisze równania dysocjacji elektrolitycznej [...] soli.
+
+Schemat punktowania
+1 p. - za poprawne podanie wzoru jonu, którego stenie w roztworze jest najwiksze.
+0 p. - za bldn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+Na+
+Uwaga! Jeli zdajcy zamiast wzoru jonu poda jego nazw, naley przyzna 0 pkt.
+
+Zadanie 14. (0-2)               IV etap edukacyjny - poziom rozszerzony
+                                1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+ II. Rozumowanie                1.6) wykonuje obliczenia z uwzgldnieniem [...] mola [...],
+ i zastosowanie nabytej         objtoci gazów w warunkach normalnych.
+ wiedzy do rozwizywania         4. Kinetyka i statyka chemiczna. Zdajcy:
+ problemów.                     4.6) wykazuje si znajomoci i rozumieniem poj: stan
+                                równowagi dynamicznej i stala równowagi; zapisuje
+                                wyraenie na stal równowagi podanej reakcji.
+
+Schemat punktowania
+2 p. - za zastosowanie poprawnej metody (w tym poprawne zapisanie wyraenia na stal
+
+       równowagi danej przemiany), poprawne wykonanie oblicze oraz podanie wyniku.
+1 p. - za zastosowanie poprawnej metody, ale:
+
+       - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+lub
+
+       - podanie wyniku z bldn jednostk.
+0 p. - za zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizanie
+
+liczba moli A i B w mieszaninie wyjciowej:
+
+nA = 15  1 22, 4 = 0, 0089 mol         nB = 45  1 22, 4 = 0, 0357 mol
+
+stenia pocztkowe A i B:
+
+A : c0 = 0, 0089 1 = 0, 0089 mol·dm-3       B : c0 = 0, 0357 1 = 0, 0357 mol·dm-3
+
+                                       Strona 14 z 29
+w stanie równowagi:                           [B] = 0, 0357 - 0, 004 = 0, 0317 mol·dm-3
+[A] = 0, 0089 - 1  0, 004 = 0, 0069 mol·dm-3
+
+                  2
+[C] = 0,004 mol·dm-3
+
+podstawiajc do wyraenia na stal równowagi     K=  [C]2    2 , uzyskujemy:
+
+                                                  [A]  [B]
+
+K=        0, 0042     2 = 2, 31
+
+    0, 0069  0, 0317
+
+K = 2,31
+
+Zadanie 15. (0-1)                IV etap edukacyjny - poziom rozszerzony
+                                 1. Atomy, czsteczki i stechiometria chemiczna.
+ II. Rozumowanie                 1.6) wykonuje obliczenia z uwzgldnieniem [...] mola [...].
+ i zastosowanie nabytej          4. Kinetyka i statyka chemiczna. Zdajcy:
+ wiedzy do rozwizywania          4.7) stosuje regul przekory do jakociowego okrelenia
+ problemów.                      wplywu zmian temperatury, stenia reagentów i cinienia na
+                                 uklad pozostajcy w stanie równowagi dynamicznej.
+
+Schemat punktowania
+1 p. - za poprawne wskazanie trzech odpowiedzi.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+1. - P, 2. - F, 3. - P
+
+Zadanie 16. (0-1)                IV etap edukacyjny - poziom rozszerzony
+                                 4. Kinetyka i statyka chemiczna. Ucze:
+ I. Wykorzystanie                4.8) klasyfikuje substancje do kwasów lub zasad zgodnie
+ i tworzenie informacji.         z teori Brønsteda-Lowry'ego.
+ II. Rozumowanie
+ i zastosowanie nabytej
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawne wskazanie trzech odpowiedzi.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+1. - P, 2. - P, 3. - P
+
+                                 Strona 15 z 29
+Zadanie 17. (0-1)               IV etap edukacyjny - poziom rozszerzony
+                                4. Kinetyka i statyka chemiczna. Ucze:
+ I. Wykorzystanie               4.8) klasyfikuje substancje do kwasów lub zasad zgodnie
+ i tworzenie informacji.        z teori Brønsteda-Lowry'ego.
+ II. Rozumowanie
+ i zastosowanie nabytej
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawne napisanie dwóch równa reakcji (uzupelnienie schematu).
+0 p. - za bldne napisanie równa reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+       stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+HPO42- + H3O +  H2PO4- + H2O
+H2PO4- + OH -  HPO42- + H2O
+
+Zadanie 18.                     IV etap edukacyjny - zakres rozszerzony
+                                7. Metale. Zdajcy:
+ I. Wykorzystanie               7.5) przewiduje kierunek przebiegu reakcji metali z kwasami
+ i tworzenie informacji.        i z roztworami soli, na podstawie danych zawartych w szeregu
+ III. Opanowanie czynnoci       napiciowym metali;
+ praktycznych.                  7.6) projektuje i przeprowadza dowiadczenie, którego wynik
+                                pozwoli porówna aktywno chemiczn metali [...].
+
+Zadanie 18.1. (0-1)
+
+Schemat punktowania
+1 p. - za poprawne uszeregowanie metali.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+Hf, Tl, Mo, Tc
+
+Uwaga! Jeli zdajcy zamiast symboli pierwiastków poda ich nazwy, naley przyzna punkt.
+
+Zadanie 18.2. (0-1)
+
+Schemat punktowania
+1 p. - za poprawny zapis wzorów wybranych kationów.
+0 p. - za kad inn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied               Najslabszy utleniacz: Hf 4+
+Najsilniejszy utleniacz: Tc 4+
+
+                                Strona 16 z 29
+Zadanie 19. (0-2)         IV etap edukacyjny - poziom rozszerzony
+                          5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ II. Rozumowanie          Zdajcy:
+ i zastosowanie nabytej   5.2) wykonuje obliczenia zwizane [...] z zastosowaniem
+ wiedzy do rozwizywania   poj stenie procentowe [...].
+ problemów.
+
+Schemat punktowania
+2 p. - za zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+       w procentach.
+1 p. - za zastosowanie poprawnej metody, ale:
+
+       - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+lub
+
+       - niepodanie wyniku w procentach.
+0 p. - za zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizanie
+
+M NaHSO4 = 120 g  mol-1 M NaHSO4 H2O = 138 g  mol-1
+
+120 g NaHSO4 ---- 138 g NaHSO4·H2O
+
+x   ---- 67 g NaHSO4·H2O  x = 58,26 g
+
+cp = ms 100% = 58, 26 100% = 35(%)
+mr  67 +100
+
+Zadanie 20. (0-1)         IV etap edukacyjny - zakres rozszerzony
+                          5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ I. Wykorzystanie         Zdajcy:
+ i tworzenie informacji.  5.10) pisze równania reakcji: [...] wytrcania osadów
+                          w formie [...] jonowej ([...] skróconej).
+                          8. Niemetale. Zdajcy:
+                          8.10) [...] planuje [...] dowiadczenie, którego przebieg
+                          pozwoli wykaza charakter chemiczny [...].
+
+Schemat punktowania
+1 p. - za poprawne napisanie równania reakcji w formie jonowej skróconej i poprawne
+
+      okrelenie charakteru chemicznego wodorotlenku niklu(II).
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie reakcji: Ni2+ + 2OH -  Ni(OH )2
+Charakter chemiczny wodorotlenku niklu(II): zasadowy
+
+                          Strona 17 z 29
+Zadanie 21. (0-2)          IV etap edukacyjny - zakres rozszerzony
+                           6. Reakcje utleniania i redukcji. Zdajcy:
+ II. Rozumowanie           6.5) stosuje zasady bilansu elektronowego - dobiera
+ i zastosowanie nabytej    wspólczynniki stechiometryczne w równaniach reakcji
+ wiedzy do rozwizywania    utleniania-redukcji (w formie [...] jonowej).
+ problemów.
+
+Schemat punktowania
+2 p. - za poprawne napisanie w formie jonowo-elektronowej równania procesu redukcji
+
+         i równania procesu utleniania oraz poprawne okrelenie stosunku molowego reduktora
+         do utleniacza.
+1 p. - za poprawne napisanie w formie jonowo-elektronowej równania procesu redukcji
+         i równania procesu utleniania, ale bldne okrelenie stosunku molowego reduktora do
+         utleniacza lub brak okrelenia tego stosunku.
+lub
+        za poprawne napisanie w formie jonowo-elektronowej równania tylko jednego procesu
+        (redukcji albo utleniania) i poprawne okrelenie stosunku molowego reduktora do
+        utleniacza.
+0 p. - za odpowied niepeln, np. za poprawne okrelenie jedynie stosunku molowego
+        reduktora i utleniacza, lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie procesu redukcji:
+ClO- + H2O + 2e-  Cl- + 2OH- lub ClO- + 2H+ + 2e-  Cl- + H2O
+Równanie procesu utleniania:
+Ni(OH)2 + OH-  Ni(OH)3 + e- lub Ni(OH)2 + H2O  Ni(OH)3 + H+ + e- (| x 2)
+lub Ni(OH)2 + 2H2O  Ni(OH)3 + H3O+ + e- (| x 2)
+Stosunek molowy n reduktora : n utleniacza = 2 : 1 lub 2
+
+Uwaga! Równanie procesu utleniania prowadzcego do powstania NiO(OH) naley uzna za
+poprawne.
+
+Zadanie 22. (0-1)          IV etap edukacyjny - zakres rozszerzony
+                           5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ III. Opanowanie czynnoci  Zdajcy:
+ praktycznych.             5.11) projektuje [...] dowiadczenia pozwalajce otrzyma
+                           rónymi metodami [...] wodorotlenki [...].
+
+Schemat punktowania
+1 p. - za poprawny opis zawartoci probówki z uwzgldnieniem rodzaju mieszaniny i jej barwy.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied           Zawarto probówki                po reakcji II
+
+     przed dowiadczeniem          po reakcji I     czarnobrunatna zawiesina
+         zielony roztwór   zielonkawa lub zielona               (osad)
+
+                              zawiesina (osad)
+
+                           Strona 18 z 29
+Zadanie 23. (0-2)           IV etap edukacyjny - zakres rozszerzony
+                            1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+ II. Rozumowanie            1.6) wykonuje obliczenia z uwzgldnieniem wydajnoci
+ i zastosowanie nabytej     reakcji i mola dotyczce: mas substratów i produktów
+ wiedzy do rozwizywania     (stechiometria wzorów i równa chemicznych), objtoci
+ problemów.                 gazów [...].
+
+Schemat punktowania
+2 p. - za zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wzoru
+
+        sumarycznego alkanu.
+1 p. - zastosowanie poprawnej metody, ale:
+
+        - popelnienie bldów rachunkowych prowadzcych do bldnego wzoru sumarycznego
+          alkanu
+
+lub
+        - niepodanie wzoru sumarycznego alkanu.
+
+0 p. - za zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizanie
+
+Objtoci alkanu i metanu w mieszaninie s równe:
+
+VCnH2n+2 = 0,6 2,80 dm =1,68 dm3     3  VCH4 = 0, 4 2,80 dm3 =1,12 dm3
+
+Objto tlenu potrzebnego do calkowitego spalania alkanu i metanu:
+
+VO2 (Cn H 2n+2 ) =  3n +1  1, 68 dm  3  VO2 (CH4 ) = 2 1,12 dm = 2, 24 dm3 3
+
+                   2
+Wiedzc, e zuyto 13,16 dm3 tlenu, mona obliczy liczb atomów wgla w czsteczce alkanu:
+
+ 3n + 1  1, 68 + 2, 24 = 13,16  n = 4
+
+2
+
+Alkan ma wzór sumaryczny C4H10.
+
+Zadanie 24. (0-1)           IV etap edukacyjny - poziom rozszerzony
+                            9. Wglowodory. Zdajcy:
+ II. Rozumowanie            9.3) ustala rzdowo atomów wgla w czsteczce [...];
+ i zastosowanie nabytej     9.4) [...] wykazuje si rozumieniem poj: [...] izomeria;
+ wiedzy do rozwizywania     9.8) [...] przewiduje produkty reakcji przylczenia czsteczek
+ problemów.                 niesymetrycznych do niesymetrycznych alkenów na
+                            podstawie reguly Markownikowa (produkty glówne
+                            i uboczne);
+                            9.11) wyjania na prostych przykladach mechanizmy reakcji
+                            [...] addycji [...].
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie zda.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+                                        Strona 19 z 29
+Poprawna odpowied
+Gdy w rodowisku reakcji nie ma nadtlenków, bromowodór przylcza si do propenu
+(niezgodnie / zgodnie) z regul Markownikowa. Ta addycja przebiega poprzez tworzenie
+drobin z ladunkiem dodatnim zlokalizowanym na atomie wgla. Jest to addycja
+(rodnikowa / nukleofilowa / elektrofilowa) do podwójnego wizania wgiel - wgiel.
+Gdy w rodowisku reakcji s obecne nadtlenki, addycja jest (niezgodna / zgodna) z regul
+Markownikowa. W tej reakcji przejciowo tworzy si (karbokation
+pierwszorzdowy / karbokation drugorzdowy / rodnik pierwszorzdowy / rodnik
+drugorzdowy).
+
+Zadanie 25. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                          3. Wizania chemiczne. Zdajcy:
+  II. Rozumowanie         3.5) rozpoznaje typ hybrydyzacji (sp, sp2, sp3) [...].
+  i zastosowanie nabytej  9. Wglowodory. Zdajcy:
+  wiedzy do rozwizywania  9.2) rysuje wzory strukturalne i pólstrukturalne
+  problemów.              wglowodorów [...];
+                          9.8) opisuje wlaciwoci chemiczne alkenów, na przykladzie
+                          nastpujcych reakcji: przylczanie (addycja): H2 [...].
+
+Schemat punktowania
+1 p. - za poprawnie napisanie równania reakcji.
+0 p. - za bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+       stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+
+H2C CH CH CH2 + 2 H2      H3C CH2 CH2 CH3
+
+Uwaga! Okrelenie warunków reakcji nie podlega ocenie.
+
+Zadanie 26. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                          9. Wglowodory. Zdajcy:
+ II. Rozumowanie          9.2) rysuje wzory strukturalne i pólstrukturalne
+ i zastosowanie nabytej   wglowodorów [...].
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawnie zapisanie wzoru izomeru cis zwizku.
+0 p. - za bldn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+
+H         H
+
+       C  C
+H3C           CH3
+
+                          Strona 20 z 29
+Zadanie 27. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                          9. Wglowodory. Zdajcy:
+ II. Rozumowanie          9.8) opisuje wlaciwoci chemiczne alkenów [...]; przewiduje
+ i zastosowanie nabytej   produkty reakcji przylczenia czsteczek niesymetrycznych do
+ wiedzy do                niesymetrycznych alkenów na podstawie reguly Markownikowa
+ rozwizywania             (produkty glówne i uboczne) [...];
+ problemów.               9.10) opisuje wlaciwoci chemiczne alkinów [...] przylczenie:
+                          [...] H2O, [...]; pisze odpowiednie równania reakcji.
+                          11. Zwizki karbonylowe - aldehydy i ketony. Zdajcy:
+                          11.6) porównuje metody otrzymywania [...] aldehydów
+                          i ketonów.
+
+Schemat punktowania
+1 p. - za poprawnie zapisanie wzoru zwizku.
+0 p. - za bldn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+
+H3C CH2 C CH3
+
+                   O
+
+Zadanie 28.               IV etap edukacyjny - poziom rozszerzony
+                          9. Wglowodory. Zdajcy:
+ I. Wykorzystanie         9.8) opisuje wlaciwoci chemiczne alkanów [...] (pisze
+ i tworzenie informacji.  odpowiednie równania reakcji).
+
+Zadanie 28.1. (0-2)
+
+Schemat punktowania
+2 p. - za poprawne napisanie w formie czsteczkowej dwóch równa reakcji.
+1 p. - za poprawne napisanie w formie czsteczkowej jednego równania reakcji.
+0 p. - za bldne napisanie równa reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+       stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+CH3-CH2Cl + 2Li  CH3-CH2Li + LiCl
+CH3Li + H2O  CH4 + LiOH
+
+Zadanie 28.2. (0-1)
+
+Schemat punktowania
+1 p. - za poprawne napisanie w formie czsteczkowej równania reakcji.
+0 p. - za bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+       stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+                          Strona 21 z 29
+Poprawna odpowied           H3C CH CH3 + LiCl + CH3Cu
+
+H3C CH CH3 + (CH3)2CuLi              CH3
+
+         Cl
+
+Zadanie 29. (0-1)           IV etap edukacyjny - poziom rozszerzony
+                            3. Wizania chemiczne. Zdajcy:
+  I. Wykorzystanie          3.7) opisuje i przewiduje wplyw rodzaju wizania (jonowe,
+  i tworzenie informacji.   kowalencyjne, wodorowe, metaliczne) na wlaciwoci
+                            fizyczne substancji nieorganicznych i organicznych.
+
+Schemat punktowania
+1 p. - za poprawne okrelenie rodzaju wizania.
+0 p. - za kad inn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+kowalencyjne spolaryzowane lub atomowe spolaryzowane lub kowalencyjne lub atomowe
+
+Zadanie 30.1. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                            9. Wglowodory. Zdajcy:
+ II. Rozumowanie            9.2) rysuje wzory strukturalne i pólstrukturalne
+ i zastosowanie nabytej     wglowodorów [...];
+ wiedzy do rozwizywania     9.15) opisuje wlaciwoci wglowodorów aromatycznych
+ problemów.                 [...].
+
+Schemat punktowania
+1 p. - za poprawne podanie dwóch wzorów.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied           Wzór zwizku II
+          Wzór zwizku I
+                                             CH3
+                       CH3
+
+                            O2N
+
+Zadanie 30.2. (0-1)         IV etap edukacyjny - poziom rozszerzony
+                            9. Wglowodory. Zdajcy:
+ II. Rozumowanie            9.11) wyjania na prostych przykladach mechanizmy reakcji
+ i zastosowanie nabytej     substytucji [...].
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawne podanie typów i mechanizmów reakcji.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+                            Strona 22 z 29
+Poprawna odpowied         Typ reakcji                  Mechanizm reakcji
+                          substytucja                       rodnikowy
+   reakcja 2.
+   reakcja 3.             substytucja                     nukleofilowy
+
+Zadanie 30.3. (0-1)       IV etap edukacyjny - poziom rozszerzony
+                          9. Wglowodory. Zdajcy:
+  II. Rozumowanie         9.9) planuje cig przemian pozwalajcych otrzyma np. eten
+  i zastosowanie nabytej  z etanu (z udzialem fluorowcopochodnych wglowodorów);
+  wiedzy do rozwizywania  ilustruje je równaniami reakcji.
+  problemów.
+
+Schemat punktowania
+1 p. - za poprawne napisanie w formie czsteczkowej równania reakcji.
+0 p. - za bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+       stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+
+       CH 2 Cl            (H2O)             CH 2 OH
+
+               +   KOH                              + KCl
+
+O2N                                    O2N
+
+Uwaga! Dopuszcza si zapis równania reakcji z zastosowaniem izomeru orto lub meta, jeeli
+zdajcy podal jego wzór jako wzór zwizku II w zadaniu 30.1.
+
+Uwaga! Dopuszcza si zapis równania reakcji z zastosowaniem di- lub trichloropochodnej
+nitrotoluenu:
+
+       CHCl2       2KOH   (H2O)             CHO
+
+               +                                    + 2KCl + H2O
+
+O2N                                   O2N
+                          (H2O)
+  lub
+
+       CCl3        4KOH                     COOK       3KCl +  2H2O
+
+               +                                    +
+
+O2N                                    O2N
+
+                          Strona 23 z 29
+Zadanie 31. (0-1)        IV etap edukacyjny - poziom rozszerzony
+                         9. Wglowodory. Zdajcy:
+ II. Rozumowanie         9.4) [...] wykazuje si rozumieniem poj: [...] izomeria.
+ i zastosowanie nabytej
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawne podanie numerów pary izomerów.
+0 p. - za bldn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+2 i 5
+
+Zadanie 32. (0-1)        IV etap edukacyjny - poziom rozszerzony
+                         10. Hydroksylowe pochodne wglowodorów - alkohole
+ II. Rozumowanie         i fenole. Zdajcy:
+ i zastosowanie nabytej  10.1) zalicza substancj do alkoholi lub fenoli (na podstawie
+ wiedzy do rozwizywania  budowy jej czsteczki); wskazuje wzory alkoholi pierwszo-,
+ problemów.              drugo- i trzeciorzdowych;.
+                         10.5) opisuje dzialanie: CuO [...] na alkohole pierwszo-,
+                         drugorzdowe.
+
+Schemat punktowania
+1 p. - za poprawnie napisanie wzorów organicznych produktów reakcji.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+
+HO CH2                       CHO
+
+                        CuO                        lub                C6H5CHO
+
+                   
+
+                             lub
+
+                                    COOH
+
+                                                   lub                C6H5COOH
+
+OH                      CuO  O
+          CH3                          CH3
+                   
+
+                             Strona 24 z 29
+Zadanie 33. (0-1)          IV etap edukacyjny - poziom rozszerzony
+                           3. Wizania chemiczne. Zdajcy:
+  I. Wykorzystanie
+  i tworzenie informacji.  3.6) okrela typ wizania ( i ) w prostych czsteczkach.
+  II. Rozumowanie          9. Wglowodory. Zdajcy:
+  i zastosowanie nabytej   9.4) [...] wykazuje si rozumieniem poj: [...] izomeria;
+  wiedzy do rozwizywania   9.5) rysuje wzory strukturalne i pólstrukturalne izomerów
+  problemów.               konstytucyjnych, poloenia podstawnika, izomerów
+                           optycznych wglowodorów [...].
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie zda.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+1. Witamina D2 oraz witamina D3 s zwizkami organicznymi o podobnej strukturze, ale róni
+
+   si rodzajem lacucha wglowodorowego przylczonego do piercienia
+   (szecioczlonowego / picioczlonowego).
+2. Witamina D2 oraz witamina D3 (s / nie s) wzgldem siebie izomerami.
+3. W czsteczce witaminy D2 oraz witaminy D3 (znajduj si / nie znajduj si)
+   asymetryczne atomy wgla.
+4. Po porównaniu budowy witaminy D2 oraz witaminy D3 mona stwierdzi, e liczba wiza
+    w czsteczce witaminy D2 jest (wiksza / mniejsza) ni liczba wiza 
+   w czsteczce witaminy D3.
+
+Zadanie 34. (0-1)          IV etap edukacyjny - poziom rozszerzony
+                           3. Wizania chemiczne. Zdajcy:
+ I. Wykorzystanie          3.5) rozpoznaje typ hybrydyzacji (sp, sp2, sp3) w prostych
+ i tworzenie informacji.   czsteczkach zwizków [...] organicznych.
+ II. Rozumowanie           6. Reakcje utleniania i redukcji. Zdajcy:
+ i zastosowanie nabytej    6.1) wykazuje si znajomoci i rozumieniem poj: stopie
+ wiedzy do rozwizywania    utlenienia, utleniacz, reduktor, utlenianie, redukcja;
+ problemów.                6.2) oblicza stopnie utlenienia pierwiastków w [...] czsteczce
+                           zwizku [...] organicznego.
+
+Schemat punktowania
+1 p. - za poprawne podanie nazwy grup funkcyjnych i poprawne uzupelnienie tabeli.
+0 p. - za kad inn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+Nazwa: (grupy) hydroksylowe lub (grupy) wodorotlenowe
+
+atom wgla                  a                               b
+
+stopie utlenienia wgla     0                               I
+
+hybrydyzacja wgla          sp3                             sp3
+
+                           Strona 25 z 29
+Zadanie 35. (0-2)            IV etap edukacyjny - zakres rozszerzony
+                             16. Cukry. Zdajcy:
+ I. Wykorzystanie            16.3) zapisuje wzory lacuchowe: [...] glukozy [...]; rysuje
+ i tworzenie informacji.     wzory taflowe (Hawortha) glukozy [...];
+                             16.6) wskazuje wizanie O-glikozydowe w czsteczce [...].
+
+Schemat punktowania
+2 p. - za poprawne napisanie obu wzorów pólstrukturalnych (grupowych).
+1 p. - za poprawne napisanie jednego wzoru pólstrukturalnego (grupowego).
+0 p. - za kad inn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+
+Wzór cukru                                      Wzór zwizku,
+                                 od którego pochodzila cz niecukrowa
+
+H                         O
+
+    C
+
+H                            OH
+
+HO                           H
+
+H                            OH                                        CH2OH
+                                                           OH
+H                            OH
+
+    CH2 OH
+
+Uwaga! Napisanie wzoru cukru z pominiciem atomów wodoru powoduje utrat punktu.
+
+Zadanie 36. (0-1)            IV etap edukacyjny - zakres rozszerzony
+                             10. Hydroksylowe pochodne wglowodorów. Zdajcy:
+ III. Opanowanie czynnoci    10.8) na podstawie obserwacji wyników dowiadczenia [...]
+ praktycznych.               formuluje wniosek o sposobie odrónienia fenolu od alkoholu.
+                             16. Cukry. Zdajcy:
+                             16.4) projektuje [...] dowiadczenie, którego wynik
+                             potwierdzi obecno grupy aldehydowej w czsteczce
+                             glukozy;
+                             16.8) projektuje i przeprowadza dowiadczenie pozwalajce
+                             przeksztalci sacharoz w cukry proste.
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie tabeli.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+                                 Strona 26 z 29
+Poprawna odpowied                Zawarto probówki
+                                         po zakoczeniu etapu dowiadczenia
+   Numer
+ probówki przed dowiadczeniem    szafirowy lub niebieski lub granatowy roztwór
+ pierwszy etap                   ólty roztwór
+                                 bezbarwny roztwór
+I           niebieska zawiesina
+                                 ceglasty osad
+II ólty roztwór                  fioletowy lub granatowy lub ciemnozielony
+                                 lub zielonogranatowy roztwór
+III bezbarwny roztwór
+
+drugi etap
+
+IV niebieska zawiesina
+
+V ólty roztwór
+
+Uwaga! Poniewa zdajcy moe zaloy, e roztwór chlorku elaza(III) zostal zakwaszony
+w celu zatrzymania jego hydrolizy, dopuszcza si odpowied, w której zdajcy okreli barw
+roztworu w probówce II jako fioletow lub granatow lub ciemnozielon lub
+zielonogranatow. Barwa roztworu wskazana w probówce II musi by wtedy taka sama jak
+w probówce V.
+
+Zadanie 37. (0-1)        IV etap edukacyjny - poziom rozszerzony
+                         9. Wglowodory. Zdajcy:
+ II. Rozumowanie         9.4) [...] wykazuje si rozumieniem poj [...] izomeria.
+ i zastosowanie nabytej  9.5) rysuje wzory [...] izomerów optycznych [...].
+ wiedzy do rozwizywania
+ problemów.
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie wzoru i ocen wraz z uzasadnieniem odwolujcym si do
+
+       struktury tej czsteczki.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+
+            O     H                                O COOH H
+
+               C                                         C
+                                                   H C OH
+            H C OH                               HO C H
+                                                 HO C H
+            HO C H                   HNO3, T       H C OH
+
+            HO C H                                   H2C OH
+
+            H C OH                                     COOH
+
+            H2C OH
+
+Ocena wraz z uzasadnieniem: Czsteczka nie jest chiralna - ma plaszczyzn symetrii.
+
+Uwaga ! Za uzasadnienie zawierajce stwierdzenie, e czsteczka powstalego zwizku jest
+form mezo, naley przyzna 1 pkt. Za uzasadnienie zawierajce stwierdzenie, e wystpuje
+forma mezo (opisanego zwizku), naley przyzna 0 pkt.
+Uwaga! Za uzasadnienie zawierajce stwierdzenie, e czsteczka powstalego zwizku ma o
+symetrii, naley przyzna 0 pkt.
+
+                                 Strona 27 z 29
+Zadanie 38. (0-2)           IV etap edukacyjny - poziom rozszerzony
+                            11. Zwizki karbonylowe - aldehydy i ketony. Zdajcy:
+  II. Rozumowanie           11.1) wskazuje na rónice w strukturze aldehydów i ketonów
+  i zastosowanie nabytej    (obecno grupy aldehydowej i ketonowej).
+  wiedzy do rozwizywania    16. Cukry. Zdajcy:
+  problemów.                16.4) projektuje [...] dowiadczenie, którego wynik
+  III. Opanowanie czynnoci  potwierdzi obecno grupy aldehydowej w czsteczce
+  praktycznych.             glukozy;
+                            16.5) opisuje wlaciwoci glukozy i fruktozy; wskazuje na
+                            podobiestwa i rónice; planuje i wykonuje dowiadczenie
+                            pozwalajce na odrónienie tych cukrów;
+                            16.10) planuje i wykonuje dowiadczenie pozwalajce
+                            stwierdzi obecno skrobi w artykulach spoywczych.
+                            15. Bialka. Zdajcy:
+                            15.3) wyjania przyczyn denaturacji bialek [...]; projektuje
+                            [...] dowiadczenie pozwalajce wykaza wplyw rónych
+                            substancji [...] na struktur czsteczek bialek;
+                            15.4) planuje [...] dowiadczenie pozwalajce na
+                            identyfikacj bialek.
+
+Zadanie 38.1. (0-1)
+
+Schemat punktowania
+1 p. - za poprawne podanie nazw zwizków.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+Naczynie I: skrobia
+Naczynie II: albumina
+Naczynie III: fruktoza
+Naczynie IV: glukoza
+
+Zadanie 38.2. (0-1)
+
+Schemat punktowania
+1 p. - za poprawne podanie nazwy procesu przy poprawnym wskazaniu w zadaniu 38.1.
+
+       nazwy zwizku z naczynia II.
+0 p. - za kad inn odpowied albo brak odpowiedzi.
+
+Poprawna odpowied
+denaturacja lub cicie bialka lub nieodwracalna koagulacja
+
+                            Strona 28 z 29
+Zadanie 39. (0-1)           IV etap edukacyjny - poziom rozszerzony
+                            16. Cukry. Zdajcy:
+  I. Wykorzystanie          16.4) projektuje i wykonuje dowiadczenie, którego wynik
+  i tworzenie informacji.   potwierdzi obecno grupy aldehydowej w czsteczce
+  II. Rozumowanie           glukozy;
+  i zastosowanie nabytej    16.5) opisuje wlaciwoci glukozy i fruktozy; wskazuje na
+  wiedzy do rozwizywania    podobiestwa i rónice; planuje i wykonuje dowiadczenie
+  problemów.                pozwalajce na odrónienie tych cukrów.
+  III. Opanowanie czynnoci
+  praktycznych.
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie tabeli i poprawne uzasadnienie uwzgldniajce proces
+
+        izomeryzacji i wlaciwoci redukujce cukrów.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+
+Czy po dodaniu do probówek z wodnymi roztworami glukozy
+i fruktozy zalkalizowanej zawiesiny wodorotlenku miedzi(II), a nastpnie wymieszaniu i ogrzaniu zawartoci kadej probówki NIE
+zaobserwowano róne objawy reakcji?
+
+Uzasadnienie: W warunkach dowiadczenie fruktoza ulega izomeryzacji, w wyniku której
+tworz si zwizki (m.in. glukoza), których czsteczki maj grup aldehydow i wykazuj
+wlaciwoci redukujce.
+
+Uwaga! Za uzasadnienie, w którym zdajcy odwola si wylcznie do takich samych objawów
+reakcji w obu probówkach, naley przyzna 0 pkt.
+
+Zadanie 40. (0-1)           IV etap edukacyjny - poziom rozszerzony
+                            4. Kinetyka i statyka chemiczna. Zdajcy:
+ I. Wykorzystanie           4.5) przewiduje wplyw: stenia [...] na szybko reakcji
+ i tworzenie informacji.    [...].
+ II. Rozumowanie            5. Roztwory i reakcje zachodzce w roztworach wodnych.
+ i zastosowanie nabytej     Zdajcy:
+ wiedzy do rozwizywania     5.2) wykonuje obliczenia zwizane z [...] zastosowaniem
+ problemów.                 poj stenie [...] molowe.
+
+Schemat punktowania
+1 p. - za poprawne uzupelnienie zda.
+0 p. - za odpowied niepeln lub bldn albo brak odpowiedzi.
+
+Poprawna odpowied
+Reakcja hydrolizy sacharozy biegla szybciej w cigu (pierwszych / ostatnich) 30 minut
+trwania eksperymentu, poniewa szybko reakcji zaley od stenia substratów, które
+(maleje / ronie) w miar biegu reakcji. Stenie molowe glukozy w badanym roztworze
+w czasie równym polowie calkowitego czasu wykonywania pomiarów bylo równe (1 - 0,726)
+
+= 0,274 mol · dm -3 .
+
+                            Strona 29 z 29
+

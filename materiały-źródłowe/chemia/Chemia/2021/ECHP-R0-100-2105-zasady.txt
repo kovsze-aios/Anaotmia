@@ -1,0 +1,1874 @@
+Rodzaj dokumentu: Zasady oceniania rozwiza
+              zada
+
+Egzamin:          Egzamin maturalny
+
+Przedmiot:        Chemia
+
+Poziom:           Poziom rozszerzony
+
+Formy arkusza:    ECHP-R0-100-2105, ECHP-R0-200-2105,
+                  ECHP-R0-300-2105, ECHP-R0-400-2105,
+                  ECHP-R0-700-2105, ECHP-R0-Q00-2105
+
+Termin egzaminu:  14 maja 2021 r.
+                  21 czerwca 2021 r.
+Data publikacji
+dokumentu:
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Ogólne zasady oceniania
+
+Zasady oceniania zawieraj przyklady poprawnych rozwiza zada otwartych. Rozwizania
+te okrelaj zakres merytoryczny odpowiedzi i nie musz by cislym wzorcem oczekiwanych
+sformulowa (za wyjtkiem np. nazw, symboli pierwiastków, wzorów zwizków chemicznych).
+Wszystkie merytorycznie poprawne odpowiedzi, spelniajce warunki zadania, ocenione
+s pozytywnie - równie te nieprzewidziane jako przykladowe odpowiedzi w schematach
+punktowania.
+
+· Zdajcy otrzymuje punkty tylko za poprawne rozwizania, precyzyjnie odpowiadajce
+    poleceniom zawartym w zadaniach.
+
+· Gdy do jednego polecenia zdajcy podaje kilka odpowiedzi (z których jedna jest poprawna,
+    a inne - bldne), nie otrzymuje punktów za adn z nich. Jeeli zamieszczone
+    w odpowiedzi informacje (równie dodatkowe, które nie wynikaj z treci polecenia)
+    wiadcz o zasadniczych brakach w rozumieniu omawianego zagadnienia i zaprzeczaj
+    udzielonej poprawnej odpowiedzi, to za odpowied tak zdajcy otrzymuje 0 punktów.
+
+· W zadaniach wymagajcych sformulowania wypowiedzi slownej, takiej jak wyjanienie,
+    uzasadnienie, opis zmian moliwych do zaobserwowania w czasie dowiadczenia, oprócz
+    poprawnoci merytorycznej oceniana jest poprawno poslugiwania si nomenklatur
+    chemiczn, umiejtne odwolanie si do materialu ródlowego, jeeli taki zostal
+    przedstawiony, oraz logika i klarowno toku rozumowania. Sformulowanie odpowiedzi
+    niejasnej lub czciowo niezrozumialej skutkuje utrat punktu.
+
+· W zadaniach, w których naley dokona wyboru - kad form jednoznacznego
+    wskazania (np. numer dowiadczenia, wzory lub nazwy reagentów) naley uzna za
+    poprawne rozwizanie tego zadania.
+
+· Rozwizanie zadania na podstawie bldnego merytorycznie zaloenia uznaje si w caloci
+    za niepoprawne.
+
+· Rozwizania zada dowiadczalnych (spostrzeenia i wnioski) oceniane s wylcznie
+    wtedy, gdy projekt dowiadczenia jest poprawny, czyli np. prawidlowo zostaly dobrane
+    odczynniki. Zdajcy powinien wybra wlaciwy odczynnik z zaproponowanej listy
+    i wykona kolejne polecenia. Za spostrzeenia i wnioski bdce konsekwencj bldnego
+    wyboru odczynnika lub odczynników zdajcy nie otrzymuje punktów.
+
+· W rozwizaniach zada rachunkowych oceniane s: metoda (przedstawiony tok
+    rozumowania wicy dane z szukan), wykonanie oblicze i podanie wyniku z poprawn
+    jednostk i odpowiedni dokladnoci. Poprawno wykonania oblicze i wynik s
+    oceniane tylko wtedy, gdy zostala zastosowana poprawna metoda rozwizania. Wynik
+    liczbowy wielkoci mianowanej podany bez jednostek lub z niepoprawnym ich zapisem jest
+    bldny.
+              o Zastosowanie bldnych wartoci liczbowych wielkoci niewymienionych
+                   w informacji wprowadzajcej, treci zadania, poleceniu lub tablicach
+                   i niebdcych wynikiem oblicze naley traktowa jako bld metody.
+              o Zastosowanie bldnych wartoci liczbowych wielkoci podanych w informacji
+                   wprowadzajcej, treci zadania, poleceniu lub tablicach naley traktowa jako
+                   bld rachunkowy, o ile nie zmienia to istoty analizowanego problemu,
+                   w szczególnoci nie powoduje jego uproszczenia.
+
+Strona 2 z 37
+                                                                                                         Zasady oceniania rozwiza zada
+
+              o Uycie w obliczeniach bldnej wartoci masy molowej uznaje si za bld
+                   metody, chyba e zdajcy przedstawil sposób jej obliczenia - zgodny ze
+                   stechiometri wzoru - jednoznacznie wskazujcy wylcznie na bld
+                   rachunkowy.
+
+· Jeeli polecenie brzmi: Napisz równanie reakcji w formie ...., to w odpowiedzi zdajcy
+    powinien napisa równanie reakcji w podanej formie z uwzgldnieniem bilansu masy
+    i ladunku. Zapis równania reakcji, w którym poprawnie dobrano wspólczynniki
+    stechiometryczne, ale nie uwzgldniono warunków zadania (np. rodowiska reakcji),
+    skutkuje utrat punktów.
+
+Notacja:
+· Za napisanie wzorów strukturalnych zamiast wzorów pólstrukturalnych (grupowych) nie
+
+    odejmuje si punktów.
+· We wzorach elektronowych pary elektronowe mog by przedstawione w formie kropkowej
+
+    lub kreskowej.
+· Jeeli we wzorze kreskowym zaznaczona jest polaryzacja wiza, to jej kierunek musi by
+
+    poprawny.
+· Zapis ,,", ,," w równaniach reakcji nie jest wymagany.
+· W równaniach reakcji, w których ustala si stan równowagi, brak ,," nie powoduje utraty
+
+    punktów.
+· W równaniach reakcji, w których naley okreli kierunek przemiany (np. reakcji redoks),
+
+    zapis ,," zamiast ,," powoduje utrat punktów.
+
+                                                                                                                                      Strona 3 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 1. (0-2)
+
+                  Wymagania egzaminacyjne 20211
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                   2. Struktura atomu - jdro i elektrony.
+                                                    Zdajcy:
+                                                    3) zapisuje konfiguracje elektronowe
+                                                    atomów pierwiastków do Z = 36 [...],
+                                                    uwzgldniajc rozmieszczenie elektronów
+                                                    na podpowlokach (zapisy konfiguracji:
+                                                    pelne, skrócone i schematy klatkowe);
+                                                    4) okrela przynaleno pierwiastków do
+                                                    bloków konfiguracyjnych s, p i d ukladu
+                                                    okresowego (konfiguracje elektronów
+                                                    walencyjnych);
+                                                    5) wskazuje na zwizek pomidzy budow
+                                                    atomu a poloeniem pierwiastka w ukladzie
+                                                    okresowym.
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie calej tabeli (wpisanie nazw albo symboli obu pierwiastków oraz
+
+          podanie liczby niesparowanych elektronów i symbolu podpowloki, do której elektrony
+          te nale - dla obu pierwiastków).
+1 pkt - poprawne uzupelnienie jednego wiersza tabeli (wpisanie nazwy albo symbolu oraz
+          podanie liczby niesparowanych elektronów i symbolu podpowloki, do której elektrony
+          te nale - dla jednego pierwiastka).
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie               Nazwa                              Elektrony niesparowane
+                    tytan ALBO Ti
+Pierwiastek 1.    german ALBO Ge                    liczba  symbol podpowloki
+Pierwiastek 2.
+                                                    2       (3)d
+
+                                                    2       (4)p
+
+1 Zalcznik nr 2 do rozporzdzenia Ministra Edukacji Narodowej z dnia 20 marca 2020 r. w sprawie szczególnych
+rozwiza w okresie czasowego ograniczenia funkcjonowania jednostek systemu owiaty w zwizku
+z zapobieganiem, przeciwdzialaniem i zwalczaniem COVID-19 (Dz.U. poz. 493, z pón. zm.).
+
+Strona 4 z 37
+                                                             Zasady oceniania rozwiza zada
+
+    Zadanie 2. (0-1)
+
+                      Wymagania egzaminacyjne 2021
+
+                   Wymaganie ogólne                      Wymaganie szczególowe
+    I. Wykorzystanie i tworzenie informacji.
+                                              IV etap edukacyjny - poziom rozszerzony
+    II. Rozumowanie i zastosowanie nabytej    2. Struktura atomu - jdro i elektrony.
+    wiedzy do rozwizywania problemów.         Zdajcy:
+                                              2) stosuje zasady rozmieszczania
+                                              elektronów na orbitalach w atomach
+                                              pierwiastków wieloelektronowych;
+                                              3) zapisuje konfiguracje elektronowe
+                                              atomów pierwiastków do Z = 36 i jonów
+                                              o podanym ladunku, uwzgldniajc
+                                              rozmieszczenie elektronów na
+                                              podpowlokach (zapisy konfiguracji: pelne,
+                                              skrócone i schematy klatkowe).
+
+    Zasady oceniania
+    1 pkt - poprawne uzupelnienie zapisu konfiguracji w formie graficznej z uwzgldnieniem
+
+              numerów powlok i symboli podpowlok.
+    0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+   Rozwizanie
+                 
+
+1s  2s    2p          3s  3p                             3d      4s                   4p
+
+    ALBO
+
+                                                                       
+                                                                           4p
+1s  2s    2p          3s  3p                  4s             3d
+
+    Uwaga: Elektrony niesparowane musz mie zgodny spin.
+
+    Zadanie 3. (0-1)
+
+                      Wymagania egzaminacyjne 2021
+
+                   Wymaganie ogólne                      Wymaganie szczególowe
+    I. Wykorzystanie i tworzenie informacji.
+                                              IV etap edukacyjny - poziom rozszerzony
+    II. Rozumowanie i zastosowanie nabytej    3. Wizania chemiczne. Zdajcy:
+    wiedzy do rozwizywania problemów.         2) stosuje pojcie elektroujemnoci do
+                                              okrelania (na podstawie rónicy
+                                              elektroujemnoci [...]) rodzaju wizania:
+                                              jonowe [...].
+
+    Zasady oceniania
+    1 pkt - poprawne podkrelenie wzorów wszystkich substancji zawierajcych jony Cl-.
+    0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+                                                                     Strona 5 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Rozwizanie
+
+HCl (g)        KCl (s)  CH3Cl (g)         CH3NH3Cl (s)  NaClO (s)  CaCl2·6H2O (s)
+
+Zadanie 4.1. (0-1)
+
+                        Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania problemów.                   6) opisuje wlaciwoci chemiczne alkanów,
+                                                    na przykladzie nastpujcych reakcji: [...]
+                                                    podstawianie (substytucja) atomu (lub
+                                                    atomów) wodoru przez atom (lub atomy)
+                                                    chloru [...] przy udziale wiatla (pisze
+                                                    odpowiednie równania reakcji);
+                                                    10) wyjania na prostych przykladach
+                                                    mechanizmy reakcji substytucji [...].
+
+Zasady oceniania
+1 pkt - poprawne wskazanie przemian, w których udzial bior rodniki chloru.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+A i D
+
+Zadanie 4.2. (0-2)
+
+                        Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania problemów.                   6) opisuje wlaciwoci chemiczne alkanów,
+                                                    na przykladzie nastpujcych reakcji: [...]
+                                                    podstawianie (substytucja) atomu (lub
+                                                    atomów) wodoru przez atom (lub atomy)
+                                                    chloru albo bromu przy udziale wiatla
+                                                    (pisze odpowiednie równania reakcji);
+                                                    7) opisuje wlaciwoci chemiczne alkenów,
+                                                    na przykladzie nastpujcych reakcji:
+                                                    przylczanie (addycja): [...] Cl2 [...];
+                                                    10) wyjania na prostych przykladach
+                                                    mechanizmy reakcji substytucji, addycji [...];
+                                                    13) opisuje wlaciwoci wglowodorów
+                                                    aromatycznych, na przykladzie reakcji
+                                                    benzenu i toluenu: [...] reakcje z Cl2 [...]
+                                                    wobec katalizatora lub w obecnoci wiatla
+                                                    [...]; pisze odpowiednie równania reakcji.
+
+Strona 6 z 37
+                                                Zasady oceniania rozwiza zada
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie dwóch akapitów.
+
+1 pkt - poprawne uzupelnienie jednego akapitu.
+
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+Przykladem reakcji addycji elektrofilowej jest przemiana oznaczona liter (A / B / C / D).
+W reakcji addycji czsteczka chloru ulega rozpadowi na kation chloroniowy i anion chlorkowy
+- wskutek oddzialywania z elektronami wizania podwójnego. W wyniku dzialania czynnika
+elektrofilowego na podwójne wizanie wglowodoru powstaje, jako produkt przejciowy,
+organiczny (kation / rodnik), nastpnie przylczajcy jon (Cl+ / Cl-).
+
+Przykladem reakcji substytucji elektrofilowej jest przemiana oznaczona liter
+(A / B / C / D). W tej przemianie uczestniczy katalizator, który przez utworzenie jonu
+kompleksowego powoduje rozpad czsteczki chloru i wytworzenie czynnika elektrofilowego.
+Tym katalizatorem jest (FeCl3 / H2SO4). W opisanej przemianie najwolniejszym etapem jest
+ten, w którym (tworzy si kompleks  / nastpuje eliminacja protonu).
+
+Zadanie 5. (0-1)
+
+                  Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania problemów.         3) stosuje pojcia: egzoenergetyczny,
+                                          endoenergetyczny [...] do opisu efektów
+                                          energetycznych przemian;
+                                          7) stosuje regul przekory do jakociowego
+                                          okrelenia wplywu zmian temperatury,
+                                          stenia reagentów i cinienia na uklad
+                                          pozostajcy w stanie równowagi
+                                          dynamicznej.
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie i poprawne uzasadnienie odwolujce si do zalenoci
+
+         wydajnoci reakcji od temperatury.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Rozstrzygnicie: Nie ALBO Jest endoenergetyczna.
+Uzasadnienie: Ze wzrostem temperatury zwiksza si wydajno reakcji tworzenia CO.
+
+Uwaga: Odpowied, w której zdajcy nie podaje rozstrzygnicia, ale w poprawnym
+uzasadnieniu wskazuje, e reakcja jest endoenergetyczna (endotermiczna), naley oceni na
+1 pkt.
+
+                                                                          Strona 7 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 6. (0-2)
+
+                  Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              1. Atomy, czsteczki i stechiometria
+wiedzy do rozwizywania problemów.                   chemiczna. Zdajcy:
+                                                    6) wykonuje obliczenia z uwzgldnieniem
+                                                    [...] mola dotyczce: mas substratów
+                                                    i produktów (stechiometria wzorów i równa
+                                                    chemicznych) [...].
+                                                    4. Kinetyka i statyka chemiczna. Zdajcy:
+                                                    6) wykazuje si znajomoci i rozumieniem
+                                                    poj: stan równowagi dynamicznej i stala
+                                                    równowagi; zapisuje wyraenie na stal
+                                                    równowagi podanej reakcji.
+                                                    5. Roztwory i reakcje zachodzce
+                                                    w roztworach wodnych.
+                                                    Zdajcy:
+                                                    1) wykonuje obliczenia zwizane z [...]
+                                                    zastosowaniem poj stenie [...]
+                                                    molowe.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+          jako wielkoci niemianowanej.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+          - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+LUB
+
+          - podanie wyniku z bldn jednostk.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Uwaga 1.: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej poprawnej
+metody i poprawnych oblicze.
+Uwaga 2.: Podanie wartoci stalej równowagi z jednostk wynikajc z podstawienia
+do wyraenia na stal równowagi  stenia molowego reagentów - nie skutkuje utrat
+punktu.
+Uwaga 3.: Rozwizanie zadania, w którym zdajcy wykonuje obliczenia dla warunków innych
+ni okrelono w zadaniu, np. dla warunków normalnych, jest niepoprawne.
+
+Strona 8 z 37
+                                                           Zasady oceniania rozwiza zada
+
+Przykladowe rozwizania
+
+Rozwizanie I:
+
+= CO 2
+
+     CO2
+
+w temperaturze 873 K: zaw. % CO2 - 80%, a zaw. % CO - 20%
+
+ =     = 1013 83,1873 = 0,014 moldm-3
+
+CO = 0,2  0,014 = 0,0028 moldm-3                 CO2 = 0,8  0,014 = 0,0112 moldm-3
+
+ = 0,00282 = 6,9610-4        ALBO          710-4
+
+       0,0112
+
+Rozwizanie II:          =  
+
+ =              
+
+ =1 mol                       = 183,1873 = 71,615 dm3
+                                      1013
+
+ = CO 2                      co 2      (0,2)  2
+      CO2                    
+                 =  =                             = 6,98  10-4
+
+                             co2 0,8 71,615
+                             
+
+ = 6,98 10-4           ALBO        7 10-4
+
+Rozwizanie III:
+[CO] = 20 = 1
+[CO2] 80 4
+[CO] + 4[CO] = 0,014
+[CO] = 0,0028 dm3 mol
+ CO2 = 0,0112 dm3 mol
+
+K = (0,0028)2
+
+       0,0112
+K = 710-4
+
+                                                                Strona 9 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 7. (0-1)
+
+                  Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              7. Metale. Zdajcy:
+wiedzy do rozwizywania problemów.                   1) opisuje podstawowe wlaciwoci fizyczne
+                                                    metali i wyjania je w oparciu o znajomo
+III. Opanowanie czynnoci praktycznych.              natury wizania metalicznego;
+                                                    3) analizuje i porównuje wlaciwoci
+                                                    fizyczne i chemiczne metali grup 1. i 2.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie wszystkich zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+1. Stopie utlenienia tlenu w Na2O2 jest (niszy / wyszy) ni w produkcie spalania litu
+
+   w tlenie.
+2. Twardo baru jest (mniejsza / wiksza) ni twardo cezu.
+3. Gsto potasu jest (mniejsza / wiksza) ni gsto wapnia.
+
+Zadanie 8. (0-1)
+
+                  Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              7. Metale. Zdajcy:
+wiedzy do rozwizywania problemów.                   2) pisze równania reakcji ilustrujce typowe
+                                                    wlaciwoci chemiczne metali [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie dwóch równa reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Spalanie sodu w tlenie: 2Na + O2  Na2O2
+Reakcja litu z azotem: 6Li + N2  2Li3N
+
+Strona 10 z 37
+                                                  Zasady oceniania rozwiza zada
+
+Zadanie 9.1. (0-1)
+
+                    Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    8. Niemetale. Zdajcy:
+wiedzy do rozwizywania problemów.         7) zapisuje równania reakcji otrzymywania
+                                          tlenków pierwiastków o liczbach atomowych
+III. Opanowanie czynnoci praktycznych.    od 1 do 20 [...].
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie i poprawne uzasadnienie zawierajce stwierdzenie, e
+
+          podczas spalania magnezu w powietrzu powstaj take inne (stale) substancje.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Rozstrzygnicie: Nie
+Uzasadnienie: Podczas spalania magnezu w powietrzu otrzymuje si mieszanin, poniewa
+obok tlenku magnezu (MgO) powstaj take inne substancje, np. azotek magnezu (Mg3N2),
+wgiel.
+ALBO
+Czysty tlenek magnezu otrzymano tylko w dowiadczeniu I, poniewa w dowiadczeniu II obok
+tlenku magnezu powstaj take inne substancje (stale).
+
+Zadanie 9.2. (0-1)
+
+                    Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    7. Metale. Zdajcy:
+wiedzy do rozwizywania problemów.         1) opisuje podstawowe wlaciwoci fizyczne
+                                          metali i wyjania je w oparciu o znajomo
+III. Opanowanie czynnoci praktycznych.    natury wizania metalicznego;
+                                          2) pisze równania reakcji ilustrujce typowe
+                                          wlaciwoci chemiczne metali [...].
+                                          III etap edukacyjny
+                                          Powietrze i inne gazy: Zdajcy:
+                                          2) opisuje wlaciwoci fizyczne i chemiczne
+                                          [...] wodoru [...]; planuje [...] dowiadczenia
+                                          dotyczce badania [...] wlaciwoci
+                                          wymienionych gazów;
+                                          3) pisze równania reakcji otrzymywania: [...]
+                                          wodoru [...].
+
+Zasady oceniania
+1 pkt - poprawne wyjanienie uwzgldniajce konsekwencje reakcji magnezu z wod.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+                                                  Strona 11 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Rozwizanie
+Poniewa podczas reakcji magnezu z wod (par wodn) (w wysokiej temperaturze) tworzy
+si wodór, który jest gazem palnym.
+
+Uwaga: Odpowied musi zawiera informacj, e powstajca substancja (gaz) jest palna albo
+tworzy mieszanin wybuchow z powietrzem.
+
+Zadanie 10.1. (0-2)
+
+                         Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+                                                    1. Atomy, czsteczki i stechiometria
+                                                    chemiczna. Zdajcy:
+                                                    5) dokonuje interpretacji jakociowej
+                                                    i ilociowej równania reakcji w ujciu
+                                                    molowym, masowym i objtociowym (dla
+                                                    gazów).
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie tabeli - wpisanie brakujcych wartoci zaokrglonych do
+
+         pierwszego miejsca po przecinku - i poprawne narysowanie wykresu - w postaci
+         krzywej - spelniajcego warunki zadania.
+1 pkt - poprawne uzupelnienie tabeli i bldne narysowanie wykresu albo brak wykresu.
+ALBO
+       - poprawne narysowanie wykresu spelniajcego warunki zadania i uzupelnienie tabeli
+          wartociami niezaokrglonymi do pierwszego miejsca po przecinku albo wartociami
+          bldnymi albo brak uzupelnienia tabeli.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie          0      10     20                  30     40     50     60     70     80
+Czas, minuty      0,000  0,002  0,012               0,026  0,048  0,069  0,083  0,093  0,098
+Liczba moli CO2,
+mol                8,4    8,2    7,4                 6,2    4,4    2,6    1,4    0,6    0,2
+
+Masa MgCO3, g
+
+Uwaga: Zapis oblicze nie podlega ocenie.
+
+Strona 12 z 37
+                                                                    Zasady oceniania rozwiza zada
+
+                        9
+
+                        8
+
+Masa wglanu magnezu, g  7
+
+                        6
+
+                        5
+
+                        4
+
+                        3
+
+                        2
+
+                        1
+
+                        0
+
+                           0  10  20  30  40            50          60  70     80
+
+                                          Czas, minuty
+
+Wykres spelniajcy warunki zadania:
+· musi przechodzi przez 9 poprawnie zaznaczonych punktów,
+· moe by wykresem punktowym.
+
+Zadanie 10.2. (0-1)
+
+                                      Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej    IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.         1. Atomy, czsteczki i stechiometria
+                                          chemiczna. Zdajcy:
+                                          5) dokonuje interpretacji jakociowej
+                                          i ilociowej równania reakcji w ujciu
+                                          molowym, masowym i objtociowym (dla
+                                          gazów).
+
+Zasady oceniania
+1 pkt - poprawne wskazanie trzech odpowiedzi.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+1. - P; 2. - P; 3. - F
+
+Uwaga: Ocena za zadanie 10.2. nie zaley od poprawnoci wykonania zadania 10.1.
+
+                                                                            Strona 13 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 11.1. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              5. Roztwory i reakcje zachodzce
+wiedzy do rozwizywania problemów.                   w roztworach wodnych. Zdajcy:
+                                                    7) pisze równania reakcji: [...] wytrcania
+                                                    osadów [...];
+                                                    8) projektuje [...] dowiadczenia
+                                                    pozwalajce otrzyma rónymi metodami
+                                                    [...] sole.
+                                                    8. Niemetale. Zdajcy:
+                                                    8) opisuje typowe wlaciwoci chemiczne
+                                                    tlenków pierwiastków o liczbach atomowych
+                                                    od 1 do 20 [...], w tym zachowanie wobec
+                                                    [...] zasad [...];
+                                                    11) opisuje typowe wlaciwoci chemiczne
+                                                    kwasów, w tym zachowanie wobec [...] soli
+                                                    kwasów o mniejszej mocy; planuje
+                                                    [...] odpowiednie dowiadczenia [...].
+
+Zasady oceniania                                                             trzech
+1 pkt - poprawne uzupelnienie tabeli - napisanie poprawnych nazw lub wzorów
+
+         odczynników.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                  1.                             2.                3.
+
+ Numer etapu          (wodny roztwór)                 (wodny roztwór)  (wodny roztwór)
+                  wodorotlenku potasu               kwasu etanowego    azotanu(V) baru
+  Nazwa lub wzór
+       uytego                ALBO                           ALBO              ALBO
+                             KOH                         CH3COOH            Ba(NO3)2
+     odczynnika
+
+Zadanie 11.2. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              5. Roztwory i reakcje zachodzce
+wiedzy do rozwizywania problemów.                   w roztworach wodnych. Zdajcy:
+                                                    7) pisze równania reakcji: zobojtniania,
+III. Opanowanie czynnoci praktycznych.              wytrcania osadów [...];
+                                                    8) projektuje [...] dowiadczenia
+                                                    pozwalajce otrzyma rónymi metodami
+                                                    [...] sole.
+
+Strona 14 z 37
+                                                        Zasady oceniania rozwiza zada
+
+                                            8. Niemetale. Zdajcy:
+                                            11) opisuje typowe wlaciwoci chemiczne
+                                            kwasów, w tym zachowanie wobec [...] soli
+                                            kwasów o mniejszej mocy; [...] ilustruje je
+                                            równaniami reakcji.
+
+Zasady oceniania
+1 pkt - poprawne napisanie dwóch równa reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+                      -   -             2-
+Równanie reakcji 1.: HCO3 + OH  CO3 + H2O
+
+                      2-                        -
+Równanie reakcji 2.: CO3 + 2CH3COOH  2CH3COO + CO2 + H2O
+
+2-                 +                        2-     +
+ALBO CO3 + 2H3O  CO2 + 3H2O ALBO CO3 + 2H  CO2 + H2O
+
+Uwaga: Ocena za zadanie 11.2. nie zaley od poprawnoci wykonania zadania 11.1.
+
+Zadanie 12. (0-1)
+
+                          Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                        Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej      IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.           3. Wizania chemiczne. Zdajcy:
+                                            3) zapisuje wzory elektronowe typowych
+                                            czsteczek zwizków kowalencyjnych [...];
+                                            4) rozpoznaje typ hybrydyzacji (sp, sp2, sp3)
+                                            w prostych czsteczkach zwizków
+                                            nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie wzoru elektronowego cyjanowodoru oraz poprawne okrelenie
+
+          typu hybrydyzacji orbitali walencyjnych atomu wgla.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Wzór elektronowy: H-CN I
+Hybrydyzacja orbitali walencyjnych atomu wgla: sp
+
+                                                                          Strona 15 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 13. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                   1. Atomy, czsteczki i stechiometria
+                                                    chemiczna. Zdajcy:
+                                                    1) stosuje pojcie mola (w oparciu o liczb
+                                                    Avogadra).
+
+Zasady oceniania
+1 pkt - poprawne obliczenie liczby czsteczek izocyjanowodoru.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+HNC = 27gmol-1
+HNC = HNC   1 = HNC 100 27gmol-1 1,35g  1 100 = 0,0005mol
+
+HNC = HNC   = 0,0005mol  6,021023czsteczek  mol-1
+HNC = 0,003011023(czsteczek)
+
+                   = 3,011020(czsteczek) ALBO 30,11019(czsteczek) itd.
+
+Zadanie 14. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+III. Opanowanie czynnoci praktycznych.
+                                                    IV etap edukacyjny - poziom podstawowy
+                                                    1. Materialy i tworzywa pochodzenia
+                                                    naturalnego. Zdajcy:
+                                                    1) opisuje rodzaje skal wapiennych [...], ich
+                                                    wlaciwoci [...].
+                                                    IV etap edukacyjny - poziom rozszerzony
+                                                    4. Kinetyka i statyka chemiczna. Zdajcy:
+                                                    9) interpretuje wartoci stalej dysocjacji [...].
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie i poprawne uzasadnienie odwolujce si do porównania
+
+          mocy kwasów cyjanowodorowego i wglowego lub niewypierania CO2.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Rozstrzygnicie: Nie
+Uzasadnienie:
+Kwas cyjanowodorowy jest slabszy od kwasu wglowego.
+ALBO
+Kwas cyjanowodorowy nie wypiera CO2 z (wodoro)wglanów.
+
+Strona 16 z 37
+                                                      Zasady oceniania rozwiza zada
+
+Zadanie 15. (0-2)
+
+                        Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    1. Atomy, czsteczki i stechiometria
+wiedzy do rozwizywania problemów.         chemiczna. Zdajcy:
+                                          5) dokonuje interpretacji jakociowej
+                                          i ilociowej równania reakcji w ujciu
+                                          molowym [...];
+                                          6) wykonuje obliczenia z uwzgldnieniem
+                                          [...] mola [...].
+                                          5. Roztwory i reakcje zachodzce
+                                          w roztworach wodnych.
+                                          Zdajcy:
+                                          1) wykonuje obliczenia zwizane [...]
+                                          z zastosowaniem poj stenie [...]
+                                          molowe.
+                                          4. Kinetyka i statyka chemiczna. Zdajcy:
+                                          9) interpretuje wartoci [...] pH [...].
+
+Zasady oceniania
+
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze i poprawne okrelenie
+
+         zmiany stenia jonów hydroniowych.
+
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+
+LUB
+         - bldna ocena zmiany stenia jonów hydroniowych.
+
+LUB
+         - brak interpretacji wyniku.
+
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizanie
+pH = 1
+
+H3O = 0,1 moldm-3          = 0,1 moldm-3  0,02 dm3 = 0,002 mola
+                           = 0,06 moldm-3  0,03 dm3 = 0,0018 mola
+OH = 0,06 moldm-3       
+
+H3O + OH  2H2O
+
+Nadmiar jonów H3O : 0,002 mola - 0,0018 mola = 0,0002 mola
+
+Stenie jonów H3O po zmieszaniu roztworów: (0,02 + 0,03) dm3 0,0002 mola = 0,004 moldm-3
+                                   0,1 moldm-3
+
+Zmiana stenia H3O : 0,004 moldm-3 = 25
+
+(Stenie jonów H3O zmalalo 25 razy.)
+
+                                                                     Strona 17 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 16. (0-2)
+
+                           Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                    Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                        IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej                  4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania problemów.                       6) wykazuje si znajomoci i rozumieniem
+                                                        poj: stan równowagi dynamicznej i stala
+                                                        równowagi; zapisuje wyraenie na stal
+                                                        równowagi podanej reakcji;
+                                                        8) klasyfikuje substancje do kwasów lub
+                                                        zasad zgodnie z teori Brönsteda-
+                                                        Lowry'ego;
+                                                        9) interpretuje wartoci stalej dysocjacji [...].
+                                                        III etap edukacyjny
+                                                        6. Kwasy i zasady. Zdajcy:
+                                                        5) wyjania, na czym polega dysocjacja
+                                                        elektrolityczna [...] kwasów [...]; zapisuje
+                                                        równania dysocjacji elektrolitycznej [...]
+                                                        kwasów [...].
+
+Zasady oceniania
+2 pkt - poprawne wykonanie trzech elementów: uszeregowanie, napisanie równania reakcji
+
+          i wskazanie jonu.
+1 pkt - poprawne wykonanie dwóch sporód wymienionych elementów.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+
+Uszeregowanie: C, A, B
+
+                        -                           2-  +   -             2-                              +
+Równanie reakcji: H2AsO4 + H2O  HAsO4 + H3O ALBO H2AsO4  HAsO4 + H
+Jon, który moe pelni wylcznie funkcj kwasu Brønsteda: H3O+
+
+Uwaga: Dopuszcza si odpowied: B > A > C.
+
+Zadanie 17.1. (0-1)
+
+                           Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                    Wymaganie szczególowe
+III. Opanowanie czynnoci praktycznych.
+                                                        IV etap edukacyjny - poziom rozszerzony
+                                                        8. Niemetale. Zdajcy:
+                                                        4) planuje i opisuje dowiadczenie, którego
+                                                        przebieg wykae, e np. brom jest
+                                                        pierwiastkiem [...] mniej aktywnym ni chlor.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli: napisanie wzorów lub nazw soli.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Strona 18 z 37
+                                                              Zasady oceniania rozwiza zada
+
+Rozwizanie
+
+                     Wzór soli X                   Wzór soli Z
+                                        K2S ALBO siarczek potasu
+KBr ALBO bromek potasu
+
+Zadanie 17.2. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                    Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej  IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.       8. Niemetale. Zdajcy:
+                                        4) planuje i opisuje dowiadczenie, którego
+                                        przebieg wykae, e np. brom jest
+                                        pierwiastkiem [...] mniej aktywnym ni chlor;
+                                        2) pisze równania reakcji ilustrujce typowe
+                                        wlaciwoci chemiczne niemetali [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej skróconej dwóch równa reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie                        2HS- + Cl2  S + 2Cl- + H2S
+
+2Br- + Cl2  Br2 + 2Cl-
+S2- + Cl2  S + 2Cl- ALBO
+
+Uwaga: Odpowied, w której zdajcy poprawnie zbilansuje równanie reakcji prowadzcej do
+powstania czsteczek Sn, naley uzna za dopuszczaln.
+
+Zadanie 18.1. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                    Wymaganie szczególowe
+III. Opanowanie czynnoci praktycznych.
+                                        IV etap edukacyjny - poziom rozszerzony
+                                        5. Roztwory i reakcje w roztworach
+                                        wodnych. Zdajcy:
+                                        8) projektuje [...] dowiadczenia
+                                        pozwalajce otrzyma rónymi metodami
+                                        kwasy, wodorotlenki i sole.
+
+Zasady oceniania
+1 pkt - poprawny wybór i napisanie wzoru lub nazwy substancji znajdujcej si w kolbie I.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+(NH4)2CrO4 ALBO chromian(VI) amonu
+
+                                                                            Strona 19 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 18.2. (0-2)
+
+                      Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                   5. Roztwory i reakcje w roztworach
+                                                    wodnych. Zdajcy:
+                                                    8) projektuje [...] dowiadczenia
+                                                    pozwalajce otrzyma rónymi metodami
+                                                    kwasy, wodorotlenki i sole.
+
+Zasady oceniania
+2 pkt - poprawne napisanie w formie jonowej skróconej dwóch równa reakcji.
+1 pkt - poprawne napisanie w formie jonowej skróconej jednego równania reakcji.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+
+· po dodaniu wodnego roztworu H2SO4 do zawartoci kolby
+
+2-                 +  2-                                  2-  +  2-
+2CrO4 +2H3O Cr2O7 +3H2O                             ALBO  2CrO4 +2H Cr2O7 +H2O
+
+· po dodaniu nadmiaru wodnego roztworu NaOH
+
+2-              -     2-
+Cr2O7 +2OH 2CrO4 +H2O
+
+Zadanie 19.1. (0-2)
+
+                      Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              6. Reakcje utleniania i redukcji. Zdajcy:
+wiedzy do rozwizywania problemów.                   1) wykazuje si znajomoci i rozumieniem
+                                                    poj: stopie utlenienia, utleniacz,
+III. Opanowanie czynnoci praktycznych.              reduktor, utlenianie, redukcja;
+                                                    2) oblicza stopnie utlenienia pierwiastków
+                                                    w jonie i czsteczce zwizku nieorga-
+                                                    nicznego [...];
+                                                    3) wskazuje utleniacz, reduktor, proces
+                                                    utleniania i redukcji w podanej reakcji
+                                                    redoks;
+                                                    5) stosuje zasady bilansu elektronowego -
+                                                    dobiera wspólczynniki stechiometryczne
+                                                    w równaniach reakcji utleniania-redukcji
+                                                    (w formie czsteczkowej i jonowej).
+                                                    8. Niemetale. Zdajcy:
+                                                    7) zapisuje równania reakcji otrzymywania
+                                                    tlenków pierwiastków o liczbach atomowych
+                                                    od 1 do 20 [...];
+
+Strona 20 z 37
+                                                            Zasady oceniania rozwiza zada
+
+                                          8) opisuje typowe wlaciwoci chemiczne
+                                          tlenków pierwiastków o liczbach atomowych
+                                          od 1 do 20 [...].
+
+Zasady oceniania
+2 pkt - poprawne napisanie w formie jonowo-elektronowej równania procesu redukcji
+
+          i równania procesu utleniania oraz poprawne napisanie w formie czsteczkowej
+          sumarycznego równania reakcji.
+1 pkt - poprawne napisanie w formie jonowo-elektronowej równania procesu redukcji
+          i równania procesu utleniania oraz niepoprawne napisanie sumarycznego równania
+          reakcji lub brak sumarycznego równania reakcji.
+ALBO
+       - niepoprawne napisanie równania procesu redukcji lub równania procesu utleniania
+          albo brak równa oraz poprawne napisanie w formie czsteczkowej sumarycznego
+          równania reakcji.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+
+Równanie reakcji redukcji:
+
+2-          +        -
+SO4 + 4H3O + 2e  SO2 + 6H2O               (x 3)
+
+ALBO
+
+2-    +        -
+SO4 + 4H + 2e  SO2 + 2H2O     (x 3)
+
+Równanie reakcji utleniania:
+
+Sb  Sb3+ + 3e-                (x 2)
+
+Sumaryczne równanie reakcji:
+
+2Sb + 6H2SO4  Sb2(SO4)3 + 3SO2 + 6H2O
+
+Zadanie 19.2. (0-1)
+
+                              Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    6. Reakcje utleniania i redukcji. Zdajcy:
+wiedzy do rozwizywania problemów.         1) wykazuje si znajomoci i rozumieniem
+                                          poj: stopie utlenienia, utleniacz,
+III. Opanowanie czynnoci praktycznych.    reduktor, utlenianie, redukcja;
+                                          2) oblicza stopnie utlenienia pierwiastków
+                                          w jonie i czsteczce zwizku
+                                          nieorganicznego [...];
+                                          3) wskazuje utleniacz, reduktor, proces
+                                          utleniania i redukcji w podanej reakcji
+                                          redoks;
+                                          5) stosuje zasady bilansu elektronowego -
+                                          dobiera wspólczynniki stechiometryczne
+                                          w równaniach reakcji utleniania-redukcji
+                                          (w formie czsteczkowej i jonowej).
+
+                                                            Strona 21 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+                                                    8. Niemetale. Zdajcy:
+                                                    7) zapisuje równania reakcji otrzymywania
+                                                    tlenków pierwiastków o liczbach atomowych
+                                                    od 1 do 20 [...];
+                                                    8) opisuje typowe wlaciwoci chemiczne
+                                                    tlenków pierwiastków o liczbach atomowych
+                                                    od 1 do 20 [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej sumarycznego równania reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+3Sb + 5H3O + 5NO3  3HSbO3+-+ 5NO                    + 6H2O
+                           5NO +                    H2O
+ALBO  +            -
+
+3Sb + 5H + 5NO3  3HSbO3 +
+
+Zadanie 20. (0-1)
+
+                         Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    III etap edukacyjny (gimnazjum)
+II. Rozumowanie i zastosowanie nabytej              5. Woda i roztwory wodne. Zdajcy:
+wiedzy do rozwizywania problemów.                   4) opisuje rónice pomidzy roztworem [...]
+                                                    nasyconym i nienasyconym;
+III. Opanowanie czynnoci praktycznych.              5) odczytuje rozpuszczalno substancji
+                                                    z wykresu jej rozpuszczalnoci [...].
+                                                    IV etap edukacyjny - poziom rozszerzony
+                                                    5. Roztwory i reakcje zachodzce
+                                                    w roztworach wodnych. Zdajcy:
+                                                    1) wykonuje obliczenia zwizane [...]
+                                                    z zastosowaniem poj stenie
+                                                    procentowe [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie wartoci temperatury i poprawne uzupelnienie zdania.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+
+ = 60 (°C)
+
+Roztwór w zlewce I jest (nienasycony / nasycony), a jego stenie wyraone w procentach
+masowych jest (mniejsze ni / takie samo jak / wiksze ni) stenie roztworu wyraone
+w procentach masowych w zlewce II.
+
+Strona 22 z 37
+                                                      Zasady oceniania rozwiza zada
+
+Zadanie 21. (0-2)
+
+                       Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    1. Atomy, czsteczki i stechiometria
+wiedzy do rozwizywania problemów.         chemiczna. Zdajcy:
+                                          6) wykonuje obliczenia z uwzgldnieniem
+                                          [...] mola dotyczce: mas substratów
+                                          i produktów (stechiometria [...] równa
+                                          chemicznych) [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody uwzgldniajcej wskazanie substancji uytej
+
+          w nadmiarze, poprawne wykonanie oblicze i podanie wyniku w gramach.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+LUB
+
+         - popelnienie bldów przy odczytywaniu rozpuszczalnoci.
+LUB
+
+         - niepodanie wyniku w gramach lub podanie go z bldn jednostk.
+LUB
+
+         - wskazanie w odpowiedzi niewlaciwej substancji przy jej poprawnej identyfikacji
+            w obliczeniach.
+
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizania
+Rozwizanie I:
+Rozpuszczalno = 67 g / 100 g H2O
+100 g roztworu - g substancji
+167 g roztworu - 67 g substancji   = 40,12 g
+
+(K2CrO4) = 194 gmol-1 (Pb(NO3)2) = 331 gmol-1 (PbCrO4) = 323 gmol-1
+
+194 g K2CrO4  331 g Pb(NO3)2
+
+40,12 g K2CrO4   g Pb(NO3)2                = 68,45 g
+
+331 g Pb(NO3)2  323 g PbCrO4
+
+40,12 g Pb(NO3)2   g PbCrO4     = 39,15 g
+
+(Masa osadu: 39,15 g)  W nadmiarze uyto K2CrO4 ALBO chromianu(VI) potasu.
+
+                                                                     Strona 23 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Rozwizanie II:                                      40,12 g K2CrO4 --  mol
+40,12 g Pb(NO3)2 --  mol                            194 g K2CrO4 -- 1 mol
+331 g Pb(NO3)2 -- 1 mol
+ = 0,1212 mol                                                = 0,2068 mol
+
+Skoro stosunek molowy substratów wynosi 1:1, zatem K2CrO4 jest w nadmiarze.
+
+Std:
+0,1212 mol Pb(NO3)2 --  g PbCrO4
+1 mol Pb(NO3)2 -- 323 g PbCrO4
+ = 39,15 g PbCrO4
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej poprawnej
+metody i poprawnych oblicze.
+
+Zadanie 22. (0-2)
+
+                          Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              7. Metale. Zdajcy:
+wiedzy do rozwizywania problemów.                   1) opisuje podstawowe wlaciwoci fizyczne
+                                                    metali i wyjania je w oparciu o znajomo
+III. Opanowanie czynnoci praktycznych.              natury wizania metalicznego;
+                                                    2) pisze równania reakcji ilustrujce typowe
+                                                    wlaciwoci chemiczne metali wobec: [...]
+                                                    rozcieczonych i stonych roztworów
+                                                    kwasów utleniajcych (Al, Cu, Ag);
+                                                    6) projektuje [...] dowiadczenie, którego
+                                                    wynik pozwoli porówna aktywno
+                                                    chemiczn metali [...].
+                                                    8. Niemetale. Zdajcy:
+                                                    7) zapisuje równania reakcji otrzymywania
+                                                    tlenków pierwiastków o liczbach atomowych
+                                                    od 1 do 20 [...];
+                                                    8) opisuje typowe wlaciwoci chemiczne
+                                                    tlenków pierwiastków o liczbach atomowych
+                                                    od 1 do 20 [...];
+                                                    11) opisuje typowe wlaciwoci chemiczne
+                                                    kwasów, w tym zachowanie wobec metali
+                                                    [...]; planuje [...] odpowiednie
+                                                    dowiadczenia (formuluje obserwacje
+                                                    i wnioski) [...].
+
+Strona 24 z 37
+                                                 Zasady oceniania rozwiza zada
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie wszystkich zda - pi poprawnych odpowiedzi.
+1 pkt - poprawne uzupelnienie czci zda - cztery lub trzy poprawne odpowiedzi.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+W rozcieczonym roztworze kwasu azotowego(V) mied (reaguje z wydzieleniem gazowego
+tlenku / reaguje z wydzieleniem wodoru / nie reaguje) i roztwór (przyjmuje barw
+niebiesk / pozostaje bezbarwny). W rozcieczonym roztworze kwasu siarkowego(VI) mied
+(reaguje z wydzieleniem gazowego tlenku / reaguje z wydzieleniem wodoru / nie reaguje)
+i roztwór (przyjmuje barw niebiesk / pozostaje bezbarwny). Kwasem X jest
+(HNO3 / H2SO4).
+
+Zadanie 23. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                         Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                             IV etap edukacyjny - poziom rozszerzony
+                                             9. Wglowodory. Zdajcy:
+                                             3) posluguje si poprawn nomenklatur
+                                             wglowodorów (nasycone, nienasycone,
+                                             aromatyczne) i ich fluorowcopochodnych
+                                             [...];
+                                             4) rysuje wzory strukturalne i pólstrukturalne
+                                             [...] wglowodorów i ich prostych
+                                             fluorowcopochodnych [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie wzoru pólstrukturalnego (grupowego) i nazwy systematycznej
+
+          jodku alkilu.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Wzór pólstrukturalny (grupowy): CH3-CHI-CH3
+Nazwa systematyczna: 2-jodopropan
+
+                                                 Strona 25 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 24. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+                                                    9. Wglowodory. Zdajcy:
+                                                    3) posluguje si poprawn nomenklatur
+                                                    wglowodorów (nasycone, nienasycone,
+                                                    aromatyczne) i ich fluorowcopochodnych
+                                                    [...];
+                                                    4) rysuje wzory strukturalne i pólstrukturalne
+                                                    [...] wglowodorów i ich prostych
+                                                    fluorowcopochodnych [...].
+
+Zasady oceniania
+1 pkt - poprawne wskazanie trzech odpowiedzi.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+1. - F; 2. - F; 3. - P
+
+Zadanie 25.1. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              10. Hydroksylowe pochodne wglowodorów
+wiedzy do rozwizywania problemów.                   - alkohole i fenole. Zdajcy:
+                                                    3) opisuje wlaciwoci chemiczne alkoholi,
+                                                    na przykladzie [...] prostych alkoholi
+                                                    w oparciu o reakcje: [...] utlenienie
+                                                    do zwizków karbonylowych [...]; zapisuje
+                                                    odpowiednie równania reakcji.
+                                                    13. Estry i tluszcze. Zdajcy:
+                                                    6) zapisuje cigi przemian (i odpowiednie
+                                                    równania reakcji) wice ze sob
+                                                    wlaciwoci poznanych wglowodorów i ich
+                                                    pochodnych.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu: wpisanie wzorów pólstrukturalnych (grupowych):
+
+         2-jodobutanu, alkoholu otrzymanego w wyniku zasadowej hydrolizy 2-jodobutanu
+         i organicznego produktu utlenienia tlenkiem miedzi(II) tego alkoholu.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Strona 26 z 37
+                                                                    Zasady oceniania rozwiza zada
+
+Rozwizanie                                               zasadowa   CH3-CH(OH)-CH2-CH3  utlenianie
+            CH3-CHI-CH2-CH3                              hydroliza             alkohol
+                 2-jodobutan                                                             
+                                                          
+                                             utlenianie
+                                                              CH3-CO-CH2-CH3
+                                                         produkt utlenienia alkoholu
+
+Zadanie 25.2. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej                              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                                   9. Wglowodory. Zdajcy:
+                                                                    8) planuje cig przemian pozwalajcych
+                                                                    otrzyma np. eten z etanu (z udzialem
+                                                                    fluorowcopochodnych wglowodorów) [...];
+                                                                    10) wyjania na prostych przykladach
+                                                                    mechanizmy reakcji substytucji, addycji,
+                                                                    eliminacji [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie obu zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Hydroliza zasadowa jodku alkilu jest reakcj (addycji / substytucji / eliminacji) zachodzc
+zgodnie z mechanizmem nukleofilowym. Przykladem obojtnego elektrycznie nukleofilu jest
+czsteczka (CH4 / H2 / NH3), a nukleofilu jonowego - jon (CN-/ Cu2+ / H3O+).
+
+Zadanie 26.1. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej                              10. Hydroksylowe pochodne wglowodorów
+wiedzy do rozwizywania problemów.                                   - alkohole i fenole. Zdajcy:
+                                                                    2) [...] podaje nazwy systematyczne;
+                                                                    3) opisuje wlaciwoci chemiczne alkoholi,
+                                                                    na przykladzie [...] prostych alkoholi
+                                                                    w oparciu o reakcje: [...] odwodnienie do
+                                                                    alkenów [...].
+
+Zasady oceniania
+1 pkt - poprawne podanie wzoru i nazwy systematycznej alkoholu.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+                                                                                        Strona 27 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Rozwizanie                                              Nazwa systematyczna:
+   Wzór:                                                2-metylobutan-2-ol
+
+            CH3
+  H3C C CH2 CH3
+
+            OH
+
+Zadanie 26.2. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                    Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                        IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej                  9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania problemów.                       7) opisuje wlaciwoci chemiczne alkenów,
+                                                        na przykladzie nastpujcych reakcji:
+                                                        przylczanie (addycja): [...] HBr [...];
+                                                        przewiduje produkty reakcji przylczenia
+                                                        czsteczek niesymetrycznych do
+                                                        niesymetrycznych alkenów na podstawie
+                                                        reguly Markownikowa (produkty glówne
+                                                        i uboczne) [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie równania reakcji.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+                                                           CH3
+
+CH3C(CH3)=CHCH3 + HBr  H3C C CH2 CH3
+
+                                                    Br
+
+Zadanie 27. (0-2)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                    Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej                  IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                       3. Wizania chemiczne. Zdajcy:
+                                                        4) rozpoznaje typ hybrydyzacji (sp, sp2, sp3)
+                                                        w prostych czsteczkach zwizków [...]
+                                                        organicznych.
+                                                        6. Reakcje utleniania i redukcji. Zdajcy:
+                                                        2) oblicza stopnie utlenienia pierwiastków
+                                                        w jonie i czsteczce zwizku [...]
+                                                        organicznego.
+
+Strona 28 z 37
+                                                 Zasady oceniania rozwiza zada
+
+Zasady oceniania                                                             walencyjnych
+2 pkt - poprawne uzupelnienie obu tabeli - okrelenie hybrydyzacji orbitali
+
+         i formalnego stopnia utlenienia wszystkich wskazanych atomów wgla.
+1 pkt - poprawne uzupelnienie jednej tabeli.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Rozwizanie
+
+·
+
+                   Atom wgla               a     x
+
+                   hybrydyzacja            sp3   sp2
+
+·
+
+                   Atom wgla               b     y
+
+                   stopie utlenienia       0    (+) I
+
+Zadanie 28. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+                  Wymaganie ogólne                    Wymaganie szczególowe
+
+   II. Rozumowanie i zastosowanie nabytej  IV etap edukacyjny - poziom rozszerzony
+   wiedzy do rozwizywania problemów.       9. Wglowodory. Zdajcy:
+                                           4) rysuje wzory strukturalne i pólstrukturalne
+                                           [...] izomerów optycznych wglowodorów
+                                           i ich prostych fluorowcopochodnych
+                                           o podanym wzorze sumarycznym [...].
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie i poprawne uzasadnienie.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Rozstrzygnicie: Nie ALBO Jest achiralna.
+Uzasadnienie: Czsteczka tymolu ma plaszczyzn symetrii.
+ALBO
+W czsteczce tymolu nie wystpuje aden asymetryczny atom wgla.
+ALBO
+W czsteczce tego zwizku nie ma centrum chiralnoci (centrum stereogenicznego, centrum
+stereochemicznego, stereocentrum).
+ALBO
+aden atom wgla (o hybrydyzacji sp3) nie jest polczony z czterema rónymi podstawnikami.
+
+                                                                             Strona 29 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 29. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania problemów.                   9) interpretuje wartoci stalej dysocjacji [...].
+                                                    5. Roztwory i reakcje zachodzce
+                                                    w roztworach wodnych. Zdajcy:
+                                                    3) stosuje termin stopie dysocjacji dla
+                                                    ilociowego opisu zjawiska dysocjacji
+                                                    elektrolitycznej.
+
+Zasady oceniania
+1 pkt - poprawne dokoczenie zdania.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+C1
+
+Zadanie 30. (0-2)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                   1. Atomy, czsteczki i stechiometria
+                                                    chemiczna. Zdajcy:
+                                                    6) wykonuje obliczenia z uwzgldnieniem
+                                                    wydajnoci reakcji i mola dotyczce: mas
+                                                    substratów i produktów (stechiometria
+                                                    wzorów i równa chemicznych) [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+          w gramach.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+LUB
+
+         - niepodanie wyniku w gramach lub podanie go z bldn jednostk.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+
+Strona 30 z 37
+                                                                         Zasady oceniania rozwiza zada
+
+Przykladowe rozwizania
+
+Rozwizanie I:
+
+                                                          1
+Stenie pocztkowe alkoholu: alkoholu =  = V , a stenie równowagowe alkoholu - po
+przereagowaniu 85% pocztkowej iloci tego zwizku: alkohol = 1 mol -0,85 mol = 0,15.
+                                                                            V     V
+Równowagowe stenia estru i wody: ester = [woda] = 1 mol  0,85 mol = 0,85 .
+                                                                         V     V
+Równowagowe stenie kwasu: kwas =  , gdzie  oznacza liczb moli kwasu w stanie
+                                                          V
+równowagi.
+
+Stala równowagi reakcji estryfikacji:
+
+                                0,85 2                       i Kc =2,12
+
+Kc = ester [woda] kwas [alkohol] =  V0,15 = 0,7225 0,15 
+                           V V
+
+2,12 = 0,7225 0,15   = 2,27 mol
+
+Pocztkowa liczba moli kwasu , jeeli przereagowalo tyle moli kwasu, co alkoholu, czyli
+0,85 mola:  =  + 0,85 = 2,27 + 0,85 = 3,12 mola
+
+CH3COOH =   CH3COOH = 3,12 mol  60 gmol-1= 187,2 (g)
+
+Rozwizanie II:
+
+substancja Liczba moli                   Zmiana liczby moli,             Liczba moli równowagowa,
+                                         mol                             mol
+               pocztkowa, mol            - 0,85                          0,15
+                                         - 0,85
+alkohol        1                         + 0,85                           - 0,85
+                                         + 0,85
+kwas                                                                     0,85
+                                        = 3,122 mol                      0,85
+ester          0
+
+woda           0
+
+ = ester  woda
+      alkohol  kwas
+
+2,12 = 0,852 
+          0,15( - 0,85)
+
+Pocztkowa masa kwasu etanowego:
+
+CH3COOH =   CH3COOH = 3,122 mol  60 gmol-1= 187,32 (g)
+
+                                                                                  Strona 31 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 31. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                   4. Kinetyka i statyka chemiczna. Zdajcy:
+                                                    5) przewiduje wplyw: [...] obecnoci
+                                                    katalizatora [...] na szybko reakcji [...];
+                                                    7) stosuje regul przekory do jakociowego
+                                                    okrelenia wplywu zmian [...] stenia
+                                                    reagentów [...] na uklad pozostajcy
+                                                    w stanie równowagi dynamicznej.
+                                                    10. Hydroksylowe pochodne wglowodorów
+                                                    - alkohole i fenole. Zdajcy:
+                                                    3) opisuje wlaciwoci chemiczne alkoholi,
+                                                    na przykladzie [...] prostych alkoholi
+                                                    w oparciu o reakcje: [...] z kwasami
+                                                    karboksylowymi [...].
+                                                    13. Estry i tluszcze. Zdajcy:
+                                                    3) wyjania przebieg reakcji octanu etylu:
+                                                    z roztworem wodorotlenku sodu [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie wszystkich zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Przy uyciu w opisanej reakcji równomolowej mieszaniny kwasu i alkoholu wydajno tej
+reakcji jest w temperaturze T (nisza ni / równa / wysza od) 85%.
+Opisan reakcj przeprowadza si w rodowisku kwasowym, poniewa jony H+
+(katalizuj t reakcj / zwikszaj wydajno tej reakcji).
+W rodowisku zasadowym opisany ester ulega hydrolizie, której produktami s butan-2-ol
+i (kwas etanowy / sól kwasu etanowego).
+
+Zadanie 32. (0-1)
+
+                   Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                                    IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej              3. Wizania chemiczne. Zdajcy:
+wiedzy do rozwizywania problemów.                   6) opisuje i przewiduje wplyw rodzaju
+                                                    wizania ([...] wodorowe, [...]) na
+                                                    wlaciwoci fizyczne substancji [...]
+                                                    organicznych.
+
+Strona 32 z 37
+                                                       Zasady oceniania rozwiza zada
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie wszystkich zda.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Przedstawiony w informacji dimer powstaje w wyniku tworzenia si wiza (kowalencyjnych /
+jonowych / wodorowych) midzy czsteczkami kwasu etanowego. Rozcieczony roztwór
+kwasu etanowego w wodzie (nie zawiera dimerów / zawiera dimery), poniewa woda (nie
+tworzy wiza wodorowych / tworzy wizania wodorowe) z czsteczkami kwasu
+etanowego.
+
+Zadanie 33.1. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    5. Roztwory i reakcje zachodzce
+wiedzy do rozwizywania problemów.         w roztworach wodnych. Zdajcy:
+                                          6) podaje przyklady wskaników pH ([...]
+III. Opanowanie czynnoci praktycznych.    oran metylowy [...]) i omawia ich
+                                          zastosowanie; bada odczyn roztworu.
+
+Zasady oceniania
+1 pkt - poprawna identyfikacja substancji w obu probówkach - napisanie ich nazw lub wzorów.
+
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie
+Probówka I: chlorek fenyloamoniowy ALBO C6H5-NH3Cl
+
+Probówka II: glicyna ALBO NH2-CH2-COOH
+
+Zadanie 33.2. (0-1)
+
+                     Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                      Wymaganie szczególowe
+I. Wykorzystanie i tworzenie informacji.
+                                          IV etap edukacyjny - poziom rozszerzony
+II. Rozumowanie i zastosowanie nabytej    5. Roztwory i reakcje zachodzce
+wiedzy do rozwizywania problemów.         w roztworach wodnych. Zdajcy:
+                                          5) uzasadnia (ilustrujc równaniami reakcji)
+III. Opanowanie czynnoci praktycznych.    przyczyn [...] odczynu niektórych
+                                          roztworów soli (hydroliza).
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej skróconej równania reakcji.
+
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+Rozwizanie           +                                        +
++                                                   +
+C6H5NH3 + H2O  C6H5NH2 + H3O ALBO         C6H5NH3  C6H5NH2 + H
+
+                                                                          Strona 33 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Zadanie 34. (0-2)
+
+                         Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                                Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej              IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.                   1. Atomy, czsteczki i stechiometria
+                                                    chemiczna. Zdajcy:
+                                                    5) dokonuje interpretacji jakociowej
+                                                    i ilociowej równania reakcji w ujciu
+                                                    molowym, masowym [...].
+                                                    14. Zwizki organiczne zawierajce azot.
+                                                    Zdajcy:
+                                                    12) tworzy wzory dipeptydów i tripeptydów,
+                                                    powstajcych z podanych aminokwasów
+                                                    [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wzoru
+
+         tripeptydu lub wartoci x i y.
+
+1 pkt - zastosowanie poprawnej metody, ale:
+          - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Przykladowe rozwizania
+Rozwizanie I:
+
+ - liczba reszt glicyny w tripeptydzie;  - liczba reszt alaniny w tripeptydzie
+tripeptydu - liczba moli tripeptydu w badanej próbce
+
+tripeptydu=   Gly +   Ala - 2  H2O
+
+tripeptydu=   75 +   89 - 36            tripeptydu = tripeptydu M = 43,4 mg tripeptydu   75 +   89 - 36
+
+AgCl = Cl- = ( + )  tripeptydu i AgCl = AgCl AgCl = 143,5 g  mol-1 86,1 mg = 0,6 mmol i  +  = 3
+
+0,6 = ( + )  tripeptydu
++ = 3
+
+tripeptydu = 43,4 mg   75 +   89 - 36   tripeptydu = 0,2 mmol
+
+=1
+=2
+
+Wzór tripeptydu: GlyAla2 ALBO Gly1Ala2
+
+Strona 34 z 37
+                                                          Zasady oceniania rozwiza zada
+
+Rozwizanie II:
+
+AgCl =  AgCl 86,1 10-3g     -1 = 0,6 mmol
+        =
+        AgCl 143,5 g  mol
+
+AgCl = Cl- = 3  tripeptydu                 tripeptydu = 0,2 mmol
+
+tripeptydu Gly2Ala = 2  Gly + 1  Ala - 2  H2O= 2  75 + 1  89 - 36 = 203 g  mol-1
+
+tripeptydu GlyAla2= 1  Gly + 2  Ala - 2  H2O = 1  75 + 2  89 - 36 = 217 g  mol-1
+tripeptydu Gly2Ala = tripeptydu  tripeptydu Gly2Ala = 40,6 mg
+tripeptydu GlyAla2 = tripeptydu  tripeptydu GlyAla2 = 43,4 mg
+
+Wzór tripeptydu: GlyAla2 ALBO Gly1Ala2
+
+Rozwizanie III:
+
+AgCl = 0,0861 143,5 = 0,0006 mol
+tripeptydu = 0,0002 mol
+tripeptydu = 0,0434 0,0002 = 217 g  mol-1
+
+ 75  + 89  - 36 = 217
+ + = 3
+  = 1
+  = 2
+
+Zadanie 35. (0-1)
+
+                            Wymagania egzaminacyjne 2021
+
+               Wymaganie ogólne                       Wymaganie szczególowe
+
+II. Rozumowanie i zastosowanie nabytej     IV etap edukacyjny - poziom rozszerzony
+wiedzy do rozwizywania problemów.          14. Zwizki organiczne zawierajce azot.
+                                           Zdajcy:
+                                           12) tworzy wzory dipeptydów i tripeptydów,
+                                           powstajcych z podanych aminokwasów
+                                           [...].
+
+Zasady oceniania
+1 pkt - poprawne podanie sekwencji moliwych tripeptydów - z zastosowaniem trzyliterowych
+
+          kodów aminokwasów.
+0 pkt - odpowied niespelniajca powyszego kryterium albo brak odpowiedzi.
+
+                                                                  Strona 35 z 37
+Egzamin maturalny z chemii - termin glówny 2021 r.
+
+Rozwizanie
+Cys-Leu-Leu, Leu-Leu-Cys, Leu-Cys-Leu
+
+Uwaga: Odpowied, w której zdajcy podaje sekwencj trzech nukleotydów (z kodu
+genetycznego, tzw. triplet albo kodon) zamiast sekwencji aminokwasów, nie spelnia warunków
+zadania.
+
+Zadanie 36. (0-2)                                   IV etap edukacyjny - poziom rozszerzony
+ III. Opanowanie czynnoci praktycznych.             5. Roztwory i reakcje zachodzce
+                                                    w roztworach wodnych. Zdajcy:
+                                                    8) projektuje [...] dowiadczenia
+                                                    pozwalajce otrzyma rónymi metodami
+                                                    [...] sole.
+                                                    8. Niemetale. Zdajcy:
+                                                    11) opisuje typowe wlaciwoci kwasów,
+                                                    w tym zachowanie wobec [...]
+                                                    wodorotlenków [...].
+                                                    10. Hydroksylowe pochodne wglowodorów
+                                                    - alkohole i fenole. Zdajcy:
+                                                    3) opisuje wlaciwoci chemiczne alkoholi,
+                                                    na przykladzie etanolu [...];
+                                                    4) porównuje wlaciwoci fizyczne
+                                                    i chemiczne: etanolu i glicerolu; projektuje
+                                                    dowiadczenie, którego przebieg pozwoli
+                                                    odróni alkohol monohydroksylowy od
+                                                    alkoholu polihydroksylowego [...].
+                                                    14. Zwizki organiczne zawierajce azot.
+                                                    Zdajcy:
+                                                    13) planuje [...] dowiadczenie, którego
+                                                    wynik dowiedzie obecnoci wizania
+                                                    peptydowego w analizowanym zwizku
+                                                    (reakcja biuretowa).
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie wszystkich luk - pi poprawnych odpowiedzi.
+1 pkt - poprawne uzupelnienie czci luk - cztery lub trzy poprawne odpowiedzi.
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Strona 36 z 37
+Zasady oceniania rozwiza zada
+
+Rozwizanie                                                     roztwór.
+Rozstrzygnicie: Tak
+Uzasadnienie, np.:
+Probówka I: Powstal niebieski roztwór.
+Probówka II: Pozostala niebieska zawiesina.
+ALBO
+Niebieska zawiesina nie roztworzyla si.
+ALBO
+Nie zaobserwowano objawów reakcji.
+Probówka III: Powstal szafirowy ALBO granatowy roztwór.
+Probówka IV: Powstal róowy ALBO fioletowy ALBO róowofioletowy
+
+                                                                         Strona 37 z 37
+

@@ -1,0 +1,997 @@
+                                             Arkusz zawiera informacje       MBI
+                                             prawnie chronione do momentu    2015
+                                             rozpoczcia egzaminu.
+
+KOD              UZUPELNIA ZDAJCY              miejsce
+                                      PESEL  na naklejk
+
+EGZAMIN MATURALNY Z BIOLOGII
+
+POZIOM ROZSZERZONY
+
+DATA: 7 maja 2015 r.
+GODZINA ROZPOCZCIA: 14:00
+CZAS PRACY: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 23 strony (zadania 1-22).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego
+    egzamin.
+
+2. Odpowiedzi zapisz w miejscu na to przeznaczonym przy kadym zadaniu.
+3. Pisz czytelnie. Uywaj dlugopisu albo pióra tylko z czarnym
+
+    tuszem/atramentem.
+4. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+5. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+6. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL
+
+    i przyklej naklejk z kodem.
+7. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+8. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na
+
+    egzamin maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora
+    prostego.
+
+                                             MBI-R1_1P-152
+
+Uklad graficzny                                                              MBI
+© CKE 2015                                                                   2015
+Zadanie 1.
+W tabeli cyfr 1 zaznaczono obecno, a cyfr 0 - brak niektórych cech u przedstawicieli
+wybranych gatunków strunowców. Obok tabeli zamieszczono drzewo filogenetyczne,
+na którym literami A-F oznaczono pewne grupy systematyczne strunowców oraz zaznaczono
+na galziach (liniach filogenetycznych) cechy, które w rozwoju ewolucyjnym u przodków
+tych grup pojawily si po raz pierwszy.
+
+                                          PRZEDSTAWICIELE
+
+CECHY
+
+                                        lancetnik
+                                              rekin
+                                                     tuczyk
+                                                           salamandra
+                                                                   ólw
+                                                                          lampart
+krgoslup           0 1 1 1 1 1
+                   0 1 1 1 1 1
+szczki ze stawami  0 0 0 1 1 1
+cztery koczyny     0 0 0 0 1 1
+kroczne            0 0 0 0 0 1
+owodnia
+                                            Na podstawie: Biologia, red. N.A. Campbell, Pozna 2012.
+wlosy
+
+Zadanie 1.1. (0-1)
+Wybierz z tabeli i zapisz poniej nazwy wszystkich przedstawicieli strunowców
+nalecych do grup oznaczonych na drzewie filogenetycznym literami C i E.
+
+Grupa C: .......................................................................................................................................
+
+Grupa E: .......................................................................................................................................
+
+Zadanie 1.2. (0-1)
+Podaj wszystkie widoczne na drzewie filogenetycznym grupy krgowców, których
+wspólny przodek mial cztery koczyny kroczne. Zapisz oznaczenia literowe tych grup.
+
+.......................................................................................................................................................
+
+Zadanie 1.3. (0-1)
+Zaznacz wlaciwe dokoczenie zdania.
+
+Przedstawione drzewo filogenetyczne
+A. dostarcza bezporednich dowodów ewolucji strunowców.
+B. jest ródlem informacji o konwergencji strunowców.
+C. ukazuje tempo zmian ewolucyjnych u strunowców.
+D. przedstawia pokrewiestwa grup strunowców.
+
+                   Strona 2 z 23                                                                                                                         MBI_1R
+        Zadanie 2. (0-2)
+        Podczas dowiadczenia wprowadzono do komórek wydzielniczych trzustki radioaktywne
+        aminokwasy, a nastpnie ledzono zmiany promieniotwórczoci. W okrelonych odstpach
+        czasu dokonywano pomiaru stopnia radioaktywnoci w wybranych organellach
+        komórkowych. Pocztkowo wykryto sygnal radioaktywny plyncy z szorstkiej siateczki
+        ródplazmatycznej, który stopniowo si oslabial wraz ze wzrostem promieniotwórczoci
+        aparatu Golgiego (diktiosomów). Po osigniciu pewnego poziomu sygnal radioaktywny
+        aparatu Golgiego zaczl male, a pojawil si w pcherzykach przemieszczajcych si
+        w kierunku blony komórkowej.
+
+                                                     Na podstawie: L. Klyszejko-Stefanowicz, Cytobiochemia, Warszawa 2002.
+
+        Przedstaw przyczyny zmian (wzrostu i spadku) radioaktywnoci szorstkiej siateczki
+        ródplazmatycznej oraz aparatu Golgiego (diktiosomów). W odpowiedzi uwzgldnij
+        funkcj tych struktur.
+
+        Szorstka siateczka ródplazmatyczna: .........................................................................................
+
+        ......................................................................................................................................................
+
+        Aparat Golgiego: .........................................................................................................................
+
+        ......................................................................................................................................................
+
+        Zadanie 3. (0-1)
+        Podczas wysilku fizycznego w organizmie czlowieka zachodz takie procesy fizjologiczne,
+        jak: zwikszone zaopatrywanie pracujcych mini w glukoz, kwasy tluszczowe i tlen,
+        eliminowanie nadmiaru ciepla z organizmu, usuwanie z mini produktów przemiany materii,
+        np. kwasu mlekowego i CO2. Procesy te moliwe s dziki zmianom w pracy komórek,
+        narzdów i ukladów. Przyklady takich zmian (I-III) przedstawiono poniej.
+
+        I. rozszerzenie naczy krwiononych w skórze
+        II. wiksza czstotliwo i poglbienie oddechów
+        III. nasilone wychwytywanie glukozy i wolnych kwasów tluszczowych z krwi przez wlókna
+
+            miniowe
+
+        Oce, czy w tabeli trafnie przyporzdkowano zmiany w pracy komórek, narzdów
+        i ukladów (I-III) do procesów fizjologicznych czlowieka wykonujcego prac fizyczn
+        w pomieszczeniu o temperaturze pokojowej. Zaznacz T (tak), jeli przyporzdkowanie
+        jest prawidlowe, albo N (nie) - jeli jest nieprawidlowe.
+
+        1. Eliminowanie nadmiaru ciepla z organizmu jest ulatwione dziki I i II.                                                         T N
+                                                                                                                                         T N
+        2. Usuwanie produktów przemiany materii, np. kwasu mlekowego i CO z wlókien miniowych do krwi jest moliwe dziki I i III. 2,      T N
+        3. Zaopatrzenie pracujcych wlókien miniowych w odpowiedni ilo substratów oddychania tlenowego jest moliwe dziki II i III.
+
+        Nr zadania                       1.1. 1.2. 1.3. 2.                                                                           3.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1  1  2                                                                                  1
+
+MBI_1R              Strona 3 z 23
+Zadanie 4.
+Mitochondria i chloroplasty pochodz najpewniej od bakterii yjcych samodzielnie, które
+zostaly pobrane do wntrza komórki przodka organizmów eukariotycznych, ale nie zostaly
+strawione. W obydwu organellach dochodzi do syntezy ATP. Zgodnie z modelem
+chemiosmozy, dziki transportowi elektronów przez przenoniki zwizane z blon,
+protony (H+) s przepompowywane na jej drug stron: w mitochondriach z matriks
+do przestrzeni midzyblonowej, a w chloroplastach - ze stromy do wntrza (wiatla)
+tylakoidu. W blon wbudowany jest enzym - syntaza ATP, który wykorzystuje do swojego
+dzialania powstal rónic ste H+. ródla elektronów, przechodzcych przez przenoniki
+lacucha transportu elektronów, s róne w mitochondriach i w chloroplastach, ale istota
+procesu chemiosmozy jest taka sama w obydwu organellach - co przedstawiono
+na poniszym schemacie.
+
+                                                                 Na podstawie: Biologia, red. N.A. Campbell, Pozna 2012.
+
+Zadanie 4.1. (0-1)
+Podaj jeden argument na rzecz endosymbiotycznego pochodzenia mitochondriów
+i chloroplastów.
+
+.......................................................................................................................................................
+.......................................................................................................................................................
+.......................................................................................................................................................
+
+Strona 4 z 23                                                                                                                                            MBI_1R
+        Zadanie 4.2. (0-1)
+        Na podstawie podanych informacji oce prawdziwo stwierdzenia: ,,Synteza ATP
+        w mitochondriach i chloroplastach zachodzi bezporednio w procesie
+        przepompowywania protonów (H+) podczas transportu elektronów przez przenoniki
+        lacucha transportu elektronów". Odpowied uzasadnij.
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        Zadanie 4.3. (0-1)
+        Okrel, czy transport protonów (H+) z matriks mitochondrium i stromy chloroplastu
+        jest aktywny, czy - bierny. Odpowied uzasadnij, korzystajc z przedstawionych
+        informacji.
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        Zadanie 4.4. (0-1)
+        Wyjanij, dlaczego zbyt wysoka temperatura moe doprowadzi do zatrzymania syntezy
+        ATP w mitochondriach i chloroplastach.
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        Zadanie 4.5. (0-1)
+        Podaj, w której fazie fotosyntezy (zalenej od wiatla czy niezalenej od wiatla)
+        powstaje i do czego jest nastpnie wykorzystywany ATP wytwarzany w chloroplastach
+        komórki rolinnej.
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        Zadanie 4.6. (0-1)
+        Podaj jeden przyklad powizania procesów metabolicznych zachodzcych
+        w chloroplastach z metabolizmem mitochondriów tej samej komórki rolinnej.
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        .......................................................................................................................................................
+
+        Nr zadania                       4.1. 4.2. 4.3. 4.4. 4.5. 4.6.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1     1  1  1  1
+
+MBI_1R                             Strona 5 z 23
+Zadanie 5.
+Na uproszczonym schemacie przedstawiono obieg azotu w przyrodzie, czyli cykl przemian
+wolnego azotu czsteczkowego oraz jego zwizków nieorganicznych (np. amoniaku,
+azotanów(III) i (V)) i zwizków organicznych (np. bialek). Istotn rol w obiegu azotu
+odgrywaj bakterie.
+
+                                           Na podstawie: T. Umiski, Ekologia, rodowisko, przyroda, Warszawa 1995.
+
+Zadanie 5.1. (0-1)
+Na podstawie schematu oce, czy ponisze informacje dotyczce udzialu organizmów
+w kreniu azotu s prawdziwe. Zaznacz P, jeli informacja jest prawdziwa,
+albo F - jeli jest falszywa.
+
+1. Bakterie wykorzystuj obecne w rodowisku nieorganiczne i organiczne zwizki azotowe.                                     P F
+2. Roliny pobieraj azot bezporednio ze rodowiska w postaci azotanów(V), soli amonowych i azotu atmosferycznego.           P F
+3. Zwierzta uczestnicz w przemianie nieorganicznych zwizków zawierajcych azot w azotowe zwizki organiczne, np. w bialka.  P F
+
+Zadanie 5.2. (0-1)
+Wybierz ze schematu jedn grup bakterii i przedstaw jej rol w przyswajaniu azotu
+przez roliny.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Zadanie 5.3. (0-1)
+Która grupa bakterii uwzgldniona na schemacie wykorzystuje przemiany zwizków
+azotowych jako ródlo energii koniecznej do syntezy wlasnych zwizków organicznych?
+Podaj nazw tej grupy i nazw tego procesu.
+
+Grupa bakterii: .................................... Nazwa procesu: .................................
+
+Strona 6 z 23                                                                                                                                            MBI_1R
+        Zadanie 6.
+        Rak wtroby jest chorob, która moe mie wiele przyczyn. Jedn z nich jest wirusowe
+        zapalenie wtroby typu B, wywolane przez wirus HBV. Wirus ten przenosi si podczas
+        kontaktu z zakaon krwi lub plynami ustrojowymi i namnaa si w komórkach wtroby.
+        Wedlug wiatowej Organizacji Zdrowia (WHO) znaczca cz ludzkoci jest zainfekowana
+        wirusem, ale u wielu ludzi zakaenie jest bezobjawowe i dochodzi do pelnego wyleczenia
+        polczonego z nabyciem odpornoci. Ze wzgldu na zmienno sekwencji DNA wirusa
+        wyrónia si kilka jego typów. WHO zaleca szczepienia przeciw HBV. W diagnostyce
+        zakae wirusem HBV stosuje si kilka metod:
+
+        I. metod serologiczn, w której wykrywa si we krwi antygeny powierzchniowe wirusa;
+        II. metod serologiczn, w której wykrywa si we krwi przeciwciala przeciwko antygenom
+
+             wirusa;
+        III. metod, w której wykorzystuje si jedn z technik inynierii genetycznej - technik PCR.
+
+        Zadanie 6.1. (0-1)
+        Oce, czy sformulowane przez uczniów hasla propagujce szczepienia przeciw HBV
+        zawieraj informacje prawdziwe. Zaznacz P, jeli informacja jest prawdziwa,
+        albo F - jeli jest falszywa.
+
+        1. Naley zaszczepi si przeciw HBV, aby zmniejszy ryzyko zachorowania na wirusowe zapalenie wtroby typu B.     P F
+        2. Naley zaszczepi si przeciw HBV w celu zabezpieczenia si przed wnikniciem wirusa HBV do organizmu.          P F
+        3. Naley zaszczepi si przeciw HBV, poniewa dziki temu uniknie si zachorowania na raka wtroby.                 P F
+
+        Zadanie 6.2. (0-1)
+        Okrel, za pomoc której metody diagnostycznej (I-III) mona stwierdzi, e osoba
+        zdrowa, która nie byla szczepiona przeciw HBV, w przeszloci przeszla wirusowe
+        zapalenie wtroby typu B. Odpowied uzasadnij.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Zadanie 6.3. (0-1)
+        Podaj, któr metod (I-III) naley zastosowa, aby mona bylo z najwiksz
+        dokladnoci okreli typ wirusa HBV, który w badanej próbce krwi znajduje si
+        w bardzo malej iloci. Odpowied uzasadnij.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Nr zadania                       5.1. 5.2. 5.3. 6.1. 6.2. 6.3.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1     1  1  1                                                          1
+
+MBI_1R                             Strona 7 z 23
+Zadanie 7.
+Skrtnic, która jest nitkowatym glonem zawierajcym spiralnie skrcony chloroplast,
+umieszczono w roztworze zawierajcym zdolne do aktywnego ruchu bakterie tlenowe.
+Wykonano trzy powtórzenia dowiadczenia (A-C), które rónily si sposobem owietlenia
+wybranej komórki skrtnicy:
+
+· zestaw A - komórka skrtnicy byla owietlona wiatlem bialym punktowo w dwóch
+                 miejscach (1 i 2)
+
+· zestaw B - komórka skrtnicy byla owietlona równomiernie wiatlem bialym
+· zestaw C - komórka skrtnicy byla owietlona punktowo wiatlem czerwonym
+
+                 w miejscu (3) i zielonym - w miejscu (4).
+
+Kady z zestawów byl zabezpieczony przed dostaniem si powietrza atmosferycznego
+z zewntrz. Po pewnym czasie mona bylo zaobserwowa charakterystyczne rozmieszczenie
+bakterii wokól komórek skrtnicy. Warunki i wyniki dowiadczenia zilustrowano
+na poniszych rysunkach.
+
+Zestaw A. ciemno  Zestaw B. wiatlo biale                             Zestaw C. ciemno
+
+                                                        Na podstawie: D.O. Hall, K.K. Rao, Fotosynteza, Warszawa 1999.
+
+Zadanie 7.1. (0-1)
+Wyjanij, czym jest spowodowany sposób rozmieszczenia bakterii przedstawiony
+na rysunku B. W odpowiedzi uwzgldnij odpowiedni proces zachodzcy w komórce
+skrtnicy.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Zadanie 7.2. (0-2)
+Sporód podanych propozycji wybierz dwa wlaciwe sformulowania problemu
+badawczego i dwa odpowiednio sformulowane wnioski dotyczce przedstawionych
+dowiadcze. Wpisz numery tych propozycji w wyznaczone miejsca.
+
+1. Wplyw barwy wiatla na zachodzenie procesu fotosyntezy w komórkach skrtnicy.
+2. W procesie fotosyntezy komórki skrtnicy wykorzystuj wiatlo o czerwonej barwie.
+3. W którym obszarze komórki skrtnicy zachodzi proces fotosyntezy?
+4. Badania nad wykorzystaniem wiatla w procesie fotosyntezy.
+5. W cytozolu skrtnicy nie zachodzi faza fotosyntezy zalena od wiatla.
+
+Problemy badawcze: ............................................
+Wnioski: ..........................................................
+
+                  Strona 8 z 23                                                                                                                          MBI_1R
+        Zadanie 7.3. (0-1)
+        Oce, czy na podstawie przedstawionych dowiadcze mona stwierdzi, e bakterie
+        wykazuj fototaksj dodatni - przemieszczaj si w kierunku wiatla. Odpowied
+        uzasadnij, uwzgldniajc odpowiedni zestaw dowiadczalny.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Zadanie 8.
+        Na rysunku przedstawiono jemiol Viscum album. Jemiola jest pólpasoytem o skórzastych,
+        zimozielonych liciach, wystpujcym glównie na drzewach liciastych. Wytwarza biale,
+        lepkie jagody, zjadane przez ptaki i przenoszone z drzewa na drzewo. Nasiona przyklejaj si
+        do galzi. Z nasion kielkuj siewki. Wytwarzaj one charakterystyczne organy - ssawki
+        wrastajce poprzez kor ywiciela a do tkanki, z której czerpi wod i sole mineralne.
+
+                                            Na podstawie: http://biodidac.bio.uottawa.ca
+
+        Zadanie 8.1. (0-1)
+        Uzasadnij, e jemiola jest pólpasoytem. W odpowiedzi uwzgldnij dwie przedstawione
+        w zadaniu cechy jej budowy.
+
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+
+        Zadanie 8.2. (0-1)
+        Podaj nazw tkanki przewodzcej ywiciela oraz nazw komórek tej tkanki, z których
+        jemiola czerpie niezbdne substancje.
+
+        Nazwa tkanki przewodzcej: .......................................................................................................
+        Nazwa komórek: ..........................................................................................................................
+
+        Nr zadania                       7.1. 7.2. 7.3. 8.1. 8.2.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  2  1  1  1
+
+MBI_1R              Strona 9 z 23
+Zadanie 9.
+Na schemacie przedstawiono wartoci cinie parcjalnych (prnoci) gazów oddechowych
+w powietrzu atmosferycznym, w pcherzykach plucnych oraz we krwi naczy krwiononych.
+Legenda:
+PO2 - cinienie parcjalne tlenu
+PCO2 - cinienie parcjalne dwutlenku wgla (tlenku wgla(IV))
+
+   Na podstawie: E. McLaughlin, J. Stamford, D. White, Fizjologia czlowieka. Krótkie wyklady, Warszawa 2008.
+
+Zadanie 9.1. (0-2)
+Korzystajc z danych na schemacie, narysuj wykres slupkowy porównujcy cinienie
+parcjalne tlenu i dwutlenku wgla w powietrzu pcherzykowym oraz we krwi ttnicy
+plucnej i yly plucnej.
+
+Strona 10 z 23                                                                                                MBI_1R
+        Zadanie 9.2. (0-1)
+        Zaznacz na rysunku za pomoc strzalki kierunek przeplywu krwi w naczyniu
+        wlosowatym.
+
+        Zadanie 9.3. (0-1)
+        Uzupelnij ponisze zdania tak, aby zawieraly informacje prawdziwe. Podkrel
+        w kadym nawiasie wlaciwe okrelenie.
+
+        Wymiana gazowa pomidzy powietrzem pcherzykowym a krwi w naczyniach wlosowatych
+        otaczajcych pcherzyk plucny zachodzi na drodze (dyfuzji / transportu aktywnego).
+        Poniewa cinienie parcjalne tlenu we krwi doprowadzanej do pcherzyka plucnego jest
+        (wysze / nisze) ni w pcherzyku plucnym, a cinienie parcjalne dwutlenku wgla w tej
+        krwi jest (wysze / nisze) ni w pcherzyku plucnym, tlen przenika z pcherzyka do krwi,
+        natomiast dwutlenek wgla przenika z krwi do pcherzyka plucnego.
+
+        Zadanie 9.4. (0-1)
+        Wyjanij, dlaczego wartoci cinienia parcjalnego tlenu we krwi ttnicy plucnej
+        s nisze ni wartoci cinienia parcjalnego we krwi yly plucnej. W odpowiedzi
+        uwzgldnij wymian tego gazu zachodzc w plucach oraz w tkankach organizmu.
+
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+
+        Zadanie 10. (0-1)
+        W tabeli przedstawiono wybrane czsteczki i komórki uczestniczce w zwalczaniu zakae.
+
+        Uzupelnij tabel - wpisz w miejsca oznaczone literami A, B, C i D odpowiednie rodzaje
+        odpornoci warunkowanej przez wymienione w tabeli czsteczki i komórki. Wybierz
+        je z poniszych:
+
+                            nieswoista, swoista, komórkowa, humoralna.
+
+        Rodzaje odpornoci                      A. ................           B. ..................
+        C. .....................
+        D. ......................                 interferony                     fagocyty
+                                                   lizozym                      komórki NK
+
+                                                 przeciwciala                  limfocyty Tc
+
+                                   Nr zadania  9.1. 9.2. 9.3. 9.4. 10.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt        2                    1  1  1  1
+
+MBI_1R                                         Strona 11 z 23
+Zadanie 11.
+Autonomiczny uklad nerwowy czlowieka sklada si z dwóch dzialajcych antagonistycznie
+czci: wspólczulnej i przywspólczulnej. W tabeli przedstawiono przyklady efektów
+oddzialywania autonomicznego ukladu nerwowego na wybrane narzdy trzech ukladów
+narzdów w organizmie czlowieka.
+
+                   Efekt dzialania ukladu
+
+serce                     przywspólczulnego                 wspólczulnego
+                   zmniejszenie czstoci skurczów  zwikszenie czstoci skurczów
+gruczoly jelitowe
+oskrzela (minie                    serca                          serca
+oskrzelowe)                wzrost wydzielania        zmniejszenie wydzielania
+                         enzymów trawiennych
+                                                       enzymów trawiennych
+                            zwenie oskrzeli
+                                                        rozszerzenie oskrzeli
+
+Zadanie 11.1. (0-1)
+Podaj, do której czci autonomicznego ukladu nerwowego - wspólczulnej
+czy przywspólczulnej - odnosi si okrelenie uywane w sytuacji zagroenia: ,,walcz lub
+uciekaj". Odpowied uzasadnij, uwzgldniajc wybrany z tabeli przyklad dzialania tego
+ukladu w powizaniu z prac mini szkieletowych.
+
+.......................................................................................................................................................
+.......................................................................................................................................................
+.......................................................................................................................................................
+.......................................................................................................................................................
+
+Zadanie 11.2. (0-1)
+Przedstaw, jakie znaczenie dla prawidlowego funkcjonowania organizmu
+ma antagonistyczne dzialanie obu czci autonomicznego ukladu nerwowego w sytuacji
+wystpienia zagroenia i po jego ustpieniu.
+
+.......................................................................................................................................................
+.......................................................................................................................................................
+.......................................................................................................................................................
+
+Zadanie 12.
+Autosomalny allel (D), warunkujcy obecno w erytrocytach czynnika Rh (Rh+), dominuje
+nad allelem (d) - brak czynnika Rh (Rh-). W tabeli przedstawiono pary rodziców (A-D)
+o rónych grupach krwi pod wzgldem czynnika Rh.
+
+                                            kobieta mczyzna
+                                   A. Rh- Rh-
+                                   B. Rh- Rh+
+                                   C. Rh+ Rh-
+                                   D. Rh+ Rh+
+
+Zadanie 12.1. (0-1)
+Podaj wszystkie moliwe pary genotypów rodzicielskich, przy których prawdopodobiestwo
+urodzenia dziecka majcego grup krwi Rh+ wynosi 100%. Zastosuj odpowiednie oznaczenia
+alleli, które zostaly podane w tekcie.
+
+.......................................................................................................................................................
+
+                   Strona 12 z 23                                                                                                                        MBI_1R
+        Zadanie 12.2. (0-1)
+        Sporód par rodziców A-D wybierz t, w przypadku której moe wystpi choroba
+        hemolityczna noworodka, wywolana tzw. konfliktem serologicznym. Odpowied
+        uzasadnij, uwzgldniajc obecno Rh w erytrocytach dziecka i matki oraz moliwe
+        genotypy ojca.
+
+        ..................................................................................................................
+
+        ..................................................................................................................
+
+        ..................................................................................................................
+
+        Zadanie 13. (0-1)
+        U niektórych osób dochodzi do zaburze w wydzielaniu kortyzolu, który jest wytwarzany
+        z cholesterolu w korze nadnerczy. Przed rozpoczciem leczenia pacjenta wane jest ustalenie,
+        czy niedobór kortyzolu spowodowany jest niedoczynnoci przysadki w zakresie produkcji
+        ACTH (kortykotropiny), czy te przyczyn jest uszkodzenie komórek kory nadnerczy. W tym
+        celu przeprowadza si specjalny test z metyraponem - inhibitorem enzymu, odpowiedzialnego
+        za ostatni etap produkcji kortyzolu z cholesterolu.
+        Oznacza si u pacjenta poziom ACTH i 11-deoksykortyzolu, nastpnie podaje si metyrapon,
+        i po okrelonym czasie znów oznacza si poziom obu substancji.
+        Na schemacie przedstawiono regulacj wydzielania kortyzolu oraz miejsce dzialania
+        metyraponu.
+
+                             Na podstawie: Diagnostyka czynnociowa czlowieka, pod red. W.Z. Traczyka, Warszawa 1999.
+
+        Zaznacz poprawne dokoczenie zdania.
+
+        Po podaniu metyraponu u pacjentów z niedoczynnoci kortykotropow przysadki
+        A. poziom ACTH i poziom 11-deoksykortyzolu znacznie wzrastaj.
+        B. poziom ACTH i poziom 11-deoksykortyzolu pozostaj bez zmian.
+        C. poziom ACTH pozostaje bez zmian, a poziom 11-deoksykortyzolu spada.
+        D. poziom ACTH wzrasta, a poziom 11-deoksykortyzolu pozostaje bez zmian.
+
+        Nr zadania                       11.1. 11.2. 12.1. 12.2. 13.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1  1  1  1
+
+MBI_1R              Strona 13 z 23
+Zadanie 14.
+W siatkówce oka komórki fotoreceptorowe (prcikonone i czopkonone) zawieraj barwnik
+wzrokowy, który sklada si z absorbujcej wiatlo czsteczki retinalu, pochodnej witaminy A,
+polczonej z bialkiem - opsyn. Kiedy barwnik pochlania dostateczn ilo energii wietlnej,
+zostaj zainicjowane przemiany fizykochemiczne retinalu, które prowadz do powstania
+impulsów nerwowych w fotoreceptorach i ich przekazu z siatkówki do mózgu, co warunkuje
+widzenie. Komórki prcikonone reaguj w niskich nateniach owietlenia, a czopkonone -
+w rednich i wysokich.
+Siatkówka przystosowuje si do odbierania promieni wietlnych o rónym nateniu.
+W zaadaptowanej do bardzo silnego wiatla siatkówce przewaajca cz fotoreceptorów ma
+rozloony barwnik wzrokowy i jest niepobudliwa. Adaptacja siatkówki do calkowitej
+ciemnoci trwa ponad godzin. Dochodzi wtedy do resyntezy barwnika w fotoreceptorach.
+Dziki temu jest odpowiednia ilo barwnika i minimalne natenie promieniowania
+wietlnego moe by odbierane przez maksymaln liczb fotoreceptorów.
+
+  Na podstawie: W.Z. Traczyk, A. Trzebski, Fizjologia czlowieka z elementami fizjologii stosowanej i klinicznej,
+                                                                                                                     Warszawa 2007.
+
+Zadanie 14.1. (0-1)
+Uwzgldniajc mechanizm widzenia opisany w tekcie, wyjanij, dlaczego czlowiek
+po przejciu ze slonecznego miejsca do zacienionego pomieszczenia zaczyna dostrzega
+zarysy przedmiotów dopiero po pewnym czasie.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Zadanie 14.2. (0-1)
+Wyka zaleno midzy niedoborem witaminy A w organizmie czlowieka
+a pogorszeniem widzenia po zmierzchu. W odpowiedzi uwzgldnij odpowiedni rodzaj
+fotoreceptorów.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Strona 14 z 23                                                                                                                                           MBI_1R
+        Zadanie 15.
+        Na rysunku przedstawiono rolin wilca ziemniaczanego, znan pod nazw ,,batat". Jest
+        to bylina powszechnie uprawiana w strefie midzyzwrotnikowej, na obszarach o wilgotnym
+        i cieplym klimacie. Bulwy korzeniowe tej roliny, cenione jako pokarm czlowieka, zawieraj
+        du ilo skrobi oraz inne wglowodany, a take bialka, wiele witamin i skladników
+        mineralnych.
+
+                                        Na podstawie: Encyklopedia szkolna. Biologia, pod red. A. Urbanka, Warszawa 1999.
+
+        Zadanie 15.1. (0-1)
+        Okrel, do której grupy rolin - jednoliciennych czy dwuliciennych -
+        najprawdopodobniej naley batat. Odpowied uzasadnij, podajc widoczne na rysunku
+        dwie cechy licia typowe dla tej grupy.
+
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+
+        Zadanie 15.2. (0-1)
+        Przedstaw funkcj korzenia batata, inn ni utrzymywanie roliny w podlou
+        i pobieranie wody z solami mineralnymi. Uwzgldnij widoczne na rysunku
+        przystosowanie w budowie korzenia do pelnienia tej funkcji.
+
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+
+        Nr zadania                       14.1. 14.2. 15.1. 15.2.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1  1  1
+
+MBI_1R  Strona 15 z 23
+Zadanie 16.
+Przeprowadzono dowiadczenie badajce intensywno zachodzenia pewnego procesu
+w liciu wybranej roliny. Poniej przedstawiono opis przebiegu dowiadczenia i uzyskane
+wyniki.
+
+Obie strony blaszki licia wybranej roliny zakryto suchymi papierkami kobaltowymi. Suchy
+papierek kobaltowy ma kolor niebieski, natomiast wilgotny zmienia kolor na róowy.
+Ogonek licia umieszczono w probówce z wod, na której powierzchni naniesiono warstw
+oleju. Trzeci taki sam papierek, zawieszono na statywie w pewnej odlegloci od licia. Caly
+zestaw badawczy umieszczono pod szklanym kloszem, zapewniajc jednoczenie optymalne
+warunki owietlenia i temperatury. W poniszej tabeli zamieszczono wyniki dowiadczenia.
+
+  Miejsce umieszczenia papierka     Czas, po którym papierek kobaltowy zmienil
+              kobaltowego                             kolor na róowy
+                                                        bardzo krótki
+1. dolna powierzchnia licia
+                                                             krótki
+2. górna powierzchnia licia
+                                            dluszy ni w przypadkach 1. i 2.
+3. papierek zawieszony na statywie
+
+Zadanie 16.1. (0-1)
+Podaj nazw procesu zachodzcego w rolinie, którego efektem byla zmiana barwy
+papierków kobaltowych umieszczonych na liciu.
+
+.......................................................................................................................................................
+
+Zadanie 16.2. (0-1)
+Podaj, w jakim celu pod kloszem umieszczono zawieszony na statywie papierek
+kobaltowy. Odpowied uzasadnij.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Zadanie 16.3. (0-1)
+Poniej numerami I-IV oznaczono opisy rozmieszczenia aparatów szparkowych w liciu,
+a literami A-C oznaczono przyklady rodowisk ycia rolin.
+
+Rozmieszczenie aparatów szparkowych w liciu
+I. aparaty szparkowe wystpuj tylko na górnej powierzchni blaszki liciowej
+II. duo aparatów szparkowych wystpuje w skórce dolnej, brak lub nieliczne aparaty
+
+     szparkowe w skórce górnej
+III. aparaty szparkowe s obecne po obu stronach licia, ale wicej wystpuje na górnej
+
+     powierzchni blaszki liciowej
+IV. brak aparatów szparkowych w skórce górnej i dolnej licia
+
+rodowisko ycia rolin
+A. wodne (li roliny wodnej calkowicie zanurzonej)
+B. wodno-atmosferyczne (plywajcy li roliny wodnej, którego ogonek jest calkowicie
+
+     zanurzony, a blaszka ley na powierzchni wody)
+C. ldowe (li roliny ldowej otoczony powietrzem atmosferycznym)
+
+Strona 16 z 23                                                                                                                                           MBI_1R
+        Uzupelnij ponisze zdanie. Wpisz w wyznaczone miejsca odpowiednie oznaczenia
+        wybrane sporód opisów I-IV i przykladów A-C tak, aby powstala informacja
+        prawdziwa.
+
+        Na podstawie wyników dowiadczenia mona przypuszcza, e w liciu badanej roliny
+
+        (wybierz sporód I-IV) ....................................., a wic jest to li roliny yjcej
+
+        w rodowisku (wybierz sporód A-C) ................................... .
+
+        Zadanie 17. (0-1)
+        Roliny dnia dlugiego to roliny zakwitajce podczas pory roku, w której dni s dlusze
+        od pewnej krytycznej wartoci dlugoci dnia. Roliny dnia krótkiego to roliny kwitnce
+        podczas dni krótszych od pewnej krytycznej wartoci. Przeprowadzono dowiadczenie,
+        którego celem bylo okrelenie, czy u rolin wystpuje substancja powodujca zakwitanie,
+        która przy odpowiednim dla danej roliny fotoperiodzie pobudza pki do rozwoju w kwiaty.
+        W tym celu niekwitnc rolin dnia dlugiego zaszczepiono na kwitncej rolinie dnia
+        krótkiego i poddano dzialaniu krótkiego dnia. Wynik dowiadczenia przedstawiono
+        na rysunku.
+
+                                                                         Na podstawie: Biologia, red. N.A. Campbell, Pozna 2012.
+
+        Opisz wynik dowiadczenia przedstawiony na ilustracji oraz przedstaw jego moliw
+        przyczyn, korzystajc z informacji podanych w tekcie i wlasnej wiedzy.
+
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+        ......................................................................................................................................................
+
+        Nr zadania                       16.1. 16.2. 16.3. 17.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1  1  1
+
+MBI_1R  Strona 17 z 23
+Zadanie 18.
+U groszku pachncego (Lathyrus odoratus) autosomalne allele (A) i (B) dwóch rónych
+genów koduj dwa enzymy odpowiedzialne za wytworzenie róowego barwnika platków
+kwiatów. Kady z tych enzymów katalizuje jeden z dwóch etapów syntezy barwnika
+róowego i brak nawet jednego z nich powoduje bial barw kwiatów. Skrzyowano dwie
+bialo kwitnce roliny, w wyniku czego w pokoleniu pierwszym (F1) otrzymano wylcznie
+roliny majce kwiaty róowe o genotypie AaBb, gdzie recesywne allele tych genów (a) i (b)
+to zmutowane allele kodujce niefunkcjonalne enzymy. Kady z dwóch genów
+odpowiedzialnych za wytworzenie róowego barwnika kwiatów wystpuje w populacji
+groszku w postaci dwóch alleli.
+
+Zadanie 18.1. (0-2)
+Podaj wszystkie moliwe genotypy rolin o kwiatach bialych oraz podkrel wród nich
+dwa, których skrzyowanie ze sob doprowadzi do uzyskania wylcznie rolin
+o kwiatach róowych.
+
+.......................................................................................................................................................
+
+Zadanie 18.2. (0-2)
+Wykonaj krzyówk genetyczn (szachownic Punnetta) i na jej podstawie okrel
+fenotypy pokolenia drugiego (F2) powstalego po skrzyowaniu rolin o genotypach
+AaBb. Podaj, w jakim stosunku liczbowym wystpuj fenotypy w pokoleniu F2.
+
+Fenotypy w pokoleniu F2: ............................................................................................................
+Stosunek liczbowy fenotypów F2: ................................................................................................
+
+Zadanie 18.3. (0-1)
+Oce, czy ponisze informacje dotyczce dziedziczenia barwy kwiatów u groszku
+pachncego s prawdziwe. Zaznacz P, jeli informacja jest prawdziwa, albo F - jeli jest
+falszywa.
+
+     Kady z dwóch enzymów niezbdnych do wytworzenia róowego                                                                      P F
+1. barwnika kwiatów u groszku pachncego kodowany jest przez allele                                                               P F
+                                                                                                                                 P F
+    wielokrotne.
+
+2. Podwójne heterozygoty groszku maj fenotyp mieszany, czyli prezentuj barwy kwiatów kadego z obojga homozygotycznych rodziców.
+
+3. Cecha - biala barwa - kwiatów groszku ujawnia si u osobnika bdcego pojedyncz lub podwójn homozygot recesywn.
+
+Strona 18 z 23                                                                                                                                           MBI_1R
+        Zadanie 19.
+        Czsteczka insuliny sklada si z dwóch rónych lacuchów polipeptydowych - A i B.
+        Wystpuj w niej trzy mostki dwusiarczkowe stabilizujce struktur czsteczki: jeden
+        w lacuchu polipeptydowym A oraz dwa - lczce lacuchy A i B. Pocztek sekwencji
+        kodujcej (znajdujcej si na nici nieulegajcej transkrypcji) genu kodujcego jeden
+        z lacuchów polipeptydowych insuliny jest nastpujcy:
+
+        5' ATGGCCCTGTGGATGCGCCTCCTGCCCCTGCTGGCG ... 3'.
+
+        Podczas eksperymentu uyto czynnika mutagennego, który w dwu przypadkach wywolal
+        delecje, tzn. transkrybowane mRNA bylo pozbawione fragmentu sekwencji skladajcego si
+        z kolejnych nukleotydów. W wyniku translacji powstaly lacuchy polipeptydowe (1. i 2.)
+        o innej sekwencji aminokwasów ni w lacuchu prawidlowym.
+
+        I. przypadek - polipeptyd 1. powstal na podstawie delecji 4 nukleotydów (od 10 do 13
+                           nukleotydu sekwencji kodujcej wlcznie)
+
+        II. przypadek - polipeptyd 2. powstal na podstawie delecji 9 nukleotydów (od 10 do 18
+                           nukleotydu sekwencji kodujcej wlcznie).
+
+        Zadanie 19.1. (0-1)
+        Na podstawie tekstu uzasadnij, e czsteczka insuliny ma struktur III- i IV-rzdow.
+
+        Struktura III-rzdowa: .................................................................................................................
+
+        ......................................................................................................................................................
+
+        Struktura IV-rzdowa: .................................................................................................................
+
+        ......................................................................................................................................................
+
+        Zadanie 19.2. (0-1)
+        Okrel, który polipeptyd (1. czy 2.) bdzie mial bardziej zmienion sekwencj
+        aminokwasów w porównaniu z polipeptydem prawidlowym. Odpowied uzasadnij.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Zadanie 19.3. (0-1)
+        Podaj nazw czwartego aminokwasu w sekwencji prawidlowego polipeptydu oraz nazw
+        czwartego aminokwasu w polipeptydzie 1. Przyjmij zaloenie, e w ich sklad nie wchodzi
+        aminokwas kodowany przez kodon START.
+
+        Polipeptyd prawidlowy: ...............................................................................................................
+
+        Polipeptyd 1: ................................................................................................................................
+
+        Zadanie 19.4. (0-1)
+        Okrel, czy opisane mutacje mogly by spowodowane dzialaniem kolchicyny, która jest
+        czynnikiem mutagennym blokujcym wrzeciono kariokinetyczne. Odpowied uzasadnij.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Nr zadania                       18.1. 18.2. 18.3. 19.1. 19.2. 19.3. 19.4.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  2  2            1  1  1  1  1
+
+MBI_1R                                   Strona 19 z 23
+Zadanie 20.
+Ekologiczna nisza podstawowa gatunku, czyli nisza potencjalnie zajmowana przez ten
+gatunek w warunkach optymalnych, jest czsto inna ni nisza zrealizowana, czyli
+rzeczywista, zajmowana w danych warunkach abiotycznych i biotycznych. Aby sprawdzi,
+czy na nisz ekologiczn wplywa konkurencja midzygatunkowa, badano dwa gatunki pkli
+(skorupiaki osiadle, obojnaki, rozmnaajce si m.in. przez zaplodnienie krzyowe). Pkle te
+wykazuj warstwowe rozmieszczenie na zalewanych wod skalach wzdlu wybrzey Szkocji,
+Chthamalus stellatus jest znajdowany wyej na skalach ni Balanus balanoides (rysunek A).
+Po usuniciu przez badaczy B. balanoides z niektórych jego stanowisk okazalo si,
+e C. stellatus rozprzestrzenil si na tereny wczeniej zajmowane przez B. balanoides
+(rysunek B).
+
+A                                    B
+
+   Na podstawie: Biologia, red. N.A. Campbell, Pozna 2012.
+
+Zadanie 20.1. (0-1)                  konkurencji midzygatunkowej na nisz
+Sformuluj wniosek dotyczcy wplywu    wniosku uwzgldnij nisz zrealizowan
+ekologiczn Chthamalus stellatus. We
+i podstawow.
+
+.......................................................................................................................................................
+.......................................................................................................................................................
+
+Zadanie 20.2. (0-1)
+Oce, czy na podstawie opisu tego dowiadczenia i jego wyników mona sformulowa
+wnioski podane w tabeli. Zaznacz T (tak), jeli wniosek wynika z tego dowiadczenia,
+albo N (nie) - jeli z niego nie wynika.
+
+      Zrónicowanie nisz zrealizowanych Chthamalus stellatus i Balanus                                         T  N
+1. balanoides pozwala na koegzystencj populacji obu gatunków
+                                                                                                              T  N
+      w biocenozie.
+2. e Balanus balanoides zajmie wysze partie skal. Usunicie Chthamalus stellatus z jego stanowiska spowoduje,  T  N
+
+3. Chthamalus stellatus ma szeroki zakres tolerancji, a Balanus balanoides ma wski zakres tolerancji.
+
+Zadanie 20.3. (0-1)
+Korzystajc z podanych informacji, przedstaw jedn korzy, jak odnosz pkle
+z ycia w skupiskach.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+   Strona 20 z 23                                                                                                                                        MBI_1R
+        Zadanie 21.
+        Informacja 1.
+        Roliny misoerne wystpuj zwykle w siedliskach ubogich w skladniki pokarmowe. Ich
+        systemy korzeniowe s slabo wyksztalcone. W toku ewolucji misoerno pojawiala si
+        wród rolin kilkakrotnie, niezalenie od siebie. S trzy odrbne rodziny rolin
+        dzbankowatych, których przedstawiciele wyksztalcaj ,,dzbanki": Sarraceniaceae, rosnce
+        w pólnocnej i poludniowej Ameryce, Nepenthaceae w Azji oraz Cephalotaceae w Australii.
+        Rodziny te nie s ze sob blisko spokrewnione, ale wszystkie wyksztalcaj, z fragmentu lub
+        calego licia, podobnie wygldajce pulapki w ksztalcie dzbanka. W dzbankach zbiera si
+        woda deszczowa, w której, w najprostszym przypadku, zlapane zwierzta topi si i ulegaj
+        strawieniu z udzialem wystpujcych w nich bakterii. Bardziej wymylne dzbanki same
+        wydzielaj do wntrza enzymy trawienne.
+
+                                     Na podstawie: A.J. Lack, D.E. Evans, Krótkie wyklady. Biologia rolin, Warszawa 2005.
+
+        Informacja 2.
+        Jeden z gatunków z rodziny Nepenthaceae - dzbanecznik dwuostrogowy (N. bicalcarata) jest
+        kolonizowany przez mrówki z gatunku Camponotus schmitzi, które ywi si jego nektarem
+        oraz owadami wpadajcymi do dzbanków. Wycignicie ofiary z dzbanka moe trwa nawet
+        do 12 godzin i w tym czasie mrówki zostawiaj w dzbanku bogate w azot odchody.
+        Zauwaono, e wylawiane s glównie najwiksze ofiary, a ich niezjedzone szcztki trafiaj
+        z powrotem do dzbanka. Roliny pozbawione mrówek s skarlale. Mrówki te gnied si
+        wylcznie na N. bicalcarata i tylko wyjtkowo s znajdowane na innych rolinach.
+
+                                                                                               Na podstawie: encyklopedia.naukowy.pl
+
+        Zadanie 21.1. (0-1)
+        Uzupelnij tabel - wpisz w kadym z jej wierszy wlaciw nazw zalenoci
+        midzygatunkowych. Wybierz je z poniszych:
+
+                          konkurencja, drapienictwo, pasoytnictwo, mutualizm.
+
+                         Zestawienie organizmów              Zalenoci midzygatunkowe
+        1. dzbaneczniki - schwytane owady
+        2. mrówki C. schmitzi - dzbanecznik dwuostrogowy
+
+        Zadanie 21.2. (0-1)
+        Na podstawie przedstawionych informacji okrel, czy dzbankowate pulapki u opisanych
+        rolin misoernych s przykladem konwergencji, czy - dywergencji. Odpowied uzasadnij.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Zadanie 21.3. (0-1)
+        Wyjanij, dlaczego dzbaneczniki dwuostrogowe yjce bez mrówek maj mniejsze
+        rozmiary ciala. W odpowiedzi uwzgldnij informacje dotyczce warunków ycia
+        dzbaneczników.
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        ......................................................................................................................................................
+
+        Nr zadania                       20.1. 20.2. 20.3. 21.1. 21.2. 21.3.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1  1             1  1  1  1
+
+MBI_1R                             Strona 21 z 23
+Zadanie 22.
+Gatunek uznaje si za zagroony, kiedy jego populacje maj bardzo mal liczebno.
+W rezerwacie Gombe w Tanzanii yje okolo 100 szympansów. Liczba tych zwierzt,
+wystpujcych w lasach równikowych na obszarze kilku pastw afrykaskich, drastycznie si
+zmniejsza. Przyczynami s m.in. kurczenie si terenów lenych i nielegalne polowania.
+Naczelne wykazuj te podatno na choroby zakane typowe dla ludzi. Gdy wic firmy
+zajmujce si wyrbem lasu coraz glbiej penetruj dungl, ronie prawdopodobiestwo
+rozprzestrzeniania si infekcji niebezpiecznych dla ycia szympansów. W celu ochrony
+szympansów podjto nastpujce dzialania: otoczono rezerwat kordonem zieleni, utworzono
+migracyjne korytarze lene prowadzce z rezerwatu do innych lasów tropikalnych
+zamieszkalych przez niewielkie populacje szympansów, ograniczono naplyw turystów,
+zabroniono turystom zbliania si do tych zwierzt. Do rezerwatu nie s wpuszczane nawet
+lekko zainfekowane i kaszlce osoby.
+
+                                       Na podstawie: K. Wong, Jane z afrykaskiej dungli, ,,wiat Nauki", nr 1, 2011.
+
+Zadanie 22.1. (0-1)
+Wyjanij, dlaczego istnienie populacji szympansów o malej liczebnoci jest zagroone.
+W odpowiedzi uwzgldnij podloe genetyczne tego zjawiska.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Zadanie 22.2. (0-1)
+Podaj, które z wymienionych dziala dotyczcych ochrony szympansów ma na celu
+zwikszenie rónorodnoci genetycznej populacji z rezerwatu Gombe. Odpowied
+uzasadnij.
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+.......................................................................................................................................................
+
+Nr zadania                       22.1. 22.2.
+Wypelnia Maks. liczba pkt
+egzaminator Uzyskana liczba pkt  1  1
+
+Strona 22 z 23                                                                                                                                           MBI_1R
+        BRUDNOPIS (nie podlega ocenie)
+
+MBI_1R  Strona 23 z 23
+

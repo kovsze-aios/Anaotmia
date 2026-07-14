@@ -1,0 +1,1062 @@
+                                              Arkusz zawiera informacje      MCH
+                                              prawnie chronione do momentu   2019
+                                              rozpoczcia egzaminu.
+
+KOD              UZUPELNIA ZDAJCY               miejsce
+                                       PESEL  na naklejk
+
+EGZAMIN MATURALNY Z CHEMII                                                   NOWA FORMULA
+
+POZIOM ROZSZERZONY
+
+DATA: 13 maja 2019 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS PRACY: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 25 stron (zadania 1-40).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego
+    egzamin.
+
+2. Rozwizania i odpowiedzi zapisz w miejscu na to przeznaczonym przy
+    kadym zadaniu.
+
+3. W rozwizaniach zada rachunkowych przedstaw tok rozumowania
+    prowadzcy do ostatecznego wyniku oraz pamitaj o jednostkach.
+
+4. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym
+    tuszem/atramentem.
+
+5. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+6. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+7. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na
+
+    egzamin maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora
+    prostego.
+8. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejk z kodem.
+9. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+
+                                              MCH-R1_1P-192
+
+Uklad graficzny                                                              MCH
+© CKE 2015                                                                   2019
+Zadanie 1. (0-1)
+Dwa pierwiastki oznaczono umownie literami X i Z. Dwuujemny jon pierwiastka Z ma
+konfiguracj elektronow 1s22s22p63s23p6 w stanie podstawowym. Pierwiastki X i Z tworz
+zwizek XZ2, w którym stosunek masowy pierwiastka X do pierwiastka Z jest równy 3 : 16.
+Czsteczka tego zwizku ma budow liniow.
+
+Napisz wzór sumaryczny zwizku opisanego w informacji, zastpujc umowne
+oznaczenia X i Z symbolami pierwiastków. Podaj typ hybrydyzacji (sp, sp2, sp3) orbitali
+walencyjnych atomu pierwiastka X tworzcego zwizek XZ2 oraz napisz liczb wiza
+typu  i liczb wiza typu  wystpujcych w czsteczce opisanego zwizku chemicznego.
+
+ Wzór sumaryczny: ...................................... Typ hybrydyzacji: ......................................
+
+ Liczba wiza typu : ................................. Liczba wiza typu : ................................
+
+Zadanie 2. (0-1)
+Poniszy diagram fazowy tlenku wgla(IV) przedstawia wartoci temperatury i cinienia,
+w których CO2 wystpuje w rónych fazach: w stanie stalym, cieklym lub gazowym. Linie
+cigle okrelaj warunki temperatury i cinienia, w których istnieje trwala równowaga midzy
+dwiema fazami. W punkcie oznaczonym symbolem P3 (T = 216 K i p = 5100 hPa) CO2
+wystpuje w trzech fazach znajdujcych si w stanie równowagi.
+
+p
+                   3 ciekly 2
+                            CO2
+
+                staly           gazowy
+                 CO2              CO2
+
+                            P3
+
+                    1
+1013 hPa
+
+195 K                           T
+
+Na podstawie: K. Pigo, Z. Ruziewicz, Chemia fizyczna. Podstawy fenomenologiczne, Warszawa 2007.
+
+Oce, czy podane poniej informacje s prawdziwe. Zaznacz P, jeli informacja jest
+prawdziwa, albo F - jeli jest falszywa.
+
+1. Pod cinieniem wyszym od 5100 hPa tlenek wgla(IV) nie wystpuje w cieklym stanie skupienia.                         P F
+2. W temperaturze 195 K i pod cinieniem 1013 hPa staly tlenek wgla(IV) moe ulega sublimacji.                         P F
+3. Zmian wartoci temperatury topnienia tlenku wgla(IV) w zalenoci od cinienia ilustruje krzywa oznaczona numerem 2.  P F
+
+Strona 2 z 25
+
+                                                                                                                     MCH_1R
+Zadanie 3. (0-1)
+Uzupelnij ponisze zdania dotyczce czterech rónych rodzajów krysztalów. Wybierz
+i zaznacz jedno okrelenie sporód podanych w kadym nawiasie.
+
+W krysztalach metalicznych sie krystaliczna zbudowana jest z (atomów /
+czsteczek / kationów i anionów / kationów metali) otoczonych chmur zdelokalizowanych
+elektronów. Elementami, z których zbudowana jest sie krystaliczna tlenku wapnia, s
+(atomy / czsteczki / kationy i aniony). W krysztalach molekularnych dominuj
+oddzialywania midzyczsteczkowe, a w krysztalach kowalencyjnych atomy tworzce sie
+krystaliczn polczone s wizaniami kowalencyjnymi. Przykladem krysztalu molekularnego
+jest krysztal (chlorku sodu / sacharozy / wapnia), a przykladem krysztalu kowalencyjnego -
+krysztal (diamentu / jodu / wglanu wapnia).
+
+Informacja do zada 4.-5.
+Anion tlenkowy O2- jest zasad Brønsteda mocniejsz ni jon wodorotlenkowy OH -. Jon
+tlenkowy nie wystpuje w wodnych roztworach, poniewa jako bardzo mocna zasada reaguje
+z czsteczk wody.
+
+Zadanie 4. (0-1)
+Napisz równanie reakcji anionu tlenkowego z czsteczk wody.
+
+......................................................................................................................................................
+
+Zadanie 5. (0-1)
+Uzupelnij ponisze zdania. Wybierz i zaznacz jedno okrelenie sporód podanych
+w kadym nawiasie.
+
+Aniony tlenkowe wystpuj w sieci krystalicznej jonowych tlenków pierwiastków
+majcych (mal / du) elektroujemno i nalecych do grup ukladu okresowego
+o numerach: (1 i 2 / 14 i 15 / 16 i 17). Ulegajce reakcji z wod tlenki tych pierwiastków
+tworz roztwory o silnie (kwasowym / zasadowym) odczynie, a wic o (niskim / wysokim)
+pH.
+
+        Nr zadania                       1. 2. 3. 4. 5.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 1 1 1 1
+
+                    Strona 3 z 25
+
+MCH_1R
+Zadanie 6. (0-1)
+W przemyle wodór mona otrzyma w procesie konwersji metanu bdcego glównym
+skladnikiem gazu ziemnego. W mieszaninie gazu ziemnego i pary wodnej w pewnej
+temperaturze T i w obecnoci katalizatora niklowego zachodz m.in. reakcje opisane
+poniszymi równaniami.
+
+I   CH4 (g) + H2O (g)  CO (g) + 3H2 (g)
+
+II  CH4 (g) + 2H2O (g)  CO2 (g) + 4H2 (g)
+
+    Na podstawie: A. Bielaski, Podstawy chemii nieorganicznej, Warszawa 2004.
+
+Oce, czy podane poniej informacje s prawdziwe. Zaznacz P, jeli informacja jest
+prawdziwa, albo F - jeli jest falszywa.
+
+1. Obnienie cinienia w warunkach izotermicznych (T = const) w reaktorze skutkuje wzrostem wydajnoci otrzymywania wodoru w reakcjach I i II.  P F
+
+2. Wzbogacenie gazu ziemnego metanem skutkuje spadkiem wydajnoci otrzymywania wodoru w reakcjach I i II.                                     P F
+
+    Gdy do mieszaniny reakcyjnej w stanie równowagi wprowadzi si katalizator
+
+3. niklowy, to nastpi wzrost wydajnoci otrzymywania wodoru w reakcjach                                                                       P F
+    I i II.
+
+Zadanie 7. (0-2)
+W reaktorze o stalej pojemnoci znajdowaly si tlenek wgla(II) i para wodna zmieszane
+w stosunku masowym 1 : 1, a sumaryczna liczba moli tych reagentów byla równa 20.
+Steniowa stala równowagi reakcji
+
+                                       CO (g) + H2O (g)  CO2 (g) + H2 (g)
+w warunkach prowadzenia procesu wynosi 1.
+
+Oblicz, ile moli wodoru znajdowalo si w reaktorze po osigniciu stanu równowagi przez
+uklad.
+
+Obliczenia:
+
+    Strona 4 z 25
+
+                                                                                                                                             MCH_1R
+Zadanie 8. (0-2)
+W zamknitym reaktorze o pojemnoci 1 dm3 znajdowaly si gazowe substancje A i B
+zmieszane w stosunku stechiometrycznym. Reagenty ogrzano do temperatury T
+i zainicjowano reakcj przebiegajc zgodnie z poniszym schematem.
+
+                                     A (g) + 2B (g)  3C (g) + D (g)
+Przez jedn minut, co 10 sekund, oznaczano liczb moli substancji A
+w mieszaninie reakcyjnej. Wyniki zestawiono w poniszej tabeli.
+
+                           Czas, s      0       10 20 30 40 50 60
+
+Liczba moli substancji A, mol 3,60 2,80 2,20 1,95 1,90 1,90 1,90
+
+Uzupelnij ponisz tabel, a nastpnie narysuj wykres przedstawiajcy zaleno stenia
+substancji C od czasu trwania reakcji, czyli w przedziale 0s , 60s .
+
+                           Czas, s      0       10 20 30 40 50 60
+
+Liczba moli substancji C, mol
+
+                        7
+
+                        6
+
+stenie molowe, mol·dm3  5
+
+                        4
+
+                        3
+
+                        2
+
+                        1
+
+        0                  10       20          30                   40        50  60
+            0
+                                                czas, s
+MCH_1R
+                                    Nr zadania                       6. 7. 8.
+                                    Wypelnia Maks. liczba pkt
+                                    egzaminator Uzyskana liczba pkt  1 2 2
+
+                                        Strona 5 z 25
+Informacja do zada 9.-10.
+Cynk, magnez i glin w opisanych poniej dowiadczeniach ulegaj przemianom zilustrowanym
+nastpujcymi schematami:
+
+Zn  Zn  Zn(OH)2   [Zn(OH)4 ]H+        OH -
+    2+ OH -                                             2-
+
+              NH3 (aq)                      [Zn(NH3)4 ] 2+
+
+H+  2+ OH -
+Mg Mg  Mg(OH)2 
+
+H+Al  Al  Al(OH)3   [Al(OH)4 ]
+    3+ OH -   OH -                                   -
+
+              NH3 (aq) nie obserwuje si roztwarzania osadu
+
+W kolbach oznaczonych numerami I, II i III umieszczono w przypadkowej kolejnoci próbki
+cynku, magnezu i glinu. W kadej kolbie byla próbka innego metalu. Na te metale podzialano
+kwasem solnym. Opisane dowiadczenie zilustrowano poniszym schematem.
+
+    HCl (aq)
+
+    próbka metalu
+                                 H2O
+
+Zadanie 9.
+Podczas opisanego dowiadczenia w kadej kolbie metal ulegl calkowitemu roztworzeniu
+i powstaly klarowne, bezbarwne roztwory chlorków badanych metali. Przebiegowi wszystkich
+reakcji towarzyszylo wydzielanie si bezbarwnego gazu.
+
+Zadanie 9.1. (0-1)
+Sporód czynnoci, których nazwy podano poniej, wybierz t, któr naley wykona jako
+pierwsz w celu wyodrbnienia z kadej mieszaniny poreakcyjnej (powstalej podczas
+opisanego dowiadczenia) jonowego produktu reakcji. Podkrel jej nazw.
+
+    sczenie   odwirowanie                   odparowanie pod wycigiem
+
+                                      Strona 6 z 25
+
+                                                                      MCH_1R
+Zadanie 9.2. (0-1)
+Napisz w formie jonowej skróconej równanie reakcji glinu z kwasem solnym.
+
+......................................................................................................................................................
+
+Zadanie 10.
+W celu identyfikacji roztworów chlorków otrzymanych w kolbach I, II i III przeprowadzono
+dwa dowiadczenia. W pierwszym z nich jako odczynnika uyto wodnego roztworu
+wodorotlenku sodu, a w drugim - wodnego roztworu amoniaku.
+
+Zadanie 10.1. (0-1)
+Podczas pierwszego dowiadczenia próbki roztworów z kolb I, II i III umieszczono
+w probówkach oznaczonych tymi samymi numerami i do kadej z nich dodawano kroplami
+roztwór wodorotlenku sodu. We wszystkich probówkach zaobserwowano wytrcenie si
+bialego osadu. Podczas dodawania kolejnych porcji odczynnika zaobserwowano roztworzenie
+si osadów w probówkach I i III, natomiast osad w probówce II pozostal niezmieniony.
+
+Podkrel symbol metalu, którego jony zidentyfikowano podczas opisanego (pierwszego)
+dowiadczenia. Uzasadnij swój wybór.
+
+Metal, którego jony zidentyfikowano podczas opisanego dowiadczenia, to (Al / Mg / Zn).
+
+Uzasadnienie wyboru: .................................................................................................................
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+Zadanie 10.2. (0-2)
+Podczas drugiego dowiadczenia próbki roztworów z kolb I i III umieszczono
+w probówkach oznaczonych tymi samymi numerami i do kadej z nich dodawano kroplami
+roztwór amoniaku. Najpierw w obu probówkach wytrcil si bialy osad, ale przy dodawaniu
+kolejnych porcji odczynnika zaobserwowano roztworzenie si osadu w probówce I.
+
+Napisz:
+
+· w formie jonowej skróconej równanie reakcji, w wyniku której w probówce III
+     wytrcil si bialy osad;
+
+......................................................................................................................................................
+· w formie jonowej skróconej równanie reakcji, w wyniku której nastpilo
+
+     roztworzenie bialego osadu w probówce I.
+
+......................................................................................................................................................
+
+        Nr zadania                       9.1. 9.2. 10.1. 10.2.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 1 1 2
+
+        Strona 7 z 25
+
+MCH_1R
+Informacja do zada 11.-12.
+W temperaturze T rozpuszczono w wodzie kwas HX. Równowag w otrzymanym roztworze
+ilustruje równanie
+
+                                      HX+ H2O  H3O+ + X-
+
+Poniszy wykres przedstawia procentowy udzial drobin znajdujcych si w wodnym roztworze
+kwasu HX o temperaturze T (na wykresie nie uwzgldniono wody oraz jonów pochodzcych
+z autodysocjacji wody).
+
+   X-  HX
+H3O+   54%
+
+Zadanie 11. (0-1)
+Oblicz stopie dysocjacji kwasu HX w tym roztworze.
+
+Obliczenia:
+
+Zadanie 12.
+Do wodnego roztworu kwasu HX dodano niewielk ilo wodnego roztworu mocnego kwasu.
+Temperatura roztworu nie ulegla zmianie.
+Zadanie 12.1. (0-1)
+Oce, czy zmieni si (wzronie, zmaleje) czy nie ulegnie zmianie warto stopnia
+dysocjacji kwasu HX, jeli do jego wodnego roztworu doda si niewielk ilo mocnego
+kwasu. Odpowied uzasadnij.
+
+Ocena: ..........................................................................................................................................
+
+Uzasadnienie: ..............................................................................................................................
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+Strona 8 z 25
+
+                                                    MCH_1R
+Zadanie 12.2. (0-1)
+Oce, czy zmieni si (wzronie, zmaleje) czy nie ulegnie zmianie warto stalej dysocjacji
+kwasu HX, jeli do jego wodnego roztworu doda si niewielk ilo mocnego kwasu.
+Odpowied uzasadnij.
+
+Ocena: ..........................................................................................................................................
+
+Uzasadnienie: ..............................................................................................................................
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+Zadanie 13. (0-2)
+Reakcja kwasu solnego z wodorotlenkiem potasu przebiega zgodnie z równaniem
+
+                                        HCl + KOH  KCl + H2O
+Oblicz objto kwasu solnego o steniu 0,1 mol·dm-3, jak naley doda do 300 cm3
+wodnego roztworu wodorotlenku potasu o steniu 0,2 mol·dm-3, aby otrzymany roztwór
+mial pH = 13. W obliczeniach przyjmij, e objto powstalego roztworu jest sum
+objtoci uytych roztworów.
+
+Obliczenia:
+
+        Nr zadania                       11. 12.1. 12.2. 13.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 1 1 2
+
+        Strona 9 z 25
+
+MCH_1R
+Informacja do zada 14.-15.
+W czystej wodzie ustala si stan równowagi reakcji autoprotolizy, która zachodzi zgodnie
+z równaniem:
+
+                                         2H2O  H3O+ + OH-
+T reakcj opisuje stala równowagi nazywana iloczynem jonowym wody. Wyraa si ona
+równaniem:
+
+                                           Kw = [H3O+ ][OH- ]
+
+Zadanie 14. (0-1)
+Poniej przedstawiono wartoci iloczynu jonowego wody Kw w zakresie temperatury
+0 ºC-100 ºC (pod cinieniem atmosferycznym).
+
+Temperatura, ºC  0  20  40              60  80  100
+
+Kw               0,110-14 0, 7 10-14 3, 010-14 9, 610-14 25,110-14 55,010-14
+
+                                                         Na podstawie: W. Ufnalski, Równowagi jonowe, Warszawa 2004.
+
+Uzupelnij ponisze zdania. Wybierz i zaznacz jedno okrelenie sporód podanych
+w kadym nawiasie.
+
+Reakcja autodysocjacji wody jest (egzoenergetyczna / endoenergetyczna). Wraz ze wzrostem
+
+temperatury pH czystej wody (maleje / ronie / nie ulega zmianie).
+
+Zadanie 15.
+Zdolno autoprotolizy charakteryzuje nie tylko wod, lecz take inne rozpuszczalniki, np.:
+ciekly amoniak (skroplony pod zwikszonym cinieniem), metanol i kwas mrówkowy.
+
+Zadanie 15.1. (0-1)
+Napisz trzy równania reakcji autoprotolizy: cieklego amoniaku, metanolu i kwasu
+mrówkowego. Zastosuj wzory pólstrukturalne (grupowe) organicznych produktów
+reakcji.
+
+2NH3  .....................................................................................................................................
+
+2CH3OH  ................................................................................................................................
+
+2HCOOH  ..............................................................................................................................
+
+Zadanie 15.2. (0-1)
+Wyjanij, dlaczego czsteczki amoniaku, metanolu i kwasu mrówkowego maj zdolno
+odszczepiania i przylczania protonu w procesie autoprotolizy. Odnie si do budowy tych
+czsteczek.
+Czsteczki wymienionych zwizków maj zdolno odszczepiania protonu, poniewa
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+Czsteczki wymienionych zwizków maj zdolno przylczania protonu, poniewa
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+                        Strona 10 z 25
+
+                                                MCH_1R
+Zadanie 16. (0-1)
+Zdolno elektrolitu do dysocjacji zaley od wlaciwoci tego elektrolitu oraz od wlaciwoci
+uytego rozpuszczalnika. Im silniejsz zasad Brønsteda jest rozpuszczalnik, tym w wikszym
+stopniu dysocjuje w nim elektrolit bdcy kwasem Brønsteda.
+Zbadano dysocjacj jednoprotonowego kwasu HA w rónych rozpuszczalnikach. W wodzie
+HA jest slabym kwasem.
+
+Uzupelnij ponisze zdanie. Wybierz i zaznacz nazw rozpuszczalnika.
+
+W danej temperaturze warto stalej dysocjacji kwasu HA jest najwiksza w roztworze,
+
+w którym rozpuszczalnikiem jest (ciekly amoniak / kwas mrówkowy / metanol / woda).
+
+Zadanie 17. (0-2)
+Gazowy chlorowodór mona otrzyma w wyniku dzialania stonego kwasu siarkowego(VI)
+na stale chlorki, np. w reakcjach opisanych równaniami:
+
+                                   2NaCl + H2SO4  Na2SO4 + 2HCl
+                                    CaCl2 + H2SO4  CaSO4 + 2HCl
+Sporzdzono 150 g mieszaniny zawierajcej tylko NaCl i CaCl2, na któr podzialano stonym
+kwasem siarkowym(VI) uytym w nadmiarze. W wyniku tego procesu otrzymano 58,24 dm3
+chlorowodoru (w warunkach normalnych).
+
+Oblicz sklad wyjciowej mieszaniny w procentach masowych. Przyjmij, e obie reakcje
+przebiegly z wydajnoci równ 100%.
+
+Obliczenia:
+
+        Nr zadania                       14. 15.1. 15.2. 16. 17.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 1 1 1 2
+
+        Strona 11 z 25
+
+MCH_1R
+Zadanie 18.
+Przeprowadzono dowiadczenie, w którym badano dzialanie pewnego odczynnika na dwa
+wodne roztwory soli. W probówce I znajdowal si roztwór siarczanu(IV) sodu,
+a w probówce II - roztwór krzemianu(IV) sodu. Po dodaniu odczynnika zaobserwowano, e:
+
+    · w kadej probówce zaszla reakcja chemiczna;
+    · przebieg dowiadczenia byl róny dla obu probówek;
+    · tylko w jednej z probówek wytrcil si osad.
+
+Zadanie 18.1. (0-1)
+Uzupelnij schemat dowiadczenia. Wybierz i zaznacz w podanym zestawie wzór jednego
+odczynnika, którego zastosowanie spowodowalo efekty opisane w informacji.
+
+Wybrany odczynnik: KOH (aq) / stony HCl (aq) / CaCl2 (aq)
+
+                I  II
+
+                                                                             Na2SO3 (aq) Na2SiO3 (aq)
+
+Zadanie 18.2. (0-1)
+Napisz, co zaobserwowano w probówce, w której nie wytrcil si osad podczas opisanego
+dowiadczenia.
+
+......................................................................................................................................................
+......................................................................................................................................................
+
+Zadanie 18.3. (0-2)
+Napisz w formie jonowej skróconej równania reakcji, które przebiegly w probówkach
+I i II i byly przyczyn obserwowanych zmian.
+
+Równanie reakcji przebiegajcej w probówce I:
+
+......................................................................................................................................................
+
+Równanie reakcji przebiegajcej w probówce II:
+
+......................................................................................................................................................
+
+Strona 12 z 25
+
+                       MCH_1R
+Zadanie 19. (0-1)
+Przeprowadzono dowiadczenie, w którym do probówki I wlano kwas solny
+o pH = 2, a do probówki II - wodny roztwór kwasu octowego (etanowego) o pH = 2. Roztwory
+mialy temperatur 298 K. Nastpnie do obu probówek dodano po 1 gramie pylu cynkowego.
+Opisane dowiadczenie zilustrowano poniszym schematem.
+
+        pyl cynkowy                                           pyl cynkowy
+
+                 I                                                           II
+        HCl (aq)                                              CH3COOH (aq)
+
+Oce, czy podane poniej informacje s prawdziwe. Zaznacz P, jeli informacja jest
+prawdziwa, albo F - jeli jest falszywa.
+
+1. W warunkach dowiadczenia stenie molowe kwasu solnego jest wiksze ni stenie molowe wodnego roztworu kwasu octowego.  P F
+                                                                                                                       P F
+    Uycie w dowiadczeniu wodnych roztworów o pH = 3 skutkowaloby                                                       P F
+2. wzrostem szybkoci reakcji wylcznie w probówce II, poniewa kwas
+
+    uczestniczcy w tej przemianie jest kwasem slabym.
+
+    Ochlodzenie obu uytych w dowiadczeniu wodnych roztworów
+3. skutkowaloby zmniejszeniem szybkoci wydzielania gazu w przemianach
+
+    zachodzcych w probówkach I i II.
+
+Zadanie 20. (0-1)
+Do wodnego roztworu zawierajcego 0,1 mola wodorotlenku sodu dodano wodny roztwór
+zawierajcy 0,1 mola kwasu etanowego (octowego). Nastpnie w mieszaninie poreakcyjnej
+zanurzono ólty uniwersalny papierek wskanikowy.
+
+Dokocz ponisze zdanie. Wybierz i zaznacz odpowied A, B albo C i jej uzasadnienie 1.,
+2., 3. albo 4.
+
+Uniwersalny papierek wskanikowy
+
+A. przyjl niebieskie zabarwienie,              1. uyto nadmiaru zasady.
+B. nie zmienil zabarwienia,
+C. przyjl czerwone zabarwienie,    poniewa     2. etanian (octan) sodu ulega hydrolizie kationowej.
+
+                                               etanian (octan) sodu ulega hydrolizie
+                                               3. anionowej.
+
+                                               4. otrzymano roztwór o odczynie obojtnym.
+
+                                   Nr zadania  18.1. 18.2. 18.3. 19. 20.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt        1 1 2 1 1
+
+                                            Strona 13 z 25
+
+MCH_1R
+Zadanie 21. (0-2)
+Jod otrzymuje si z saletry chilijskiej, zawierajcej glównie azotan(V) sodu, lecz take m.in.
+ladowe iloci jodanu(V) sodu i jodanu(VII) sodu. Po zateniu wodnego roztworu jodany
+redukuje si do jodu za pomoc wodorosiarczanu(IV) sodu.
+
+                                               Na podstawie: J.D. Lee, Zwizla chemia nieorganiczna, Warszawa, 1994.
+
+Jedn z opisanych reakcji przedstawia poniszy schemat.
+
+                                  -         -                  2-
+                                  IO 3 + HSO 3  I2 + SO 4 + H + H2O            +
+
+Napisz w formie jonowej skróconej, z uwzgldnieniem liczby oddawanych lub
+pobieranych elektronów (zapis jonowo-elektronowy), równania procesów redukcji
+i utleniania zachodzcych podczas opisanej przemiany. Dobierz i uzupelnij wspólczynniki
+stechiometryczne w poniszym schemacie.
+
+Równanie procesu redukcji:
+
+......................................................................................................................................................
+Równanie procesu utleniania:
+
+......................................................................................................................................................
+
+..........  IO  -  +  ..........  HSO  -    ..........  I2  +  ..........  SO  2  -  + .......... H+  + .......... H2O
+                3                      3                                       4
+
+Informacja do zada 22.-24.
+Jedn z metod otrzymywania halogenoalkanów jest reakcja alkoholu alifatycznego
+z halogenkiem fosforu(III). Ta reakcja przebiega zgodnie z poniszym schematem, w którym
+R oznacza grup alkilow, a X - atom halogenu.
+
+                                    3R-OH + PX3  3R-X + H3PO3
+
+               Na podstawie: K.-H. Lautenschläger, W. Schröter, A. Wanninger, Nowoczesne kompendium chemii,
+                                                                                                                    Warszawa 2007.
+
+Zadanie 22. (0-1)
+Napisz równanie reakcji otrzymywania 3-bromo-3-metyloheksanu opisan metod -
+zastosuj wzory pólstrukturalne (grupowe) reagentów organicznych. Napisz nazw
+systematyczn uytego alkoholu.
+
+Równanie reakcji:
+
+Nazwa systematyczna alkoholu:
+
+......................................................................................................................................................
+
+                                               Strona 14 z 25
+
+                                                                                                      MCH_1R
+Zadanie 23. (0-1)
+Napisz wzór elektronowy bromku fosforu(III). Pary elektronowe wiza oraz wolne pary
+elektronowe zaznacz kreskami. Oce, czy czsteczka bromku fosforu(III) jest plaska.
+
+                                Wzór:
+
+Ocena: ..........................................................................................................................................
+
+Zadanie 24. (0-1)
+W opisanej metodzie 3-bromo-3-metyloheksan otrzymuje si w postaci mieszaniny
+racemicznej, czyli równomolowej mieszaniny obu enancjomerów.
+
+Uzupelnij poniszy schemat, tak aby przedstawial wzory stereochemiczne skladników tej
+mieszaniny.
+
+        CH2CH3                           CH2CH3
+
+        CH                               CH
+
+Zadanie 25. (0-1)
+Detergenty s skladnikami powszechnie uywanych rodków czyszczcych i piorcych. Wród
+stosowanych obecnie detergentów mona wyróni detergenty kationowe i anionowe.
+Przykladem detergentu anionowego jest zwizek o wzorze
+
+                                      CH3(CH2)10CH2OSO3- Na+
+Mona go otrzyma w reakcji estryfikacji z udzialem alkoholu o dlugim prostym lacuchu
+wglowym i odpowiedniego kwasu. Tak uzyskany ester poddaje si reakcji
+z wodorotlenkiem sodu, w wyniku czego otrzymuje si rodek powierzchniowo czynny, który
+- podobnie jak mydla - zawiera dwa fragmenty: niepolarny i polarny.
+
+Podaj wzory sumaryczne alkoholu i kwasu nieorganicznego, których naley uy
+w opisanym procesie otrzymania tego detergentu.
+
+Wzór sumaryczny alkoholu: ........................................................................................................
+
+Wzór sumaryczny kwasu nieorganicznego: ................................................................................
+
+        Nr zadania                       21. 22. 23. 24. 25.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  2 1 1 1 1
+
+                Strona 15 z 25
+
+MCH_1R
+Informacja do zada 26.-27.
+Alkanonitryle to zwizki o wzorze ogólnym R-CN, które otrzymuje si w reakcji
+odpowiedniego halogenku alkilu z cyjankiem potasu o wzorze KCN. Reakcja przebiega
+w roztworze wodno-alkoholowym. W wyniku hydrolizy alkanonitryli w rodowisku
+rozcieczonego kwasu siarkowego(VI) powstaje odpowiedni kwas karboksylowy.
+
+               Na podstawie: K.-H. Lautenschläger, W. Schröter, A. Wanninger, Nowoczesne kompendium chemii,
+                                                                                                                    Warszawa 2007.
+
+Poniej przedstawiono schemat cigu reakcji, w wyniku których z alkanu I otrzymano alkan II:
+            alkan I
+
+reakcja 1. + Cl2,
+
+                wiatlo
+
+CH3                     + KCN            + H2O, H+  CH3
+
+H3C CH CH2 Cl                  zwizek A             H3C CH CH2 COOH
+
+                        reakcja 2. reakcja 3. + H2
+                                                    reakcja 4. wieloetapowa
+
+                                                         redukcja
+
+                                                    alkan II
+
+Zadanie 26. (0-1)
+Napisz równanie reakcji 2. - zastosuj wzory pólstrukturalne (grupowe) zwizków
+organicznych. Napisz nazw systematyczn zwizku organicznego, który jest produktem
+reakcji 3.
+
+Równanie reakcji 2.:
+
+......................................................................................................................................................
+
+Nazwa systematyczna produktu reakcji 3.: .................................................................................
+
+Zadanie 27. (0-2)
+Napisz wzory pólstrukturalne (grupowe) alkanów I i II. Porównaj oba wzory i na tej
+podstawie okrel, w jakim celu opisany proces (reakcje 1.-4.) jest stosowany w syntezie
+organicznej.
+
+Wzór alkanu I                                       Wzór alkanu II
+
+Zastosowanie opisanego procesu: ...............................................................................................
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+                               Strona 16 z 25
+
+                                                                    MCH_1R
+Zadanie 28. (0-2)
+Mieszanina tlenku wgla(II) i wodoru to gaz syntezowy, który stosuje si do otrzymywania
+wielu zwizków organicznych. Proces produkcji metanolu z gazu syntezowego zilustrowano
+poniszym równaniem.
+
+                                                                                             kat ., p ,T
+
+                                 CO + 2H2   CH3OH
+
+         Na podstawie: E. Grzywa, J. Molenda, Technologia podstawowych syntez organicznych, Warszawa 2008.
+
+Oblicz, ile m3 gazu syntezowego odmierzonego w warunkach normalnych potrzeba do
+otrzymania 2 · 1025 czsteczek metanolu, jeeli reakcja przebiega z wydajnoci równ
+70%. Przyjmij, e stosunek molowy nCO : nH2 jest równy 1 : 2. Wynik zaokrglij do
+jednego miejsca po przecinku.
+
+Obliczenia:
+
+        Nr zadania                       26. 27. 28.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 2 2
+
+        Strona 17 z 25
+
+MCH_1R
+Informacja do zada 29.-30.
+Poniej przedstawiono uproszczony wzór para-benzochinonu - jednego z chinonów - oraz
+produktu jego redukcji, czyli hydrochinonu. Pod wzorami tych zwizków podano ich nazwy
+systematyczne.
+
+             para-benzochinon                 hydrochinon
+                       O                            OH a
+                                  a
+
+                 O                                     OH
+cykloheksa-2,5-dieno-1,4-dion                 benzeno-1,4-diol
+
+Izomerem para-benzochinonu jest orto-benzochinon. Jego nazwa systematyczna to
+cykloheksa-3,5-dieno-1,2-dion.
+
+Zadanie 29. (0-1)
+Napisz wzór uproszczony orto-benzochinonu.
+
+Zadanie 30. (0-1)
+Okrel formalny stopie utlenienia oraz typ hybrydyzacji (sp, sp2, sp3) orbitali
+
+walencyjnych atomu wgla oznaczonego liter a w czsteczce para-benzochinonu
+
+i w czsteczce hydrochinonu. Uzupelnij tabel.
+
+                  Stopie utlenienia                    Typ hybrydyzacji
+
+para-benzochinon
+
+hydrochinon
+
+Zadanie 31.
+Ketony, których czsteczki zawieraj grup hydroksylow -OH przy atomie wgla polczonym
+z atomem wgla grupy karbonylowej (-hydroksyketony), w wodnym roztworze
+o odczynie zasadowym ulegaj izomeryzacji. T przemian ilustruje poniszy schemat.
+
+      CH2OH           OH-            CHOH         OH-            CHO
+      CO
+                                     C OH                 H C OH
+      R
+-hydroksyketon                       R                           R
+                                     enodiol           -hydroksyaldehyd
+
+                           Strona 18 z 25
+
+                                                                         MCH_1R
+D-tagatoza jest monosacharydem o wzorze                       CH2OH
+                                                              CO
+                                                         HO   CH
+                                                         HO   CH
+                                                              C OH
+                                                           H  CH2OH
+
+Zadanie 31.1. (0-1)
+Wybierz jedn par odczynników, które umoliwi odrónienie D-glukozy od D-tagatozy.
+Uzupelnij schemat dowiadczenia - podkrel wzory wybranych odczynników.
+
+wodny roztwór D-glukozy                                       wodny roztwór D-tagatozy
+
+          I                                                          II
+
+Odczynniki: AgNO3 (aq) i NH3 (aq) / CuSO4 (aq) i KOH (aq) / Br2 (aq) i KHCO3 (aq)
+
+Zadanie 31.2. (0-1)
+Opisz moliwe do zaobserwowania rónice w przebiegu dowiadczenia dla obu
+monosacharydów - uzupelnij tabel.
+
+ Numer                   Opis zawartoci probówki
+probówki
+          przed wprowadzeniem roztworu                               po wprowadzeniu roztworu
+                   monosacharydu                                            monosacharydu
+
+I
+
+II
+
+Zadanie 31.3. (0-1)
+Wska rónic w budowie czsteczek D-glukozy i D-tagatozy umoliwiajc odrónienie
+ich zaproponowan metod.
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+                         Nr zadania                           29. 30. 31.1. 31.2. 31.3
+          Wypelnia Maks. liczba pkt
+          egzaminator Uzyskana liczba pkt                     1 1 1 1 1
+
+                         Strona 19 z 25
+
+MCH_1R
+Zadanie 32. (0-1)
+Kwas L-askorbinowy, zwany witamin C, moe by otrzymywany z glukozy
+w czteroetapowym procesie (I, II, III i IV) zgodnie z poniszym schematem.
+
+                     I                    glukoza
+
+       CH2OH      II               CH2OH      III            COOH       IV        CH2OH
+HO C H                             CO                        CO
+HO C H                      HO C H                    HO C H                H C OH
+                              H C OH                    H C OH                 O HC C O
+  H C OH                    HO C H                    HO C H
+HO C H                             CH2OH                     CH2OH               C  C
+                                                                            HO         OH
+       CH2OH
+
+                                                        Na podstawie: P. Mastalerz, Chemia organiczna, Warszawa 1986.
+
+Uzupelnij ponisze zdania. Wybierz i zaznacz jedno okrelenie sporód podanych
+w kadym nawiasie.
+1. Glukoza w etapie I jest (redukowana / utleniana) do zwizku o nazwie sorbitol.
+2. W etapie II sorbitol jest (redukowany / utleniany) biotechnologicznie przez
+
+   mikroorganizmy.
+3. Podczas etapu III nastpuje zmiana stopnia utlenienia tylko jednego atomu wgla.
+
+   W tej przemianie stopie utlenienia atomu wgla (maleje / ronie).
+4. Podczas etapu IV, w którym powstaje kwas askorbinowy, zachodzi m.in. reakcja
+
+   (estryfikacji wewntrzczsteczkowej / hydrolizy / polimeryzacji).
+
+Zadanie 33. (0-1)
+Witamin C otrzymano w czteroetapowym procesie. Poszczególne etapy mialy wydajno:
+WI = 92,0%, WII = 91,0%, WIII = 92,0% i WIV = 91,0%.
+
+                                                         Na podstawie: J. McMurry, Chemia organiczna, Warszawa 2005.
+
+Wybierz i zaznacz poprawne dokoczenie zdania.
+
+Calkowita wydajno procesu otrzymywania witaminy C byla równa
+
+A. 91,5%                B. 90,0%                   C. 80,0%         D. 70,1%
+
+Informacja do zada 34.-35.
+Zawarto kwasu askorbinowego w próbce wyznacza si na podstawie stechiometrii jego
+reakcji z jodem. Do roztworu zawierajcego nieznan ilo kwasu askorbinowego i niewielk
+ilo skrobi dodaje si kroplami roztwór jodu w roztworze jodku potasu. Stenie roztworu
+jodu musi by dokladnie znane, a jego objto - mierzona. Mówimy, e roztwór kwasu
+askorbinowego miareczkuje si roztworem jodu. Dopóki kwas askorbinowy jest obecny
+w roztworze, zachodzi reakcja, któr mona w uproszczeniu opisa równaniem:
+
+              CH2OH                                CH2OH
+
+H C OH                                          H C OH
+   O HC C O
+                            + I2  O HC C O + 2H + + 2I -
+
+              CC                                      CC
+
+          HO            OH                         O      O
+
+                                          Strona 20 z 25
+
+                                                                                    MCH_1R
+Gdy caly kwas askorbinowy przereaguje, jod dostarczony w nadmiarowej kropli poskutkuje
+zabarwieniem skrobi. W tym momencie koczy si miareczkowanie, co oznacza, e osignito
+punkt kocowy i naley odczyta objto zuytego roztworu jodu. Gdy zna si jego stenie,
+mona obliczy, ile kwasu askorbinowego zawierala próbka.
+
+Zadanie 34. (0-1)
+Podaj, jak funkcj (utleniacza czy reduktora) pelni jod w reakcji z kwasem
+askorbinowym. Napisz, na jaki kolor zabarwi si mieszanina reakcyjna w punkcie
+kocowym miareczkowania.
+
+Jod w reakcji z kwasem pelni funkcj .........................................................................................
+
+Pod wplywem jodu skrobia zabarwi si na .................................................................................
+
+Zadanie 35. (0-2)
+Próbk X pewnego preparatu, którego glównym skladnikiem jest witamina C, rozpuszczono
+w wodzie, w wyniku czego otrzymano 100,0 cm3 roztworu. Nastpnie pobrano 10,0 cm3 tego
+roztworu, przeniesiono do kolby i miareczkowano roztworem jodu o steniu 0,052 mol  dm -3 .
+Stwierdzono, e punkt kocowy miareczkowania zostal osignity po dodaniu 10,8 cm3
+roztworu jodu.
+
+Oblicz w miligramach zawarto witaminy C w próbce X, jeli wiadomo, e pozostale
+skladniki preparatu nie reaguj z jodem. Przyjmij, e masa molowa witaminy C jest
+równa M = 176 g·mol-1.
+
+Obliczenia:
+
+        Nr zadania                       32. 33. 34. 35.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 1 1 2
+
+        Strona 21 z 25
+
+MCH_1R
+Zadanie 36.
+W laboratorium pod wycigiem przeprowadzono reakcj manganianu(VII) potasu
+z nadmiarem kwasu solnego. Do wykrycia gazowego produktu zastosowano papierek
+jodoskrobiowy zwilony wod. Przebieg dowiadczenia zilustrowano na poniszym
+schemacie.
+
+                      nadmiar HCl (aq)
+
+KMnO4 (aq)                      papierek jodoskrobiowy
+                                (pasek bibuly nasycony
+                                mieszanin jodku potasu i skrobi)
+
+Zadanie 36.1. (0-1)
+Opisz zmiany moliwe do zaobserwowania podczas przebiegu dowiadczenia. Uzupelnij
+ponisz tabel.
+
+                                przed dodaniem HCl (aq)                po zajciu reakcji
+
+Barwa roztworu w probówce
+
+Barwa papierka jodoskrobiowego  biala
+
+Zadanie 36.2. (0-1)
+Wyjanij przyczyn zmiany barwy papierka jodoskrobiowego.
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+......................................................................................................................................................
+
+Zadanie 37.
+Wykonano dowiadczenie, w którym do probówki I wprowadzono wodny roztwór mocznika
+CO(NH2)2, a do probówki II - wodny roztwór wglanu amonu (NH4)2CO3. Nastpnie do obu
+probówek dodano ten sam odczynnik, który umoliwil potwierdzenie zawartoci obu
+probówek.
+
+Zadanie 37.1. (0-1)
+Uzupelnij schemat dowiadczenia. Podkrel nazw odczynnika, który - po dodaniu do
+probówek z roztworami opisanych zwizków i wymieszaniu ich zawartoci - umoliwi
+zaobserwowanie rónic w przebiegu dowiadczenia z udzialem mocznika i wglanu
+amonu.
+
+Odczynnik:                                                                               II
+        - wodny roztwór chlorku wapnia                                 roztwór (NH4)2CO3
+        - wodny roztwór siarczanu(VI) sodu
+        - roztwór bromu w CCl4
+                                                                    I
+                                                 roztwór CO(NH2)2
+
+                                Strona 22 z 25
+
+                                                                       MCH_1R
+Zadanie 37.2. (0-1)
+Napisz, jakie obserwacje potwierdz, e w probówce I znajduje si wodny roztwór
+mocznika, a w probówce II - wodny roztwór wglanu amonu.
+
+Probówka I: .................................................................................................................................
+
+Probówka II: ................................................................................................................................
+
+Zadanie 38. (0-1)
+Aminokwasy bialkowe s -aminokwasami, co znaczy, e w ich czsteczkach jedna para grup
+funkcyjnych: aminowej i karboksylowej, jest polczona z tym samym atomem wgla.
+-Aminokwasy mona otrzyma z kwasów karboksylowych w syntezie, której przebieg
+zilustrowano na schemacie.
+
+        1. Br2 , PBr3                    nadmiar NH3
+R-CH2-COOH  R-CHBr-COOH  R-CH(NH2)-COOH
+        2. H2O
+
+                       Na podstawie: J. McMurry, Chemia organiczna, Warszawa 2000.
+
+Napisz wzór pólstrukturalny (grupowy) kwasu karboksylowego, którego naley uy do
+otrzymania leucyny opisan metod, i podaj nazw systematyczn bromopochodnej tego
+kwasu stanowicej produkt poredni w opisanej metodzie.
+
+Wzór pólstrukturalny kwasu: ......................................................................................................
+
+Nazwa systematyczna bromopochodnej:
+
+......................................................................................................................................................
+
+Zadanie 39. (0-1)
+Laktamy to zwizki, które powstaj w wyniku wewntrzczsteczkowej kondensacji niektórych
+aminokwasów. W reakcji bior udzial: grupa karboksylowa i grupa aminowa znajdujca si np.
+przy 4., 5. lub 6. atomie wgla lacucha aminokwasu. Przykladem laktamu jest zwizek
+o wzorze
+
+                                                         H
+
+                                           H3C N O
+
+                                               H3C
+Sporód poniszych nazw wybierz nazw aminokwasu, z którego otrzymano laktam
+o podanym wzorze. Zaznacz wybran odpowied.
+
+A. kwas 2-amino-4-metylopentanowy
+
+B. kwas 4-amino-3,4-dimetylobutanowy
+
+C. kwas 4-amino-3-metylopentanowy
+
+D. kwas 4-metylo-4-aminopentanowy
+
+        Nr zadania                       36.1. 36.2. 37.1. 37.2. 38. 39.
+        Wypelnia Maks. liczba pkt
+        egzaminator Uzyskana liczba pkt  1 1 1 1 1 1
+
+                       Strona 23 z 25
+
+MCH_1R
+Zadanie 40. (0-1)
+Poniej przedstawiono sekwencj aminokwasów pewnego tripeptydu:
+
+                                                 Phe-Gly-Cys
+
+Napisz wzór pólstrukturalny (grupowy) tego tripeptydu. Pamitaj, e w zastosowanej
+notacji umieszcza si z lewej strony kod aminokwasu, którego reszta zawiera woln grup
+aminow polczon z atomem wgla .
+
+Nr zadania                       40.
+Wypelnia Maks. liczba pkt
+egzaminator Uzyskana liczba pkt  1
+
+Strona 24 z 25
+
+                                      MCH_1R
+        BRUDNOPIS (nie podlega ocenie)
+
+        Strona 25 z 25
+
+MCH_1R
+

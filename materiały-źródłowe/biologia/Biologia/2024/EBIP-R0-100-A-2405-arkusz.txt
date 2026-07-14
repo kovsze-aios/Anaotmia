@@ -1,0 +1,1089 @@
+KOD  WYPELNIA ZDAJCY            Arkusz zawiera informacje prawnie chronione
+                         PESEL  do momentu rozpoczcia egzaminu.
+
+                                          Miejsce na naklejk.
+                                   Sprawd, czy kod na naklejce to
+
+                                             E-100.
+
+                                     Jeeli tak - przyklej naklejk.
+                                 Jeeli nie - zglo to nauczycielowi.
+
+Egzamin maturalny               Formula 2015
+
+BIOLOGIA
+
+Poziom rozszerzony
+
+                                                          Symbol arkusza
+
+                                          EBIP-R0-100-2405
+
+DATA: 14 maja 2024 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS TRWANIA: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Przed rozpoczciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawd, czy nauczyciel przekazal Ci wlaciwy arkusz egzaminacyjny,
+    tj. arkusz we wlaciwej formule, z wlaciwego przedmiotu na wlaciwym
+    poziomie.
+
+2. Jeeli przekazano Ci niewlaciwy arkusz - natychmiast zglo to nauczycielowi.
+    Nie rozrywaj banderol.
+
+3. Jeeli przekazano Ci wlaciwy arkusz - rozerwij banderole po otrzymaniu
+    takiego polecenia od nauczyciela. Zapoznaj si z instrukcj na stronie 2.
+
+Uklad graficzny
+© CKE 2022
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 28 stron (zadania 1-23).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego egzamin.
+
+2. Na pierwszej stronie arkusza oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejk z kodem.
+
+3. Odpowiedzi zapisz w miejscu na to przeznaczonym przy kadym zadaniu.
+4. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym tuszem/atramentem.
+5. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+6. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+7. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+8. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na egzamin
+
+    maturalny z biologii, chemii i fizyki, linijki oraz z kalkulatora prostego. Upewnij si, czy
+    przekazano Ci broszur z okladk tak jak widoczna poniej.
+
+Strona 2 z 28
+
+               EBIP-R0_100
+             Zadania egzaminacyjne s wydrukowane
+                        na nastpnych stronach.
+
+             Strona 3 z 28
+
+EBIP-R0_100
+Zadanie 1.
+W sklad organizmów wchodz róne wielkoczsteczkowe zwizki organiczne, które s
+polimerami, skladajcymi si z monomerów.
+
+Zadanie 1.1. (0-2)
+Uzupelnij tabel - wpisz w puste komórki wlaciwe informacje.
+
+Grupa zwizków      Nazwa      Wizanie lczce monomery              Przyklad
+  organicznych  monomeru      (glikozydowe / fosfodiestrowe /      funkcji
+                                                               w organizmie
+       bialka                             peptydowe)
+                                                                 budulcowa
+
+                monosacharyd                                   zapasowa
+
+Zadanie 1.2. (0-1)
+Do kadej z poniszych struktur bialkowych przyporzdkuj wlaciwy opis wybrany
+sporód A-D. Wpisz litery w wyznaczone miejsca.
+
+Struktura I-rzdowa: ................
+
+Struktura II-rzdowa: ...............
+
+Struktura III-rzdowa: ..............
+
+A. Jest to struktura stabilizowana oddzialywaniami midzy resztami aminokwasowymi
+   osobnych lacuchów polipeptydowych.
+
+B. Jest to cz lacucha polipeptydowego zwinita w regularn struktur stabilizowan
+   wylcznie wizaniami wodorowymi.
+
+C. Jest to przestrzenne uloenie pojedynczego lacucha polipeptydowego stabilizowane
+   oddzialywaniami niekowalencyjnymi i kowalencyjnymi.
+
+D. Jest to kolejno reszt aminokwasowych w lacuchu polipeptydowym.
+
+                              Strona 4 z 28
+
+                                                               EBIP-R0_100
+Zadanie 2. (0-2)
+Do komórek zainfekowanych przez retrowirusy, których material genetyczny stanowi
+jednoniciowy RNA, jest wprowadzany enzym - odwrotna transkryptaza.
+Na poniszym schemacie przedstawiono model strukturalny odwrotnej transkryptazy
+ludzkiego wirusa niedoboru odpornoci (HIV) z krótkim fragmentem kompleksu RNA-DNA.
+Odwrotna transkryptaza HIV sklada si z dwóch podjednostek: p66 i p51, oznaczonych na
+schemacie - odpowiednio - kolorem czerwonym i pomaraczowym. Podjednostka p66
+zawiera obszary wykazujce dwie róne aktywnoci wobec kwasów nukleinowych:
+polimerazy oraz rybonukleazy.
+
+                                                                        obszar o aktywnoci
+                                                                        polimerazy
+
+                                                                        fragment kompleksu
+                                                                        RNA-DNA
+
+                                                                        obszar o aktywnoci
+                                                                        rybonukleazy
+
+                                                                                                              Na podstawie: pdb101.rcsb.org
+
+Uzupelnij tabel - wpisz w puste komórki wlaciwe informacje.
+
+Obszar odwrotnej          Funkcja w procesie przepisywania
+transkryptazy HIV               wirusowego RNA na DNA
+
+o aktywnoci polimerazy
+
+o aktywnoci rybonukleazy
+
+                          Nr zadania           1.1. 1.2. 2.
+                          Maks. liczba pkt
+               Wypelnia                        2  1  2
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 5 z 28
+
+EBIP-R0_100
+Zadanie 3.
+Bioluminescencja to zdolno ywych komórek do emisji promieniowania w zakresie wiatla
+widzialnego. Wystpuje u wielu owadów. Przykladowo: due drapiene samice tropikalnych
+wietlików Photuris lugubris wyksztalcily umiejtno wabienia swoich ofiar - malych
+samców wietlików Photinus palaciosi - poprzez imitacj charakterystycznego wzoru
+sygnalów wietlnych wysylanych przez samice Photinus palaciosi.
+
+Bioluminescencja wietlików jest wynikiem reakcji utleniania lucyferyny z udzialem enzymu -
+lucyferazy. Aby ta reakcja mogla zaj, niezbdna okazuje si równie obecno ATP.
+Poniej przedstawiono równanie reakcji.
+
+                       lucyferaza
+                        wietlika
+
+lucyferyna + O2 + ATP              oksylucyferyna + CO2 + AMP + PPi + h (wiatlo)
+
+U wietlików ta reakcja zachodzi w wyspecjalizowanych narzdach ulokowanych
+w segmentach odwlokowych i jest regulowana przez doplyw tlenu do wieccych komórek.
+
+Lucyferyn i lucyferaz wietlika wykorzystuje si do wykrywania mikroorganizmów
+w rónych próbkach. Takie testy stosuje si w ocenie czystoci, np. powierzchni szpitalnych
+i okazów muzealnych.
+
+                                                        Na podstawie: C. Blaszak (red.), Zoologia. Stawonogi, Warszawa 2013;
+                                                          K. Pajor i in., Bioluminescencja jako narzdzie w biologii molekularnej,
+                                                                             ,,Postpy Higieny i Medycyny Dowiadczalnej" 71, 2017.
+
+Zadanie 3.1. (0-1)
+Przedstaw korzy, jak odnosz samice wietlików Photuris lugubris dziki
+umiejtnoci wabienia swoich ofiar.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 3.2. (0-2)
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly wykorzystanie
+lucyferyny i lucyferazy. W kadym nawiasie podkrel wlaciwe okrelenie.
+
+Testy wykorzystujce lucyferyn i lucyferaz wietlików w wykrywaniu mikroorganizmów
+opieraj si na zaloeniu, e (AMP / ATP) jest zwizkiem chemicznym wytwarzanym
+w procesie oddychania komórkowego, którego stenie (wzrasta / spada) wraz ze wzrostem
+liczby mikroorganizmów znajdujcych si w danej próbce. O wykryciu bakterii wiadczy
+(ustanie / wystpienie) bioluminescencji.
+
+                                   Strona 6 z 28
+
+                                                                      EBIP-R0_100
+Zadanie 3.3. (0-1)
+Podaj nazw tego narzdu ukladu oddechowego wietlików, który odpowiada
+za doprowadzenie tlenu bezporednio do komórek ich ciala.
+
+................................................................................................................................................
+
+Zadanie 4. (0-1)
+Potencjal czynnociowy to krótko trwajca depolaryzacja blony neuronu i zwizana z ni
+repolaryzacja - powrót do stanu spoczynkowego. Na poniszym wykresie przedstawiono
+zmiany przewodnictwa jonów Na+ i K+, towarzyszce fazom depolaryzacji i repolaryzacji
+potencjalu czynnociowego.
+
+                                                                         wysokie
+
+             +10                    potencjal czynnociowy
+
+             0
+potencjal blonowy, mV
+
+                                                                                                    przewodnictwo
+
+                                                                                              jonowe, j.u.
+                                    przewodnictwo Na+
+
+                                                    przewodnictwo K+
+
+                                                                         niskie
+
+             -70               0,5                        1,0         czas, ms
+                   0
+
+W przebiegu choroby - stwardnienia rozsianego - dochodzi do uszkodzenia oslonek
+mielinowych neuronów i w konsekwencji do oslabienia przewodzenia impulsu nerwowego.
+Popraw przewodnictwa nerwowego mona osign przez wydluenie czasu trwania
+potencjalu czynnociowego. W tym celu pacjentom podaje si bloker odpowiedniego kanalu
+jonowego, dziki czemu ogranicza si przewodnictwo jednego z jonów.
+
+                                          Na podstawie: S. Konturek (red.), Atlas fizjologii czlowieka Nettera, Wroclaw 2005.
+
+Dokocz zdanie. Zaznacz odpowied A albo B oraz odpowied 1. albo 2.
+
+Wydluenie czasu trwania potencjalu czynnociowego jest skutkiem podania
+
+A. blokera kanalu K+,                                          1. depolaryzacji.
+B. blokera kanalu Na+,
+                               który to bloker jest
+
+                               przyczyn wydluenia fazy
+                                                                       2. repolaryzacji.
+
+                               Nr zadania           3.1. 3.2. 3.3. 4.
+                               Maks. liczba pkt
+                    Wypelnia                        1  2       1      1
+                  egzaminator  Uzyskana liczba pkt
+
+                               Strona 7 z 28
+
+EBIP-R0_100
+Zadanie 5.
+Wiele bakterii to ekstremofile - organizmy yjce w ekstremalnych warunkach
+rodowiskowych. Skrajne wartoci okrelonych czynników fizycznych i chemicznych s
+warunkiem koniecznym do prawidlowego zajcia procesów metabolicznych u ekstremofili.
+
+W zalenoci od wartoci optymalnej temperatury wzrostu wyrónia si wród ekstremofili:
+
+· psychrofile - organizmy, które nie rosn w temperaturze powyej 20 °C, a optymalne
+    warunki do ich rozwoju stwarza temperatura poniej 15 °C. Psychrofile wyksztalcily wiele
+    adaptacji do niskich wartoci temperatury, wród których mona wyróni mechanizmy
+    chronice przed nadmiernym zmniejszeniem plynnoci ich blon komórkowych;
+
+· termofile - organizmy, których optymalna temperatura wzrostu wynosi ponad 50 °C.
+    Maksymalna temperatura umoliwiajca ycie wynosi 122 °C. Wysoka temperatura
+    powoduje wzrost plynnoci blony komórkowej oraz destabilizuje struktur bialek i kwasów
+    nukleinowych termofili. Z tego powodu w bialkach termofili znajduj si liczne mostki
+    disiarczkowe, a czsteczki rRNA i tRNA maj wysok zawarto par zasad GC.
+
+Enzymy wytwarzane przez ekstremofile s wykorzystywane w biotechnologii.
+
+               Na podstawie: A. Zablotni, A. Dziadosz, Ekstremofile - mikroorganizmy z przeszloci i z przyszloci,
+                                                                                                        ,,Postpy Mikrobiologii" 52(4), 2013.
+
+Zadanie 5.1. (0-1)
+Okrel, które z poniszych modyfikacji skladu chemicznego lipidów blony komórkowej
+stanowi adaptacj do ycia w niskiej temperaturze. Zaznacz T, jeli modyfikacja jest
+adaptacj do ycia w niskiej temperaturze, albo N - jeli ni nie jest.
+
+1. Wzrost zawartoci nasyconych kwasów tluszczowych.  T N
+2. Wzrost zawartoci krótkich kwasów tluszczowych.    T N
+
+Zadanie 5.2. (0-1)
+Podaj nazw aminokwasu niezbdnego do wytworzenia mostków disiarczkowych,
+stabilizujcych struktur przestrzenn bialek bakterii termofilnych.
+
+................................................................................................................................................
+
+Strona 8 z 28
+
+                                                     EBIP-R0_100
+Zadanie 5.3. (0-1)
+Wyka, e stabilno czsteczek rRNA i tRNA bakterii termofilnych zwiksza si wraz
+ze wzrostem zawartoci w ich czsteczkach par zasad GC kosztem zawartoci par
+zasad AU.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 5.4. (0-1)
+Okrel, która grupa organizmów - psychrofile czy termofile - stanowi ródlo
+polimeraz DNA wykorzystywanych do PCR. Odpowied uzasadnij.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 5.5. (0-1)
+Która cecha wystpuje u bakterii - organizmów prokariotycznych? Zaznacz wlaciw
+odpowied sporód podanych.
+
+A. obecno mitochondriów
+B. rybosomy o wspólczynniku sedymentacji równym 80S
+C. chityna jako glówny skladnik ciany komórkowej
+D. translacja czsteczki mRNA rozpoczynajca si przed zakoczeniem jej syntezy
+
+                          Nr zadania           5.1. 5.2. 5.3. 5.4. 5.5.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 9 z 28
+
+EBIP-R0_100
+Zadanie 6.
+Bezlist (Buxbaumia) to wyjtkowy rodzaj mchów nalecy do prtników, wystpujcy m.in.
+w polskich lasach. Gametofity mskie bezlistu s bardzo drobne - widoczne tylko pod
+mikroskopem. Gametofity eskie maj nierozgalzion lodyk, nieprzekraczajc 1 mm
+dlugoci. Listki gametofitu eskiego zanikaj podczas dojrzewania sporofitu i przeksztalcaj
+si w nitkowate twory. Sporofit bezlistu osiga do 2 cm wysokoci i jest dobrze widoczny -
+na czerwonej secie znajduje si dua puszka zarodni, która przynajmniej na pocztku
+rozwoju jest zielona.
+
+Na poniszym zdjciu s widoczne dwa sporofity bezlistu.
+
+                                                                                                         Na podstawie: siedliska.gios.gov.pl
+                                                        Fotografia: H.J. van der Kolk, Buxbaumia [...], ,,Buxbaumiella" 99, 2014.
+
+Zadanie 6.1. (0-1)
+Na podstawie przedstawionych informacji wyka, e dojrzaly sporofit bezlistu
+pozyskuje zwizki organiczne niezalenie od gametofitu, z którego wyrasta.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 6.2. (0-1)
+Okrel, czy gametofit bezlistu jest rolin jednopienn, czy - dwupienn. Odpowied
+uzasadnij.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Strona 10 z 28
+
+                EBIP-R0_100
+Zadanie 6.3. (0-1)
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly przemian pokole
+mchów. W kadym nawiasie podkrel wlaciwe okrelenie.
+Gametofity mskie mchów s (haploidalne / diploidalne) i wytwarzaj plemniki zapladniajce
+komórki jajowe, wytworzone w rodni gametofitu eskiego. Z zygoty rozwija si sporofit,
+wytwarzajcy w zarodni (identyczne / róne) genetycznie zarodniki.
+
+Zadanie 7. (0-1)
+Na poniszym schemacie przedstawiono przekrój podluny przez nasiono tytoniu
+(Nicotiana). Literami A-D oznaczono cztery róne struktury.
+
+                                       A
+                                                                                       B
+
+                                                                                       C
+                                                                                       D
+
+                                                                                     Na podstawie: www.seedbiology.de/structure.asp;
+                                                                        Z. Podbielkowski, Rozmnaanie si rolin, Warszawa 1972.
+
+Która ze struktur oznaczonych na schemacie to bielmo? Wpisz w wyznaczone miejsce
+odpowiedni liter (A-D).
+Oznaczenie bielma: .............
+
+                          Nr zadania           6.1. 6.2. 6.3. 7.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 11 z 28
+
+EBIP-R0_100
+Zadanie 8.
+Okresy nasienne buka zwyczajnego (Fagus sylvatica) nastpuj w odstpach 5-10 lat,
+a roczna wydajno produkowanych nasion jest zazwyczaj bardzo niska. Z tego powodu
+lenicy gromadz nasiona na zapas.
+
+W 2017 roku przeprowadzono dowiadczenie, w którym wysiano nasiona buka zwyczajnego
+zebrane w latach: 2000, 2006, 2009 i 2017. Nasiona zebrane w latach 2000, 2006 i 2009
+przechowywano w jednakowych warunkach. Nasiona zebrane w 2017 r. wysiano od razu
+po zbiorze.
+
+Na poniszym wykresie przedstawiono urednione wyniki dowiadczenia. Na zdjciu obok
+przedstawiono siewk buka zwyczajnego.
+
+                                   sila kielkowania nasion buka  siewka buka zwyczajnego
+                                       w zalenoci od czasu                                               pierwszy li
+                                           przechowywania                                                   wlaciwy
+
+                       100                                                                               X
+
+kielkowanie nasion, %  80
+
+                       60
+
+                       40
+
+                       20
+
+                       0           8  11  17
+                                0
+
+                           czas przechowywania, lata
+
+                                                                                                          Na podstawie: beagle.miljolare.no;
+                  A. Malecka i in., Relationship between Mitochondria Changes and Seed Aging [...], ,,PeerJ" 9, 2021.
+
+Zadanie 8.1. (0-1)
+Na podstawie przedstawionych wyników dowiadczenia sformuluj wniosek dotyczcy
+ywotnoci nasion buka zwyczajnego.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 8.2. (0-1)
+Podaj nazw oraz okrel funkcj tej struktury siewki buka zwyczajnego, któr
+oznaczono liter X na zdjciu.
+
+Nazwa: ...................................................................................................................................
+
+Funkcja: ..................................................................................................................................
+
+                                          Strona 12 z 28
+
+                                                                 EBIP-R0_100
+Zadanie 9.
+Na poniszym zdjciu mikroskopowym przedstawiono fragment przekroju poprzecznego
+przez lodyg lipy (Tilia) o budowie pierwotnej.
+
+komórka tkanki  zewntrzna ciana    komórka
+  okrywajcej        komórkowa    kolenchymy
+
+                        Fotografia: A. Fayette, M.S. Reynolds, Berkshire Community College Bioscience Image Library.
+
+Zadanie 9.1. (0-2)
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly budow lodygi lipy.
+W kadym nawiasie podkrel wlaciwe okrelenie.
+Na zdjciu widoczna jest tkanka okrywajca - (skórka / korkowica), powstajca w wyniku
+dzialania (merystemu wierzcholkowego / kambium). Kolenchyma to (ywa / martwa) tkanka
+wzmacniajca.
+
+Zadanie 9.2. (0-1)
+Wyka, e tkanka okrywajca przedstawiona na zdjciu pelni funkcje ochronne.
+W odpowiedzi uwzgldnij jedn cech budowy tej tkanki widoczn na zdjciu.
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+                             Nr zadania           8.1. 8.2. 9.1. 9.2.
+                             Maks. liczba pkt
+                  Wypelnia                        1  1  2  1
+                egzaminator  Uzyskana liczba pkt
+
+                                 Strona 13 z 28
+
+EBIP-R0_100
+Zadanie 10.
+W czasie ewolucji powstaj nowe cechy zwikszajce moliwoci adaptacyjne organizmów.
+Poniej przedstawiono drzewo filogenetyczne krgowców, a liter X oznaczono pojawienie
+si w ich historii ewolucyjnej pewnej nowej cechy.
+
+                                                                                      ryby dwudyszne
+
+                                                plazy
+
+                                                ssaki
+
+X                                               jaszczurki
+
+                                                i we
+
+                                                krokodyle
+
+                                                                                      strusie
+
+                                                                                      jastrzbie
+                                                                                      i pozostale ptaki
+
+                                                                                Na podstawie: N.A. Campbell, Biologia, Pozna 2014.
+
+Zadanie 10.1. (0-1)
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+
+Na drzewie filogenetycznym liter X oznaczono wyksztalcenie
+A. pluc.
+B. blon plodowych.
+C. gruczolów mlecznych.
+D. koczyn typu ldowego.
+
+Zadanie 10.2. (0-2)
+Oce, czy ponisze stwierdzenia dotyczce ewolucji krgowców s prawdziwe.
+Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Krokodyle s bliej spokrewnione z ptakami ni z jaszczurkami i wami. P F
+
+2. Ptaki s grup parafiletyczn.                              P F
+3. Gady s grup monofiletyczn.                               P F
+
+                                Strona 14 z 28
+
+                                                            EBIP-R0_100
+Zadanie 11. (0-2)
+Na poniszym schemacie przedstawiono rozmieszczenie wybranych gruczolów ukladu
+dokrewnego w organizmie czlowieka.
+
+                                                            A
+                                                            B
+                                                            C
+
+                                                              D
+
+                                               Na podstawie: J. Chlebiska, Anatomia i fizjologia czlowieka, Warszawa 1981.
+
+Uzupelnij tabel - wpisz w puste komórki oznaczenia literowe odpowiednich
+gruczolów ze schematu oraz ich nazwy.
+
+             Funkcja gruczolu                               Oznaczenie Nazwa gruczolu
+                                                              literowe
+
+Wydziela hormony peptydowe regulujce stenie
+glukozy we krwi.
+
+Odgrywa kluczow rol w dojrzewaniu ukladu
+odpornociowego.
+
+Cz korowa tego gruczolu wydziela hormony
+steroidowe, np. kortyzol i niewielkie iloci androgenów.
+
+                          Nr zadania                     10.1. 10.2. 11.
+                          Maks. liczba pkt
+               Wypelnia                                  1     2  2
+             egzaminator  Uzyskana liczba pkt
+
+                               Strona 15 z 28
+
+EBIP-R0_100
+Zadanie 12.
+Rotawirusy s patogenami wywolujcymi biegunk u ludzi, a take u pozostalych ssaków.
+Biegunka spowodowana rotawirusem ma bardzo podobny przebieg u wszystkich ssaków.
+Wikszo dzieci przechodzi co najmniej jedn infekcj rotawirusow przed ukoczeniem
+pitego roku ycia. Ostre biegunki stanowi natomiast wan przyczyn strat w chowie
+mlodych zwierzt.
+
+Rotawirus namnaa si w szczytowych komórkach kosmków jelitowych. Wskutek tego
+mikrokosmki ulegaj zanikowi, a zakaone komórki si zluszczaj. Utrata szczytowych
+czci kosmków prowadzi do niedoboru disacharydaz - maltazy, laktazy i sacharazy, który
+moe si utrzymywa przez kilka tygodni. Kada zakaona komórka wydziela do wiatla
+jelita jony chlorkowe. Disacharydy oraz jony chlorkowe s substancjami czynnymi
+osmotycznie.
+
+Wraz z nasilonym wydalaniem plynnego kalu organizm traci nie tylko wod, lecz take
+niestrawione i niewchlonite skladniki odywcze. U chorych zwierzt obserwowano
+obnienie podstawowego tempa metabolizmu, co stanowi przystosowanie do zmniejszonej
+dostpnoci glukozy.
+
+Dzieci, które przeszly zakaenie rotawirusowe, wykazuj nietolerancj mleka, wystpujc
+nawet przez kilka tygodni po infekcji.
+
+                                  Na podstawie: W. von Engelhardt, G. Breves, Fizjologia zwierzt domowych, Lód 2010;
+                                         S.E. Crawford i in., Rotavirus Infection, ,,Nature Reviews Disease Primers" 3, 2017;
+
+               C.A. Omatola, A.O. Olaniran, Rotaviruses: From Pathogenesis to Disease Control - A Critical Review,
+                                                                                                                           ,,Viruses" 14(5), 2022.
+
+Zadanie 12.1. (0-2)
+Wyjanij, w jaki sposób infekcja rotawirusowa doprowadza do zwikszonej utraty
+wody. W odpowiedzi uwzgldnij mechanizm osmotycznego zatrzymywania wody
+w treci jelitowej oraz mechanizm osmotycznego wydzielania wody do treci jelitowej.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 12.2. (0-1)
+Uzupelnij ponisze zdanie tak, aby w poprawny sposób opisywalo wplyw znacznego
+odwodnienia na uklad krwionony. W kadym nawiasie podkrel wlaciwe okrelenie.
+
+W wyniku znacznego odwodnienia organizmu objto osocza (spada / wzrasta), a wic
+
+serce musi bi (szybciej / wolniej), aby utrzyma odpowiednie cinienie krwi i zaopatrzy
+
+tkanki w tlen.
+
+Strona 16 z 28
+
+                EBIP-R0_100
+Zadanie 12.3. (0-1)
+Wyjanij, dlaczego obnienie tempa metabolizmu przy niskim steniu glukozy we
+krwi zwiksza szanse przeycia chorego ssaka.
+
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+................................................................................................................................................
+
+Zadanie 12.4. (0-1)
+Na podstawie przedstawionych informacji podaj przyczyn nietolerancji mleka
+wystpujcej u dzieci po przebytym zakaeniu rotawirusem.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 13.
+Jod jest niezbdnym skladnikiem diety. Ten pierwiastek wchodzi w sklad hormonów
+tarczycy. W razie dlugotrwalego niedoboru jodu w poywieniu dochodzi do wzrostu
+wydzielania z przysadki mózgowej hormonu tyreotropowego (TSH).
+
+Zadanie 13.1. (0-1)
+Podaj nazw przykladowego ludzkiego hormonu zawierajcego jod.
+
+................................................................................................................................................
+
+Zadanie 13.2. (0-1)
+Wyjanij, dlaczego w razie dlugotrwalego niskiego poziomu jodu w organizmie poziom
+hormonu tyreotropowego (TSH) jest podwyszony. W odpowiedzi uwzgldnij
+mechanizm sprzenia zwrotnego ujemnego.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+  Wypelnia   Nr zadania           12.1.  12.2.  12.3.  12.4.  13.1.  13.2.
+egzaminator  Maks. liczba pkt       2      1      1      1      1      1
+
+             Uzyskana liczba pkt
+
+             Strona 17 z 28
+
+EBIP-R0_100
+Zadanie 14.
+Roztocza (Acari) s przystosowane do rónych rodowisk: yj w glebie, w kurzu - na
+przedmiotach lub w powietrzu, w strefie przybrzenej rodowisk slodkowodnych, a nawet
+w gorcych ródlach. Niektóre mog przenosi choroby lub by szkodnikami magazynów.
+Alergeny pochodzce od roztocza kurzu domowego s jedn z najczstszych przyczyn
+chorób alergicznych.
+
+Ponisze zdjcie spod skaningowego mikroskopu elektronowego (SEM) przedstawia
+roztocza z gatunku Brevipalpus phoenicis.
+
+                                      120 µm
+
+                                                        Na podstawie: C. Blaszak (red.), Zoologia. Stawonogi, Warszawa 2013.
+                                         Fotografia: Agricultural Research Service, United States Department of Agriculture.
+
+Zadanie 14.1. (0-1)
+Okrel gromad stawonogów, do której naley B. phoenicis. Odpowied uzasadnij,
+podajc jedn widoczn na zdjciu cech budowy wiadczc o przynalenoci tego
+gatunku do wybranej gromady.
+
+Gromada stawonogów: ............................................
+
+Cecha budowy: .......................................................................................................................
+
+Zadanie 14.2. (0-2)
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly nadmiern
+odpowied immunologiczn ludzkiego organizmu na alergeny roztoczy. W kadym
+nawiasie podkrel wlaciwe okrelenie.
+
+Alergeny zawarte w odchodach roztoczy wi si z przeciwcialami klasy IgE wystpujcymi
+
+na powierzchni (komórek tucznych / limfocytów B). Te komórki uwalniaj histamin, która
+
+powoduje (rozszerzenie / zwenie) naczy krwiononych i (zwikszenie / zmniejszenie)
+przepuszczalnoci cian naczy wlosowatych. Rozwija si obrzk, zwa si wiatlo dróg
+
+oddechowych oraz pojawia si katar.
+
+Strona 18 z 28
+
+                EBIP-R0_100
+Zadanie 15.
+PET - poli(tereftalan etylenu) - to wielkoczsteczkowy polimer stosowany m.in. do produkcji
+wlókien oraz butelek o wysokiej odpornoci na biodegradacj.
+
+Na skladowisku ze sztucznymi tworzywami odkryto gatunek Gram-ujemnej bakterii Ideonella
+sakaiensis, który wykorzystuje produkty rozkladu PET jako ródlo wgla i energii. Te bakterie
+wytwarzaj enzym - PETaz, który rozklada PET wydajniej ni inne enzymy - kutynazy,
+esterazy czy lipazy - wystpujce u innych saprobiontycznych bakterii oraz u grzybów.
+W rodowisku naturalnym PET rozklada si setki lat, ale PETaza moe skróci ten czas
+do zaledwie kilku tygodni.
+
+                                                     Na podstawie: S. Yoshida i in., A bacterium that degrades and assimilates
+                                                                                     poly(ethylene terephthalate), ,,Science" 351, 2016.
+
+Zadanie 15.1. (0-2)
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly wlaciwoci bakterii
+I. sakaiensis. W kadym nawiasie podkrel wlaciwe okrelenie.
+
+ciana komórkowa u bakterii Gram-ujemnych jest (ciesza / grubsza) ni u bakterii
+
+Gram-dodatnich. ciana komórkowa I. sakaiensis (jest / nie jest) przeszkod w pobieraniu
+
+PET do wntrza komórki, a rozklad PET rozpoczyna si (w komórce / poza komórk).
+
+Zadanie 15.2. (0-2)
+Oce, czy ponisze stwierdzenia zwizane z rozkladem PET przez mikroorganizmy s
+prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Biodegradacja PET przez bakterie I. sakaiensis przyczynia si do obiegu P F
+      wgla w przyrodzie.
+
+2. Bakterie I. sakaiensis s jedynymi znanymi organizmami zdolnymi          P F
+      do rozkladu PET.
+
+3. Wystpowanie PET w rodowisku jest przyczyn mutacji, dziki którym         P F
+u bakterii i u grzybów dochodzi do powstania genów kodujcych PETaz.
+
+               Wypelnia   Nr zadania           14.1.  14.2.  15.1.  15.2.
+             egzaminator  Maks. liczba pkt       1      2      2      2
+
+                          Uzyskana liczba pkt
+
+                          Strona 19 z 28
+
+EBIP-R0_100
+Zadanie 16.
+Tulów ryby - brzanki sumatrzaskiej (Puntigrus tetrazona) - przecinaj trzy poprzeczne
+czarne paski, cignce si od grzbietu do brzucha. Na poniszym zdjciu przedstawiono trzy
+moliwe wzory paskowania wystpujce u brzanki sumatrzaskiej (1.-3.), rónice si
+dlugoci paska oznaczonego strzalk.
+
+                                                                              3.
+                                          2.
+
+                            1.
+
+Wzór paskowania brzanki sumatrzaskiej zaley od dwóch niesprzonych ze sob loci -
+A i B z allelami dominujcymi (A i B) i recesywnymi (a i b):
+
+· wzór 1. - obecno co najmniej jednego allelu dominujcego w kadym z obu loci daje
+    wzór pelnego paskowania
+
+· wzór 2. - homozygotyczno recesywna tylko w jednym z loci powoduje skrócenie paska
+    rodkowego, który jednak przecina lini naboczn
+
+· wzór 3. - podwójna homozygotyczno recesywna sprawia, e pasek rodkowy jest
+    skrócony o polow i koczy si na linii nabocznej.
+
+                                    Na podstawie: Z. Nowak (red.), Genetyka zwierzt w teorii i praktyce, Warszawa 2015;
+           J.S. Frankel, Inheritance of Trunk Striping in the Sumatran Tiger Barb [...], ,,Journal of Heredity" 76, 1985.
+
+                                  Fotografia: J.S. Frankel, How a Banded Barb Gets its Stripes, ,,AMAZONAS" 3(6), 2014.
+
+Zadanie 16.1. (0-2)
+Uzupelnij tabel - dla kadego z fenotypów brzanki sumatrzaskiej wymienionych
+w tabeli zapisz wszystkie moliwe genotypy warunkujce dany fenotyp. Zastosuj
+oznaczenia alleli podane w tekcie.
+
+Fenotyp                                             Moliwe genotypy
+
+pelne paskowanie - wzór 1.
+
+skrócony pasek rodkowy
+przecinajcy lini naboczn - wzór 2.
+
+                                    Strona 20 z 28
+
+                                                                     EBIP-R0_100
+Zadanie 16.2. (0-2)
+Zapisz krzyówk genetyczn i na jej podstawie podaj oczekiwany rozklad wzoru
+paskowania wród potomstwa dwóch podwójnie heterozygotycznych osobników
+brzanki sumatrzaskiej.
+
+Krzyówka genetyczna:
+
+               Wzór paskowania wzór 1. wzór 2. wzór 3.
+             Oczekiwane proporcje ............ : ............ : ............
+
+Zadanie 17. (0-1)
+Zespól cikiego zloonego niedoboru odpornoci (SCID) u koni czystej krwi arabskiej jest
+jednogenow chorob autosomaln, która dziedziczy si w sposób autosomalny recesywny.
+Chore rebita s podatne na zakaenia z powodu niesprawnego ukladu immunologicznego
+i zwykle nie doywaj 5. miesica ycia.
+
+Czsto wystpowania allelu powodujcego zespól zloonego niedoboru odpornoci
+w pewnej hodowli koni arabskich liczcej 250 osobników wynosi 8,4%.
+
+         Na podstawie: M. Bugno-Poniewierska i in., Wykorzystanie testów molekularnych identyfikujcych nosicieli
+                                  mutacji SCID, CA i LFS w polskiej populacji koni czystej krwi arabskiej - wyniki wstpne,
+                                                                                                ,,Wiadomoci Zootechniczne" LV(5), 2017.
+
+Okrel, czy locus genu warunkujcego SCID w opisanej hodowli koni arabskich jest
+w równowadze Hardy'ego - Weinberga. Odpowied uzasadnij - podaj jeden argument.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania           16.1. 16.2. 17.
+                          Maks. liczba pkt
+               Wypelnia                        2  2  1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 21 z 28
+
+EBIP-R0_100
+Zadanie 18.
+Na poniszym schemacie przedstawiono budow przestrzenn czsteczki tRNA.
+
+koniec 5                                                     koniec 3
+
+           rami akceptorowe
+
+antykodon
+
+                                                             Na podstawie: pdb101.rcsb.org
+
+Zadanie 18.1. (0-1)
+Dokocz zdanie. Zaznacz odpowied A albo B oraz odpowied 1. albo 2.
+
+Czsteczki tRNA s zbudowane                                   1. w przeciwnej
+                                                                   orientacji.
+  A. z jednej nici, a w budowie przestrzennej tRNA
+                              komplementarne odcinki nici s  2. w tej samej
+                                                                   orientacji.
+  B. z dwóch nici, poloone
+
+Zadanie 18.2. (0-2)
+Okrel funkcj pelnion przez rami akceptorowe oraz funkcj pelnion przez
+antykodon czsteczki tRNA.
+
+Rami akceptorowe: ...............................................................................................................
+
+................................................................................................................................................
+
+Antykodon: .............................................................................................................................
+
+................................................................................................................................................
+
+Strona 22 z 28
+
+                                                                       EBIP-R0_100
+Zadanie 19.
+Ekspresja informacji genetycznej u eukariontów sklada si z trzech etapów: z transkrypcji,
+z obróbki potranskrypcyjnej i z translacji.
+Na poniszym schemacie przedstawiono w uproszczony sposób fragment sekwencji
+nukleotydowej nici matrycowej DNA. Kolorem pomaraczowym zaznaczono sekwencj
+promotorow, a kolorem niebieskim - introny. Sekwencje nukleotydowe eksonów ujto
+w ramki.
+
+3...TATTATACTGC TACGGGCGCACA CACACT ACGTATGCCATG ACTCTC ACAATT ...5
+
+Zadanie 19.1. (0-1)
+Jak sekwencj nukleotydow bdzie mial fragment dojrzalego mRNA transkrybowany
+na podstawie przedstawionej nici matrycowej? Zaznacz wlaciw odpowied sporód
+podanych.
+
+A. 5 UAUUAUACUGCUACGGGCGCACAACGUAUGCCAUGACAAUU 3
+B. 5 AUAAUAUGACGAUGCCCGCGUGUUGCAUACGGUACUGUUAA 3
+C. 5 AUGACGAUGCCCGCGUGUGUGUGAUGCAUACGGUAC 3
+D. 5 AUGACGAUGCCCGCGUGUUGCAUACGGUACUGUUAA 3
+
+Zadanie 19.2. (0-1)
+Podaj sekwencj aminokwasow kodowan przez pierwszy ekson przedstawionego
+genu. Odpowied zapisz od koca aminowego do koca karboksylowego,
+z wykorzystaniem pelnych nazw aminokwasów lub ich oznacze trójliterowych.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           18.1.  18.2.  19.1.  19.2.
+             egzaminator  Maks. liczba pkt       1      2      1      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 23 z 28
+
+EBIP-R0_100
+Zadanie 20.
+Przewlekla bialaczka szpikowa to choroba o podlou genetycznym. W komórce macierzystej
+szpiku kostnego w wyniku mutacji powstaje fuzyjny gen skladajcy si z fragmentów dwóch
+genów: BCR oraz ABL1. Funkcja genu BCR jest nieznana. Gen ABL1 koduje enzym -
+kinaz tyrozynow, która fosforyluje róne bialka i wplywa w ten sposób na procesy
+komórkowe. Komórka szpiku kostnego z fuzj genów BCR i ABL1 nie podlega
+wewntrzkomórkowym procesom regulujcym podzialy komórkowe i dzieli si w sposób
+niekontrolowany, co prowadzi do rozwoju nowotworu.
+
+Na poniszym schemacie przedstawiono struktur chromosomów przed mutacj i po mutacji.
+
+     przed mutacj                   po mutacji
+
+chromosom 22  chromosom 9           chromosom     chromosom 9
+                                    Philadelphia
+
+BCR                        BCR-ABL1
+                                                  ABL1-BCR
+              ABL1
+
+    Na podstawie: J. olnierowicz i in., Patogeneza przewleklej bialaczki szpikowej - od genu do terapii celowanej,
+                                                                                                                      ,,Hematologia" 1(3), 2010.
+
+Zadanie 20.1. (0-1)
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+
+Przyczyn przewleklej bialaczki szpikowej jest
+A. duplikacja.
+B. inwersja.
+C. translokacja.
+D. transkrypcja.
+
+Zadanie 20.2. (0-1)
+Oce, czy ponisze stwierdzenia dotyczce mutacji bdcej przyczyn przewleklej
+bialaczki szpikowej s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe,
+albo F - jeli jest falszywe.
+
+1. Opisana mutacja powoduje zmiany w strukturze chromosomów oraz   P F
+      w ich liczbie.                                               P F
+
+2. Zmiany w strukturze chromosomów 9 i 22 - charakterystyczne dla
+      przewleklej bialaczki szpikowej - s widoczne w kariotypie.
+
+                    Strona 24 z 28
+
+                                                                   EBIP-R0_100
+Zadanie 21. (0-1)
+W drugiej polowie XX wieku naukowcy zwrócili uwag na globalne zmniejszanie si
+liczebnoci populacji plazów. Badacze zgodnie okrelaj obecny trend jako szóste masowe
+wymieranie zwierzt o globalnym zasigu.
+Badania prowadzone w Polsce wskazuj kilka czynników negatywnie wplywajcych
+na liczebno plazów. Jednym z nich jest osuszanie naturalnych siedlisk plazów.
+
+                                                                                                         Na podstawie: naukadlaprzyrody.pl
+
+Wyka, e osuszanie siedlisk ma negatywny wplyw na liczebno plazów w Polsce.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+Zadanie 22. (0-1)
+W Sudetach przeprowadzono restytucj jodly z wykorzystaniem wylcznie lokalnych
+zasobów genetycznych jodly. Wymagalo to wielu dlugotrwalych dziala, czsto
+skomplikowanych (np. szczepienia drzew). Jodla sudecka róni si genetycznie od jodly
+karpackiej, licznie wystpujcej w niektórych rejonach Karpat i wytwarzajcej due iloci
+nasion.
+
+                       Na podstawie: W. Barzdajn, Restytucja jodly pospolitej w Sudetach. Dotychczasowe osignicia,
+                                                         ,,Studia i Materialy Centrum Edukacji Przyrodniczo Lenej" 1(11), 2006.
+
+Uzasadnij, e do restytucji jodly w Sudetach nalealo uy lokalnych zasobów
+genetycznych jodly, zamiast latwo dostpnych nasion pochodzcych z Karpat.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+                          Nr zadania           20.1. 20.2. 21. 22.
+                          Maks. liczba pkt
+               Wypelnia                        1  1  1  1
+             egzaminator  Uzyskana liczba pkt
+
+                          Strona 25 z 28
+
+EBIP-R0_100
+Zadanie 23.
+Oddzialywania midzygatunkowe u rolin mog mie charakter antagonistyczny, np. gdy
+w suchym rodowisku wystpuje konkurencja korzeni o wod, lub nieantagonistyczny -
+polegajcy na wzajemnym wspomaganiu wzrostu.
+
+Aby okreli wplyw wzajemnego oddzialywania rolin jednorocznych i krzewów
+Ambrosia dumosa, przygotowano na pustyni nastpujce poletka dowiadczalne:
+
+· próba A - usunito roliny jednoroczne, a pozostawiono krzewy A. dumosa
+· próba B - pozostawiono roliny jednoroczne oraz krzewy A. dumosa
+· próba C - pozostawiono roliny jednoroczne, a usunito krzewy A. dumosa.
+
+Na poniszych ilustracjach przedstawiono próby: A, B i C.
+
+A  B                                                         C
+
+Roliny jednoroczne w obecnoci krzewów charakteryzowaly si wikszym przyrostem
+biomasy, natomiast przyrost biomasy krzewów w obecnoci rolin zielnych byl ograniczony.
+
+       Na podstawie: C.J. Krebs, Ecology: The Experimental Analysis of Distribution and Abundance, Harlow 2014.
+
+Zadanie 23.1. (0-2)
+Uzupelnij tabel - wpisz w puste komórki oznaczenia literowe tych prób, które naley
+porówna, aby zweryfikowa ponisze hipotezy.
+
+   Weryfikowana hipoteza                                        Oznaczenia literowe
+                                                                 prób, które naley
+
+                                                                       porówna
+
+Obecno na tym samym obszarze krzewów A. dumosa
+skutkuje zwikszeniem przyrostu biomasy rolin jednorocznych.
+
+Obecno na tym samym obszarze rolin jednorocznych
+skutkuje ograniczeniem przyrostu biomasy krzewów A. dumosa.
+
+      Strona 26 z 28
+
+                                                                EBIP-R0_100
+Zadanie 23.2. (0-1)
+Wyjanij, w jaki sposób rzucanie cienia przez krzewy A. dumosa wplywa pozytywnie
+na przyrost biomasy rolin jednorocznych w warunkach suszy. W odpowiedzi
+uwzgldnij bilans wodny rolin.
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+................................................................................................................................................
+
+               Wypelnia   Nr zadania           23.1.  23.2.
+             egzaminator  Maks. liczba pkt       2      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 27 z 28
+
+EBIP-R0_100
+BRUDNOPIS (nie podlega ocenie)
+
+Strona 28 z 28
+
+                                EBIP-R0_100
+BIOLOGIA
+
+Poziom rozszerzony
+
+Formula 2015
+
+BIOLOGIA
+
+Poziom rozszerzony
+
+Formula 2015
+
+BIOLOGIA
+
+Poziom rozszerzony
+
+Formula 2015
+

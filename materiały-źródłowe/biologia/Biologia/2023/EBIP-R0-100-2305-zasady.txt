@@ -1,0 +1,1631 @@
+              Zasady oceniania rozwiza
+
+Rodzaj dokumentu:
+
+              zada
+
+Egzamin:          Egzamin maturalny
+
+Przedmiot:        Biologia
+
+Poziom:           Poziom rozszerzony
+
+Formy arkusza:    EBIP-R0-100, EBIP-R0-200, EBIP-R0-240,
+                  EBIP-R0-300, EBIP-R0-340, EBIP-R0-400,
+                  EBIP-R0-700, EBIP-R0-Q00
+
+Termin egzaminu:  11 maja 2023 r.
+
+Data publikacji   28 czerwca 2023 r.
+dokumentu:
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Ogólne zasady oceniania
+Ten dokument zawiera zasady oceniania oraz przyklady poprawnych rozwiza zada
+otwartych.
+W zasadach oceniania okrelono zakres wymaganej odpowiedzi: niezbdne elementy
+odpowiedzi i zwizki midzy nimi.
+Przykladowe rozwizania zada otwartych nie s cislym wzorcem oczekiwanych
+sformulowa. Akceptowane s wszystkie odpowiedzi merytorycznie poprawne
+i spelniajce warunki zadania - równie te nieprzewidziane jako przykladowe odpowiedzi
+w zasadach oceniania.
+· Odpowiedzi nieprecyzyjne, niejednoznaczne, niejasno sformulowane uznaje si za
+
+   bldne.
+· Gdy do jednego polecenia zdajcy podaje kilka odpowiedzi, z których jedna jest
+
+   poprawna, a inne - bldne, nie otrzymuje punktów za adn z nich.
+· Jeeli informacje zamieszczone w odpowiedzi (równie te dodatkowe, a wic takie, które
+
+   nie wynikaj z treci polecenia) wiadcz o zasadniczych brakach w rozumieniu
+   omawianego zagadnienia i zaprzeczaj pozostalej czci odpowiedzi stanowicej
+   prawidlowe rozwizanie zadania, to za odpowied jako calo zdajcy otrzymuje zero
+   punktów.
+· Rozwizanie zadania na podstawie bldnego merytorycznie zaloenia uznaje si
+   w caloci za niepoprawne.
+· Rozwizania zada dotyczcych dowiadcze i obserwacji (np. problemy badawcze,
+   hipotezy i wnioski) musz odnosi si do dowiadczenia lub obserwacji przedstawionych
+   w zadaniu i wiadczy o jego zrozumieniu.
+· W rozwizaniach zada rachunkowych oceniane s: metoda (przedstawiony tok
+   rozumowania), wykonanie oblicze i podanie wyniku z odpowiedni dokladnoci
+   i jednostk.
+· Kady sposób oznaczenia odpowiedzi (podkrelenie, przekrelenie, zakrelenie,
+   obwiedzenie itd.) jest uznawany jako wybór tej odpowiedzi.
+
+Strona 2 z 33
+                                        Zasady oceniania rozwiza zada
+
+Zadanie 1.1. (0-1)
+
+                    Wymagania egzaminacyjne 2023 i 20241
+
+               Wymagania ogólne                     Wymaganie szczególowe
+
+IV. Poszukiwanie, wykorzystanie         III. Metabolizm.
+i tworzenie informacji.                 3. Oddychanie wewntrzkomórkowe.
+Zdajcy odczytuje [...] i przetwarza     Zdajcy:
+informacje pozyskane z rónorodnych      3) opisuje na podstawie schematów przebieg
+ródel [...].                            [...] dekarboksylacji oksydacyjnej
+I. Poznanie wiata organizmów na rónych  pirogronianu [...].
+poziomach organizacji ycia.
+Zdajcy [...] przedstawia i wyjania
+procesy i zjawiska biologiczne [...].
+
+Zasady oceniania
+1 pkt - za poprawne przyporzdkowanie trzech oznacze enzymów do typów
+
+         przeprowadzanych reakcji.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+
+                       Typ reakcji   Oznaczenie enzymu (E1 / E2 / E3)
+                    transacetylacja                      E2
+                    dehydrogenacja                       E3
+                    dekarboksylacja                      E1
+
+Uwaga:
+Uznaje si odpowiedzi, w których uyto znaków normalnej wielkoci zamiast indeksów
+dolnych, np. E1 zamiast E1.
+
+Zadanie 1.2. (0-1)
+
+               Wymaganie ogólne                     Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych  III. Metabolizm.
+poziomach organizacji ycia.             3. Oddychanie wewntrzkomórkowe.
+Zdajcy [...] przedstawia zwizki midzy   Zdajcy:
+struktur a funkcj na rónych poziomach   3) [...] podaje miejsce zachodzenia
+organizacji ycia [...].                 [dekarboksylacji oksydacyjnej pirogronianu]
+                                        w komórce.
+
+1 Rozporzdzenie Ministra Edukacji i Nauki z dnia 1 sierpnia 2022 r. w sprawie wymaga egzaminacyjnych dla
+egzaminu maturalnego przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022, poz. 1698).
+
+                                                                                                                                      Strona 3 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zasady oceniania
+1 pkt - za wybór poprawnej odpowiedzi.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+B
+
+Zadanie 1.3. (0-1)                                                Wymaganie szczególowe
+
+                Wymaganie ogólne                      III. Metabolizm.
+ V. Rozumowanie i argumentacja.                       2. Ogólne zasady metabolizmu. Zdajcy:
+ Zdajcy [...] wyjania zalenoci                        5) wskazuje substraty i produkty glównych
+ przyczynowo-skutkowe [...].                          szlaków i cykli metabolicznych ([...] etapy
+                                                      oddychania tlenowego [...]).
+
+Zasady oceniania
+1 pkt - za poprawne wykazanie, e funkcjonowanie dehydrogenazy pirogronianowej jest
+
+         konieczne do polczenia szlaku glikolizy z cyklem Krebsa, uwzgldniajce produkt
+         glikolizy - pirogronian i substrat cyklu Krebsa - acetylo-CoA.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Dehydrogenaza pirogronianowa umoliwia wytworzenie z pirogronianu acetylo-CoA.
+
+    Pirogronian jest produktem glikolizy, a acetylo-CoA - substratem cyklu Krebsa.
+· Umoliwia to przeksztalcenie pirogronianu powstajcego w glikolizie do acetylo-CoA,
+
+    który jest substratem cyklu Krebsa.
+· Produktem glikolizy jest pirogronian, a substratem cyklu Krebsa - acetylokoenzym A,
+
+    który powstaje w wyniku przemian pirogronianu katalizowanych przez dehydrogenaz
+    pirogronianow.
+· Powstajcy w glikolizie pirogronian nie moe by bezporednio wlczony do cyklu
+    Krebsa, ale musi by przeksztalcony przez dehydrogenaz pirogronianow do
+    acetylo-CoA.
+
+Uwagi:
+Uznaje si odpowiedzi, w których uyto alternatywnych okrele cyklu Krebsa, np.: cykl
+kwasów trójkarboksylowych, cykl kwasu cytrynowego, CKT.
+Uznaje si odpowiedzi, w których uyto alternatywnych okrele acetylo-CoA, np.: aktywny
+octan, czynny octan.
+Nie uznaje si odpowiedzi odnoszcych si do reszty acetylowej (zamiast acetylo-CoA) jako
+produktu reakcji pomostowej lub substratu cyklu Krebsa.
+
+Strona 4 z 33
+                                  Zasady oceniania rozwiza zada
+
+Zadanie 1.4. (0-1)                            Wymaganie szczególowe
+
+                Wymaganie ogólne  III. Metabolizm.
+ V. Rozumowanie i argumentacja.   2. Ogólne zasady metabolizmu. Zdajcy:
+ Zdajcy [...] wyjania zalenoci    5) wskazuje substraty i produkty glównych
+ przyczynowo-skutkowe [...].      szlaków i cykli metabolicznych ([...] etapy
+                                  oddychania tlenowego, oddychanie
+                                  beztlenowe, glikoliza [...]).
+
+Zasady oceniania
+1 pkt - za poprawne wykazanie, e zmniejszenie aktywnoci kompleksu dehydrogenazy
+
+         pirogronianowej prowadzi do wzrostu stenia mleczanu w komórce, uwzgldniajce
+         powstawanie pirogronianu (w glikolizie), który nie moe by w caloci utleniony
+         w reakcji pomostowej, i przeksztalcanie cigle powstajcego pirogronianu (nadmiaru
+         pirogronianu) w mleczan.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Powstajcy w glikolizie pirogronian jest przetwarzany przez kompleks dehydrogenazy
+
+    pirogronianowej do acetylo-CoA. Jeeli ta reakcja jest ograniczona, to nadmiar
+    pirogronianu zostaje przeksztalcony w mleczan.
+· Ograniczenie tlenowych przemian pirogronianu powoduje, e w komórce ronie jego
+    stenie ze wzgldu na stale zachodzc glikoliz. Nadmiar pirogronianu w komórce
+    zostaje zredukowany do mleczanu.
+· Ograniczenie utleniania pirogronianu w reakcji pomostowej doprowadzi do wzrostu
+    w cytozolu stenia pirogronianu, który caly czas powstaje z glukozy. Dua cz tego
+    pirogronianu zostanie skierowana na beztlenowy szlak metaboliczny, przeksztalcajcy
+    ten zwizek w mleczan.
+· Zmniejszenie aktywnoci dehydrogenazy pirogronianowej jest przyczyn zwikszonego
+    stenia pirogronianu w komórce. Cz pirogronianu jest przeksztalcana w mleczan, co
+    prowadzi do wzrostu stenia mleczanu w komórce.
+· Prowadzi to do zmniejszenia wydajnoci reakcji pomostowej. Mniejsza ilo pirogronianu
+    bdzie przeksztalcana do acetylo-CoA, co przeloy si na spadek intensywnoci
+    zachodzenia cyklu Krebsa i lacucha oddechowego. Aby uzyska NAD+, niezbdny do
+    zajcia glikolizy, na drodze której komórka moe uzyska ATP, powstajcy pirogronian
+    bdzie redukowany do mleczanu - stenie mleczanu w tej komórce wzronie.
+
+Uwagi:
+Nie uznaje si odpowiedzi odnoszcych si do calkowitej utraty aktywnoci przez kompleks
+dehydrogenazy pirogronianowej, np. ,,Zahamowanie powstawania acetylo-CoA spowoduje
+redukcj pirogronianu do mleczanu".
+Nie uznaje si odpowiedzi odnoszcych si wylcznie do znaczenia adaptacyjnego
+fermentacji mleczanowej, np. ,,Zmniejszenie aktywnoci tego kompleksu powoduje
+zmniejszenie wydajnoci oddychania tlenowego. Dlatego misie pracujcy w takich
+warunkach pozyskuje energi take w sposób beztlenowy, czyli przeprowadzajc
+fermentacj mleczanow, której produktem jest mleczan".
+
+                                  Strona 5 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zadanie 2.1. (0-1)
+
+               Wymagania ogólne                                   Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych                IV. Przegld rónorodnoci organizmów.
+poziomach organizacji ycia.                           8. Roliny - rozmnaanie si. Zdajcy:
+Zdajcy opisuje [...] organizmy [...].                 2) opisuje budow kwiatu okrytonasiennych
+IV. Poszukiwanie, wykorzystanie                       [...].
+i tworzenie informacji.
+Zdajcy odczytuje, selekcjonuje [...]
+i przetwarza informacje pozyskane
+z rónorodnych ródel [...].
+
+Zasady oceniania
+1 pkt - za podanie poprawnych nazw dwóch elementów okwiatu goryczki wiosennej.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+A. korona / platek (korony) / platki (korony) / dzialki korony
+B. kielich / dzialka kielicha / dzialki kielicha
+
+Uwagi:
+Nie uznaje si odpowiedzi ,,dzialka okwiatu", poniewa odnosi si ona do obydwu piter
+okwiatu - kielicha i korony (odpowied zbyt ogólna).
+Dopuszcza si odpowiedzi: A - ,,platek (o)kwiatu", B - ,,kielich (o)kwiatu".
+
+Zadanie 2.2. (0-1)
+
+               Wymaganie ogólne                                   Wymagania szczególowe
+
+I. Poznanie wiata organizmów na rónych                IV. Przegld rónorodnoci organizmów.
+poziomach organizacji ycia.                           5. Roliny ldowe. Zdajcy:
+Zdajcy opisuje, porzdkuje i rozpoznaje                2) wskazuje cechy charakterystyczne [...]
+organizmy [...].                                      rolin nago- i okrytonasiennych, opisuje
+                                                      zrónicowanie budowy ich ciala [...];
+                                                      3) porównuje przemian pokole (i faz
+                                                      jdrowych) grup rolin wymienionych w pkt 2,
+                                                      wskazujc na stopniow redukcj pokolenia
+                                                      gametofitu w trakcie ewolucji na ldzie.
+
+Zasady oceniania
+1 pkt - za wybór dwóch poprawnych okrele.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+Goryczka wiosenna naley do (nagonasiennych / okrytonasiennych). W przemianie
+pokole goryczki wiosennej pokoleniem dominujcym jest (gametofit / sporofit).
+
+Strona 6 z 33
+                                        Zasady oceniania rozwiza zada
+
+Zadanie 2.3. (0-1)
+
+               Wymagania ogólne                     Wymaganie szczególowe
+
+V. Rozumowanie i argumentacja.          IV. Przegld rónorodnoci organizmów.
+Zdajcy [...] wyjania zalenoci           8. Roliny - rozmnaanie si. Zdajcy:
+przyczynowo-skutkowe [...].             2) opisuje budow kwiatu okrytonasiennych,
+I. Poznanie wiata organizmów na rónych  przedstawia jej rónorodno i wykazuje, e
+poziomach organizacji ycia.             jest ona zwizana ze sposobami zapylania.
+Zdajcy [...] przedstawia i wyjania
+zalenoci midzy organizmem
+a rodowiskiem [...].
+
+Zasady oceniania
+1 pkt - za poprawne wykazanie, e produkcja barwnika jest korzystna dla goryczki
+
+         wiosennej, odnoszce si do korzyci zwizanych z moliwoci przywabiania
+         owadów bdcych zapylaczami goryczki.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Dziki barwnym kwiatom goryczka przywabia zapylacze.
+· Rolina jest niewielka, a dziki barwnym kwiatom jest widoczna dla zapylaczy.
+· Intensywnie wybarwione kwiaty goryczki stanowi powabni dla zapylaczy.
+· Synteza duej iloci barwnika w kwiatach goryczki wiosennej jest potrzebna
+
+    do przywabiania motyli i trzmieli, które doprowadz do jej zapylenia.
+· Goryczka ronie w górach, gdzie brakuje zapylaczy. Dostpno pylku jest czynnikiem
+
+    ograniczajcym sukces reprodukcyjny roliny, dlatego goryczka inwestuje zasoby
+    w intensywnie wybarwione kwiaty zwikszajce szanse na przywabienie owadów.
+
+Uwaga:
+Nie uznaje si odpowiedzi odnoszcych si wylcznie do przywabiania zwierzt, bez
+odniesienia do korzyci dla roliny - zapylania, np. ,,Barwne kwiaty przywabiaj owady".
+
+Zadanie 3.1. (0-1)                                  Wymagania szczególowe
+
+                Wymagania ogólne        IV. Przegld rónorodnoci organizmów.
+                                        8. Roliny - rozmnaanie si. Zdajcy:
+ V. Rozumowanie i argumentacja.         3) przedstawia powstawanie gametofitów
+ Zdajcy [...] wyjania zalenoci          mskiego i eskiego, zaplodnienie komórki
+ przyczynowo-skutkowe [...].            jajowej oraz rozwój [...] nasienia u roliny
+ IV. Poszukiwanie, wykorzystanie        okrytonasiennej.
+ i tworzenie informacji.                IV. Przegld rónorodnoci organizmów.
+ Zdajcy odczytuje, selekcjonuje [...]   11. Zwierzta bezkrgowe. Zdajcy:
+ i przetwarza informacje pozyskane      2) przedstawia budow, czynnoci yciowe
+ z rónorodnych ródel [...].             i tryb ycia parzydelkowców [...].
+
+                                        Strona 7 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zasady oceniania
+1 pkt - za poprawne zaznaczenie mejozy na schemacie A i na schemacie B.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+
+A. roliny                                             B. krkoplawy
+
+               sporofit  R!                                            polip
+
+                         zarodniki                                            strobila
+
+               zygota                                 zygota
+
+                         gametofit                                              meduza
+
+               gamety                                 gamety                  R!
+
+Uwaga:
+Uznaje si odpowiedzi, w których zamiast symbolu ,,R!" uyto symboli ,,R" lub ,,!", lub innych
+jednoznacznych oznacze.
+
+Zadanie 3.2. (0-1)                                                Wymaganie szczególowe
+
+                Wymaganie ogólne                      VI. Genetyka i biotechnologia.
+ V. Rozumowanie i argumentacja.                       2. Cykl komórkowy. Zdajcy:
+ Zdajcy [...] wyjania zalenoci                        4) podaje rónic midzy podzialem
+ przyczynowo-skutkowe [...].                          mitotycznym a mejotycznym i wyjania
+                                                      biologiczne znaczenie obu typów podzialu.
+
+Zasady oceniania
+1 pkt - za poprawne wykazanie, e mejoza jest niezbdna do zamknicia cyklu yciowego
+
+         eukariontów rozmnaajcych si plciowo, uwzgldniajce w sposób bezporedni lub
+         opisowy podwojenie (wzrost) liczby chromosomów w czasie zaplodnienia
+         i konieczno jej redukcji podczas mejozy.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· W czasie rozmnaania plciowego liczba chromosomów ulega podwojeniu, a mejoza j
+
+    zmniejsza, co umoliwia zachowanie stalej liczby chromosomów u gatunku.
+· Mejoza zapobiega podwajaniu si liczby chromosomów w kadym kolejnym pokoleniu
+
+    rozmnaajcym si plciowo.
+· Mejoza redukuje liczb chromosomów, co kompensuje jej podwojenie podczas
+
+    zaplodnienia.
+· Skoro zygota powstaje z polczenia dwóch gamet, to kada z gamet musi mie polow
+
+    garnituru chromosomów - uzyskan w wyniku podzialu mejotycznego, zachodzcego
+    bezporednio podczas tworzenia gamet lub na wczeniejszym etapie cyklu.
+· Dziki niej gamety s haploidalne i po polczeniu tworz diploidaln zygot.
+
+Strona 8 z 33
+                                                                                                         Zasady oceniania rozwiza zada
+
+· Mejoza prowadzi do redukcji materialu genetycznego, dziki czemu z dwóch lczcych
+    si gamet powstaje diploidalna zygota i nie dochodzi do podwojenia si materialu
+    genetycznego.
+
+· Bez mejozy cykl yciowy eukariontów rozmnaajcych si plciowo nie zostalby
+    zamknity, poniewa kade kolejne pokolenie mialoby zwielokrotnion liczb
+    chromosomów w wyniku zaplodnienia, a wic nie mogloby si rozwija.
+
+Uwagi:
+Nie uznaje si odpowiedzi niepelnych - odnoszcych si tylko do powstawania gamet,
+ale nieuwzgldniajcych zmian liczby chromosomów, np. ,,To stwierdzenie jest prawdziwe,
+poniewa mejoza umoliwia wytworzenie gamet, niezbdnych do rozmnaania plciowego".
+Nie uznaje si odpowiedzi odnoszcych si do koniecznoci wytwarzania gamet
+bezporednio przez podzial mejotyczny komórki, np. ,,Gamety u eukariontów mog powsta
+tylko na drodze podzialu mejotycznego komórki". U rolin gamety powstaj na drodze
+podzialu mitotycznego, a mejoza wystpuje na wczeniejszym etapie cyklu.
+Nie uznaje si odpowiedzi odnoszcych si wylczenie do mejozy pre- lub postzygotycznej,
+np. ,,Mejoza jest niezbdna do zamkniciu cyklu, poniewa podczas mejozy nastpuje
+redukcja materialu genetycznego z 2n do 1n, aby po polczeniu si gamet mie w dalszym
+cigu tak sam liczb chromosomów jak organizmy rodzicielskie" lub opisujcych jedynie
+cykle yciowe wybranych organizmów, np. ,,U rolin mejoza prowadzi do powstania
+haploidalnych zarodników, które daj pocztek gametofitom produkujcym gamety, które si
+lcz, dajc pocztek diploidalnym sporofitom produkujcym zarodniki - cykl si zamyka".
+
+Zadanie 4.1. (0-1)
+
+               Wymagania ogólne                         Wymagania szczególowe
+
+III. Poglbienie znajomoci metodyki          IV. Przegld rónorodnoci organizmów.
+bada biologicznych.                         7. Roliny - odywianie si. Zdajcy:
+Zdajcy [...] przeprowadza i dokumentuje     1) wskazuje glówne makro- i mikroelementy
+obserwacje i dowiadczenia biologiczne;      ([...] N [...], P, K [...]) oraz okrela ich ródla
+[...] formuluje wnioski z przeprowadzonych  dla rolin.
+obserwacji.                                 I. Budowa chemiczna organizmów.
+V. Rozumowanie i argumentacja.              1. Zagadnienia ogólne. Zdajcy:
+Zdajcy objania i komentuje informacje,      4) wyjania znaczenie wody dla organizmów
+odnosi si krytycznie do przedstawionych     [...].
+informacji [...].
+
+Zasady oceniania
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+1 - P, 2 - P.
+
+                                                                          Strona 9 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zadanie 4.2. (0-1)
+
+               Wymaganie ogólne                                   Wymagania szczególowe
+
+III. Poglbienie znajomoci metodyki                    IV. Przegld rónorodnoci organizmów.
+bada biologicznych.                                   7. Roliny - odywianie si. Zdajcy:
+Zdajcy [...] przeprowadza i dokumentuje               1) wskazuje glówne makro- i mikroelementy
+obserwacje i dowiadczenia biologiczne;                ([...] N [...], P, K [...]) oraz okrela ich ródla
+[...] formuluje wnioski z przeprowadzonych            dla rolin.
+obserwacji i dowiadcze.                               I. Budowa chemiczna organizmów.
+                                                      1. Zagadnienia ogólne. Zdajcy:
+                                                      4) wyjania znaczenie wody dla organizmów
+                                                      [...].
+
+Zasady oceniania
+1 pkt - za sformulowanie poprawnego wniosku, uwzgldniajcego negatywny wplyw
+
+         nawoenia oraz pozytywny wplyw podlewania na owocowanie borówki wysokiej.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Przykladowe rozwizanie
+· Nawoenie mineralne podloa skutkuje zmniejszeniem plonowania borówki wysokiej,
+
+    a wysza wilgotno podloa zwiksza to plonowanie.
+· Wysza wilgotno podloa i brak nawoenia mineralnego powoduje wytworzenie
+
+    wikszych plonów.
+· Wysza wilgotno zwiksza owocowanie borówki wysokiej, a nawoenie NPK zmniejsza
+
+    owocowanie.
+
+Zadanie 4.3. (0-1)
+
+               Wymaganie ogólne                                   Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych                I. Budowa chemiczna organizmów.
+poziomach organizacji ycia.                           1. Zagadnienia ogólne. Zdajcy:
+Zdajcy przedstawia zwizki midzy                       2) wymienia pierwiastki biogenne ([...] N, P
+struktur a funkcj na rónych poziomach                 [...]) i omawia ich znaczenie; [...] omawia
+organizacji ycia [...].                               znaczenie makroelementów i wybranych
+                                                      mikroelementów ([...] K [...]).
+
+Zasady oceniania
+1 pkt - za przyporzdkowanie roli pierwiastków do ich symboli.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+N - 2, P - 1, K - 4.
+
+Strona 10 z 33
+                                        Zasady oceniania rozwiza zada
+
+Zadanie 5.1. (0-2)                                  Wymaganie szczególowe
+
+                Wymaganie ogólne        III. Metabolizm.
+                                        4. Fotosynteza. Zdajcy:
+ IV. Poszukiwanie, wykorzystanie        4) opisuje etapy cyklu Calvina i wskazuje je
+ i tworzenie informacji.                na schemacie [...].
+ Zdajcy odczytuje, selekcjonuje [...]
+ i przetwarza informacje pozyskane
+ z rónorodnych ródel [...].
+
+Zasady oceniania
+2 pkt - za podanie poprawnych nazw trzech etapów cyklu Calvina.
+1 pkt - za podanie poprawnych nazw dwóch etapów cyklu Calvina.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+A. karboksylacja (RuBP); odpowied dopuszczalna: asymilacja wgla / asymilacja CO2
+B. redukcja (PGA); odpowied dopuszczalna: hydrogenacja PGA / uwodornienie PGA
+C. regeneracja (akceptora CO2 - RuBP); odpowied dopuszczalna: odtworzenie RuBP
+
+Zadanie 5.2. (0-1)
+
+               Wymagania ogólne                     Wymagania szczególowe
+
+I. Poznanie wiata organizmów na rónych  III. Metabolizm.
+poziomach organizacji ycia.             4. Fotosynteza. Zdajcy:
+Zdajcy [...] przedstawia i wyjania      1) przedstawia proces fotosyntezy [...];
+procesy i zjawiska biologiczne;         4) opisuje etapy cyklu Calvina i wskazuje je
+przedstawia zwizki midzy struktur       na schemacie [...].
+a funkcj na rónych poziomach
+organizacji ycia [...].
+IV. Poszukiwanie, wykorzystanie
+i tworzenie informacji.
+Zdajcy odczytuje, selekcjonuje [...]
+i przetwarza informacje pozyskane
+z rónorodnych ródel [...].
+
+Zasady oceniania
+1 pkt - za poprawne dokoczenie zdania.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+C1
+
+                                                                           Strona 11 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zadanie 5.3. (0-2)
+
+               Wymagania ogólne                                   Wymagania szczególowe
+
+IV. Poszukiwanie, wykorzystanie                       III. Metabolizm.
+i tworzenie informacji.                               4. Fotosynteza. Zdajcy:
+Zdajcy odczytuje, selekcjonuje [...]                  4) opisuje etapy cyklu Calvina i wskazuje je
+i przetwarza informacje pozyskane                     na schemacie [...].
+z rónorodnych ródel [...].                            IV. Przegld rónorodnoci organizmów.
+I. Poznanie wiata organizmów na rónych                7. Roliny - odywianie si. Zdajcy:
+poziomach organizacji ycia.                           3) przedstawia warunki wymiany gazowej
+Zdajcy [...] przedstawia i wyjania                    u rolin, wskazujc odpowiednie adaptacje
+procesy i zjawiska biologiczne [...].                 w ich budowie anatomicznej;
+                                                      4) wskazuje drogi, jakimi do lici docieraj
+                                                      substraty fotosyntezy [...].
+
+Zasady oceniania
+2 pkt - za poprawn ocen trzech stwierdze.
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+1. - F, 2. - F, 3. - F.
+
+Zadanie 5.4. (0-2)                                                Wymagania szczególowe
+
+                Wymaganie ogólne                      III. Metabolizm.
+ V. Rozumowanie i argumentacja.                       4. Fotosynteza. Zdajcy:
+ Zdajcy [...] wyjania zalenoci                        1) przedstawia proces fotosyntezy [...];
+ przyczynowo-skutkowe, formuluje wnioski              3) [...] przedstawia funkcje obu fotosystemów
+ [...].                                               [...].
+                                                      IV. Przegld rónorodnoci organizmów.
+                                                      7. Roliny - odywianie si. Zdajcy:
+                                                      3) przedstawia warunki wymiany gazowej
+                                                      u rolin, wskazujc odpowiednie adaptacje
+                                                      w ich budowie anatomicznej.
+
+Strona 12 z 33
+                                            Zasady oceniania rozwiza zada
+
+Zasady oceniania
+2 pkt - za poprawne wykazanie zwizku midzy ograniczeniem procesu fotooddychania a:
+
+         1) dwuetapowym mechanizmem wizania dwutlenku wgla z uwzgldnieniem
+             wysokiej dostpnoci CO2 dla RuBisCO ORAZ
+
+         2) brakiem PSII w komórkach pochew okolowizkowych z uwzgldnieniem niskiej
+             dostpnoci O2 dla RuBisCO.
+
+1 pkt - za poprawne wykazanie zwizku midzy ograniczeniem procesu fotooddychania a:
+         1) dwuetapowym mechanizmem wizania dwutlenku wgla z uwzgldnieniem
+             wysokiej dostpnoci CO2 dla RuBisCO ALBO
+         2) brakiem PSII w komórkach pochew okolowizkowych z uwzgldnieniem niskiej
+             dostpnoci O2 dla RuBisCO.
+
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· 1. To pozwala na znaczne zwikszenie stenia CO2 w komórkach, gdzie znajduje si
+
+          RuBisCO wice CO2.
+     2. Dziki temu nie jest wytwarzany tlen, który konkurowalby z CO2 o miejsce aktywne
+
+         RuBisCO.
+
+· 1. Dwuetapowy mechanizm wizania CO2 umoliwia wzrost stenia CO2 w komórkach
+         pochwy okolowizkowej, przez co RuBisCO czciej lczy si z CO2 ni z O2.
+
+     2. Poniewa w komórce brak jest PS II, nie powstaje tlen z fotolizy wody, który przy
+         wysokiej temperaturze otoczenia czciej ni CO2 przylczylby si do RuBisCO, czyli
+         wzmagaloby to fotooddychanie.
+
+· 1. Dziki temu jest wysokie stenie CO2 w komórkach z RuBisCO.
+     2. Powoduje to niskie stenie O2 tam, gdzie dziala RuBisCO.
+
+Uwaga:
+Uznaje si odpowiedzi, w których konkurencja dwutlenku wgla i tlenu o miejsce aktywne
+RuBisCO zostala opisana holistycznie tylko w jednej czci odpowiedzi, bez powtórzenia
+w drugiej czci, np.:
+
+1. Pozwala to na zwikszenie stenia CO2 w komórkach pochwy okolowizkowej, w których
+   zachodzi cykl Calvina, przez co do RuBP jest przylczany dwutlenek wgla, a nie - tlen.
+
+2. Dziki temu w tych komórkach nie zachodzi fotoliza wody, co obnia w nich stenie tlenu.
+
+Zadanie 6.1. (0-1)
+
+               Wymaganie ogólne                         Wymaganie szczególowe
+
+III. Poglbienie znajomoci metodyki          IV. Przegld rónorodnoci organizmów.
+bada biologicznych.                         9. Roliny - reakcja na bodce. Zdajcy:
+Zdajcy [...] przeprowadza i dokumentuje     2) przedstawia rol auksyn [...]
+obserwacje i dowiadczenia biologiczne;      w funkcjonowaniu roliny [...].
+[...] formuluje wnioski z przeprowadzonych
+obserwacji i dowiadcze.
+
+                                            Strona 13 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zasady oceniania
+1 pkt - za poprawne sformulowanie wniosku uwzgldniajcego hamujcy wplyw auksyn
+
+         wytwarzanych przez mlode licie na rozwój strefy odcinajcej w ogonkach lici
+         jabloni.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Jest on hamujcy.
+· Auksyny syntetyzowane przez mlode licie jabloni hamuj rozwój strefy odcinajcej.
+· Mlode licie jabloni wytwarzaj auksyny, które hamuj rozwój strefy odcinajcej.
+· Potwierdzono hipotez postawion powyej.
+
+Zadanie 6.2. (0-1)
+
+               Wymagania ogólne                                   Wymaganie szczególowe
+
+V. Rozumowanie i argumentacja.                        IV. Przegld rónorodnoci organizmów.
+Zdajcy objania i komentuje informacje                 7. Roliny - odywianie si. Zdajcy:
+[...] wyjania zalenoci przyczynowo-                   2) okrela sposób pobierania wody [...] oraz
+-skutkowe [...].                                      mechanizmy transportu wody ([...]
+I. Poznanie wiata organizmów na rónych                transpiracja, sila ssca lici [...]).
+poziomach organizacji ycia.
+Zdajcy [...] przedstawia i wyjania
+procesy i zjawiska biologiczne [...].
+
+Zasady oceniania
+1 pkt - za poprawne przedstawienie, na czym polega adaptacja, uwzgldniajce
+
+         ograniczenie transpiracji (szparkowej) w warunkach obnionej dostpnoci wody
+         w glebie.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Rolina zrzuca licie, aby nie dopuci w procesie transpiracji do utraty wody, której
+
+    dostpno spada w okresie zimowym.
+· Dostpno wody w glebie jest w zimie mala, dlatego roliny zrzucaj licie, aby
+
+    ograniczy parowanie wody z lici i w ten sposób zapobiegaj nadmiernej utracie wody.
+· Ta adaptacja polega na ograniczeniu transpiracji przez licie. W zimie dostpno wody
+
+    jest niska i rolina nie bylaby w stanie pobra przez korzenie tyle wody, ile tracilaby przez
+    transpiracj.
+
+Strona 14 z 33
+                                        Zasady oceniania rozwiza zada
+
+Zadanie 7.1. (0-2)
+
+               Wymagania ogólne                     Wymagania szczególowe
+
+V. Rozumowanie i argumentacja.          IV. Przegld rónorodnoci organizmów.
+Zdajcy objania i komentuje informacje   12. Zwierzta krgowe. Zdajcy:
+[...] wyjania zalenoci przyczynowo-     1) wymienia cechy charakterystyczne [...]
+-skutkowe [...].                        plazów [...] i ssaków w powizaniu ze
+I. Poznanie wiata organizmów na rónych  rodowiskiem i trybem ycia.
+poziomach organizacji ycia.             13. Porównanie struktur zwierzt
+Zdajcy [...] przedstawia zwizki midzy   odpowiedzialnych za realizacj rónych
+struktur a funkcj na rónych poziomach   czynnoci yciowych. Zdajcy:
+organizacji ycia [...].                 10) na przykladzie poznanych zwierzt
+                                        okrela sposoby wymiany gazowej [...].
+
+Zasady oceniania
+2 pkt - za poprawne wyjanienie, uwzgldniajce rónice:
+
+     · w budowie pluc - pluca plazów s workowate / slabo pofaldowane / nie maj
+         pcherzyków, a wic maj mniejsz powierzchni w porównaniu do
+         pcherzykowatych / silnie pofaldowanych / majcych pcherzyki pluc ssaków ORAZ
+
+     · w mechanizmie wentylacji pluc - zmiany objtoci klatki piersiowej u ssaków
+         zapewniaj bardziej wydajn wentylacj w porównaniu z plazami, które nie maj
+         klatki piersiowej / wentyluj pluca za pomoc ruchów dna jamy gbowo-gardzielowej.
+
+1 pkt - za poprawne wyjanienie, uwzgldniajce rónice:
+     · w budowie pluc - pluca plazów s workowate / slabo pofaldowane / nie maj
+         pcherzyków, a wic maj mniejsz powierzchni w porównaniu do
+         pcherzykowatych / silnie pofaldowanych / majcych pcherzyki pluc ssaków ALBO
+     · w mechanizmie wentylacji pluc - zmiany objtoci klatki piersiowej u ssaków
+         zapewniaj bardziej wydajn wentylacj w porównaniu z plazami, które nie maj
+         klatki piersiowej / wentyluj pluca za pomoc ruchów dna jamy gbowo-gardzielowej.
+
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Plazy maj pluca workowe, o mniejszym stosunku powierzchni do objtoci ni ssaki,
+
+    które maj pcherzykowate pluca. Plazy nie maj klatki piersiowej, któr maj ssaki,
+    a której ruchy umoliwiaj efektywne przeprowadzanie wdechu i wydechu.
+· Plazy maj workowate pluca o mniejszej powierzchni, a ssaki maj pluca o budowie
+    pcherzykowej i maj wiksz powierzchni wymiany gazowej. Plazy prowadz
+    wentylacj za pomoc ruchów dna jamy gbowej, a ssaki - za pomoc mini
+    midzyebrowych wymuszajcych ruchy klatki piersiowej, i dlatego ssaki wymieniaj
+    wicej powietrza ni plazy.
+· Pluca plazów s slabiej pofaldowane ni pluca ssaków i dlatego maj mniejsz
+    powierzchni. Plazy, w przeciwiestwie do ssaków, nie maj klatki piersiowej, dlatego
+    wentylacj pluc zapewniaj ruchy dna jamy gbowo-gardzielowej, które s mniej wydajne
+    ni zmiany objtoci klatki piersiowej.
+· Plazy maj workowate pluca, a wentylacja odbywa si przy udziale ruchów jamy gbowo-
+    -gardzielowej, co jest mniej efektywne ni pcherzykowate pluca ssaków o duej
+    powierzchni oraz ruchy klatki piersiowej i przepony.
+
+                                        Strona 15 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Uwagi:
+Uznaje si odpowiedzi odnoszce si do rónicy w mechanizmie wentylacji w postaci
+tloczenia powietrza do pluc u plazów i zasysania powietrza do pluc przez ssaki, np. ,,Plazy
+wentyluj pluca poprzez wtlaczanie powietrza, a ssaki zasysaj powietrze".
+Nie uznaje si odpowiedzi odnoszcych si do mieszania si powietrza wdychanego
+i wydychanego, np. ,,U ssaków w mniejszym stopniu ni u plazów miesza si powietrze
+wdychane i wydychane".
+
+Zadanie 7.2. (0-1)
+
+               Wymagania ogólne                                   Wymaganie szczególowe
+
+V. Rozumowanie i argumentacja.                        IV. Przegld rónorodnoci organizmów.
+Zdajcy objania i komentuje informacje                 12. Zwierzta krgowe. Zdajcy:
+[...] wyjania zalenoci przyczynowo-                   1) wymienia cechy charakterystyczne [...]
+-skutkowe [...].                                      plazów [...] w powizaniu ze rodowiskiem
+I. Poznanie wiata organizmów na rónych                i trybem ycia.
+poziomach organizacji ycia.
+Zdajcy [...] przedstawia i wyjania
+zalenoci midzy organizmem
+a rodowiskiem [...].
+
+Zasady oceniania
+1 pkt - za poprawne okrelenie gromadzenia mocznika w pobieraniu wody, uwzgldniajce
+
+         zapewnienie hiperosmotycznoci plynów ustrojowych wzgldem rodowiska
+         zewntrznego LUB zapewnienie wydajnego (osmotycznego) naplywu wody.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Osocze jest hipertoniczne.
+· Dziki temu osocze plaza jest silnie hipertoniczne w stosunku do otaczajcej go wody.
+· Dziki temu ich plyny ustrojowe s hiperosmotyczne wzgldem slodkiej wody, w której
+
+    plazy przebywaj.
+· Plyny ustrojowe zawierajce duo mocznika maj wiksz osmolarno ni woda
+
+    w rodowisku ycia plazów.
+· Umoliwia to osmotyczny naplyw wody do ciala plaza.
+· Zapewnia to odpowiednio wysoki przeplyw wody przez skór do plynów ustrojowych
+
+    plaza.
+
+Zadanie 8.1. (0-2)
+
+               Wymagania ogólne                                   Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych                IV. Przegld rónorodnoci organizmów
+poziomach organizacji ycia.                           11. Zwierzta bezkrgowe. Zdajcy:
+Zdajcy opisuje [...] organizmy.                       3) przedstawia budow, czynnoci yciowe
+                                                      i tryb ycia parzydelkowców [...].
+
+Strona 16 z 33
+                                         Zasady oceniania rozwiza zada
+
+ IV. Poszukiwanie, wykorzystanie
+ i tworzenie informacji.
+ Zdajcy odczytuje, [...] przetwarza
+ informacje pozyskane z rónorodnych
+ ródel [...].
+
+Zasady oceniania
+2 pkt - za wskazanie rozmnaania plciowego wraz poprawnym z uzasadnieniem
+
+         odnoszcym si do obecnoci gonad ORAZ za wskazanie rozmnaania
+         bezplciowego wraz z uzasadnieniem odwolujcym si do obecnoci pka.
+1 pkt - za wskazanie tylko rozmnaania plciowego wraz z poprawnym uzasadnieniem
+         odnoszcym si do obecnoci gonad ALBO tylko za wskazanie rozmnaania
+         bezplciowego wraz z uzasadnieniem odwolujcym si do obecnoci pka.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Przykladowe rozwizanie
+1. Rozmnaanie plciowe, o czym wiadczy obecno u stulbi zielonej gonad (mskiej
+
+    i eskiej).
+2. Rozmnaanie bezplciowe (przez pczkowanie), poniewa wida tworzcy si pk na
+
+    polipie stulbi zielonej.
+
+Uwaga:
+Uznaje si odpowiedzi ,,rozmnaanie wegetatywne" oraz ,,pczkowanie" w odniesieniu do
+rozmnaania bezplciowego.
+
+Zadanie 8.2. (0-2)
+
+               Wymagania ogólne                      Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych   IV. Przegld rónorodnoci organizmów
+poziomach organizacji ycia.              11. Zwierzta bezkrgowe. Zdajcy:
+Zdajcy opisuje [...] organizmy [...].    3) przedstawia budow, czynnoci yciowe
+V. Rozumowanie i argumentacja.           i tryb ycia parzydelkowców [...].
+Zdajcy objania i komentuje informacje,
+odnosi si krytycznie do przedstawionych
+informacji [...].
+
+Zasady oceniania
+2 pkt - za poprawn ocen trzech stwierdze.
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+1. - P, 2. - P, 3. - F.
+
+                                                                          Strona 17 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zadanie 9.1. (0-1)                                                Wymaganie szczególowe
+
+                Wymaganie ogólne                      V. Budowa i funkcjonowanie organizmu
+                                                      czlowieka.
+ II. Poglbienie wiadomoci dotyczcych                  4. Uklad pokarmowy i przebieg procesów
+ budowy i funkcjonowania organizmu                    trawiennych. Zdajcy:
+ ludzkiego.                                           3) przedstawia i porównuje proces trawienia,
+ Zdajcy objania funkcjonowanie                        wchlaniania i transportu bialek, cukrów [...].
+ organizmu ludzkiego na rónych
+ poziomach zloonoci [...].
+
+Zasady oceniania
+1 pkt - za wybór dwóch poprawnych odpowiedzi.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie                            Proces                  Produkty
+           Substraty  (dekarboksylacja / deaminacja)  ketokwasy + amoniak
+                       (glikoliza / glikogenogeneza)
+         aminokwasy                                           glikogen
+            glukoza
+
+Zadanie 9.2. (0-1)                                                Wymaganie szczególowe
+
+                Wymagania ogólne                      V. Budowa i funkcjonowanie organizmu
+                                                      czlowieka.
+ V. Rozumowanie i argumentacja.                       4. Uklad pokarmowy i przebieg procesów
+ Zdajcy [...] wyjania zalenoci                        trawiennych. Zdajcy:
+ przyczynowo-skutkowe [...].                          3) przedstawia [...] proces trawienia,
+ II. Poglbienie wiadomoci dotyczcych                  wchlaniania i transportu [...] tluszczów.
+ budowy i funkcjonowania organizmu
+ ludzkiego.
+ Zdajcy objania funkcjonowanie
+ organizmu ludzkiego na rónych
+ poziomach zloonoci; dostrzega zwizki
+ midzy struktur a funkcj na kadym
+ z tych poziomów.
+
+Zasady oceniania
+1 pkt - za poprawne wyjanienie, uwzgldniajce emulgacj lipidów i - w konsekwencji -
+
+         zwikszenie powierzchni kontaktu lipazy z tluszczami LUB uwzgldniajce ulatwienie
+         kontaktu lipazy z tluszczami (przez sole kwasów ólciowych lub fosfolipidy)
+         na granicy faz - wodnej i lipidowej.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Strona 18 z 33
+                                        Zasady oceniania rozwiza zada
+
+Przykladowe rozwizania
+· ól fizycznie rozbija krople zwizków tluszczowych na mniejsze czci, co zwiksza
+
+    powierzchni trawienia tluszczów przez enzymy.
+· Lipaza jest enzymem rozpuszczalnym w wodzie, a sole kwasów ólciowych umoliwiaj
+
+    kontakt lipazy z tluszczami, nierozpuszczalnymi w wodzie.
+
+Uwagi:
+Uznaje si odpowiedzi odnoszce si do neutralizacji treci oldkowej przez ól
+i zapewnienia optymalnych warunków do dzialania lipaz, np. ,,ól wtrobowa ma odczyn
+zasadowy i dziki temu zapewnia wlaciwe pH dla dzialania lipazy jelitowej".
+Uznaje si odpowiedzi odnoszce si do ulatwiania rozpuszczania produktów lipolizy
+i przesunicie równowagi reakcji w stron monoglicerydów, np. ,,Sole kwasów ólciowych
+ulatwiaj rozpuszczanie produktów trawienia trójglicerydów. Dziki temu równowaga reakcji
+hydrolizy zostaje przesunita w prawo - w stron monoglicerydów, a reakcja zachodzi
+szybciej".
+Uznaje si odpowiedzi odnoszce si do obecnoci w ólci kolipazy aktywujcej lipazy,
+np. ,,W ólci znajduje si bialko - kolipaza, która jest aktywatorem lipazy trzustkowej".
+Nie uznaje si odpowiedzi odnoszcych si do emulgowania tluszczów do poziomu
+czsteczek, np. ,,ól rozbija krople tluszczu na czsteczki, które s nastpnie trawione
+przez lipaz", poniewa proces emulgacji prowadzi jedynie do powstania mniejszych kropel
+(czstek) tluszczów.
+
+Zadanie 10.1. (0-1)
+
+               Wymaganie ogólne                     Wymagania szczególowe
+
+I. Poznanie wiata organizmów na rónych  I. Budowa chemiczna organizmów.
+poziomach organizacji ycia.             1. Zagadnienia ogólne. Zdajcy:
+Zdajcy opisuje [...] organizmy [...];   1) przedstawia sklad chemiczny organizmów
+przedstawia zwizki midzy struktur       [...].
+a funkcj na rónych poziomach            IV. Przegld rónorodnoci organizmów.
+organizacji ycia [...].                 11. Zwierzta bezkrgowe. Zdajcy:
+                                        7) [opisuje] budow i czynnoci yciowe
+                                        [owadów].
+                                        V. Budowa i funkcjonowanie organizmu
+                                        czlowieka.
+                                        5. Uklad oddechowy. Zdajcy:
+                                        1) opisuje budow [...] narzdów
+                                        wchodzcych w sklad ukladu oddechowego.
+
+Zasady oceniania
+1 pkt - za podanie dwóch poprawnych nazw.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+Bialko stanowice glówny skladnik piercieni tchawicy czlowieka: kolagen.
+Polisacharyd stanowicy glówny skladnik zgrubie kutykuli w tchawkach owadów: chityna.
+
+                                                                           Strona 19 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Uwaga:
+Dopuszcza si opisow odpowied ,,polimer N-acetyloglukozaminy" zamiast nazwy ,,chityna".
+
+Zadanie 10.2. (0-2)
+
+               Wymagania ogólne                                   Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych                V. Budowa i funkcjonowanie organizmu
+poziomach organizacji ycia.                           czlowieka.
+Zdajcy opisuje [...] organizmy [...].                 5. Uklad oddechowy. Zdajcy:
+II. Poglbienie wiadomoci dotyczcych                   1) opisuje budow [...] narzdów
+budowy i funkcjonowania organizmu                     wchodzcych w sklad ukladu oddechowego.
+ludzkiego.
+Zdajcy objania funkcjonowanie
+organizmu ludzkiego na rónych
+poziomach zloonoci; dostrzega zwizki
+midzy struktur a funkcj na kadym
+z tych poziomów.
+
+Zasady oceniania
+2 pkt - za wybór trzech poprawnych okrele.
+1 pkt - za wybór dwóch poprawnych okrele.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+Tchawica czlowieka rozpoczyna si bezporednio za (gardlem / krtani), a na dolnym kocu
+dzieli si na (oskrzela glówne / oskrzeliki). Tylna ciana tchawicy jest splaszczona i tworz
+j minie (gladkie / poprzecznie prkowane).
+
+Zadanie 11.1. (0-2)                                               Wymagania szczególowe
+
+                Wymagania ogólne                      IV. Przegld rónorodnoci organizmów.
+                                                      13. Porównanie struktur zwierzt
+ III. Poglbienie znajomoci metodyki                   odpowiedzialnych za realizacj rónych
+ bada biologicznych.                                  czynnoci yciowych. Zdajcy:
+ Zdajcy [...] formuluje wnioski                       9) wykazuje znaczenie barwników
+ z przeprowadzonych obserwacji                        oddechowych na przykladzie hemoglobiny.
+ i dowiadcze.                                         V. Budowa i funkcjonowanie organizmu
+ IV. Poszukiwanie, wykorzystanie                      czlowieka.
+ i tworzenie informacji.                              5. Uklad oddechowy. Zdajcy:
+ Zdajcy odczytuje [...] i przetwarza                  4) okrela rol krwi w transporcie tlenu [...].
+ informacje pozyskane z rónorodnych
+ ródel [...].
+ II. Poglbienie wiadomoci dotyczcych
+ budowy i funkcjonowania organizmu
+ ludzkiego.
+
+Strona 20 z 33
+                                      Zasady oceniania rozwiza zada
+
+ Zdajcy objania funkcjonowanie
+ organizmu ludzkiego na rónych
+ poziomach zloonoci [...].
+
+Zasady oceniania
+2 pkt - za poprawn ocen trzech stwierdze.
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+1. - P, 2. - F, 3. - F.
+
+Zadanie 11.2. (0-1)                               Wymagania szczególowe
+
+                Wymagania ogólne      IV. Przegld rónorodnoci organizmów.
+                                      13. Porównanie struktur zwierzt
+ II. Poglbienie wiadomoci dotyczcych  odpowiedzialnych za realizacj rónych
+ budowy i funkcjonowania organizmu    czynnoci yciowych. Zdajcy:
+ ludzkiego.                           9) wykazuje znaczenie barwników
+ Zdajcy objania funkcjonowanie        oddechowych na przykladzie hemoglobiny.
+ organizmu ludzkiego na rónych        V. Budowa i funkcjonowanie organizmu
+ poziomach zloonoci [...].            czlowieka.
+ IV. Poszukiwanie, wykorzystanie      5. Uklad oddechowy. Zdajcy:
+ i tworzenie informacji.              4) okrela rol krwi w transporcie tlenu [...].
+ Zdajcy odczytuje [...] i przetwarza
+ informacje pozyskane z rónorodnych
+ ródel [...].
+
+Zasady oceniania
+1 pkt - za wybór dwóch poprawnych okrele.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+Podwyszone stenie 2,3-BPG w erytrocytach ciarnych kobiet jest przyczyn
+(obnionego / podwyszonego) powinowactwa hemoglobiny matki do tlenu,
+co (ulatwia / utrudnia) dyfuzj tlenu z czci macicznej loyska do czci plodowej loyska.
+
+Zadanie 11.3. (0-1)                               Wymagania szczególowe
+
+                Wymaganie ogólne      IV. Przegld rónorodnoci organizmów.
+                                      13. Porównanie struktur zwierzt
+ II. Poglbienie wiadomoci dotyczcych  odpowiedzialnych za realizacj rónych
+ budowy i funkcjonowania organizmu    czynnoci yciowych. Zdajcy:
+ ludzkiego.                           9) wykazuje znaczenie barwników
+ Zdajcy objania funkcjonowanie        oddechowych na przykladzie hemoglobiny.
+ organizmu ludzkiego na rónych        V. Budowa i funkcjonowanie organizmu
+ poziomach zloonoci [...].            czlowieka.
+
+                                                                           Strona 21 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+                                                              5. Uklad oddechowy. Zdajcy:
+                                                              4) okrela rol krwi w transporcie tlenu
+                                                              i dwutlenku wgla.
+                                                              6. Uklad krwionony. Zdajcy:
+                                                              4) charakteryzuje funkcje poszczególnych
+                                                              skladników krwi (krwinki [...]).
+
+Zasady oceniania
+1 pkt - za poprawne podanie funkcji hemoglobiny innej ni transportowanie tlenu.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Transportuje tlenek wgla(IV) / ditlenek wgla / dwutlenek wgla / CO2.
+· Transportuje protony / H+.
+· Stanowi element buforujcy krwi (wic nadmiar H+) / minimalizuje efekt Bohra /
+
+    zapobiega zakwaszeniu osocza / utrzymuje równowag kwasowo-zasadow osocza
+    krwi.
+
+Uwaga:
+Nie uznaje si odpowiedzi odnoszcych si do magazynowania lub transportu elaza,
+poniewa te funkcje pelni inne wyspecjalizowane bialka: ferrytyna i transferryna.
+
+Zadanie 12.1. (0-2)                                               Wymagania szczególowe
+
+                Wymagania ogólne                      V. Budowa i funkcjonowanie organizmu
+                                                      czlowieka.
+ III. Poglbienie znajomoci metodyki                   9. Uklad nerwowy. Zdajcy:
+ bada biologicznych.                                  1) opisuje budow i funkcje [...] nerwów;
+ Zdajcy [...] formuluje wnioski                       4) [...] opisuje rol przekaników nerwowych
+ z przeprowadzonych obserwacji                        w komunikacji w ukladzie nerwowym.
+ i dowiadcze.
+ II. Poglbienie wiadomoci dotyczcych
+ budowy i funkcjonowania organizmu
+ ludzkiego.
+ Zdajcy objania funkcjonowanie
+ organizmu ludzkiego na rónych
+ poziomach zloonoci [...].
+
+Zasady oceniania
+2 pkt - za poprawn ocen trzech stwierdze.
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+1. - P, 2. - P, 3. - F.
+
+Strona 22 z 33
+                                        Zasady oceniania rozwiza zada
+
+Zadanie 12.2. (0-1)
+
+               Wymagania ogólne                     Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych  I. Budowa chemiczna organizmów.
+poziomach organizacji ycia.             4. Bialka. Zdajcy:
+Zdajcy opisuje [...] organizmy [...],   5) opisuje struktur 1-, 2-, 3- i 4-rzdow
+przedstawia zwizki midzy struktur       bialek.
+a funkcj na rónych poziomach
+organizacji ycia [...].
+IV. Poszukiwanie, wykorzystanie
+i tworzenie informacji.
+Zdajcy odczytuje [...] i przetwarza
+informacje pozyskane z rónorodnych
+ródel [...].
+
+Zasady oceniania
+1 pkt - za poprawne okrelenie, e toksyna botulinowa jest bialkiem o strukturze 4-rzdowej,
+
+         wraz z poprawnym uzasadnieniem, odnoszcym si do obecnoci w budowie tego
+         bialka dwóch lacuchów polipeptydowych (polczonych mostkiem disiarczkowym).
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Toksyna botulinowa jest bialkiem o strukturze 4-rzdowej, poniewa zbudowana jest
+
+    z lacucha lekkiego oraz lacucha cikiego.
+· Ma struktur 4-rzdow, poniewa toksyna botulinowa jest zbudowana z dwóch
+
+    lacuchów polipeptydowych, a bialko o strukturze 4-rzdowej musi zawiera co najmniej
+    dwa lacuchy polipeptydowe.
+· 4-rzdowa, bo ma dwa lacuchy, polczone mostkiem disiarczkowym.
+· Struktura IV-rzdowa, bo bialko ma dwie podjednostki.
+
+Uwagi:
+Nie uznaje si odpowiedzi niepelnych - nieodwolujcych si do struktury toksyny botulinowej
+opisanej w tekcie, ale tylko do definicji struktury 4-rzdowej, np. ,,Toksyna botulinowa ma
+struktur 4-rzdow, poniewa ma wicej ni jeden lacuch polipeptydowy" albo ,,Struktura
+4-rzdowa, poniewa zbudowana jest z lacuchów polipeptydowych".
+Nie uznaje si odpowiedzi odnoszcych si wylcznie do obecnoci mostka disiarczkowego,
+np. ,,IV-rzdowa, poniewa w budowie bialka wystpuje mostek disiarczkowy", poniewa
+mostki disiarczkowe mog wystpowa take w strukturze III-rzdowej bialka.
+Nie uznaje si odpowiedzi odnoszcych si do obecnoci w strukturze toksyny botulinowej
+wicej ni jednego mostka disiarczkowego lczcego lacuchy, np. ,,IV-rzdowa, poniewa
+dwie podjednostki s polczone mostkami disiarczkowymi".
+
+Zadanie 12.3. (0-1)                                 Wymagania szczególowe
+
+                Wymagania ogólne        V. Budowa i funkcjonowanie organizmu
+ IV. Poszukiwanie, wykorzystanie        czlowieka.
+ i tworzenie informacji.
+
+                                        Strona 23 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zdajcy odczytuje, selekcjonuje [...]                  9. Uklad nerwowy. Zdajcy:
+i przetwarza informacje pozyskane                     1) opisuje budow i funkcje [...] nerwów;
+z rónorodnych ródel [...].                            4) [...] opisuje rol przekaników nerwowych
+I. Poznanie wiata organizmów na rónych                w komunikacji w ukladzie nerwowym.
+poziomach organizacji ycia.
+Zdajcy opisuje [...], przedstawia [...]
+procesy i zjawiska biologiczne [...].
+II. Poglbienie wiadomoci dotyczcych
+budowy i funkcjonowania organizmu
+ludzkiego.
+Zdajcy objania funkcjonowanie
+organizmu ludzkiego na rónych
+poziomach zloonoci [...].
+
+Zasady oceniania
+1 pkt - za poprawne okrelenie kolejnoci procesów fizjologicznych zachodzcych
+
+         w synapsie nerwowo-miniowej.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie                                                               Kolejno
+                                                                              1
+ Proces fizjologiczny                                                         4
+                                                                              2
+ Dotarcie impulsu nerwowego do synapsy nerwowo-miniowej i utworzenie          3
+ kompleksu fuzyjnego przez bialka transblonowe (SNARE).
+ Depolaryzacja blony komórkowej komórki miniowej i powstanie potencjalu
+ czynnociowego.
+ Fuzja pcherzyków synaptycznych z blon presynaptyczn i uwolnienie
+ acetylocholiny do szczeliny synaptycznej.
+
+ Wizanie si acetylocholiny z miniowym receptorem blonowym.
+
+Zadanie 13.1. (0-1)
+
+               Wymagania ogólne                                   Wymaganie szczególowe
+
+V. Rozumowanie i argumentacja.                        VI. Genetyka i biotechnologia.
+Zdajcy objania i komentuje informacje                 4. Genetyka mendlowska. Zdajcy:
+[...], wyjania zalenoci przyczynowo-                  1) [...] stosuje podstawowe pojcia genetyki
+-skutkowe [...].                                      klasycznej (allel, allel dominujcy, allel
+I. Poznanie wiata organizmów na rónych                recesywny [...], homozygota, heterozygota,
+poziomach organizacji ycia.                           genotyp [...]).
+Zdajcy [...] przedstawia [...] procesy
+i zjawiska biologiczne [...].
+
+Strona 24 z 33
+                                          Zasady oceniania rozwiza zada
+
+Zasady oceniania
+1 pkt - za poprawne zapisanie dwóch moliwych genotypów.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+AA oraz Aa
+
+Zadanie 13.2. (0-1)
+
+               Wymagania ogólne                       Wymaganie szczególowe
+
+V. Rozumowanie i argumentacja.            VI. Genetyka i biotechnologia.
+Zdajcy objania i komentuje informacje     4. Genetyka mendlowska. Zdajcy:
+[...], wyjania zalenoci przyczynowo-      3) [...] analizuje krzyówki jednogenowe [...]
+-skutkowe [...].                          (z dominacj zupeln [...]) oraz okrela
+I. Poznanie wiata organizmów na rónych    prawdopodobiestwo wystpienia
+poziomach organizacji ycia.               poszczególnych genotypów i fenotypów
+Zdajcy [...] przedstawia i wyjania        w pokoleniach potomnych.
+procesy i zjawiska biologiczne [...].
+
+Zasady oceniania
+1 pkt - za poprawne wyjanienie uwzgldniajce sposób dziedziczenia si tej cechy
+
+         i moliwo urodzenia si chorych osobników przy krzyowaniu dwóch nosicieli.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Z hodowli naley eliminowa osobniki bdce nosicielami tej mutacji, poniewa w wyniku
+
+    skrzyowania ze sob dwóch heterozygot istnieje prawdopodobiestwo urodzenia si
+    potomstwa bdcego homozygot recesywn, czyli ze mierteln chorob.
+· Przy krzyowaniu dwóch nosicieli istnieje 25% prawdopodobiestwo urodzenia si
+    osobnika chorego, co jest z punktu widzenia hodowcy niekorzystne.
+
+Zadanie 13.3. (0-1)
+
+               Wymagania ogólne                       Wymagania szczególowe
+
+IV. Poszukiwanie, wykorzystanie           VI. Genetyka i biotechnologia.
+i tworzenie informacji.                   7. Biotechnologia molekularna, inynieria
+Zdajcy odczytuje [...] i przetwarza       genetyczna i medycyna molekularna.
+informacje pozyskane z rónorodnych        Zdajcy:
+ródel [...].                              1) przedstawia najwaniejsze typy enzymów
+I. Poznanie wiata organizmów na rónych    stosowanych w inynierii genetycznej
+poziomach organizacji ycia.               (enzymy restrykcyjne [...]);
+Zdajcy opisuje [...], przedstawia         2) przedstawia istot procedur inynierii
+i wyjania procesy i zjawiska biologiczne  genetycznej [...];
+[...].                                    3) przedstawia zasad metody PCR
+                                          (lacuchowej reakcji polimerazy) i jej
+                                          zastosowanie.
+
+                                                                          Strona 25 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+                                                      Poziom podstawowy
+                                                      1. Biotechnologia i inynieria genetyczna.
+                                                      Zdajcy:
+                                                      2) wyjania, czym zajmuje si inynieria
+                                                      genetyczna.
+
+Zasady oceniania
+1 pkt - za poprawne ustalenie kolejnoci technik inynierii genetycznej stosowanych w tecie
+
+         na cytrulinemi.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+
+                Nazwa techniki                        Kolejno wykonania
+
+                cicie DNA enzymem restrykcyjnym       2
+
+                elektroforeza DNA                     3
+
+                lacuchowa reakcja polimerazy (PCR)    1
+
+Zadanie 13.4. (0-1)                                               Wymagania szczególowe
+
+                Wymagania ogólne                      VI. Genetyka i biotechnologia.
+                                                      8. Biotechnologia molekularna, inynieria
+ IV. Poszukiwanie, wykorzystanie                      genetyczna i medycyna molekularna.
+ i tworzenie informacji.                              Zdajcy:
+ Zdajcy odczytuje, selekcjonuje,                      1) przedstawia najwaniejsze typy enzymów
+ porównuje i przetwarza informacje                    stosowanych w inynierii genetycznej
+ pozyskane z rónorodnych ródel [...].                 (enzymy restrykcyjne [...]);
+ V. Rozumowanie i argumentacja.                       2) przedstawia istot procedur inynierii
+ Zdajcy objania [...] informacje [...],               genetycznej [...];
+ wyjania zalenoci przyczynowo-                        3) przedstawia zasad metody PCR
+ -skutkowe [...].                                     (lacuchowej reakcji polimerazy) i jej
+                                                      zastosowanie.
+                                                      Poziom podstawowy
+                                                      1. Biotechnologia i inynieria genetyczna.
+                                                      Zdajcy:
+                                                      6) podaje przyklady wykorzystania bada
+                                                      nad DNA ([...] medycyna, nauka).
+
+Zasady oceniania
+1 pkt - za poprawne przyporzdkowanie trzech wyników elektroforezy do odpowiednich
+
+         genotypów.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Strona 26 z 33
+                                        Zasady oceniania rozwiza zada
+
+Rozwizanie
+A - 2, B - 3, C - 1.
+
+Zadanie 13.5. (0-1)
+
+               Wymagania ogólne                     Wymagania szczególowe
+
+V. Rozumowanie i argumentacja.          IV. Przegld rónorodnoci organizmów
+Zdajcy objania [...] informacje [...],  13. Porównanie struktur zwierzt
+wyjania zalenoci przyczynowo-           odpowiedzialnych za realizacj rónych
+-skutkowe [...].                        czynnoci yciowych. Zdajcy:
+I. Poznanie wiata organizmów na rónych  11) wyjania istot procesu wydalania oraz
+poziomach organizacji ycia.             wskazuje substancje, które s wydalane
+Zdajcy [...] przedstawia i wyjania      z organizmów rónych zwierzt,
+procesy i zjawiska biologiczne [...].   w powizaniu ze rodowiskiem ich ycia.
+                                        VI. Genetyka i biotechnologia.
+                                        4. Genetyka mendlowska. Zdajcy:
+                                        1) [...] stosuje podstawowe pojcia genetyki
+                                        klasycznej ([...] homozygota [...]).
+
+Zasady oceniania
+1 pkt - za poprawne wyjanienie, uwzgldniajce oczyszczanie przez organizm matki krwi
+
+         plodowej z produktów przemian azotowych.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Podczas ciy krew matki w loysku odbiera toksyczne produkty przemian azotowych od
+
+    plodu. Organizm matki metabolizuje i usuwa z organizmu te zwizki, w wyniku czego nie
+    dochodzi do zatrucia plodu.
+· Organizm plodu jest oczyszczany z nadmiaru amoniaku przez organizm matki.
+
+Uwaga:
+Nie uznaje si odpowiedzi odnoszcych si do usuwania przez organizm matki mocznika
+wytworzonego przez organizm plodu, poniewa w cytrulinemii plód nie wytwarza mocznika.
+
+Zadanie 14.1. (0-1)
+
+               Wymaganie ogólne                     Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych  IV. Przegld rónorodnoci organizmów.
+poziomach organizacji ycia.             2. Wirusy. Zdajcy:
+Zdajcy opisuje [...] organizmy [...];   1) omawia podstawowe elementy budowy
+przedstawia zwizki midzy struktur       wirionu [...].
+a funkcj na rónych poziomach
+organizacji ycia [...].
+
+Zasady oceniania
+1 pkt - za podanie poprawnych nazw obu elementów.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+                                                                          Strona 27 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Przykladowe rozwizania
+X - kapsyd / plaszcz bialkowy / oslonka bialkowa / otoczka bialkowa
+Y - kwas nukleinowy / DNA / material genetyczny / genom / dwuniciowy DNA / genofor
+
+Zadanie 14.2. (0-2)                                               Wymagania szczególowe
+
+                Wymagania ogólne                      V. Budowa i funkcjonowanie organizmu
+                                                      czlowieka.
+ V. Rozumowanie i argumentacja.                       7. Uklad odpornociowy. Zdajcy:
+ Zdajcy objania i komentuje informacje,               2) przedstawia reakcj odpornociow
+ odnosi si krytycznie do przedstawionych              humoraln i komórkow, swoist
+ informacji [...].                                    i nieswoist.
+ II. Poglbienie wiadomoci dotyczcych                  IV. Przegld rónorodnoci organizmów.
+ budowy i funkcjonowania organizmu                    2. Wirusy. Zdajcy:
+ ludzkiego.                                           4) wymienia najwaniejsze choroby wirusowe
+ Zdajcy objania funkcjonowanie                        czlowieka ([...] ospa wietrzna [...]) i okrela
+ organizmu ludzkiego na rónych                        drogi zakaenia wirusami oraz przedstawia
+ poziomach zloonoci [...].                            podstawowe zasady profilaktyki chorób
+                                                      wirusowych.
+
+Zasady oceniania
+2 pkt - za poprawn ocen trzech stwierdze.
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+1. - P, 2. - F, 3. - P.
+
+Zadanie 15.1. (0-1)
+
+               Wymagania ogólne                                   Wymagania szczególowe
+
+I. Poznanie wiata organizmów na rónych                VII. Ekologia.
+poziomach organizacji ycia.                           3. Zalenoci midzygatunkowe. Zdajcy:
+Zdajcy [...] przedstawia i wyjania                    3) przedstawia podobiestwa i rónice
+procesy i zjawiska biologiczne [...].                 midzy drapienictwem [...]
+V. Rozumowanie i argumentacja.                        i pasoytnictwem;
+Zdajcy [...] odnosi si krytycznie do                  4) wykazuje rol zalenoci mutualistycznych
+przedstawionych informacji [...], formuluje           [...] w przyrodzie [...];
+wnioski [...].                                        5) podaje przyklady komensalizmu.
+
+Zasady oceniania
+1 pkt - za poprawne dokoczenie zdania.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Strona 28 z 33
+                                            Zasady oceniania rozwiza zada
+
+Rozwizanie
+A
+
+Zadanie 15.2. (0-1)
+
+               Wymaganie ogólne                         Wymaganie szczególowe
+
+I. Poznanie wiata organizmów na rónych      IX. Ewolucja.
+poziomach organizacji ycia.                 2. Dobór naturalny. Zdajcy:
+Zdajcy [...] przedstawia i wyjania          2) [...] omawia skutki doboru w postaci
+zalenoci midzy organizmem                   powstawania adaptacji u organizmów.
+a rodowiskiem, wskazuje ródla
+rónorodnoci biologicznej [...];
+interpretuje rónorodno organizmów na
+Ziemi jako efekt ewolucji biologicznej.
+
+Zasady oceniania
+1 pkt - za poprawne okrelenie znaczenia adaptacyjnego podobiestwa morfologicznego
+
+         aspidonta do wargatka, odnoszce si do latwiejszego zblienia si do ofiary lub
+         uniknicia ataku drapieników.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Ryby, których fragmentami ciala ywi si aspidont, same si do niego zbliaj.
+· Mimikra - umoliwia mu latwiejszy kontakt z ofiar, przez co latwiej moe on zdoby
+
+    poywienie.
+· Podobiestwo do wargatka pozwala aspidontowi unikn ataku drapieników.
+
+Zadanie 15.3. (0-1)
+
+               Wymaganie ogólne                         Wymagania szczególowe
+
+I. Poznanie wiata organizmów na rónych      IX. Ewolucja.
+poziomach organizacji ycia.                 2. Dobór naturalny. Zdajcy:
+Zdajcy [...] przedstawia i wyjania          1) wykazuje rol mutacji i rekombinacji
+procesy i zjawiska biologiczne [...],       genetycznej w powstawaniu zmiennoci,
+wskazuje ródla rónorodnoci                  która jest surowcem ewolucji;
+biologicznej [...]; interpretuje rónorodno  2) przedstawia mechanizm dzialania doboru
+organizmów na Ziemi jako efekt ewolucji     naturalnego [...], omawia skutki doboru
+biologicznej.                               w postaci powstawania adaptacji
+                                            u organizmów.
+
+                                            Strona 29 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+Zasady oceniania
+1 pkt - za poprawne wyjanienie mechanizmu utrwalenia si wygldu aspidonta na drodze
+
+         doboru naturalnego, uwzgldniajce wiksz szans na zdobycie pokarmu lub na
+         uniknicie ataku drapieników przez osobniki o podobnym ubarwieniu do wargatka,
+         a wic warunkujce wiksze szanse przeycia i rozrodu.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Najwiksze szanse na przeycie i wydanie potomstwa mialy te osobniki A. taeniatus,
+
+    które skuteczniej zdobywaly pokarm dziki wygldowi przypominajcemu L. dimidiatus.
+· Osobniki aspidonta, które byly bardziej podobne wygldem do wargatka, mialy wiksz
+
+    szans na uniknicie ataku drapieników, a wic równie na przeycie i rozmnoenie si.
+· Aspidonty bardziej podobne do wargatków byly rzadziej atakowane przez drapieniki,
+
+    a ponadto mialy wiksze szanse na zdobycie pokarmu. Dlatego takie aspidonty mialy
+    wiksze szanse przeycia i rozrodu od innych aspidontów.
+
+Uwaga:
+Uznaje si odpowiedzi odnoszce si tylko do wikszych szans rozrodu, np. ,,Aspidonty
+bardziej podobne do wargatków zdobywaly skuteczniej pokarm i pozostawialy wicej
+potomstwa".
+
+Zadanie 16.1. (0-2)                                   Wymaganie szczególowe
+
+                Wymagania ogólne          VIII. Rónorodno biologiczna Ziemi.
+                                          Zdajcy:
+ VI. Postawa wobec przyrody i rodowiska.  2) przedstawia wplyw czlowieka na
+ Zdajcy rozumie znaczenie ochrony         rónorodno biologiczn [...].
+ przyrody i rodowiska oraz zna i rozumie
+ zasady zrównowaonego rozwoju [...].
+ V. Rozumowanie i argumentacja.
+ Zdajcy objania i komentuje informacje
+ [...], wyjania zalenoci przyczynowo-
+ -skutkowe [...].
+
+Zasady oceniania
+2 pkt - za poprawn ocen trzech stwierdze.
+1 pkt - za poprawn ocen dwóch stwierdze.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+1. - P, 2. - P, 3. - P.
+
+Strona 30 z 33
+                                          Zasady oceniania rozwiza zada
+
+Zadanie 16.2. (0-1)                                   Wymaganie szczególowe
+
+                Wymagania ogólne          VIII. Rónorodno biologiczna Ziemi.
+                                          Zdajcy:
+ VI. Postawa wobec przyrody i rodowiska.  2) przedstawia wplyw czlowieka na
+ Zdajcy rozumie znaczenie ochrony         rónorodno biologiczn [...].
+ przyrody i rodowiska oraz zna i rozumie
+ zasady zrównowaonego rozwoju [...].
+ V. Rozumowanie i argumentacja.
+ Zdajcy objania i komentuje
+ informacje[...], wyjania zalenoci
+ przyczynowo-skutkowe [...].
+
+Zasady oceniania
+1 pkt - za poprawne wyjanienie, uwzgldniajce
+
+         · wzrost niezgryzanych lub niekoszonych rolin - np. drzew lub krzewów, oraz
+              spowolnienie rozwoju lub wyparcie rolin muraw kserotermicznych w wyniku
+              konkurencji o zasoby rodowiska LUB
+
+         · ograniczenie presji rolinoerców lub koszenia i w wyniku tego wzrost konkurencji
+              o zasoby rodowiska midzy gatunkami rolin muraw i wyparcie czci z nich.
+
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Przykladowe rozwizania
+· Brak koszenia byl przyczyn nadmiernego rozrostu krzewów i drzew, co doprowadzilo do
+
+    konkurencyjnego wyparcia rolinnoci muraw kserotermicznych.
+· Zaniechanie wypasania zwierzt, które zjadaly rolinno porastajc zbocza,
+
+    przyczynilo si do zwikszenia powierzchni zajmowanej przez zarola, które zaslanialy
+    rolinom muraw dostp do wiatla slonecznego.
+· Poniewa brakowalo bydla zjadajcego wiksze roliny, co spowodowalo ich znaczny
+    wzrost i zacienienie wiatlolubnych rolin muraw kserotermicznych.
+· Usunicie rolinoerców podwyszylo konkurencj midzygatunkow, a tym samym
+    nasililo konkurencyjne wypieranie i ustpowanie slabszych gatunków.
+
+Uwaga:
+Nie uznaje si odpowiedzi zbyt ogólnych, nie odnoszcych si do konkretnego rodzaju
+uytkowania gospodarczego - koszenia rolin lub wypasu zwierzt, np. ,,Zaniechanie
+uytkowania gospodarczego zboczy wplynlo negatywnie na rolinno muraw
+kserotermicznych, poniewa gatunki krzewiaste zaczly si rozrasta i wplywa negatywnie
+na gatunki muraw, np. na gatunki wiatlolubne, które zostaly zacienione, a ich rozwój -
+ograniczony".
+
+Zadanie 16.3. (0-2)                                   Wymaganie szczególowe
+
+                Wymaganie ogólne          VIII. Rónorodno biologiczna Ziemi.
+ VI. Postawa wobec przyrody i rodowiska.  Zdajcy:
+ Zdajcy rozumie znaczenie ochrony
+ przyrody i rodowiska [...].
+
+                                          Strona 31 z 33
+Egzamin maturalny z biologii - termin glówny 2023 r.
+
+                                                              3) uzasadnia konieczno stosowania
+                                                              ochrony czynnej dla zachowania wybranych
+                                                              gatunków i ekosystemów.
+
+Zasady oceniania
+2 pkt - za wybór dwóch poprawnych odpowiedzi.
+1 pkt - za wybór jednej poprawnej odpowiedzi.
+0 pkt - za odpowied niespelniajc wymaga na 1 pkt albo za brak odpowiedzi.
+
+Rozwizanie
+B, C
+
+Zadanie 17.1. (0-1)
+
+               Wymagania ogólne                                  Wymaganie szczególowe
+
+V. Rozumowanie i argumentacja.                        VII. Ekologia.
+Zdajcy objania i komentuje informacje,                4. Struktura i funkcjonowanie ekosystemu.
+[...], dobierajc racjonalne argumenty.                Zdajcy:
+I. Poznanie wiata organizmów na rónych                2) okrela rol zalenoci pokarmowych
+poziomach organizacji ycia.                           w ekosystemie [...], analizuje przedstawione
+Zdajcy [...] wyjania zalenoci midzy                   (w postaci [...] opisu itd.) sieci i lacuchy
+organizmem a rodowiskiem [...].                       pokarmowe.
+IV. Poszukiwanie, wykorzystanie i tworzenie
+informacji.
+Zdajcy odczytuje, selekcjonuje [...]
+i przetwarza informacje pozyskane
+z rónorodnych ródel [...].
+
+Zasady oceniania
+1 pkt - za wybór dwóch poprawnych okrele.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Rozwizanie
+Morwin odywiajcy si salat morsk, skorupiakami i rybami, zajmuje
+(jeden poziom troficzny / wiele poziomów troficznych).
+Morwin zjadajcy salat morsk jest konsumentem (I rzdu / II rzdu).
+
+Zadanie 17.2. (0-2)
+
+               Wymagania ogólne                                  Wymagania szczególowe
+
+VI. Postawa wobec przyrody i rodowiska.               VII. Ekologia.
+Zdajcy rozumie znaczenie ochrony                      1. Nisza ekologiczna. Zdajcy:
+przyrody i rodowiska [...]; opisuje postaw            2) okrela rodowisko ycia organizmu,
+i zachowanie czlowieka odpowiedzialnie                majc podany jego zakres tolerancji na
+korzystajcego z dóbr przyrody i rodowiska             okrelone czynniki [...].
+[...].
+
+Strona 32 z 33
+                                             Zasady oceniania rozwiza zada
+
+V. Rozumowanie i argumentacja.               VIII. Rónorodno biologiczna Ziemi.
+Zdajcy [...] wyjania zalenoci                Zdajcy:
+przyczynowo-skutkowe, formuluje wnioski      2) przedstawia wplyw czlowieka na
+[...].                                       rónorodno biologiczn [...];
+IV. Poszukiwanie, wykorzystanie i tworzenie  3) uzasadnia konieczno stosowania
+informacji.                                  ochrony czynnej dla zachowania wybranych
+Zdajcy [...] przetwarza informacje           gatunków i ekosystemów.
+pozyskane z rónorodnych ródel [...].
+
+Zasady oceniania
+2 pkt - za poprawn odpowied, uwzgldniajc
+
+         · w przypadku skucia lodem duych powierzchni Baltyku brak moliwoci
+              oddychania powietrzem atmosferycznym przez morwina ORAZ
+
+         · w przypadku wzrostu eglugi na akwenie Baltyku zaklócenie dzialania echolokacji
+              LUB ploszenie zwierzt z ich naturalnych siedlisk przez zaburzenia akustyczne
+              LUB mechaniczne uszkodzenie ciala.
+
+1 pkt - za poprawne wykazanie tylko jednego ze zwizków.
+0 pkt - za odpowied niespelniajc wymaga za 1 pkt lub za brak odpowiedzi.
+
+Przykladowe rozwizanie
+1. skucie lodem duych powierzchni Baltyku -
+
+    · Morwiny, które s ssakami oddychaj powietrzem atmosferycznym. Skucie lodem
+         duych powierzchni morza uniemoliwia im zaczerpnicie oddechu.
+
+2. wzrost eglugi na akwenie Baltyku -
+    · Rozwój eglugi powoduje zaburzenia akustyczne, które zaklócaj dzialania biosonaru
+         morwinów.
+    · Wzrost turystyki motorowodnej skutkuje ploszeniem zwierzt z ich naturalnych
+         siedlisk.
+    · ruby statków motorowych mog doprowadzi do fizycznego uszkodzenia ciala
+         morwina.
+
+                                             Strona 33 z 33
+

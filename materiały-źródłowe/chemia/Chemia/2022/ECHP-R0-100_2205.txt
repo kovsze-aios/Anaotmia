@@ -1,0 +1,1021 @@
+KOD              WYPELNIA ZDAJCY            Arkusz zawiera informacje prawnie chronione
+                                     PESEL  do momentu rozpoczcia egzaminu.
+
+                                                      Miejsce na naklejk.
+                                               Sprawd, czy kod na naklejce to
+
+                                                         E-100.
+
+                                                 Jeeli tak - przyklej naklejk.
+                                             Jeeli nie - zglo to nauczycielowi.
+
+EGZAMIN MATURALNY Z CHEMII
+
+POZIOM ROZSZERZONY
+
+DATA: 16 maja 2022 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS PRACY: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 24 strony (zadania 1-34).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego egzamin.
+
+2. Odpowiedzi i rozwizania zapisz w miejscu na to przeznaczonym przy kadym
+    zadaniu.
+
+3. W rozwizaniach zada rachunkowych przedstaw tok rozumowania prowadzcy do
+    ostatecznego wyniku oraz pamitaj o jednostkach.
+
+4. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym tuszem/atramentem.
+5. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+6. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+7. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL i przyklej
+
+    naklejk z kodem.
+8. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+9. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na egzamin
+
+    maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora prostego.
+
+                                            ECHP-R0-100-2205
+
+Uklad graficzny
+© CKE 2021
+Zadanie 1.
+Z dwóch pierwiastków, które umownie oznaczono literami X i E, powstaj wodorki
+o wzorach XH3 i EH3. Atomy kadego z tych pierwiastków maj tyle elektronów
+niewalencyjnych, ile wynosi liczba nukleonów w atomie izotopu 14 28Si. W stanie podstawowym
+atomy pierwiastka E maj wiksz liczb elektronów niesparowanych ni atomy
+pierwiastka X.
+
+Zadanie 1.1. (0-2)
+Uzupelnij ponisz tabel. Wpisz symbole pierwiastków X i E, symbol bloku
+konfiguracyjnego, do którego naley kady z pierwiastków, oraz ich maksymalne
+stopnie utlenienia.
+
+                         Symbol pierwiastka Symbol bloku Maksymalny stopie utlenienia
+
+ pierwiastek X
+
+ pierwiastek E
+
+Zadanie 1.2. (0-1)
+Napisz fragment konfiguracji elektronowej atomu w stanie podstawowym pierwiastka
+E opisujcy rozmieszczenie elektronów walencyjnych na podpowlokach - zastosuj
+schemat klatkowy. Pod schematem napisz numer powloki i symbole podpowlok.
+
+.................................................................................................................................................
+
+Zadanie 2. (0-1)
+W poniszej tabeli podano wartoci promieni atomowych r1, r2, r3 i r4 atomów czterech
+pierwiastków.
+
+                         r1  r2             r3                r4
+
+promie atomu, pm         99  102            174               196
+
+                            Na podstawie: M.J. Sienko, R.A. Plane, Chemia. Podstawy i zastosowania, Warszawa 1996.
+
+Uzupelnij ponisz tabel. Na podstawie zmiennoci promieni atomów w grupach
+i okresach przyporzdkuj wymienionym pierwiastkom wartoci promieni atomowych
+ich atomów.
+
+Nazwa pierwiastka                           Promie atomu, pm
+
+siarka                                      102
+
+                  chlor
+
+potas
+
+                  wap
+
+                             Strona 2 z 24
+
+                                                              ECHP-R0_100
+Zadanie 3.
+Bor tworzy z chlorem zwizek o wzorze BCl3, wystpujcy w postaci plaskich trójktnych
+czsteczek. Te czsteczki mog lczy si z innymi drobinami zawierajcymi wolne pary
+elektronowe. Chlorek boru reaguje z wod i podczas tej reakcji tworz si H3BO3 (kwas
+ortoborowy) oraz HCl.
+
+                                               Na podstawie: A. Bielaski, Podstawy chemii nieorganicznej, Warszawa 2004.
+
+Zadanie 3.1. (0-1)
+Narysuj wzór elektronowy chlorku boru. Uwzgldnij wolne pary elektronowe.
+
+Zadanie 3.2. (0-1)
+Sporód wymienionych drobin:
+
+                                        Cl- NH4+ CH4 NH3
+wybierz te, które mog lczy si z chlorkiem boru, i napisz ich wzory. Wyjanij,
+dlaczego czsteczki chlorku boru maj zdolno do tworzenia wiza z tymi
+drobinami. Odwolaj si do struktury elektronowej czsteczek chlorku boru.
+
+Z chlorkiem boru mog lczy si: ...........................................................................................
+Czsteczki chlorku boru maj zdolno do tworzenia wiza z wybranymi drobinami,
+poniewa
+
+.................................................................................................................................................
+.................................................................................................................................................
+.................................................................................................................................................
+
+Zadanie 3.3. (0-1)
+Napisz w formie czsteczkowej równanie reakcji chlorku boru z wod.
+
+.................................................................................................................................................
+
+             Nr zadania                       1.1. 1.2. 2. 3.1. 3.2. 3.3.
+
+             Wypelnia Maks. liczba pkt        2 1 1 1 1 1
+             egzaminator Uzyskana liczba pkt
+
+                         Strona 3 z 24
+
+ECHP-R0_100
+Zadanie 4.
+
+Gaz syntezowy, czyli mieszanina CO i H2, jest otrzymywany w przemyle rónymi metodami.
+
+Niej podano równania dwóch reakcji, w których powstaje taka mieszanina.
+
+            I CH4 + CO2  2CO + 2H2  H<0
+
+            II CH4 + H2O  CO + 3H2  H>0
+
+Na poniszym wykresie przedstawiono zaleno stopnia przemiany metanu
+
+od temperatury dla dwóch rónych wartoci cinienia dla jednej z tych reakcji. Stopie
+
+przemiany metanu jest miar wydajnoci reakcji - im wikszy stopie przemiany, tym
+
+wiksza wydajno reakcji.
+
+                         0,1 MPa
+
+                                        2,0 MPa
+
+           Na podstawie: M. Paczyk, T. Borowiecki, Otrzymywanie i zastosowanie gazu syntezowego, Lublin 2013.
+
+Zadanie 4.1. (0-1)
+Napisz numer reakcji (I albo II), do której odnosi si powyszy wykres stopnia
+przemiany metanu. Odpowied uzasadnij - uwzgldnij efekt energetyczny reakcji.
+
+Numer reakcji: ................................................
+
+Uzasadnienie: .........................................................................................................................
+.................................................................................................................................................
+
+Zadanie 4.2. (0-1)
+Uzupelnij zdanie o wplywie cinienia na stopie przemiany metanu - wybierz i zaznacz
+jedn odpowied sporód podanych w nawiasie. Wyjanij przedstawion na wykresie
+zaleno stopnia przemiany metanu od cinienia.
+
+W stalej temperaturze wzrost cinienia skutkuje (wzrostem / spadkiem) stopnia przemiany
+metanu.
+
+Wyjanienie: ............................................................................................................................
+.................................................................................................................................................
+
+                         Strona 4 z 24
+
+                                                                         ECHP-R0_100
+Zadanie 5. (0-2)
+Do reaktora o pojemnoci 1,0 dm3 wprowadzono pewn liczb moli substancji A oraz pewn
+liczb moli substancji B. Reaktor zamknito i zainicjowano reakcj chemiczn, która
+
+przebiegala w stalej temperaturze T zgodnie z równaniem:
+
+                                           A (g) + B (g)  C (g) + D (g)
+Do momentu ustalenia stanu równowagi przereagowalo 20 % substancji A. W tych
+warunkach steniowa stala równowagi opisanej reakcji jest równa 2,0.
+
+Oblicz, jaki procent liczby moli wyjciowej mieszaniny stanowila substancja A.
+
+Obliczenia:
+
+             Nr zadania                       4.1. 4.2. 5.
+
+             Wypelnia Maks. liczba pkt        1 1 2
+             egzaminator Uzyskana liczba pkt
+
+             Strona 5 z 24
+
+ECHP-R0_100
+Zadanie 6.
+Produktem spalania metalicznego sodu w tlenie jest nadtlenek sodu o wzorze Na2O2.
+W wyniku reakcji tego zwizku z sodem w podwyszonej temperaturze mona otrzyma
+tlenek sodu Na2O. Kady z opisanych zwizków sodu z tlenem ma budow jonow i tworzy
+sie krystaliczn zbudowan z kationów i anionów.
+Nadtlenek sodu reaguje gwaltownie z wod. Jednym z produktów tej reakcji, zachodzcej
+bez zmiany stopni utlenienia, jest nadtlenek wodoru H2O2.
+
+                                               Na podstawie: A. Bielaski, Podstawy chemii nieorganicznej, Warszawa 2006.
+
+Zadanie 6.1. (0-1)
+Napisz wzór anionu wystpujcego w nadtlenku sodu oraz wzór anionu
+wystpujcego w tlenku sodu.
+Wzór anionu w nadtlenku sodu: .................................................................................................
+Wzór anionu w tlenku sodu: .......................................................................................................
+
+Zadanie 6.2. (0-1)
+Napisz w formie czsteczkowej równanie reakcji nadtlenku sodu z wod.
+
+.................................................................................................................................................
+
+Zadanie 7. (0-1)
+Przeprowadzono dowiadczenie zilustrowane schematem.
+
+                                                        KI (aq)
+
+                                                    CuSO4 (aq)
+
+Po zmieszaniu obu roztworów zaszla reakcja utleniania i redukcji, w wyniku której wytrcil si
+bialy osad jodku miedzi(I) i wydzielil si wolny jod.
+Napisz w formie jonowej skróconej równanie reakcji, która zaszla po zmieszaniu
+roztworów KI i CuSO4.
+
+.................................................................................................................................................
+
+Strona 6 z 24
+
+               ECHP-R0_100
+Zadanie 8.
+Poniszy schemat przedstawia przemiany, jakim ulegaj mied i jej zwizki.
+
+                     A                            B  Cu(OH)2 (s)  NH3 (aq)                 [Cu(NH3)4](OH)2 (aq)
+
+    Cu (s)              CuCl2 (aq)  2.                                                 3.
+
+                    1.
+
+Zadanie 8.1. (0-1)
+Rozstrzygnij, czy substancj A moe by kwas solny o steniu 10 % masowych.
+Uzasadnij swoj odpowied. W uzasadnieniu odwolaj si do wlaciwoci miedzi
+i kwasu solnego.
+
+Rozstrzygnicie: ......................................................................................................................
+Uzasadnienie: .........................................................................................................................
+.................................................................................................................................................
+
+Zadanie 8.2. (0-2)
+Napisz wzór sumaryczny substancji B, jeli wiadomo, e po zajciu reakcji
+i odsczeniu osadu w roztworze obecne byly kationy sodu i aniony chlorkowe.
+Napisz w formie jonowej równanie reakcji 3., której produktem jest m.in. jon
+kompleksowy o wzorze [Cu(NH3)4]2+.
+
+Wzór substancji B: ...................................................................................................................
+Równanie reakcji 3.:
+
+.................................................................................................................................................
+
+Zadanie 8.3. (0-1)
+Sporód podanych poniej wzorów wybierz wzory wszystkich substancji, w których
+wodnych roztworach na zimno roztwarza si wodorotlenek miedzi(II). Napisz numery
+wybranych wzorów.
+
+    1. CH2 CH CH2                                                   2. CH3 CH2 OH
+              OH OH OH
+
+3.                                                        OH                               5.
+
+                                                     H2C            4.
+
+                   NH2         HN                    CH O                       O                      O
+                                                           C        CH3 C                      HC
+                   CH      NH       C
+             CH2 C                                         OH                   OH                     H
+                               CH2                   O
+
+                        O
+
+Wybrane wzory: .......................................................................................................................
+
+                           Nr zadania                         6.1. 6.2. 7. 8.1. 8.2. 8.3.
+
+             Wypelnia Maks. liczba pkt                        1 1 1 1 2 1
+             egzaminator Uzyskana liczba pkt
+
+                                                     Strona 7 z 24
+
+ECHP-R0_100
+Informacja do zada 9.-10.
+W dwóch probówkach oznaczonych numerami I i II umieszczono jednakow ilo wiórków
+magnezowych o tym samym stopniu rozdrobnienia. Nastpnie do probówek wprowadzono
+jednakowe objtoci roztworów o tej samej temperaturze:
+
+    · do probówki I - kwas solny o pH = 1
+    · do probówki II - wodny roztwór kwasu siarkowego(VI) o steniu 0,1 mol  dm-3.
+Przebieg dowiadczenia zilustrowano poniszym rysunkiem.
+
+            kwas solny o pH = 1  kwas siarkowy(VI)
+                                 o steniu 0,1 mol  dm-3
+
+                       I                         II
+
+            wiórki               wiórki
+            magnezowe            magnezowe
+
+Podczas opisanego dowiadczenia w kadej probówce wiórki magnezowe ulegly
+calkowitemu roztworzeniu i powstaly klarowne, bezbarwne roztwory, ale w jednej z probówek
+reakcja przebiegla szybciej.
+
+Zadanie 9.1. (0-1)
+Napisz w formie jonowej skróconej równanie reakcji, która zaszla podczas opisanego
+dowiadczenia w obu probówkach. Wska numer probówki (I albo II), w której wiórki
+magnezowe roztworzyly si szybciej.
+
+Równanie reakcji: ....................................................................................................................
+
+Wiórki magnezowe roztworzyly si szybciej w probówce numer ..............................................
+
+Zadanie 9.2. (0-1)
+Uzupelnij ponisze zdanie - wybierz i zaznacz jedn odpowied sporód podanych
+w kadym nawiasie.
+
+Stenie molowe roztworów obu kwasów bylo (równe / róne), a stenie jonów H + w tych
+roztworach bylo (równe / róne), dlatego opisane dowiadczenie pozwolilo okreli wplyw
+(stenia molowego / pH) roztworów uytych kwasów na szybko reakcji.
+
+Zadanie 10. (0-1)
+Któr czynno naley wykona w celu wyodrbnienia z mieszaniny poreakcyjnej
+jonowego produktu otrzymanego w probówce I? Zaznacz wlaciw odpowied
+sporód podanych.
+
+A. sczenie  B. dekantacja        C. odwirowanie      D. odparowanie
+                                                        pod wycigiem
+
+                                 Strona 8 z 24
+
+                                                         ECHP-R0_100
+Zadanie 11. (0-2)
+W celu ustalenia skladu stalej mieszaniny wodorowglanu sodu i wglanu sodu jej próbk
+rozpuszczono w wodzie i przeprowadzono dwuetapow analiz otrzymanego roztworu.
+
+Etap I: Do badanego roztworu dodano kilka kropli alkoholowego roztworu fenoloftaleiny
+i dodawano z biurety kwas solny, do momentu zaniku barwy wskanika. Jon wglanowy jest
+mocniejsz zasad ni jon wodorowglanowy, wic w roztworze zachodzila reakcja opisana
+równaniem:
+
+                                          CO32- + H3O+ HCO3- + H2O
+Odbarwienie fenoloftaleiny wiadczylo o calkowitej przemianie jonów CO32- w jony HCO3-.
+
+Etap II: Do otrzymanej mieszaniny dodano kilka kropli wodnego roztworu oranu metylowego
+i dalej dodawano z biurety kwas solny do chwili, gdy nastpila zmiana barwy wskanika. Ta
+zmiana oznaczala, e caly wodorowglan sodu przereagowal zgodnie z równaniem:
+
+                                          HCO3- + H3O+  CO2 + 2H2O
+Kwas solny uyty w obu etapach dowiadczenia mial stenie 0,2 mol · dm-3, a jego
+objto niezbdna do odbarwienia fenoloftaleiny w etapie I byla równa 24,6 cm3. Natomiast
+lcznie w obu etapach zuyto 59,8 cm3 kwasu solnego (objto odczytana z biurety
+w etapie II).
+
+Oblicz w procentach masowych zawarto wglanu sodu w analizowanej mieszaninie.
+Przyjmij, e masy molowe wglanu sodu i wodorowglanu sodu s równe:
+M Na2CO3 = 106 g  mol-1 oraz M NaHCO3= 84 g  mol-1 .
+
+Obliczenia:
+
+             Nr zadania                       9.1. 9.2. 10. 11.
+
+             Wypelnia Maks. liczba pkt        1 1 1 2
+             egzaminator Uzyskana liczba pkt
+
+             Strona 9 z 24
+
+ECHP-R0_100
+Zadanie 12.
+W trzech probówkach (I-III) umieszczono wodne roztwory soli potasu zawierajcych chrom
+na VI stopniu utlenienia. Zawarto probówki III zakwaszono. Nastpnie do kadej probówki
+dodano jeden odczynnik wybrany z poniszej listy:
+
+    · wodny roztwór wodorotlenku potasu
+    · wodny roztwór azotanu(V) sodu
+    · wodny roztwór azotanu(V) srebra(I)
+    · wodny roztwór siarczanu(IV) potasu.
+
+Schemat dowiadczenia i opis wygldu zawartoci probówek I-III przed reakcj i po jej
+zakoczeniu przedstawiono w poniszej tabeli.
+
+Schemat dowiadczenia              Opis wygldu zawartoci probówki przed
+                                          reakcj i po jej zakoczeniu
+
+wybrany odczynnik                 Przed reakcj: ólty roztwór
+                              I   Po reakcji: ciemnoczerwony osad
+
+  sól chromu(VI) (aq)
+
+wybrany odczynnik                 Przed reakcj: pomaraczowy roztwór
+                             II   Po reakcji: ólty roztwór
+
+   sól chromu(VI) (aq)
+
+wybrany odczynnik                 Przed reakcj: pomaraczowy roztwór
+                                  Po reakcji: zielony roztwór
+                             III
+  sól chromu(VI) (aq)
+  z dodatkiem H2SO4 (aq)
+
+Zadanie 12.1. (0-1)
+Napisz w formie jonowej skróconej równanie reakcji zachodzcej w probówce I
+po dodaniu wybranego odczynnika do roztworu soli chromu(VI) oraz napisz nazw lub
+wzór odczynnika, który dodano do probówki II w opisanym dowiadczeniu.
+
+Równanie reakcji zachodzcej w probówce I:
+.................................................................................................................................................
+
+Nazwa lub wzór odczynnika dodanego do probówki II: ............................................................
+
+                                  Strona 10 z 24
+
+                                                                   ECHP-R0_100
+Zadanie 12.2. (0-1)
+Napisz w formie jonowej skróconej równanie reakcji zachodzcej w probówce III
+po dodaniu wybranego odczynnika do roztworu soli chromu(VI) z dodatkiem H2SO4.
+
+.................................................................................................................................................
+
+Zadanie 12.3. (0-1)
+Uzupelnij ponisze zdania - wybierz i zaznacz jedn odpowied sporód podanych
+w kadym nawiasie.
+Reakcja redoks przebiegla w probówce (I / II / III). Sól chromu(VI) pelni w tej przemianie
+funkcj (reduktora / utleniacza).
+
+Zadanie 13. (0-1)
+Wykonano dowiadczenie zilustrowane poniszym schematem.
+
+                                            MnSO4 (aq)
+
+                                           KMnO4 (aq)
+
+Po zakoczeniu reakcji w probówce widoczne byly bezbarwny roztwór i brunatny osad.
+Napisz w formie jonowej skróconej, z uwzgldnieniem liczby oddawanych lub
+pobieranych elektronów (zapis jonowo-elektronowy), równania procesów redukcji
+i utleniania zachodzcych podczas opisanej przemiany. Uwzgldnij, e reakcja
+zachodzi w rodowisku obojtnym.
+Równanie procesu redukcji:
+.................................................................................................................................................
+
+Równanie procesu utleniania:
+.................................................................................................................................................
+
+             Nr zadania                       12.1. 12.2. 12.3. 13.
+
+             Wypelnia Maks. liczba pkt        1 1 1 1
+             egzaminator Uzyskana liczba pkt
+
+             Strona 11 z 24
+
+ECHP-R0_100
+Zadanie 14.
+O trzech metalach umownie oznaczonych symbolami A, X i Z wiadomo, e tworz wylcznie
+kationy o wzorach X+, A2+, Z3+. Stwierdzono, e wlaciwoci utleniajce kationów tych metali
+malej w szeregu: X+, A2+, Z3+.
+Przeprowadzono dowiadczenie z udzialem metali Z i X oraz wodnych roztworów soli,
+w których byly obecne jony X+ i A2+. Schemat dowiadczenia przedstawiono poniej.
+
+metal Z     metal Z         metal X
+
+X+ (aq)     A2+ (aq)        A2+ (aq)
+
+         I            II              III
+
+Zadanie 14.1. (0-1)
+Wska metal, który jest najslabszym reduktorem, oraz metal, który jest najsilniejszym
+reduktorem. Uyj symboli A, X albo Z.
+
+ Najslabszy reduktor: .................................. Najsilniejszy reduktor: ....................................
+
+Zadanie 14.2. (0-2)
+W jednej probówce nie zaobserwowano objawów reakcji.
+
+Napisz numer probówki, w której nie zaobserwowano objawów reakcji. Napisz
+w formie jonowej skróconej równania dwóch reakcji, które przebiegly podczas
+przeprowadzonego dowiadczenia. Uyj symboli A, X, Z.
+
+Numer probówki: .....................................................................................................................
+
+Równania reakcji:
+
+.................................................................................................................................................
+
+.................................................................................................................................................
+
+            Strona 12 z 24
+
+                                      ECHP-R0_100
+Zadanie 15. (0-2)
+Do 1,00 dm3 wody destylowanej wprowadzono 90,0 cm3 wodnego roztworu kwasu
+azotowego(V) o steniu 5,00 % masowych i gstoci równej 1,03 g  cm-3.
+
+  Na podstawie: W. Sawicka, A. Janich-Kilian, W. Cejner-Mania, G. Urbaczyk, Tablice chemiczne, Gdask 2015.
+
+Oblicz pH otrzymanego roztworu kwasu azotowego(V). W obliczeniach przyjmij, e
+objto powstalego roztworu jest sum objtoci uytych roztworu i wody. Wynik
+zaokrglij do drugiego miejsca po przecinku.
+
+Obliczenia:
+
+Zadanie 16. (0-1)
+Zmieszano wodny roztwór kwasu azotowego(V) z wodnym roztworem wodorotlenku potasu
+
+w stosunku objtociowym vHNO3 : vKOH = 2 : 1. Otrzymano klarowny roztwór o pH = 7.
+
+Oce, czy podane poniej informacje s prawdziwe. Zaznacz P, jeli informacja jest
+prawdziwa, albo F - jeli jest falszywa.
+
+1. Stenie molowe roztworu kwasu azotowego(V) bylo dwa razy mniejsze      P F
+     ni stenie molowe roztworu wodorotlenku potasu.                      P F
+     Po odparowaniu wody z otrzymanego roztworu pozostanie cialo stale,
+
+2. w którym stosunek liczby jonów NO3- i K+ NO3- : K+ = 2 : 1.
+
+             Nr zadania                       14.1. 14.2. 15. 16.
+
+             Wypelnia Maks. liczba pkt        1 2 2 1
+             egzaminator Uzyskana liczba pkt
+
+             Strona 13 z 24
+
+ECHP-R0_100
+Zadanie 17.
+Przygotowano wodne roztwory trzech rónych soli - CH3COONa, NaNO2, NaF - o takim
+samym steniu molowym. Odczyn wszystkich przygotowanych roztworów byl zasadowy,
+ale pH kadego roztworu bylo inne.
+
+Zadanie 17.1. (0-1)
+Wpisz do poniszego schematu wzory odpowiednich drobin, tak aby powstalo równanie
+potwierdzajce zasadowy odczyn roztworu azotanu(III) sodu - zastosuj definicj kwasu
+i zasady Brønsteda.
+
+kwas 1.            zasada 2.                  zasada 1.                   kwas 2.
+
+         +                                                           +
+
+Zadanie 17.2. (0-1)
+Napisz wzór lub nazw tej soli, której wodny roztwór mial najwysze pH.
+
+.................................................................................................................................................
+
+Zadanie 18.
+W celu wyznaczenia dokladnego stenia pewnej zasady przeprowadzono nastpujce
+dowiadczenie. Do 60,0 cm3 badanego roztworu (KOH albo NH3 o steniu okolo
+0,1 mol  dm-3) dodawano powoli wodny roztwór HCl o steniu 0,10 mol  dm-3 i mierzono
+pH mieszaniny reakcyjnej. Otrzyman zaleno pH roztworu miareczkowanego od objtoci
+dodanego kwasu przedstawiono na poniszym wykresie.
+
+            12
+
+            10
+
+                 8
+                                                                 PR
+
+         pH 6
+
+            4
+
+            2
+
+            0
+
+                0  20         40  60          80                     100
+
+                              VHCl, cm3
+
+Po dodaniu takiej objtoci roztworu HCl, w jakiej ilo kwasu jest równowana pocztkowej
+iloci zasady w badanym roztworze, w ukladzie zostaje osignity punkt równowanikowy
+(PR).
+
+Zadanie 18.1. (0-1)
+Rozstrzygnij, czy w opisanym dowiadczeniu uyto roztworu KOH czy NH3.
+Odpowied uzasadnij.
+
+Rozstrzygnicie: ......................................................................................................................
+Uzasadnienie: .........................................................................................................................
+.................................................................................................................................................
+
+                              Strona 14 z 24
+
+                                                                          ECHP-R0_100
+Zadanie 18.2. (0-1)
+Aby wyznaczy stenie zasady, zamiast pomiaru pH, podczas miareczkowania mona
+zastosowa odpowiedni wskanik. Musi on by tak dobrany, aby zakres zmiany jego barwy
+przypadal w pobliu punktu równowanikowego.
+Fenoloftaleina jest wskanikiem, który zmienia barw w zakresie pH 8,2 - 10,0, a oran
+metylowy - w zakresie pH 3,2 - 4,4.
+
+                                                                 Na podstawie: T. Mizerski, Tablice chemiczne, Adamantan 1997.
+
+Rozstrzygnij, który wskanik - fenoloftaleina czy oran metylowy - powinien by uyty
+w celu moliwie dokladnego wyznaczenia stenia tego roztworu. Odpowied
+uzasadnij.
+
+Rozstrzygnicie: ......................................................................................................................
+
+Uzasadnienie: .........................................................................................................................
+
+.................................................................................................................................................
+
+Zadanie 19. (0-2)
+Oblicz, ile gramów soli uwodnionej Na2SO4  10H2O naley doda do 100 g roztworu,
+w którym stenie Na2SO4 wynosi 6,0 % masowych, aby - po uzupelnieniu wod do
+300 g - otrzyma roztwór tej soli o steniu 10 %. W obliczeniach przyjmij, e masy
+molowe soli s równe: M Na2SO4 = 142 g  mol-1 oraz M Na2SO4 10H2O = 322 g  mol-1 .
+
+Obliczenia:
+
+             Nr zadania                       17.1. 17.2. 18.1. 18.2. 19.
+
+             Wypelnia Maks. liczba pkt        1 1 1 1 2
+             egzaminator Uzyskana liczba pkt
+
+             Strona 15 z 24
+
+ECHP-R0_100
+Zadanie 20.
+W tabeli zestawiono wartoci (zaokrglone do liczb calkowitych) rozpuszczalnoci
+chloranu(V) potasu w zakresie temperatury 0 ºC - 100 ºC.
+
+                                   Temperatura, ºC              0           20 40 60 80 100
+                                                                            7 14 24 38 56
+                                   Rozpuszczalno, g na 100 g wody 3
+
+                                                            Na podstawie: W. Mizerski, Tablice chemiczne, Warszawa 2013.
+
+Zadanie 20.1. (0-1)
+Narysuj krzyw rozpuszczalnoci chloranu(V) potasu w zakresie temperatury
+0 ºC - 100 ºC. Rozpuszczalno tej soli w wodzie jest funkcj rosnc w calym
+podanym zakresie temperatury.
+
+                                   60,0
+
+Rozpuszczalno chloranu(V) potasu,  50,0
+   g na 100 g wody
+                                   40,0
+
+                                   30,0
+
+                                   20,0
+
+                                   10,0
+
+                                   0,0      10      20  30  40       50     60  70  80  90 100
+                                         0
+
+                                                            Temperatura, ºC
+
+Zadanie 20.2. (0-1)
+Rozstrzygnij, czy w temperaturze 20 ºC mona otrzyma roztwór chloranu(V) potasu
+o steniu 7 % masowych. Odpowied uzasadnij.
+
+Rozstrzygnicie: ......................................................................................................................
+
+Uzasadnienie: .........................................................................................................................
+
+.................................................................................................................................................
+
+                                                            Strona 16 z 24
+
+                                                                                        ECHP-R0_100
+Zadanie 20.3. (0-1)
+Wykonaj obliczenia i odczytaj z wykresu warto temperatury, w której nasycony
+roztwór chloranu(V) potasu ma stenie 30 % masowych. Warto temperatury podaj
+w zaokrgleniu do jednoci.
+
+.................................................................................................................................................
+
+Zadanie 21.
+Teflon jest odpornym termicznie i chemicznie polimerem o nazwie systematycznej
+poli(tetrafluoroeten). W procesie otrzymywania tego tworzywa mona wyróni trzy etapy.
+1. Trichlorometan reaguje z fluorkiem antymonu(III) SbF3 w stosunku molowym 1 : 1.
+
+    W tym etapie powstaj dwa produkty. Produkt organiczny tworzy si z trichlorometanu
+    w wyniku podstawienia dwóch atomów chloru dwoma atomami fluoru.
+2. Organiczny produkt powstajcy w etapie 1. w temperaturze 800 ºC przeksztalca si
+    w zwizek nienasycony, a produktem ubocznym tej przemiany jest chlorowodór.
+3. Organiczny produkt powstajcy w etapie 2. w odpowiednich warunkach ulega
+    polimeryzacji.
+
+Zadanie 21.1. (0-1)
+Napisz równanie etapu 1.
+
+.................................................................................................................................................
+
+Zadanie 21.2. (0-2)
+Rozstrzygnij, czy otrzymany zwizek nienasycony moe wystpowa w postaci
+izomerów cis - trans. Odpowied uzasadnij. Napisz wzór pólstrukturalny (grupowy)
+fragmentu polimeru utworzonego z dwóch czsteczek monomeru.
+
+Rozstrzygnicie: ......................................................................................................................
+
+Uzasadnienie: .........................................................................................................................
+
+.................................................................................................................................................
+
+Wzór fragmentu polimeru: .......................................................................................................
+
+Zadanie 22. (0-1)
+Mieszanina nitrujca to mieszanina dwóch stonych kwasów: azotowego(V)
+i siarkowego(VI). Midzy jej skladnikami zachodzi reakcja, w której powstaje produkt
+bezporednio reagujcy z wglowodorem aromatycznym, np. z benzenem.
+
+Uzupelnij ponisze zdania - wybierz i zaznacz jedn odpowied sporód podanych
+w kadym nawiasie.
+
+Benzen ulega reakcji substytucji (elektrofilowej / nukleofilowej / rodnikowej).
+
+Drobiny, które reaguj bezporednio z czsteczkami benzenu podczas nitrowania, to
+
+(rodniki ·NO2 / aniony NO2- / kationy NO2+ ).
+
+             Nr zadania                        20.1. 20.2. 20.3. 21.1. 21.2. 22.
+
+             Wypelnia Maks. liczba pkt         1 1 1 1 2 1
+             egzaminator Uzyskana liczba pkt
+
+                         Strona 17 z 24
+
+ECHP-R0_100
+Zadanie 23. (0-2)
+Przygotowano roztwór bromu w dichlorometanie (rozpuszczalniku organicznym o wzorze
+CH2Cl2) o steniu 2,0 % masowych. Przez pluczk zawierajc 280 gramów opisanego
+roztworu bromu przepuszczano bez dostpu wiatla mieszanin etanu, etenu i etynu.
+Podczas dowiadczenia przebiegly wylcznie reakcje zilustrowane poniszymi równaniami:
+
+                                              C2H2 + 2Br2  C2H2Br4
+                                               C2H4 + Br2  C2H4Br2
+Do momentu calkowitego odbarwienia roztworu bromu przez pluczk przepuszczono
+521 cm3 mieszaniny gazów (objto gazów podano w przeliczeniu na warunki normalne).
+Ustalono take, e po przejciu przez pluczk objto mieszaniny gazów byla mniejsza
+o 86 %.
+
+Oblicz wyraon w procentach objtociowych zawarto etynu w mieszaninie
+zawierajcej etan, eten i etyn.
+
+Obliczenia:
+
+Informacja do zada 24.-26.
+Poniszy schemat jest ilustracj cigu przemian chemicznych. Substrat A to wglowodór
+aromatyczny, którego czsteczki s zbudowane z siedmiu atomów wgla. W wyniku reakcji
+monobromowania na wietle ten wglowodór tworzy tylko jeden produkt organiczny B.
+
+            A Br2, wiatlo B NaOH, woda C
+
+            1.           2.
+
+Zadanie 24. (0-1)
+Uzupelnij ponisz tabel. Napisz nazw typu reakcji 1. i 2. (substytucja, addycja albo
+eliminacja) oraz nazw mechanizmu (rodnikowy, nukleofilowy albo elektrofilowy),
+wedlug którego przebiegaj te przemiany.
+
+            Typ reakcji                   Mechanizm reakcji
+
+reakcja 1.
+
+reakcja 2.
+
+                Strona 18 z 24
+
+                                                             ECHP-R0_100
+Zadanie 25. (0-1)
+Napisz w formie czsteczkowej równanie reakcji 2. - zastosuj wzory pólstrukturalne
+(grupowe) zwizków organicznych.
+
+.................................................................................................................................................
+
+Zadanie 26. (0-1)
+Zwizek C reaguje z sodem i tworzy zwizek D. Do probówki, w której znajdowaly si
+krysztaly zwizku D, dolano wod.
+
+Uzupelnij ponisze zdania - wybierz i zaznacz jedn odpowied sporód podanych
+w kadym nawiasie.
+
+Zwizek D (ulega / nie ulega) hydrolizie. Anion zwizku D jest (slabsz / mocniejsz)
+zasad ni anion wodorotlenkowy i w reakcji z wod pelni funkcj (kwasu / zasady)
+Brønsteda.
+
+Zadanie 27. (0-1)
+Estry cykliczne powstaj w reakcjach wewntrzczsteczkowej lub midzyczsteczkowej
+estryfikacji kwasów karboksylowych, których czsteczki maj dwie grupy funkcyjne:
+karboksylow i hydroksylow. Powstale wizanie estrowe jest fragmentem piercienia.
+
+W wyniku reakcji wewntrzczsteczkowej estryfikacji pewnego hydroksykwasu otrzymano
+zwizek o wzorze przedstawionym poniej.
+
+                                           CH3
+
+                                           CH
+
+                                      H2C      CH2
+
+                                          CO
+                                      O
+
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+
+Kwas, z którego otrzymano zwizek o podanym wzorze, to
+
+A. kwas 3-hydroksy-3-metylobutanowy.
+B. kwas 4-hydroksy-2-metylobutanowy.
+C. kwas 4-hydroksy-3-metylobutanowy.
+D. kwas 3-hydroksy-4-metylobutanowy.
+
+             Nr zadania                         23. 24. 25. 26. 27.
+
+             Wypelnia Maks. liczba pkt          2 1 1 1 1
+             egzaminator Uzyskana liczba pkt
+
+             Strona 19 z 24
+
+ECHP-R0_100
+Zadanie 28. (0-2)
+Benzen wykazuje calkowit odporno na dzialanie wodnego roztworu KMnO4, ale grupy
+alkilowe przy piercieniu benzenowym s podatne na utlenianie. Kada grupa alkilowa ulega
+utlenieniu a do momentu, gdy powstanie z niej grupa karboksylowa zwizana bezporednio
+z piercieniem aromatycznym.
+
+                                                                 Na podstawie: J. McMurry, Chemia organiczna, Warszawa 2000.
+
+Uzupelnij ponisze schematy. Napisz wzory pólstrukturalne (grupowe) lub
+uproszczone kwasów karboksylowych powstajcych w wyniku calkowitego utlenienia
+poniszych zwizków roztworem KMnO4.
+
+H3C  CH3      KMnO4
+               H2O
+
+     CH2 CH3  KMnO4
+     CH3       H2O
+
+     CH3      KMnO4
+     CH        H2O
+     CH3
+
+Informacja do zada 29.-30.
+Sekwencj aminokwasów w peptydach przedstawia si najczciej za pomoc trzyliterowych
+kodów aminokwasów. W tej notacji z lewej strony umieszcza si kod aminokwasu, którego
+reszta zawiera woln grup aminow polczon z atomem wgla  (tzw. N-koniec).
+Analiza skladu pewnego pentapeptydu wykazuje, e powstal on z piciu rónych
+aminokwasów. Cztery z aminokwasów, które zidentyfikowano podczas analizy, to: Gly, Cys,
+Phe, Leu. Pity aminokwas, którego nie udalo si zidentyfikowa, oznaczono jako Xxx.
+Ustalono ponadto, e ten aminokwas stanowi N-koniec peptydu.
+Podczas czciowej hydrolizy badanego pentapeptydu otrzymano nastpujce peptydy:
+
+                           Cys-Leu-Phe Gly-Cys-Leu Xxx-Gly Leu-Phe
+
+              Strona 20 z 24
+
+                              ECHP-R0_100
+Zadanie 29. (0-1)
+Napisz sekwencj aminokwasów analizowanego pentapeptydu. Zastosuj oznaczenie
+Xxx niezidentyfikowanego aminokwasu.
+
+.................................................................................................................................................
+
+Zadanie 30. (0-1)
+W celu zidentyfikowania aminokwasu Xxx przeprowadzono reakcj peptydu
+z izotiocyjanianem fenylu o wzorze C6H5NCS. Ten zwizek reaguje wylcznie z N-kocowym
+aminokwasem peptydu, a w wyniku kolejnych przemian otrzymuje si pochodn
+fenylotiohydantoiny oraz peptyd o lacuchu krótszym o jedn reszt aminokwasow. Poniej
+przedstawiono schemat tego procesu.
+
+     C6H5    O NH CpHe3ptyd                   C6H5
+N                 C
+                                        OC    N     S
+                    C NH2
+C  +             RH                              C                 + HN  CpHe3ptyd
+
+                                                                   2
+
+S                                             CN
+
+             pentapeptyd                         RH H
+
+                                                    pochodna
+                                              fenylotiohydantoiny
+
+We wzorze pochodnej fenylotiohydantoiny grupa R oznacza lacuch boczny
+N-kocowego aminokwasu analizowanego peptydu.
+
+                                              Na podstawie: R.T. Morrison, R.N. Boyd, Chemia organiczna, Warszawa 1996.
+
+Badany pentapeptyd poddano opisanemu procesowi i ustalono, e uzyskana pochodna
+fenylotiohydantoiny ma mas molow równ 206 g  mol-1.
+
+Oblicz mas molow grupy R aminokwasu Xxx oraz zidentyfikuj badany aminokwas -
+napisz trzyliterowy kod tego aminokwasu.
+
+Obliczenia:
+
+Trzyliterowy kod aminokwasu Xxx obecnego w pentapeptydzie: ............................................
+
+                          Nr zadania          28. 29. 30.
+
+             Wypelnia Maks. liczba pkt        2 1 1
+             egzaminator Uzyskana liczba pkt
+
+                             Strona 21 z 24
+
+ECHP-R0_100
+Informacja do zada 31.-33.
+Teanina jest aminokwasem wystpujcym np. w zielonej herbacie. Punkt izoelektryczny
+teaniny jest równy 5,6.
+Substratem do syntezy teaniny jest pewien aminokwas bialkowy, który w etapie I ulega
+dekarboksylacji do aminy X. W etapie II ta amina ulega kondensacji z kwasem
+glutaminowym i powstaje wizanie peptydowe (amidowe). Udzial w reakcji bierze grupa
+karboksylowa znajdujca si w lacuchu bocznym kwasu glutaminowego.
+
+Zadanie 31. (0-1)
+Uzupelnij schemat syntezy teaniny. Wpisz wzory pólstrukturalne (grupowe)
+aminokwasu oraz aminy X.
+
+           etap I                  etap II
+                          amina X
+                                            C2H5NHCO(CH2)2CHCOOH
+
+aminokwas                                            NH2
+                                            teanina
+
+Zadanie 32. (0-1)
+W zalenoci od pH teanina wystpuje w postaci kationów, anionów lub jonów obojnaczych.
+Wykonano dowiadczenie, w którym do wodnego roztworu teaniny o pH = 5,6 dodano kwas
+solny i otrzymano roztwór o pH = 2. W wyniku zachodzcej reakcji zmienily si stenia
+jonów teaniny.
+
+Uzupelnij ponisze zdanie - wybierz i zaznacz jedn odpowied sporód podanych
+w nawiasie.
+
+Podczas opisanego dowiadczenia wzroslo stenie (anionów / kationów / jonów
+obojnaczych) teaniny.
+
+Zadanie 33. (0-1)
+W trzech naczyniach oznaczonych literami A, B i C znajduj si oddzielnie
+i w przypadkowej kolejnoci trzy zwizki: skrobia, teanina, alanyloalanyloalanina.
+Przeprowadzono dowiadczenie, podczas którego wykonano dwie próby.
+Podczas pierwszej próby na szkielkach zegarkowych umieszczono niewielkie iloci
+wymienionych substancji i na kad naniesiono kilka kropli roztworu jodu w wodnym
+roztworze jodku potasu. Wynik próby pozwolil na identyfikacj substancji z naczynia C.
+W celu zidentyfikowania substancji znajdujcych si w naczyniach A i B przygotowano ich
+wodne roztwory i przeprowadzono drug prób, w której uytym odczynnikiem byl Cu(OH)2.
+Jego zastosowanie pozwala na wykrycie zwizków polihydroksylowych, czy te na
+potwierdzenie wystpowania w czsteczce co najmniej dwóch wiza peptydowych
+(amidowych).
+
+           Strona 22 z 24
+
+                                            ECHP-R0_100
+Przebieg próby przedstawiono na schemacie:
+                            wieo strcony wodorotlenek miedzi(II)
+
+                      I                                               II
+
+roztwór z naczynia A                               roztwór z naczynia B
+
+W kadej probówce zaobserwowano róne objawy reakcji. Tylko w probówce II powstal
+roztwór o barwie róowofioletowej.
+
+Podaj nazw substancji znajdujcej si w naczyniu A oraz nazw reakcji, która
+przebiegla w probówce II podczas opisanego dowiadczenia.
+
+Nazwa substancji znajdujcej si w naczyniu A: ......................................................................
+Nazwa reakcji, która przebiegla w probówce II: .......................................................................
+
+Zadanie 34. (0-1)
+Jednym z produktów powstajcych w procesie karmelizacji cukrów jest maltol -
+piercieniowy zwizek o poniszym wzorze.
+
+                                     O
+
+                            4                 OH
+                         53                   CH3
+                                              1
+                         62
+                            O
+
+Wpisz do tabeli brakujce wartoci formalnych stopni utlenienia atomów wgla
+w czsteczce maltolu.
+
+                         Numer atomu wgla w czsteczce maltolu
+
+                 1       2                    3                   4   5      6
+
+Formalny stopie          I                                        II         0
+utlenienia
+
+                         Nr zadania              31. 32. 33. 34.
+
+                 Wypelnia Maks. liczba pkt       1 1 1 1
+             egzaminator Uzyskana liczba pkt
+
+                         Strona 23 z 24
+
+ECHP-R0_100
+BRUDNOPIS (nie podlega ocenie)
+
+Strona 24 z 24
+
+                                ECHP-R0_100
+

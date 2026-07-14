@@ -1,0 +1,1054 @@
+KOD              WYPELNIA ZDAJCY            Arkusz zawiera informacje prawnie chronione
+                                     PESEL  do momentu rozpoczcia egzaminu.
+
+                                                      Miejsce na naklejk.
+                                               Sprawd, czy kod na naklejce to
+
+                                                         E-100.
+
+                                                 Jeeli tak - przyklej naklejk.
+                                             Jeeli nie - zglo to nauczycielowi.
+
+EGZAMIN MATURALNY Z BIOLOGII
+
+POZIOM ROZSZERZONY
+
+DATA: 12 maja 2021 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS PRACY: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 25 stron (zadania 1-24).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego egzamin.
+
+2. Odpowiedzi zapisz w miejscu na to przeznaczonym przy kadym zadaniu.
+3. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym tuszem/atramentem.
+4. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+5. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+6. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL i przyklej naklejk
+
+    z kodem.
+7. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+
+8. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na egzamin
+
+    maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora prostego.
+
+                                            EBIP-R0-100-2105
+
+Uklad graficzny
+© CKE 2021
+Zadanie 1.
+Prolaktyna, wydzielana przez gruczolow cz przysadki mózgowej, jest jednolacuchowym
+polipeptydem zloonym ze 199 aminokwasów, powstajcym w wyniku odcicia peptydu
+sygnalowego liczcego 28 aminokwasów.
+Na poniszym schemacie przedstawiono struktur przestrzenn czsteczki dojrzalej ludzkiej
+prolaktyny.
+
+                                                                                   Na podstawie: S.J. Konturek, Fizjologia czlowieka, Wroclaw 2013;
+                                                                                               Protein Data Bank, https://www.rcsb.org/structure/1RW5.
+
+Zadanie 1.1. (0-1)
+Okrel dominujc struktur II-rzdow w czsteczce dojrzalej ludzkiej prolaktyny.
+..................................................................................................................................................
+
+Zadanie 1.2. (0-1)
+Na podstawie przedstawionych informacji okrel najwysz rzdowo struktury bialka
+- prolaktyny. Odpowied uzasadnij, odwolujc si do cech budowy tego bialka.
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 1.3. (0-1)
+Podaj calkowit liczb kodonów w mRNA stanowicym matryc podczas syntezy
+prolaktyny.
+..................................................................................................................................................
+
+Strona 2 z 25
+
+               EBIP-R0_100
+Zadanie 2.
+W komórkach eukariotycznych gradient protonowy jest wykorzystywany zarówno do syntezy
+ATP, jak i do transportu niektórych metabolitów przez wewntrzn blon mitochondrialn.
+Na poniszym schemacie przedstawiono proces transportu pirogronianu i kwasu
+ortofosforowego (Pi).
+
+                                                                      Na podstawie: B. Alberts i inni, Podstawy biologii komórki, Warszawa 2007.
+
+Zadanie 2.1. (0-2)
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly powstawanie gradientu
+protonowego w mitochondriach. W kadym nawiasie podkrel wlaciwe okrelenie.
+
+Elektrony pochodzce ze zredukowanych podczas cyklu Krebsa dinukleotydów - NADH
+oraz FADH2 - s przenoszone na czsteczk (dwutlenku wgla / tlenu) poprzez lacuch
+przenoników elektronów zwizanych z (wewntrzn / zewntrzn) blon mitochondrialn.
+Energia uwolniona podczas przeplywu elektronów przez lacuch oddechowy jest
+wykorzystywana do transportu protonów, które przemieszczaj si w kierunku
+ich (mniejszego / wikszego) stenia do przestrzeni midzyblonowej mitochondrium,
+gdzie panuje (nisze / wysze) pH ni w matriks mitochondrium.
+
+Zadanie 2.2. (0-1)
+Uzasadnij, e dla efektywnego zachodzenia procesów oddychania wewntrzkomórkowego
+konieczny jest cigly transport kwasu ortofosforowego (Pi) oraz ADP do wntrza
+mitochondrium.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+               Wypelnia   Nr zadania           1.1. 1.2. 1.3. 2.1. 2.2.
+             egzaminator  Maks. liczba pkt
+                                               1  1  1  2  1
+                          Uzyskana liczba pkt
+
+                          Strona 3 z 25
+
+EBIP-R0_100
+Zadanie 2.3. (0-1)
+Uzupelnij tabel - wpisz nazwy opisanych etapów oddychania komórkowego.
+
+            Opis etapu oddychania komórkowego                                         Nazwa etapu
+1. Zachodzi w cytozolu komórki zwierzcej, a jego produktem kocowym jest pirogronian.
+2. Zachodzi w matriks mitochondrium, a pirogronian jest jego substratem.
+
+Zadanie 3.
+Oprócz 20 aminokwasów biogennych, wchodzcych w sklad bialek wszystkich organizmów,
+w przyrodzie wystpuj take inne aminokwasy, np. L-kanawanina. Wystpuje ona wylcznie
+u rolin bobowatych, m.in. w ich nasionach, gdzie pelni funkcj magazynu azotu -
+makroelementu niezbdnego do syntezy wielu zwizków podczas kielkowania nasion.
+L-kanawanina zabezpiecza równie nasiona przed zjadaniem ich przez rolinoerne owady.
+Toksyczne dzialanie L-kanawaniny na owady wynika z jej podobiestwa strukturalnego
+do argininy - aminokwasu naturalnie wystpujcego w bialkach.
+
+L-kanawanina
+
+                                 L-arginina
+
+Podczas syntezy bialek w miejsca, gdzie powinna znale si arginina, wlczana bywa
+L-kanawanina, co zmienia liczb i rodzaj oddzialywa midzy aminokwasami w lacuchu
+polipeptydowym. Bialka majce w swej strukturze L-kanawanin wykazuj nisk aktywno
+biologiczn lub jej brak, co u owadów prowadzi m.in. do spowolnienia wzrostu larw, opónienia
+lub zaklócenia w przepoczwarczaniu. Wikszo owadów nasionoernych nie zjada nasion
+zawierajcych L-kanawanin. Jednak larwy chrzszcza Caryedes brasiliensis, które ywi si
+wylcznie nasionami tropikalnego pncza z rodziny bobowatych (Dioclea megacarpa), maj
+zdolno do detoksykacji L-kanawaniny.
+
+          Na podstawie: P. Staszek, A. Antosik, U. Krasuska, A. Gniazdowska, L-kanawanina - niebialkowy aminokwas toksyczny
+                                                                          dla zwierzt i rolin, ,,Edukacja Biologiczna i rodowiskowa" 3(52), 2014.
+
+Zadanie 3.1. (0-1)
+Wyjanij, dlaczego wlczanie L-kanawaniny w miejsce argininy w czasie syntezy bialek
+enzymatycznych prowadzi do powstawania enzymów o obnionej aktywnoci
+katalitycznej.
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+              Strona 4 z 25
+
+                                                                                                   EBIP-R0_100
+Zadanie 3.2. (0-1)
+Uzasadnij, e wspólycie korzeni rolin bobowatych z bakteriami wicymi azot
+atmosferyczny ma znaczenie dla syntezy L-kanawaniny przez te roliny.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 3.3. (0-1)
+Sporód wymienionych zwizków chemicznych wybierz i podkrel nazwy tych
+zawierajcych atomy azotu.
+
+cytozyna     celuloza             cholesterol     ATP      ryboza
+
+Zadanie 3.4. (0-1)                        chrzszcza  Caryedes  brasiliensis
+Wyjanij, jakie znaczenie adaptacyjne dla
+ma zdolno do detoksykacji L-kanawaniny.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 4. (0-1)
+Glikokaliks jest zbudowany z lacuchów oligosacharydowych przylczonych do bialek i lipidów
+blony komórkowej. Glikokaliks ochrania powierzchni komórki przed uszkodzeniami
+mechanicznymi i chemicznymi. Poniewa oligosacharydy i polisacharydy wi wod,
+powierzchnia komórki jest liska. Wizana przez oligo- i polisacharydy warstwa wody
+wystpujca na powierzchni blony komórkowej zmniejsza tarcie komórki o inne komórki
+i macierz midzykomórkow.
+
+                                                                      Na podstawie: B. Alberts i inni, Podstawy biologii komórki, Warszawa 1999.
+
+Wyka, e wystpowanie glikokaliksu na powierzchni erytrocytów ma znaczenie
+dla funkcjonowania tych komórek.
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+  Wypelnia   Nr zadania           2.3. 3.1. 3.2. 3.3. 3.4. 4.
+egzaminator  Maks. liczba pkt
+                                  1       1    1     1  1      1
+             Uzyskana liczba pkt
+
+                       Strona 5 z 25
+
+EBIP-R0_100
+Zadanie 5. (0-1)
+Poniej przedstawiono dokumentacj obserwacji mikroskopowej pewnego jednokomórkowego
+organizmu: A - mikrofotografi z transmisyjnego mikroskopu elektronowego oraz B - rysunek
+bdcy jej interpretacj.
+
+                                                                                            Na podstawie: A. Allott, D. Mindorff, Biology, Oksford 2014.
+
+Okrel, czy obserwowan komórk byla komórka bakteryjna, czy - komórka grzybowa.
+Odpowied uzasadnij, odnoszc si do jednej widocznej na ilustracji cechy budowy
+odróniajcej komórk bakteryjn od komórki grzybowej.
+
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 6.
+Mikrokosmki to palczaste wypustki cytoplazmatyczne wielu komórek nablonkowych.
+Utrzymuj one swój ksztalt dziki pczkom filamentów aktynowych tworzcych
+ich cytoszkielet. Niektóre nablonki charakteryzuj si wystpowaniem bardzo licznych
+mikrokosmków, np. nablonek jelita cienkiego czy nablonek kanalika nerkowego.
+Badania z ostatnich lat wykazaly równie, e powierzchnia ciala tasiemców jest pokryta
+nablonkiem z licznymi mikrokosmkami, w tym przypadku nazywanymi mikrotrychami.
+
+                                                                                                 Na podstawie: W. Sawicki, Histologia, Warszawa 2015;
+                                                                                                  Cz. Blaszak, Zoologia. Bezkrgowce, Warszawa 2014.
+
+Zadanie 6.1. (0-1)
+Wyka zwizek midzy obecnoci licznych mikrotrychów na powierzchni ciala
+doroslych tasiemców a ich trybem ycia i sposobem odywiania si.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Strona 6 z 25
+
+               EBIP-R0_100
+Zadanie 6.2. (0-1)
+Wybierz i podkrel wszystkie procesy, w których uczestnicz mikrokosmki nablonka
+kanalika nerkowego.
+
+     ultrafiltracja resorpcja zwrotna sekrecja kanalikowa wydzielanie adrenaliny
+
+Zadanie 6.3. (0-1)
+Oce, czy ponisze stwierdzenia dotyczce roli filamentów aktynowych w komórce
+zwierzcej s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest
+falszywe.
+
+1. Podczas podzialu jdra komórkowego wlókna wrzeciona kariokinetycznego powstaj glównie z filamentów aktynowych.             P F
+
+2. W wyniku przesuwania si filamentów aktynowych wzgldem filamentów miozynowych moliwy staje si skurcz komórki miniowej. P F
+
+3. Sie filamentów aktynowych pod blon komórkow bierze udzial w tworzeniu wici oraz rzsek.                                    P F
+
+Zadanie 7.                                                                                                           skali,  przekroje
+Na poniszych rysunkach przedstawiono, z zachowaniem wspólnej
+poprzeczne przez blaszki lici klonu cukrowego:
+A. rosncych od poludniowej, w pelni owietlonej strony korony drzewa,
+B. znajdujcych si w rodkowej, zacienionej czci korony drzewa.
+
+                                                       Na podstawie: E. Sinnott, K. Wilson, Botany Principles and Problems, Nowy Jork 1955.
+
+Zadanie 7.1. (0-1)
+Sformuluj problem badawczy obserwacji przekrojów przez blaszki liciowe klonu
+cukrowego.
+
+..................................................................................................................................................
+..................................................................................................................................................
+
+               Wypelnia   Nr zadania           5. 6.1. 6.2. 6.3. 7.1.
+             egzaminator  Maks. liczba pkt
+                                               1  1  1                                                            1  1
+                          Uzyskana liczba pkt
+
+                          Strona 7 z 25
+
+EBIP-R0_100
+Zadanie 7.2. (0-1)
+Na podstawie analizy rysunków podaj jedn rónic w budowie mikiszu
+asymilacyjnego lici klonu cukrowego rosncych w rónych warunkach owietlenia.
+
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 8.
+Ruchy rolin mog by spowodowane czynnikami wewntrznymi lub wynikaj z wraliwoci
+organu na okrelony bodziec zewntrzny.
+Ws czepny mczennicy, bdcy przeksztalconym pdem bocznym, w odpowiedzi na dotyk
+wygina si w miejscu kontaktu, co przedstawiono schematycznie na poniszym rysunku.
+
+                                                                                                 Na podstawie: https://pl.wikipedia.org/wiki/Ws_czepny
+
+Zadanie 8.1. (0-1)
+Dokocz zdanie. Zaznacz odpowied A albo B oraz jej uzasadnienie 1., 2., 3. albo 4.
+
+Przedstawiony ruch wsa czepnego mczennicy jest przykladem
+
+A. nastii,    poniewa ten ruch jest  1. kierunkowy i nieodwracalny.
+B. tropizmu,                         2. kierunkowy i odwracalny.
+                                     3. bezkierunkowy i odwracalny.
+                                     4. bezkierunkowy i nieodwracalny.
+
+Zadanie 8.2. (0-1)
+Opisz mechanizm ruchu przedstawionego na rysunku. W odpowiedzi uwzgldnij
+procesy zachodzce w komórkach wsa czepnego.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+              Strona 8 z 25
+
+                                                           EBIP-R0_100
+Zadanie 9.
+Mszyce odywiaj si sokami rolinnymi. Podczas pobierania pokarmu wbijaj rostrum
+(wydluony ryjek), stanowicy element aparatu gbowego, prosto do wntrza rurki sitowej.
+Jeli odetnie si cialo owada (za pomoc wizki promieni laserowych), pozostawiajc rostrum
+wbite w lodyg, pelni ono wówczas rol mikrokapilary, z której pod wplywem cinienia
+hydrostatycznego wyplywa zawarto floemu.
+Przeprowadzono nastpujce dowiadczenie. Szczytow cz pdu lilaka pospolitego
+(Syringa vulgaris) umieszczono w szklanym pojemniku zawierajcym dwutlenek wgla
+znakowany wglem 14C. Nastpnie mierzono czas pojawienia si zwizków organicznych
+zawierajcych 14C w soku floemowym wyplywajcym poprzez rozmieszczone wzdlu lodygi
+mikrokapilary utworzone z rostrów mszyc.
+Na rysunku przedstawiono zestaw dowiadczalny, a w tabeli - uzyskane wyniki.
+
+                                                                 Kolonia mszyc
+
+                                                        1.          2.          3.
+
+Odleglo w cm od kolonii startowej                       20          40          60
+
+Czas w godzinach, po którym wykryto obecno
+
+zwizków organicznych zawierajcych 14C, liczony          1,25        2,40        3,80
+
+od momentu wykrycia ich w miejscu kolonii startowej
+
+                                                              Na podstawie: http://ib.bioninja.com.au
+
+Zadanie 9.1. (0-1)
+Sformuluj problem badawczy przedstawionego dowiadczenia.
+
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 9.2. (0-1)
+Wyjanij, dlaczego radioaktywne atomy wgla 14C, znajdujce si pocztkowo
+w znakowanym CO2, wykryto nastpnie w zwizkach organicznych znajdujcych si
+w soku floemowym roliny.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+               Wypelnia   Nr zadania            7.2. 8.1. 8.2. 9.1. 9.2.
+             egzaminator  Maks. liczba pkt
+                                                1    1        1  1        1
+                          Uzyskana liczba pkt
+
+                                   Strona 9 z 25
+
+EBIP-R0_100
+Zadanie 10.
+Roliny rosnce w rodowisku naturalnym s naraone na dzialanie wielu niekorzystnych
+czynników, okrelanych jako czynniki stresowe. Susza i podtopienie stanowi czynniki
+stresowe, które upoledzaj transport wody w rolinie. Stres wywoluje odpowied komórek,
+tkanek i organów, co pozwala na lepsze przystosowanie si roliny do aktualnych warunków
+rodowiska. Jedn z pierwszych odpowiedzi roliny na dzialanie czynnika stresotwórczego
+jest zmiana równowagi hormonalnej. Obserwowan reakcj rolin na susz lub podtopienie
+jest stymulacja syntezy etylenu. Efekt dzialania etylenu to m.in.:
+
+    · opadanie lici,
+    · rozwój mikiszu powietrznego w korzeniach,
+    · powstawanie korzeni przybyszowych oraz wloników.
+
+                                                      Na podstawie: red. J. Kopcewicz i S. Lewak, Podstawy fizjologii rolin, Warszawa 1998;
+       A. Kacperska, Udzial hormonów rolinnych w odpowiedzi rolin na stresowe czynniki rodowiska, ,,Kosmos" 44(3-4), 1995.
+
+Zadanie 10.1. (0-1)
+Na poniszych schematach przedstawiono przekroje poprzeczne przez korze ryu: A - stan
+wyjciowy, B - efekt dzialania etylenu w warunkach podtopienia roliny.
+
+            Na podstawie: S. Nishiuchi i inni, Mechanisms for coping with submergence and waterlogging in rice, ,,Rice" 5(2), 2012.
+
+Na podstawie schematów okrel, na czym polegala zmiana w budowie korzenia ryu,
+i podaj jej znaczenie adaptacyjne.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Strona 10 z 25
+
+                EBIP-R0_100
+Zadanie 10.2. (0-1)
+Wyjanij, w jaki sposób wzrost wydzielania etylenu w czasie suszy przyczynia si
+do utrzymania zrównowaonego bilansu wodnego rolin. W odpowiedzi uwzgldnij
+jeden z wymienionych efektów dzialania etylenu.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 10.3. (0-1)
+Oce, czy ponisze informacje odnoszce si do roli auksyn w funkcjonowaniu roliny
+s prawdziwe. Zaznacz P, jeli informacja jest prawdziwa, albo F - jeli jest falszywa.
+
+1. Auksyny produkowane przez pk szczytowy s odpowiedzialne za zjawisko dominacji wierzcholkowej.                   P F
+2. Auksyny, podobnie jak etylen, mog indukowa tworzenie si korzeni przybyszowych.                                  P F
+3. Auksyny bior udzial w reakcjach fototropicznych pdu, dziki czemu warunkuj jego wyginanie si w kierunku wiatla.  P F
+
+Zadanie 11.
+Trzustka jest gruczolem, który pelni u czlowieka jednoczenie funkcj wydzielania
+wewntrznego oraz zewntrznego. Funkcja zewntrzwydzielnicza polega na wytwarzaniu
+enzymów trawiennych i na uwalnianiu ich do wiatla przewodu pokarmowego.
+
+                                                  Na podstawie: K. Sembulingam, P. Sembulingam, Essentials of Medical Physiology, 2012;
+                                                           P. Hoser, Fizjologia organizmów z elementami anatomii czlowieka, Warszawa 2000.
+
+Zadanie 11.1. (0-1)
+Uzupelnij tabel - wpisz nazwy enzymów trzustkowych i substratu w odpowiednie miejsca.
+
+                           Nazwa enzymu               Trawiony skladnik
+             trypsyna                               pokarmowy (substrat)
+
+                                               polisacharydy
+                                               zemulgowane tluszcze
+
+Zadanie 11.2. (0-1)
+Podaj nazw odcinka przewodu pokarmowego, do którego s wydzielane enzymy
+trzustkowe.
+
+..................................................................................................................................................
+
+               Wypelnia   Nr zadania           10.1.     10.2.  10.3.  11.1.  11.2.
+             egzaminator  Maks. liczba pkt       1         1      1      1      1
+
+                          Uzyskana liczba pkt
+
+                                         Strona 11 z 25
+
+EBIP-R0_100
+Zadanie 11.3. (0-1)
+Wyka, e trzustka pelni funkcj gruczolu wydzielania wewntrznego. W odpowiedzi
+uwzgldnij przyklad substancji produkowanej przez ten narzd oraz sposób jej
+wydzielania.
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+..................................................................................................................................................
+
+Zadanie 12.
+Strusie przystosowane s do ycia na terenach pustynnych i pólpustynnych. Jako jedyne ptaki
+osobno wydalaj kal i mocz. S w stanie przey nawet kilka dni bez dostpu do wody.
+Ich pokarm stanowi glównie nasiona, ale take owoce oraz licie traw i innych rolin.
+Zwlaszcza te ostatnie s istotnym ródlem wody dla strusi.
+Na wykresie przedstawiono zmiany osmolalnoci osocza krwi oraz moczu strusia
+czerwonoskórego (Struthio camelus) na przestrzeni kilkunastu dni, w czasie których ptaki
+mialy swobodny lub ograniczony dostp do wody. Próbki moczu pobierano kadego dnia
+z samego rana zaraz po podniesieniu si ptaków z legowiska.
+
+Uwaga: Osmolalno to liczba moli substancji osmotycznie czynnych rozpuszczonych w 1 kg
+wody.
+
+                                    Na podstawie: P. Willmer, G. Stone, I. Johnston, Environmental Physiology of Animals, Carlton 2005.
+
+Zadanie 12.1. (0-1)
+Na podstawie przedstawionych informacji podaj dzie eksperymentu, w którym ptakom
+ograniczono dostp do wody, oraz dzie, w którym zostaly one napojone.
+
+Dzie, w którym ptakom ograniczono dostp do wody: ...........................................................
+Dzie, w którym ptaki zostaly napojone: ..................................................................................
+
+Strona 12 z 25
+
+                EBIP-R0_100
+Zadanie 12.2. (0-1)
+Wyjanij, dlaczego w czasie trwania eksperymentu wzrosla osmolalno moczu
+badanych ptaków.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 12.3. (0-1)
+Wyjanij, dlaczego strusie, podobnie jak inne ptaki, musz polyka kamienie,
+aby skuteczniej trawi pokarm.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 13.
+Na schemacie przedstawiono zmiany potencjalu blony we wzgórku aksonu neuronu. Strzalki
+wskazuj czas, w którym nastpily dwa pobudzenia tego neuronu.
+
+                          Na podstawie: https://opentextbc.ca/anatomyandphysiology/chapter/12-4-the-action-potential
+
+Zadanie 13.1. (0-1)                                                                  literami  A-D,
+Do faz potencjalu czynnociowego, oznaczonych na schemacie
+przyporzdkuj wlaciwe okrelenia sporód wymienionych poniej.
+
+hiperpolaryzacja          polaryzacja                   depolaryzacja                repolaryzacja
+
+A. ....................... B. ........................  C. ........................  D. ..................
+
+               Wypelnia   Nr zadania                    11.3.  12.1.  12.2.  12.3.   13.1.
+             egzaminator  Maks. liczba pkt                1      1      1      1        1
+
+                          Uzyskana liczba pkt
+
+                                       Strona 13 z 25
+
+EBIP-R0_100
+Zadanie 13.2. (0-1)
+Oce, czy ponisze stwierdzenia dotyczce informacji przedstawionych na wykresie
+s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F - jeli jest falszywe.
+
+1. Pobudzenie nr 2 spowodowalo lokaln depolaryzacj blony komórkowej. P F
+
+2. Pobudzenie nr 2 bylo przyczyn powstania impulsu nerwowego.          P F
+
+3. Liter E oznaczono warto potencjalu spoczynkowego blony komórkowej.  P F
+
+Zadanie 14.
+Witamina C (kwas L-askorbinowy) pelni kilka istotnych funkcji w procesach metabolicznych
+zachodzcych w organizmie czlowieka, który musi j przyjmowa wraz z pokarmem.
+Szacuje si, e organizm doroslego czlowieka potrzebuje okolo 90 mg witaminy C na dob.
+ródlem witaminy C w diecie czlowieka s przede wszystkim roliny, ale wikszo zwierzt
+ma zdolno do jej syntezy. Utrata tej zdolnoci jest skutkiem mutacji genu kodujcego enzym
+katalizujcy ostatni etap syntezy witaminy C.
+Na poniszym drzewie filogenetycznym przedstawiono histori ewolucyjn ssaków - szarym
+kolorem wyróniono linie filogenetyczne, w których doszlo do utraty zdolnoci do syntezy witaminy C.
+
+                                                    Na podstawie: M. Dworniczak, Witamina C, ,,Wiedza i ycie" 2, 2017;
+G. Drouin, J.R. Godin, B. Pagé, The genetics of vitamin C loss in vertebrates, ,,Current Genomics" 12, 2011.
+
+Strona 14 z 25
+
+                                                                       EBIP-R0_100
+Zadanie 14.1. (0-1)
+Oce, czy ponisze stwierdzenia odnoszce si do przedstawionego drzewa
+filogenetycznego s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe, albo F -
+jeli jest falszywe.
+
+1. Ssaki, które nie maj zdolnoci do syntezy witaminy C, stanowi grup polifiletyczn. P F
+2. Utrata zdolnoci do syntezy witaminy C zaszla co najmniej trzykrotnie, niezalenie w rónych liniach rozwojowych ssaków. P F
+
+3. Wszystkie naczelne s pozbawione moliwoci syntezy witaminy C.            P F
+
+Zadanie 14.2. (0-1)
+Wyjanij, dlaczego mutacja uniemoliwiajca syntez witaminy C, która pojawila si
+u przodka malp, nie zostala wyeliminowana przez dobór naturalny.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 14.3. (0-1)
+Wyjanij, dlaczego witamina C, w odrónieniu od witaminy A, nie kumuluje si
+w organizmie czlowieka. W odpowiedzi odnie si do wlaciwoci obu witamin.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+               Wypelnia   Nr zadania           13.2.  14.1.  14.2.  14.3.
+             egzaminator  Maks. liczba pkt       1      1      1      1
+
+                          Uzyskana liczba pkt
+
+                          Strona 15 z 25
+
+EBIP-R0_100
+Zadanie 15.
+W organizmie czlowieka koci chroni wane narzdy wewntrzne, umoliwiaj ruch i pelni
+funkcj podporow. U noworodków wystpuje ok. 270 koci, ale u osób doroslych jest ich ju
+tylko 206. Najdlusz koci w ciele czlowieka jest ko udowa. Z kolei najmniejsze koci
+to kosteczki sluchowe, a wród nich najmniejsz jest strzemiczko. S to jedyne koci, które
+nie zmieniaj swojego rozmiaru przez cale ycie czlowieka.
+
+                                                                   Na podstawie: K. Kornicka, Zaskakujce ycie koci, ,,Wiedza i ycie" 8, 2018.
+
+Zadanie 15.1. (0-1)
+Okrel funkcj strzemiczka i podaj nazwy pozostalych kosteczek sluchowych.
+
+Funkcja strzemiczka: ..............................................................................................................
+..................................................................................................................................................
+Nazwy pozostalych kosteczek sluchowych: .............................................................................
+..................................................................................................................................................
+
+Zadanie 15.2. (0-1)
+Okrel przyczyn rónicy w liczbie koci midzy noworodkiem a osob dorosl.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 15.3. (0-1)
+Podaj jedn funkcj koci dlugich czlowieka, inn ni wymienione w tekcie.
+
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 15.4. (0-1)
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+
+Wystpowanie tkanki kostnej jest charakterystyczne dla wszystkich
+
+A. skorupiaków.
+B. glowonogów.
+C. strunowców.
+D. krgowców.
+
+Strona 16 z 25
+
+                EBIP-R0_100
+Zadanie 16.
+Do monitorowania jakoci wody wodocigowej wykorzystuje si m.in. male. Prowadz one
+osiadly tryb ycia, a due znaczenie w ich funkcjonowaniu odgrywaj mechano-
+i chemoreceptory wykrywajce czstki zawieszone w wodzie. W zbiorniku przeplywowym
+umieszcza si szczeuje lub skójki, które jedn polow muszli przytwierdza si do jego dna,
+a do drugiej polowy przyczepia si magnes polczony z czujnikiem przekazujcym sygnaly
+do komputera.
+W warunkach normalnego funkcjonowania rytm biologiczny mala obejmuje cykliczne okresy
+podwyszonej i obnionej aktywnoci. W czasie podwyszonej aktywnoci, jeli woda jest
+czysta, muszla mala jest rozchylona, a miczak pobiera wod przez syfon. W czasie
+obnionej aktywnoci muszla moe by czciowo lub calkowicie zamknita przez okres kilku
+godzin.
+Przymknicie muszli nawet do kilku procent maksymalnego rozwarcia lub stopniowe jej
+calkowite zamykanie nie musi by przejawem stresu. Dopiero w momencie wystpienia naglej
+zmiany jakoci wody miczak gwaltownie zamyka muszl. W poznaskiej stacji uzdatniania
+wody jednoczenie wykorzystuje si osiem osobników. Alarm wlcza si, gdy rednia warto
+stopnia otwarcia ich muszli spadnie poniej okrelonego poziomu.
+
+                                                                       Na podstawie: M. Dworniczak, Uzdatnianie wody, ,,Wiedza i ycie" 8, 2017;
+    E. Tomczak, A. Dominiak, Organizmy ywe w systemie biomonitoringu jakoci wody, ,,Proceedings of ECOpole" 10(1), 2016.
+
+Zadanie 16.1. (0-1)
+Oce, czy stwierdzenia odnoszce si do wykorzystania maly w monitorowaniu jakoci
+wody wodocigowej s prawdziwe. Zaznacz P, jeli stwierdzenie jest prawdziwe,
+albo F - jeli jest falszywe.
+
+1. Dziki malom moliwa jest ocena ogólnego poziomu zanieczyszczenia wody wodocigowej.  P F
+                                                                                      P F
+      Male wykorzystuje si do monitorowania jakoci wody wodocigowej,                  P F
+2. poniewa maj one du tolerancj na zanieczyszczenia w rodowisku
+
+      ycia.
+      Male maj doskonaly zmysl chemiczny, dziki czemu ich reakcja
+3. dostarcza informacji o tym, jaki zwizek szkodliwy i w jakich ilociach
+      znajduje si w wodzie.
+
+Zadanie 16.2. (0-1)
+Wyjanij, dlaczego podczas biomonitoringu czystoci wód wykorzystuje si wicej ni
+jednego osobnika, jak np. osiem w poznaskiej stacji uzdatniania wody.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+  Wypelnia   Nr zadania           15.1.  15.2.  15.3.  15.4.  16.1.                   16.2.
+egzaminator  Maks. liczba pkt       1      1      1      1      1                       1
+
+             Uzyskana liczba pkt
+
+             Strona 17 z 25
+
+EBIP-R0_100
+Zadanie 16.3. (0-1)
+Okrel, jakie znaczenie dla funkcjonowania maly ma przeplyw wody przez jam
+plaszczow, kiedy muszla jest otwarta. Podaj dwa róne przyklady.
+
+1. ..............................................................................................................................................
+2. ..............................................................................................................................................
+
+Zadanie 17.
+Przyczyn wrodzonej nietolerancji fruktozy s mutacje w genie ALDOB, kodujcym enzym
+aldolaz B i zlokalizowanym na chromosomie 9. Jeeli uszkodzona jest tylko jedna kopia genu,
+oznacza to nosicielstwo tej choroby, co w wikszoci przypadków nie wywoluje adnych
+objawów. Czsto wystpowania wrodzonej nietolerancji fruktozy u czlowieka wynosi
+1/40 000. Objawy choroby ujawniaj si zwykle w okresie niemowlcym po zakoczeniu
+karmienia dziecka wylcznie mlekiem matki, kiedy do diety dziecka wprowadzane s pierwsze
+owoce i warzywa. Wrodzona nietolerancja fruktozy prowadzi, po spoyciu tego cukru,
+do gromadzenia si jego metabolitów w komórkach wtroby: brak aldolazy B powoduje
+nagromadzenie fruktozo-1-fosforanu, co z kolei prowadzi do upoledzenia glukoneogenezy
+oraz ograniczenia syntezy ATP. U osób chorych naley wykluczy z diety owoce, niektóre
+warzywa, miód oraz cukier spoywczy (sacharoz).
+
+                                                                                                                      Na podstawie: https://biotechnologia.pl/;
+             L. Szablewski, A. Skopiska, Zaburzenia metabolizmu wglowodanów powodowane mutacjami i rola diety jako terapii.
+
+                                                                                                   Cz II. Fruktozemia, ,,Medycyna Rodzinna" 4, 2005.
+
+Zadanie 17.1. (0-1)
+Dokocz zdanie. Zaznacz wlaciw odpowied sporód podanych.
+
+Wrodzona nietolerancja fruktozy jest dziedziczona w sposób
+
+A. autosomalny recesywny.
+B. autosomalny dominujcy.
+C. sprzony z plci recesywny.
+D. sprzony z plci dominujcy.
+
+Zadanie 17.2. (0-1)
+Oblicz czsto wystpowania nosicieli wrodzonej nietolerancji fruktozy w populacji
+pozostajcej w stanie równowagi genetycznej, w której czsto wystpowania
+wrodzonej nietolerancji fruktozy wynosi 1/40 000.
+
+Obliczenia:
+
+Czsto wystpowania nosicieli wrodzonej nietolerancji fruktozy wynosi: .......................
+
+Strona 18 z 25
+
+                EBIP-R0_100
+Zadanie 17.3. (0-1)
+Uzasadnij, e osoba cierpica na wrodzon nietolerancj fruktozy powinna
+wyeliminowa z diety sacharoz.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 18. (0-2)
+Badacze postanowili okreli mechanizm dziedziczenia barwy kwiatów rolin nalecych
+do dwóch rónych gatunków. Zarówno roliny gatunku A, jak i roliny gatunku B wytwarzaj
+kwiaty czerwone lub biale.
+
+Hipoteza 1.: Barwa kwiatów u gatunku A jest warunkowana jednogenowo przez jedn par
+alleli, z których jeden wykazuje peln dominacj w stosunku do drugiego.
+Hipoteza 2.: Barwa kwiatów u gatunku B jest warunkowana przez dwa wspóldzialajce,
+dziedziczce si niezalenie geny, kady majcy po dwa allele: jeden dominujcy, a drugi -
+recesywny.
+
+W obydwu przypadkach badacze skrzyowali roliny o kwiatach czerwonych i roliny
+o kwiatach bialych nalece do linii czystych (homozygoty). W obydwu przypadkach
+w pokoleniu F1 uzyskano wylcznie roliny kwitnce na czerwono. W celu uzyskania rolin
+stanowicych pokolenie F2 skrzyowano roliny z pierwszego pokolenia mieszaców (F1).
+W poniszej tabeli przedstawiono wyniki krzyowania uzyskane w F2.
+
+                          Roliny stanowice pokolenie F2
+
+             gatunek A                                    gatunek B
+
+kwiaty czerwone           kwiaty biale         kwiaty czerwone       kwiaty biale
+
+119                       39                          91                    69
+
+             Stosunek fenotypów  3:1                  Stosunek fenotypów  9:7
+
+Uzupelnij ponisze zdania tak, aby w poprawny sposób opisywaly wnioski wycignite
+na podstawie przedstawionych wyników bada. W kadym nawiasie podkrel wlaciwe
+okrelenie.
+
+Hipoteza 1. zostala (potwierdzona / odrzucona), poniewa przy zaloeniu prawdziwoci
+tej hipotezy warto teoretyczna stosunku fenotypów wynosi (2:1 / 3:1 / 9:7), co jest
+(zgodne / niezgodne) z otrzymanymi wynikami bada.
+
+Hipoteza 2. zostala (potwierdzona / odrzucona), poniewa przy zaloeniu prawdziwoci
+tej hipotezy warto teoretyczna stosunku fenotypów wynosi (2:1 / 3:1 / 9:7), co jest
+(zgodne / niezgodne) z otrzymanymi wynikami bada.
+
+               Wypelnia   Nr zadania           16.3. 17.1. 17.2. 17.3. 18.
+             egzaminator  Maks. liczba pkt
+                                               1      1   1     1    2
+                          Uzyskana liczba pkt
+
+                                      Strona 19 z 25
+
+EBIP-R0_100
+Zadanie 19.
+W strukturze genu obok fragmentów kodujcych (eksonów) mog wystpowa elementy
+niekodujce, takie jak promotor lub introny.
+W poniszej tabeli przedstawiono informacje na temat szeciu wybranych genów czlowieka,
+oznaczonych numerami 1.-6., kodujcych okrelone bialka.
+
+Oznaczenie      Kodowane     Oznaczenie     Wielko      Wielko
+    genu            bialko  chromosomu         genu      mRNA
+                                                           (kz)
+       1.   -globina               16       (kpz DNA)
+                                                             0,5
+                                                   0,8
+
+2.          albumina        4               25,0        2,1
+
+3.          receptor LDL    19              45,0        5,5
+
+4. kinaza zalena od cyklin 4                54,0        1,7
+5. hydroksylaza fenyloalaninowa 12
+                                            90,0        2,4
+
+6.          dystrofina      X               2000,0      16,0
+
+       kpz - tysic par zasad
+       kz - tysic zasad
+
+                                                                 Na podstawie: red. J. Bal, Biologia molekularna w medycynie, Warszawa 2013;
+                                                                                                                                     https://ghr.nlm.nih.gov/gene;
+                                                                                                                                    https://www.ncbi.nlm.nih.gov.
+
+Zadanie 19.1. (0-1)
+Podaj nazw procesu, którego produktem jest pre-mRNA, oraz okrel lokalizacj
+tego procesu w komórce czlowieka.
+
+Nazwa procesu: ........................................................................................................................
+Lokalizacja procesu: .................................................................................................................
+
+Zadanie 19.2. (0-1)
+Wyjanij, z czego wynikaj rónice midzy wielkociami genów a wielkociami
+czsteczek mRNA, które im odpowiadaj.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+                            Strona 20 z 25
+
+                                                              EBIP-R0_100
+Zadanie 19.3. (0-1)
+Podaj nazw choroby, u podloa której ley mutacja genu kodujcego hydroksylaz
+fenyloalaninow, prowadzca do utraty funkcji tego enzymu niezbdnego
+w metabolizmie fenyloalaniny.
+
+..................................................................................................................................................
+
+Zadanie 19.4. (0-1)
+Sporód wymienionych w tabeli wybierz i zapisz oznaczenia pary genów, które mog
+dziedziczy si niezgodnie z II prawem Mendla. Odpowied uzasadnij, odwolujc si
+do treci tego prawa oraz do lokalizacji wybranych genów w genomie.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 19.5. (0-1)
+Uzupelnij ponisze zdania tak, aby powstal poprawny opis dotyczcy albumin. Podkrel
+w kadym nawiasie wlaciwe okrelenie.
+
+Albuminy to bialka (rozpuszczalne / nierozpuszczalne) w wodzie, wystpujce glównie
+(w cytoplazmie erytrocytów / w osoczu krwi). Glówn funkcj tych bialek jest (transport
+tlenu / regulacja cinienia osmotycznego krwi).
+
+Zadanie 20. (0-1)
+Róne kaczki: krzyówki, cyranki, krakwy, wistuny, yj w tym samym rodowisku.
+W warunkach naturalnych mieszace tych gatunków spotyka si nieslychanie rzadko,
+mimo e w wielu przypadkach plodne mieszace mona uzyska drog sztucznego
+zaplemnienia. Upierzenie samic tych gatunków jest do siebie bardzo podobne i kaczory
+rozpoczynaj toki na widok samicy dowolnego gatunku. Kaczory maj zrytualizowane, inne
+dla kadego gatunku zachowania godowe. Samice reaguj pozytywnie tylko na toki wlaciwe
+dla ich gatunku. Sekwencje ruchów samca musz by bardzo dokladnie powtarzane.
+Odmienna sekwencja ruchów sprawia, e samice nie interesuj si samcem lub odlatuj.
+
+                                                            Na podstawie: K. Lorenz, Comparative studies on the behaviour of Anatinae, 2012;
+                  P.A. Johnsgard, Behavioral isolating mechanisms in the family Anatidae, ,,Proc. XIII Intern. Ornithol. Congr.", 1963.
+
+Wyjanij, odnoszc si do biologicznej koncepcji gatunku, dlaczego kaczki opisane
+w tekcie nie s zaliczane do jednego gatunku, pomimo e mona je skrzyowa.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+  Wypelnia   Nr zadania           19.1. 19.2. 19.3. 19.4. 19.5. 20.
+egzaminator  Maks. liczba pkt
+                                  1  1  1  1  1  1
+             Uzyskana liczba pkt
+
+             Strona 21 z 25
+
+EBIP-R0_100
+Zadanie 21. (0-1)
+Lotopalanki i polatuchy charakteryzuj si obecnoci faldów skórnych znajdujcych si
+z boków ciala i rozpitych pomidzy koczyn przedni i tyln. Osobniki nalece do obu
+rodzajów s niewielkie, prowadz nadrzewny tryb ycia i potrafi szybowa na odleglo okolo
+50 metrów. Lotopalanki s przedstawicielami torbaczy i wystpuj w Australii, natomiast
+polatuchy to ssaki loyskowe, spotykane w Ameryce Pólnocnej, Europie i Azji.
+
+                                                Na podstawie: https://www.environment.gov.au; https://britannica.com/animal/flying-squirrel.
+
+Dokocz zdanie. Zaznacz odpowied A albo B oraz odpowied 1. albo 2.
+
+Obecno faldów skórnych u lotopalanek i polatuch to przyklad narzdów
+
+A. analogicznych,      które powstaly w wyniku        1. dywergencji.
+B. homologicznych,                                    2. konwergencji.
+
+Zadanie 22.
+Czynnik ograniczajcy to czynnik wystpujcy w niedomiarze, a przez to ograniczajcy wzrost
+i rozwój organizmu. W ekosystemach wodnych zarówno wiatlo, jak i nieorganiczne
+substancje pokarmowe s istotnymi czynnikami ograniczajcymi ilo materii organicznej
+(produkcji pierwotnej) wytwarzanej przez fitoplankton.
+Badacze przeprowadzili seri eksperymentów majcych na celu okrelenie, w jakim stopniu
+poszczególne pierwiastki ograniczaj produkcj pierwotn fitoplanktonu wystpujcego
+w wodach Morza Sargassowego. W tym celu próbki wody z Morza Sargassowego
+wzbogacano o róne kombinacje pierwiastków, a nastpnie badano asymilacj radioaktywnie
+znakowanego wgla 14C przez fitoplankton.
+W poniszej tabeli zestawiono wyniki przeprowadzonych eksperymentów.
+
+      Wariant dowiadczenia                 Wzrost asymilacji 14C przez fitoplankton
+(dodawane pierwiastki w formie                      wzgldem próby kontrolnej
+
+            przyswajalnej)
+
+azot + fosfor                                         10%
+
+metale (z wyjtkiem elaza) + azot + fosfor             8%
+
+metale (w tym elazo) + azot + fosfor                  12,9%
+
+elazo + azot + fosfor                                 12%
+
+Na podstawie: D.W. Menzel i J.H. Ryther, Nutrients limiting the production of phytoplankton in the Sargasso Sea,
+                                                                     with special reference to iron, ,,Deep Sea Research" 7, 1961.
+
+                                      Strona 22 z 25
+
+                                                                     EBIP-R0_100
+Zadanie 22.1. (0-1)
+Opisz prób kontroln w przedstawionym dowiadczeniu.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+Zadanie 22.2. (0-1)
+Oce, czy na podstawie przedstawionych wyników bada mona sformulowa wnioski
+podane w tabeli. Zaznacz T (tak), jeli wniosek mona sformulowa na podstawie
+wyników bada, albo - N (nie), jeli nie mona go sformulowa.
+
+1. Dodanie azotu skutkuje duym wzrostem produkcji pierwotnej w Morzu Sargassowym, podczas gdy dodanie fosforu nie wywoluje tego efektu.  T N
+2. Skladniki mineralne ograniczaj produkcj pierwotn w Morzu Sargassowym w wikszym stopniu ni wiatlo.                                     T N
+3. Zawarto elaza jest jednym z czynników ograniczajcych produkcj pierwotn w Morzu Sargassowym.                                           T N
+
+Zadanie 23. (0-1)
+Uporzdkuj ponisze informacje tak, aby w poprawny sposób przedstawialy kolejno
+zdarze, które zachodz w wyniku zwikszonego stosowania w rolnictwie nawozów
+sztucznych, zawierajcych m.in. azotany i fosforany, i prowadz do spadku
+rónorodnoci biologicznej ekosystemów wodnych.
+
+Masowy rozwój glonów i rolin wodnych.                         2
+
+Rozklad materii organicznej przez bakterie beztlenowe.
+
+Wzrost zawartoci azotanów i fosforanów w jeziorach.           1
+
+Powstanie siarkowodoru oraz amoniaku.
+
+Zmniejszenie przejrzystoci wód.
+
+Zmniejszenie stenia tlenu.
+
+Zmniejszenie intensywnoci fotosyntezy.
+Spadek rónorodnoci biologicznej ekosystemów wodnych. 8
+
+               Wypelnia   Nr zadania           21. 22.1. 22.2. 23.
+             egzaminator  Maks. liczba pkt
+                                               1  1     1  1
+                          Uzyskana liczba pkt
+
+                            Strona 23 z 25
+
+EBIP-R0_100
+Zadanie 24.
+Zbieranie plonów z upraw prowadzi do wyjalawiania gleb, dlatego tak istotne jest ich
+nawoenie. Zapotrzebowanie na skladniki mineralne u rolin bada si, stosujc w uprawie
+poywki pelne (zawierajce wszystkie niezbdne dla rozwoju roliny mikro- i makroelementy)
+oraz poywki lub roztwory, z których wyklucza si okrelone jony. Roliny uprawia si
+w doniczkach wypelnionych wirem uprzednio wyplukanym w wodzie destylowanej
+i wypraonym. Polowa uprawianych rolin stanowi prób kontroln, a polowa - prób
+badawcz.
+
+                                                                                                Na podstawie: H. Winiewski, Biologia, Warszawa 1995.
+
+Zadanie 24.1. (0-1)
+Wybierz i zaznacz wariant dowiadczenia (A-D) umoliwiajcy wykazanie roli magnezu
+we wzrocie i rozwoju rolin.
+
+Próba kontrolna                           Próba badawcza
+
+A. woda destylowana  poywka pelna
+
+B. poywka pelna      poywka bez ródla magnezu
+
+C. woda destylowana z dodatkiem ródla magnezu poywka pelna
+
+D. poywka pelna      woda destylowana
+
+Zadanie 24.2. (0-1)
+Wyjanij, dlaczego w zbiorowiskach naturalnych, w przeciwiestwie do nienawoonych
+pól uprawnych, zawarto fosforu w glebie utrzymuje si na wzgldnie stalym poziomie.
+W odpowiedzi uwzgldnij porównanie tych dwóch rodzajów ekosystemów.
+
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+..................................................................................................................................................
+
+  Wypelnia           Nr zadania           24.1.             24.2.
+egzaminator          Maks. liczba pkt       1                 1
+
+                     Uzyskana liczba pkt
+
+                     Strona 24 z 25
+
+                                                                   EBIP-R0_100
+             BRUDNOPIS (nie podlega ocenie)
+
+             Strona 25 z 25
+
+EBIP-R0_100
+

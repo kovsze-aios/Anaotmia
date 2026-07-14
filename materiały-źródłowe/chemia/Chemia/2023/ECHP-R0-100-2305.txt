@@ -1,0 +1,1054 @@
+KOD  WYPELNIA ZDAJCY            Arkusz zawiera informacje prawnie chronione
+                         PESEL  do momentu rozpoczcia egzaminu.
+
+Egzamin maturalny                         Miejsce na naklejk.
+                                   Sprawd, czy kod na naklejce to
+
+                                             E-100.
+
+                                     Jeeli tak - przyklej naklejk.
+                                 Jeeli nie - zglo to nauczycielowi.
+
+                                Formula 2015
+
+CHEMIA
+
+Poziom rozszerzony
+
+                                                         Symbol arkusza
+
+                                         ECHP-R0-100-2305
+
+DATA: 15 maja 2023 r.
+GODZINA ROZPOCZCIA: 9:00
+CZAS TRWANIA: 180 minut
+LICZBA PUNKTÓW DO UZYSKANIA: 60
+
+Przed rozpoczciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawd, czy nauczyciel przekazal Ci wlaciwy arkusz egzaminacyjny,
+    tj. arkusz we wlaciwej formule, z wlaciwego przedmiotu na wlaciwym
+    poziomie.
+
+2. Jeeli przekazano Ci niewlaciwy arkusz - natychmiast zglo to nauczycielowi.
+    Nie rozrywaj banderol.
+
+3. Jeeli przekazano Ci wlaciwy arkusz - rozerwij banderole po otrzymaniu
+    takiego polecenia od nauczyciela. Zapoznaj si z instrukcj na stronie 2.
+
+Uklad graficzny
+© CKE 2022
+Instrukcja dla zdajcego
+
+1. Sprawd, czy arkusz egzaminacyjny zawiera 28 stron (zadania 1-38).
+    Ewentualny brak zglo przewodniczcemu zespolu nadzorujcego egzamin.
+
+2. Na pierwszej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL i przyklej
+    naklejk z kodem.
+
+3. Odpowiedzi i rozwizania zapisz w miejscu na to przeznaczonym przy kadym
+    zadaniu.
+
+4. W rozwizaniach zada rachunkowych przedstaw tok rozumowania prowadzcy do
+    ostatecznego wyniku oraz pamitaj o jednostkach.
+
+5. Pisz czytelnie. Uywaj dlugopisu/pióra tylko z czarnym tuszem/atramentem.
+6. Nie uywaj korektora, a bldne zapisy wyranie przekrel.
+7. Nie wpisuj adnych znaków w czci przeznaczonej dla egzaminatora.
+8. Pamitaj, e zapisy w brudnopisie nie bd oceniane.
+9. Moesz korzysta z Wybranych wzorów i stalych fizykochemicznych na egzamin
+
+    maturalny z biologii, chemii i fizyki, linijki oraz kalkulatora prostego. Upewnij si, czy
+    przekazano Ci broszur z okladk tak jak widoczna poniej.
+
+Strona 2 z 28
+
+               ECHP-R0_100
+             Zadania egzaminacyjne s wydrukowane
+                        na nastpnych stronach.
+
+             Strona 3 z 28
+
+ECHP-R0_100
+Zadanie 1.
+O dwóch pierwiastkach umownie oznaczonych literami A i X wiadomo, e:
+· nale do tego samego bloku konfiguracyjnego
+· liczba masowa jednego z izotopów pierwiastka A jest dwa razy wiksza od jego liczby
+
+   atomowej i jest równa liczbie atomowej niklu
+· suma elektronów, neutronów i protonów w atomie jednego z izotopów pierwiastka X jest
+
+   równa 114, a liczba nukleonów jest równa 79.
+
+Zadanie 1.1. (0-1)
+Uzupelnij tabel. Wpisz symbol pierwiastka A i symbol pierwiastka X oraz symbol
+bloku konfiguracyjnego, do którego nale te pierwiastki.
+
+               Symbol pierwiastka  Symbol bloku konfiguracyjnego
+
+Pierwiastek A
+
+Pierwiastek X
+
+Zadanie 1.2. (0-1)
+Napisz fragment konfiguracji elektronowej atomu A (w stanie podstawowym)
+opisujcy rozmieszczenie elektronów walencyjnych na podpowlokach. Zastosuj
+graficzny zapis konfiguracji elektronowej. W tym zapisie uwzgldnij numer powloki
+i symbole podpowlok.
+
+.................................................................................................................................................
+
+Zadanie 1.3. (0-1)
+Pierwiastki A i X tworz zwizek o wzorze AX4.
+Oblicz bezwzgldn mas (wyraon w gramach) jednej czsteczki AX4 zloonej
+jedynie z atomów tych izotopów, które opisano we wstpie do zadania. Przyjmij, e
+masa atomowa izotopu jest równa jego liczbie masowej.
+Obliczenia:
+
+               Strona 4 z 28
+
+                                   ECHP-R0_100
+Informacja do zada 2.-3.
+Wgiel tworzy kilka odmian alotropowych, które róni si struktur krystaliczn. S wród
+nich diament, grafit i fulereny.
+
+Zadanie 2. (0-1)
+Poniej przedstawiono informacje o jednej z odmian alotropowych wgla,
+a obok - model jej struktury krystalicznej.
+
+Wystpuje w postaci mikkiego mineralu o slabym metalicznym polysku.
+Ta odmiana charakteryzuje si dobrym przewodnictwem elektrycznoci
+i ciepla.
+
+Rozstrzygnij, czy przedstawione informacje dotycz diamentu czy
+grafitu. Wyjanij, dlaczego ta odmiana charakteryzuje si dobrym
+przewodnictwem elektrycznoci.
+
+Rozstrzygnicie: ......................................................................................................................
+
+Wyjanienie: ............................................................................................................................
+
+.................................................................................................................................................
+
+Zadanie 3. (0-1)
+Oce prawdziwo poniszych zda. Zaznacz P, jeli zdanie jest prawdziwe, albo F -
+jeli jest falszywe.
+
+     Odmienna budowa wewntrzna diamentu, grafitu i fulerenów jest przyczyn         P F
+1. rónic ich wlaciwoci chemicznych, przy zachowaniu identycznych
+
+     wlaciwoci fizycznych.
+
+2. W krysztale diamentu kady z atomów wgla tworzy kowalencyjne wizania  P F
+     z czterema otaczajcymi go atomami.
+
+Zadanie 4. (0-1)
+Z podanego zbioru:
+
+                                     NH4+        H2O      BCl3  CH4
+
+wybierz i napisz wzór tej drobiny, w której:
+1. orbitalom walencyjnym atomu centralnego przypisuje si hybrydyzacj sp2.
+
+...................................
+2. atom centralny moe by akceptorem pary elektronowej.
+
+...................................
+
+                                     Nr zadania           1.1. 1.2. 1.3. 2. 3. 4.
+
+             Wypelnia Maks. liczba pkt                    1 1 1 1 1 1
+             egzaminator
+                                     Uzyskana liczba pkt
+
+                                                 Strona 5 z 28
+
+ECHP-R0_100
+Informacja do zada 5.-6.
+Ze wzgldu na zdolno atomów wgla do lczenia si w lacuchy, ten pierwiastek tworzy
+z tlenem nie tylko zwizki takie jak CO i CO2, lecz take mniej typowe polczenia. Jednym
+z nich jest ditlenek triwgla o wzorze sumarycznym C3O2. Czsteczka tego zwizku ma
+budow liniow, atomami wewntrznymi s w niej atomy wgla, a skrajnymi - atomy tlenu.
+Ditlenek triwgla reaguje z wod. W tej reakcji powstaje jeden produkt - kwas
+dikarboksylowy.
+
+                                                                   Na podstawie: J.E. House, Inorganic Chemistry, Elsevier, 2008.
+
+Zadanie 5. (0-2)
+Narysuj wzór elektronowy czsteczki C3O2 (zaznacz kreskami wizania chemiczne
+i wolne pary elektronowe). Uzupelnij ponisze zdania. Wybierz i zaznacz jedn
+odpowied sporód podanych w kadym nawiasie.
+
+                    Wzór elektronowy:
+
+Aby wyjani budow czsteczki C3O2, hybrydyzacj typu sp przypisuje si orbitalom
+walencyjnym (trzech atomów / dwóch atomów / jednego atomu) wgla. Liczba wiza 
+w czsteczce C3O2 wynosi (2 / 4 / 6 / 8).
+
+Zadanie 6. (0-1)
+Narysuj wzór pólstrukturalny (grupowy) produktu reakcji ditlenku triwgla z wod.
+
+Strona 6 z 28
+
+               ECHP-R0_100
+Zadanie 7. (0-1)
+W poniszej tabeli podano wzory dwóch zwizków organicznych: alkoholu benzylowego
+i etylobenzenu, a take wartoci masy molowej oraz temperatury wrzenia tych zwizków.
+
+  Alkohol    Wzór         Masa molowa, g  mol-1  Temperatura wrzenia, 
+benzylowy                             108                    205
+                 CH2 OH
+
+             CH2 CH3
+
+Etylobenzen                             106                 136
+
+                                                                  Na podstawie: T. Mizerski, Tablice chemiczne, Warszawa 2013.
+
+Rozstrzygnij, który zwizek - alkohol benzylowy czy etylobenzen - jest substancj
+bardziej lotn. Wyjanij, dlaczego alkohol benzylowy i etylobenzen znacznie róni si
+wartociami temperatury wrzenia. Odnie si do wplywu rónicy w budowie
+czsteczek obu zwizków na ich wlaciwoci fizykochemiczne.
+
+Rozstrzygnicie: .........................................................................................................................
+
+Wyjanienie: ...............................................................................................................................
+
+....................................................................................................................................................
+
+Zadanie 8. (0-1)
+Reakcja rozkladu chlorku bromu(I) przebiega w fazie gazowej zgodnie z równaniem:
+
+                                          2BrCl (g)  Br2 (g) + Cl2 (g)
+Warto steniowej stalej równowagi reakcji rozkladu chlorku bromu(I) w temperaturze
+500 K jest równa 32.
+
+                                                             Na podstawie: L. Jones, P. Atkins, Chemia ogólna, Warszawa 2009.
+
+Reakcja syntezy chlorku bromu(I) przebiega w fazie gazowej zgodnie z równaniem:
+                                          Br2 (g) + Cl2 (g)  2BrCl (g)
+
+Oblicz warto steniowej stalej równowagi reakcji syntezy chlorku bromu(I)
+w temperaturze  .
+
+Obliczenia:
+
+                          Nr zadania           5. 6. 7. 8.
+
+             Wypelnia Maks. liczba pkt         2 1 1 1
+             egzaminator
+                          Uzyskana liczba pkt
+
+                          Strona 7 z 28
+
+ECHP-R0_100
+Zadanie 9. (0-1)
+W wodnych roztworach slabych kwasów jednoprotonowych zachodzi dysocjacja. Dla danej
+wartoci stenia molowego roztworu i w danej temperaturze ustala si stan równowagi
+midzy czsteczkami i jonami obecnymi w roztworze.
+
+Na poniszym wykresie przedstawiono zaleno stopnia dysocjacji () dwóch kwasów
+jednoprotonowych HX i HQ od stenia molowego roztworu w temperaturze 20 C.
+
+     45
+
+     40
+
+     35
+
+     30 HX
+     25
+
+, %  20
+
+     15
+
+     10         HQ
+
+     5
+
+     0
+
+     0,00 0,01 0,02 0,03 0,04 0,05 0,06 0,07 0,08 0,09 0,10
+
+                    stenie molowe roztworu, mol · dm-3
+
+Rozstrzygnij, na podstawie analizy danych zamieszczonych na wykresie, który kwas
+(HX czy HQ) jest mocniejszy. Zaznacz jego wzór. Odpowied uzasadnij.
+
+                    HX                              HQ
+
+Uzasadnienie: ..........................................................................................................................
+.................................................................................................................................................
+.................................................................................................................................................
+
+Zadanie 10.
+Sole mona otrzyma m.in. w reakcjach:
+
+1. soli kwasu I z kwasem II mocniejszym od kwasu I
+2. wodorotlenku z tlenkiem kwasowym.
+
+Zadanie 10.1. (0-3)
+Uzupelnij schemat dowiadczenia (s. 9), w którym mona otrzyma:
+- w kolbie rozpuszczaln w wodzie sól metod 1.
+- w probówce nierozpuszczaln sól metod 2.
+Wzory uytych odczynników wybierz sporód nastpujcych:
+
+· KOH (aq)          · HCl (aq)                          · C6H5OH
+· Ba(OH)2 (aq)      · Na2CO3 (aq)                       · (NH4)3PO4 (aq)
+
+Nastpnie napisz w formie jonowej równania reakcji, które zaszly w kolbie oraz
+w probówce podczas tego dowiadczenia.
+
+                        Strona 8 z 28
+
+                                                                          ECHP-R0_100
+Schemat dowiadczenia:
+1. .........................................
+
+2. ...................................
+3. ........................................................
+
+Równanie reakcji zachodzcej w kolbie:
+
+....................................................................................................................................................
+Równanie reakcji zachodzcej w probówce:
+
+....................................................................................................................................................
+
+Zadanie 10.2. (0-1)
+Podczas opisanego dowiadczenia dodano z wkraplacza do kolby stechiometryczn ilo
+reagenta.
+
+Sporód czynnoci, których nazwy podano poniej, wybierz t, któr naley wykona
+w celu wyodrbnienia jonowego produktu reakcji z mieszaniny poreakcyjnej,
+powstalej w kolbie. Zaznacz jej nazw.
+
+odparowanie pod wycigiem                                     odwirowanie               sczenie
+
+Zadanie 11. (0-1)
+Sporód wymienionych par drobin wybierz i zaznacz wszystkie te, które nie tworz
+sprzonej pary Brønsteda kwas - zasada.
+
+             -OOCCOOH i -OOCCOO-                                          H2SO4 i SO42-
+              Al(H2O)63+ i Al(H2O)5(OH)2+                                    HF2- i F2
+
+               Wypelnia                       Nr zadania           9. 10.1. 10.2. 11.
+             egzaminator                      Maks. liczba pkt     1 3 1 1
+                                              Uzyskana liczba pkt
+
+                                              Strona 9 z 28
+
+ECHP-R0_100
+Zadanie 12.
+Przeprowadzono dowiadczenie, w którym do dwóch probówek z wodnym roztworem
+Na2SO3 dodano:
+
+    · do probówki 1. - kilka kropel roztworu fenoloftaleiny
+    · do probówki 2. - nadmiar stonego HCl (aq).
+
+Zadanie 12.1. (0-1)
+Zawarto probówki 1., po dodaniu do niej roztworu fenoloftaleiny, zabarwila si na kolor
+czerwonoróowy (malinowy).
+
+Wpisz do schematu wzory odpowiednich drobin tak, aby powstalo równanie procesu
+decydujcego o odczynie roztworu w probówce 1. Zastosuj definicj kwasu i zasady
+Brønsteda.
+
+kwas 1     zasada 2                  zasada 1     kwas 2
+
+        +                                      +
+
+Zadanie 12.2. (0-1)
+Napisz, co zaobserwowano podczas dowiadczenia w probówce 2. po dodaniu
+odczynnika. Napisz w formie jonowej skróconej równanie reakcji, która byla przyczyn
+zaobserwowanych zmian.
+
+Obserwacje: ............................................................................................................................
+
+Równanie reakcji: ....................................................................................................................
+
+Zadanie 13. (0-2)
+Badano reakcje mocnego kwasu HA i slabego kwasu HX z mocn zasad. W tym celu
+wykonano miareczkowanie wodnych roztworów tych kwasów za pomoc wodnego roztworu
+wodorotlenku potasu - zgodnie z poniszym opisem.
+Umieszczono w zlewce 20,0 cm3 roztworu wybranego kwasu o steniu 0,10 mol  dm-3
+i zmierzono pH tego roztworu. Nastpnie do zlewki z roztworem kwasu dodawano porcjami
+wodny roztwór KOH o steniu 0,10 mol  dm-3. Po dodaniu kadej porcji roztworu
+wodorotlenku mierzono pH mieszaniny reakcyjnej. Punkt równowanikowy (PR) zostal
+osignity po dodaniu takiej objtoci roztworu KOH, w jakiej liczba moli zasady jest równa
+liczbie moli kwasu. Uzyskane wyniki przedstawiono w formie wykresu zalenoci mierzonego
+pH od objtoci roztworu KOH - naniesione punkty polczono, w wyniku czego otrzymano
+krzyw miareczkowania.
+
+                     Strona 10 z 28
+
+                                                  ECHP-R0_100
+Poniej przedstawiono krzyw miareczkowania wodnego roztworu jednego z tych kwasów
+(HA albo HX) wodnym roztworem wodorotlenku potasu.
+
+      14,0                                              PR
+pH 13,0
+                 5,0  10,0         15,0        20,0     25,0  30,0       35,0  40,0
+      12,0
+      11,0
+      10,0
+
+        9,0
+        8,0
+        7,0
+        6,0
+        5,0
+        4,0
+        3,0
+        2,0
+        1,0
+        0,0
+
+            0,0
+
+                                                              objto roztworu KOH, cm3
+
+Rozstrzygnij, czy przedstawiony wykres ilustruje wyniki miareczkowania wodnego
+roztworu slabego kwasu HX wodnym roztworem KOH w opisanym dowiadczeniu.
+Odpowied uzasadnij - przytocz dwa róne argumenty.
+
+Rozstrzygnicie: .....................................................................................................................
+Uzasadnienie:
+1. .............................................................................................................................................
+.................................................................................................................................................
+2. .............................................................................................................................................
+.................................................................................................................................................
+
+                                   Nr zadania           12.1. 12.2. 13.
+
+                      Wypelnia Maks. liczba pkt         1 1 2
+                      egzaminator
+                                   Uzyskana liczba pkt
+
+                                   Strona 11 z 28
+
+ECHP-R0_100
+Zadanie 14. (0-2)
+W temperaturze 25 °C rozpuszczalno amoniaku w wodzie jest równa 46 g w 100 g wody.
+
+                           Na podstawie: K. H. Lautenschläger i in., Nowoczesne kompendium chemii, Warszawa 2007.
+
+Oblicz pH wodnego roztworu amoniaku nasyconego w tej temperaturze, jeeli jego
+gsto jest równa ,    -. Wynik kocowy zaokrglij do pierwszego miejsca
+po przecinku.
+Obliczenia:
+
+Zadanie 15. (0-1)
+Wymieszano po dwa wodne roztwory rónych soli o steniu ok. 0,5 mol  dm-3. W ten
+
+sposób otrzymano roztwory A i B, których sklad podany jest w poniszej tabeli.
+
+NH4+,  Roztwór A   NO3-                           Roztwór B
+       Ca2+, Cl-,                        Na+, K+, SO32-, Br-
+
+Okrel odczyn roztworów A i B.
+Odczyn roztworu A: ....................................................................................................................
+Odczyn roztworu B: ....................................................................................................................
+
+                         Strona 12 z 28
+
+                                                              ECHP-R0_100
+Zadanie 16. (0-1)
+Przygotowano wodne roztwory nastpujcych substancji:
+1. kwasu azotowego(V) o steniu 0,5 mol  dm-3
+2. kwasu octowego (etanowego) o steniu 0,5 mol  dm-3
+3. wodorotlenku baru o pH = 11
+4. wodorotlenku potasu o pH = 11.
+
+Uzupelnij ponisze zdania. Wybierz i zaznacz jedn odpowied sporód podanych
+w kadym nawiasie.
+
+Warto pH roztworu kwasu azotowego(V) jest (wiksza ni / mniejsza ni / taka sama jak)
+warto pH roztworu kwasu octowego.
+Sporód roztworów o odczynie zasadowym mniejsze stenie molowe ma roztwór numer
+(3 / 4).
+
+Zadanie 17.
+Czysty tlenek wapnia mona otrzyma w laboratorium w wyniku praenia szczawianu wapnia
+o wzorze CaC2O4. Podczas ogrzewania szczawian wapnia najpierw rozklada si na wglan
+wapnia i tlenek wgla(II) (reakcja 1.). Dalsze ogrzewanie, w wyszej temperaturze, prowadzi
+do rozkladu wglanu wapnia na tlenek wapnia i tlenek wgla(IV) (reakcja 2.). Tlenek wapnia
+jest cialem stalym o temperaturze topnienia równej 2858 K. Energicznie reaguje z wod,
+a przemianie tej towarzyszy wydzielanie si znacznej iloci ciepla.
+
+                                               Na podstawie: A. Bielaski, Podstawy chemii nieorganicznej, Warszawa 2010.
+
+Zadanie 17.1. (0-1)
+Napisz równanie reakcji, która zachodzi w pierwszym etapie rozkladu termicznego
+szczawianu wapnia (reakcja 1.), i równanie reakcji, która zachodzi w drugim etapie
+tego procesu (reakcja 2.).
+
+Równanie reakcji 1.: ................................................................................................................
+
+Równanie reakcji 2.: ................................................................................................................
+
+Zadanie 17.2. (0-1)
+Oce prawdziwo poniszych zda. Zaznacz P, jeli zdanie jest prawdziwe, albo F -
+jeli jest falszywe.
+
+1. Tlenek wapnia jest zwizkiem jonowym.                                 P F
+2. Entalpia reakcji tlenku wapnia z wod  < 0.                           P F
+
+                          Nr zadania           14. 15. 16. 17.1. 17.2.
+
+             Wypelnia Maks. liczba pkt         2 1 1 1 1
+             egzaminator
+                          Uzyskana liczba pkt
+
+                          Strona 13 z 28
+
+ECHP-R0_100
+Zadanie 18. (0-2)
+W celu okrelenia zawartoci wglanu wapnia w mieszaninie dwóch soli zawierajcej
+równie wglan magnezu próbk tej mieszaniny o masie 2,84 g roztworzono w kwasie.
+Podczas analizy przebiegly reakcje chemiczne:
+
+                       CaCO3 (s) + 2H3O+ (aq)  Ca2+ (aq) + CO2 (g) + 3H2O (c)
+                       MgCO3 (s) + 2H3O+ (aq)  Mg2+ (aq) + CO2 (g) + 3H2O (c)
+
+W wyniku zachodzcych reakcji otrzymano 672 cm3 tlenku wgla(IV) w przeliczeniu na
+warunki normalne.
+
+Oblicz wyraon w procentach masowych zawarto CaCO3 w badanej próbce
+mieszaniny.
+
+Obliczenia:
+
+Strona 14 z 28
+
+                ECHP-R0_100
+Zadanie 19. (0-1)
+Dane w poniszej tabeli pokazuj zaleno rozpuszczalnoci amoniaku w wodzie od
+temperatury.
+
+Temperatura, °C                                     20           40                   60       80
+
+Rozpuszczalno, g w 100 g wody 51 34 23 16
+
+Narysuj krzyw rozpuszczalnoci amoniaku w wodzie w zakresie temperatury od 20 °C
+do 80 °C i odczytaj - w zaokrgleniu do jednoci - warto rozpuszczalnoci tego
+gazu w temperaturze 68 °C. Rozpuszczalno amoniaku w wodzie w podanym zakresie
+temperatury jest funkcj malejc.
+
+             60
+
+rozpuszczalno amoniaku, g w 100 g wody  50
+
+                                        40
+
+                                        30
+
+                                        20
+
+                                        10
+
+                                            20  30           40          50       60       70  80
+
+                                                                 temperatura, °C
+
+Rozpuszczalno amoniaku w temperaturze 68 °C: ............................... g w 100 g wody.
+
+                                                             Nr zadania           18. 19.
+
+                                                Wypelnia Maks. liczba pkt         2 1
+                                                egzaminator
+                                                             Uzyskana liczba pkt
+
+                                                             Strona 15 z 28
+
+ECHP-R0_100
+Zadanie 20. (0-2)
+Chlorek wapnia tworzy rozpuszczalne hydraty o wzorze ogólnym CaCl2  H2O.
+W zalenoci od temperatury w równowadze z roztworem nasyconym pozostaj hydraty
+o rónych wartociach wspólczynnika .
+W temperaturze 40 °C jeden z hydratów chlorku wapnia rozpuszcza si w iloci 767,4 g na
+100 g wody, a stenie nasyconego roztworu chlorku wapnia wynosi 53,66 % masowych.
+
+                                                                 Na podstawie: W. Mizerski, Tablice chemiczne, Warszawa 2013.
+
+Wykonaj obliczenia i napisz wzór opisanego hydratu chlorku wapnia.
+
+Obliczenia:
+
+Wzór hydratu:
+
+               Strona 16 z 28
+
+                               ECHP-R0_100
+Zadanie 21. (0-1)
+W rodowisku wodnym aniony tiosiarczanowe reaguj z chlorem zgodnie ze schematem:
+
+                                 S2O32-+Cl2+H2OSO42-+Cl-+H3O+
+Podczas tej reakcji aniony tiosiarczanowe ulegaj utlenieniu, które przebiega wedlug
+schematu:
+
+                              S2O32-+15H2O2SO42-+10H3O++ e-
+
+                                               Na podstawie: A. Bielaski, Podstawy chemii nieorganicznej, Warszawa 2010.
+
+Uzupelnij wspólczynniki stechiometryczne w poniszym schemacie reakcji.
+
+Równanie reakcji: .....S2O32-+.....Cl2+.....H2O.....SO42-+.....Cl-+.....H3O+
+
+Zadanie 22. (0-1)
+Technet, podobnie jak mangan, jest pierwiastkiem, który w zwizkach chemicznych moe
+wystpowa na VI stopniu utlenienia. Jony TcO42- s trwale jedynie w rodowisku silnie
+zasadowym, natomiast w roztworach obojtnych ulegaj dysproporcjonowaniu, zgodnie
+ze schematem:
+
+                                 TcO42- + H2O  TcO4- + TcO2 + OH-
+
+                                                                Na podstawie: L. Kolditz, Chemia nieorganiczna, Warszawa 1994.
+
+Napisz w formie jonowej skróconej, z uwzgldnieniem liczby wymienianych
+elektronów (zapis jonowo-elektronowy), równanie reakcji redukcji zachodzcej
+podczas opisanej przemiany. Uwzgldnij rodowisko reakcji.
+
+....................................................................................................................................................................
+
+                          Nr zadania           20. 21. 22.
+
+             Wypelnia Maks. liczba pkt         2 1 1
+             egzaminator
+                          Uzyskana liczba pkt
+
+                          Strona 17 z 28
+
+ECHP-R0_100
+Zadanie 23. (0-1)
+Przeprowadzono dowiadczenie, podczas którego do probówek I i II z wodnymi roztworami
+pewnych substancji dodano jeden, taki sam odczynnik. W obu probówkach zaszly reakcje
+utleniania i redukcji. Po zakoczeniu dowiadczenia w obu probówkach widoczny byl
+brunatny osad.
+
+Uzupelnij schemat przeprowadzonego dowiadczenia. Zaznacz wzory substancji,
+których wodne roztwory znajdowaly si w probówkach I i II, oraz wzór odczynnika
+dodanego do obu probówek.
+
+                               I  K2Cr2O7 (aq) / KMnO4 (aq)
+
+H2SO4 (aq) / K2SO3 (aq)           (aq)
+                                                                  II
+
+                                  MnSO4 (aq) / KNO3 (aq)
+
+Zadanie 24. (0-2)
+Pewien alkan, którego achiralne czsteczki maj rozgalziony lacuch wglowy,
+w temperaturze  i pod cinieniem  jest gazem i ma gsto 50 razy wiksz od gstoci
+wodoru wyznaczonej w tych samych warunkach. W reakcji chlorowania tego alkanu moe
+powsta 6 rónych monochloropochodnych, bdcych izomerami konstytucyjnymi (bez
+uwzgldniania stereoizomerów).
+
+Oblicz liczb atomów wgla w czsteczce opisanego alkanu oraz napisz jego wzór
+pólstrukturalny (grupowy).
+
+ Obliczenia:
+
+Wzór alkanu:
+
+                                  Strona 18 z 28
+
+                                                                      ECHP-R0_100
+Zadanie 25.                                                             CH3CH2OH (g)
+Reakcj hydratacji (uwodnienia) etenu opisuje równanie:
+
+                        CH2=CH2 (g) + H2O (g) katalizator, , 
+
+Równowagowy stopie przereagowania etenu, który jest miar wydajnoci przedstawionej
+reakcji, zaley od warunków prowadzenia procesu: temperatury i cinienia. T zaleno
+przedstawiono na poniszym wykresie.
+
+                                           50,0
+
+             równowagowy stopie                                                  200 ºC
+                przereagowania etenu, %
+                                         40,0
+
+                                         30,0
+
+                                                                                 250 ºC
+
+                                         20,0                           300 ºC
+
+                                         10,0                           350 ºC
+
+                                          0,0       2,5  5,0            7,5 10,0
+                                               0,0
+
+                                                         cinienie, MPa
+
+          Na podstawie: E. Grzywa, J. Molenda, Technologia podstawowych syntez organicznych, Warszawa 2008.
+
+Zadanie 25.1. (0-1)
+Wyjanij, dlaczego w danej temperaturze równowagowy stopie przereagowania etenu
+w opisanej reakcji jest tym wikszy, im wysze jest cinienie, pod którym prowadzona
+jest reakcja.
+
+.................................................................................................................................................
+
+.................................................................................................................................................
+
+.................................................................................................................................................
+
+Zadanie 25.2. (0-1)
+Rozstrzygnij, czy reakcja hydratacji etenu jest procesem endo- czy egzotermicznym.
+Odpowied uzasadnij.
+
+Rozstrzygnicie: .....................................................................................................................
+
+Uzasadnienie: .........................................................................................................................
+
+................................................................................................................................................
+
+                                         Nr zadania           23. 24. 25.1. 25.2.
+
+             Wypelnia Maks. liczba pkt                              1 2 1 1
+             egzaminator
+                                         Uzyskana liczba pkt
+
+                                                    Strona 19 z 28
+
+ECHP-R0_100
+Informacja do zada 26.-27.
+Na poniszym schemacie zilustrowano cig przemian chemicznych. Literami X oraz Y
+oznaczono produkty organiczne kolejnych przemian.
+
+Cl                                                                         OH
+
+                                                             Br                 Br
+
+    nadmiar NaOH (aq) / p, T  X  HCl (aq)          Br2 (aq)
+
+    1.                           2.        Y
+
+                                                        3.
+
+                                                                           Br
+
+Zadanie 26. (0-2)
+Napisz w formie jonowej skróconej równania reakcji 1. i 2. Zastosuj wzory
+pólstrukturalne (grupowe) lub uproszczone zwizków organicznych.
+
+Równanie reakcji 1.:
+
+.................................................................................................................................................
+Równanie reakcji 2.:
+
+.................................................................................................................................................
+
+Zadanie 27. (0-1)
+Uzupelnij ponisze zdanie. Wybierz i zaznacz jedno okrelenie sporód podanych
+w kadym nawiasie.
+Organiczny produkt reakcji 3. powstaje w procesie (substytucji / addycji / eliminacji)
+zachodzcym wedlug mechanizmu (rodnikowego / elektrofilowego / nukleofilowego).
+
+                              Strona 20 z 28
+
+                                                                           ECHP-R0_100
+Informacja do zada 28.-29.
+Poniej podano wzory pólstrukturalne (grupowe) trzech zwizków organicznych.
+
+             H3C CH CH2 CH3   H3C CH CHO           H3C      O       CH2 CH3
+                     OH               CH3               C
+                                       B
+                     A                                       O
+
+                                                        C
+
+Zadanie 28. (0-1)
+Wybierz zwizek (A, B albo C), którego czsteczki s chiralne, i napisz liter, któr
+oznaczono jego wzór. Uzasadnij swój wybór. W uzasadnieniu odwolaj si do budowy
+czsteczek tego zwizku.
+
+Zwizek: ........................
+
+Uzasadnienie: ..........................................................................................................................
+
+.................................................................................................................................................
+
+.................................................................................................................................................
+
+Zadanie 29. (0-2)
+Kady ze zwizków A, B, C ma izomery. Poniej opisano trzy z nich - oznaczone
+odpowiednio jako zwizki A1, B1, C1.
+
+    · Zwizek A1 to izomer zwizku A, który mona utleni do zwizku B.
+    · Zwizek B1 to izomer zwizku B, który mona zredukowa do zwizku A.
+    · Zwizek C1 to izomer zwizku C, który mona otrzyma przez utlenienie zwizku B.
+
+Narysuj wzory pólstrukturalne (grupowe) zwizków A1, B1 i C1.
+
+             A1                           B1                        C1
+
+                              Nr zadania           26. 27. 28. 29.
+
+                 Wypelnia Maks. liczba pkt         2 1 1 2
+                 egzaminator
+                              Uzyskana liczba pkt
+
+                              Strona 21 z 28
+
+ECHP-R0_100
+Informacja do zada 30.-32.
+Fosgen to silnie trujcy zwizek o wzorze COCl2. W reakcjach fosgenu z alkoholami otrzymuje
+si odpowiednie estry kwasu wglowego, a w procesach polikondensacji z udzialem fosgenu
+powstaj poliwglany - szeroko stosowane tworzywa zastpujce szklo.
+Substratami do otrzymywania fosgenu s tlenek wgla(II) i chlor. W mieszaninie tych gazów
+zachodzi - pod wplywem wiatla - odwracalna reakcja opisana równaniem:
+
+                                     CO (g) + Cl2 (g)  COCl2 (g)
+
+Zadanie 30. (0-2)
+Do reaktora o pojemnoci 4,0 dm3 wprowadzono gazowe substraty: 0,40 mol CO
+i 0,20 mol Cl2. Gdy w temperaturze  ustalila si równowaga, stwierdzono, e
+przereagowalo 80 % chloru.
+
+Oblicz steniow stal równowagi syntezy fosgenu w temperaturze .
+ Obliczenia:
+
+Strona 22 z 28
+
+                ECHP-R0_100
+Zadanie 31. (0-1)
+Napisz równanie reakcji fosgenu z metanolem w stosunku molowym 1 : 2. Zastosuj
+wzory pólstrukturalne (grupowe) zwizków organicznych.
+
+.................................................................................................................................................
+
+Zadanie 32. (0-1)
+Bisfenol A, którego wzór przedstawiono poniej, stosuje si do otrzymywania poliwglanu.
+
+                                         CH3
+
+                  HO                     C        OH
+
+                                         CH3
+
+W tym celu bisfenol A poddaje si najpierw reakcji z wodorotlenkiem sodu, która przebiega
+tak samo jak reakcja tego wodorotlenku z fenolem, a nastpnie przeprowadza si
+polikondensacj produktu tej reakcji z fosgenem.
+
+Uzupelnij schemat tak, aby powstalo równanie reakcji otrzymywania poliwglanu
+z bisfenolanu sodu i fosgenu.
+
+             CH3                              O
+
+n NaO        C               ONa + n Cl C Cl
+
+             CH3
+
+                                                               + 2n NaCl
+
+                             Nr zadania           30. 31. 32.
+
+                Wypelnia Maks. liczba pkt         2 1 1
+                egzaminator
+                             Uzyskana liczba pkt
+
+                             Strona 23 z 28
+
+ECHP-R0_100
+Zadanie 33.
+Poniej przedstawiono wzory pólstrukturalne (grupowe) dwóch zwizków zapachowych:
+geranialu oraz geraniolu.
+
+          Geranial                  Geraniol
+
+                    Na podstawie: W. Mizerski, Tablice chemiczne, Warszawa 2013.
+
+Zadanie 33.1. (0-2)
+Uzupelnij tabel. Wpisz formalny stopie utlenienia oraz typ hybrydyzacji (sp, sp2, sp3)
+orbitali walencyjnych atomu wgla oznaczonego liter a w czsteczkach geranialu
+i geraniolu.
+
+          Stopie utlenienia         Typ hybrydyzacji
+
+Geranial
+Geraniol
+
+Zadanie 33.2. (0-1)
+Oce prawdziwo poniszych zda. Zaznacz P, jeli zdanie jest prawdziwe, albo F -
+jeli jest falszywe.
+
+1. Geraniol jest produktem redukcji geranialu.                    P F
+2. W czsteczce geranialu liczba wiza  jest wiksza ni w czsteczce  P F
+
+    geraniolu.
+
+                    Strona 24 z 28
+
+                                                                  ECHP-R0_100
+Zadanie 34. (0-1)
+Badano wlaciwoci czterech kwasów. Podczas dowiadczenia stwierdzono, e zachodz
+nastpujce reakcje:
+
+                CHCl2-COOH + CH2Cl-COONa  CHCl2-COONa + CH2Cl-COOH
+                   CH2Cl-COOH + CH3-COONa  CH2Cl-COONa + CH3-COOH
+                  CH2Cl-COOH + C6H5-COONa  CH2Cl-COONa + C6H5-COOH
+
+a reakcja:
+
+                                C6H5-COONa + CH3-COOH  nie zachodzi
+
+Na podstawie wyników przeprowadzonego dowiadczenia uporzdkuj badane kwasy
+od najslabszego do najmocniejszego.
+
+...........................................................................................................................
+
+najslabszy kwas                                                                        najmocniejszy kwas
+
+Zadanie 35. (0-2)
+Kwas 4-aminobenzoesowy (PABA) jest substratem do produkcji niektórych leków oraz
+jednym z substratów enzymatycznej syntezy kwasu foliowego. Poniej przedstawiono
+schemat syntezy kwasu 4-aminobenzoesowego z toluenu.
+
+CH3                  CH3                              COOH                   COOH                  COOH
+          reakcja I            reakcja II                       reakcja III
+
+                                    NO 2              NO 2                   NH3+ Cl-              NH2
+
+Poniej wymieniono sze odczynników:                    2. HCl (aq) / Zn (s)          3. NH4Cl (aq)
+1. KMnO4 (aq) / H2SO4 (aq)                            5. odczynnik Tollensa         6. NaOH (aq)
+4. HNO3 (stony) / H2SO4 (stony)
+
+Sporód wymienionych odczynników wybierz wszystkie te, które naley zastosowa
+w kolejnych etapach syntezy PABA (reakcje I-III). Napisz numery, którymi oznaczono
+wzory tych odczynników.
+
+Reakcja I: .............................
+
+Reakcja II: ............................
+
+Reakcja III: ...........................
+
+                                          Nr zadania           33.1. 33.2. 34. 35.
+
+                     Wypelnia Maks. liczba pkt                 2 1 1 2
+                     egzaminator
+                                          Uzyskana liczba pkt
+
+                                           Strona 25 z 28
+
+ECHP-R0_100
+Zadanie 36. (0-2)
+Ester o wzorze sumarycznym C5H10O2 poddano hydrolizie w rodowisku kwasowym
+i otrzymano kwas A oraz alkohol X. W wyniku przeprowadzonych bada kwasu i alkoholu
+ustalono, e:
+· po tym, jak do roztworu manganianu(VII) potasu zakwaszonego kwasem siarkowym(VI)
+
+   dodano wodny roztwór kwasu A, nastpilo odbarwienie zawartoci probówki, a take
+   zaobserwowano wydzielenie bezbarwnego i bezwonnego gazu
+· w wyniku przepuszczenia oparów alkoholu X nad rozarzonym tlenkiem miedzi(II)
+   powstaje zwizek, który nie wykazuje wlaciwoci redukujcych w próbie Tollensa.
+
+Uzupelnij ponisz tabel. Narysuj wzory pólstrukturalne (grupowe) kwasu A
+i alkoholu X oraz napisz nazw systematyczn alkoholu X.
+
+Wzór kwasu A        Wzór alkoholu X         Nazwa alkoholu X
+
+Zadanie 37.
+Do zakwaszonego roztworu alaniny dodawano kroplami wodny roztwór wodorotlenku sodu
+i mierzono pH mieszaniny reakcyjnej. Na poniszym wykresie zilustrowano zaleno pH
+mieszaniny od objtoci dodanego roztworu wodorotlenku sodu (w jednostkach umownych).
+
+14
+
+12
+10 III
+
+      8
+
+pH
+
+      6 II
+
+4
+
+                 I
+2
+
+0   0         0,5   1  1,5               2  2,5
+
+                    objto roztworu NaOH
+
+                    Strona 26 z 28
+
+                                                 ECHP-R0_100
+Aminokwasy w roztworach wodnych istniej glównie w formie jonów. W roztworach o niskim
+pH czsteczka aminokwasu jest protonowana. W pewnym zakresie pH dominujc form
+jest jon obojnaczy. W roztworach o wysokim pH czsteczka aminokwasu traci proton.
+W punkcie oznaczonym na wykresie numerem I alanina jest mieszanin formy protonowanej
+i jonu obojnaczego w stosunku molowym 1 : 1, a w punkcie oznaczonym na wykresie
+numerem III ten aminokwas jest mieszanin jonu obojnaczego i formy zdeprotonowanej
+w stosunku molowym 1 : 1.
+
+                                                                 Na podstawie: J. McMurry, Chemia organiczna, Warszawa 2005.
+
+Zadanie 37.1. (0-1)
+Napisz wzór pólstrukturalny (grupowy) tej formy alaniny, która wystpuje przy
+wartoci pH odpowiadajcej punktowi II zaznaczonemu na wykresie. Podaj nazw tej
+wartoci pH.
+
+Wzór:
+
+....................................................................................................................................................
+
+Nazwa: .......................................................................................................................................
+
+Zadanie 37.2. (0-1)
+Sporód podanych poniej wzorów form alaniny wybierz i zaznacz wzory tych,
+które obecne s w roztworze o wartoci pH odpowiadajcej punktowi III,
+zaznaczonemu na wykresie.
+
+H3C CH COO-               H3C CH COOH          H3C CH COO-
+
+                 +                         +             NH2
+
+          NH3                       NH3
+
+Zadanie 38. (0-1)
+Pewien lacuchowy peptyd ma wzór sumaryczny C9H17N3S2O4 i tworz go tylko reszty
+alaniny i cysteiny. Wiadomo take, e na obu kocach tego peptydu znajduje si ten sam
+aminokwas.
+
+Ustal sekwencj aminokwasów w analizowanym peptydzie i napisz jego wzór.
+Zastosuj trzyliterowe kody aminokwasów.
+
+....................................................................................................................................................
+
+               Wypelnia   Nr zadania           36. 37.1. 37.2. 38.
+             egzaminator  Maks. liczba pkt      2 1 1 1
+                          Uzyskana liczba pkt
+
+                          Strona 27 z 28
+
+ECHP-R0_100
+BRUDNOPIS (nie podlega ocenie)
+
+Strona 28 z 28
+
+                                ECHP-R0_100
+CHEMIA
+
+Poziom rozszerzony
+
+Formula 2015
+
+CHEMIA
+
+Poziom rozszerzony
+
+Formula 2015
+
+CHEMIA
+
+Poziom rozszerzony
+
+Formula 2015
+

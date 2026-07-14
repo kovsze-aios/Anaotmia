@@ -1,0 +1,1818 @@
+Rodzaj dokumentu: Zasady oceniania rozwiza
+              zada
+
+Egzamin:          Egzamin maturalny
+
+Przedmiot:        Chemia
+
+Poziom:           Poziom rozszerzony
+
+Formy arkusza:    MCH-R1_1P-202, MCH-R1_2P-202,
+                  MCH-R1_3P-202, MCH-R1_4P-202,
+                  MCH-R1_7P-202, MCH-R1-Q1P-202
+
+Termin egzaminu:  Termin glówny - czerwiec 2020 r.
+
+Data publikacji   3 sierpnia 2020 r.
+dokumentu:
+
+                  Warszawa 2020
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Ogólne zasady oceniania
+
+Zasady oceniania zawieraj przyklady poprawnych rozwiza zada otwartych. Rozwizania
+te okrelaj zakres merytoryczny odpowiedzi i nie musz by cislym wzorcem oczekiwanych
+sformulowa (za wyjtkiem np. nazw, symboli pierwiastków, wzorów zwizków chemicznych).
+Akceptowane s wszystkie odpowiedzi merytorycznie poprawne i spelniajce warunki
+zadania - równie te nieprzewidziane jako przykladowe odpowiedzi w schematach
+punktowania.
+
+· Zdajcy otrzymuje ocen pozytywn tylko za poprawne rozwizania, precyzyjnie
+    odpowiadajce poleceniom zawartym w zadaniach.
+
+· Gdy do jednego polecenia zdajcy podaje kilka odpowiedzi (z których jedna jest poprawna,
+    a inne - bldne), nie otrzymuje oceny pozytywnej za adn z nich. Jeeli zamieszczone
+    w odpowiedzi informacje (równie dodatkowe, które nie wynikaj z treci polecenia)
+    wiadcz o zasadniczych brakach w rozumieniu omawianego zagadnienia i zaprzeczaj
+    udzielonej poprawnej odpowiedzi, to za odpowied tak zdajcy otrzymuje 0 punktów.
+
+· W zadaniach wymagajcych sformulowania wypowiedzi slownej, takiej jak wyjanienie,
+    uzasadnienie, opis zmian moliwych do zaobserwowania w czasie dowiadczenia, oprócz
+    poprawnoci merytorycznej oceniana jest poprawno poslugiwania si nomenklatur
+    chemiczn, umiejtne odwolanie si do materialu ródlowego, jeeli taki zostal
+    przedstawiony, oraz logika i klarowno toku rozumowania. Sformulowanie odpowiedzi
+    niejasnej lub czciowo niezrozumialej skutkuje utrat punktu.
+
+· W zadaniach, w których naley dokona wyboru, kad form jednoznacznego wskazania
+    (np. numer dowiadczenia, wzory lub nazwy reagentów) naley uzna za rozwizanie tego
+    zadania.
+
+· Rozwizanie zadania na podstawie bldnego merytorycznie zaloenia uznaje si w caloci
+    za niepoprawne.
+
+· Rozwizania zada dowiadczalnych (spostrzeenia i wnioski) s oceniane pozytywnie
+    wylcznie wtedy, gdy projekt dowiadczenia jest poprawny, czyli np. prawidlowo zostaly
+    dobrane odczynniki. Zdajcy powinien wybra wlaciwy odczynnik z zaproponowanej listy
+    i wykona kolejne polecenia. Za spostrzeenia i wnioski bdce konsekwencj bldnego
+    wyboru odczynnika lub odczynników zdajcy nie otrzymuje oceny pozytywnej.
+
+· W rozwizaniach zada rachunkowych oceniane s: metoda (przedstawiony tok
+    rozumowania wicy dane z szukan), wykonanie oblicze i podanie wyniku z poprawn
+    jednostk i odpowiedni dokladnoci. Poprawno wykonania oblicze i wynik s
+    oceniane tylko wtedy, gdy zostala zastosowana poprawna metoda rozwizania. Wynik
+    liczbowy wielkoci mianowanej podany bez jednostek lub z niepoprawnym ich zapisem jest
+    bldny.
+              o Zastosowanie bldnych wartoci liczbowych wielkoci niewymienionych
+                   w informacji wprowadzajcej, treci zadania, poleceniu lub tablicach
+                   i niebdcych wynikiem oblicze naley traktowa jako bld metody.
+              o Zastosowanie bldnych wartoci liczbowych wielkoci podanych w informacji
+                   wprowadzajcej, treci zadania, poleceniu lub tablicach naley traktowa jako
+                   bld rachunkowy, o ile nie zmienia to istoty analizowanego problemu,
+                   w szczególnoci nie powoduje jego uproszczenia.
+              o Uycie w obliczeniach bldnej wartoci masy molowej uznaje si za bld
+                   metody, chyba e zdajcy przedstawil sposób jej obliczenia - zgodny ze
+                   stechiometri wzoru - jednoznacznie wskazujcy na bld wylcznie
+                   rachunkowy.
+
+· Jeeli polecenie brzmi: Napisz równanie reakcji w formie ...., to w odpowiedzi zdajcy
+    powinien napisa równanie reakcji w podanej formie z uwzgldnieniem bilansu masy
+    i ladunku. Zapis równania reakcji, w którym poprawnie dobrano wspólczynniki
+    stechiometryczne, ale nie uwzgldniono warunków zadania (np. rodowiska reakcji),
+    skutkuje utrat punktów.
+
+Strona 2 z 34
+                                                                                                         Zasady oceniania rozwiza zada
+
+Notacja:
+· Za napisanie wzorów strukturalnych zamiast wzorów pólstrukturalnych (grupowych) nie
+
+    odejmuje si punktów.
+· We wzorach elektronowych pary elektronowe mog by przedstawione w formie kropkowej
+
+    lub kreskowej.
+· Jeeli we wzorze kreskowym zaznaczona jest polaryzacja wiza, to jej kierunek musi by
+
+    poprawny.
+· Zapis ,,", ,," w równaniach reakcji nie jest wymagany.
+· W równaniach reakcji, w których ustala si stan równowagi, brak ,," nie powoduje utraty
+
+    punktów.
+· W równaniach reakcji, w których naley okreli kierunek przemiany (np. reakcji redoks),
+
+    zapis ,," zamiast ,," powoduje utrat punktów.
+
+                                                                                                                                      Strona 3 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 1.1. (0-2)
+
+Wymagania ogólne         Wymagania szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  2. Struktura atomu - jdro i elektrony. Zdajcy:
+II. Rozumowanie          2.4) okrela przynaleno pierwiastków do bloków
+i zastosowanie nabytej   konfiguracyjnych: s, p i d ukladu okresowego [...];
+wiedzy do rozwizywania   2.5) wskazuje na zwizek pomidzy budow atomu
+problemów.               a poloeniem pierwiastka w ukladzie okresowym.
+
+Zasady oceniania
+2 pkt - poprawne uzupelnienie dwóch wierszy tabeli.
+
+1 pkt - poprawne uzupelnienie jednego wiersza tabeli.
+
+0 pkt - odpowied niespelniajca powyszych kryteriów albo brak odpowiedzi.
+
+Poprawna odpowied                                         Numer grupy     Symbol bloku
+                          Symbol pierwiastka                            konfiguracyjnego
+                                                      15 ALBO XV ALBO
+pierwiastek X            P                                  pitnasta              p
+
+pierwiastek Z            V                          5 ALBO V ALBO pita            d
+
+Zadanie 1.2. (0-1)
+
+Wymagania ogólne            Wymagania szczególowe
+
+II. Rozumowanie             IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej      6. Reakcje utleniania i redukcji. Zdajcy:
+wiedzy do rozwizywania      6.1) wykazuje si znajomoci i rozumieniem poj: stopie
+problemów.                  utlenienia [...];
+I. Wykorzystanie            6.4) przewiduje typowe stopnie utlenienia pierwiastków na
+i tworzenie informacji.     podstawie konfiguracji elektronowej ich atomów.
+                            III etap edukacyjny
+                            2. Wewntrzna budowa materii. Zdajcy:
+                            2.12) [...] odczytuje z ukladu okresowego wartociowo [...]
+                            dla pierwiastków grup: [...] 15. [...] (wzgldem [...] wodoru);
+                            2.14) ustala dla prostych zwizków dwupierwiastkowych [...]
+                            wzór sumaryczny na podstawie wartociowoci.
+
+Zasady oceniania
+1 pkt - poprawne podanie wzoru wodorku fosforu oraz maksymalnego stopnia utlenienia
+
+         fosforu i wanadu.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Wzór sumaryczny wodorku pierwiastka X: PH3 ALBO H3P ALBO XH3 ALBO H3X
+
+Maksymalny stopie utlenienia, jaki przyjmuj pierwiastki X i Z w zwizkach chemicznych:
+
+                                                    (+)V ALBO (+)5
+
+Strona 4 z 34
+                                                                Zasady oceniania rozwiza zada
+
+Zadanie 1.3. (0-1)
+
+Wymaganie ogólne          Wymagania szczególowe
+
+II. Rozumowanie           IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej    2. Struktura atomu - jdro i elektrony. Zdajcy:
+wiedzy do rozwizywania    2.2) stosuje zasady rozmieszczania elektronów na orbitalach
+problemów.                w atomach pierwiastków wieloelektronowych;
+                          2.3) zapisuje konfiguracje elektronowe [...] jonów o podanym
+                          ladunku, uwzgldniajc rozmieszczenie elektronów na
+                          podpowlokach [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie konfiguracji elektronowej jonu V2+.
+
+0 pkt - odpowied niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+
+1s22s22p63s23p63d3 ALBO 1s22s2p63s2p6d3
+
+ALBO
+
+                                          
+                                             3d
+1s 2s  2p           3s    3p
+
+Zadanie 2. (0-1)
+
+Wymaganie ogólne          Wymaganie szczególowe
+
+II. Rozumowanie           IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej    3. Wizania chemiczne. Zdajcy:
+wiedzy do rozwizywania    3.7) opisuje i przewiduje wplyw rodzaju wizania (jonowe,
+problemów.                kowalencyjne [...]) na wlaciwoci fizyczne substancji
+                          nieorganicznych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied         wodór,         chlorek wapnia,         chlorowodór,
+           Substancja       H2                 CaCl2                   HCl
+
+ Temperatura wrzenia, °C   -253                 1935                   -85
+
+                                                                 Strona 5 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 3. (0-1)
+
+Wymagania ogólne         Wymagania szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  2. Struktura atomu - jdro i elektrony. Zdajcy:
+II. Rozumowanie          2.5) wskazuje na zwizek pomidzy budow atomu
+i zastosowanie nabytej   a poloeniem pierwiastka w ukladzie okresowym.
+wiedzy do rozwizywania   7. Metale. Zdajcy:
+problemów.               7.1) opisuje podstawowe wlaciwoci fizyczne metali [...];
+                         7.3) analizuje i porównuje wlaciwoci fizyczne i chemiczne
+                         metali [...].
+                         8. Niemetale. Zdajcy:
+                         8.1) opisuje podobiestwa we wlaciwociach pierwiastków
+                         w grupach ukladu okresowego i zmienno wlaciwoci
+                         w okresach [...].
+
+Zasady oceniania
+1 pkt - poprawny wybór i napisanie numerów obu wykresów.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Numer wykresu przedstawiajcego zaleno promienia atomowego od liczby atomowej: IV
+
+Numer wykresu przedstawiajcego zaleno elektroujemnoci w skali Paulinga od liczby
+
+atomowej: I
+
+Zadanie 4.1. (0-1)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+II. Rozumowanie          IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej   3. Wizania chemiczne. Zdajcy:
+wiedzy do rozwizywania   3.2) stosuje pojcie elektroujemnoci do okrelania (na
+problemów.               podstawie rónicy elektroujemnoci i liczby elektronów
+                         walencyjnych atomów lczcych si pierwiastków) rodzaju
+                         wizania: jonowe, kowalencyjne (atomowe), kowalencyjne
+                         spolaryzowane (atomowe spolaryzowane) [...].
+                         7. Metale. Zdajcy:
+                         7.1) opisuje podstawowe wlaciwoci fizyczne metali
+                         i wyjania je w oparciu o znajomo natury wizania
+                         metalicznego.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied                                Krysztaly        metaliczne
+                                                                   glin sód
+                                  jonowe  wodorotlenek sodu
+  chlorek sodu tlenek magnezu             NaOH                   ALBO Al Na
+
+                     ALBO NaCl MgO
+
+Strona 6 z 34
+                         Zasady oceniania rozwiza zada
+
+Zadanie 4.2. (0-1)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+II. Rozumowanie          IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej   7. Metale. Zdajcy:
+wiedzy do rozwizywania   7.1) opisuje podstawowe wlaciwoci fizyczne metali
+problemów.               i wyjania je w oparciu o znajomo natury wizania
+                         metalicznego.
+                         III etap edukacyjny
+                         2.Wewntrzna budowa materii. Zdajcy:
+                         2.11) porównuje wlaciwoci zwizków kowalencyjnych
+                         i jonowych [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie zda uwzgldniajce okrelenie rodzaju noników ladunku.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+W krysztalach metalicznych nonikami ladunku s elektrony, dlatego metale przewodz prd
+elektryczny w stalym stanie skupienia.
+Zwizki jonowe po stopieniu przewodz prd elektryczny, poniewa wystpuj w nich
+kationy i aniony
+ALBO
+jony (zdolne do przenoszenia ladunków elektrycznych)
+ALBO
+poruszajce si czstki obdarzone ladunkiem elektrycznym.
+
+Uwaga:
+· Odpowied, z której wynika, e kationy i aniony powstaj dopiero po stopieniu zwizku
+
+     jonowego, jest niepoprawna.
+
+· Odpowied, w której zdajcy pisze, e zwizki jonowe po stopieniu przewodz prd
+     elektryczny, poniewa s elektrolitami, jest niewystarczajca.
+
+Zadanie 5. (0-1)
+
+Wymagania ogólne         Wymagania szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  3.Wizania chemiczne. Zdajcy:
+II. Rozumowanie          3.5) rozpoznaje typ hybrydyzacji (sp, sp2, sp3) w prostych
+i zastosowanie nabytej   czsteczkach zwizków nieorganicznych i organicznych;
+wiedzy do rozwizywania   3.6) okrela typ wizania ( i ) w prostych czsteczkach.
+problemów.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie wszystkich zda.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+                                                                 Strona 7 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Poprawna odpowied
+Orbitalom walencyjnym atomu wgla przypisuje si hybrydyzacj (sp / sp2 / sp3). Orientacja
+przestrzenna tych orbitali powoduje, e czsteczka fosgenu (jest / nie jest) plaska. Wizanie
+ w tej czsteczce tworz orbital walencyjny (s / p / zhybrydyzowany) atomu wgla
+i orbital walencyjny p atomu tlenu.
+
+Zadanie 6. (0-1)
+
+Wymagania ogólne         Wymaganie szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  5. Roztwory i reakcje zachodzce w roztworach wodnych.
+II. Rozumowanie          Zdajcy:
+i zastosowanie nabytej   5.10) pisze równania reakcji: [...] hydrolizy [...] w formie
+wiedzy do rozwizywania   czsteczkowej [...].
+problemów.               8. Niemetale. Zdajcy:
+                         13.10) zapisuje równania reakcji otrzymywania tlenków [...].
+
+Zasady oceniania
+1 pkt - poprawne zapisanie równania reakcji.
+
+0 pkt - bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+          stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+COCl2 + H2O  CO2 + 2HCl
+
+Zadanie 7. (0-2)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+II. Rozumowanie          III etap edukacyjny
+i zastosowanie nabytej   5. Woda i roztwory wodne. Zdajcy:
+wiedzy do rozwizywania   5.6) prowadzi obliczenia z wykorzystaniem poj: [...]
+problemów.               gsto [...].
+                         IV etap edukacyjny - poziom rozszerzony
+                         1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+                         1.1) stosuje pojcie mola (w oparciu o liczb Avogadra).
+
+Zasady oceniania
+2 pkt - poprawne obliczenie i podanie wyniku z poprawn jednostk oraz poprawne
+
+         uzupelnienie zdania.
+1 pkt - poprawne obliczenie i podanie wyniku z poprawn jednostk oraz niepoprawne
+
+         uzupelnienie zdania albo brak uzupelnienia zdania.
+LUB
+
+      - bldne obliczenie lub podanie wyniku z bldn jednostk albo brak obliczenia oraz
+        poprawne uzupelnienie zdania.
+
+0 p. - odpowied niespelniajca powyszych kryteriów albo brak rozwizania.
+
+Uwaga: Wynik moe by podany w rónych jednostkach gstoci, np. gdm-3, kgm-3, gcm-3
+albo gm-3.
+
+Strona 8 z 34
+                                                      Zasady oceniania rozwiza zada
+
+Przykladowe rozwizania
+Rozwizanie I:
+2,431022 czsteczek fosgenu - x gramów fosgenu
+6,021023 czsteczek fosgenu - 99 gramów fosgenu
+x = 3,996 g
+
+d = 3 3,996 g = 3,996 gdm-3 ALBO 4 gdm-3
+
+      1dm
+
+W temperaturze 25 °C i pod cinieniem 1000 hPa fosgen jest gazem.
+Rozwizanie II:
+2,431022 czsteczek fosgenu - x moli fosgenu
+6,021023 czsteczek fosgenu - 1 mol fosgenu
+x = 0,04 mola
+masa fosgenu 0,04 . 99 = 3,96
+d = 1 dm3 3,96 g = 3,96 gdm-3 ALBO 4 gdm-3
+W temperaturze 25 °C i pod cinieniem 1000 hPa fosgen jest gazem.
+
+Rozwizanie III:
+
+d =  = 100099             = 3,996 gdm-3 ALBO 4 gdm-3
+
+        83,14298
+
+W temperaturze 25 °C i pod cinieniem 1000 hPa fosgen jest gazem.
+
+Rozwizanie IV:
+
+1  1 1 = 2  2 2
+101322,4 = 1000V2
+273  298
+                          d = 12+16+235,5 = 99 = 3,996 gdm-3 ALBO 4 gdm-3
+V2 = 24,77dm3·mol-1       24,77  24,77
+
+W temperaturze 25 °C i pod cinieniem 1000 hPa fosgen jest gazem.
+
+Uwaga:
+
+· Odpowied, w której zdajcy pisze, e fosgen jest par, jest niepoprawna.
+· Rozwizanie zadania, w którym zdajcy wykonuje obliczenia dla warunków innych
+
+     ni okrelono w zadaniu, np. dla warunków normalnych, jest niepoprawne.
+
+Zadanie 8. (0-1)          Wymagania szczególowe
+ Wymaganie ogólne
+                          IV etap edukacyjny - poziom rozszerzony
+ I Wykorzystywanie        6. Reakcje utleniania i redukcji. Zdajcy:
+ i tworzenie informacji.  6.5) stosuje zasady bilansu elektronowego - dobiera
+                          wspólczynniki stechiometryczne w równaniach reakcji
+                          utleniania-redukcji (w formie czsteczkowej i jonowej).
+                          1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+                          1.5) dokonuje interpretacji [...] ilociowej równania reakcji
+                          w ujciu molowym, masowym [...].
+
+                                                                  Strona 9 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej skróconej sumarycznego równania przemiany
+
+          i poprawne okrelenie stosunku masowego.
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie reakcji:
+HCHO + I2 + 3OH-  HCOO- + 2I- + 2H2O
+
+Stosunek masowy metanalu i jodu mHCHO : mI2 = 30 : 254 ALBO 30 : 253,8 ALBO 15 : 127
+
+ALBO 1 : 8,47 ALBO w postaci ulamka zwyklego lub dziesitnego (0,118 ALBO 0,12)
+
+Zadanie 9. (0-2)
+
+Wymaganie ogólne        Wymagania szczególowe
+
+II. Rozumowanie         III etap edukacyjny
+i zastosowanie nabytej  5. Woda i roztwory wodne. Zdajcy:
+wiedzy do rozwizywania  5.6) prowadzi obliczenia z wykorzystaniem poj: [...] masa
+problemów.              substancji, masa rozpuszczalnika, masa roztworu [...].
+                        IV etap edukacyjny - poziom podstawowy
+                        1. Materialy i tworzywa pochodzenia naturalnego. Zdajcy:
+                        1.5) zapisuje wzory hydratów i soli bezwodnych [...].
+                        IV etap edukacyjny - poziom rozszerzony
+                        5. Roztwory i reakcje zachodzce w roztworach wodnych.
+                        Zdajcy:
+                        5.2) wykonuje obliczenia zwizane [...] z zastosowaniem
+                        poj stenie procentowe [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wartoci
+
+        liczbowej wyniku (w gramach w 100 g wody).
+1 pkt - zastosowanie poprawnej metody, ale:
+
+         - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+LUB
+
+         - podanie wyniku liczbowego w innej jednostce ni gramy.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+
+Przykladowe rozwizania
+Rozwizanie I:
+W temperaturze 20 ºC
+21,5 g soli uwodnionej --- 100 g wody --- 121,5 g roztworu
+x g soli bezwodnej ------------------- 121,5 g roztworu
+
+MNa2CO3 = 106 g  mol-1 i MNa2CO310H2O = 286 g  mol-1
+
+1 mol soli bezwodnej ----- 1 mol dekahydratu
+106 g soli bezwodnej ----- 286 g dekahydratu
+x g soli bezwodnej ----- 21,5 g dekahydratu
+
+Strona 10 z 34
+                                                            Zasady oceniania rozwiza zada
+
+x = 106 g  21,5 g = 7,97 g soli bezwodnej w 121,5 g roztworu
+          286 g
+
+7,97 g soli bezwodnej w (121,5 g - 7,97 g) = 113,53 g wody
+7,97 g soli bezwodnej ----- 113,53 g wody
+S g soli bezwodnej ----- 100 g wody
+S = 7,97 g 100 g  7 (g) (w 100 g wody)
+
+        113,53 g
+
+(Odpowied: Rozpuszczalno = 7 g soli bezwodnej w 100 g wody)
+
+Rozwizanie II:
+W temperaturze 20 ºC
+
+MNa2CO3 = 106 g  mol-1 i MNa2CO310H2O = 286 g  mol-1
+
+% masy soli bezwodnej w dekahydracie:
+
+%Na2CO3 = MNa2CO3 100% = 106 100% = 37,06%
+MNa2CO3 102 HO                   286
+
+masa soli bezwodnej w 21,5 g dekahydratu:
+mNa2CO3 = 21,5 g  37,06% = 21,5 g  0,3706 = 7,968 g  8,0 g
+
+masa wody w 21,5 g dekahydratu:
+mH2O = 21,5 g - 8,0 g = 13,5 g 
+
+8,0 g soli bezwodnej przypada na (100 g + 13,5 g) = 113,5 g wody
+8,0 g Na2CO3 ----- 113,5 g H2O
+x g Na2CO3 ----- 100 g H2O
+---------------------------
+
+x = 8,0 g 100 g = 7,0 (g) (w 100 g wody)
+        113,5 g
+
+(Odpowied: Rozpuszczalno = 7,0 g soli bezwodnej w 100 g wody)
+
+Zadanie 10. (0-1)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+I Wykorzystywanie        IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  4. Kinetyka i statyka chemiczna. Zdajcy:
+                         4.3) stosuje pojcia: egzoenergetyczny, endoenergetyczny
+                         [...] do opisu efektów energetycznych przemian;
+                         4.7) stosuje regul przekory do jakociowego okrelenia
+                         wplywu zmian [...] cinienia na uklad pozostajcy w stanie
+                         równowagi dynamicznej.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie obu zda.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+                                                                  Strona 11 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Poprawna odpowied
+
+Cinienie p1 jest (wysze / nisze) od cinienia p2. Przemiana NO
+w NO2 to reakcja (endotermiczna / egzotermiczna), co oznacza, e warto H tej
+
+przemiany jest (dodatnia / ujemna).
+
+Zadanie 11. (0-1)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+II. Rozumowanie          IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej   6. Reakcje utleniania i redukcji. Zdajcy:
+wiedzy do rozwizywania   6.1) wykazuje si znajomoci i rozumieniem poj: stopie
+problemów.               utlenienia, utleniacz, reduktor, utlenianie, redukcja;
+                         6.3) wskazuje utleniacz, reduktor [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie równania reakcji oraz poprawne napisanie wzoru reduktora
+
+          i utleniacza.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie reakcji: 3NO2 + H2O  2HNO3 + NO
+
+Wzór reduktora: NO2      Wzór utleniacza: NO2
+
+Zadanie 12. (0-2)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+I Wykorzystywanie        IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  4. Kinetyka i statyka chemiczna. Zdajcy:
+                         4.3) stosuje pojcia: egzoenergetyczny, endoenergetyczny
+                         [...] do opisu efektów energetycznych przemian;
+                         4.6) wykazuje si znajomoci i rozumieniem poj: stan
+                         równowagi dynamicznej i stala równowagi; zapisuje
+                         wyraenie na stal równowagi podanej reakcji.
+
+Zasady oceniania
+2 pkt - poprawne obliczenie i podanie wyniku jako wielkoci niemianowanej oraz poprawne
+
+          uzupelnienie zdania.
+1 pkt - poprawne obliczenie i podanie wyniku jako wielkoci niemianowanej oraz bldne
+
+          uzupelnienie zdania albo brak uzupelnienia zdania.
+LUB
+
+      - bldne obliczenie lub podanie wyniku z bldn jednostk albo brak obliczenia oraz
+        poprawne uzupelnienie zdania.
+
+0 p. - odpowied niespelniajca powyszych kryteriów albo brak rozwizania
+
+Strona 12 z 34
+                                                                                                         Zasady oceniania rozwiza zada
+
+Przykladowe rozwizanie
+
+Stala równowagi reakcji w t = 25 °C: K = [NO2]2 [N2O4 ] = (0,0125)2 0,0337 = 1,5625 10-4 0,0337  216
+
+Uwaga: Podanie wartoci stalej równowagi z jednostk dm3·mol-1 - wynikajc z podstawienia
+do wyraenia na K stenia molowego reagentów - nie skutkuje utrat punktu.
+
+Steniowa stala równowagi opisanej reakcji w temperaturze wyszej ni 25 °C jest
+(mniejsza ni / wiksza ni / taka sama jak) steniowa stala równowagi tej reakcji
+w temperaturze 25 °C.
+
+Zadanie 13.
+
+Wymagania ogólne          Wymagania szczególowe
+
+I. Wykorzystanie          IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.   4. Kinetyka i statyka chemiczna. Zdajcy:
+II. Rozumowanie           4.6) wykazuje si znajomoci i rozumieniem poj: stan
+i zastosowanie nabytej    równowagi dynamicznej [...];
+wiedzy do rozwizywania    4.8) klasyfikuje substancje do kwasów lub zasad zgodnie
+problemów.                z teori Brønsteda-Lowry'ego.
+III. Opanowanie czynnoci  5. Roztwory i reakcje zachodzce w roztworach wodnych.
+praktycznych.             Zdajcy:
+                          5.10) pisze równania reakcji: zobojtniania [...] w formie [...]
+                          jonowej (pelnej i skróconej).
+
+Zadanie 13.1. (0-1)
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej skróconej równania reakcji z mocn zasad oraz
+
+          poprawne uzupelnienie zdania.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Równanie reakcji z mocn zasad:
+CH3COOH + OH-  CH3COO- + H2O
+
+Po wprowadzeniu mocnego kwasu do buforu octanowego stenie jonów octanowych
+(wzronie / zmaleje / nie ulegnie zmianie).
+
+Zadanie 13.2. (0-1)
+
+Zasady oceniania
+1 pkt - poprawny wybór i napisanie numerów roztworów buforowych.
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+II, III
+
+                                                                  Strona 13 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 14.1. (0-2)
+
+Wymaganie ogólne        Wymagania szczególowe
+
+II. Rozumowanie         IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej  4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania  4.6) wykazuje si znajomoci i rozumieniem poj: stan
+problemów.              równowagi dynamicznej i stala równowagi [...];
+                        4.9) interpretuje wartoci [...] pH [...].
+                        5. Roztwory i reakcje zachodzce w roztworach wodnych.
+                        Zdajcy:
+                        5.2) wykonuje obliczenia zwizane z przygotowaniem [...]
+                        roztworów z zastosowaniem poj stenie [...] molowe;
+                        5.7) przewiduje odczyn roztworu po reakcji [...] substancji
+                        zmieszanych w ilociach stechiometrycznych [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+         jako wielkoci niemianowanej z odpowiedni dokladnoci.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+          - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+LUB
+
+         - podanie wyniku z jednostk.
+LUB
+
+          - podanie wyniku z niepoprawn dokladnoci.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej poprawnej
+metody i poprawnych oblicze.
+
+Przykladowe rozwizania
+Rozwizanie I:
+Liczba moli jonów H + i OH - w roztworach, które zmieszano:
+n H+ = 0,04 dm3· 0,8 mol · dm-3 = 0,032 mola
+n OH- = 2 · 0,1 dm3· 0,2 mol · dm-3= 0,04 mola
+Jonów OH - uyto w nadmiarze, po reakcji liczba moli i stenie wynosz:
+n OH- = 0,04 mola - 0,032 mola = 0,008 mola
+[OH - ] = 0,14 dm-3 0,008mol = 0,057 mol · dm-3
+
+Obliczenie wartoci pH roztworu:
+
+pOH = -log[OH - ] = -log(0,057) = -log(0,57 ·10-1) = -log0,57 - log10-1= 0,244 +1 = 1,244
+
+pH + pOH = 14  pH = 14 - pOH
+pH = 14 - 1,244 = 12,756 = 12,76
+
+Strona 14 z 34
+                                                                Zasady oceniania rozwiza zada
+
+Rozwizanie II:
+
+Liczba moli jonów H + i OH - , które zmieszano:
+
+n H+ = 0,04 dm3· 0,8 mol · dm-3 = 0,032 mola
+
+n OH- = 2 · 0,1 dm3· 0,2 mol · dm-3= 0,04 mola
+
+Jonów OH - uyto w nadmiarze, po reakcji ich liczba i stenie wynosz:
+
+n OH- = 0,04 mola - 0,032 mola = 0,008 mola
+
+[OH - ] = 0,14 dm-3 0,008 mol = 0,057 mol · dm-3
+                                  H ] 1 0 -1 4 0 , 1 8 1 0 1 2
+[ H ] [ O H ] 1 0 14              [ + = 0,0 5 7 =  -
++ - = -
+
+Obliczenie wartoci pH roztworu:
+pH = -log[H + ] = -log(0,18·10-12) = -log0,18 - log10-12= 0,745 +12 = 12,75
+
+Zadanie 14.2. (0-1)
+
+Wymaganie ogólne                  Wymaganie szczególowe
+
+II. Rozumowanie                   IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej            5. Roztwory i reakcje zachodzce w roztworach wodnych.
+wiedzy do rozwizywania            Zdajcy:
+problemów.                        5.2) wykonuje obliczenia zwizane z przygotowaniem [...]
+                                  roztworów z zastosowaniem poj stenie [...] molowe.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied                                  [Cl - ], mol  dm-3
+               [Ba2+], mol  dm-3                          0,229
+
+                      0,143
+
+Uwaga: Podanie wartoci stenia molowego jonów z mniejsz dokladnoci (z poprawnym
+zaokrgleniem) nie skutkuje utrat punktu.
+
+Zadanie 15. (0-1)
+
+Wymagania ogólne                  Wymagania szczególowe
+
+I. Wykorzystanie                  IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.           5. Roztwory i reakcje w roztworach wodnych. Zdajcy:
+II. Rozumowanie                   5.11) projektuje [...] dowiadczenia pozwalajce otrzyma
+i zastosowanie nabytej            [...] sole.
+wiedzy do rozwizywania            7. Metale. Zdajcy:
+problemów.                        7.3) analizuje [...] wlaciwoci [...] chemiczne metali [...].
+III. Opanowanie czynnoci
+praktycznych.
+
+                                                                             Strona 15 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zasady oceniania
+1 pkt - poprawne uszeregowanie jonów kompleksowych.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+
+III, I, II      ALBO        akwakompleks, rodankowy, fluorkowy
+
+Zadanie 16. (0-2)
+
+Wymaganie ogólne            Wymaganie szczególowe
+
+II. Rozumowanie             IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej      1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+wiedzy do rozwizywania      1.6) wykonuje obliczenia z uwzgldnieniem [...] mola
+problemów.                  dotyczce: mas substratów i produktów (stechiometria
+                            wzorów i równa chemicznych) [...].
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+          w procentach masowych.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+          - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego.
+LUB
+
+          - niepodanie wyniku w procentach masowych.
+0 p. - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+
+Przykladowe rozwizania
+Rozwizanie I:
+
+Mszczawianu wapnia = 128 g  mol-1  nszczawianu wapnia = 0,1 mol 
+
+ nCO = 0,1 m ola  2,8 g CO
+6,32 g - 2,8 g = 3,52 g  0,08 mola CO2
+przereagowalo 0,08 mola CaCO3  powstalo 0,08 mola CaO  4,48 g CaO
+
+%CaO = 4, 48  100% = 69,1%      %CaO = 69,1(%)
+            12,8 - 6,32
+
+Rozwizanie II:
+12,8 g szczawianu - x
+128 g szczawianu - 100 g
+-----------------------
+x = 10 g wglanu
+
+                            CaCO3                   CaO           CO2
+
+            n0 10 100 0 0
+
+            n               -x                      x             x
+
+            nk 10 100 - x x x
+
+Strona 16 z 34
+                                                    Zasady oceniania rozwiza zada
+
+Masa po praeniu 12,8 - 6,32 = 6,48 g
+  10 - x 100 + 56x = 6,48
+ 100
+
+10 - 100x + 56x = 6,48
+44x = 3,52
+X = 0,08 mol, czyli zawarto procentowa tlenku wapnia % CaO = 0,0856 6,48 .100 = 69,14(%)
+
+Zadanie 17.1. (0-1)
+
+Wymaganie ogólne          Wymagania szczególowe
+
+III. Opanowanie czynnoci  IV etap edukacyjny - poziom rozszerzony
+praktycznych.             7. Metale. Zdajcy:
+                          7.5) przewiduje kierunek przebiegu reakcji metali z [...]
+                          roztworami soli, na podstawie danych zawartych w szeregu
+                          napiciowym metali;
+                          7.6) projektuje [...] dowiadczenie, którego wynik pozwoli
+                          porówna aktywno chemiczn metali [...].
+
+Zasady oceniania
+1 pkt - poprawny wybór i podkrelenie symbolu metalu oraz wzoru odczynnika.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Zestaw I: Ag / Al / Au / Sn
+Zestaw II: Al(NO3)3 (aq) / CuSO4 (aq) / AgNO3 (aq)
+
+Zadanie 17.2. (0-1)
+
+Wymagania ogólne          Wymagania szczególowe
+
+I. Wykorzystanie          IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.   7. Metale. Zdajcy:
+II. Rozumowanie           7.5) przewiduje kierunek przebiegu reakcji metali z [...]
+i zastosowanie nabytej    roztworami soli, na podstawie danych zawartych w szeregu
+wiedzy do rozwizywania    napiciowym metali.
+problemów.                III etap edukacyjny
+III. Opanowanie czynnoci  3. Reakcje chemiczne. Zdajcy:
+praktycznych.             3.2) [...] zapisuje odpowiednie równania [...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie równania reakcji w formie jonowej skróconej przy poprawnym
+
+         wyborze i zaznaczeniu symbolu metalu oraz wzoru odczynnika w zadaniu 17.1.
+0 pkt - bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+         stechiometryczne, niewlaciwa forma zapisu) lub bldny wybór, lub brak zaznaczenia
+         symbolu metalu i wzoru odczynnika w zadaniu 17.1. albo brak odpowiedzi.
+
+Poprawna odpowied
+Sn + Cu2+  Sn2+ + Cu
+
+                                                                            Strona 17 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 18.1. (0-1)
+
+Wymaganie ogólne           Wymagania szczególowe
+
+III. Opanowanie czynnoci   IV etap edukacyjny - poziom rozszerzony
+praktycznych.              5. Roztwory i reakcje zachodzce w roztworach wodnych.
+                           Zdajcy:
+                           5.11) projektuje [...] dowiadczenia pozwalajce otrzyma
+                           rónymi metodami [...] wodorotlenki [...].
+                           III etap edukacyjny
+                           6. Kwasy i zasady. Zdajcy:
+                           6.3) planuje [...] dowiadczenia, w wyniku których mona
+                           otrzyma wodorotlenek [...].
+
+Zasady oceniania
+1 pkt - poprawne wskazanie numerów probówek.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+I i II
+
+Zadanie 18.2. (0-1)
+
+Wymagania ogólne           Wymagania szczególowe
+
+I. Wykorzystanie           IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.    5. Roztwory i reakcje zachodzce w roztworach wodnych.
+III. Opanowanie czynnoci   Zdajcy:
+praktycznych.              5.11) projektuje [...] dowiadczenia pozwalajce otrzyma
+                           [...] wodorotlenki i sole.
+                           7. Metale. Zdajcy:
+                           7.4) [...] planuje [...] dowiadczenie, którego przebieg
+                           pozwoli wykaza, e [...] wodorotlenek [...] wykazuje
+                           charakter amfoteryczny.
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej skróconej równania reakcji.
+
+0 pkt - bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+          stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied
+
+Zn2+ + 4OH -  [Zn(OH)4]2-
+
+ALBO            Zn(OH)2 + 2OH -  [Zn(OH)4]2-
+
+ALBO            Zn2+ + 2OH -  Zn(OH)2 ORAZ          Zn(OH)2 + 2OH -  [Zn(OH)4]2-
+
+Uwaga: Nawiasy kwadratowe we wzorze jonu kompleksowego mog by pominite.
+
+Strona 18 z 34
+                                                    Zasady oceniania rozwiza zada
+
+Zadanie 19. (0-1)
+
+Wymagania ogólne          Wymagania szczególowe
+
+I. Wykorzystanie          IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.   8. Niemetale. Zdajcy:
+III. Opanowanie czynnoci  8.12) opisuje typowe wlaciwoci chemiczne kwasów, w tym
+praktycznych.             zachowanie wobec [...] soli kwasów o mniejszej mocy [...]
+                          planuje [...] odpowiednie dowiadczenia [...].
+                          5. Roztwory i reakcje zachodzce w roztworach wodnych.
+                          Zdajcy:
+                          5.9) [...] bada odczyn roztworu;
+                          5.11) projektuje [...] dowiadczenia pozwalajce otrzyma
+                          rónymi metodami [...] sole.
+
+Zasady oceniania
+1 pkt - poprawne opisanie zmian w dwóch probówkach.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Probówka I: roztwór w probówce zabarwia si na malinowo ALBO róowo.
+
+Probówka II: wydziela si (bezbarwny) gaz (duszcy, o charakterystycznym zapachu)
+
+                  ALBO widoczne s pcherzyki gazu LUB u wylotu probówki wyczuwa si
+
+                  charakterystyczny zapach.
+
+Zadanie 20. (0-1)
+
+Wymagania ogólne          Wymagania szczególowe
+
+II. Rozumowanie           IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej    4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania    4.8) klasyfikuje substancje do kwasów [...] zgodnie
+problemów.                z teori Brönsteda-Lowry'ego.
+III. Opanowanie czynnoci  5. Roztwory i reakcje zachodzce w roztworach wodnych.
+praktycznych.             Zdajcy:
+                          5.8) uzasadnia [...] przyczyn [...] odczynu niektórych
+                          roztworów soli;
+                          5.9) [...] bada odczyn roztworu.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie zdania.
+
+0 pkt - odpowied niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Na podstawie wyniku dowiadczenia w probówce I mona stwierdzi, e slabym kwasem
+
+Brønsteda jest ( H2SO3 / HSO3- / SO32- ).
+
+                                                                 Strona 19 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 21. (0-1)
+
+Wymagania ogólne          Wymaganie szczególowe
+
+II. Rozumowanie           IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej    8. Niemetale. Zdajcy:
+wiedzy do rozwizywania    8.12) opisuje typowe wlaciwoci chemiczne kwasów, w tym
+problemów.                zachowanie wobec [...] soli kwasów o mniejszej mocy [...]
+III. Opanowanie czynnoci  planuje [...] odpowiednie dowiadczenia [...]; ilustruje je
+praktycznych.             równaniami reakcji.
+
+Zasady oceniania
+1 pkt - poprawne dokoczenie zdania i poprawne napisanie w formie jonowej skróconej
+
+          równania reakcji.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Kwas siarkowy(IV) jest slabszy ni kwas chlorowodorowy i jest kwasem nietrwalym ALBO
+ulegajcym rozkladowi.
+
+Uwaga: Odpowied:
+    · Kwas siarkowy(IV) jest slabszy ni kwas chlorowodorowy i jest kwasem lotnym jest
+         niepoprawna.
+    · Kwas siarkowy(IV) jest slabszy ni kwas chlorowodorowy i jest kwasem
+         nieutleniajcym jest niewystarczajca, poniewa nie wyjania moliwej do
+         zaobserwowania zmiany wiadczcej o przebiegu reakcji chemicznej.
+
+Równanie reakcji: SO32- + 2H +  SO2 + H2O ALBO SO32- + 2H3O +  SO2 + 3H2O
+
+Uwaga: Zapis SO2·H2O jest bldny, poniewa nie wyjania moliwej do zaobserwowania
+zmiany wiadczcej o przebiegu reakcji chemicznej.
+
+Zadanie 22. (0-2)
+
+Wymaganie ogólne          Wymagania szczególowe
+
+II. Rozumowanie           IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej    9. Wglowodory. Zdajcy:
+wiedzy do rozwizywania    9.1) podaje zaloenia teorii strukturalnej budowy zwizków
+problemów.                organicznych;
+                          9.7) opisuje wlaciwoci chemiczne alkanów, na przykladzie
+                          nastpujcych reakcji: [...] podstawianie (substytucja) atomu
+                          [...] wodoru przez atom [...] bromu przy udziale wiatla (pisze
+                          odpowiednie równania reakcji).
+
+Zasady oceniania                                                            wspólczynniki
+2 pkt - poprawne napisanie dwóch równa reakcji.
+
+1 pkt - poprawne napisanie jednego równania reakcji.
+
+0 pkt - bldne napisanie równa reakcji (bldne wzory reagentów, bldne
+
+          stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Uwaga: Jeeli zdajcy w obu poprawnie zapisanych równaniach uyl Cl2 zamiast Br2, to za
+           zadanie otrzymuje 1 pkt.
+
+Strona 20 z 34
+                                                         Zasady oceniania rozwiza zada
+
+Poprawna odpowied
+Równanie reakcji monobromowania wglowodoru A:
+
+                                                    Br
+
+      CH2                                CH
+
+H2C          CH2     + Br2 (wiatlo) H2C      CH2  + HBr
+
+      CH2 CH2                      CH2 CH2
+
+ALBO                           Br
+
+             + Br2 (wiatlo)              + HBr
+
+Równanie reakcji monobromowania wglowodoru B:
+
+      CH3                                       CH3
+
+H3C C CH3 + Br2 (wiatlo)                 H3C C CH2 Br    + HBr
+
+         CH3         (wiatlo)                      CH3
+ALBO                           CH3C(CH3)2CH2Br + HBr
+CH3C(CH3)2CH3 + Br2
+
+Zadanie 23.
+
+Wymagania ogólne               Wymagania szczególowe
+
+I. Wykorzystanie               IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.        9. Wglowodory. Zdajcy:
+II. Rozumowanie                9.5) rysuje wzory strukturalne i pólstrukturalne izomerów [...]
+i zastosowanie nabytej         poloenia podstawnika, izomerów optycznych wglowodorów
+wiedzy do rozwizywania         i ich prostych fluorowcopochodnych [...];
+problemów.                     9.8) [...] przewiduje produkty reakcji przylczenia czsteczek
+                               niesymetrycznych do niesymetrycznych alkenów na
+                               podstawie reguly Markownikowa (produkty glówne i uboczne)
+                               [...].
+
+Zadanie 23.1. (0-1)
+
+Zasady oceniania
+1 pkt - poprawne napisanie wzorów pólstrukturalnych (grupowych) dwóch zwizków.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Wzór zwizku, którego czsteczki s chiralne: CH3CH2CHClCH3
+
+Wzór zwizku, którego czsteczki s achiralne: CH3CH2CH2CH2Cl
+
+Zadanie 23.2. (0-1)
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+                                                                 Strona 21 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Poprawna odpowied            CH3                         CH3
+                             C Cl                   Cl C H
+                          H
+
+                             H2C CH3                H2C CH3
+
+Uwaga:
+
+· Jeeli w zadaniu 23.1. zdajcy napisal wzory pólstrukturalne obu produktów reakcji
+     zwizku X z bromowodorem (zamiast z chlorowodorem), to w zadaniu 23.2. wzory
+     przedstawiajce budow obu enancjomerów chiralnego produktu reakcji zwizku X
+     z bromowodorem naley ocenia jak wzory enancjomerów produktu reakcji zwizku X
+     z chlorowodorem.
+
+· Grupa -CH2CH3 moe by zapisana jako -C2H5.
+
+· Schematy musz by uzupelnione tak, aby przedstawialy poprawne wzory pólstrukturalne
+
+     (grupowe) obu enancjomerów, np. grupa -CH2CH3 nie moe by zapisana jako -CH3CH2.
+
+Zadanie 24.
+
+Wymagania ogólne             Wymagania szczególowe
+
+I. Wykorzystanie             IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.      9. Wglowodory. Zdajcy:
+II. Rozumowanie              9.8) opisuje wlaciwoci chemiczne alkenów, na przykladzie
+i zastosowanie nabytej       nastpujcych reakcji: przylczanie (addycja): [...] H2O;
+wiedzy do rozwizywania       przewiduje produkty reakcji przylczenia czsteczek
+problemów.                   niesymetrycznych do niesymetrycznych alkenów na
+                             podstawie reguly Markownikowa (produkty glówne i uboczne)
+                             [...];
+                             9.11) wyjania na prostych przykladach mechanizmy reakcji
+                             [...] addycji [...].
+
+Zadanie 24.1. (0-1)
+
+Zasady oceniania
+1 pkt - poprawne okrelenie typu i mechanizmu reakcji.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied                  Mechanizm reakcji: elektrofilowy
+Typ reakcji: addycja
+
+Zadanie 24.2. (0-1)
+
+Zasady oceniania
+1 pkt - poprawna ocena informacji i poprawne uzasadnienie odwolujce si do stosowalnoci
+
+          reguly Markownikowa.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Strona 22 z 34
+                         Zasady oceniania rozwiza zada
+
+Poprawna odpowied
+Informacja (jest / nie jest) poprawna.
+Uzasadnienie: Addycja wody do terpinolenu nie podlega regule Markownikowa.
+
+Uwaga: Zdajcy powinien w dowolny sposób odnie regul Markownikowa do opisywanych
+zwizków.
+W uzasadnieniu zdajcy moe odwola si do budowy alkenu (substratu) lub alkoholi
+(produktów) i:
+- porówna stopnie utlenienia atomów wgla;
+- porówna rzdowo, np. alkoholi;
+- stwierdzi brak atomów wodoru przy atomach wgla polczonych wizaniem podwójnym;
+Stwierdzenie jedynie, e oba produkty powstaj z podobn wydajnoci, jest
+niewystarczajce.
+
+Zadanie 25. (0-1)
+
+Wymagania ogólne         Wymagania szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  3. Wizania chemiczne. Zdajcy:
+II. Rozumowanie          3.5) rozpoznaje typ hybrydyzacji (sp, sp2, sp3) w prostych
+i zastosowanie nabytej   czsteczkach zwizków [...] organicznych.
+wiedzy do rozwizywania   9. Wglowodory. Zdajcy:
+problemów.               9.8) opisuje wlaciwoci chemiczne alkenów, na przykladzie
+                         nastpujcych reakcji: przylczanie (addycja): [...] Br2 [...];
+                         9.11) wyjania na prostych przykladach mechanizmy reakcji
+                         [...];
+                         9.15) opisuje wlaciwoci wglowodorów aromatycznych [...]
+                         reakcje z [...] Br2 wobec katalizatora lub w obecnoci wiatla
+                         [...].
+
+Zasady oceniania
+1 pkt - poprawne wskazanie trzech odpowiedzi.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+1. - P, 2. - F, 3. - P
+
+                                                                 Strona 23 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 26. (0-1)
+
+Wymaganie ogólne                     Wymagania szczególowe
+
+I. Wykorzystanie                     IV etap edukacyjny - zakres rozszerzony
+i tworzenie informacji.              4. Kinetyka i statyka chemiczna. Zdajcy:
+                                     4.6) wykazuje si znajomoci i rozumieniem poj: [...] stala
+                                     równowagi [...];
+                                     4.8) klasyfikuje substancje do kwasów lub zasad zgodnie
+                                     z teori Brønsteda-Lowry`ego;
+                                     4.9) interpretuje wartoci stalej dysocjacji, pH, pKw.
+                                     14. Zwizki organiczne zawierajce azot. Zdajcy:
+                                     14.3) wyjania przyczyn zasadowych wlaciwoci amoniaku
+                                     i amin [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie dwóch zda.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+
+Sporód wymienionych zwizków najmocniejsz zasad Brønsteda jest
+(NH3 / CH3NH2 / C6H5NH2 ) . Jonem, który najlatwiej odszczepia proton, jest kation
+
+o wzorze (NH+4  /                 +  /                +  )  ,  jest  wic  on  (najmocniejszym  / najslabszym)
+
+                     CH3NH3             C6H5NH3
+
+kwasem Brønsteda.
+
+Zadanie 27.1. (0-2)
+
+Wymaganie ogólne                     Wymagania szczególowe
+
+II. Rozumowanie                      IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej               4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania               4.6) [...] zapisuje wyraenie na stal równowagi podanej
+problemów.                           reakcji;
+                                     4.9) interpretuje wartoci stalej dysocjacji, pH [...].
+                                     5.Roztwory i reakcje zachodzce w roztworach wodnych.
+                                     Zdajcy:
+                                     5.2) wykonuje obliczenia zwizane z [...] zastosowaniem
+                                     pojcia stenie [...] molowe;
+                                     5.6) stosuje termin stopie dysocjacji dla ilociowego opisu
+                                     zjawiska dysocjacji elektrolitycznej.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze, podanie wyniku jako
+
+         wielkoci niemianowanej oraz podkrelenie wzoru pólstrukturalnego (grupowego)
+         aminy.
+1 pkt - zastosowanie poprawnej metody, ale:
+          - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku.
+LUB
+          - podanie wyniku z niepoprawn jednostk.
+LUB
+          - wskazanie niepoprawnego wzoru aminy lub niepodanie wzoru aminy.
+0 pkt - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Strona 24 z 34
+                                                        Zasady oceniania rozwiza zada
+
+Przykladowe rozwizania
+Rozwizanie I:
+
+pH =12,2 pOH = 14 - 12,2 = 1,8
+
+pOH = - log[OH - ]
+
+[OH-] = 0,16·10-1 moldm-3 = cz
+
+=  
+ =   
+= 
+
+K = 0,000496         K = 5 10-4
+
+Wzór: CH3CH2CH2NH2               (CH3)3N                CH3CH2NH2      (CH3)2NH
+
+Rozwizanie II:
+K = [OH [RNH2] = Co-[OH-] = [OH- -]2 [OH-]2 [OH-]2 ] -
+                         -[OH ]
+(0,1610-1)2
+ = 0,1610-1             0,025610-2 2,5610-4             -4         -4
+                     -1 = 0,516-0,016 = 0,500 = 5,12 10  5,110
+0,031 - 0,1610
+
+Wzór: CH3CH2CH2NH2               (CH3)3N                CH3CH2NH2      (CH3)2NH
+
+Zadanie 27.2. (0-1)
+
+Wymaganie ogólne        Wymagania szczególowe
+
+II. Rozumowanie         IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej  4. Kinetyka i statyka chemiczna. Zdajcy:
+wiedzy do rozwizywania  4.6) wykazuje si znajomoci i rozumieniem poj: stan
+problemów.              równowagi dynamicznej i stala równowagi [...];
+                        4.7) stosuje regul przekory do jakociowego okrelenia
+                        wplywu zmian [...] stenia reagentów [...] na uklad
+                        pozostajcy w stanie równowagi dynamicznej.
+                        5. Roztwory i reakcje zachodzce w roztworach wodnych.
+                        Zdajcy:
+                        5.6) stosuje termin stopie dysocjacji dla ilociowego opisu
+                        zjawiska dysocjacji elektrolitycznej.
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie i poprawne uzasadnienie odwolujce si do mechanizmu
+
+          procesu równowagowego zachodzcego w roztworze.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+                                                                       Strona 25 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Poprawna odpowied
+Rozstrzygnicie: Tak, (bdzie mialo wplyw na warto stopnia dysocjacji.)
+Uzasadnienie: (Nastpi zmniejszenie stopnia dysocjacji, poniewa) wzrost stenia jonów OH-
+poskutkuje zgodnie z regul przekory:
+- zmniejszeniem wydajnoci przemiany.
+ALBO
+- przesuniciem równowagi w lewo.
+ALBO
+- przesuniciem równowagi w kierunku substratów.
+
+Zadanie 28. (0-1)
+
+Wymaganie ogólne                  Wymagania szczególowe
+
+I. Wykorzystanie                  IV etap edukacyjny - zakres rozszerzony
+i tworzenie informacji.           6. Reakcje utleniania i redukcji. Zdajcy:
+                                  6.5) stosuje zasady bilansu elektronowego - dobiera
+                                  wspólczynniki stechiometryczne w równaniach reakcji
+                                  utleniania-redukcji (w formie czsteczkowej i jonowej).
+                                  14. Zwizki organiczne zawierajce azot. Zdajcy:
+                                  14.4) zapisuje równania reakcji otrzymywania [...] amin
+                                  aromatycznych (np. otrzymywanie aniliny w wyniku redukcji
+                                  nitrobenzenu).
+
+Zasady oceniania
+1 pkt - poprawne napisanie w formie jonowej równa reakcji redukcji i reakcji utleniania.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied                 NH3+
+Równanie reakcji redukcji:               + 2 H2O
+
+               NO 2
+                    + 7 H+ + 6e-
+
+ALBO
+
+      NO 2                        NH3+
+            + 7 H3O+ + 6e-               + 9 H2O
+
+Równanie reakcji utleniania:
+Ti3+  Ti4+ + e-
+
+Strona 26 z 34
+                                                       Zasady oceniania rozwiza zada
+
+Zadanie 29. (0-1)
+
+Wymaganie ogólne             Wymaganie szczególowe
+
+II. Rozumowanie              IV etap edukacyjny - zakres rozszerzony
+i zastosowanie nabytej       14. Zwizki organiczne zawierajce azot. Zdajcy:
+wiedzy do rozwizywania       14.4) zapisuje równania reakcji otrzymywania amin [...]
+problemów.                   aromatycznych (np. otrzymywanie aniliny w wyniku redukcji
+III. Opanowanie czynnoci     nitrobenzenu).
+praktycznych.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie schematu.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied            NH2
+                                     + H2O
+              NH3+
+
+                      + OH-
+
+Uwaga:
+    · Zapis, w którym zdajcy uyl H2O zamiast OH-, jest niepoprawny.
+    · Zapis, w którym zdajcy zastpil anion OH- innym anionem, jest niepoprawny.
+
+Zadanie 30. (0-1)
+
+Wymagania ogólne             Wymagania szczególowe
+
+I. Wykorzystanie             IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.      6. Reakcje utleniania i redukcji. Zdajcy:
+II. Rozumowanie              6.1) wykazuje si znajomoci i rozumieniem poj: stopie
+i zastosowanie nabytej       utlenienia, utleniacz, reduktor, utlenianie, redukcja;
+wiedzy do rozwizywania       6.2) oblicza stopnie utlenienia pierwiastków [...] w
+problemów.                   czsteczce zwizku [...] organicznego;
+                             6.3) wskazuje utleniacz, reduktor [...] w podanej reakcji
+                             redoks.
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied            Stopie utlenienia wgla b            Funkcja tryptofanu
+   Stopie utlenienia wgla a   w 5-hydroksytryptofanie                  reduktor
+            w tryptofanie
+                                              I
+                   -I
+
+                                                                 Strona 27 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 31. (0-1)
+
+Wymaganie ogólne          Wymaganie szczególowe
+
+III. Opanowanie czynnoci  IV etap edukacyjny - poziom rozszerzony
+praktycznych.             10. Hydroksylowe pochodne wglowodorów - alkohole
+                          i fenole. Zdajcy:
+                          10.8) na podstawie obserwacji wyników dowiadczenia [...]
+                          formuluje wniosek o sposobie odróniania fenolu [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie zdania.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Zawarto obu probówek (moe / nie moe) by rozróniona za pomoc wodnego roztworu
+chlorku elaza(III), poniewa (tylko w czsteczkach melatoniny /
+tylko w czsteczkach serotoniny / w czsteczkach obu zwizków) wystpuje
+(ugrupowanie fenolowe / wizanie amidowe / wizanie estrowe).
+
+Zadanie 32. (0-1)
+
+Wymagania ogólne          Wymagania szczególowe
+
+I. Wykorzystanie          IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.   14. Zwizki organiczne zawierajce azot. Zdajcy:
+II. Rozumowanie           14.11) opisuje wlaciwoci [...] aminokwasów [...];
+i zastosowanie nabytej    14.13) [...] wskazuje wizanie peptydowe [...].
+wiedzy do rozwizywania
+problemów.
+
+Zasady oceniania
+1 pkt - poprawne wskazanie trzech odpowiedzi.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+1. - F, 2. - F, 3. - P
+
+Zadanie 33. (0-1)         Wymagania szczególowe
+ Wymaganie ogólne
+                          IV etap edukacyjny - zakres rozszerzony
+ I. Wykorzystanie         3. Wizania chemiczne. Zdajcy:
+ i tworzenie informacji.  3.7) opisuje i przewiduje wplyw rodzaju wizania ([...]
+                          wodorowe [...]) na wlaciwoci substancji [...] organicznych.
+                          4. Kinetyka i statyka chemiczna. Zdajcy:
+                          4.6) wykazuje si znajomoci i rozumieniem poj: [...] stala
+                          równowagi [...];
+                          4.9) interpretuje wartoci stalej dysocjacji [...].
+
+Strona 28 z 34
+                                                    Zasady oceniania rozwiza zada
+
+Zasady oceniania
+1 pkt - poprawne narysowanie wzoru izomeru orto.
+0 pkt - odpowied niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+     COOH
+
+               OH
+
+Zadanie 34. (0-1)
+
+Wymaganie ogólne         Wymaganie szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - zakres podstawowy
+i tworzenie informacji.  2. Chemia rodków czystoci. Zdajcy:
+                         2.2) [...] zaznacza fragmenty hydrofobowe i hydrofilowe we
+                         wzorach czsteczek substancji powierzchniowo czynnych.
+
+Zasady oceniania
+1 pkt - poprawne rozstrzygnicie oraz poprawne uzasadnienie uwzgldniajce budow
+
+          czsteczki karnityny i wskazujce w dowolny sposób na brak czci hydrofobowej.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied                                                      hydrofobowego
+Rozstrzygnicie: Nie, (karnityna nie moe by stosowana jako detergent).
+Uzasadnienie: Czsteczka karnityny nie zawiera lacucha
+(wglowodorowego, niepolarnego).
+ALBO
+Czsteczka karnityny nie ma budowy amfifilowej.
+ALBO
+Czsteczka karnityny zawiera tylko grupy polarne.
+
+Uwaga: Uzasadnienia:
+    · Czsteczka karnityny jest dipolem.
+    · Czsteczka karnityny jest polarna.
+
+s niewystarczajce.
+
+Zadanie 35.1. (0-1)
+
+Wymaganie ogólne         Wymagania szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - zakres rozszerzony
+i tworzenie informacji.  16. Cukry. Zdajcy:
+                         16.3) [...] rysuje wzory taflowe (Hawortha) glukozy [...];
+                         16.6) wskazuje wizanie O-glikozydowe [...].
+
+Zasady oceniania
+1 pkt - poprawne uzupelnienie tabeli.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+                                                                       Strona 29 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Poprawna odpowied                                      Jednostka glukozowa
+
+ anomer                                             I                       II
+ numer atomu wgla uczestniczcy
+ w wizaniu O-glikozydowym                              
+
+                                                    1                       1
+
+Zadanie 35.2. (0-1)
+
+Wymagania ogólne          Wymagania szczególowe
+
+I. Wykorzystanie          IV etap edukacyjny - zakres rozszerzony
+i tworzenie informacji.   16. Cukry. Zdajcy:
+III. Opanowanie czynnoci  16.3) [...] rysuje wzory taflowe (Hawortha) glukozy [...];
+praktycznych.             16.4) projektuje [...] dowiadczenie, którego wynik potwierdzi
+                          obecno grupy aldehydowej w czsteczce glukozy;
+                          16.6) wskazuje wizanie O-glikozydowe [...];
+                          16.7) wyjania, dlaczego [...] sacharoza nie wykazuje
+                          wlaciwoci redukujcych.
+
+Zasady oceniania                                                                      budowy
+1 pkt - poprawne rozstrzygnicie i poprawne uzasadnienie odwolujce si do
+
+          czsteczki trehalozy oraz konsekwencji reakcji, która zaszla w probówce II.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Rozstrzygnicie: Nie
+Uzasadnienie: (Trehaloza nie ulega próbie Trommera, poniewa) oba anomeryczne atomy
+wgla uczestnicz w wizaniu glikozydowym (i grupa aldehydowa w adnej jednostce
+glukozowej nie moe ulec odtworzeniu bez rozpadu tego wizania).
+ORAZ
+W probówce II nastpila hydroliza trehalozy do glukozy.
+ALBO
+W probówce II powstal cukier redukujcy.
+ALBO
+W probówce II powstal zwizek, który daje pozytywny wynik próby Trommera.
+
+Uwaga:
+· Uzasadnienie musi zawiera:
+
+      - stwierdzenie w dowolny sposób niemonoci powstania grupy aldehydowej
+        w czsteczce trehalozy, np.:
+          niemoliwo otwarcia piercienia obu jednostek glukozowych;
+          niemoliwo odtworzenia grupy aldehydowej;
+          brak grup hydroksylowych przy anomerycznych atomach wgla;
+          istnienie wizania 1,1-glikozydowego.
+
+     - stwierdzenie w dowolny sposób istnienia glukozy w roztworze w probówce II.
+
+Strona 30 z 34
+                                        Zasady oceniania rozwiza zada
+
+· Jeeli zdajcy w zadaniu 35.1. poprawnie poda numery atomów wgla, pomidzy którymi
+     wystpuje wizanie O-glikozydowe w czsteczce trehalozy, to w uzasadnieniu zadania
+     35.2. moe odnie si tylko do obecnoci wizania glikozydowego, ale jeli podaje
+     numery atomów wgla, to musz by one poprawne.
+
+· Zdajcy nie musi w uzasadnieniu opisywa moliwych do zaobserwowania zmian, ale
+     jeeli je opisuje, musz by one poprawne.
+
+Zadanie 36. (0-1)
+
+Wymagania ogólne         Wymagania szczególowe
+
+I. Wykorzystanie         IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.  12. Kwasy karboksylowe. Zdajcy:
+II. Rozumowanie          12.5 zapisuje równania reakcji z udzialem kwasów
+i zastosowanie nabytej   karboksylowych (których produktami s: [...] estry) [...];
+wiedzy do rozwizywania   12.10) opisuje budow dwufunkcyjnych pochodnych
+problemów.               wglowodorów, na przykladzie kwasu [...] salicylowego[...].
+
+Zasady oceniania
+1 pkt - poprawne napisanie równania reakcji (uzupelnienie schematu).
+
+0 pkt - bldne napisanie równania reakcji (bldne wzory reagentów, bldne wspólczynniki
+
+          stechiometryczne, niewlaciwa forma zapisu) albo brak odpowiedzi.
+
+Poprawna odpowied        COOH           COOH                                       O
+                                   OH           O C CH3 + H3C                  C
+                  O                                  O
+                                                                                  OH
+     H3C C
+                   O+
+
+      H3C C
+                   O
+
+Uwaga: Wzory substratów mog by zapisane w dowolnej kolejnoci.
+           Zapis wzoru bezwodnika octowego w postaci (CH3CO)2O jest poprawny.
+
+Zadanie 37. (0-2)        Wymagania szczególowe
+
+ Wymaganie ogólne        IV etap edukacyjny - poziom rozszerzony
+                         1. Atomy, czsteczki i stechiometria chemiczna. Zdajcy:
+ II. Rozumowanie         1.1) stosuje pojcie mola (w oparciu o liczb Avogadra);
+ i zastosowanie nabytej  1.2) odczytuje w ukladzie okresowym masy atomowe
+ wiedzy do rozwizywania  pierwiastków i na ich podstawie oblicza mas molow
+ problemów.              zwizków chemicznych ([...] organicznych) o podanych
+                         wzorach (lub nazwach);
+                         1.6) wykonuje obliczenia z uwzgldnieniem wydajnoci
+                         reakcji i mola dotyczce: mas substratów i produktów
+                         (stechiometria wzorów i równa chemicznych), objtoci
+                         gazów w warunkach normalnych.
+
+                                                               Strona 31 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zasady oceniania
+2 pkt - zastosowanie poprawnej metody, poprawne wykonanie oblicze oraz podanie wyniku
+
+          w m3.
+1 pkt - zastosowanie poprawnej metody, ale:
+
+          - popelnienie bldów rachunkowych prowadzcych do bldnego wyniku liczbowego
+LUB
+
+          - podanie wyniku z niewlaciw jednostk.
+0 p. - zastosowanie bldnej metody obliczenia albo brak rozwizania.
+
+Uwaga: Naley zwróci uwag na zaleno wyniku liczbowego od przyjtych zaokrgle.
+Za poprawny naley uzna kady wynik bdcy konsekwencj zastosowanej poprawnej
+metody i poprawnych oblicze.
+
+Przykladowe rozwizania
+Rozwizanie I:
+Wydajno procesu
+0,8  0,9 = 0,72
+22,4 10-3 m3 etenu - 0,72  62,5  10-3 kg chlorku winylu
+
+           x m3 etenu -1000 kg chlorku winylu
+x = 497,8 (m3)
+
+Rozwizanie II:
+Liczba moli chlorku winylu
+62,5 g - 1 mol
+1000 103 g - x moli x = 16103 moli
+
+Liczba moli C2H4Cl2 przy 100% wydajnoci procesu = Liczba moli chlorku winylu
+
+x = 16103 moli
+
+Liczba moli C2H4Cl2 z uwzgldnieniem wydajnoci procesu
+
+16103 moli - 90%
+
+x moli - 100%            x = 17,8103 moli
+
+Liczba moli C2H4 przy 100% wydajnoci procesu = Liczba moli C2H4Cl2
+
+x = 17,8103 moli
+
+Liczba moli C2H4 z uwzgldnieniem wydajnoci procesu
+
+17,8103 moli - 80%
+
+x moli - 100%            x = 22,25103 moli
+
+Obliczenie objtoci C2H4
+
+1 mol - 22,4 dm3
+
+22,25103 moli - x dm3                               x = 498,4103 dm3 = 498 (m3)
+
+Strona 32 z 34
+                                         Zasady oceniania rozwiza zada
+
+Zadanie 38. (0-1)
+
+Wymaganie ogólne                   Wymagania szczególowe
+
+II. Rozumowanie                    IV etap edukacyjny - poziom rozszerzony
+i zastosowanie nabytej             10. Hydroksylowe pochodne wglowodorów - alkohole
+wiedzy do rozwizywania             i fenole. Zdajcy:
+problemów.                         10.2) rysuje wzory [...] pólstrukturalne [...] alkoholi
+                                   polihydroksylowych [...].
+                                   12. Kwasy karboksylowe. Zdajcy:
+                                   12.1) [...] rysuje wzory [...] pólstrukturalne izomerycznych
+                                   kwasów karboksylowych [...].
+
+Zasady oceniania
+1 pkt - poprawne narysowanie dwóch wzorów.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied                        Wzór alkoholu
+                       Wzór kwasu
+
+HOOC                               COOH  HO-CH2-CH2-OH
+
+Uwaga: Zapis grupy -COOH jako -HCOO oraz grupy -OH jako -HO jest bldny.
+
+Zadanie 39. (0-1)
+
+Wymaganie ogólne                   Wymaganie szczególowe
+
+I. Wykorzystanie                   IV etap edukacyjny - poziom rozszerzony
+i tworzenie informacji.            14. Zwizki organiczne zawierajce azot. Zdajcy:
+                                   14.14) tworzy wzory [...] peptydów [...], rozpoznaje reszty
+                                   podstawowych aminokwasów [...] w czsteczkach [...]
+                                   peptydów.
+
+Zasady oceniania
+1 pkt - poprawne ustalenie sekwencji i napisanie wzoru pentapeptydu z zastosowaniem
+
+         trzyliterowych kodów aminokwasów.
+
+0 pkt - odpowied niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Gly-Tyr-Leu-Leu-Ser
+
+                                                                         Strona 33 z 34
+Egzamin maturalny z chemii - termin glówny 2020 r.
+
+Zadanie 40. (0-1)
+
+Wymaganie ogólne          Wymagania szczególowe
+
+III. Opanowanie czynnoci  IV etap edukacyjny - poziom rozszerzony
+praktycznych.             14. Zwizki organiczne zawierajce azot. Zdajcy:
+                          14.11) opisuje wlaciwoci kwasowo-zasadowe
+                          aminokwasów [...].
+                          15. Bialka. Zdajcy:
+                          15.4) planuje [...] dowiadczenie [...] (reakcja [...]
+                          ksantoproteinowa).
+
+Zasady oceniania
+1 pkt - poprawne opisanie obserwacji oraz podanie nazwy reakcji.
+
+0 pkt - odpowied niepelna lub niepoprawna albo brak odpowiedzi.
+
+Poprawna odpowied
+Obserwacja: (Po dolaniu stonego kwasu azotowego(V) do stalej próbki pentapeptydu próbka
+
+                 przybiera) ólte zabarwienie.
+Nazwa reakcji: (reakcja) ksantoproteinowa ALBO nitrowanie
+
+Uwaga: Okrelenie typu lub mechanizmu reakcji zamiast podania jej nazwy jest odpowiedzi
+niewystarczajc.
+
+Strona 34 z 34
+
