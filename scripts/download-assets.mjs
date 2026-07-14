@@ -133,7 +133,9 @@ async function main() {
             });
           }
         });
-      } catch(e) {}
+      } catch {
+        // ignore
+      }
     });
 
     // SVG sprite
