@@ -40,41 +40,6 @@ function AccordionGroup({
   );
 }
 
-/* ─── Sub-section accordion ─── */
-function SubAccordion({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) {
-  const [expanded, setExpanded] = useState(false);
-
-  return (
-    <div className="sidebar-subaccordion">
-      <button
-        className="sidebar-subaccordion__trigger"
-        onClick={() => setExpanded(!expanded)}
-        aria-expanded={expanded}
-      >
-        <span>{label}</span>
-        <span className="sidebar-accordion__chevron">
-          {expanded ? "▲" : "▼"}
-        </span>
-      </button>
-      <div
-        className="sidebar-accordion__body"
-        style={{
-          maxHeight: expanded ? "600px" : "0",
-          opacity: expanded ? 1 : 0,
-        }}
-      >
-        <div className="sidebar-accordion__inner">{children}</div>
-      </div>
-    </div>
-  );
-}
-
 /* ─── Nav links ─── */
 const anatomyLinks = [
   { href: "/textbook?domain=osteology", label: "🦴 Osteologia i Artrologia" },
@@ -132,8 +97,7 @@ export function SidebarDrawer({
         <nav className="mobile-drawer__nav">
 
           {/* ─── 🩺 ANATOMIA ─── */}
-          <div className="drawer-section-label">🩺 ANATOMIA — Podręcznik akademicki</div>
-          <AccordionGroup label="8 rozdziałów anatomicznych" defaultExpanded={false}>
+          <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>
             {anatomyLinks.map((l) => (
               <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
@@ -144,39 +108,30 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🌿 BIOLOGIA ─── */}
-          <div className="drawer-section-label">🌿 BIOLOGIA — Matura Formuła 2015</div>
-          <SubAccordion label="Cytologia · Metabolizm · Genetyka">
+          <AccordionGroup label="🌿 BIOLOGIA" defaultExpanded={false}>
             {biologyLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-          </SubAccordion>
-          <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
-            📝 Arkusze CKE — Biologia
-          </Link>
+            <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
+              📝 Arkusze CKE — Biologia
+            </Link>
+          </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🧪 CHEMIA ─── */}
-          <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
-          <SubAccordion label="Chemia nieorganiczna i obliczenia">
-            {chemistryLinks.filter(l => l.label.includes("nieorganiczna") || l.label.includes("atomu") || l.label.includes("Stechiometria")).map((l) => (
+          <AccordionGroup label="🧪 CHEMIA" defaultExpanded={false}>
+            {chemistryLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-          </SubAccordion>
-          <SubAccordion label="Chemia organiczna">
-            {chemistryLinks.filter(l => l.label.includes("organiczna")).map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
-                {l.label}
-              </Link>
-            ))}
-          </SubAccordion>
-          <Link href="/matura/chemia" className="drawer-link" onClick={onClose}>
-            📝 Arkusze CKE — Chemia
-          </Link>
+            <Link href="/matura/chemia" className="drawer-link" onClick={onClose}>
+              📝 Arkusze CKE — Chemia
+            </Link>
+          </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
           <Link href="/" className="drawer-link drawer-link--home" onClick={onClose}>
