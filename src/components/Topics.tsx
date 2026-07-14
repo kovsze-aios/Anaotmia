@@ -4,8 +4,9 @@ const subjectCards = [
   {
     title: "Anatomia",
     subtitle: "Podręcznik akademicki",
-    description:
-      "8 działów anatomicznych — od osteologii po narządy zmysłów. <strong>Pełen zakres egzaminu WF.</strong>",
+    description: (
+      <>8 działów anatomicznych — od osteologii po narządy zmysłów. <strong>Pełen zakres egzaminu WF.</strong></>
+    ),
     href: "/textbook",
     icon: "🩺",
     color: "#3a5062",
@@ -13,8 +14,9 @@ const subjectCards = [
   {
     title: "Biologia",
     subtitle: "Matura Formuła 2015",
-    description:
-      "Cytologia, Metabolizm, Genetyka, Botanika i Fizjologia człowieka. <strong>Teoria + arkusze CKE.</strong>",
+    description: (
+      <>Cytologia, Metabolizm, Genetyka, Botanika i Fizjologia człowieka. <strong>Teoria + arkusze CKE.</strong></>
+    ),
     href: "/theory/biologia",
     icon: "🌿",
     color: "#2e7d32",
@@ -22,8 +24,9 @@ const subjectCards = [
   {
     title: "Chemia",
     subtitle: "Matura Formuła 2015",
-    description:
-      "Chemia nieorganiczna i organiczna. <strong>Stechiometria, reakcje, arkusze CKE.</strong>",
+    description: (
+      <>Chemia nieorganiczna i organiczna. <strong>Stechiometria, reakcje, arkusze CKE.</strong></>
+    ),
     href: "/theory/chemia",
     icon: "🧪",
     color: "#6a1b9a",
@@ -33,64 +36,72 @@ const subjectCards = [
 const anatomyTopics = [
   {
     title: "Osteologia i Artrologia",
-    description:
-      "Kości, stawy i więzadła — budowa szkieletu, klasyfikacja stawów, mechanika ruchu. <strong>Podstawa egzaminu WF.</strong>",
+    description: (
+      <>Kości, stawy i więzadła — budowa szkieletu, klasyfikacja stawów, mechanika ruchu. <strong>Podstawa egzaminu WF.</strong></>
+    ),
     domain: "osteology",
     icon: "🦴",
     color: "#4a90d9",
   },
   {
     title: "Miologia",
-    description:
-      "Mięśnie, przyczepy, unerwienie i funkcje. <strong>Kluczowe grupy mięśniowe</strong> wymagane na egzaminie z anatomii.",
+    description: (
+      <>Mięśnie, przyczepy, unerwienie i funkcje. <strong>Kluczowe grupy mięśniowe</strong> wymagane na egzaminie z anatomii.</>
+    ),
     domain: "myology",
     icon: "💪",
     color: "#e74c3c",
   },
   {
     title: "Układ Nerwowy",
-    description:
-      "Ośrodkowy i obwodowy układ nerwowy, drogi nerwowe, nerwy czaszkowe. <strong>Najczęściej egzaminowany dział.</strong>",
+    description: (
+      <>Ośrodkowy i obwodowy układ nerwowy, drogi nerwowe, nerwy czaszkowe. <strong>Najczęściej egzaminowany dział.</strong></>
+    ),
     domain: "nervous",
     icon: "🧠",
     color: "#2ecc71",
   },
   {
     title: "Układ Endokrynny",
-    description:
-      "Gruczoły dokrewne, hormony i ich działanie. <strong>Przyswój mechanizmy regulacji</strong> — częste pytania egzaminacyjne.",
+    description: (
+      <>Gruczoły dokrewne, hormony i ich działanie. <strong>Przyswój mechanizmy regulacji</strong> — częste pytania egzaminacyjne.</>
+    ),
     domain: "endocrine",
     icon: "🔬",
     color: "#9b59b6",
   },
   {
     title: "Układ Krążenia i Oddechowy",
-    description:
-      "Serce, naczynia krwionośne, płuca i drogi oddechowe. <strong>Anatomia funkcjonalna</strong> dwóch powiązanych układów.",
+    description: (
+      <>Serce, naczynia krwionośne, płuca i drogi oddechowe. <strong>Anatomia funkcjonalna</strong> dwóch powiązanych układów.</>
+    ),
     domain: "cardiovascular-respiratory",
     icon: "❤️",
     color: "#f39c12",
   },
   {
     title: "Układ Pokarmowy",
-    description:
-      "Od jamy ustnej po odbytnicę — <strong>budowa i funkcja</strong> przewodu pokarmowego i gruczołów trawiennych.",
+    description: (
+      <>Od jamy ustnej po odbytnicę — <strong>budowa i funkcja</strong> przewodu pokarmowego i gruczołów trawiennych.</>
+    ),
     domain: "digestive",
     icon: "🍽️",
     color: "#1abc9c",
   },
   {
     title: "Układ Moczowo-Płciowy",
-    description:
-      "Nerki, drogi moczowe, narządy rozrodcze. <strong>Pytania WF</strong> często łączą anatomię z fizjologią tych układów.",
+    description: (
+      <>Nerki, drogi moczowe, narządy rozrodcze. <strong>Pytania WF</strong> często łączą anatomię z fizjologią tych układów.</>
+    ),
     domain: "urinary-reproductive",
     icon: "🫘",
     color: "#e67e22",
   },
   {
     title: "Narządy Zmysłów",
-    description:
-      "Oko, ucho, skóra — <strong>budowa receptorów</strong> i dróg przewodzenia. Ostatni, ale równie ważny dział.",
+    description: (
+      <>Oko, ucho, skóra — <strong>budowa receptorów</strong> i dróg przewodzenia. Ostatni, ale równie ważny dział.</>
+    ),
     domain: "sensory",
     icon: "👁️",
     color: "#3498db",
@@ -123,10 +134,9 @@ export function Topics() {
             <div className="subject-card__content">
               <div className="subject-card__subtitle">{card.subtitle}</div>
               <div className="subject-card__title">{card.title}</div>
-              <div
-                className="subject-card__desc"
-                dangerouslySetInnerHTML={{ __html: card.description }}
-              />
+              <div className="subject-card__desc">
+                {card.description}
+              </div>
               <div className="subject-card__cta">Przejdź do przedmiotu →</div>
             </div>
           </Link>
@@ -165,10 +175,9 @@ export function Topics() {
             </div>
             <div className="topicbox__content">
               <div className="topicbox__title">{topic.title}</div>
-              <div
-                className="topicbox__description"
-                dangerouslySetInnerHTML={{ __html: topic.description }}
-              />
+              <div className="topicbox__description">
+                {topic.description}
+              </div>
               <div className="topicbox__cta">Przejdź do działu →</div>
             </div>
           </Link>
