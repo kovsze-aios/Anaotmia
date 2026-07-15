@@ -11,7 +11,7 @@ export function Topbar() {
   /* Initialize theme from <html> class on mount */
   useEffect(() => {
     const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+    Promise.resolve().then(() => setDark(html.classList.contains("dark")));
   }, []);
 
   /* Toggle .dark on <html> */

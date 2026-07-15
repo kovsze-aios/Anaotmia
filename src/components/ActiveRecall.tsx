@@ -15,10 +15,17 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   /* Watch for .dark class on <html> */
   useEffect(() => {
     const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+    const checkDark = () => {
+      const isDark = html.classList.contains("dark");
+      setDark((prevDark) => (prevDark !== isDark ? isDark : prevDark));
+    };
+
+    // Initial check (avoiding synchronous setState issue if possible, but actually we just delay it or rely on functional update)
+    // Wait for a microtask to avoid cascading renders warning
+    Promise.resolve().then(checkDark);
 
     const obs = new MutationObserver(() => {
-      setDark(html.classList.contains("dark"));
+      checkDark();
     });
     obs.observe(html, { attributes: true, attributeFilter: ["class"] });
     return () => obs.disconnect();

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import { getBiologiaRecords } from "@/data/biologia";
 
@@ -10,17 +10,16 @@ export default function MaturaBiologiaPage() {
   const [filterTopic, setFilterTopic] = useState<string | null>(null);
 
   const currentRecord = records.find((r) => r.year === selectedYear);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const questions = useMemo(() => currentRecord?.questions ?? [], [currentRecord?.year]);
+  const questions = currentRecord?.questions ?? [];
 
   const filtered = filterTopic
     ? questions.filter((q) => q.topicCategory === filterTopic)
     : questions;
 
-  const topics = useMemo(
-    () => [...new Set(questions.map((q) => q.topicCategory))],
-    [questions]
-  );
+  // React compiler complains about manual memoization with currentRecord.
+  // Instead of using useMemo, let the compiler do it (React 19 compiler handles it).
+  // We can just define topics inline since the compiler optimizes arrays and sets automatically.
+  const topics = [...new Set(questions.map((q) => q.topicCategory))];
 
   return (
     <div className="matura-layout">

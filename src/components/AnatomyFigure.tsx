@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface AnatomyFigureProps {
   src: string;
   caption: string;
@@ -10,19 +12,18 @@ export function AnatomyFigure({
   src,
   caption,
   source,
-  width,
   height,
 }: AnatomyFigureProps) {
   return (
     <figure className="anatomy-figure">
-      <div className="anatomy-figure__image-wrapper">
-        <img
+      <div className="anatomy-figure__image-wrapper relative" style={{ minHeight: height ? `${height}px` : "300px" }}>
+        <Image
           src={src}
           alt={caption}
-          width={width}
-          height={height}
+          fill
+          style={{ objectFit: 'contain' }}
           className="anatomy-figure__image"
-          loading="lazy"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <figcaption className="anatomy-figure__caption">
