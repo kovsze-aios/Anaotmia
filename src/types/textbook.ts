@@ -46,6 +46,7 @@ export interface TextbookSection {
   title: string;
   summary?: string;
   academic_detail?: string;
+  academic_sources?: { author: string; content: ContentBlock[] }[];
   content: ContentBlock[];
   recallQuestions: RecallQuestion[];
 }

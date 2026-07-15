@@ -100,7 +100,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "summary": "- Atomy łączą się w cząsteczki, osiągając **trwałą** __________ gazu szlachetnego (oktet — 8 elektronów walencyjnych, dla wodoru dublet — 2).\n- Wiązanie jonowe powstaje **przez** __________ przyciąganie się kationów i anionów (różnica elektroujemności ΔEN > 1,7 w skali Paulinga).\n- Metale (mała EN) **oddają** __________ → kationy, niemetale (duża EN) przyjmują elektrony → aniony.\n- Związki jonowe tworzą sieci krystaliczne, mają wysokie temperatury topnienia i wrzenia, przewodzą prąd po stopieniu lub rozpuszczeniu, są kruche i rozpuszczalne **w** __________ polarnych."
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-1",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -108,7 +108,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-2",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -199,7 +199,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-3",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -207,7 +207,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-4",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -334,7 +334,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-5",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -342,7 +342,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-6",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -500,7 +500,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-7",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -508,7 +508,7 @@ export const chemiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-8",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
