@@ -33,7 +33,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run typecheck && npm run build",
-    "test": "jest && vitest run"
+    "test": "vitest run"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
