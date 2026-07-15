@@ -41,11 +41,17 @@ export type ContentBlock =
   | ContentBlockList
   | ContentBlockTable;
 
+export interface AcademicSource {
+  title: string;
+  content: string;
+}
+
 export interface TextbookSection {
   id: string;
   title: string;
   summary?: string;
   academic_detail?: string;
+  academic_sources?: AcademicSource[];
   content: ContentBlock[];
   recallQuestions: RecallQuestion[];
 }
