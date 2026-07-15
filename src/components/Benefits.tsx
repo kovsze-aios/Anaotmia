@@ -1,6 +1,34 @@
 import { CheckIcon } from "./icons";
 import Image from "next/image";
 
+const row1Benefits = [
+  "1000s of high quality anatomy illustrations",
+  "1000s of detailed anatomy articles",
+  "High-quality videos created by anatomy experts",
+  "Reviewed by expert medical professionals",
+];
+
+const row2Benefits = [
+  {
+    title: "Practice at your level",
+    description: "100s of beginner to advanced quizzes",
+  },
+  {
+    title: "Fix your weak spots fast",
+    description: "Spaced repetition quizzes train your memory",
+  },
+  {
+    title: "Study only what matters",
+    description: "Create custom quizzes tailored to your exam needs",
+  },
+];
+
+const row3Benefits = [
+  "1000s of videos, articles, and quizzes all in one place",
+  "Seamlessly switch between phone, tablet, or computer",
+  "Downloadable resources for offline studying",
+];
+
 export function Benefits() {
   return (
     <section className="benefits">
@@ -18,60 +46,51 @@ export function Benefits() {
         <div className="text">
           <h2>Spend less time studying</h2>
           <ul className="benefits__list">
-            <li>
-              <div className="circle circle--half-medium green"></div>
-              <span>
-                Complex topics broken down into easy-to-digest chunks
-              </span>
-            </li>
-            <li>
-              <div className="circle circle--half-medium green"></div>
-              <span>
-                Active recall questions to reinforce your understanding
-              </span>
-            </li>
-            <li>
-              <div className="circle circle--half-medium green"></div>
-              <span>
-                Spaced repetition to make knowledge stick long-term
-              </span>
-            </li>
+            {row1Benefits.map((benefit, i) => (
+              <li key={i}>
+                <div className="circle circle--half-medium green">
+                  <CheckIcon width={10} height={10} />
+                </div>
+                {benefit}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
-      {/* Row 2: Trusted by future medical professionals */}
-      <div className="benefits__row benefits__row--reverse">
-        <div className="image">
-          <Image
-            src="/images/home_cta-bg.webp"
-            alt="Medical students studying"
-            width={544}
-            height={480}
-          />
-        </div>
-        <div className="text">
-          <h2>Trusted by future medical professionals</h2>
-          <ul className="benefits__list">
-            <li>
-              <div className="circle circle--half-medium blue"></div>
-              <span>
-                Used by students at top medical universities worldwide
-              </span>
-            </li>
-            <li>
-              <div className="circle circle--half-medium blue"></div>
-              <span>
-                Content aligned with standard medical curricula
-              </span>
-            </li>
-            <li>
-              <div className="circle circle--half-medium blue"></div>
-              <span>
-                Continuously updated to reflect latest medical knowledge
-              </span>
-            </li>
-          </ul>
+      {/* Row 2: Test yourself */}
+      <div className="benefits__row benefits__row--feature">
+        <div className="content">
+          <div
+            className="video"
+            style={{
+              backgroundImage:
+                "url(/images/index_header_background-08c9bf24.jpg)",
+            }}
+          >
+            <div className="video-play-overlay">
+              <div className="video-play-overlay__icon" />
+            </div>
+          </div>
+          <div className="text">
+            <h2>Test yourself</h2>
+            <div className="subtitle">
+              Build your confidence and get exam-ready
+            </div>
+            <ul className="benefits__list">
+              {row2Benefits.map((benefit, i) => (
+                <li key={i}>
+                  <div className="circle circle--half-medium green">
+                    <CheckIcon width={10} height={10} />
+                  </div>
+                  <div>
+                    <div className="green">{benefit.title}</div>
+                    {benefit.description}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -89,18 +108,14 @@ export function Benefits() {
         <div className="text">
           <h2>Learn anywhere, anytime</h2>
           <ul className="benefits__list">
-            <li>
-              <div className="circle circle--half-medium green"></div>
-              <span>Available on desktop, tablet, and mobile</span>
-            </li>
-            <li>
-              <div className="circle circle--half-medium green"></div>
-              <span>Offline access to all study materials</span>
-            </li>
-            <li>
-              <div className="circle circle--half-medium green"></div>
-              <span>Sync your progress across all devices</span>
-            </li>
+            {row3Benefits.map((benefit, i) => (
+              <li key={i}>
+                <div className="circle circle--half-medium green">
+                  <CheckIcon width={10} height={10} />
+                </div>
+                {benefit}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
