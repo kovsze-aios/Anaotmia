@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useTheme } from "@/hooks/useTheme";
 
 interface ActiveRecallProps {
   question: string;
@@ -11,7 +10,6 @@ interface ActiveRecallProps {
 
 export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   const [revealed, setRevealed] = useState(false);
-  const { dark } = useTheme();
 
   /* Transform fill-in-the-blank gaps */
   const renderQuestion = (text: string) => {
@@ -32,22 +30,11 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
     });
   };
 
-  /* Theme-aware answer box styles */
-  const answerBoxClass = dark
-    ? "bg-white text-black font-mono border border-zinc-200"
-    : "bg-zinc-950 text-zinc-100 font-mono border border-zinc-800";
-
-  const answerLabelClass = dark
-    ? "text-black"
-    : "text-zinc-100";
-
-  const answerTextClass = dark
-    ? "text-black"
-    : "text-zinc-100";
-
-  const examRefClass = dark
-    ? "text-zinc-600 border-zinc-300"
-    : "text-zinc-800 border-zinc-600";
+  /* Theme-aware answer box styles using Tailwind dark: variants */
+  const answerBoxClass = "font-mono bg-zinc-900 text-zinc-100 dark:bg-white dark:text-black";
+  const answerLabelClass = "text-zinc-100 dark:text-black";
+  const answerTextClass = "text-zinc-100 dark:text-black";
+  const examRefClass = "text-zinc-400 border-zinc-600 dark:text-zinc-600 dark:border-zinc-300";
 
   return (
     <div
