@@ -42,7 +42,6 @@ export function Topbar() {
               <span className="hidden sm:inline">Wsprzyj projekt</span>
             </a>
 
-            {/* Sliding animated theme toggle */}
             <button
               onClick={toggleTheme}
               className="relative inline-flex h-7 w-14 items-center rounded-full bg-zinc-200 dark:bg-zinc-800 p-1 cursor-pointer transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
