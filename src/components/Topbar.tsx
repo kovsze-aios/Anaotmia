@@ -1,30 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { SidebarDrawer } from "./Sidebar";
+import { useTheme } from "@/hooks/useTheme";
 
 export function Topbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [dark, setDark] = useState(false);
-
-  /* Initialize theme from <html> class on mount */
-  useEffect(() => {
-    const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
-  }, []);
-
-  /* Toggle .dark on <html> */
-  const toggleTheme = () => {
-    const html = document.documentElement;
-    const next = !html.classList.contains("dark");
-    if (next) {
-      html.classList.add("dark");
-    } else {
-      html.classList.remove("dark");
-    }
-    setDark(next);
-  };
+  const { dark, toggleTheme } = useTheme();
 
   return (
     <>
