@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import { getChemiaRecords } from "@/data/chemia";
 
@@ -9,14 +9,23 @@ export default function MaturaChemiaPage() {
   const [selectedYear, setSelectedYear] = useState(2016);
   const [filterTopic, setFilterTopic] = useState<string | null>(null);
 
-  const currentRecord = records.find((r) => r.year === selectedYear);
-  const questions = currentRecord?.questions ?? [];
+  const currentRecord = useMemo(
+    () => records.find((r) => r.year === selectedYear),
+    [records, selectedYear]
+  );
+  const questions = useMemo(
+    () => currentRecord?.questions ?? [],
+    [currentRecord]
+  );
 
   const filtered = filterTopic
     ? questions.filter((q) => q.topicCategory === filterTopic)
     : questions;
 
-  const topics = [...new Set(questions.map((q) => q.topicCategory))];
+  const topics = useMemo(
+    () => [...new Set(questions.map((q) => q.topicCategory))],
+    [questions]
+  );
 
   return (
     <div className="matura-layout">
