@@ -7,7 +7,7 @@ export function useTheme() {
 
   useEffect(() => {
     const html = document.documentElement;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+
     setDark(html.classList.contains("dark"));
 
     const obs = new MutationObserver(() => {
