@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { SidebarDrawer } from "./Sidebar";
 import { useTheme } from "@/hooks/useTheme";
+import { GlobalSearch } from "./GlobalSearch";
 
 export function Topbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,7 +28,8 @@ export function Topbar() {
             <span className="logo-text">Medycyna</span>
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="ml-auto flex items-center gap-2">
+            <GlobalSearch />
             <a
               href="https://buycoff.ee/"
               target="_blank"
