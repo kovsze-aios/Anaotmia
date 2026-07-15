@@ -27,15 +27,28 @@ export function Topbar() {
             <span className="logo-text">Medycyna</span>
           </Link>
 
-          {/* Premium text-only theme toggle */}
-          <button
-            onClick={toggleTheme}
-            className="theme-pill rounded-full border border-current px-4 py-1 text-xs font-bold tracking-widest uppercase transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
-            aria-label={dark ? "Przełącz na tryb jasny" : "Przełącz na tryb ciemny"}
-            title={dark ? "Tryb jasny" : "Tryb NOIR"}
-          >
-            {dark ? "JASNY" : "NOIR"}
-          </button>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://buycoff.ee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-pill rounded-full border border-zinc-200 text-zinc-800 hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 px-4 py-1 text-xs font-bold transition-colors flex items-center gap-1"
+              title="Kup mi kawę"
+            >
+              <span>☕</span>
+              <span className="hidden sm:inline">Wsprzyj projekt</span>
+            </a>
+
+            {/* Premium text-only theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="theme-pill rounded-full border border-current px-4 py-1 text-xs font-bold tracking-widest uppercase transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
+              aria-label={dark ? "Przełącz na tryb jasny" : "Przełącz na tryb ciemny"}
+              title={dark ? "Tryb jasny" : "Tryb NOIR"}
+            >
+              {dark ? "JASNY" : "NOIR"}
+            </button>
+          </div>
         </div>
       </div>
 

@@ -11,16 +11,6 @@ export function Footer() {
     <footer className="footer-minimal">
       <div className="l-container">
         <div className="footer-minimal__inner">
-          {/* Buy me a coffee button */}
-          <a
-            href="#"
-            className="footer-minimal__coffee-btn"
-            title="Postaw kawę"
-          >
-            <span className="footer-minimal__coffee-icon">☕</span>
-            Kup mi kawę
-          </a>
-
           {/* Social icons row */}
           <div className="footer-minimal__socials">
             {socialLinks.map((social) => {
