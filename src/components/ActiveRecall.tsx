@@ -15,9 +15,11 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   /* Watch for .dark class on <html> */
   useEffect(() => {
     const html = document.documentElement;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(html.classList.contains("dark"));
 
     const obs = new MutationObserver(() => {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDark(html.classList.contains("dark"));
     });
     obs.observe(html, { attributes: true, attributeFilter: ["class"] });
