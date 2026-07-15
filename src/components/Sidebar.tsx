@@ -96,6 +96,9 @@ const chemistryLinks = chemiaTheory.map((domain) => ({
   label: `${domain.icon} ${domain.title}`,
 }));
 
+const chemistryInorganicLinks = chemistryLinks.filter(l => l.label.includes("nieorganiczna") || l.label.includes("atomu") || l.label.includes("Stechiometria"));
+const chemistryOrganicLinks = chemistryLinks.filter(l => l.label.includes("organiczna"));
+
 /* ─── Mobile drawer ─── */
 export function SidebarDrawer({
   open,
@@ -155,15 +158,15 @@ export function SidebarDrawer({
           {/* ─── 🧪 CHEMIA ─── */}
           <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
           <SubAccordion label="Chemia nieorganiczna i obliczenia">
-            {chemistryLinks.filter(l => l.id !== "organiczna").map((l) => (
-              <Link key={l.id} href={l.href} className="drawer-link" onClick={onClose}>
+            {chemistryInorganicLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
           <SubAccordion label="Chemia organiczna">
-            {chemistryLinks.filter(l => l.id === "organiczna").map((l) => (
-              <Link key={l.id} href={l.href} className="drawer-link" onClick={onClose}>
+            {chemistryOrganicLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}

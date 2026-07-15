@@ -175,13 +175,13 @@ export function Topics() {
             </div>
             <div className="topicbox__content">
               <div className="topicbox__title">{topic.title}</div>
-<<<<<<< HEAD
-              <div className="topicbox__description">{topic.description}</div>
-=======
-              <div className="topicbox__description">
               <div className="topicbox__description">
                 {topic.description}
               </div>
+              <div className="topicbox__cta">Przejdź do działu →</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

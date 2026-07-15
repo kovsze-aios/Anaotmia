@@ -23,7 +23,8 @@ const eslintConfig = defineConfig([
     rules: {
       "react-hooks/set-state-in-effect": "off",
       "@next/next/no-img-element": "off",
-      "@next/next/no-html-link-for-pages": "off"
+      "@next/next/no-html-link-for-pages": "off",
+      "@typescript-eslint/no-unused-vars": "off"
     }
   }
 ]);

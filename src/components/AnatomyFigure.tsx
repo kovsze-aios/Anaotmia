@@ -26,7 +26,6 @@ export function AnatomyFigure({
           width={width || 800}
           height={height || 600}
           className="anatomy-figure__image"
-          loading="lazy"
         />
       </div>
       <figcaption className="anatomy-figure__caption">
