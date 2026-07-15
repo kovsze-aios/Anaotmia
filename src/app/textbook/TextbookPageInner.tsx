@@ -7,17 +7,6 @@ import { TextbookContent } from "@/components/TextbookContent";
 import { getDomains, getDomain } from "@/data/textbook";
 import type { TextbookSection } from "@/types/textbook";
 
-const domainGridItems = [
-  { id: "osteology", label: "🦴 Osteologia i Artrologia" },
-  { id: "myology", label: "💪 Miologia (Układ Mięśniowy)" },
-  { id: "nervous", label: "🧠 Układ Nerwowy" },
-  { id: "endocrine", label: "🔬 Układ Dokrewny" },
-  { id: "cardiovascular-respiratory", label: "❤️ Układ Krążenia i Oddechowy" },
-  { id: "digestive", label: "🍇 Układ Pokarmowy" },
-  { id: "urinary-reproductive", label: "🫘 Układ Moczowo-Płciowy" },
-  { id: "sensory", label: "👁️ Narządy Zmysłów" },
-];
-
 export function TextbookPageInner() {
   const domains = getDomains();
   const searchParams = useSearchParams();
@@ -81,13 +70,13 @@ export function TextbookPageInner() {
             <h2>Zakres Materiału Egzaminacyjnego</h2>
             <p>Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:</p>
             <div className="textbook-welcome__domain-grid">
-              {domainGridItems.map((item) => (
+              {domains.map((domain) => (
                 <button
-                  key={item.id}
+                  key={domain.id}
                   className="textbook-welcome__domain-btn"
-                  onClick={() => handleDomainClick(item.id)}
+                  onClick={() => handleDomainClick(domain.id)}
                 >
-                  {item.label}
+                  {domain.icon} {domain.title}
                 </button>
               ))}
             </div>
