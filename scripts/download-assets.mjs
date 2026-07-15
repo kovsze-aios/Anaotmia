@@ -133,7 +133,10 @@ async function main() {
             });
           }
         });
-      } catch(e) { console.log("Failed to process stylesheet", e); }
+      } catch(e) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const ignored = e;
+      }
     });
 
     // SVG sprite

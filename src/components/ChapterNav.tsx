@@ -52,6 +52,7 @@ export function ChapterNav({
                 : ""
             }`}
             onClick={() => toggleDomain(domain.id)}
+            aria-expanded={expandedDomains.has(domain.id)}
           >
             <span>
               {domain.icon && (
