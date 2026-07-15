@@ -35,7 +35,6 @@ export function TextbookPageInner() {
         const first = domain.sections[0];
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setActiveSectionId(first.id);
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setActiveSection(first);
       }
     }
