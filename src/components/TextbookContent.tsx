@@ -3,10 +3,47 @@
 import React from "react";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
-import type { TextbookSection } from "@/types/textbook";
+import type { TextbookSection, ContentBlock } from "@/types/textbook";
 
 interface TextbookContentProps {
   section: TextbookSection;
+}
+
+
+function ContentBlockRenderer({ block }: { block: ContentBlock }) {
+  switch (block.type) {
+    case "paragraph":
+      return <p className="textbook-paragraph">{block.text}</p>;
+    case "heading": {
+      const Tag = `h${block.level}` as keyof React.JSX.IntrinsicElements;
+      return <Tag className={`textbook-heading h${block.level}`}>{block.text}</Tag>;
+    }
+    case "list":
+      return (
+        <ul className="textbook-list">
+          {block.items.map((item, i) => <li key={i}>{item}</li>)}
+        </ul>
+      );
+    case "table":
+      return (
+        <div className="textbook-table-wrapper">
+          <table className="textbook-table">
+            {block.headers.length > 0 && (
+              <thead><tr>{block.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
+            )}
+            <tbody>
+              {block.rows.map((row, i) => (
+                <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    case "image":
+      return <AnatomyFigure src={block.src} caption={block.caption} source={block.source} />;
+    default:
+      return null;
+  }
 }
 
 export function TextbookContent({ section }: TextbookContentProps) {
@@ -33,49 +70,32 @@ export function TextbookContent({ section }: TextbookContentProps) {
       </div>
 
       <div className="deep-theory-section border-t border-zinc-100 dark:border-zinc-800 pt-6">
-        <details className="group">
-          <summary className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none">
-            Rozwiń pełny opis akademicki (Bochenek/Lewiński)
-            <span className="transition group-open:rotate-180">▼</span>
-          </summary>
-          <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
-            {section.content.map((block, index) => {
-              switch (block.type) {
-                case "paragraph":
-                  return <p key={index} className="textbook-paragraph">{block.text}</p>;
-                case "heading": {
-                  const Tag = `h${block.level}` as keyof React.JSX.IntrinsicElements;
-                  return <Tag key={index} className={`textbook-heading h${block.level}`}>{block.text}</Tag>;
-                }
-                case "list":
-                  return (
-                    <ul key={index} className="textbook-list">
-                      {block.items.map((item, i) => <li key={i}>{item}</li>)}
-                    </ul>
-                  );
-                case "table":
-                  return (
-                    <div key={index} className="textbook-table-wrapper">
-                      <table className="textbook-table">
-                        {block.headers.length > 0 && (
-                          <thead><tr>{block.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
-                        )}
-                        <tbody>
-                          {block.rows.map((row, i) => (
-                            <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  );
-                case "image":
-                  return <AnatomyFigure key={index} src={block.src} caption={block.caption} source={block.source} />;
-                default:
-                  return null;
-              }
-            })}
+        {(!section.academic_sources || section.academic_sources.length <= 1) ? (
+          <div>
+            <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
+            <div className="prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
+              {(section.academic_sources?.length === 1 ? section.academic_sources[0].content : section.content).map((block, index) => (
+                <ContentBlockRenderer key={index} block={block} />
+              ))}
+            </div>
           </div>
-        </details>
+        ) : (
+          <div className="flex flex-col gap-4">
+            {section.academic_sources.map((source, idx) => (
+              <details key={idx} className="group">
+                <summary className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none">
+                  {`Rozwiń pełny opis akademicki (${source.author})`}
+                  <span className="transition group-open:rotate-180">▼</span>
+                </summary>
+                <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
+                  {source.content.map((block, index) => (
+                    <ContentBlockRenderer key={index} block={block} />
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+        )}
       </div>
     </article>
   );

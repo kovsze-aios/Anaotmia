@@ -187,7 +187,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "summary": "- Podział komórki jest kluczowym **procesem** __________ wzrost, regenerację i rozmnażanie organizmów.\n- W **organizmach** __________ podział to rozmnażanie, w wielokomórkowych — wzrost i odnowa tkanek.\n- Cykl komórkowy składa się z interfazy (G1 — wzrost i synteza białek, S — replikacja DNA każda cząsteczka DNA tworzy dwie chromatydy siostrzane połączone w centromerze, G2 ****— __________ do podziału, synteza tubuliny) oraz fazy M (kariokineza + cytokineza).\n- Mitoza to podział jądra komórkowego prowadzący do powstania **dwóch** __________ jąder potomnych o liczbie chromosomów 2n (diploidalnej)."
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-1",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -195,7 +195,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-2",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -429,7 +429,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-3",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -437,7 +437,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-4",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -616,7 +616,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-5",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -624,7 +624,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-6",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -727,7 +727,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-7",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -735,7 +735,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-8",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -808,7 +808,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-9",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
@@ -816,7 +816,7 @@ export const biologiaTheory: TextbookDomain[] = [
         "recallQuestions": []
       },
       {
-        "id": "cke-questions-grouped",
+        "id": "cke-questions-grouped-10",
         "title": "Pytania Maturalne CKE",
         "summary": "- Zbiorcze zestawienie pytań maturalnych **CKE** dla tego działu.\n- Przeznaczone do ułatwienia powtórki przed __________.",
         "academic_detail": "Pytania zostały zgrupowane ze wszystkich podsekcji dla łatwiejszej powtórki do matury z biologii i chemii.",
