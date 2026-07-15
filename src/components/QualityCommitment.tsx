@@ -7,12 +7,13 @@ export function QualityCommitment() {
       <h2>Our commitment to quality</h2>
       <div className="quality">
         <div className="quality__item">
-          <div className="quality__img">
+          <div className="quality__img relative" style={{ height: "100px", width: "100px" }}>
             <Image
               src="/images/research.webp"
               alt=""
-              width={100}
-              height={100}
+              fill
+              style={{ objectFit: "contain" }}
+              sizes="100px"
             />
           </div>
           <p className="quality__desc">
@@ -20,12 +21,13 @@ export function QualityCommitment() {
           </p>
         </div>
         <div className="quality__item">
-          <div className="quality__img">
+          <div className="quality__img relative" style={{ height: "100px", width: "100px" }}>
             <Image
               src="/images/reviewed.webp"
               alt=""
-              width={100}
-              height={100}
+              fill
+              style={{ objectFit: "contain" }}
+              sizes="100px"
             />
           </div>
           <p className="quality__desc">
@@ -33,8 +35,14 @@ export function QualityCommitment() {
           </p>
         </div>
         <div className="quality__item">
-          <div className="quality__img">
-            <Image src="/images/trophy.webp" alt="" width={100} height={100} />
+          <div className="quality__img relative" style={{ height: "100px", width: "100px" }}>
+            <Image
+              src="/images/trophy.webp"
+              alt=""
+              fill
+              style={{ objectFit: "contain" }}
+              sizes="100px"
+            />
           </div>
           <p className="quality__desc">
             Supporting 7,166,018 students worldwide

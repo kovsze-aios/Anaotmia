@@ -134,7 +134,7 @@ async function main() {
           }
         });
       } catch {
-        // Ignore font loading errors
+        // ignore
       }
     });
 

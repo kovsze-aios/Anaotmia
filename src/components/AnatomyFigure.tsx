@@ -8,24 +8,28 @@ interface AnatomyFigureProps {
   height?: number;
 }
 
-import Image from "next/image";
-
 export function AnatomyFigure({
   src,
   caption,
   source,
-  width = 800,
-  height = 600,
+  width,
+  height,
 }: AnatomyFigureProps) {
+  const minHeight = height ? `${height}px` : "300px";
+
   return (
     <figure className="anatomy-figure">
-      <div className="anatomy-figure__image-wrapper">
+      <div
+        className="anatomy-figure__image-wrapper relative"
+        style={{ minHeight }}
+      >
         <Image
           src={src}
           alt={caption}
-          width={width || 800}
-          height={height || 600}
+          fill
+          style={{ objectFit: "contain" }}
           className="anatomy-figure__image"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <figcaption className="anatomy-figure__caption">

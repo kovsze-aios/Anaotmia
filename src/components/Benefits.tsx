@@ -6,12 +6,13 @@ export function Benefits() {
     <section className="benefits">
       {/* Row 1: Spend less time studying */}
       <div className="benefits__row benefits__row--equal">
-        <div className="image">
+        <div className="image relative" style={{ minHeight: "360px", minWidth: "320px" }}>
           <Image
             src="/images/home_face-7897ee9d.jpg"
             alt="Student studying anatomy"
-            width={320}
-            height={360}
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="(max-width: 768px) 100vw, 320px"
           />
         </div>
         <div className="text">
@@ -76,12 +77,13 @@ export function Benefits() {
 
       {/* Row 3: Learn anywhere, anytime */}
       <div className="benefits__row benefits__row--equal">
-        <div className="image">
+        <div className="image relative" style={{ minHeight: "236px", minWidth: "382px" }}>
           <Image
             src="/images/home_devices.webp"
             alt="Kenhub on multiple devices"
-            width={382}
-            height={236}
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="(max-width: 768px) 100vw, 382px"
           />
         </div>
         <div className="text">

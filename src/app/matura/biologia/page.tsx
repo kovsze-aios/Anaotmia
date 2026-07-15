@@ -16,6 +16,9 @@ export default function MaturaBiologiaPage() {
     ? questions.filter((q) => q.topicCategory === filterTopic)
     : questions;
 
+  // React compiler complains about manual memoization with currentRecord.
+  // Instead of using useMemo, let the compiler do it (React 19 compiler handles it).
+  // We can just define topics inline since the compiler optimizes arrays and sets automatically.
   const topics = [...new Set(questions.map((q) => q.topicCategory))];
 
   return (

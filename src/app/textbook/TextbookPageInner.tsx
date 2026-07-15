@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { TextbookLayout } from "@/components/TextbookLayout";
 import { TextbookContent } from "@/components/TextbookContent";
@@ -10,23 +10,27 @@ import type { TextbookSection } from "@/types/textbook";
 export function TextbookPageInner() {
   const domains = getDomains();
   const searchParams = useSearchParams();
-  const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
-  const [activeSection, setActiveSection] = useState<TextbookSection | null>(
-    null,
-  );
+  const initialDomainParam = searchParams.get("domain");
 
-  // Auto-select first section of domain from query param
-  useEffect(() => {
-    const domainParam = searchParams.get("domain");
-    if (domainParam) {
-      const domain = getDomain(domainParam);
+  const [activeSectionId, setActiveSectionId] = useState<string | null>(() => {
+    if (initialDomainParam) {
+      const domain = getDomain(initialDomainParam);
       if (domain && domain.sections.length > 0) {
-        const first = domain.sections[0];
-        setActiveSectionId((prev) => (prev === first.id ? prev : first.id));
-        setActiveSection((prev) => (prev?.id === first.id ? prev : first));
+        return domain.sections[0].id;
       }
     }
-  }, [searchParams]);
+    return null;
+  });
+
+  const [activeSection, setActiveSection] = useState<TextbookSection | null>(() => {
+    if (initialDomainParam) {
+      const domain = getDomain(initialDomainParam);
+      if (domain && domain.sections.length > 0) {
+        return domain.sections[0];
+      }
+    }
+    return null;
+  });
 
   const handleSectionSelect = useCallback(
     (domainId: string, sectionId: string) => {
