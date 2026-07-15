@@ -1,0 +1,82 @@
+ WARN  Unsupported engine: wanted: {"node":">=24"} (current: {"node":"v22.22.1","pnpm":"10.30.3"})
+
+> ai-website-clone-template@0.3.1 lint /app
+> eslint
+
+
+/app/scripts/download-assets.mjs
+  136:15  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/textbook/TextbookPageInner.tsx
+  36:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/app/src/app/textbook/TextbookPageInner.tsx:36:9
+  34 |       if (domain && domain.sections.length > 0) {
+  35 |         const first = domain.sections[0];
+> 36 |         setActiveSectionId(first.id);
+     |         ^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  37 |         setActiveSection(first);
+  38 |       }
+  39 |     }  react-hooks/set-state-in-effect
+
+/app/src/components/ActiveRecall.tsx
+  18:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/app/src/components/ActiveRecall.tsx:18:5
+  16 |   useEffect(() => {
+  17 |     const html = document.documentElement;
+> 18 |     setDark(html.classList.contains("dark"));
+     |     ^^^^^^^ Avoid calling setState() directly within an effect
+  19 |
+  20 |     const obs = new MutationObserver(() => {
+  21 |       setDark(html.classList.contains("dark"));  react-hooks/set-state-in-effect
+
+/app/src/components/AnatomyFigure.tsx
+  19:9  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/app/src/components/Benefits.tsx
+    9:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  102:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/app/src/components/QualityCommitment.tsx
+  10:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  23:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  36:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/app/src/components/TextbookLayout.tsx
+   5:31  warning  'TextbookSection' is defined but never used                                                                                                            @typescript-eslint/no-unused-vars
+  39:11  error    Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+/app/src/components/Topbar.tsx
+  14:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/app/src/components/Topbar.tsx:14:5
+  12 |   useEffect(() => {
+  13 |     const html = document.documentElement;
+> 14 |     setDark(html.classList.contains("dark"));
+     |     ^^^^^^^ Avoid calling setState() directly within an effect
+  15 |   }, []);
+  16 |
+  17 |   /* Toggle .dark on <html> */  react-hooks/set-state-in-effect
+
+✖ 12 problems (4 errors, 8 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.

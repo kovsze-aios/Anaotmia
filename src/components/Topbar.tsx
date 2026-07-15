@@ -48,11 +48,11 @@ export function Topbar() {
           {/* Premium text-only theme toggle */}
           <button
             onClick={toggleTheme}
-            className="theme-pill"
+            className="rounded-full border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 transition-all text-xs font-semibold tracking-wider"
             aria-label={dark ? "Przełącz na tryb jasny" : "Przełącz na tryb ciemny"}
             title={dark ? "Tryb jasny" : "Tryb NOIR"}
           >
-            <span className="theme-pill__label">{dark ? "JASNY" : "NOIR"}</span>
+            {dark ? "JASNY" : "NOIR"}
           </button>
         </div>
       </div>

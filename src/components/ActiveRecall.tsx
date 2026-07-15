@@ -47,8 +47,8 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
 
   /* Theme-aware answer box styles */
   const answerBoxClass = dark
-    ? "bg-white text-black font-mono"    // NOIR: high-contrast white block
-    : "bg-zinc-900 text-zinc-100 font-mono"; // Light: stark dark container
+    ? "bg-white text-black font-mono border border-zinc-200"
+    : "bg-zinc-950 text-zinc-100 font-mono border border-zinc-800";
 
   const answerLabelClass = dark
     ? "text-black"
@@ -60,7 +60,7 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
 
   const examRefClass = dark
     ? "text-zinc-600 border-zinc-300"
-    : "text-zinc-400 border-zinc-600";
+    : "text-zinc-800 border-zinc-600";
 
   return (
     <div
