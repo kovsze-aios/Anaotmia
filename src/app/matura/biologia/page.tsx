@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import { getBiologiaRecords } from "@/data/biologia";
 
@@ -10,13 +10,17 @@ export default function MaturaBiologiaPage() {
   const [filterTopic, setFilterTopic] = useState<string | null>(null);
 
   const currentRecord = records.find((r) => r.year === selectedYear);
-  const questions = currentRecord?.questions ?? [];
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const questions = useMemo(() => currentRecord?.questions ?? [], [currentRecord?.year]);
 
   const filtered = filterTopic
     ? questions.filter((q) => q.topicCategory === filterTopic)
     : questions;
 
-  const topics = [...new Set(questions.map((q) => q.topicCategory))];
+  const topics = useMemo(
+    () => [...new Set(questions.map((q) => q.topicCategory))],
+    [questions]
+  );
 
   return (
     <div className="matura-layout">
