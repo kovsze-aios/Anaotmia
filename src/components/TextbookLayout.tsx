@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChapterNav } from "./ChapterNav";
-import type { TextbookDomain, TextbookSection } from "@/types/textbook";
+import type { TextbookDomain } from "@/types/textbook";
 import Link from "next/link";
 
 interface TextbookLayoutProps {
