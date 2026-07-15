@@ -1,29 +1,51 @@
 "use client";
 
-import { Suspense } from "react";
-import { TextbookLayout } from "@/components/TextbookLayout";
-import { getDomains } from "@/data/textbook";
-import { TextbookPageInner } from "./TextbookPageInner";
+import { useCallback } from "react";
+import { useRouter } from "next/navigation";
+import { getDomains, getDomain } from "@/data/textbook";
 
 export default function TextbookPage() {
   const domains = getDomains();
+  const router = useRouter();
+
+  const handleDomainClick = useCallback(
+    (domainId: string) => {
+      const domain = getDomain(domainId);
+      if (domain && domain.sections.length > 0) {
+        router.push(`/textbook/${domain.sections[0].id}`);
+      }
+    },
+    [router],
+  );
 
   return (
-    <Suspense
-      fallback={
-        <TextbookLayout
-          domains={domains}
-          activeSection={null}
-          onSectionSelect={() => {}}
-        >
-          <div className="textbook-welcome">
-            <h1>Smart Anatomy Textbook</h1>
-            <p>Loading...</p>
-          </div>
-        </TextbookLayout>
-      }
-    >
-      <TextbookPageInner />
-    </Suspense>
+    <div className="textbook-welcome">
+      <h1>Inteligentny Podręcznik Medyczny</h1>
+      <p>
+        Wybierz interesujący Cię dział z panelu bocznego lub poniższego menu, aby rozpocząć aktywną
+        naukę z systemem <strong>Active Recall</strong>.
+      </p>
+
+      <div className="textbook-welcome__exam">
+        <h2>Zakres Materiału Egzaminacyjnego</h2>
+        <p>Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:</p>
+        <div className="textbook-welcome__domain-grid">
+          {domains.map((domain) => (
+            <button
+              key={domain.id}
+              className="textbook-welcome__domain-btn"
+              onClick={() => handleDomainClick(domain.id)}
+            >
+              {domain.icon} {domain.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <p className="text-sm text-muted-foreground">
+        System oparty na metodzie aktywnego przypominania (<em>Active Recall</em>) — kliknij na
+        pytanie w tekście, aby odsłonić oficjalny klucz odpowiedzi.
+      </p>
+    </div>
   );
 }
