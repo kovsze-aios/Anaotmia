@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function QualityCommitment() {
   return (
@@ -7,7 +8,7 @@ export function QualityCommitment() {
       <div className="quality">
         <div className="quality__item">
           <div className="quality__img">
-            <img
+            <Image
               src="/images/research.webp"
               alt=""
               width={100}
@@ -20,7 +21,7 @@ export function QualityCommitment() {
         </div>
         <div className="quality__item">
           <div className="quality__img">
-            <img
+            <Image
               src="/images/reviewed.webp"
               alt=""
               width={100}
@@ -33,7 +34,7 @@ export function QualityCommitment() {
         </div>
         <div className="quality__item">
           <div className="quality__img">
-            <img src="/images/trophy.webp" alt="" width={100} height={100} />
+            <Image src="/images/trophy.webp" alt="" width={100} height={100} />
           </div>
           <p className="quality__desc">
             Supporting 7,166,018 students worldwide

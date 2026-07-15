@@ -15,7 +15,7 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   /* Watch for .dark class on <html> */
   useEffect(() => {
     const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+    setDark((prev) => html.classList.contains("dark") || prev);
 
     const obs = new MutationObserver(() => {
       setDark(html.classList.contains("dark"));
