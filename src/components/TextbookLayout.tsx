@@ -43,6 +43,7 @@ export function TextbookLayout({
           <button
             className="textbook-sidebar__close"
             onClick={() => setSidebarOpen(false)}
+            aria-label="Zamknij pasek boczny"
           >
             ✕
           </button>
@@ -63,6 +64,7 @@ export function TextbookLayout({
         <button
           className="textbook-mobile-toggle"
           onClick={() => setSidebarOpen(true)}
+          aria-expanded={sidebarOpen}
         >
           ☰ Menu
         </button>
