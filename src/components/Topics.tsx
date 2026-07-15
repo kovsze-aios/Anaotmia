@@ -134,7 +134,9 @@ export function Topics() {
             <div className="subject-card__content">
               <div className="subject-card__subtitle">{card.subtitle}</div>
               <div className="subject-card__title">{card.title}</div>
-              <div className="subject-card__desc">{card.description}</div>
+              <div className="subject-card__desc">
+                {card.description}
+              </div>
               <div className="subject-card__cta">Przejdź do przedmiotu →</div>
             </div>
           </Link>
@@ -173,11 +175,13 @@ export function Topics() {
             </div>
             <div className="topicbox__content">
               <div className="topicbox__title">{topic.title}</div>
+<<<<<<< HEAD
               <div className="topicbox__description">{topic.description}</div>
-              <div className="topicbox__cta">Przejdź do działu →</div>
-            </div>
-          </Link>
-        ))}
+=======
+              <div className="topicbox__description">
+              <div className="topicbox__description">
+                {topic.description}
+              </div>
       </div>
     </div>
   );

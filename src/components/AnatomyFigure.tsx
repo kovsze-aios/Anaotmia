@@ -8,6 +8,8 @@ interface AnatomyFigureProps {
   height?: number;
 }
 
+import Image from "next/image";
+
 export function AnatomyFigure({
   src,
   caption,
