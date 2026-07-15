@@ -1,28 +1,21 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
 import { TextbookLayout } from "@/components/TextbookLayout";
-import { ActiveRecall } from "@/components/ActiveRecall";
-import { getDomain } from "@/data/textbook";
-import type { TextbookDomain } from "@/types/textbook";
+import { TextbookContent } from "@/components/TextbookContent";
+import { getDomains, getDomain } from "@/data/textbook";
+import type { TextbookSection } from "@/types/textbook";
 
-function getDefaultDomain(domains: TextbookDomain[]): TextbookDomain | null {
-  return domains.length > 0 ? domains[0] : null;
-}
-
-export function TextbookPageInner({ domains }: { domains: TextbookDomain[] }) {
+export function TextbookPageInner() {
+  const domains = getDomains();
   const searchParams = useSearchParams();
   const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
-  const [activeSection, setActiveSection] = useState<{
-    id: string;
-    title: string;
-    type: string;
-  } | null>(null);
-  const initialized = useRef(false);
+  const [activeSection, setActiveSection] = useState<TextbookSection | null>(
+    null,
+  );
 
-  /* Restore or set initial section on mount / param change */
+  // Auto-select first section of domain from query param
   useEffect(() => {
     const domainParam = searchParams.get("domain");
     if (domainParam) {
@@ -30,9 +23,9 @@ export function TextbookPageInner({ domains }: { domains: TextbookDomain[] }) {
       if (domain && domain.sections.length > 0) {
         const first = domain.sections[0];
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setActiveSectionId((prev) => prev !== first.id ? first.id : prev);
+        setActiveSectionId(first.id);
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setActiveSection((prev) => prev?.id !== first.id ? first : prev);
+        setActiveSection(first);
       }
     }
   }, [searchParams]);
@@ -41,10 +34,22 @@ export function TextbookPageInner({ domains }: { domains: TextbookDomain[] }) {
     (domainId: string, sectionId: string) => {
       setActiveSectionId(sectionId);
       const domain = getDomain(domainId);
-      const section = domain?.sections.find((s) => s.id === sectionId) ?? null;
-      setActiveSection(section);
+      if (domain) {
+        const section = domain.sections.find((s) => s.id === sectionId);
+        setActiveSection(section ?? null);
+      }
     },
-    []
+    [],
+  );
+
+  const handleDomainClick = useCallback(
+    (domainId: string) => {
+      const domain = getDomain(domainId);
+      if (domain && domain.sections.length > 0) {
+        handleSectionSelect(domainId, domain.sections[0].id);
+      }
+    },
+    [handleSectionSelect],
   );
 
   return (
@@ -53,52 +58,38 @@ export function TextbookPageInner({ domains }: { domains: TextbookDomain[] }) {
       activeSection={activeSectionId}
       onSectionSelect={handleSectionSelect}
     >
-      {activeSection && (
-        <>
-          <h1 className="text-3xl font-bold tracking-tight mb-8">
-            {activeSection.title}
-          </h1>
-          <ActiveRecallSection
-            domain={getDomain(
-              domains.find((d) =>
-                d.sections.some((s) => s.id === activeSection.id)
-              )?.id ?? ""
-            )}
-            section={activeSection}
-          />
-        </>
+      {activeSection ? (
+        <TextbookContent section={activeSection} />
+      ) : (
+        <div className="textbook-welcome">
+          <h1>Inteligentny Podręcznik Medyczny</h1>
+          <p>
+            Wybierz interesujący Cię dział z panelu bocznego lub poniższego menu,
+            aby rozpocząć aktywną naukę z systemem <strong>Active Recall</strong>.
+          </p>
+
+          <div className="textbook-welcome__exam">
+            <h2>Zakres Materiału Egzaminacyjnego</h2>
+            <p>Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:</p>
+            <div className="textbook-welcome__domain-grid">
+              {domains.map((domain) => (
+                <button
+                  key={domain.id}
+                  className="textbook-welcome__domain-btn"
+                  onClick={() => handleDomainClick(domain.id)}
+                >
+                  {domain.icon} {domain.title}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-sm text-muted-foreground">
+            System oparty na metodzie aktywnego przypominania (<em>Active Recall</em>) — kliknij
+            na pytanie w tekście, aby odsłonić oficjalny klucz odpowiedzi.
+          </p>
+        </div>
       )}
     </TextbookLayout>
-  );
-}
-
-function ActiveRecallSection({
-  domain,
-  section,
-}: {
-  domain: TextbookDomain | null;
-  section: { id: string; title: string; type: string };
-}) {
-  const items = useMemo(() => {
-    if (!domain) return [];
-    return domain.sections.find((s) => s.id === section.id)?.items ?? [];
-  }, [domain, section.id]);
-
-  if (items.length === 0) {
-    return <p className="text-zinc-500 italic">Brak elementów w tej sekcji.</p>;
-  }
-
-  return (
-    <>
-      {items.map((item, i) => (
-        <div key={i} className="mb-4">
-          <ActiveRecall
-            question={item.question}
-            answer={item.answer}
-            examRef={item.examRef}
-          />
-        </div>
-      ))}
-    </>
   );
 }

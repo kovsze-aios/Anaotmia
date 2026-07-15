@@ -3,6 +3,7 @@ import Image from "next/image";
 interface AnatomyFigureProps {
   src: string;
   caption: string;
+  source?: string;
   width?: number;
   height?: number;
 }
@@ -10,6 +11,7 @@ interface AnatomyFigureProps {
 export function AnatomyFigure({
   src,
   caption,
+  source,
   width = 800,
   height = 600,
 }: AnatomyFigureProps) {
@@ -25,7 +27,10 @@ export function AnatomyFigure({
           loading="lazy"
         />
       </div>
-      <figcaption className="anatomy-figure__caption">{caption}</figcaption>
+      <figcaption className="anatomy-figure__caption">
+        {caption}
+        {source && <span className="anatomy-figure__source"> — Źródło: {source}</span>}
+      </figcaption>
     </figure>
   );
 }

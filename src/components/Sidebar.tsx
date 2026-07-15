@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { getDomains } from "@/data/textbook";
+import { biologiaTheory } from "@/data/biologia/theory";
+import { chemiaTheory } from "@/data/chemia/theory";
+
 /* ─── Accordion group ─── */
 function AccordionGroup({
   label,
@@ -76,31 +80,21 @@ function SubAccordion({
 }
 
 /* ─── Nav links ─── */
-const anatomyLinks = [
-  { href: "/textbook?domain=osteology", label: "🦴 Osteologia i Artrologia" },
-  { href: "/textbook?domain=myology", label: "💪 Miologia" },
-  { href: "/textbook?domain=nervous", label: "🧠 Układ Nerwowy" },
-  { href: "/textbook?domain=endocrine", label: "🔬 Układ Dokrewny" },
-  { href: "/textbook?domain=cardiovascular-respiratory", label: "❤️ Układ Krążenia i Oddechowy" },
-  { href: "/textbook?domain=digestive", label: "🍽️ Układ Pokarmowy" },
-  { href: "/textbook?domain=urinary-reproductive", label: "🫘 Układ Moczowo-Płciowy" },
-  { href: "/textbook?domain=sensory", label: "👁️ Narządy Zmysłów" },
-];
+const anatomyLinks = getDomains().map((domain) => ({
+  href: `/textbook?domain=${domain.id}`,
+  label: `${domain.icon} ${domain.title}`,
+}));
 
-const biologyLinks = [
-  { href: "/theory/biologia", label: "🧬 Cytologia — Budowa i funkcjonowanie komórki" },
-  { href: "/theory/biologia", label: "⚡ Metabolizm — Enzymy, oddychanie, fotosynteza" },
-  { href: "/theory/biologia", label: "🧬 Genetyka — Dziedziczenie i ekspresja genów" },
-  { href: "/theory/biologia", label: "🌿 Botanika — Tkanki i fizjologia roślin" },
-  { href: "/theory/biologia", label: "🧍 Fizjologia człowieka — Układy narządów" },
-];
+const biologyLinks = biologiaTheory.map((domain) => ({
+  href: "/theory/biologia",
+  label: `${domain.icon} ${domain.title}`,
+}));
 
-const chemistryLinks = [
-  { href: "/theory/chemia", label: "⚛️ Budowa atomu i wiązania chemiczne" },
-  { href: "/theory/chemia", label: "⚖️ Stechiometria — Obliczenia chemiczne" },
-  { href: "/theory/chemia", label: "🧪 Chemia nieorganiczna" },
-  { href: "/theory/chemia", label: "🔬 Chemia organiczna" },
-];
+const chemistryLinks = chemiaTheory.map((domain) => ({
+  id: domain.id,
+  href: "/theory/chemia",
+  label: `${domain.icon} ${domain.title}`,
+}));
 
 /* ─── Mobile drawer ─── */
 export function SidebarDrawer({
@@ -161,15 +155,15 @@ export function SidebarDrawer({
           {/* ─── 🧪 CHEMIA ─── */}
           <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
           <SubAccordion label="Chemia nieorganiczna i obliczenia">
-            {chemistryLinks.filter(l => l.label.includes("nieorganiczna") || l.label.includes("atomu") || l.label.includes("Stechiometria")).map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
+            {chemistryLinks.filter(l => l.id !== "organiczna").map((l) => (
+              <Link key={l.id} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
           <SubAccordion label="Chemia organiczna">
-            {chemistryLinks.filter(l => l.label.includes("organiczna")).map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
+            {chemistryLinks.filter(l => l.id === "organiczna").map((l) => (
+              <Link key={l.id} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
