@@ -1,0 +1,23 @@
+ WARN  Unsupported engine: wanted: {"node":">=24"} (current: {"node":"v22.22.1","pnpm":"10.30.3"})
+
+> ai-website-clone-template@0.3.1 dev /app
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 1201ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+○ Compiling /theory/biologia ...
+ GET /theory/biologia 200 in 6.5s (next.js: 6.0s, application-code: 577ms)
+[browser] Encountered two children with the same key, `cke-questions-grouped`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+[browser] Encountered two children with the same key, `cke-questions-grouped`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+ GET /theory/biologia 200 in 89ms (next.js: 6ms, application-code: 83ms)
+[browser] Encountered two children with the same key, `cke-questions-grouped`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+[browser] Encountered two children with the same key, `cke-questions-grouped`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+ ELIFECYCLE  Command failed.
