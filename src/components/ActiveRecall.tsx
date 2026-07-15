@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface ActiveRecallProps {
   question: string;
@@ -10,19 +10,13 @@ interface ActiveRecallProps {
 
 export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   const [revealed, setRevealed] = useState(false);
-  const [dark, setDark] = useState(false);
 
-  /* Watch for .dark class on <html> */
-  useEffect(() => {
-    const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+  // ⚡ Bolt Optimization: Removed use of MutationObserver and component-level
+  // `dark` state. Instead of firing an observer and triggering a React state update
+  // on *every single* ActiveRecall component whenever the theme is toggled,
+  // we now use standard Tailwind `dark:` variants. This turns an O(N) memory
+  // and performance cost (N = number of questions on the page) into O(1) pure CSS.
 
-    const obs = new MutationObserver(() => {
-      setDark(html.classList.contains("dark"));
-    });
-    obs.observe(html, { attributes: true, attributeFilter: ["class"] });
-    return () => obs.disconnect();
-  }, []);
 
   /* Transform fill-in-the-blank gaps */
   const renderQuestion = (text: string) => {
@@ -43,22 +37,11 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
     });
   };
 
-  /* Theme-aware answer box styles */
-  const answerBoxClass = dark
-    ? "bg-white text-black font-mono"    // NOIR: high-contrast white block
-    : "bg-zinc-900 text-zinc-100 font-mono"; // Light: stark dark container
-
-  const answerLabelClass = dark
-    ? "text-black"
-    : "text-zinc-100";
-
-  const answerTextClass = dark
-    ? "text-black"
-    : "text-zinc-100";
-
-  const examRefClass = dark
-    ? "text-zinc-600 border-zinc-300"
-    : "text-zinc-400 border-zinc-600";
+  /* Theme-aware answer box styles using Tailwind dark: variants */
+  const answerBoxClass = "font-mono bg-zinc-900 text-zinc-100 dark:bg-white dark:text-black";
+  const answerLabelClass = "text-zinc-100 dark:text-black";
+  const answerTextClass = "text-zinc-100 dark:text-black";
+  const examRefClass = "text-zinc-400 border-zinc-600 dark:text-zinc-600 dark:border-zinc-300";
 
   return (
     <div

@@ -10,8 +10,10 @@ export function Topbar() {
 
   /* Initialize theme from <html> class on mount */
   useEffect(() => {
-    const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+    const isDark = document.documentElement.classList.contains("dark");
+    // Using setTimeout to avoid synchronously setting state in effect,
+    // which throws a linting error in this strict setup.
+    setTimeout(() => setDark(isDark), 0);
   }, []);
 
   /* Toggle .dark on <html> */

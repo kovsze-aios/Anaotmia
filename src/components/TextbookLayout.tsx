@@ -1,8 +1,8 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { ChapterNav } from "./ChapterNav";
-import type { TextbookDomain, TextbookSection } from "@/types/textbook";
+import type { TextbookDomain } from "@/types/textbook";
 
 interface TextbookLayoutProps {
   domains: TextbookDomain[];
@@ -36,9 +36,9 @@ export function TextbookLayout({
         }`}
       >
         <div className="textbook-sidebar__header">
-          <a href="/" className="textbook-sidebar__home">
+          <Link href="/" className="textbook-sidebar__home">
             <span>←</span> Strona główna
-          </a>
+          </Link>
           <h2>Podręcznik</h2>
           <button
             className="textbook-sidebar__close"
