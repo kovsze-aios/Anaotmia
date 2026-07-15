@@ -1,9 +1,43 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
+import { TableOfContents, ToCItem } from "./TableOfContents";
+
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
 import type { TextbookSection, ContentBlock } from "@/types/textbook";
+
+
+function generateId(text: string) {
+  return text.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, '').trim().replace(/\s+/g, '-');
+}
+
+function parseMarkdownContent(text: string) {
+  const parts = text.split(/^(#{1,6})\s+(.+)$/gm);
+  const nodes: React.ReactNode[] = [];
+  const headers: ToCItem[] = [];
+
+  for (let i = 0; i < parts.length; i += 3) {
+    if (parts[i]) {
+      nodes.push(<span key={`text-${i}`}>{parts[i]}</span>);
+    }
+    if (i + 1 < parts.length) {
+      const level = parts[i + 1].length;
+      const title = parts[i + 2];
+      const id = generateId(title);
+      const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
+
+      const textSizeClass = level === 2 ? 'text-2xl' : level === 3 ? 'text-xl' : 'text-lg';
+      nodes.push(
+        <Tag key={`h-${i}`} id={id} className={`scroll-mt-20 font-bold mt-6 mb-4 ${textSizeClass}`}>
+          {title}
+        </Tag>
+      );
+      headers.push({ level, title, id });
+    }
+  }
+  return { nodes, headers };
+}
 
 interface TextbookContentProps {
   section: TextbookSection;
@@ -43,6 +77,19 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
     default:
       return null;
   }
+}
+
+
+function MarkdownBlock({ text }: { text: string }) {
+  const { nodes, headers } = useMemo(() => parseMarkdownContent(text), [text]);
+  return (
+    <>
+      <TableOfContents items={headers} />
+      <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
+        {nodes}
+      </div>
+    </>
+  );
 }
 
 export function TextbookContent({ section }: TextbookContentProps) {
@@ -99,9 +146,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
             {sources.length === 1 ? (
               <>
                 <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
-                <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
-                  {sources[0].content}
-                </div>
+                <MarkdownBlock text={sources[0].content} />
               </>
             ) : sources.length > 1 ? (
               <div className="flex flex-col gap-4">
@@ -120,9 +165,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
                       {src.title}
                       <span className="transition group-open:rotate-180">▼</span>
                     </summary>
-                    <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap px-4">
-                      {src.content}
-                    </div>
+                    <div className="px-4"><MarkdownBlock text={src.content} /></div>
                   </details>
                 ))}
               </div>
@@ -131,9 +174,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
               <>
                 <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
                 {hasAcademicDetail && (
-                  <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
-                    {section.academic_detail}
-                  </div>
+                  <MarkdownBlock text={section.academic_detail || ""} />
                 )}
                 {hasContentBlocks && (
                   <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
