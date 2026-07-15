@@ -81,32 +81,31 @@ export function TextbookContent({ section }: TextbookContentProps) {
       </div>
 
       {(() => {
-        const sources = section.academic_sources || [];
-        const hasAcademicDetail = !!section.academic_detail;
-        const hasContentBlocks = section.content && section.content.length > 0;
-
-        // Count how many "sources" we have conceptually
-        let sourceCount = sources.length;
-        if (sourceCount === 0) {
-          if (hasAcademicDetail) sourceCount++;
-          if (hasContentBlocks) sourceCount++;
+        const allSources = [];
+        if (section.academic_detail) {
+          allSources.push({ title: "Notatki", content: section.academic_detail });
+        }
+        if (section.academic_sources) {
+          allSources.push(...section.academic_sources);
         }
 
-        if (sourceCount === 0) return null; // Edge state: degrading gracefully if empty
+        const hasContentBlocks = section.content && section.content.length > 0;
+
+        if (allSources.length === 0 && !hasContentBlocks) return null;
 
         return (
           <div className="deep-theory-section border-t border-zinc-100 dark:border-zinc-800 pt-6">
-            {sources.length === 1 ? (
+            {allSources.length === 1 ? (
               <>
                 <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
                 <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
-                  {sources[0].content}
+                  {allSources[0].content}
                 </div>
               </>
-            ) : sources.length > 1 ? (
+            ) : allSources.length > 1 ? (
               <div className="flex flex-col gap-4">
-                {sources.map((src, i) => (
-                  <details key={i} className="group">
+                {allSources.map((src, i) => (
+                  <details key={i} className="group" open={false}>
                     <summary
                       className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
                       tabIndex={0}
@@ -117,7 +116,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
                         }
                       }}
                     >
-                      {src.title}
+                      Rozwiń pełny opis akademicki: {src.title}
                       <span className="transition group-open:rotate-180">▼</span>
                     </summary>
                     <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap px-4">
@@ -126,23 +125,14 @@ export function TextbookContent({ section }: TextbookContentProps) {
                   </details>
                 ))}
               </div>
-            ) : (
-              // Fallback for single source in academic_detail or content blocks
-              <>
-                <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
-                {hasAcademicDetail && (
-                  <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
-                    {section.academic_detail}
-                  </div>
-                )}
-                {hasContentBlocks && (
-                  <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
-                    {section.content.map((block, index) => (
-                      <ContentBlockRenderer key={index} block={block} />
-                    ))}
-                  </div>
-                )}
-              </>
+            ) : null}
+
+            {hasContentBlocks && (
+              <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
+                {section.content.map((block, index) => (
+                  <ContentBlockRenderer key={index} block={block} />
+                ))}
+              </div>
             )}
           </div>
         );
