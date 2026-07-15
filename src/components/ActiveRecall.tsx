@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useTheme } from "@/hooks/useTheme";
 
 interface ActiveRecallProps {
   question: string;
@@ -10,20 +11,7 @@ interface ActiveRecallProps {
 
 export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   const [revealed, setRevealed] = useState(false);
-  const [dark, setDark] = useState(false);
-
-  /* Watch for .dark class on <html> */
-  useEffect(() => {
-    const html = document.documentElement;
-    setDark(html.classList.contains("dark")); // eslint-disable-line react-hooks/set-state-in-effect
-
-    const obs = new MutationObserver(() => {
-
-      setDark(html.classList.contains("dark"));
-    });
-    obs.observe(html, { attributes: true, attributeFilter: ["class"] });
-    return () => obs.disconnect();
-  }, []);
+  const { dark } = useTheme();
 
   /* Transform fill-in-the-blank gaps */
   const renderQuestion = (text: string) => {
