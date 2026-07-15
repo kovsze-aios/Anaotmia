@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { CheckIcon } from "./icons";
 import Image from "next/image";
 

@@ -44,36 +44,38 @@ function AccordionGroup({
   );
 }
 
-/* ─── Sub-section accordion ─── */
+/* ─── Sub-accordion (for chemistry sections) ─── */
 function SubAccordion({
   label,
+  defaultExpanded = false,
   children,
 }: {
   label: string;
+  defaultExpanded?: boolean;
   children: React.ReactNode;
 }) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(defaultExpanded);
 
   return (
-    <div className="sidebar-subaccordion">
+    <div className="sidebar-sub-accordion">
       <button
-        className="sidebar-subaccordion__trigger"
+        className="sidebar-sub-accordion__trigger"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
       >
         <span>{label}</span>
-        <span className="sidebar-accordion__chevron">
-          {expanded ? "▲" : "▼"}
+        <span className="sidebar-sub-accordion__chevron">
+          {expanded ? "–" : "+"}
         </span>
       </button>
       <div
-        className="sidebar-accordion__body"
+        className="sidebar-sub-accordion__body"
         style={{
-          maxHeight: expanded ? "600px" : "0",
+          maxHeight: expanded ? "800px" : "0",
           opacity: expanded ? 1 : 0,
         }}
       >
-        <div className="sidebar-accordion__inner">{children}</div>
+        <div className="sidebar-sub-accordion__inner">{children}</div>
       </div>
     </div>
   );
@@ -129,8 +131,7 @@ export function SidebarDrawer({
         <nav className="mobile-drawer__nav">
 
           {/* ─── 🩺 ANATOMIA ─── */}
-          <div className="drawer-section-label">🩺 ANATOMIA — Podręcznik akademicki</div>
-          <AccordionGroup label="8 rozdziałów anatomicznych" defaultExpanded={false}>
+          <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>
             {anatomyLinks.map((l) => (
               <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
@@ -141,17 +142,16 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🌿 BIOLOGIA ─── */}
-          <div className="drawer-section-label">🌿 BIOLOGIA — Matura Formuła 2015</div>
-          <SubAccordion label="Cytologia · Metabolizm · Genetyka">
+          <AccordionGroup label="🌿 BIOLOGIA" defaultExpanded={false}>
             {biologyLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-          </SubAccordion>
-          <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
-            📝 Arkusze CKE — Biologia
-          </Link>
+            <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
+              📝 Arkusze CKE — Biologia
+            </Link>
+          </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
 
