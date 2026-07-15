@@ -133,7 +133,9 @@ async function main() {
             });
           }
         });
-      } catch(e) {}
+      } catch {
+        // Ignore CORS errors when accessing cross-origin stylesheets
+      }
     });
 
     // SVG sprite
