@@ -458,7 +458,7 @@
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 38px;
-  color: #f4f4f5;
+  color: #18181b;
   margin: 0 0 20px;
 }
 
@@ -555,7 +555,7 @@
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 38px;
-  color: #f4f4f5;
+  color: #18181b;
   margin: 0 0 16px;
 }
 
@@ -624,7 +624,7 @@
 .callout h2 {
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 32px;
-  color: #f4f4f5;
+  color: #18181b;
   margin: 0 0 26px;
 }
 
@@ -775,7 +775,7 @@ footer {
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 38px;
-  color: #f4f4f5;
+  color: #18181b;
   margin: 0 0 40px;
 }
 
@@ -991,7 +991,7 @@ footer {
   font-family: var(--font-pluto-light), Helvetica, Arial, sans-serif;
   font-size: 28px;
   line-height: 36px;
-  color: #f4f4f5;
+  color: #18181b;
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
@@ -1530,7 +1530,6 @@ main hr {
 
 .active-recall-new__answer {
   padding: 20px 24px;
-  background: #ffffff;
   border-top: 1px solid #e4e4e7;
   animation: ar-slide-down 0.3s ease;
   transition: all 0.3s ease-in-out;
@@ -1556,7 +1555,6 @@ main hr {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #000000;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -1564,7 +1562,6 @@ main hr {
 .active-recall-new__answer-text {
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
-  color: #000000;
   line-height: 1.7;
   margin: 0;
   font-weight: 600;
@@ -3099,4 +3096,24 @@ main hr {
 
 .dark .hero p {
   color: #ffffff;
+}
+
+.dark .benefits h2 {
+  color: #f4f4f5;
+}
+
+.dark .experts h2 {
+  color: #f4f4f5;
+}
+
+.dark .callout h2 {
+  color: #f4f4f5;
+}
+
+.dark .quality-commitment h2 {
+  color: #f4f4f5;
+}
+
+.dark .recommendations h2.text-center {
+  color: #f4f4f5;
 }

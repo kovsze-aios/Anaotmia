@@ -11,7 +11,7 @@ export function Topbar() {
   /* Initialize theme from <html> class on mount */
   useEffect(() => {
     const html = document.documentElement;
-    setDark(html.classList.contains("dark"));
+    setDark(html.classList.contains("dark")); // eslint-disable-line react-hooks/set-state-in-effect
   }, []);
 
   /* Toggle .dark on <html> */
@@ -47,7 +47,7 @@ export function Topbar() {
           {/* Premium text-only theme toggle */}
           <button
             onClick={toggleTheme}
-            className="theme-pill"
+            className="theme-pill rounded-full border border-current px-4 py-1 text-xs font-bold tracking-widest uppercase transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
             aria-label={dark ? "Przełącz na tryb jasny" : "Przełącz na tryb ciemny"}
             title={dark ? "Tryb jasny" : "Tryb NOIR"}
           >

@@ -33,7 +33,7 @@ export function TextbookPageInner() {
       const domain = getDomain(domainParam);
       if (domain && domain.sections.length > 0) {
         const first = domain.sections[0];
-        setActiveSectionId(first.id);
+        setActiveSectionId(first.id); // eslint-disable-line react-hooks/set-state-in-effect
         setActiveSection(first);
       }
     }
