@@ -21,8 +21,8 @@ export function AnatomyFigure({
         <Image
           src={src}
           alt={caption}
-          width={width}
-          height={height}
+          width={width || 800}
+          height={height || 600}
           className="anatomy-figure__image"
           loading="lazy"
         />

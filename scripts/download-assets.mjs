@@ -133,9 +133,8 @@ async function main() {
             });
           }
         });
-      } catch(e) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const ignored = e;
+      } catch {
+        // Ignore font loading errors
       }
     });
 
@@ -221,7 +220,7 @@ async function main() {
   if (spriteUrl) {
     console.log(`\n📥 Downloading SVG sprite...`);
     const spriteDest = path.join(IMAGES_DIR, 'icons-sprite.svg');
-    await downloadFile(spriteUrl, spriteDest).then(() => console.log('  ✅ SVG sprite saved')).catch(e => console.log(`  ❌ SVG sprite: ${e ? "Error" : ""}`));
+    await downloadFile(spriteUrl, spriteDest).then(() => console.log('  ✅ SVG sprite saved')).catch(_e => console.log(`  ❌ SVG sprite: ${_e.message}`));
   }
 
   await browser.close();
