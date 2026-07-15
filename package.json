@@ -51,12 +51,11 @@
     "@tailwindcss/postcss": "^4",
     "@types/node": "^24",
     "@types/react": "^19",
-    "@types/react-dom": "^19.2.3",
+    "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "playwright": "^1.62.0-alpha-1783623505000",
     "tailwindcss": "^4",
-    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
