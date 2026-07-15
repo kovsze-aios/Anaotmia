@@ -10,6 +10,7 @@ interface ActiveRecallProps {
 
 export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
   const [revealed, setRevealed] = useState(false);
+ 
 
   /* Transform fill-in-the-blank gaps */
   const renderQuestion = (text: string) => {

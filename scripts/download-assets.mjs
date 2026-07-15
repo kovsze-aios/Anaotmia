@@ -71,7 +71,7 @@ async function downloadBatch(items, concurrency = 4) {
         console.log(`  Downloading: ${item.url.slice(0, 80)}...`);
         return downloadFile(item.url, item.dest)
           .then(() => ({ name: item.name, status: 'ok' }))
-          .catch(err => ({ name: item.name, status: 'error', error: err.message }));
+          .catch((err) => ({ name: item.name, status: "error", error: err.message }));
       })
     );
     results.push(...batchResults);
@@ -105,7 +105,7 @@ async function main() {
       // Also capture noscript fallback images
       const noscript = img.closest('[data-lazy-load]')?.querySelector('noscript img');
       if (noscript) {
-        const nsSrc = noscript.getAttribute('src');
+        const nsSrc = noscript.getAttribute("src");
         if (nsSrc && nsSrc.startsWith('http')) {
           results.push({ type: 'image', url: nsSrc, alt: noscript.alt || '' });
         }
@@ -133,9 +133,7 @@ async function main() {
             });
           }
         });
-      } catch {
-        // Ignore CORS errors when accessing cross-origin stylesheets
-      }
+      } catch(e) { console.log("Failed to process stylesheet", e); }
     });
 
     // SVG sprite
@@ -220,7 +218,7 @@ async function main() {
   if (spriteUrl) {
     console.log(`\n📥 Downloading SVG sprite...`);
     const spriteDest = path.join(IMAGES_DIR, 'icons-sprite.svg');
-    await downloadFile(spriteUrl, spriteDest).then(() => console.log('  ✅ SVG sprite saved')).catch(e => console.log(`  ❌ SVG sprite: ${e.message}`));
+    await downloadFile(spriteUrl, spriteDest).then(() => console.log('  ✅ SVG sprite saved')).catch(e => console.log(`  ❌ SVG sprite: ${e ? "Error" : ""}`));
   }
 
   await browser.close();

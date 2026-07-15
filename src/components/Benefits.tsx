@@ -1,13 +1,12 @@
-import { CheckIcon } from "./icons";
+import Image from "next/image";
 
 export function Benefits() {
   return (
-    <div className="benefits">
+    <section className="benefits">
       {/* Row 1: Spend less time studying */}
       <div className="benefits__row benefits__row--equal">
         <div className="image">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/home_face-7897ee9d.jpg"
             alt="Student studying anatomy"
             width={320}
@@ -18,90 +17,66 @@ export function Benefits() {
           <h2>Spend less time studying</h2>
           <ul className="benefits__list">
             <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              1000s of high quality anatomy illustrations
+              <div className="circle circle--half-medium green"></div>
+              <span>
+                Complex topics broken down into easy-to-digest chunks
+              </span>
             </li>
             <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              1000s of detailed anatomy articles
+              <div className="circle circle--half-medium green"></div>
+              <span>
+                Active recall questions to reinforce your understanding
+              </span>
             </li>
             <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              High-quality videos created by anatomy experts
-            </li>
-            <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              Reviewed by expert medical professionals
+              <div className="circle circle--half-medium green"></div>
+              <span>
+                Spaced repetition to make knowledge stick long-term
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Row 2: Test yourself */}
-      <div className="benefits__row benefits__row--feature">
-        <div className="content">
-          <div
-            className="video"
-            style={{
-              backgroundImage:
-                "url(/images/index_header_background-08c9bf24.jpg)",
-            }}
-          >
-            <div className="video-play-overlay">
-              <div className="video-play-overlay__icon" />
-            </div>
-          </div>
-          <div className="text">
-            <h2>Test yourself</h2>
-            <div className="subtitle">
-              Build your confidence and get exam-ready
-            </div>
-            <ul className="benefits__list">
-              <li>
-                <div className="circle circle--half-medium green">
-                  <CheckIcon width={10} height={10} />
-                </div>
-                <div>
-                  <div className="green">Practice at your level</div>
-                  100s of beginner to advanced quizzes
-                </div>
-              </li>
-              <li>
-                <div className="circle circle--half-medium green">
-                  <CheckIcon width={10} height={10} />
-                </div>
-                <div>
-                  <div className="green">Fix your weak spots fast</div>
-                  Spaced repetition quizzes train your memory
-                </div>
-              </li>
-              <li>
-                <div className="circle circle--half-medium green">
-                  <CheckIcon width={10} height={10} />
-                </div>
-                <div>
-                  <div className="green">Study only what matters</div>
-                  Create custom quizzes tailored to your exam needs
-                </div>
-              </li>
-            </ul>
-          </div>
+      {/* Row 2: Trusted by future medical professionals */}
+      <div className="benefits__row benefits__row--reverse">
+        <div className="image">
+          <Image
+            src="/images/home_cta-bg.webp"
+            alt="Medical students studying"
+            width={544}
+            height={480}
+          />
+        </div>
+        <div className="text">
+          <h2>Trusted by future medical professionals</h2>
+          <ul className="benefits__list">
+            <li>
+              <div className="circle circle--half-medium blue"></div>
+              <span>
+                Used by students at top medical universities worldwide
+              </span>
+            </li>
+            <li>
+              <div className="circle circle--half-medium blue"></div>
+              <span>
+                Content aligned with standard medical curricula
+              </span>
+            </li>
+            <li>
+              <div className="circle circle--half-medium blue"></div>
+              <span>
+                Continuously updated to reflect latest medical knowledge
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
 
       {/* Row 3: Learn anywhere, anytime */}
       <div className="benefits__row benefits__row--equal">
         <div className="image">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/home_devices.webp"
             alt="Kenhub on multiple devices"
             width={382}
@@ -112,26 +87,20 @@ export function Benefits() {
           <h2>Learn anywhere, anytime</h2>
           <ul className="benefits__list">
             <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              1000s of videos, articles, and quizzes all in one place
+              <div className="circle circle--half-medium green"></div>
+              <span>Available on desktop, tablet, and mobile</span>
             </li>
             <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              Seamlessly switch between phone, tablet, or computer
+              <div className="circle circle--half-medium green"></div>
+              <span>Offline access to all study materials</span>
             </li>
             <li>
-              <div className="circle circle--half-medium green">
-                <CheckIcon width={10} height={10} />
-              </div>
-              Downloadable resources for offline studying
+              <div className="circle circle--half-medium green"></div>
+              <span>Sync your progress across all devices</span>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

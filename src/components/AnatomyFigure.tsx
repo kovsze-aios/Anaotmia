@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 interface AnatomyFigureProps {
   src: string;
   caption: string;
-  source: string;
   width?: number;
   height?: number;
 }
@@ -9,15 +10,13 @@ interface AnatomyFigureProps {
 export function AnatomyFigure({
   src,
   caption,
-  source,
-  width,
-  height,
+  width = 800,
+  height = 600,
 }: AnatomyFigureProps) {
   return (
     <figure className="anatomy-figure">
       <div className="anatomy-figure__image-wrapper">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={src}
           alt={caption}
           width={width}
@@ -26,10 +25,7 @@ export function AnatomyFigure({
           loading="lazy"
         />
       </div>
-      <figcaption className="anatomy-figure__caption">
-        {caption}
-        <span className="anatomy-figure__source">Źródło: {source}</span>
-      </figcaption>
+      <figcaption className="anatomy-figure__caption">{caption}</figcaption>
     </figure>
   );
 }
