@@ -44,6 +44,8 @@ export type ContentBlock =
 export interface TextbookSection {
   id: string;
   title: string;
+  summary?: string;
+  academic_detail?: string;
   content: ContentBlock[];
   recallQuestions: RecallQuestion[];
 }
