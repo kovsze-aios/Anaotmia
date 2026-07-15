@@ -274,6 +274,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "podstawy-genetyki",
         "title": "Genetyka klasyczna — prawa Mendla i dziedziczenie",
+        "summary": "- Genetyka klasyczna opiera się na odkryciach Gregora Mendla __________ który badał dziedziczenie cech grochu zwyczajnego (Pisum sativum).\n- Wybrał 7 cech, każda determinowana przez jeden __________ z dwoma allelami o wyraźnej dominacji.\n- Mendel sformułował trzy prawa: (1) Prawo czystości gamet (I prawo Mendla) — podczas tworzenia gamet __________ danego genu ulegają segregacji (rozdzieleniu), tak że każda gameta zawiera tylko jeden allel z pary.",
+        "academic_detail": "Genetyka klasyczna opiera się na odkryciach Gregora Mendla (1866), który badał dziedziczenie cech grochu zwyczajnego (Pisum sativum). Wybrał 7 cech, każda determinowana przez jeden gen z dwoma allelami o wyraźnej dominacji. Mendel sformułował trzy prawa: (1) Prawo czystości gamet (I prawo Mendla) — podczas tworzenia gamet allele danego genu ulegają segregacji (rozdzieleniu), tak że każda gameta zawiera tylko jeden allel z pary. (2) Prawo niezależnego dziedziczenia cech (II prawo Mendla) — allele różnych genów są dziedziczone niezależnie od siebie, o ile leżą na różnych chromosomach (różnych parach homologicznych). (3) Prawo dominacji — w heterozygocie allel dominujący maskuje obecność allelu recesywnego.",
         "content": [
           {
             "type": "paragraph",
@@ -316,6 +318,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "dna-replikacja-ekspresja",
         "title": "Struktura DNA, replikacja i ekspresja genów",
+        "summary": "- DNA (kwas deoksyrybonukleinowy) __________ nośnikiem informacji genetycznej.\n- Struktura podwójnej helisy (Watson i Crick, 1953, z wykorzystaniem danych Rosalind __________ dwie antyrównoległe nici (5′→3′ i 3′→5′) skręcone prawoskrętnie wokół wspólnej osi.\n- Każda nić zbudowana jest z nukleotydów: __________ deoksyryboza, reszta fosforanowa(V) i zasada azotowa.",
+        "academic_detail": "DNA (kwas deoksyrybonukleinowy) jest nośnikiem informacji genetycznej. Struktura podwójnej helisy (Watson i Crick, 1953, z wykorzystaniem danych Rosalind Franklin): dwie antyrównoległe nici (5′→3′ i 3′→5′) skręcone prawoskrętnie wokół wspólnej osi. Każda nić zbudowana jest z nukleotydów: cukier deoksyryboza, reszta fosforanowa(V) i zasada azotowa. Zasady purynowe: adenina (A) i guanina (G) — dwupierścieniowe. Zasady pirymidynowe: tymina (T — tylko w DNA) i cytozyna (C) — jednopierścieniowe. Komplementarność: A=T (2 wiązania wodorowe), C≡G (3 wiązania wodorowe — silniejsze). Szkielet cukrowo-fosforanowy tworzy łącznik między nukleotydami (wiązania fosfodiestrowe 3′→5′). U eukariontów DNA jest upakowany w chromatynę: owija się wokół oktamerów histonowych (po 2 cząsteczki H2A, H2B, H3, H4) tworząc nukleosomy (średnica ~11 nm), które dalej kondensują do włókna 30 nm (solenoid), a następnie w wyższe rzędy upakowania aż do chromosomu metafazowego.",
         "content": [
           {
             "type": "paragraph",
@@ -393,6 +397,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "mutacje-i-biotechnologia",
         "title": "Mutacje, regulacja genów i biotechnologia",
+        "summary": "- Mutacje to nagłe, skokowe, dziedziczne zmiany w materiale genetycznym wywołane przez mutageny (fizyczne — __________ UV, X, γ; chemiczne — analogi zasad, związki alkilujące, benzopiren; biologiczne — wirusy, transpozony).\n- Mutacje genowe (punktowe): substytucja (zamiana pary nukleotydów) — cicha (synonimowa __________ nie zmienia aminokwasu), zmiany sensu (missense — zmiana aminokwasu, np.\n- anemia sierpowata: GAG→GTG, Glu→Val w łańcuchu β-hemoglobiny), nonsensowna (powstaje kodon __________ — białko skrócone), delecja/insercja (przesunięcie ramki odczytu — frameshift).",
+        "academic_detail": "Mutacje to nagłe, skokowe, dziedziczne zmiany w materiale genetycznym wywołane przez mutageny (fizyczne — promieniowanie UV, X, γ; chemiczne — analogi zasad, związki alkilujące, benzopiren; biologiczne — wirusy, transpozony). Mutacje genowe (punktowe): substytucja (zamiana pary nukleotydów) — cicha (synonimowa — nie zmienia aminokwasu), zmiany sensu (missense — zmiana aminokwasu, np. anemia sierpowata: GAG→GTG, Glu→Val w łańcuchu β-hemoglobiny), nonsensowna (powstaje kodon STOP — białko skrócone), delecja/insercja (przesunięcie ramki odczytu — frameshift). Mutacje chromosomowe (aberracje strukturalne): delecja (utrata fragmentu), duplikacja (podwojenie), inwersja (odwrócenie fragmentu 180° — pericentryczna z centromerem, paracentryczna bez), translokacja (przeniesienie fragmentu na inny chromosom — zrównoważona/niezrównoważona, np. chromosom Philadelphia t(9;22) w CML). Mutacje genomowe (zmiany liczby chromosomów): aneuploidia — trisomia (2n+1, np. trisomia 21 — zespół Downa, trisomia 18 — Edwardsa, trisomia 13 — Patau; na chromosomach płci: XXY — Klinefelter, X0 — Turner), monosomia (2n−1 — zwykle letalna); poliploidia — triploidia 3n, tetraploidia 4n (powszechna u roślin).",
         "content": [
           {
             "type": "heading",
@@ -522,6 +528,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "enzymy-i-bioenergetyka",
         "title": "Enzymy i bioenergetyka komórki",
+        "summary": "- Metabolizm to całokształt reakcji __________ zachodzących w organizmie.\n- Dzieli się na anabolizm (reakcje __________ endoergiczne, wymagają energii — np.\n- synteza białek, replikacja DNA, fotosynteza) oraz katabolizm __________ rozkładu, egzoergiczne, uwalniają energię — np.",
+        "academic_detail": "Metabolizm to całokształt reakcji chemicznych zachodzących w organizmie. Dzieli się na anabolizm (reakcje syntezy, endoergiczne, wymagają energii — np. synteza białek, replikacja DNA, fotosynteza) oraz katabolizm (reakcje rozkładu, egzoergiczne, uwalniają energię — np. oddychanie komórkowe, hydroliza ATP). ATP (adenozyno-5′-trifosforan) jest uniwersalnym przenośnikiem energii w komórce. Hydroliza ATP → ADP + Pᵢ uwalnia ~30,5 kJ/mol (w warunkach fizjologicznych ~50 kJ/mol). Energia ta napędza reakcje endoergiczne przez sprzężenie energetyczne (fosforylacja substratowa). Inne przenośniki energii: GTP, UTP, CTP oraz przenośniki elektronów: NAD⁺/NADH, NADP⁺/NADPH, FAD/FADH₂.",
         "content": [
           {
             "type": "paragraph",
@@ -546,6 +554,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "oddychanie-komorkowe",
         "title": "Oddychanie komórkowe — glikoliza, cykl Krebsa, łańcuch oddechowy",
+        "summary": "- Glikoliza (szlak Embdena-Meyerhofa-Parnasa) zachodzi __________ cytoplazmie wszystkich komórek.\n- Glukoza (C₆H₁₂O₆, 6 węgli) jest fosforylowana dwiema cząsteczkami ATP (faza inwestycji __________ i rozszczepiana na 2 cząsteczki aldehydu 3-fosfoglicerynowego (3 węgle każda).\n- W fazie zwrotu energetycznego każda trioza jest utleniana do __________ z wytworzeniem 2 ATP (fosforylacja substratowa) i 1 NADH.",
+        "academic_detail": "Glikoliza (szlak Embdena-Meyerhofa-Parnasa) zachodzi w cytoplazmie wszystkich komórek. Glukoza (C₆H₁₂O₆, 6 węgli) jest fosforylowana dwiema cząsteczkami ATP (faza inwestycji energetycznej) i rozszczepiana na 2 cząsteczki aldehydu 3-fosfoglicerynowego (3 węgle każda). W fazie zwrotu energetycznego każda trioza jest utleniana do pirogronianu z wytworzeniem 2 ATP (fosforylacja substratowa) i 1 NADH. Bilans glikolizy na 1 glukozę: +2 ATP (zużyte 2, wyprodukowane 4), +2 NADH, +2 pirogroniany. Sumarycznie: C₆H₁₂O₆ + 2NAD⁺ + 2ADP + 2Pᵢ → 2CH₃COCOO⁻ + 2NADH + 2H⁺ + 2ATP + 2H₂O.",
         "content": [
           {
             "type": "heading",
@@ -589,6 +599,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "fotosynteza",
         "title": "Fotosynteza — faza jasna i ciemna",
+        "summary": "- Fotosynteza to proces syntezy związków organicznych z CO₂ i H₂O przy __________ energii świetlnej, zachodzący w chloroplastach komórek roślinnych i u sinic.\n- Ogólne równanie: 6CO₂ + 6H₂O + __________ świetlna → C₆H₁₂O₆ + 6O₂.\n- Chloroplasty mają dwie błony, wewnątrz znajduje się stroma (zawiera DNA, rybosomy, __________ cyklu Calvina) oraz tylakoidy (spłaszczone pęcherzyki ułożone w stosy — grana).",
+        "academic_detail": "Fotosynteza to proces syntezy związków organicznych z CO₂ i H₂O przy udziale energii świetlnej, zachodzący w chloroplastach komórek roślinnych i u sinic. Ogólne równanie: 6CO₂ + 6H₂O + energia świetlna → C₆H₁₂O₆ + 6O₂. Chloroplasty mają dwie błony, wewnątrz znajduje się stroma (zawiera DNA, rybosomy, enzymy cyklu Calvina) oraz tylakoidy (spłaszczone pęcherzyki ułożone w stosy — grana). Błony tylakoidów zawierają barwniki fotosyntetyczne: chlorofil a (główny barwnik centrum reakcji, pochłania głównie niebieskie 430 nm i czerwone 662 nm), chlorofil b (barwnik pomocniczy, przekazuje energię do chlorofilu a), karotenoidy (karoteny i ksantofile — barwniki pomocnicze i fotoochronne). Anteny energetyczne (LHC — Light Harvesting Complex) zbierają energię świetlną i przekazują ją do centrum reakcji fotosystemu.",
         "content": [
           {
             "type": "paragraph",
@@ -691,6 +703,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "tkanki-organy-roslinne",
         "title": "Tkanki i organy roślin okrytonasiennych",
+        "summary": "- Rośliny nasienne (Spermatophyta) dzielą się na nagonasienne __________ i okrytonasienne (Angiospermae — jednoliścienne i dwuliścienne).\n- Ich budowa jest przystosowaniem do życia na lądzie: wykształciły tkanki okrywające (epiderma __________ kutykulą, aparaty szparkowe), wzmacniające (kolenchyma, sklerenchyma), przewodzące (ksylem i floem) oraz miękiszowe.\n- Tkanki twórcze (merystemy) dzielą się na pierwotne (stożki wzrostu pędu i korzenia, merystem interakalarny — u traw, merystem archesporialny — __________ zalążkach i woreczkach pyłkowych) oraz wtórne (kambium — miazga twórcza, fellogen — miazga korkotwórcza), umożliwiające przyrost wtórny na grubość.",
+        "academic_detail": "Rośliny nasienne (Spermatophyta) dzielą się na nagonasienne (Gymnospermae) i okrytonasienne (Angiospermae — jednoliścienne i dwuliścienne). Ich budowa jest przystosowaniem do życia na lądzie: wykształciły tkanki okrywające (epiderma z kutykulą, aparaty szparkowe), wzmacniające (kolenchyma, sklerenchyma), przewodzące (ksylem i floem) oraz miękiszowe. Tkanki twórcze (merystemy) dzielą się na pierwotne (stożki wzrostu pędu i korzenia, merystem interakalarny — u traw, merystem archesporialny — w zalążkach i woreczkach pyłkowych) oraz wtórne (kambium — miazga twórcza, fellogen — miazga korkotwórcza), umożliwiające przyrost wtórny na grubość.",
         "content": [
           {
             "type": "paragraph",
@@ -772,6 +786,8 @@ export const biologiaTheory: TextbookDomain[] = [
       {
         "id": "homeostaza-hormony",
         "title": "Homeostaza i układ hormonalny",
+        "summary": "- Homeostaza to zdolność organizmu do utrzymywania stałości środowiska wewnętrznego (temperatura ~37°C, pH krwi 7,35-7,45, stężenie glukozy __________ mg/dL na czczo, ciśnienie krwi 120/80 mmHg, osmolalność ~290 mOsm/kg H₂O) mimo zmian w otoczeniu.\n- Mechanizmy homeostatyczne działają na __________ ujemnego sprzężenia zwrotnego (np.\n- regulacja glikemii, termoregulacja) __________ dodatniego (np.",
+        "academic_detail": "Homeostaza to zdolność organizmu do utrzymywania stałości środowiska wewnętrznego (temperatura ~37°C, pH krwi 7,35-7,45, stężenie glukozy 70-110 mg/dL na czczo, ciśnienie krwi 120/80 mmHg, osmolalność ~290 mOsm/kg H₂O) mimo zmian w otoczeniu. Mechanizmy homeostatyczne działają na zasadzie ujemnego sprzężenia zwrotnego (np. regulacja glikemii, termoregulacja) lub dodatniego (np. skurcze porodowe — oksytocyna, potencjał czynnościowy). Układ hormonalny i nerwowy współpracują w podtrzymywaniu homeostazy.",
         "content": [
           {
             "type": "paragraph",

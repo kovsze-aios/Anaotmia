@@ -163,6 +163,8 @@ export const chemiaTheory: TextbookDomain[] = [
       {
         "id": "mol-stechiometria",
         "title": "Mol, masa molowa, objętość molowa gazów",
+        "summary": "- Mol jest jednostką liczności __________ w układzie SI.\n- Jeden mol zawiera dokładnie 6,02214076 × __________ obiektów elementarnych (liczba Avogadra NA).\n- Jeden mol atomów pierwiastka zawiera NA atomów, __________ mol cząsteczek związku chemicznego zawiera NA cząsteczek.",
+        "academic_detail": "Mol jest jednostką liczności materii w układzie SI. Jeden mol zawiera dokładnie 6,02214076 × 10²³ obiektów elementarnych (liczba Avogadra NA). Jeden mol atomów pierwiastka zawiera NA atomów, jeden mol cząsteczek związku chemicznego zawiera NA cząsteczek. Masa molowa (M) to masa 1 mola substancji, wyrażona w g/mol — liczbowo równa masie atomowej (dla pierwiastków, podawana w unitach u) lub masie cząsteczkowej (dla związków, suma mas atomowych). Przykład: M(H₂O) = 2 × 1,008 + 16,00 = 18,02 g/mol. Liczba moli n = m/M, gdzie m to masa w gramach.",
         "content": [
           {
             "type": "paragraph",
@@ -244,6 +246,8 @@ export const chemiaTheory: TextbookDomain[] = [
       {
         "id": "kwasy-zasady-sole",
         "title": "Kwasy, zasady i sole — teorie i reakcje",
+        "summary": "- Teoria Arrheniusa: kwas to substancja, która w roztworze wodnym __________ na kationy H⁺, zasada dysocjuje na aniony OH⁻.\n- Ograniczenie: dotyczy __________ roztworów wodnych.\n- Teoria Brønsteda-Lowry'ego (protonowa): kwas to donor __________ (H⁺), zasada to akceptor protonu.",
+        "academic_detail": "Teoria Arrheniusa: kwas to substancja, która w roztworze wodnym dysocjuje na kationy H⁺, zasada dysocjuje na aniony OH⁻. Ograniczenie: dotyczy tylko roztworów wodnych. Teoria Brønsteda-Lowry'ego (protonowa): kwas to donor protonu (H⁺), zasada to akceptor protonu. Każdy kwas ma sprzężoną z nim zasadę (HA/A⁻). Reakcja kwas-zasada to przeniesienie protonu. Przykład: HCl + H₂O → H₃O⁺ + Cl⁻ (HCl — kwas, H₂O — zasada, H₃O⁺ — kwas sprzężony, Cl⁻ — zasada sprzężona). Teoria Lewisa: kwas to akceptor pary elektronowej (np. BF₃, AlCl₃), zasada to donor pary elektronowej (np. NH₃, F⁻). Moc kwasu/zasady: stała dysocjacji Ka (dla kwasów) i Kb (dla zasad). Im większe Ka, tym mocniejszy kwas (pKa = −log Ka). Mocne kwasy (HCl, HBr, HI, HNO₃, H₂SO₄ — 1. stopień, HClO₄) — dysocjują całkowicie. Słabe kwasy (CH₃COOH, H₂CO₃, H₂S, HCN, HF) — dysocjują częściowo.",
         "content": [
           {
             "type": "paragraph",
@@ -273,6 +277,8 @@ export const chemiaTheory: TextbookDomain[] = [
       {
         "id": "redox-elektrochemia",
         "title": "Utlenianie i redukcja — elektrochemia",
+        "summary": "- Utlenianie (oksydacja) to oddawanie __________ wzrost stopnia utlenienia.\n- Redukcja to przyjmowanie __________ obniżenie stopnia utlenienia.\n- Utleniacz (akceptor elektronów) __________ ulega redukcji.",
+        "academic_detail": "Utlenianie (oksydacja) to oddawanie elektronów, wzrost stopnia utlenienia. Redukcja to przyjmowanie elektronów, obniżenie stopnia utlenienia. Utleniacz (akceptor elektronów) sam ulega redukcji. Reduktor (donor elektronów) sam ulega utlenieniu. Bilansowanie równań redox: metoda bilansu elektronowego (liczba oddanych e⁻ = liczba przyjętych e⁻) lub metoda jonowo-elektronowa (zapis reakcji połówkowych w środowisku kwasowym lub zasadowym). Szereg aktywności metali (szereg napięciowy): Li > K > Ca > Na > Mg > Al > Zn > Cr > Fe > Ni > Sn > Pb > H > Cu > Hg > Ag > Pt > Au. Metal o niższym potencjale wypiera metal o wyższym potencjale z roztworu jego soli. Przykład: Zn + CuSO₄ → ZnSO₄ + Cu (Zn wypiera Cu bo jest aktywniejszy).",
         "content": [
           {
             "type": "heading",
@@ -307,6 +313,8 @@ export const chemiaTheory: TextbookDomain[] = [
       {
         "id": "chemia-opisowa",
         "title": "Chemia opisowa pierwiastków",
+        "summary": "- Układ okresowy (Mendelejew) grupuje pierwiastki według __________ Z i okresowego powtarzania się właściwości.\n- W okresie (→): rośnie elektroujemność, energia jonizacji i __________ kwasowy tlenków; maleje promień atomowy i charakter metaliczny.\n- W grupie (↓): rośnie promień atomowy i __________ metaliczny; maleje elektroujemność i energia jonizacji.",
+        "academic_detail": "Układ okresowy (Mendelejew) grupuje pierwiastki według rosnącego Z i okresowego powtarzania się właściwości. W okresie (→): rośnie elektroujemność, energia jonizacji i charakter kwasowy tlenków; maleje promień atomowy i charakter metaliczny. W grupie (↓): rośnie promień atomowy i charakter metaliczny; maleje elektroujemność i energia jonizacji. Bloki: s (grupy 1-2), p (13-18), d (3-12 — metale przejściowe), f (lantanowce i aktynowce). Metale: połysk, kowalność, ciągliwość, przewodnictwo elektryczne i cieplne, tworzą kationy, tlenki przeważnie zasadowe. Niemetale: tworzą aniony, tlenki przeważnie kwasowe, słabe przewodnictwo.",
         "content": [
           {
             "type": "heading",
@@ -403,6 +411,8 @@ export const chemiaTheory: TextbookDomain[] = [
       {
         "id": "weglowodory",
         "title": "Węglowodory — alkany, alkeny, alkiny, areny",
+        "summary": "- Chemia organiczna to chemia związków węgla (z wyjątkiem CO, __________ węglików, cyjanków i węglanów, które zalicza się do nieorganicznych).\n- Atom węgla (4 elektrony walencyjne) tworzy 4 wiązania kowalencyjne, może łączyć __________ w długie łańcuchy (katenacja) i tworzyć wiązania pojedyncze, podwójne i potrójne.\n- Hybrydyzacja: sp³ (alkany), sp² __________ areny), sp (alkiny).",
+        "academic_detail": "Chemia organiczna to chemia związków węgla (z wyjątkiem CO, CO₂, węglików, cyjanków i węglanów, które zalicza się do nieorganicznych). Atom węgla (4 elektrony walencyjne) tworzy 4 wiązania kowalencyjne, może łączyć się w długie łańcuchy (katenacja) i tworzyć wiązania pojedyncze, podwójne i potrójne. Hybrydyzacja: sp³ (alkany), sp² (alkeny, areny), sp (alkiny). Szereg homologiczny — grupa związków o podobnej budowie, różniących się o grupę −CH₂−, o podobnych właściwościach chemicznych i regularnie zmieniających się właściwościach fizycznych.",
         "content": [
           {
             "type": "paragraph",
@@ -450,6 +460,8 @@ export const chemiaTheory: TextbookDomain[] = [
       {
         "id": "grupy-funkcyjne",
         "title": "Związki organiczne z grupami funkcyjnymi",
+        "summary": "- Alkohole (R−OH) — __________ hydroksylowa −OH.\n- Szereg homologiczny: metanol CH₃OH (trucizna, ślepota), etanol C₂H₅OH (fermentacja, bioetanol), __________ etylenowy HO−CH₂−CH₂−OH (płyn chłodniczy), glicerol (propano-1,2,3-triol — składnik tłuszczów).\n- Rzędowość alkoholi: I-rzędowe (R−CH₂OH — utleniają się do aldehydów, potem kwasów), II-rzędowe (R₂CHOH — __________ się do ketonów), III-rzędowe (R₃COH — nie utleniają się łatwo, wymagają rozerwania wiązań C−C).",
+        "academic_detail": "Alkohole (R−OH) — grupa hydroksylowa −OH. Szereg homologiczny: metanol CH₃OH (trucizna, ślepota), etanol C₂H₅OH (fermentacja, bioetanol), glikol etylenowy HO−CH₂−CH₂−OH (płyn chłodniczy), glicerol (propano-1,2,3-triol — składnik tłuszczów). Rzędowość alkoholi: I-rzędowe (R−CH₂OH — utleniają się do aldehydów, potem kwasów), II-rzędowe (R₂CHOH — utleniają się do ketonów), III-rzędowe (R₃COH — nie utleniają się łatwo, wymagają rozerwania wiązań C−C). Reakcje alkoholi: z metalami alkalicznymi (2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂), estryfikacja, dehydratacja (odwodnienie): wewnątrzcząsteczkowa (C₂H₅OH → C₂H₄ + H₂O, kat. H₂SO₄/Al₂O₃, 170°C) i międzycząsteczkowa (2C₂H₅OH → C₂H₅OC₂H₅ + H₂O, 140°C — eter dietylowy). Fenole (Ar−OH) — grupa −OH bezpośrednio przy pierścieniu aromatycznym, charakter kwasowy (fenol + NaOH → fenolan sodu + H₂O — fenole są słabymi kwasami, słabszymi od kwasów karboksylowych ale mocniejszymi od alkoholi). Fenol daje fioletowe zabarwienie z FeCl₃ (reakcja charakterystyczna). Etery R−O−R′ — słabo reaktywne, dobre rozpuszczalniki (eter dietylowy — narkoza).",
         "content": [
           {
             "type": "heading",
