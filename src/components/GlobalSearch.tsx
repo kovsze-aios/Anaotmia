@@ -53,9 +53,10 @@ export function GlobalSearch() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm text-zinc-500 bg-zinc-100/50 hover:bg-zinc-200/50 hover:text-zinc-900 border border-zinc-200 rounded-full transition-colors dark:bg-zinc-800/50 dark:border-zinc-700/50 dark:text-zinc-400 dark:hover:bg-zinc-700/50 dark:hover:text-zinc-100"
+        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm text-zinc-500 bg-zinc-100/50 hover:bg-zinc-200/50 hover:text-zinc-900 border border-zinc-200 rounded-full transition-colors dark:bg-zinc-800/50 dark:border-zinc-700/50 dark:text-zinc-400 dark:hover:bg-zinc-700/50 dark:hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+        aria-label="Szukaj pojęcia (Command/Control + K)"
       >
-        <SearchIcon className="w-4 h-4" />
+        <SearchIcon className="w-4 h-4" aria-hidden="true" />
         <span className="hidden sm:inline-block">Szukaj pojęcia...</span>
         <span className="inline-block sm:hidden">Szukaj...</span>
         <kbd className="pointer-events-none hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border bg-zinc-100 px-1.5 font-mono text-[10px] font-medium text-zinc-600 opacity-100 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400">
