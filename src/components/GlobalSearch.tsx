@@ -16,6 +16,8 @@ import { searchTerms, type SearchItem } from "@/lib/search";
 export function GlobalSearch() {
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
+  // Bolt: useDeferredValue prevents the expensive fuzzy search from blocking the main thread during typing
+  const deferredQuery = React.useDeferredValue(query);
   const router = useRouter();
 
   React.useEffect(() => {
@@ -35,7 +37,7 @@ export function GlobalSearch() {
     command();
   }, []);
 
-  const results = React.useMemo(() => searchTerms(query), [query]);
+  const results = React.useMemo(() => searchTerms(deferredQuery), [deferredQuery]);
 
   const groupedResults = React.useMemo(() => {
     const grouped: Record<string, SearchItem[]> = {

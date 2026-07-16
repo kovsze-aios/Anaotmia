@@ -78,7 +78,8 @@ const fuseOptions = {
   ],
   threshold: 0.4,
   ignoreLocation: true,
-  includeMatches: true,
+  // Bolt: removed includeMatches: true since we do not use the matches array,
+  // saving CPU and memory during search
 };
 
 export const fuse = new Fuse(searchData, fuseOptions);
