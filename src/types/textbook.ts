@@ -54,6 +54,7 @@ export interface TextbookSection {
   academic_sources?: AcademicSource[];
   content: ContentBlock[];
   recallQuestions: RecallQuestion[];
+  maturaQuestions?: string[];
 }
 
 export interface TextbookDomain {

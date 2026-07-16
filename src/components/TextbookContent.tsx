@@ -85,26 +85,35 @@ export function TextbookContent({ section }: TextbookContentProps) {
         const hasAcademicDetail = !!section.academic_detail;
         const hasContentBlocks = section.content && section.content.length > 0;
 
-        // Count how many "sources" we have conceptually
         let sourceCount = sources.length;
-        if (sourceCount === 0) {
-          if (hasAcademicDetail) sourceCount++;
-          if (hasContentBlocks) sourceCount++;
-        }
+        if (hasAcademicDetail) sourceCount++;
+        if (hasContentBlocks) sourceCount++;
 
-        if (sourceCount === 0) return null; // Edge state: degrading gracefully if empty
+        if (sourceCount === 0) return null;
 
         return (
           <div className="deep-theory-section border-t border-zinc-100 dark:border-zinc-800 pt-6">
-            {sources.length === 1 ? (
-              <>
-                <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
-                <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
-                  {sources[0].content}
-                </div>
-              </>
-            ) : sources.length > 1 ? (
-              <div className="flex flex-col gap-4">
+            <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
+            {hasAcademicDetail && (
+              <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
+                {section.academic_detail}
+              </div>
+            )}
+            {hasContentBlocks && (
+              <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
+                {section.content.map((block, index) => (
+                  <ContentBlockRenderer key={index} block={block} />
+                ))}
+              </div>
+            )}
+            {sources.length === 1 && (
+              <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
+                <h4 className="text-lg font-semibold mb-2">{sources[0].title}</h4>
+                {sources[0].content}
+              </div>
+            )}
+            {sources.length > 1 && (
+              <div className="flex flex-col gap-4 mt-4">
                 {sources.map((src, i) => (
                   <details key={i} className="group">
                     <summary
@@ -126,23 +135,6 @@ export function TextbookContent({ section }: TextbookContentProps) {
                   </details>
                 ))}
               </div>
-            ) : (
-              // Fallback for single source in academic_detail or content blocks
-              <>
-                <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
-                {hasAcademicDetail && (
-                  <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
-                    {section.academic_detail}
-                  </div>
-                )}
-                {hasContentBlocks && (
-                  <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
-                    {section.content.map((block, index) => (
-                      <ContentBlockRenderer key={index} block={block} />
-                    ))}
-                  </div>
-                )}
-              </>
             )}
           </div>
         );
