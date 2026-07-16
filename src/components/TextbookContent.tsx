@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
 import type { TextbookSection, ContentBlock } from "@/types/textbook";
@@ -45,10 +45,62 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
   }
 }
 
+function getSectionWordCount(section: TextbookSection): number {
+  let count = 0;
+
+  const countWords = (text: string) => text.split(/\s+/).filter(word => word.length > 0).length;
+
+  if (section.summary) count += countWords(section.summary);
+  if (section.academic_detail) count += countWords(section.academic_detail);
+
+  if (section.academic_sources) {
+    section.academic_sources.forEach(src => {
+      count += countWords(src.content);
+    });
+  }
+
+  if (section.content) {
+    section.content.forEach(block => {
+      if (block.type === 'paragraph' || block.type === 'heading') {
+        count += countWords(block.text);
+      }
+    });
+  }
+
+  return count;
+}
+
 export function TextbookContent({ section }: TextbookContentProps) {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const wordCount = getSectionWordCount(section);
+  const readingTime = Math.ceil(wordCount / 200) || 1;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (windowHeight === 0) return;
+
+      requestAnimationFrame(() => setScrollProgress((totalScroll / windowHeight) * 100));
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <article className="textbook-article">
-      <h1 className="textbook-article__title">{section.title}</h1>
+    <article className="textbook-article relative pt-4">
+      <div
+        className="fixed top-0 left-0 h-[2px] bg-blue-500 z-50 transition-all duration-150"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
+      <div className="flex flex-wrap items-center gap-4 mb-6">
+        <h1 className="textbook-article__title !mb-0">{section.title}</h1>
+        <span className="text-xs text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-full whitespace-nowrap border border-zinc-200 dark:border-zinc-700 font-medium">
+          ⏱ Czas czytania: ~{readingTime} min
+        </span>
+      </div>
 
       <div className="high-yield-section mb-8">
         <h3 className="text-sm font-semibold tracking-wider text-zinc-400 uppercase mb-3">
