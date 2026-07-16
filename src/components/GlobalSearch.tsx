@@ -4,7 +4,7 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import { SearchIcon } from "lucide-react";
 import {
-  CommandDialog,
+  Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
@@ -19,17 +19,17 @@ export function GlobalSearch() {
   // Bolt: useDeferredValue prevents the expensive fuzzy search from blocking the main thread during typing
   const deferredQuery = React.useDeferredValue(query);
   const router = useRouter();
+  const searchRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setOpen(false);
       }
     };
 
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const runCommand = React.useCallback((command: () => unknown) => {
@@ -52,31 +52,19 @@ export function GlobalSearch() {
   }, [results]);
 
   return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm text-zinc-500 bg-zinc-100/50 hover:bg-zinc-200/50 hover:text-zinc-900 border border-zinc-200 rounded-full transition-colors dark:bg-zinc-800/50 dark:border-zinc-700/50 dark:text-zinc-400 dark:hover:bg-zinc-700/50 dark:hover:text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
-        aria-label="Szukaj pojęcia (Command/Control + K)"
-      >
-        <SearchIcon className="w-4 h-4" aria-hidden="true" />
-        <span className="hidden sm:inline-block">Szukaj pojęcia...</span>
-        <span className="inline-block sm:hidden">Szukaj...</span>
-        <kbd className="pointer-events-none hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border bg-zinc-100 px-1.5 font-mono text-[10px] font-medium text-zinc-600 opacity-100 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400">
-          <span className="text-xs">⌘</span>K
-        </kbd>
-      </button>
-
-      <CommandDialog open={open} onOpenChange={setOpen}>
+    <div className="relative" ref={searchRef}>
+      <Command className="overflow-visible bg-transparent border-none">
         <CommandInput
-          placeholder="Szukaj pojęcia..."
+          placeholder="Szukaj..."
           value={query}
           onValueChange={setQuery}
+          onFocus={() => setOpen(true)}
         />
-        <CommandList className="max-h-[60vh] overflow-y-auto overscroll-contain">
-          <CommandEmpty>Nie znaleziono wyników dla &quot;{query}&quot;.</CommandEmpty>
+        {open && query.length > 0 && (
+          <div className="absolute top-full mt-2 right-0 w-80 max-h-96 overflow-y-auto rounded-lg shadow-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 z-50">
+            <CommandList className="max-h-[60vh] overflow-y-auto overscroll-contain">
+              <CommandEmpty>Nie znaleziono wyników dla &quot;{query}&quot;.</CommandEmpty>
 
-          {query.length > 0 && (
-            <>
               {groupedResults.Anatomia.length > 0 && (
                 <CommandGroup heading="🩺 Anatomia">
                   {groupedResults.Anatomia.map((item) => (
@@ -133,10 +121,10 @@ export function GlobalSearch() {
                   ))}
                 </CommandGroup>
               )}
-            </>
-          )}
-        </CommandList>
-      </CommandDialog>
-    </>
+            </CommandList>
+          </div>
+        )}
+      </Command>
+    </div>
   );
 }

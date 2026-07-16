@@ -35,12 +35,11 @@ export function Topbar() {
               href="https://buycoff.ee/"
               target="_blank"
               rel="noopener noreferrer"
-              className="theme-pill rounded-full border border-zinc-200 text-zinc-800 hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 px-4 py-1 text-xs font-bold transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+              className="theme-pill w-8 h-8 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-800 hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
               title="Kup mi kawę"
               aria-label="Wesprzyj projekt (otwiera się w nowej karcie)"
             >
               <span aria-hidden="true">☕</span>
-              <span className="hidden sm:inline">Wesprzyj projekt</span>
             </a>
 
             <button
