@@ -49,7 +49,7 @@ export interface AcademicSource {
 export interface TextbookSection {
   id: string;
   title: string;
-  summary: string;
+  summary?: string;
   academic_detail?: string;
   academic_sources?: AcademicSource[];
   content: ContentBlock[];
