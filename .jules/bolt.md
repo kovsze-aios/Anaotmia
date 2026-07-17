@@ -5,3 +5,7 @@
 ## 2025-02-12 - Unnecessary Data Processing
 **Learning:** Passing `includeMatches: true` to Fuse.js can add overhead when the application logic immediately discards `result.matches`.
 **Action:** Always check how return values from third-party libraries are consumed; if the data isn't used, disable its computation if an option is available.
+
+## 2025-02-12 - Isolate Scroll State to Prevent Re-renders
+**Learning:** Attaching `scroll` event listeners that update state at the root of a large text-heavy component (like `TextbookContent`) causes massive unnecessary re-renders on every scroll tick.
+**Action:** Always isolate high-frequency state updates (like scroll progress or mouse position) into small, dedicated leaf components so that only the tiny visual element re-renders, not the whole page content.
