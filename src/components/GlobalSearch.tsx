@@ -59,6 +59,9 @@ export function GlobalSearch() {
           value={query}
           onValueChange={setQuery}
           onFocus={() => setOpen(true)}
+          className="dark:text-zinc-100 dark:placeholder-zinc-400"
+          wrapperClassName="dark:bg-zinc-800/50 dark:border-zinc-700"
+          iconClassName="dark:text-zinc-400 dark:opacity-100"
         />
         {open && query.length > 0 && (
           <div className="absolute top-full mt-2 right-0 w-80 max-h-96 overflow-y-auto rounded-lg shadow-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 z-50">
