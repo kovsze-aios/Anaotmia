@@ -83,7 +83,7 @@ function SubAccordion({
 
 /* ─── Nav links ─── */
 const anatomyLinks = getDomains().map((domain) => ({
-  href: `/textbook?domain=${domain.id}`,
+  href: `/theory/anatomia`,
   label: `${domain.icon} ${domain.title}`,
 }));
 

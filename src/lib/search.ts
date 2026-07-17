@@ -26,7 +26,7 @@ const buildSearchIndex = (): SearchItem[] => {
         id: section.id,
         title: section.title,
         subject: "Anatomia",
-        url: `/textbook?domain=${domain.id}#${section.id}`,
+        url: `/theory/anatomia/${section.id}`,
         summary: section.summary,
         academic_detail: section.academic_detail,
         icon: "🩺",

@@ -7,7 +7,7 @@ const subjectCards = [
     description: (
       <>8 działów anatomicznych — od osteologii po narządy zmysłów. <strong>Pełen zakres egzaminu WF.</strong></>
     ),
-    href: "/textbook",
+    href: "/theory/anatomia",
     icon: "🩺",
     color: "#3a5062",
   },
@@ -152,7 +152,7 @@ export function Topics() {
         {anatomyTopics.map((topic) => (
           <Link
             key={topic.domain}
-            href={`/textbook?domain=${topic.domain}`}
+            href="/theory/anatomia"
             className="topicbox"
           >
             <div

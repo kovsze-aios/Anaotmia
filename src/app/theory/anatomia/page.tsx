@@ -12,7 +12,7 @@ export default function TextbookPage() {
     (domainId: string) => {
       const domain = getDomain(domainId);
       if (domain && domain.sections.length > 0) {
-        router.push(`/textbook/${domain.sections[0].id}`);
+        router.push(`/theory/anatomia/${domain.sections[0].id}`);
       }
     },
     [router],
