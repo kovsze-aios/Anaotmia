@@ -11,14 +11,27 @@ function generateId(text: string) {
   return text.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, '').trim().replace(/\s+/g, '-');
 }
 
+
+export function formatOcrText(text: string): string {
+  if (!text) return "";
+  let formatted = text.replace(/\r\n/g, '\n');
+  formatted = formatted.replace(/---\s*STRONA\s+\d+\s*---/gi, '');
+  formatted = formatted.replace(/(?<!\n)\n(?!\n)/g, ' ');
+  return formatted.trim();
+}
+
 function parseMarkdownContent(text: string) {
+
   const parts = text.split(/^(#{1,6})\s+(.+)$/gm);
   const nodes: React.ReactNode[] = [];
   const headers: ToCItem[] = [];
 
   for (let i = 0; i < parts.length; i += 3) {
     if (parts[i]) {
-      nodes.push(<span key={`text-${i}`}>{parts[i]}</span>);
+      const formattedText = formatOcrText(parts[i]);
+      const paragraphs = formattedText.split(/\n\n+/);
+      const paraNodes = paragraphs.filter(p => p.trim() !== "").map((p, idx) => <p key={`text-${i}-${idx}`}>{p}</p>);
+      nodes.push(<React.Fragment key={`frag-${i}`}>{paraNodes}</React.Fragment>);
     }
     if (i + 1 < parts.length) {
       const level = parts[i + 1].length;
@@ -108,7 +121,7 @@ function MarkdownBlock({ text }: { text: string }) {
   return (
     <>
       <TableOfContents items={headers} />
-      <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content whitespace-pre-wrap">
+      <div className="mt-4 prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
         {nodes}
       </div>
     </>
@@ -162,7 +175,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
         </h3>
 
         {section.summary && (
-          <div className="mb-6 prose prose-zinc dark:prose-invert max-w-none text-justify">
+          <div className="mb-6 prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify">
             {section.summary.split('\n').map((line, idx) => {
               if (line.trim().startsWith('-')) {
                 return <li key={idx} className="ml-4 list-disc">{line.replace(/^-\s*/, '')}</li>;
@@ -230,7 +243,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
             ) : null}
 
             {hasContentBlocks && (
-              <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
+              <div className="mt-4 prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
                 {section.content.map((block, index) => (
                   <ContentBlockRenderer key={index} block={block} />
                 ))}
