@@ -115,10 +115,10 @@ function MarkdownBlock({ text }: { text: string }) {
   );
 }
 
-export function TextbookContent({ section }: TextbookContentProps) {
+// Bolt: Extracted scroll progress state into a separate component
+// to prevent the entire TextbookContent from re-rendering on every scroll event.
+function ScrollProgressBar() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const wordCount = getSectionWordCount(section);
-  const readingTime = Math.ceil(wordCount / 200) || 1;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -134,11 +134,20 @@ export function TextbookContent({ section }: TextbookContentProps) {
   }, []);
 
   return (
+    <div
+      className="fixed top-0 left-0 h-[2px] bg-blue-500 z-50 transition-all duration-150"
+      style={{ width: `${scrollProgress}%` }}
+    />
+  );
+}
+
+export function TextbookContent({ section }: TextbookContentProps) {
+  const wordCount = getSectionWordCount(section);
+  const readingTime = Math.ceil(wordCount / 200) || 1;
+
+  return (
     <article className="textbook-article relative pt-4">
-      <div
-        className="fixed top-0 left-0 h-[2px] bg-blue-500 z-50 transition-all duration-150"
-        style={{ width: `${scrollProgress}%` }}
-      />
+      <ScrollProgressBar />
 
       <div className="flex flex-wrap items-center gap-4 mb-6">
         <h1 className="textbook-article__title !mb-0">{section.title}</h1>
