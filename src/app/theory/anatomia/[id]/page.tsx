@@ -26,7 +26,8 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const id = params.id;
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
   const found = getSectionAndDomain(id);
 
   if (!found) {
@@ -69,8 +70,9 @@ export async function generateMetadata(
   };
 }
 
-export default function TextbookSectionPage({ params }: { params: { id: string } }) {
-  const id = params.id;
+export default async function TextbookSectionPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
   const found = getSectionAndDomain(id);
 
   if (!found) {

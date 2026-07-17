@@ -14,7 +14,7 @@ export function Hero() {
             Stworzony pod ramy egzaminu <strong>Medycyna</strong>.
             Oparty na sprawdzonych źródłach — Bochenek, Reicher, Lewiński.
           </p>
-          <Link href="/textbook" className="btn btn-primary">
+          <Link href="/theory/anatomia" className="btn btn-primary">
             Zacznij naukę za darmo
           </Link>
         </div>

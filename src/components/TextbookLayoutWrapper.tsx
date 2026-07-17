@@ -10,12 +10,12 @@ export function TextbookLayoutWrapper({ children }: { children: React.ReactNode 
   const router = useRouter();
 
   // Determine active section from the URL path.
-  // We assume the URL matches `/textbook/[id]` where [id] is the section ID.
+  // We assume the URL matches `/theory/anatomia/[id]` where [id] is the section ID.
   const pathParts = pathname.split("/");
-  const activeSectionId = pathParts.length > 2 && pathParts[1] === "textbook" ? pathParts[2] : null;
+  const activeSectionId = pathParts.length > 3 && pathParts[1] === "theory" && pathParts[2] === "anatomia" ? pathParts[3] : null;
 
   const handleSectionSelect = (domainId: string, sectionId: string) => {
-    router.push(`/textbook/${sectionId}`);
+    router.push(`/theory/anatomia/${sectionId}`);
   };
 
   return (
