@@ -224,7 +224,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
                 {allSources.map((src, i) => (
                   <details key={i} className="group" open={false}>
                     <summary
-                      className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                      className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none [&::-webkit-details-marker]:hidden focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
@@ -234,7 +234,6 @@ export function TextbookContent({ section }: TextbookContentProps) {
                       }}
                     >
                       Rozwiń pełny opis akademicki: {src.title}
-                      <span className="transition group-open:rotate-180">▼</span>
                     </summary>
                     <div className="px-4"><MarkdownBlock text={src.content} /></div>
                   </details>
