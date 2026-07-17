@@ -465,8 +465,8 @@ export const nervous: TextbookDomain = {
           "examRef": ""
         }
       ],
-      "academic_detail": "Rdzeń kręgowy na przekroju poprzecznym dzieli się na istotę szarą oraz istotę białą. Istota szara na przekroju przypomina literę H i tworzy rogi: rogi przednie (motoneurony, ruchowe), rogi tylne (czuciowe) oraz w odcinku piersiowym rogi boczne (układ autonomiczny). Istota biała otacza istotę szarą i jest podzielona na sznury: sznur przedni, boczny i tylny, którymi biegną drogi wstępujące i zstępujące.",
-      "summary": "- Rdzeń kręgowy na przekroju poprzecznym dzieli się na istotę **szarą** (rogi przednie, tylne, boczne) i istotę białą (__________).",
+      "academic_detail": "Rdzeń kręgowy na przekroju poprzecznym dzieli się na istotę szarą oraz istotę białą. Istota szara na przekroju przypomina literę H i tworzy rogi: rogi przednie (motoneurony, ruchowe), rogi tylne (czuciowe) oraz w odcinku piersiowym rogi boczne (układ autonomiczny). Istota biała otacza istotę szarą i jest podzielona na sznury: sznur przedni, boczny i tylny, którymi biegną drogi wstępujące i zstępujące.\n\nRdzeń kręgowy (medulla spinalis) w przekroju poprzecznym ukazuje istotę szarą wewnątrz (w kształcie litery H - rogi przednie, tylne i boczne) i istotę białą na zewnątrz (sznury przednie, boczne i tylne). Rogi przednie są ruchowe, tylne czuciowe, a boczne (C8-L2) współczulne.",
+      "summary": "- Rdzeń kręgowy na przekroju poprzecznym dzieli się na istotę **szarą** (rogi przednie, tylne, boczne) i istotę białą (__________).\n- W przekroju rdzenia kręgowego istota szara tworzy __________, a istota biała tworzy __________. Rogi przednie pełnią funkcję __________, a tylne __________.",
       "academic_sources": [
         {
           "title": "Anatomia egzamin 2026 WF",
