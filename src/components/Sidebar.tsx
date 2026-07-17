@@ -27,7 +27,7 @@ function AccordionGroup({
         aria-expanded={expanded}
       >
         <span>{label}</span>
-        <span className="sidebar-accordion__chevron">
+        <span className="sidebar-accordion__chevron" aria-hidden="true">
           {expanded ? "▲" : "▼"}
         </span>
       </button>
@@ -64,7 +64,7 @@ function SubAccordion({
         aria-expanded={expanded}
       >
         <span>{label}</span>
-        <span className="sidebar-sub-accordion__chevron">
+        <span className="sidebar-sub-accordion__chevron" aria-hidden="true">
           {expanded ? "–" : "+"}
         </span>
       </button>
