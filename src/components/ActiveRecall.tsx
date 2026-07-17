@@ -54,6 +54,7 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
           className={`active-recall-new__indicator transition-all duration-300 ease-in-out ${
             revealed ? "rotate-90" : ""
           }`}
+          aria-hidden="true"
         >
           {revealed ? "▼" : "▶"}
         </span>

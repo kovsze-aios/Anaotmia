@@ -4,3 +4,6 @@
 ## 2026-07-16 - Enhanced Navigation Accessibility
 **Learning:** Decorative icons/emojis in buttons/links (like a coffee emoji or search icon) need `aria-hidden="true"` to prevent screen readers from reading them out in confusing ways. Custom Tailwind buttons need explicit `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` classes since native focus styles are often removed by Tailwind resets.
 **Action:** When adding or auditing icon-based buttons, ensure an `aria-label` provides the intent and `aria-hidden="true"` hides the visual icon from assistive tech. Always apply consistent `focus-visible` utility classes to custom interactive elements.
+## 2024-05-18 - A11y Anti-patterns
+**Learning:** Found instances where redundant or conflicting `aria-label` attributes were added to buttons that already render accessible text (e.g. `aria-label="Zamknij"` on a button containing the text "Close"). This violates WCAG 2.5.3 (Label in Name) and can cause issues for voice-control users.
+**Action:** Always ensure that `aria-label` does not conflict with visible text. For purely decorative elements (like chevrons `▲` / `▼` indicating expanded state), use `aria-hidden="true"` so screen readers don't read them out loud, especially when the parent button already manages the `aria-expanded` state.

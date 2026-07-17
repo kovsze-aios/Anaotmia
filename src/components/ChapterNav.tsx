@@ -60,7 +60,7 @@ export function ChapterNav({
               )}
               {domain.shortTitle}
             </span>
-            <span className="chapter-nav__chevron">
+            <span className="chapter-nav__chevron" aria-hidden="true">
               {expandedDomains.has(domain.id) ? "▾" : "▸"}
             </span>
           </button>
