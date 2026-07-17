@@ -101,6 +101,15 @@
   --color-kenhub-border: #d4d4d8;
 }
 
+::selection {
+  background-color: #bfdbfe; /* tailwind blue-200 */
+  color: #172554; /* tailwind blue-950 */
+}
+.dark ::selection {
+  background-color: #1e3a8a; /* tailwind blue-900 */
+  color: #eff6ff; /* tailwind blue-50 */
+}
+
 .dark {
   /* NOIR Dark Mode — pitch black ecosystem */
   --background: #000000;
@@ -1397,7 +1406,6 @@ main hr {
 .textbook-welcome__exam h2 {
   font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: #f4f4f5;
   margin: 0 0 8px;
 }
 
