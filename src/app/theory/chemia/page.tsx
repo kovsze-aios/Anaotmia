@@ -1,17 +1,36 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { TextbookLayout } from "@/components/TextbookLayout";
 import { TextbookContent } from "@/components/TextbookContent";
 import { chemiaTheory } from "@/data/chemia/theory";
 import type { TextbookSection } from "@/types/textbook";
 
-export default function TeoriaChemiaPage() {
+function ChemiaTheoryInner() {
   const domains = chemiaTheory;
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const domainParam = searchParams.get("domain");
+
   const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<TextbookSection | null>(
     null,
   );
+
+  useEffect(() => {
+    if (domainParam) {
+      const domain = domains.find((d) => d.id === domainParam);
+      if (domain && domain.sections.length > 0) {
+        const firstSection = domain.sections[0];
+        setActiveSectionId(firstSection.id);
+        setActiveSection(firstSection);
+        // Clean up the URL to not show the ?domain= query parameter
+        router.replace("/theory/chemia", { scroll: false });
+      }
+    }
+  }, [domainParam, domains, router]);
 
   const handleSectionSelect = useCallback(
     (domainId: string, sectionId: string) => {
@@ -44,14 +63,28 @@ export default function TeoriaChemiaPage() {
           <div className="textbook-welcome__exam">
             <h2>Działy tematyczne</h2>
             <p>Materiał podzielony na główne działy chemii:</p>
-            <ol className="textbook-welcome__domains">
+            <div className="textbook-welcome__domain-grid">
               {domains.map((d) => (
-                <li key={d.id}>{d.icon} {d.title}</li>
+                <Link
+                  key={d.id}
+                  href={`/theory/chemia?domain=${d.id}`}
+                  className="textbook-welcome__domain-btn flex items-center cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors w-full text-left"
+                >
+                  {d.icon} {d.title}
+                </Link>
               ))}
-            </ol>
+            </div>
           </div>
         </div>
       )}
     </TextbookLayout>
+  );
+}
+
+export default function TeoriaChemiaPage() {
+  return (
+    <Suspense fallback={<div>Ładowanie...</div>}>
+      <ChemiaTheoryInner />
+    </Suspense>
   );
 }
