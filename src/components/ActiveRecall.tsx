@@ -43,7 +43,7 @@ export function ActiveRecall({ question, answer, examRef }: ActiveRecallProps) {
       }`}
     >
       <button
-        className="active-recall-new__trigger"
+        className="active-recall-new__trigger focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
         onClick={() => setRevealed(!revealed)}
         aria-expanded={revealed}
       >
