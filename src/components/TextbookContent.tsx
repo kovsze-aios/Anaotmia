@@ -94,7 +94,10 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
 function getSectionWordCount(section: TextbookSection): number {
   let count = 0;
 
-  const countWords = (text: string) => text.split(/\s+/).filter(word => word.length > 0).length;
+  // Bolt: Optimized word counting for massive raw text strings
+  // Uses regex matching instead of splitting and filtering to prevent
+  // excessive memory allocation and avoid Garbage Collection pauses.
+  const countWords = (text: string) => (text.match(/\S+/g) || []).length;
 
   if (section.summary) count += countWords(section.summary);
   if (section.academic_detail) count += countWords(section.academic_detail);
