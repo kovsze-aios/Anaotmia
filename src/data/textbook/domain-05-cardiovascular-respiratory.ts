@@ -114,8 +114,8 @@ export const cardiovascularRespiratory: TextbookDomain = {
           "examRef": "Wykład"
         }
       ],
-      "academic_detail": "Mięsień sercowy (myocardium) jest częścią śródsierdzia. Ściana lewej komory jest 3-krotnie grubsza od ściany prawej komory. Wynika to z oporu, jaki krew napotyka w krążeniu dużym (obwodowym) — naczynia krwionośne stawiają opór przepływającej krwi, a do pokonania tego oporu konieczna jest silna mięśniówka lewej komory. Dwa charakterystyczne tony serca to uderzenie krwi o zastawki.",
-      "summary": "- Ściana lewej komory jest 3-krotnie grubsza od ściany prawej komory z powodu konieczności pokonania **większego** __________ w krążeniu dużym.\n- Dwa charakterystyczne tony serca to uderzenie krwi o __________.",
+      "academic_detail": "Mięsień sercowy (myocardium) jest częścią śródsierdzia. Ściana lewej komory jest 3-krotnie grubsza od ściany prawej komory. Wynika to z oporu, jaki krew napotyka w krążeniu dużym (obwodowym) — naczynia krwionośne stawiają opór przepływającej krwi, a do pokonania tego oporu konieczna jest silna mięśniówka lewej komory. Dwa charakterystyczne tony serca to uderzenie krwi o zastawki.\n\nTętnica podobojczykowa przechodzi w tętnicę pachową, następnie w ramienną, która dzieli się na tętnicę promieniową i łokciową. Tętnice te tworzą łuki dłoniowe (powierzchowny i głęboki), z których odchodzą tętnice zaopatrujące palce.",
+      "summary": "- Ściana lewej komory jest 3-krotnie grubsza od ściany prawej komory z powodu konieczności pokonania **większego** __________ w krążeniu dużym.\n- Dwa charakterystyczne tony serca to uderzenie krwi o __________.\n- Unaczynienie kończyny górnej pochodzi od tętnicy __________.",
       "academic_sources": [
         {
           "title": "Anatomia egzamin 2026 WF",
