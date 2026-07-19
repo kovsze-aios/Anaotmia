@@ -9,3 +9,7 @@
 ## 2025-02-12 - Isolate Scroll State to Prevent Re-renders
 **Learning:** Attaching `scroll` event listeners that update state at the root of a large text-heavy component (like `TextbookContent`) causes massive unnecessary re-renders on every scroll tick.
 **Action:** Always isolate high-frequency state updates (like scroll progress or mouse position) into small, dedicated leaf components so that only the tiny visual element re-renders, not the whole page content.
+
+## 2025-02-12 - Word Count Optimization
+**Learning:** Using `text.split(/\s+/).filter(...)` on large blocks of text (like OCR data) allocates huge temporary arrays, causing memory spikes and GC pauses.
+**Action:** Always use `(text.match(/\S+/g) || []).length` when counting words in massive raw text strings to prevent excessive memory allocation and avoid Garbage Collection pauses.
