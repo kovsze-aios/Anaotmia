@@ -22,7 +22,7 @@ function AccordionGroup({
   return (
     <div className="sidebar-accordion">
       <button
-        className="sidebar-accordion__trigger"
+        className="sidebar-accordion__trigger focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
       >
@@ -59,7 +59,7 @@ function SubAccordion({
   return (
     <div className="sidebar-sub-accordion">
       <button
-        className="sidebar-sub-accordion__trigger"
+        className="sidebar-sub-accordion__trigger focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
       >

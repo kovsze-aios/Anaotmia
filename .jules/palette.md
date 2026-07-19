@@ -1,0 +1,3 @@
+## 2024-05-19 - Standardized Keyboard Focus States
+**Learning:** Custom interactive elements in this app often lack keyboard focus indicators. The standard focus ring pattern uses utility classes `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` (found in `Topbar.tsx`). Adding these directly to `<button>` elements improves accessibility without adding custom CSS.
+**Action:** When adding or auditing custom interactive elements (`<button>`, `<a>`, or `[role="button"]`), always check if they have focus indicators, and apply this exact string of Tailwind classes to ensure consistent keyboard navigability across the app.
