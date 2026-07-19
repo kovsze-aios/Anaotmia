@@ -1,0 +1,19 @@
+ WARN  Unsupported engine: wanted: {"node":">=24"} (current: {"node":"v22.22.1","pnpm":"10.30.3"})
+
+> ai-website-clone-template@0.3.1 dev /app
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 512ms
+
+○ Compiling /theory/biologia ...
+ GET /theory/biologia 200 in 4.4s (next.js: 3.9s, application-code: 518ms)
+ GET /theory/biologia?domain=metabolizm 200 in 65ms (next.js: 8ms, application-code: 56ms)
+ GET /theory/biologia 200 in 26ms (next.js: 8ms, application-code: 19ms)
+ GET /theory/biologia 200 in 79ms (next.js: 9ms, application-code: 70ms)
+ GET /theory/biologia 200 in 79ms (next.js: 5ms, application-code: 74ms)
+ GET /theory/biologia?domain=metabolizm 200 in 37ms (next.js: 4ms, application-code: 33ms)
+ GET /theory/biologia 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ GET /theory/biologia 200 in 47ms (next.js: 4ms, application-code: 43ms)
