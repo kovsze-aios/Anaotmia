@@ -86,5 +86,7 @@ export const fuse = new Fuse(searchData, fuseOptions);
 
 export const searchTerms = (query: string) => {
   if (!query) return [];
-  return fuse.search(query).map(result => result.item);
+  // Bolt: limiting search results to 15 prevents returning massive arrays for generic queries,
+  // reducing CPU computation in fuse.search and avoiding large React re-renders in the CommandList.
+  return fuse.search(query, { limit: 15 }).map(result => result.item);
 };
