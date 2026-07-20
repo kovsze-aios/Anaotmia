@@ -126,7 +126,7 @@ export function SidebarDrawer({
           <Link href="/" className="drawer-brand" onClick={onClose}>
             Medycyna
           </Link>
-          <button className="mobile-drawer__close" onClick={onClose} aria-label="Zamknij menu">✕</button>
+          <button className="mobile-drawer__close focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm" onClick={onClose} aria-label="Zamknij menu">✕</button>
         </div>
         <nav className="mobile-drawer__nav">
 
