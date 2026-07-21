@@ -13,3 +13,7 @@
 ## 2025-02-12 - Word Count Optimization on Massive Strings
 **Learning:** Using `text.split(/\s+/).filter(...)` on extremely large OCR text strings causes significant memory allocation and Garbage Collection spikes on the main thread, leading to performance degradation.
 **Action:** Always use `(text.match(/\S+/g) || []).length` over `split` and `filter` when counting words or iterating over simple string patterns in massive texts to reduce memory overhead and avoid GC pauses.
+
+## 2025-02-12 - Limit Fuzzy Search Results
+**Learning:** When using Fuse.js for client-side search rendering into React components (like cmdk CommandList), allowing unbounded results causes excessive CPU computation and massive DOM re-renders for broad queries, leading to severe input lag.
+**Action:** Always provide a `limit` option (e.g., `{ limit: 15 }`) to `fuse.search` to strictly bound the work required for computing and rendering search results.
