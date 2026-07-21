@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Activity } from "lucide-react";
 
 import { getDomains } from "@/data/textbook";
 import { biologiaTheory } from "@/data/biologia/theory";
@@ -138,6 +139,13 @@ export function SidebarDrawer({
               </Link>
             ))}
           </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+
+          {/* ─── 🫀 FIZJOLOGIA ─── */}
+          <Link href="/theory/fizjologia" className="drawer-link" onClick={onClose}>
+            <Activity className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> FIZJOLOGIA
+          </Link>
 
           <div className="mobile-drawer__divider" />
 
