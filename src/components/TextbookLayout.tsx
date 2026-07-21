@@ -42,7 +42,7 @@ export function TextbookLayout({
           </Link>
           <h2>Podręcznik</h2>
           <button
-            className="textbook-sidebar__close focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+            className="textbook-sidebar__close focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm"
             onClick={() => setSidebarOpen(false)}
             aria-label="Zamknij pasek boczny"
           >
