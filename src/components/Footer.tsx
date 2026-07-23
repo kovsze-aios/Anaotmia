@@ -20,11 +20,12 @@ export function Footer() {
                   key={social.title}
                   href={social.href}
                   title={social.title}
-                  className="footer-minimal__social-link"
+                  aria-label={social.title}
+                  className="footer-minimal__social-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width={22} height={22} />
+                  <Icon width={22} height={22} aria-hidden="true" />
                 </a>
               );
             })}
