@@ -17,3 +17,7 @@
 ## 2025-02-12 - Limit Fuzzy Search Results
 **Learning:** When using Fuse.js for client-side search rendering into React components (like cmdk CommandList), allowing unbounded results causes excessive CPU computation and massive DOM re-renders for broad queries, leading to severe input lag. The overhead is twofold: Fuse.js itself spends extra CPU ranking all matches, and React then iterates and renders the entire returned array.
 **Action:** Always provide a `limit` option (e.g., `{ limit: 15 }`) to `fuse.search` to strictly bound the work required for both computing and rendering search results.
+
+## 2025-02-12 - Zero-Allocation Word Count on Massive Strings
+**Learning:** Using `text.match(/\S+/g)` on extremely large OCR text strings allocates a massive intermediate array containing all matches, causing a spike in memory allocation on the main thread and triggering Garbage Collection pauses.
+**Action:** When counting words in massive strings, use a manual zero-allocation `for` loop that iterates over character codes (e.g. `charCodeAt()`) instead of regex `match` to eliminate the array allocation and speed up the computation.

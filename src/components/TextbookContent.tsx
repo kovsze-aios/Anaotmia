@@ -94,9 +94,26 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
 function getSectionWordCount(section: TextbookSection): number {
   let count = 0;
 
-  // Bolt: Use regex match to count words — prevents allocating massive intermediate arrays from split() on large OCR text,
-  // avoiding excessive memory allocation and GC pauses.
-  const countWords = (text: string) => (text.match(/\S+/g) || []).length;
+  // Bolt: Zero-allocation word count for massive text strings.
+  // We use a manual character code loop because regex match() still allocates a massive array
+  // of all matches before we can read .length, causing GC spikes on large OCR chunks.
+  const countWords = (text: string) => {
+    let wordCount = 0;
+    let inWord = false;
+    for (let i = 0; i < text.length; i++) {
+      const code = text.charCodeAt(i);
+      // ASCII whitespace: Space (32), Tab (9), LF (10), CR (13), etc. Also NBSP (160)
+      if (code <= 32 || code === 160) {
+        inWord = false;
+      } else {
+        if (!inWord) {
+          wordCount++;
+          inWord = true;
+        }
+      }
+    }
+    return wordCount;
+  };
 
   if (section.summary) count += countWords(section.summary);
   if (section.academic_detail) count += countWords(section.academic_detail);
