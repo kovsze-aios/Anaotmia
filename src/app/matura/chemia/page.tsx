@@ -36,7 +36,7 @@ export default function MaturaChemiaPage() {
                 {records.map((r) => (
                   <button
                     key={r.year}
-                    className={`matura-sidebar__year-btn ${
+                    className={`matura-sidebar__year-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 ${
                       selectedYear === r.year
                         ? "matura-sidebar__year-btn--active"
                         : ""
@@ -53,7 +53,7 @@ export default function MaturaChemiaPage() {
             <div className="matura-sidebar__section">
               <h3 className="matura-sidebar__label">Filtruj według działu</h3>
               <button
-                className={`matura-sidebar__topic-btn ${
+                className={`matura-sidebar__topic-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 ${
                   filterTopic === null ? "matura-sidebar__topic-btn--active" : ""
                 }`}
                 onClick={() => setFilterTopic(null)}
@@ -63,7 +63,7 @@ export default function MaturaChemiaPage() {
               {topics.map((topic) => (
                 <button
                   key={topic}
-                  className={`matura-sidebar__topic-btn ${
+                  className={`matura-sidebar__topic-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 ${
                     filterTopic === topic
                       ? "matura-sidebar__topic-btn--active"
                       : ""
