@@ -68,7 +68,7 @@ function BiologiaTheoryInner() {
                 <Link
                   key={d.id}
                   href={`/theory/biologia?domain=${d.id}`}
-                  className="textbook-welcome__domain-btn flex items-center cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors w-full text-left"
+                  className="textbook-welcome__domain-btn flex items-center cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
                 >
                   {d.icon} {d.title}
                 </Link>

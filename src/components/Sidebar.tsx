@@ -123,7 +123,7 @@ export function SidebarDrawer({
         aria-hidden={!open}
       >
         <div className="mobile-drawer__header">
-          <Link href="/" className="drawer-brand" onClick={onClose}>
+          <Link href="/" className="drawer-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm" onClick={onClose}>
             Medycyna
           </Link>
           <button className="mobile-drawer__close focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm" onClick={onClose} aria-label="Zamknij menu">✕</button>
@@ -133,7 +133,7 @@ export function SidebarDrawer({
           {/* ─── 🩺 ANATOMIA ─── */}
           <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>
             {anatomyLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="drawer-link" onClick={onClose}>
+              <Link key={l.href} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
@@ -144,11 +144,11 @@ export function SidebarDrawer({
           {/* ─── 🌿 BIOLOGIA ─── */}
           <AccordionGroup label="🌿 BIOLOGIA" defaultExpanded={false}>
             {biologyLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-            <Link href="/matura/biologia" className="drawer-link" onClick={onClose}>
+            <Link href="/matura/biologia" className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
               📝 Arkusze CKE — Biologia
             </Link>
           </AccordionGroup>
@@ -159,24 +159,24 @@ export function SidebarDrawer({
           <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
           <SubAccordion label="Chemia nieorganiczna i obliczenia">
             {chemistryInorganicLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
           <SubAccordion label="Chemia organiczna">
             {chemistryOrganicLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
-          <Link href="/matura/chemia" className="drawer-link" onClick={onClose}>
+          <Link href="/matura/chemia" className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
             📝 Arkusze CKE — Chemia
           </Link>
 
           <div className="mobile-drawer__divider" />
-          <Link href="/" className="drawer-link drawer-link--home" onClick={onClose}>
+          <Link href="/" className="drawer-link drawer-link--home focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
             🏠 Strona główna
           </Link>
         </nav>

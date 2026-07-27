@@ -25,7 +25,7 @@ export function Topbar() {
             <span className="topbar-hamburger__line" />
           </button>
 
-          <Link href="/" className="logo">
+          <Link href="/" className="logo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm">
             <span className="logo-text">Medycyna</span>
           </Link>
 

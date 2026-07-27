@@ -33,7 +33,7 @@ export default function TextbookPage() {
           {domains.map((domain) => (
             <button
               key={domain.id}
-              className="textbook-welcome__domain-btn"
+              className="textbook-welcome__domain-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
               onClick={() => handleDomainClick(domain.id)}
             >
               {domain.icon} {domain.title}
