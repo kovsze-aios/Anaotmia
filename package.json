@@ -68,6 +68,7 @@
     "playwright": "^1.62.0-alpha-1783623505000",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.11",
+    "ts-morph": "^28.0.0",
     "typescript": "^5",
     "vitest": "^4.1.10"
   }
