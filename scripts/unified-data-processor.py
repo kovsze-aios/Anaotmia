@@ -10,7 +10,7 @@ SRC_MTR_DIR = os.path.join(BASE_DIR, "materiały-źródłowe")
 DEST_DIR = os.path.join(BASE_DIR, "src", "data")
 
 def clean_ocr(text):
-    text = re.sub(r'\b(Ryc\.|Rycina|Tab\.|Tabela)\s+\d+.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(Ryc\.|Rycina|Tab\.|Tabela|Rysunek|Wykres)\s+\d+.*?(?=\n|$)', '', text, flags=re.IGNORECASE)
     text = re.sub(r'---\s*STRONA\s+\d+\s*---', '', text, flags=re.IGNORECASE)
     text = text.replace('MnO4', 'MnO₄')
     text = text.replace('H2SO4', 'H₂SO₄')
@@ -27,6 +27,15 @@ def clean_detail_text(text):
     text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)
     text = re.sub(r' {2,}', ' ', text)
     return text.strip()
+
+
+def linguistic_audit(text, subject):
+    if subject == 'chemia':
+        # Simple chemistry typo fixes
+        text = text.replace('kwas siarkowy(Vl)', 'kwas siarkowy(VI)')
+        text = text.replace('wodorotlenkek', 'wodorotlenek')
+        text = text.replace('reakcja redok', 'reakcja redoks')
+    return text
 
 def extract_content(file_path):
     for enc in ['utf-8', 'windows-1250', 'iso-8859-2']:
@@ -57,15 +66,32 @@ anatomy_texts, _ = read_text_files(os.path.join(SRC_MTR_DIR, "anatomia"))
 biology_texts, biology_matura = read_text_files(os.path.join(SRC_MTR_DIR, "biologia"))
 chemistry_texts, chemistry_matura = read_text_files(os.path.join(SRC_MTR_DIR, "chemia"))
 
-def get_anatomy_text_fragment(keywords_required):
-    for name, content in anatomy_texts.items():
-        if all(k.lower() in content.lower() for k in keywords_required):
-            # Just take a 500 character snippet surrounding the first match
-            idx = content.lower().find(keywords_required[0].lower())
-            start = max(0, content.rfind('\n', 0, idx))
-            end = content.find('\n\n', idx)
-            if end == -1: end = min(len(content), idx + 500)
+def get_text_fragment(texts_dict, section_title):
+    # Try to find a meaningful chunk from the texts that matches the section title or its keywords
+    keywords = [word for word in re.split(r'\W+', section_title) if len(word) > 4]
+
+    if not keywords:
+        return ""
+
+    for name, content in texts_dict.items():
+        content_lower = content.lower()
+        # Find matches for keywords
+        match_scores = []
+        for kw in keywords:
+            if kw.lower() in content_lower:
+                match_scores.append(kw)
+
+        if len(match_scores) >= min(2, len(keywords)):
+            # Find the first occurrence of one of the matched keywords
+            idx = content_lower.find(match_scores[0].lower())
+
+            # Extract a substantial chunk around it
+            start = max(0, content.rfind('\n', 0, max(0, idx - 500)))
+            end = content.find('\n\n\n', idx)
+            if end == -1: end = min(len(content), idx + 2000)
+
             return content[start:end].strip()
+
     return ""
 
 rule_3x = "Zasada 3x grubości ściany komory: Ściana lewej komory serca jest około trzy razy grubsza niż ściana prawej komory, co wynika z konieczności pokonania znacznie większego oporu naczyń w krążeniu dużym."
@@ -77,11 +103,19 @@ def generate_summary(text):
         return ""
     words = text.split()
     if len(words) < 5: return text
-    candidates = [w for w in words if len(w) > 6 and w.isalpha()]
+
+    # Try to pick meaningful words (nouns/adjectives) longer than 5 chars
+    candidates = [w for w in words if len(w) > 5 and w.isalpha()]
+
+    # Generate gaps using _________
     if candidates:
-        to_replace = random.sample(candidates, min(2, len(candidates)))
+        num_gaps = min(3, max(1, len(candidates) // 10))
+        to_replace = random.sample(candidates, num_gaps)
         for w in to_replace:
-            text = text.replace(w, '__________', 1)
+            # Replace complete word, but preserve punctuation if we were using regex
+            # Simple replace is ok for our purposes
+            text = re.sub(rf'\b{re.escape(w)}\b', '__________', text, count=1)
+
     return text
 
 def extract_all_matura_questions(matura_texts):
@@ -128,6 +162,8 @@ def process_ts_file(file_path, subject):
 
     domains = data if isinstance(data, list) else [data]
 
+    texts_dict = anatomy_texts if subject == 'anatomia' else (biology_texts if subject == 'biologia' else chemistry_texts)
+
     for domain in domains:
         if 'sections' not in domain:
             continue
@@ -152,15 +188,28 @@ def process_ts_file(file_path, subject):
             if section == matura_section:
                 continue
 
+            # Populate academic_detail from raw texts if it's missing or too short
+            if not section.get('academic_detail') or len(section.get('academic_detail', '')) < 100:
+                extracted = get_text_fragment(texts_dict, section.get('title', ''))
+                if extracted:
+                    section['academic_detail'] = extracted
+
             if section.get('academic_detail'):
-                section['academic_detail'] = clean_detail_text(section['academic_detail'])
+                section['academic_detail'] = linguistic_audit(clean_detail_text(section['academic_detail']), subject)
 
-            if section.get('summary'):
-                section['summary'] = clean_ocr(section['summary'])
-            elif section.get('academic_detail'):
-                summary = generate_summary(section['academic_detail'][:300])
-                section['summary'] = clean_ocr(summary)
+            # Populate summary with ActiveRecall gaps if not present or doesn't have gaps
+            if not section.get('summary') or '__________' not in section.get('summary', ''):
+                if section.get('academic_detail'):
+                    # Take first 300 chars for summary
+                    summary_text = section['academic_detail'][:300]
+                    # Make sure it ends at a word boundary
+                    last_space = summary_text.rfind(' ')
+                    if last_space > 0:
+                        summary_text = summary_text[:last_space] + "..."
 
+                    section['summary'] = clean_ocr(generate_summary(summary_text))
+
+            # Domain specific logic
             if subject == 'anatomia':
                 if 'cardiovascular' in file_path.lower():
                     if rule_3x not in section.get('academic_detail', ''):
@@ -177,7 +226,8 @@ def process_ts_file(file_path, subject):
         if subject in ['biologia', 'chemia'] and matura_section:
             questions = biology_all_questions if subject == 'biologia' else chemistry_all_questions
             if questions:
-                matura_section['maturaQuestions'] = questions[:5]
+                # Add all matura questions to the matura section
+                matura_section['maturaQuestions'] = questions
 
     def reorder(obj):
         if isinstance(obj, dict):
