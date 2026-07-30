@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChapterNav } from "./ChapterNav";
 import type { TextbookDomain } from "@/types/textbook";
 
@@ -20,6 +20,16 @@ export function TextbookLayout({
 }: TextbookLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && sidebarOpen) {
+        setSidebarOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [sidebarOpen]);
+
   return (
     <div className="textbook-layout">
       {/* Mobile overlay */}
@@ -27,6 +37,7 @@ export function TextbookLayout({
         <div
           className="textbook-overlay"
           onClick={() => setSidebarOpen(false)}
+          aria-hidden="true"
         />
       )}
 
