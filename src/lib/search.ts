@@ -67,8 +67,6 @@ const buildSearchIndex = (): SearchItem[] => {
   return items;
 };
 
-const searchData = buildSearchIndex();
-
 const fuseOptions = {
   keys: [
     { name: 'title', weight: 0.5 },
@@ -82,11 +80,35 @@ const fuseOptions = {
   // saving CPU and memory during search
 };
 
-export const fuse = new Fuse(searchData, fuseOptions);
+// Bolt: Lazy initialization of the search index and Fuse instance.
+// This prevents blocking the main thread with heavy array concatenations
+// and Fuse indexing during initial app load, delaying it until the user actually searches.
+let fuseInstance: Fuse<SearchItem> | null = null;
+
+const getFuse = () => {
+  if (!fuseInstance) {
+    fuseInstance = new Fuse(buildSearchIndex(), fuseOptions);
+  }
+  return fuseInstance;
+};
+
+// For direct access if needed, though lazy usage via searchTerms is preferred
+export const fuse = new Proxy({} as Fuse<SearchItem>, {
+  get: (target, prop) => {
+    const instance = getFuse();
+    const value = instance[prop as keyof typeof instance];
+    return typeof value === "function" ? value.bind(instance) : value;
+  },
+  set: (target, prop, value) => {
+    const instance = getFuse();
+    Reflect.set(instance, prop, value);
+    return true;
+  }
+});
 
 export const searchTerms = (query: string) => {
   if (!query) return [];
   // Bolt: limit search results to 15 — prevents excessive CPU computation from Fuse.js
   // ranking massive result sets and avoids huge array re-renders in the CommandList
-  return fuse.search(query, { limit: 15 }).map(result => result.item);
+  return getFuse().search(query, { limit: 15 }).map(result => result.item);
 };
