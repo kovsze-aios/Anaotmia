@@ -123,7 +123,7 @@ export function Topics() {
           <Link
             key={card.title}
             href={card.href}
-            className="subject-card"
+            className="subject-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
           >
             <div
               className="subject-card__img"
@@ -153,7 +153,7 @@ export function Topics() {
           <Link
             key={topic.domain}
             href="/theory/anatomia"
-            className="topicbox"
+            className="topicbox focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
           >
             <div
               className="topicbox__img"

@@ -51,7 +51,7 @@ export function TextbookLayout({
         }`}
       >
         <div className="textbook-sidebar__header">
-          <Link href="/" className="textbook-sidebar__home">
+          <Link href="/" className="textbook-sidebar__home focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm">
             <span>←</span> Strona główna
           </Link>
           <h2>Podręcznik</h2>
