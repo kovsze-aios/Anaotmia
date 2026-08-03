@@ -31,6 +31,16 @@ const subjectCards = [
     icon: "🧪",
     color: "#6a1b9a",
   },
+  {
+    title: "Fizjologia",
+    subtitle: "Podręcznik akademicki",
+    description: (
+      <>Zasady działania ludzkiego organizmu. <strong>Neurofizjologia, krążenie, mięśnie.</strong></>
+    ),
+    href: "/theory/fizjologia",
+    icon: "🫀",
+    color: "#e63946",
+  },
 ];
 
 const anatomyTopics = [
