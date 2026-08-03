@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { getDomains } from "@/data/textbook";
 import { biologiaTheory } from "@/data/biologia/theory";
@@ -109,12 +109,26 @@ export function SidebarDrawer({
   open: boolean;
   onClose: () => void;
 }) {
+  useEffect(() => {
+    if (!open) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [open, onClose]);
+
   return (
     <>
       {/* Backdrop */}
       <div
         className={`drawer-backdrop ${open ? "drawer-backdrop--visible" : ""}`}
         onClick={onClose}
+        aria-hidden="true"
       />
 
       {/* Panel */}
