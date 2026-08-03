@@ -4,9 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Activity } from "lucide-react";
 
-import { getDomains } from "@/data/textbook";
-import { biologiaTheory } from "@/data/biologia/theory";
-import { chemiaTheory } from "@/data/chemia/theory";
+import type { SidebarNavigation } from "@/server/models";
 
 /* ─── Accordion group ─── */
 function AccordionGroup({
@@ -82,34 +80,28 @@ function SubAccordion({
   );
 }
 
-/* ─── Nav links ─── */
-const anatomyLinks = getDomains().map((domain) => ({
-  href: `/theory/anatomia`,
-  label: `${domain.icon} ${domain.title}`,
-}));
-
-const biologyLinks = biologiaTheory.map((domain) => ({
-  href: "/theory/biologia",
-  label: `${domain.icon} ${domain.title}`,
-}));
-
-const chemistryLinks = chemiaTheory.map((domain) => ({
-  id: domain.id,
-  href: "/theory/chemia",
-  label: `${domain.icon} ${domain.title}`,
-}));
-
-const chemistryInorganicLinks = chemistryLinks.filter(l => l.label.includes("nieorganiczna") || l.label.includes("atomu") || l.label.includes("Stechiometria"));
-const chemistryOrganicLinks = chemistryLinks.filter(l => l.label.includes("organiczna"));
-
 /* ─── Mobile drawer ─── */
 export function SidebarDrawer({
   open,
   onClose,
+  navigation,
 }: {
   open: boolean;
   onClose: () => void;
+  /**
+   * Built server-side by `getSidebarNavigation()`. Passing it in — rather than
+   * deriving it from the textbook data here — is what keeps the multi-megabyte
+   * repositories out of this client component's bundle.
+   */
+  navigation: SidebarNavigation;
 }) {
+  const {
+    anatomy: anatomyLinks,
+    biology: biologyLinks,
+    chemistryInorganic: chemistryInorganicLinks,
+    chemistryOrganic: chemistryOrganicLinks,
+  } = navigation;
+
   useEffect(() => {
     if (!open) return;
 
@@ -147,8 +139,9 @@ export function SidebarDrawer({
 
           {/* ─── 🩺 ANATOMIA ─── */}
           <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>
+            {/* Keyed by label: every anatomy domain links to the same route. */}
             {anatomyLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
@@ -157,7 +150,7 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🫀 FIZJOLOGIA ─── */}
-          <Link href="/theory/fizjologia" className="drawer-link" onClick={onClose}>
+          <Link href="/theory/fizjologia" className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
             <Activity className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> FIZJOLOGIA
           </Link>
 

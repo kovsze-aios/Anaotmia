@@ -1,34 +1,22 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { TextbookContent } from "@/components/TextbookContent";
-import { getDomains } from "@/data/textbook";
+import { getAnatomySectionWithDomain } from "@/server";
 
 interface Props {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ id: string }>;
 }
 
 // Ensure dynamic rendering to read the [id] correctly
 export const dynamic = 'force-dynamic';
 
-function getSectionAndDomain(sectionId: string) {
-  const domains = getDomains();
-  for (const domain of domains) {
-    const section = domain.sections.find((s) => s.id === sectionId);
-    if (section) {
-      return { section, domain };
-    }
-  }
-  return null;
-}
-
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
+  _parent: ResolvingMetadata
 ): Promise<Metadata> {
   const resolvedParams = await params;
   const id = resolvedParams.id;
-  const found = getSectionAndDomain(id);
+  const found = getAnatomySectionWithDomain(id);
 
   if (!found) {
     return {
@@ -70,10 +58,10 @@ export async function generateMetadata(
   };
 }
 
-export default async function TextbookSectionPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function TextbookSectionPage({ params }: Props) {
   const resolvedParams = await params;
   const id = resolvedParams.id;
-  const found = getSectionAndDomain(id);
+  const found = getAnatomySectionWithDomain(id);
 
   if (!found) {
     notFound();

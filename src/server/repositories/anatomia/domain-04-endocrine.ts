@@ -1,4 +1,4 @@
-import type { TextbookDomain } from "@/types/textbook";
+import type { TextbookDomain } from "../../models";
 
 export const endocrine: TextbookDomain = {
   "id": "endocrine",

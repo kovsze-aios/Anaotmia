@@ -1,4 +1,4 @@
-import type { TextbookDomain } from "@/types/textbook";
+import type { TextbookDomain } from "../../models";
 import { osteology } from "./domain-01-osteology";
 import { myology } from "./domain-02-myology";
 import { nervous } from "./domain-03-nervous";

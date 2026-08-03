@@ -1,22 +1,10 @@
-"use client";
-
-import { useCallback } from "react";
-import { useRouter } from "next/navigation";
-import { getDomains, getDomain } from "@/data/textbook";
+import Link from "next/link";
+import { getNavDomains } from "@/server";
 
 export default function TextbookPage() {
-  const domains = getDomains();
-  const router = useRouter();
-
-  const handleDomainClick = useCallback(
-    (domainId: string) => {
-      const domain = getDomain(domainId);
-      if (domain && domain.sections.length > 0) {
-        router.push(`/theory/anatomia/${domain.sections[0].id}`);
-      }
-    },
-    [router],
-  );
+  // Only the chapter tree is needed here, and every action is a navigation —
+  // so this page ships no client JavaScript at all.
+  const domains = getNavDomains("anatomia");
 
   return (
     <div className="textbook-welcome">
@@ -30,15 +18,17 @@ export default function TextbookPage() {
         <h2 className="w-fit rounded-md bg-blue-100 px-2 py-1 text-blue-900 dark:bg-blue-900 dark:text-blue-100">Zakres Materiału Egzaminacyjnego</h2>
         <p>Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:</p>
         <div className="textbook-welcome__domain-grid">
-          {domains.map((domain) => (
-            <button
-              key={domain.id}
-              className="textbook-welcome__domain-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
-              onClick={() => handleDomainClick(domain.id)}
-            >
-              {domain.icon} {domain.title}
-            </button>
-          ))}
+          {domains
+            .filter((domain) => domain.sections.length > 0)
+            .map((domain) => (
+              <Link
+                key={domain.id}
+                href={`/theory/anatomia/${domain.sections[0].id}`}
+                className="textbook-welcome__domain-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+              >
+                {domain.icon} {domain.title}
+              </Link>
+            ))}
         </div>
       </div>
 

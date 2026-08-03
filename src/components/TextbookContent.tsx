@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
-import type { TextbookSection, ContentBlock } from "@/types/textbook";
+import type { TextbookSection, ContentBlock } from "@/server/models";
 
 
 function generateId(text: string) {

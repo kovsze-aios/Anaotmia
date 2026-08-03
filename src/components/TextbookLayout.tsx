@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ChapterNav } from "./ChapterNav";
-import type { TextbookDomain } from "@/types/textbook";
+import type { NavDomain } from "@/server/models";
 
 interface TextbookLayoutProps {
-  domains: TextbookDomain[];
+  domains: NavDomain[];
   activeSection: string | null;
   onSectionSelect: (domainId: string, sectionId: string) => void;
   children: React.ReactNode;

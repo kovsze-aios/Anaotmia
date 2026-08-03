@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import type { TextbookDomain } from "@/types/textbook";
+import type { NavDomain } from "@/server/models";
 
 interface ChapterNavProps {
-  domains: TextbookDomain[];
+  domains: NavDomain[];
   activeSection: string | null;
   onSectionSelect: (domainId: string, sectionId: string) => void;
 }

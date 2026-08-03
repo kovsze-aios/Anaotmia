@@ -11,12 +11,24 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { searchTerms, type SearchItem } from "@/lib/search";
+import { searchSections, type SearchResult } from "@/services/searchService";
+
+/** Groups results by subject, ignoring any subject the UI has no section for. */
+const SUBJECT_GROUPS = ["Anatomia", "Biologia", "Chemia", "Fizjologia"] as const;
+
+const SUBJECT_HEADINGS: Record<(typeof SUBJECT_GROUPS)[number], string> = {
+  Anatomia: "🩺 Anatomia",
+  Biologia: "🌿 Biologia",
+  Chemia: "🧪 Chemia",
+  Fizjologia: "🫀 Fizjologia",
+};
 
 export function GlobalSearch() {
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
-  // Bolt: useDeferredValue prevents the expensive fuzzy search from blocking the main thread during typing
+  const [results, setResults] = React.useState<SearchResult[]>([]);
+  // Bolt: useDeferredValue keeps the input responsive — the request is fired for
+  // the settled value rather than on every keystroke.
   const deferredQuery = React.useDeferredValue(query);
   const router = useRouter();
   const searchRef = React.useRef<HTMLDivElement>(null);
@@ -37,17 +49,37 @@ export function GlobalSearch() {
     command();
   }, []);
 
-  const results = React.useMemo(() => searchTerms(deferredQuery), [deferredQuery]);
+  React.useEffect(() => {
+    if (!deferredQuery.trim()) {
+      setResults([]);
+      return;
+    }
+
+    const controller = new AbortController();
+
+    searchSections(deferredQuery, { signal: controller.signal })
+      .then(setResults)
+      .catch((error: unknown) => {
+        // An aborted request is the expected outcome of typing another key.
+        if (controller.signal.aborted) return;
+        console.error("Search request failed", error);
+        setResults([]);
+      });
+
+    return () => controller.abort();
+  }, [deferredQuery]);
 
   const groupedResults = React.useMemo(() => {
-    const grouped: Record<string, SearchItem[]> = {
+    const grouped = {
       Anatomia: [],
       Biologia: [],
       Chemia: [],
-    };
-    results.forEach((item) => {
-      grouped[item.subject].push(item);
-    });
+      Fizjologia: [],
+    } as Record<(typeof SUBJECT_GROUPS)[number], SearchResult[]>;
+
+    for (const item of results) {
+      grouped[item.subject]?.push(item);
+    }
     return grouped;
   }, [results]);
 
@@ -68,61 +100,25 @@ export function GlobalSearch() {
             <CommandList className="max-h-[60vh] overflow-y-auto overscroll-contain">
               <CommandEmpty>Nie znaleziono wyników dla &quot;{query}&quot;.</CommandEmpty>
 
-              {groupedResults.Anatomia.length > 0 && (
-                <CommandGroup heading="🩺 Anatomia">
-                  {groupedResults.Anatomia.map((item) => (
-                    <CommandItem
-                      key={item.url}
-                      value={`${item.id} ${item.title}`}
-                      onSelect={() => {
-                        runCommand(() => router.push(item.url));
-                      }}
-                      className="cursor-pointer"
-                    >
-                      <div className="flex flex-col">
-                        <span className="font-medium text-zinc-900 dark:text-zinc-100">{item.title}</span>
-                      </div>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              )}
-
-              {groupedResults.Biologia.length > 0 && (
-                <CommandGroup heading="🌿 Biologia">
-                  {groupedResults.Biologia.map((item) => (
-                    <CommandItem
-                      key={item.url}
-                      value={`${item.id} ${item.title}`}
-                      onSelect={() => {
-                        runCommand(() => router.push(item.url));
-                      }}
-                      className="cursor-pointer"
-                    >
-                      <div className="flex flex-col">
-                        <span className="font-medium text-zinc-900 dark:text-zinc-100">{item.title}</span>
-                      </div>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              )}
-
-              {groupedResults.Chemia.length > 0 && (
-                <CommandGroup heading="🧪 Chemia">
-                  {groupedResults.Chemia.map((item) => (
-                    <CommandItem
-                      key={item.url}
-                      value={`${item.id} ${item.title}`}
-                      onSelect={() => {
-                        runCommand(() => router.push(item.url));
-                      }}
-                      className="cursor-pointer"
-                    >
-                      <div className="flex flex-col">
-                        <span className="font-medium text-zinc-900 dark:text-zinc-100">{item.title}</span>
-                      </div>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
+              {SUBJECT_GROUPS.map((subject) =>
+                groupedResults[subject].length > 0 ? (
+                  <CommandGroup key={subject} heading={SUBJECT_HEADINGS[subject]}>
+                    {groupedResults[subject].map((item) => (
+                      <CommandItem
+                        key={item.url}
+                        value={`${item.id} ${item.title}`}
+                        onSelect={() => {
+                          runCommand(() => router.push(item.url));
+                        }}
+                        className="cursor-pointer"
+                      >
+                        <div className="flex flex-col">
+                          <span className="font-medium text-zinc-900 dark:text-zinc-100">{item.title}</span>
+                        </div>
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                ) : null,
               )}
             </CommandList>
           </div>

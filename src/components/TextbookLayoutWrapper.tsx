@@ -2,10 +2,16 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { TextbookLayout } from "./TextbookLayout";
-import { getDomains, getDomain } from "@/data/textbook";
+import type { NavDomain } from "@/server/models";
 
-export function TextbookLayoutWrapper({ children }: { children: React.ReactNode }) {
-  const domains = getDomains();
+export function TextbookLayoutWrapper({
+  domains,
+  children,
+}: {
+  /** Chapter tree without content, resolved by the server layout. */
+  domains: NavDomain[];
+  children: React.ReactNode;
+}) {
   const pathname = usePathname();
   const router = useRouter();
 

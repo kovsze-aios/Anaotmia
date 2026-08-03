@@ -6,8 +6,9 @@ import { SidebarDrawer } from "./Sidebar";
 import { useTheme } from "@/hooks/useTheme";
 import { GlobalSearch } from "./GlobalSearch";
 import { Sun, Moon } from "lucide-react";
+import type { SidebarNavigation } from "@/server/models";
 
-export function Topbar() {
+export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { dark, toggleTheme } = useTheme();
 
@@ -64,7 +65,11 @@ export function Topbar() {
         </div>
       </div>
 
-      <SidebarDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+      <SidebarDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        navigation={navigation}
+      />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import type { MaturaSubject } from "@/types/matura";
+import type { MaturaSubject } from "../../models";
 
 export const biologia: MaturaSubject = {
   id: "biologia",
