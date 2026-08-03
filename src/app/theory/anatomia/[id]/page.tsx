@@ -1,14 +1,20 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { TextbookContent } from "@/components/TextbookContent";
-import { getAnatomySectionWithDomain } from "@/server";
+import { getAnatomyDomains, getAnatomySectionWithDomain } from "@/server";
 
 interface Props {
   params: Promise<{ id: string }>;
 }
 
-// Ensure dynamic rendering to read the [id] correctly
-export const dynamic = 'force-dynamic';
+// Every anatomy section is prerendered at build time. The textbook corpus is
+// static, so there is no reason to pay per-request rendering — and these are
+// the most-linked pages on the site (sidebar, welcome grid, search, OG).
+export function generateStaticParams() {
+  return getAnatomyDomains().flatMap((domain) =>
+    domain.sections.map((section) => ({ id: section.id })),
+  );
+}
 
 export async function generateMetadata(
   { params }: Props,

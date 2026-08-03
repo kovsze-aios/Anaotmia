@@ -5,26 +5,15 @@ import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
 import type { TextbookSection, ContentBlock } from "@/server/models";
+import { formatOcrText, getSectionWordCount, uniqueId } from "@/lib/textbookFormatting";
 
-
-function generateId(text: string) {
-  return text.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, '').trim().replace(/\s+/g, '-');
-}
-
-
-export function formatOcrText(text: string): string {
-  if (!text) return "";
-  let formatted = text.replace(/\r\n/g, '\n');
-  formatted = formatted.replace(/---\s*STRONA\s+\d+\s*---/gi, '');
-  formatted = formatted.replace(/(?<!\n)\n(?!\n)/g, ' ');
-  return formatted.trim();
-}
 
 function parseMarkdownContent(text: string) {
 
   const parts = text.split(/^(#{1,6})\s+(.+)$/gm);
   const nodes: React.ReactNode[] = [];
   const headers: ToCItem[] = [];
+  const usedIds = new Map<string, number>();
 
   for (let i = 0; i < parts.length; i += 3) {
     if (parts[i]) {
@@ -36,7 +25,7 @@ function parseMarkdownContent(text: string) {
     if (i + 1 < parts.length) {
       const level = parts[i + 1].length;
       const title = parts[i + 2];
-      const id = generateId(title);
+      const id = uniqueId(title, usedIds);
       const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
 
       const textSizeClass = level === 2 ? 'text-2xl' : level === 3 ? 'text-xl' : 'text-lg';
@@ -91,50 +80,6 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
   }
 }
 
-function getSectionWordCount(section: TextbookSection): number {
-  let count = 0;
-
-  // Bolt: Zero-allocation word count.
-  // Using (text.match(/\S+/g) || []).length creates massive intermediate arrays (O(N) memory allocation)
-  // for large OCR texts, leading to GC pauses and slow performance.
-  // Iterating character codes avoids heap allocations entirely, speeding up counting by ~10x.
-  const countWords = (text: string) => {
-    let wordCount = 0;
-    let inWord = false;
-    for (let i = 0; i < text.length; i++) {
-      const code = text.charCodeAt(i);
-      // Treat space (32), tab (9), line feed (10), carriage return (13), and non-breaking space (160) as whitespace
-      const isWhitespace = code === 32 || (code >= 9 && code <= 13) || code === 160;
-      if (isWhitespace) {
-        inWord = false;
-      } else if (!inWord) {
-        inWord = true;
-        wordCount++;
-      }
-    }
-    return wordCount;
-  };
-
-  if (section.summary) count += countWords(section.summary);
-  if (section.academic_detail) count += countWords(section.academic_detail);
-
-  if (section.academic_sources) {
-    section.academic_sources.forEach(src => {
-      count += countWords(src.content);
-    });
-  }
-
-  if (section.content) {
-    section.content.forEach(block => {
-      if (block.type === 'paragraph' || block.type === 'heading') {
-        count += countWords(block.text);
-      }
-    });
-  }
-
-  return count;
-}
-
 function MarkdownBlock({ text }: { text: string }) {
   const { nodes, headers } = useMemo(() => parseMarkdownContent(text), [text]);
   return (
@@ -174,7 +119,9 @@ function ScrollProgressBar() {
 }
 
 export function TextbookContent({ section }: TextbookContentProps) {
-  const wordCount = getSectionWordCount(section);
+  // The corpus is static per route, so the count is stable — memoising it
+  // stops a full text rescan on every re-render (theme toggle, etc.).
+  const wordCount = useMemo(() => getSectionWordCount(section), [section]);
   const readingTime = Math.ceil(wordCount / 200) || 1;
 
   return (
@@ -243,7 +190,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
                 {allSources.map((src, i) => (
                   <details key={i} className="group" open={false}>
                     <summary
-                      className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded"
+                      className="flex cursor-pointer items-center justify-between bg-zinc-100 px-4 py-3 font-semibold dark:bg-zinc-900 list-none [&::-webkit-details-marker]:hidden focus-ring rounded"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {

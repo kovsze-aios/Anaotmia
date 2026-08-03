@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Activity } from "lucide-react";
 
 import type { SidebarNavigation } from "@/server/models";
@@ -21,7 +21,7 @@ function AccordionGroup({
   return (
     <div className="sidebar-accordion">
       <button
-        className="sidebar-accordion__trigger focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+        className="sidebar-accordion__trigger focus-ring"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
       >
@@ -30,14 +30,15 @@ function AccordionGroup({
           {expanded ? "▲" : "▼"}
         </span>
       </button>
+      {/* grid-template-rows animates height without a magic max-height cap,
+          so long link lists can never get clipped. */}
       <div
-        className="sidebar-accordion__body"
-        style={{
-          maxHeight: expanded ? "1200px" : "0",
-          opacity: expanded ? 1 : 0,
-        }}
+        className={`sidebar-accordion__body ${expanded ? "sidebar-accordion__body--open" : ""}`}
+        style={{ opacity: expanded ? 1 : 0 }}
       >
-        <div className="sidebar-accordion__inner">{children}</div>
+        <div className="min-h-0 overflow-hidden">
+          <div className="sidebar-accordion__inner">{children}</div>
+        </div>
       </div>
     </div>
   );
@@ -58,7 +59,7 @@ function SubAccordion({
   return (
     <div className="sidebar-sub-accordion">
       <button
-        className="sidebar-sub-accordion__trigger focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+        className="sidebar-sub-accordion__trigger focus-ring"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
       >
@@ -68,13 +69,12 @@ function SubAccordion({
         </span>
       </button>
       <div
-        className="sidebar-sub-accordion__body"
-        style={{
-          maxHeight: expanded ? "800px" : "0",
-          opacity: expanded ? 1 : 0,
-        }}
+        className={`sidebar-sub-accordion__body ${expanded ? "sidebar-sub-accordion__body--open" : ""}`}
+        style={{ opacity: expanded ? 1 : 0 }}
       >
-        <div className="sidebar-sub-accordion__inner">{children}</div>
+        <div className="min-h-0 overflow-hidden">
+          <div className="sidebar-sub-accordion__inner">{children}</div>
+        </div>
       </div>
     </div>
   );
@@ -102,17 +102,43 @@ export function SidebarDrawer({
     chemistryOrganic: chemistryOrganicLinks,
   } = navigation;
 
+  const drawerRef = useRef<HTMLElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
+        return;
+      }
+      // Keep focus inside the drawer while it is open.
+      if (e.key !== "Tab" || !drawerRef.current) return;
+      const focusable = drawerRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [open, onClose]);
 
   return (
@@ -124,24 +150,32 @@ export function SidebarDrawer({
         aria-hidden="true"
       />
 
-      {/* Panel */}
+      {/* Panel — `inert` removes it (and its focusable links) from the a11y
+          tree while closed, instead of aria-hidden which keeps them focusable. */}
       <aside
+        ref={drawerRef}
+        inert={!open}
         className={`mobile-drawer ${open ? "mobile-drawer--open" : ""}`}
-        aria-hidden={!open}
       >
         <div className="mobile-drawer__header">
-          <Link href="/" className="drawer-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm" onClick={onClose}>
+          <Link href="/" className="drawer-brand focus-ring rounded-sm" onClick={onClose}>
             Medycyna
           </Link>
-          <button className="mobile-drawer__close focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm" onClick={onClose} aria-label="Zamknij menu">✕</button>
+          <button
+            ref={closeButtonRef}
+            className="mobile-drawer__close focus-ring rounded-sm"
+            onClick={onClose}
+            aria-label="Zamknij menu"
+          >
+            ✕
+          </button>
         </div>
         <nav className="mobile-drawer__nav">
 
           {/* ─── 🩺 ANATOMIA ─── */}
           <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>
-            {/* Keyed by label: every anatomy domain links to the same route. */}
             {anatomyLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
@@ -150,7 +184,7 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🫀 FIZJOLOGIA ─── */}
-          <Link href="/theory/fizjologia" className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+          <Link href="/theory/fizjologia" className="drawer-link focus-ring" onClick={onClose}>
             <Activity className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> FIZJOLOGIA
           </Link>
 
@@ -159,11 +193,11 @@ export function SidebarDrawer({
           {/* ─── 🌿 BIOLOGIA ─── */}
           <AccordionGroup label="🌿 BIOLOGIA" defaultExpanded={false}>
             {biologyLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-            <Link href="/matura/biologia" className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+            <Link href="/matura/biologia" className="drawer-link focus-ring" onClick={onClose}>
               📝 Arkusze CKE — Biologia
             </Link>
           </AccordionGroup>
@@ -174,24 +208,24 @@ export function SidebarDrawer({
           <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
           <SubAccordion label="Chemia nieorganiczna i obliczenia">
             {chemistryInorganicLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
           <SubAccordion label="Chemia organiczna">
             {chemistryOrganicLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
-          <Link href="/matura/chemia" className="drawer-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+          <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
             📝 Arkusze CKE — Chemia
           </Link>
 
           <div className="mobile-drawer__divider" />
-          <Link href="/" className="drawer-link drawer-link--home focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600" onClick={onClose}>
+          <Link href="/" className="drawer-link drawer-link--home focus-ring" onClick={onClose}>
             🏠 Strona główna
           </Link>
         </nav>

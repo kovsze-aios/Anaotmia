@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getNavDomains } from "@/server";
+
+export const metadata: Metadata = {
+  title: "Anatomia — Inteligentny Podręcznik Medyczny | Medycyna",
+  description:
+    "Zagadnienia z anatomii zmapowane pod wymagania akademickie oraz maturalne. Active Recall, pytania egzaminacyjne i pełne opisy akademickie.",
+};
 
 export default function TextbookPage() {
   // Only the chapter tree is needed here, and every action is a navigation —
@@ -24,7 +31,7 @@ export default function TextbookPage() {
               <Link
                 key={domain.id}
                 href={`/theory/anatomia/${domain.sections[0].id}`}
-                className="textbook-welcome__domain-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+                className="textbook-welcome__domain-btn focus-ring"
               >
                 {domain.icon} {domain.title}
               </Link>

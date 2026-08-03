@@ -17,7 +17,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
       <div className="l-topbar">
         <div className="l-topbar-container">
           <button
-            className="topbar-hamburger focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+            className="topbar-hamburger focus-ring"
             onClick={() => setDrawerOpen(true)}
             aria-label="Otwórz menu nawigacji"
           >
@@ -26,7 +26,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
             <span className="topbar-hamburger__line" />
           </button>
 
-          <Link href="/" className="logo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm">
+          <Link href="/" className="logo focus-ring rounded-sm">
             <span className="logo-text">Medycyna</span>
           </Link>
 
@@ -36,7 +36,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
               href="https://buycoff.ee/"
               target="_blank"
               rel="noopener noreferrer"
-              className="theme-pill w-8 h-8 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-800 hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+              className="theme-pill w-8 h-8 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-800 hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 text-xs font-bold transition-colors focus-ring"
               title="Kup mi kawę"
               aria-label="Wesprzyj projekt (otwiera się w nowej karcie)"
             >
@@ -45,7 +45,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
 
             <button
               onClick={toggleTheme}
-              className="relative inline-flex h-7 w-14 items-center rounded-full bg-zinc-200 dark:bg-zinc-800 p-1 cursor-pointer transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+              className="relative inline-flex h-7 w-14 items-center rounded-full bg-zinc-200 dark:bg-zinc-800 p-1 cursor-pointer transition-colors duration-300 focus-ring"
               aria-label="Zmień motyw"
             >
               {/* Icons Layer */}

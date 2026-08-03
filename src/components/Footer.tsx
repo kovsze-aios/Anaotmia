@@ -21,7 +21,7 @@ export function Footer() {
                   href={social.href}
                   title={social.title}
                   aria-label={social.title}
-                  className="footer-minimal__social-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600"
+                  className="footer-minimal__social-link focus-ring"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

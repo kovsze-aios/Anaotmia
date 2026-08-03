@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anatomia2026.pl";
+
 const plutoSansLight = localFont({
   src: "../../public/fonts/PlutoSansLight.woff2",
   variable: "--font-pluto-light",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
   title: "Medycyna — Inteligentny podręcznik do anatomii",
   description:
     "Darmowy, otwarto-źródłowy podręcznik do anatomii stworzony pod ramy egzaminu z anatomii. Active Recall, pytania egzaminacyjne i materiały z Bochenka i Reichera.",
-  metadataBase: new URL("https://anatomia2026.pl"),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: [
       { url: "/seo/favicon.ico" },
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     siteName: "Medycyna",
-    url: "https://anatomia2026.pl",
+    url: SITE_URL,
     type: "website",
     images: "/seo/og-image",
   },

@@ -38,7 +38,7 @@ export function MaturaSubjectView({
       {/* Sidebar */}
       <aside className="matura-sidebar">
         <div className="matura-sidebar__header">
-          <a href="/matura" className="matura-sidebar__back focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 rounded-sm">
+          <a href="/matura" className="matura-sidebar__back focus-ring rounded-sm">
             <span>←</span> Matura
           </a>
           <h2>{sidebarTitle}</h2>
@@ -51,7 +51,7 @@ export function MaturaSubjectView({
             {records.map((r) => (
               <button
                 key={r.year}
-                className={`matura-sidebar__year-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 ${
+                className={`matura-sidebar__year-btn focus-ring ${
                   selectedYear === r.year
                     ? "matura-sidebar__year-btn--active"
                     : ""
@@ -68,7 +68,7 @@ export function MaturaSubjectView({
         <div className="matura-sidebar__section">
           <h3 className="matura-sidebar__label">Filtruj według działu</h3>
           <button
-            className={`matura-sidebar__topic-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 ${
+            className={`matura-sidebar__topic-btn focus-ring ${
               filterTopic === null ? "matura-sidebar__topic-btn--active" : ""
             }`}
             onClick={() => setFilterTopic(null)}
@@ -78,7 +78,7 @@ export function MaturaSubjectView({
           {topics.map((topic) => (
             <button
               key={topic}
-              className={`matura-sidebar__topic-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 ${
+              className={`matura-sidebar__topic-btn focus-ring ${
                 filterTopic === topic
                   ? "matura-sidebar__topic-btn--active"
                   : ""

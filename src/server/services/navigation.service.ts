@@ -37,10 +37,15 @@ export function getNavDomains(subject: TheorySubject): NavDomain[] {
  * calculations in one group, organic chemistry in the other.
  */
 export function getSidebarNavigation(): SidebarNavigation {
-  const anatomy = getDomains().map((domain) => ({
-    href: "/theory/anatomia",
-    label: `${domain.icon} ${domain.title}`,
-  }));
+  // Deep-link to each domain's first section — matching the welcome grid —
+  // so the drawer skips the landing page and lands on content.
+  const anatomy = getDomains().map((domain) => {
+    const firstSection = domain.sections[0];
+    return {
+      href: firstSection ? `/theory/anatomia/${firstSection.id}` : "/theory/anatomia",
+      label: `${domain.icon} ${domain.title}`,
+    };
+  });
 
   const biology = biologiaTheory.map((domain) => ({
     href: "/theory/biologia",

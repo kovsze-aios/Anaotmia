@@ -5,6 +5,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@utility focus-ring {
+  @apply outline-none;
+  &:focus-visible {
+    @apply ring-2 ring-zinc-400 dark:ring-zinc-600;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -2477,9 +2484,16 @@ main hr {
   color: #71717a;
 }
 
-.sidebar-accordion__body {
-  overflow: hidden;
-  transition: max-height 0.25s ease, opacity 0.2s ease;
+.sidebar-accordion__body,
+.sidebar-sub-accordion__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+}
+
+.sidebar-accordion__body--open,
+.sidebar-sub-accordion__body--open {
+  grid-template-rows: 1fr;
 }
 
 .sidebar-accordion__inner {
