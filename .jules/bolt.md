@@ -17,3 +17,7 @@
 ## 2025-02-12 - Limit Fuzzy Search Results
 **Learning:** When using Fuse.js for client-side search rendering into React components (like cmdk CommandList), allowing unbounded results causes excessive CPU computation and massive DOM re-renders for broad queries, leading to severe input lag. The overhead is twofold: Fuse.js itself spends extra CPU ranking all matches, and React then iterates and renders the entire returned array.
 **Action:** Always provide a `limit` option (e.g., `{ limit: 15 }`) to `fuse.search` to strictly bound the work required for both computing and rendering search results.
+
+## 2025-02-12 - Eager Initialization Blocking the Main Thread
+**Learning:** Eagerly parsing massive domain data structures or initializing heavy libraries (like `Fuse.js`) at the module level blocks the main thread during app load.
+**Action:** Always lazily initialize heavy data aggregations and search indices to speed up application load times, utilizing proxies to retain backward compatibility where needed.
