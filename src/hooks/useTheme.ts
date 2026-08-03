@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 
+const THEME_KEY = "theme";
+
 export function useTheme() {
   const [dark, setDark] = useState(false);
 
@@ -20,10 +22,11 @@ export function useTheme() {
   const toggleTheme = () => {
     const html = document.documentElement;
     const next = !html.classList.contains("dark");
-    if (next) {
-      html.classList.add("dark");
-    } else {
-      html.classList.remove("dark");
+    html.classList.toggle("dark", next);
+    try {
+      localStorage.setItem(THEME_KEY, next ? "dark" : "light");
+    } catch {
+      // localStorage can be unavailable (private mode, sandboxed iframe).
     }
     setDark(next);
   };

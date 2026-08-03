@@ -1,11 +1,12 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { TextbookLayout } from "@/components/TextbookLayout";
 import { TextbookContent } from "@/components/TextbookContent";
-import type { TextbookDomain, TextbookSection } from "@/server/models";
+import type { TextbookSection, NavDomain } from "@/server/models";
+import { getSection } from "@/services/sectionService";
 
 export interface TheorySubjectViewProps {
   /** Route this subject lives at, e.g. `/theory/biologia`. */
@@ -14,8 +15,11 @@ export interface TheorySubjectViewProps {
   intro: React.ReactNode;
   /** Sentence introducing the domain grid on the welcome screen. */
   domainsLabel: string;
-  /** Supplied by the server page — this component never reads data itself. */
-  domains: TextbookDomain[];
+  /**
+   * Nav projection only — section content is fetched on demand via
+   * `/api/section`, keeping the multi-megabyte corpora out of the page payload.
+   */
+  domains: NavDomain[];
 }
 
 function TheorySubjectViewInner({
@@ -29,43 +33,65 @@ function TheorySubjectViewInner({
   const searchParams = useSearchParams();
   const domainParam = searchParams.get("domain");
 
-  const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<TextbookSection | null>(
     null,
   );
+  const [isLoading, setIsLoading] = useState(false);
+  const requestIdRef = useRef(0);
+
+  // Routes are `/theory/<subject>`, so the subject id is derivable.
+  const subject = basePath.replace("/theory/", "");
+
+  const loadSection = useCallback(
+    async (sectionId: string) => {
+      const requestId = ++requestIdRef.current;
+      setIsLoading(true);
+      setActiveSection(null);
+      try {
+        const section = await getSection(subject, sectionId);
+        if (requestId !== requestIdRef.current) return;
+        setActiveSection(section);
+      } catch (error) {
+        if (requestId !== requestIdRef.current) return;
+        console.error("Failed to load section", error);
+        setActiveSection(null);
+      } finally {
+        if (requestId === requestIdRef.current) setIsLoading(false);
+      }
+    },
+    [subject],
+  );
 
   useEffect(() => {
-    if (domainParam) {
-      const domain = domains.find((d) => d.id === domainParam);
-      if (domain && domain.sections.length > 0) {
-        const firstSection = domain.sections[0];
-        setActiveSectionId(firstSection.id);
-        setActiveSection(firstSection);
-        // Clean up the URL to not show the ?domain= query parameter
-        router.replace(basePath, { scroll: false });
-      }
+    if (!domainParam) return;
+    const domain = domains.find((d) => d.id === domainParam);
+    if (domain && domain.sections.length > 0) {
+      void loadSection(domain.sections[0].id);
+      // Clean up the URL to not show the ?domain= query parameter
+      router.replace(basePath, { scroll: false });
     }
-  }, [domainParam, domains, router, basePath]);
+  }, [domainParam, domains, router, basePath, loadSection]);
 
   const handleSectionSelect = useCallback(
     (domainId: string, sectionId: string) => {
-      setActiveSectionId(sectionId);
       const domain = domains.find((d) => d.id === domainId);
-      if (domain) {
-        const section = domain.sections.find((s) => s.id === sectionId);
-        setActiveSection(section ?? null);
-      }
+      if (!domain) return;
+      void loadSection(sectionId);
     },
-    [domains],
+    [domains, loadSection],
   );
 
   return (
     <TextbookLayout
       domains={domains}
-      activeSection={activeSectionId}
+      activeSection={activeSection?.id ?? null}
       onSectionSelect={handleSectionSelect}
     >
-      {activeSection ? (
+      {isLoading ? (
+        <div className="textbook-loading" role="status">
+          <span aria-hidden="true">⏳</span> Ładowanie rozdziału…
+        </div>
+      ) : activeSection ? (
         <TextbookContent section={activeSection} />
       ) : (
         <div className="textbook-welcome">

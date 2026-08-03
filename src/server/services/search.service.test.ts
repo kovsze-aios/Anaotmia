@@ -25,12 +25,27 @@ describe("searchTerms", () => {
   it("never returns the bulky match-only fields", () => {
     for (const result of searchTerms("komórka")) {
       expect(Object.keys(result).sort()).toEqual([
+        "excerpt",
         "icon",
         "id",
         "subject",
         "title",
         "url",
       ]);
+    }
+  });
+
+  it("returns a display excerpt for results", () => {
+    const results = searchTerms("serce");
+    expect(results.length).toBeGreaterThan(0);
+    expect(results.some((r) => typeof r.excerpt === "string")).toBe(true);
+  });
+
+  it("indexes matura questions and deep-links to the exam year", () => {
+    const results = searchTerms("genetyka").filter((r) => r.subject === "Matura");
+    expect(results.length).toBeGreaterThan(0);
+    for (const result of results) {
+      expect(result.url).toMatch(/^\/matura\/.+\?rok=\d+$/);
     }
   });
 
@@ -41,7 +56,7 @@ describe("searchTerms", () => {
 
   it("points every result at a routable url", () => {
     for (const result of searchTerms("układ")) {
-      expect(result.url.startsWith("/theory/")).toBe(true);
+      expect(result.url.startsWith("/theory/") || result.url.startsWith("/matura/")).toBe(true);
     }
   });
 });

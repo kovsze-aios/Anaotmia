@@ -6,7 +6,7 @@
  * textbook repositories.
  */
 
-export type Subject = "Anatomia" | "Biologia" | "Chemia" | "Fizjologia";
+export type Subject = "Anatomia" | "Biologia" | "Chemia" | "Fizjologia" | "Matura";
 
 /** What `GET /api/search` returns per hit — deliberately slim. */
 export interface SearchResult {
@@ -15,4 +15,6 @@ export interface SearchResult {
   subject: Subject;
   url: string;
   icon?: string;
+  /** Short context snippet shown under the title. */
+  excerpt?: string;
 }

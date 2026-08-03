@@ -2794,6 +2794,16 @@ main hr {
   background: #000000;
 }
 
+.textbook-loading {
+  padding: 48px 24px;
+  text-align: center;
+  color: #71717a;
+}
+
+.dark .textbook-loading {
+  color: #a1a1aa;
+}
+
 .textbook-welcome h1 {
   color: #18181b;
 }

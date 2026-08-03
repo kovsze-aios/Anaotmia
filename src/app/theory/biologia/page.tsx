@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { TheorySubjectView } from "@/components/TheorySubjectView";
-import { getTheoryDomains } from "@/server";
+import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
   title: "Biologia — Teoria (Formuła 2015) | Medycyna",
@@ -15,7 +15,7 @@ export default function TeoriaBiologiaPage() {
       heading="Biologia — Teoria (Formuła 2015)"
       intro="Kompleksowy materiał teoretyczny zgodny z podstawą programową CKE. Każdy rozdział zawiera wbudowane pytania Active Recall zaczerpnięte z autentycznych arkuszy maturalnych."
       domainsLabel="Materiał podzielony na główne działy biologii:"
-      domains={getTheoryDomains("biologia")}
+      domains={getNavDomains("biologia")}
     />
   );
 }

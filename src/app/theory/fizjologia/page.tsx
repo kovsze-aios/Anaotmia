@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { TheorySubjectView } from "@/components/TheorySubjectView";
-import { getTheoryDomains } from "@/server";
+import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
   title: "Fizjologia — Teoria | Medycyna",
@@ -15,7 +15,7 @@ export default function TeoriaFizjologiaPage() {
       heading="Fizjologia — Teoria"
       intro="Kompleksowy materiał teoretyczny. Każdy rozdział zawiera wbudowane pytania Active Recall."
       domainsLabel="Materiał podzielony na główne działy fizjologii:"
-      domains={getTheoryDomains("fizjologia")}
+      domains={getNavDomains("fizjologia")}
     />
   );
 }

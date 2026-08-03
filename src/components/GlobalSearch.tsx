@@ -13,13 +13,14 @@ import {
 import { searchSections, type SearchResult } from "@/services/searchService";
 
 /** Groups results by subject, ignoring any subject the UI has no section for. */
-const SUBJECT_GROUPS = ["Anatomia", "Biologia", "Chemia", "Fizjologia"] as const;
+const SUBJECT_GROUPS = ["Anatomia", "Biologia", "Chemia", "Fizjologia", "Matura"] as const;
 
 const SUBJECT_HEADINGS: Record<(typeof SUBJECT_GROUPS)[number], string> = {
   Anatomia: "🩺 Anatomia",
   Biologia: "🌿 Biologia",
   Chemia: "🧪 Chemia",
   Fizjologia: "🫀 Fizjologia",
+  Matura: "📝 Matura",
 };
 
 /** Requests below this length are skipped — one letter has no search intent. */
@@ -93,6 +94,7 @@ export function GlobalSearch() {
       Biologia: [],
       Chemia: [],
       Fizjologia: [],
+      Matura: [],
     } as Record<(typeof SUBJECT_GROUPS)[number], SearchResult[]>;
 
     for (const item of results) {
@@ -146,8 +148,13 @@ export function GlobalSearch() {
                             }}
                             className="cursor-pointer"
                           >
-                            <div className="flex flex-col">
+                            <div className="flex flex-col gap-0.5">
                               <span className="font-medium text-zinc-900 dark:text-zinc-100">{item.title}</span>
+                              {item.excerpt && (
+                                <span className="line-clamp-2 text-xs leading-snug text-zinc-500 dark:text-zinc-400">
+                                  {item.excerpt}
+                                </span>
+                              )}
                             </div>
                           </CommandItem>
                         ))}

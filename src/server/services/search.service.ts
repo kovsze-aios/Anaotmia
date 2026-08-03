@@ -5,6 +5,8 @@ import {
   chemiaTheory,
   fizjologiaTheory,
   getDomains,
+  getBiologiaRecords,
+  getChemiaRecords,
 } from "../repositories";
 
 export type { SearchResult, Subject };
@@ -15,12 +17,14 @@ export const SEARCH_SUBJECTS: readonly Subject[] = [
   "Biologia",
   "Chemia",
   "Fizjologia",
+  "Matura",
 ];
 
 /**
- * An indexed entry. `summary` and `academic_detail` are matched against but
- * never returned — they are the bulk of the corpus, and the UI only renders
- * the title. See {@link SearchResult}.
+ * An indexed entry. `searchBody` (summary + academic detail for sections, the
+ * question text for matura items) is matched against but never returned — it is
+ * the bulk of the corpus, and the UI only renders the title and a short
+ * excerpt. See {@link SearchResult}.
  */
 interface SearchItem {
   id: string;
@@ -28,11 +32,19 @@ interface SearchItem {
   subject: Subject;
   url: string;
   icon?: string;
-  summary?: string;
-  academic_detail?: string;
+  excerpt?: string;
+  searchBody?: string;
 }
 
-const SOURCES: ReadonlyArray<{
+/** A one-line preview of the matched text, shown under the result title. */
+const makeExcerpt = (text?: string, max = 160): string | undefined => {
+  if (!text) return undefined;
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (!clean) return undefined;
+  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+};
+
+const THEORY_SOURCES: ReadonlyArray<{
   subject: Subject;
   icon: string;
   domains: () => TextbookDomain[];
@@ -64,10 +76,19 @@ const SOURCES: ReadonlyArray<{
   },
 ];
 
+const MATURA_SOURCES: ReadonlyArray<{
+  icon: string;
+  urlPrefix: string;
+  records: () => ReturnType<typeof getBiologiaRecords>;
+}> = [
+  { icon: "🧬", urlPrefix: "/matura/biologia", records: getBiologiaRecords },
+  { icon: "⚗️", urlPrefix: "/matura/chemia", records: getChemiaRecords },
+];
+
 const buildSearchIndex = (): SearchItem[] => {
   const items: SearchItem[] = [];
 
-  for (const source of SOURCES) {
+  for (const source of THEORY_SOURCES) {
     for (const domain of source.domains()) {
       for (const section of domain.sections) {
         items.push({
@@ -76,8 +97,33 @@ const buildSearchIndex = (): SearchItem[] => {
           subject: source.subject,
           url: source.url(section.id),
           icon: source.icon,
-          summary: section.summary,
-          academic_detail: section.academic_detail,
+          excerpt: makeExcerpt(section.summary) ?? makeExcerpt(section.academic_detail),
+          searchBody: [section.summary, section.academic_detail]
+            .filter(Boolean)
+            .join("\n"),
+        });
+      }
+    }
+  }
+
+  for (const source of MATURA_SOURCES) {
+    for (const record of source.records()) {
+      for (const question of record.questions) {
+        items.push({
+          id: `matura-${record.year}-${question.questionNumber}`,
+          title: `Matura ${record.year} ${record.month} — ${question.topicCategory}`,
+          subject: "Matura",
+          url: `${source.urlPrefix}?rok=${record.year}`,
+          icon: source.icon,
+          excerpt: makeExcerpt(question.questionText),
+          searchBody: [
+            question.topicCategory,
+            question.instruction,
+            question.questionText,
+            question.officialCkeAnswer,
+          ]
+            .filter(Boolean)
+            .join("\n"),
         });
       }
     }
@@ -89,18 +135,17 @@ const buildSearchIndex = (): SearchItem[] => {
 const fuseOptions = {
   keys: [
     { name: "title", weight: 0.5 },
-    { name: "id", weight: 0.3 },
-    { name: "summary", weight: 0.1 },
-    { name: "academic_detail", weight: 0.1 },
+    { name: "id", weight: 0.2 },
+    { name: "searchBody", weight: 0.3 },
   ],
   threshold: 0.4,
   ignoreLocation: true,
-  // Bolt: removed includeMatches: true since we do not use the matches array,
-  // saving CPU and memory during search
+  // includeMatches is off — we never use the matches array, saving CPU and
+  // memory during search.
 };
 
-// Bolt: Lazy initialization of the search index and Fuse instance.
-// Building the index walks every section of every subject, so doing it at
+// Lazy initialization of the search index and Fuse instance. Building the index
+// walks every section and matura question of every subject, so doing it at
 // module scope would cost that work on the first request that merely imports
 // this module. Deferring it to the first actual search keeps cold starts cheap.
 let fuseInstance: Fuse<SearchItem> | null = null;
@@ -121,8 +166,8 @@ export const searchTerms = (
 ): SearchResult[] => {
   if (!query) return [];
 
-  // Bolt: limit search results — prevents excessive CPU computation from Fuse.js
-  // ranking massive result sets and avoids huge array re-renders in the CommandList
+  // Limit search results — prevents excessive CPU computation from Fuse.js
+  // ranking massive result sets and avoids huge array re-renders in the UI.
   return getFuse()
     .search(query, { limit })
     .map(({ item }) => ({
@@ -131,5 +176,6 @@ export const searchTerms = (
       subject: item.subject,
       url: item.url,
       icon: item.icon,
+      excerpt: item.excerpt,
     }));
 };

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import type { MaturaYearRecord } from "@/server/models";
 
@@ -13,25 +14,83 @@ export interface MaturaSubjectViewProps {
   records: MaturaYearRecord[];
 }
 
-export function MaturaSubjectView({
+function MaturaSubjectViewInner({
   sidebarTitle,
   subjectName,
   records,
 }: MaturaSubjectViewProps) {
-  const [selectedYear, setSelectedYear] = useState(records[0]?.year ?? 0);
-  const [filterTopic, setFilterTopic] = useState<string | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const currentRecord = records.find((r) => r.year === selectedYear);
-  const questions = currentRecord?.questions ?? [];
+  // The year and topic filter live in the URL (`?rok=2020&dzial=Genetyka`) so
+  // the selection survives reloads, works with the back button, and can be
+  // deep-linked (search results point here with `?rok=`).
+  const firstYear = records[0]?.year ?? 0;
+  const yearParam = Number(searchParams.get("rok"));
+  const selectedYear =
+    Number.isInteger(yearParam) && records.some((r) => r.year === yearParam)
+      ? yearParam
+      : firstYear;
+
+  const topicParam = searchParams.get("dzial");
+  const [filterTopic, setFilterTopic] = useState<string | null>(topicParam);
+
+  // Keep the filter in sync when navigating back/forward.
+  useEffect(() => {
+    setFilterTopic(topicParam);
+  }, [topicParam]);
+
+  // Normalise the URL on first visit so the selected year is always shareable.
+  useEffect(() => {
+    if (!searchParams.has("rok") && firstYear !== 0) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("rok", String(firstYear));
+      router.replace(`?${params.toString()}`, { scroll: false });
+    }
+  }, [searchParams, firstYear, router]);
+
+  const currentRecord = useMemo(
+    () => records.find((r) => r.year === selectedYear),
+    [records, selectedYear],
+  );
+  const questions = useMemo(
+    () => currentRecord?.questions ?? [],
+    [currentRecord],
+  );
+
+  const topics = useMemo(
+    () => [...new Set(questions.map((q) => q.topicCategory))],
+    [questions],
+  );
 
   const filtered = filterTopic
     ? questions.filter((q) => q.topicCategory === filterTopic)
     : questions;
 
-  // React compiler complains about manual memoization with currentRecord.
-  // Instead of using useMemo, let the compiler do it (React 19 compiler handles it).
-  // We can just define topics inline since the compiler optimizes arrays and sets automatically.
-  const topics = [...new Set(questions.map((q) => q.topicCategory))];
+  const changeYear = useCallback(
+    (year: number) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("rok", String(year));
+      // A topic that doesn't exist in the new year would show an empty list —
+      // drop it instead.
+      const yearTopics = new Set(
+        records.find((r) => r.year === year)?.questions.map((q) => q.topicCategory),
+      );
+      if (filterTopic && !yearTopics.has(filterTopic)) params.delete("dzial");
+      router.replace(`?${params.toString()}`, { scroll: false });
+    },
+    [router, searchParams, records, filterTopic],
+  );
+
+  const changeTopic = useCallback(
+    (topic: string | null) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (topic) params.set("dzial", topic);
+      else params.delete("dzial");
+      router.replace(`?${params.toString()}`, { scroll: false });
+    },
+    [router, searchParams],
+  );
 
   return (
     <div className="matura-layout">
@@ -56,7 +115,7 @@ export function MaturaSubjectView({
                     ? "matura-sidebar__year-btn--active"
                     : ""
                 }`}
-                onClick={() => setSelectedYear(r.year)}
+                onClick={() => changeYear(r.year)}
               >
                 {r.year} — {r.month}
               </button>
@@ -71,7 +130,7 @@ export function MaturaSubjectView({
             className={`matura-sidebar__topic-btn focus-ring ${
               filterTopic === null ? "matura-sidebar__topic-btn--active" : ""
             }`}
-            onClick={() => setFilterTopic(null)}
+            onClick={() => changeTopic(null)}
           >
             Wszystkie
           </button>
@@ -83,7 +142,7 @@ export function MaturaSubjectView({
                   ? "matura-sidebar__topic-btn--active"
                   : ""
               }`}
-              onClick={() => setFilterTopic(topic)}
+              onClick={() => changeTopic(topic)}
             >
               {topic}
             </button>
@@ -154,5 +213,17 @@ export function MaturaSubjectView({
         </div>
       </main>
     </div>
+  );
+}
+
+/**
+ * `useSearchParams` requires a Suspense boundary — provided here so the pages
+ * stay simple server components.
+ */
+export function MaturaSubjectView(props: MaturaSubjectViewProps) {
+  return (
+    <Suspense fallback={<div>Ładowanie...</div>}>
+      <MaturaSubjectViewInner {...props} />
+    </Suspense>
   );
 }
