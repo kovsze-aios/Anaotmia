@@ -93,39 +93,27 @@ function MarkdownBlock({ text }: { text: string }) {
 }
 
 // Bolt: Extracted scroll progress state into a separate component
-// and optimized to bypass React state entirely. By using a ref to directly
-// manipulate the DOM node's width style during scroll, we avoid triggering
-// React's render phase on every frame, significantly improving scroll performance.
+// to prevent the entire TextbookContent from re-rendering on every scroll event.
 function ScrollProgressBar() {
-  const barRef = React.useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (barRef.current) {
-            const totalScroll = document.documentElement.scrollTop;
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            if (windowHeight > 0) {
-              barRef.current.style.width = `${(totalScroll / windowHeight) * 100}%`;
-            }
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (windowHeight === 0) return;
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+      requestAnimationFrame(() => setScrollProgress((totalScroll / windowHeight) * 100));
+    }
+
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div
-      ref={barRef}
       className="fixed top-0 left-0 h-[2px] bg-blue-500 z-50 transition-all duration-150"
-      style={{ width: `0%` }}
+      style={{ width: `${scrollProgress}%` }}
     />
   );
 }
