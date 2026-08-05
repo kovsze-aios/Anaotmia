@@ -46,6 +46,7 @@ export function TextbookLayout({
 
       {/* Sidebar */}
       <aside
+        inert={!sidebarOpen}
         className={`textbook-sidebar ${
           sidebarOpen ? "textbook-sidebar--open" : ""
         }`}
