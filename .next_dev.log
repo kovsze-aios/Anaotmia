@@ -6,14 +6,18 @@
 ▲ Next.js 16.2.1 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 512ms
+✓ Ready in 514ms
 
-○ Compiling /theory/biologia ...
- GET /theory/biologia 200 in 4.4s (next.js: 3.9s, application-code: 518ms)
- GET /theory/biologia?domain=metabolizm 200 in 65ms (next.js: 8ms, application-code: 56ms)
- GET /theory/biologia 200 in 26ms (next.js: 8ms, application-code: 19ms)
- GET /theory/biologia 200 in 79ms (next.js: 9ms, application-code: 70ms)
- GET /theory/biologia 200 in 79ms (next.js: 5ms, application-code: 74ms)
- GET /theory/biologia?domain=metabolizm 200 in 37ms (next.js: 4ms, application-code: 33ms)
- GET /theory/biologia 200 in 10ms (next.js: 3ms, application-code: 7ms)
- GET /theory/biologia 200 in 47ms (next.js: 4ms, application-code: 43ms)
+○ Compiling / ...
+ GET / 200 in 7.0s (next.js: 6.0s, application-code: 1013ms)
+Error: Turbopack build failed with 1 errors:
+./src/app
+Error: Next.js inferred your workspace root, but it may not be correct.
+    We couldn't find the Next.js package (next/package.json) from the project directory: /app/src/app
+     To fix this, set turbopack.root in your Next.js config, or ensure the Next.js package is resolvable from this directory.
+    Note: For security and performance reasons, files outside of the project directory will not be compiled.
+    See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+
+    at ignore-listed frames
+[?25h
+ ELIFECYCLE  Command failed with exit code 1.
