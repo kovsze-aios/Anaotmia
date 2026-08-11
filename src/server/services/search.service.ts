@@ -39,8 +39,14 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
+  const trimmed = text.trimStart();
+  if (!trimmed) return undefined;
+
+  // Slicing the string before running regex prevents massive CPU and memory
+  // overhead when parsing full chapters (50KB+) just for a 160-char excerpt.
+  const sliced = trimmed.slice(0, max * 3);
+  const clean = sliced.replace(/\s+/g, " ").trimEnd();
+
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
 
