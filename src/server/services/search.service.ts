@@ -7,7 +7,7 @@ import {
   getDomains,
   getBiologiaRecords,
   getChemiaRecords,
-} from "../repositories";
+} from "../../data";
 
 export type { SearchResult, Subject };
 

@@ -10,7 +10,7 @@ export function formatOcrText(text: string): string {
   if (!text) return "";
   let formatted = text.replace(/\r\n/g, "\n");
   formatted = formatted.replace(/---\s*STRONA\s+\d+\s*---/gi, "");
-  formatted = formatted.replace(/(?<!\n)\n(?!\n)/g, " ");
+  formatted = formatted.replace(/([^\n])\n(?!\n)/g, "$1 ");
   return formatted.trim();
 }
 
@@ -41,20 +41,7 @@ export function uniqueId(text: string, used: Map<string, number>): string {
  * causing GC pauses. Iterating character codes avoids all heap allocations.
  */
 export function countWords(text: string): number {
-  let wordCount = 0;
-  let inWord = false;
-  for (let i = 0; i < text.length; i++) {
-    const code = text.charCodeAt(i);
-    // Space (32), tab (9), LF (10), CR (13), non-breaking space (160).
-    const isWhitespace = code === 32 || (code >= 9 && code <= 13) || code === 160;
-    if (isWhitespace) {
-      inWord = false;
-    } else if (!inWord) {
-      inWord = true;
-      wordCount++;
-    }
-  }
-  return wordCount;
+  return (text.match(/\S+/g) || []).length;
 }
 
 /** Total word count of a section across summary, detail, sources and content. */

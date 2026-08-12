@@ -3,7 +3,7 @@ import type {
   SidebarNavigation,
   TextbookDomain,
 } from "../models";
-import { biologiaTheory, chemiaTheory, getDomains } from "../repositories";
+import { biologiaTheory, chemiaTheory, getDomains } from "../../data";
 import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
 /**

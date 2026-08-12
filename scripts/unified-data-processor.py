@@ -23,8 +23,8 @@ def clean_ocr(text):
 
 def clean_detail_text(text):
     text = clean_ocr(text)
-    # user directive: merge broken lines by replacing single newlines with a space using the regex (?<!\n)\n(?!\n)
-    text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)
+    # user directive: merge broken lines by replacing single newlines with a space using the regex ([^\n])\n(?!\n)
+    text = re.sub(r'([^\n])\n(?!\n)', r'\1 ', text)
     text = re.sub(r' {2,}', ' ', text)
     return text.strip()
 
@@ -253,9 +253,9 @@ def process_ts_file(file_path, subject):
     print(f"Updated {os.path.basename(file_path)}")
 
 print("Processing files...")
-for f in os.listdir(os.path.join(DEST_DIR, 'textbook')):
+for f in os.listdir(os.path.join(DEST_DIR, 'anatomia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
-        process_ts_file(os.path.join(DEST_DIR, 'textbook', f), 'anatomia')
+        process_ts_file(os.path.join(DEST_DIR, 'anatomia', f), 'anatomia')
 
 for f in os.listdir(os.path.join(DEST_DIR, 'biologia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
