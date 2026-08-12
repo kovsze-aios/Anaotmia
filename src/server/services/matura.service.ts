@@ -6,7 +6,7 @@ import {
   getBiologiaRecord,
   getChemiaRecords,
   getChemiaRecord,
-} from "../repositories";
+} from "../../data";
 
 /** Subjects that have archived CKE exam papers. */
 export type MaturaSubjectId = "biologia" | "chemia";

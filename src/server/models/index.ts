@@ -3,7 +3,7 @@
  *
  * Anything that describes the *shape* of domain data lives here. UI code may
  * import these with `import type` (types are erased at compile time, so no data
- * crosses the bundle boundary); it must never import from `../repositories`.
+ * crosses the bundle boundary); it must never import from `../../data`.
  */
 
 export type {

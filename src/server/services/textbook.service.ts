@@ -5,7 +5,7 @@ import {
   biologiaTheory,
   chemiaTheory,
   fizjologiaTheory,
-} from "../repositories";
+} from "../../data";
 
 /** The subjects that have a theory textbook. */
 export type TheorySubject = "anatomia" | "biologia" | "chemia" | "fizjologia";
