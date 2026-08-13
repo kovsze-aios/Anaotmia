@@ -1,4 +1,4 @@
-import type { MaturaSubject } from "../../models";
+import type { MaturaSubject } from "../../server/models";
 
 export const chemia: MaturaSubject = {
   id: "chemia",
@@ -330,6 +330,6 @@ export function getChemiaRecords() {
 
 export function getChemiaRecord(year: number, month: string) {
   return chemia.records.find(
-    (r) => r.year === year && r.month === month,
+    (r: NonNullable<MaturaSubject["records"]>[number]) => r.year === year && r.month === month,
   );
 }
