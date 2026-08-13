@@ -1,3 +1,4 @@
+import type { MaturaSubject } from "../../server/models";
 import { describe, it, expect } from 'vitest';
 import { getChemiaRecords, getChemiaRecord } from './index';
 
@@ -13,7 +14,7 @@ describe('chemia data access functions', () => {
       expect(records).toHaveLength(5);
 
       // Verify that the objects have the correct shape
-      records.forEach(record => {
+      records.forEach((record: NonNullable<MaturaSubject["records"]>[number]) => {
         expect(record).toHaveProperty('year');
         expect(record).toHaveProperty('month');
         expect(record).toHaveProperty('examCode');
@@ -22,7 +23,7 @@ describe('chemia data access functions', () => {
       });
 
       // Verify the specific years are present
-      const years = records.map(r => r.year);
+      const years = records.map((r: NonNullable<MaturaSubject["records"]>[number]) => r.year);
       expect(years).toContain(2016);
       expect(years).toContain(2017);
       expect(years).toContain(2018);
