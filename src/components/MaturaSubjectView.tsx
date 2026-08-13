@@ -63,9 +63,13 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // Memoize the filtered array to preserve referential equality across renders
+  // when dependencies haven't changed, preventing unnecessary re-renders of child components.
+  const filtered = useMemo(() => (
+    filterTopic
+      ? questions.filter((q) => q.topicCategory === filterTopic)
+      : questions
+  ), [filterTopic, questions]);
 
   const changeYear = useCallback(
     (year: number) => {
