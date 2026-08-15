@@ -11,3 +11,6 @@
 ## 2026-08-15 - Screen Reader Optimization for Card-Based Layouts
 **Learning:** Found multiple card-based layouts in `src/components/Topics.tsx` wrapped in `<Link>` tags containing purely decorative icons and generic, repetitive CTA text ("Przejdź do przedmiotu →"). This causes unnecessary noise for screen reader users, who hear the redundant information for every single card.
 **Action:** Always add `aria-hidden="true"` to purely decorative icons and repetitive CTA text inside clickable card links to allow screen readers to focus on the meaningful, unique content of each link (like the title and description).
+## 2026-08-15 - pnpm Workspace Configuration
+**Learning:** `pnpm` will fail the installation step in CI if a `pnpm-workspace.yaml` file exists (e.g., just to define `allowBuilds`) but does not explicitly declare the workspace packages.
+**Action:** When updating or working with pnpm workspaces, explicitly add `packages: ["."]` to `pnpm-workspace.yaml` to ensure successful installation in CI.
