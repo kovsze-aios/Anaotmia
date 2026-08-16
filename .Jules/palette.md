@@ -8,3 +8,7 @@
 ## 2026-07-20 - Global Navigation Interactive Elements Focus Visible Styles
 **Learning:** Found multiple instances of mismatched or missing `focus-visible` utility classes for interactive elements (`Link` buttons) on theoretical and topics page causing accessibility regressions during keyboard navigation. Custom styles were missing or mismatched `focus:ring-blue-500` instead of the app design tokens.
 **Action:** Standardize on `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` across all custom interactive components to ensure consistent keyboard accessibility.
+
+## 2026-08-16 - Card-Based Layout Decorative Elements
+**Learning:** In card-based layouts wrapped in `<Link>` components (like `Topics.tsx`), screen readers announce all internal text sequentially. Decorative icons and generic repetitive CTA texts (e.g., "Przejdź do przedmiotu →") create significant auditory clutter.
+**Action:** Always apply `aria-hidden="true"` to purely decorative icons and generic repetitive CTA texts within clickable cards to ensure screen readers focus only on meaningful content (title, subtitle, description).
