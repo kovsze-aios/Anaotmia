@@ -63,9 +63,17 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // ⚡ Bolt: Memoize the filtered array to prevent re-filtering on unrelated
+  // renders (e.g. year changes before topic resets, or future state updates)
+  // and preserve referential equality to avoid unnecessary child re-renders.
+  // Impact: Reduces CPU work on re-renders, especially when `questions` is large.
+  const filtered = useMemo(
+    () =>
+      filterTopic
+        ? questions.filter((q) => q.topicCategory === filterTopic)
+        : questions,
+    [filterTopic, questions]
+  );
 
   const changeYear = useCallback(
     (year: number) => {
