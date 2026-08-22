@@ -24,3 +24,7 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2024-08-22 - Regex while-loop optimization for zero-allocation
+**Learning:** Using `text.match(/\S+/g)` is slow and creates massive intermediate arrays (O(N) memory allocation) for extremely large strings, leading to severe GC pauses. However, manual character code iteration isn't a panacea; it often incorrectly fails to account for all Unicode whitespace correctly.
+**Action:** When working with huge text strings (e.g. counting words), the best balance between performance, zero-allocation memory footprint, and exact correctness (Unicode spaces) is to run `RegExp.prototype.test()` in a `while` loop with the `/g` flag. This iterates over matches internally without building an array result.
