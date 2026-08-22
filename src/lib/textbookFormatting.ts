@@ -36,25 +36,17 @@ export function uniqueId(text: string, used: Map<string, number>): string {
 }
 
 /**
- * Zero-allocation word count. Using `(text.match(/\S+/g) || []).length` would
- * create large intermediate arrays (O(N) memory) for multi-megabyte OCR texts,
- * causing GC pauses. Iterating character codes avoids all heap allocations.
+ * Zero-allocation word count using regex `.test()` to prevent large string array
+ * allocations from `.match()` while properly accounting for all Unicode whitespace
+ * characters.
  */
 export function countWords(text: string): number {
-  let wordCount = 0;
-  let inWord = false;
-  for (let i = 0; i < text.length; i++) {
-    const code = text.charCodeAt(i);
-    // Space (32), tab (9), LF (10), CR (13), non-breaking space (160).
-    const isWhitespace = code === 32 || (code >= 9 && code <= 13) || code === 160;
-    if (isWhitespace) {
-      inWord = false;
-    } else if (!inWord) {
-      inWord = true;
-      wordCount++;
-    }
+  let count = 0;
+  const wordRegex = /\S+/g;
+  while (wordRegex.test(text)) {
+    count++;
   }
-  return wordCount;
+  return count;
 }
 
 /** Total word count of a section across summary, detail, sources and content. */
