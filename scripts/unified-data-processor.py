@@ -138,6 +138,7 @@ def process_ts_file(file_path, subject):
 
     import_match = re.search(r'(import .*?;\n+)', content, re.DOTALL)
     imports = import_match.group(1) if import_match else ''
+    imports = imports.replace('../../models', '../../../server/models')
 
     var_match = re.search(r'export const (\w+): (TextbookDomain(?:\[\])?) = (\[|\{)', content)
     if not var_match:
@@ -253,9 +254,9 @@ def process_ts_file(file_path, subject):
     print(f"Updated {os.path.basename(file_path)}")
 
 print("Processing files...")
-for f in os.listdir(os.path.join(DEST_DIR, 'textbook')):
+for f in os.listdir(os.path.join(DEST_DIR, 'anatomia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
-        process_ts_file(os.path.join(DEST_DIR, 'textbook', f), 'anatomia')
+        process_ts_file(os.path.join(DEST_DIR, 'anatomia', f), 'anatomia')
 
 for f in os.listdir(os.path.join(DEST_DIR, 'biologia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
