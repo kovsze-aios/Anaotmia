@@ -63,9 +63,13 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // Bolt: Wrapped derived array computation in useMemo.
+  // Prevents O(N) array filtering and memory reallocation on every render unless dependencies change.
+  const filtered = useMemo(() => {
+    return filterTopic
+      ? questions.filter((q) => q.topicCategory === filterTopic)
+      : questions;
+  }, [filterTopic, questions]);
 
   const changeYear = useCallback(
     (year: number) => {
