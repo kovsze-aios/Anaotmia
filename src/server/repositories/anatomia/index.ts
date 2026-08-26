@@ -1,12 +1,12 @@
 import type { TextbookDomain } from "../../models";
-import { osteology } from "./domain-01-osteology";
-import { myology } from "./domain-02-myology";
-import { nervous } from "./domain-03-nervous";
-import { endocrine } from "./domain-04-endocrine";
-import { cardiovascularRespiratory } from "./domain-05-cardiovascular-respiratory";
-import { digestive } from "./domain-06-digestive";
-import { urinaryReproductive } from "./domain-07-urinary-reproductive";
-import { sensory } from "./domain-08-sensory";
+import { osteology } from "../../../data/anatomia/domain-01-osteology";
+import { myology } from "../../../data/anatomia/domain-02-myology";
+import { nervous } from "../../../data/anatomia/domain-03-nervous";
+import { endocrine } from "../../../data/anatomia/domain-04-endocrine";
+import { cardiovascularRespiratory } from "../../../data/anatomia/domain-05-cardiovascular-respiratory";
+import { digestive } from "../../../data/anatomia/domain-06-digestive";
+import { urinaryReproductive } from "../../../data/anatomia/domain-07-urinary-reproductive";
+import { sensory } from "../../../data/anatomia/domain-08-sensory";
 
 const domains: TextbookDomain[] = [
   osteology,
