@@ -63,9 +63,13 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // Memoize filtered array to avoid O(N) reallocation on every render when
+  // navigating or performing non-filter interactions
+  const filtered = useMemo(() => {
+    return filterTopic
+      ? questions.filter((q) => q.topicCategory === filterTopic)
+      : questions;
+  }, [filterTopic, questions]);
 
   const changeYear = useCallback(
     (year: number) => {
