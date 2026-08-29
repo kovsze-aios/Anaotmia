@@ -7,10 +7,10 @@
  * (several megabytes of textbook content) out of the client bundle.
  */
 
-export { getDomains, getDomain } from "./anatomia";
-export { biologiaTheory } from "./biologia/theory";
-export { chemiaTheory } from "./chemia/theory";
-export { fizjologiaTheory } from "./fizjologia/theory";
+export { getDomains, getDomain } from "../../data/anatomia";
+export { biologiaTheory } from "../../data/biologia/theory";
+export { chemiaTheory } from "../../data/chemia/theory";
+export { fizjologiaTheory } from "../../data/fizjologia/theory";
 
-export { biologia, getBiologiaRecords, getBiologiaRecord } from "./biologia";
-export { chemia, getChemiaRecords, getChemiaRecord } from "./chemia";
+export { biologia, getBiologiaRecords, getBiologiaRecord } from "../../data/biologia";
+export { chemia, getChemiaRecords, getChemiaRecord } from "../../data/chemia";
