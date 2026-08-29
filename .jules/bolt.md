@@ -28,3 +28,7 @@
 ## 2026-08-29 - Wrap Array Operations in Render with useMemo
 **Learning:** When performing array operations like `.filter()` or `.map()` directly inside a React component's render body, they recalculate on every render, wasting CPU cycles and breaking referential equality for child components.
 **Action:** Always wrap derived array computations in `useMemo` to preserve referential equality across renders unless dependencies change.
+
+## 2026-08-29 - CI pnpm Workspace Missing Packages
+**Learning:** In this project, the `pnpm-workspace.yaml` file must explicitly define a `packages` array (e.g., `packages: ['.']`) to satisfy pnpm v9 requirements and prevent 'packages field missing or empty' errors during CI installation (`pnpm install --frozen-lockfile`).
+**Action:** If fixing CI pipeline errors on pnpm install, ensure `packages: ['.']` exists in `pnpm-workspace.yaml`.
