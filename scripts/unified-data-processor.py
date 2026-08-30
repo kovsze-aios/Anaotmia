@@ -2,6 +2,7 @@ import os
 import json
 import re
 import random
+import chardet
 
 random.seed(42)
 
@@ -17,6 +18,12 @@ def clean_ocr(text):
     text = text.replace('CO2', 'CO₂')
     text = text.replace('O2', 'O₂')
     text = text.replace('H2O', 'H₂O')
+
+
+
+
+
+
     text = text.replace('->', '→')
     text = text.replace('=>', '⇒')
     return text.strip()
@@ -38,13 +45,22 @@ def linguistic_audit(text, subject):
     return text
 
 def extract_content(file_path):
-    for enc in ['utf-8', 'windows-1250', 'iso-8859-2']:
+    with open(file_path, 'rb') as f:
+        raw_data = f.read()
+
+    result = chardet.detect(raw_data)
+    encoding = result['encoding']
+    if not encoding:
+        encoding = 'utf-8'
+
+    try:
+        text = raw_data.decode(encoding)
+        return clean_detail_text(text)
+    except UnicodeDecodeError:
         try:
-            with open(file_path, "r", encoding=enc) as f:
-                return clean_detail_text(f.read())
-        except UnicodeDecodeError:
-            pass
-    return ""
+            return clean_detail_text(raw_data.decode('utf-8'))
+        except:
+            return ""
 
 def read_text_files(directory):
     texts = {}
@@ -253,9 +269,9 @@ def process_ts_file(file_path, subject):
     print(f"Updated {os.path.basename(file_path)}")
 
 print("Processing files...")
-for f in os.listdir(os.path.join(DEST_DIR, 'textbook')):
+for f in os.listdir(os.path.join(DEST_DIR, 'anatomia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
-        process_ts_file(os.path.join(DEST_DIR, 'textbook', f), 'anatomia')
+        process_ts_file(os.path.join(DEST_DIR, 'anatomia', f), 'anatomia')
 
 for f in os.listdir(os.path.join(DEST_DIR, 'biologia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):

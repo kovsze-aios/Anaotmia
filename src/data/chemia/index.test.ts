@@ -13,7 +13,7 @@ describe('chemia data access functions', () => {
       expect(records).toHaveLength(5);
 
       // Verify that the objects have the correct shape
-      records.forEach(record => {
+      records.forEach((record: NonNullable<ReturnType<typeof getChemiaRecords>>[number]) => {
         expect(record).toHaveProperty('year');
         expect(record).toHaveProperty('month');
         expect(record).toHaveProperty('examCode');
@@ -22,7 +22,7 @@ describe('chemia data access functions', () => {
       });
 
       // Verify the specific years are present
-      const years = records.map(r => r.year);
+      const years = records.map((r: NonNullable<ReturnType<typeof getChemiaRecords>>[number]) => r.year);
       expect(years).toContain(2016);
       expect(years).toContain(2017);
       expect(years).toContain(2018);

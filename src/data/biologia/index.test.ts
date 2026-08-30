@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { getBiologiaRecords, getBiologiaRecord, biologia } from './index';
 
 describe('biologia data access functions', () => {
