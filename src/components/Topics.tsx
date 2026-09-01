@@ -139,7 +139,7 @@ export function Topics() {
               className="subject-card__img"
               style={{ background: card.color }}
             >
-              <span className="subject-card__icon">{card.icon}</span>
+              <span className="subject-card__icon" aria-hidden="true">{card.icon}</span>
             </div>
             <div className="subject-card__content">
               <div className="subject-card__subtitle">{card.subtitle}</div>
@@ -147,7 +147,7 @@ export function Topics() {
               <div className="subject-card__desc">
                 {card.description}
               </div>
-              <div className="subject-card__cta">Przejdź do przedmiotu →</div>
+              <div className="subject-card__cta" aria-hidden="true">Przejdź do przedmiotu →</div>
             </div>
           </Link>
         ))}
@@ -169,7 +169,7 @@ export function Topics() {
               className="topicbox__img"
               style={{ background: topic.color }}
             >
-              <span
+              <span aria-hidden="true"
                 className="topicbox__icon"
                 style={{
                   fontSize: "60px",
@@ -188,7 +188,7 @@ export function Topics() {
               <div className="topicbox__description">
                 {topic.description}
               </div>
-              <div className="topicbox__cta">Przejdź do działu →</div>
+              <div className="topicbox__cta" aria-hidden="true">Przejdź do działu →</div>
             </div>
           </Link>
         ))}
