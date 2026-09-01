@@ -1,5 +1,6 @@
 import type {
   NavDomain,
+  NavLink,
   SidebarNavigation,
   TextbookDomain,
 } from "../models";
@@ -39,7 +40,7 @@ export function getNavDomains(subject: TheorySubject): NavDomain[] {
 export function getSidebarNavigation(): SidebarNavigation {
   // Deep-link to each domain's first section — matching the welcome grid —
   // so the drawer skips the landing page and lands on content.
-  const anatomy = getDomains().map((domain) => {
+  const anatomy = getDomains().map((domain: TextbookDomain) => {
     const firstSection = domain.sections[0];
     return {
       href: firstSection ? `/theory/anatomia/${firstSection.id}` : "/theory/anatomia",
@@ -47,12 +48,12 @@ export function getSidebarNavigation(): SidebarNavigation {
     };
   });
 
-  const biology = biologiaTheory.map((domain) => ({
+  const biology = biologiaTheory.map((domain: TextbookDomain) => ({
     href: "/theory/biologia",
     label: `${domain.icon} ${domain.title}`,
   }));
 
-  const chemistry = chemiaTheory.map((domain) => ({
+  const chemistry = chemiaTheory.map((domain: TextbookDomain) => ({
     href: "/theory/chemia",
     label: `${domain.icon} ${domain.title}`,
   }));
@@ -70,7 +71,7 @@ export function getSidebarNavigation(): SidebarNavigation {
   return {
     anatomy,
     biology,
-    chemistryInorganic: chemistry.filter((l) => isInorganic(l.label)),
-    chemistryOrganic: chemistry.filter((l) => isOrganic(l.label)),
+    chemistryInorganic: chemistry.filter((l: NavLink) => isInorganic(l.label)),
+    chemistryOrganic: chemistry.filter((l: NavLink) => isOrganic(l.label)),
   };
 }

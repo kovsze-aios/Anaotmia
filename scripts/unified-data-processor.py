@@ -38,13 +38,17 @@ def linguistic_audit(text, subject):
     return text
 
 def extract_content(file_path):
-    for enc in ['utf-8', 'windows-1250', 'iso-8859-2']:
-        try:
-            with open(file_path, "r", encoding=enc) as f:
-                return clean_detail_text(f.read())
-        except UnicodeDecodeError:
-            pass
-    return ""
+    import chardet
+    with open(file_path, "rb") as f:
+        raw_data = f.read()
+
+    result = chardet.detect(raw_data)
+    encoding = result['encoding'] if result['encoding'] else 'utf-8'
+
+    try:
+        return clean_detail_text(raw_data.decode(encoding))
+    except UnicodeDecodeError:
+        return clean_detail_text(raw_data.decode('utf-8', errors='replace'))
 
 def read_text_files(directory):
     texts = {}
@@ -253,9 +257,9 @@ def process_ts_file(file_path, subject):
     print(f"Updated {os.path.basename(file_path)}")
 
 print("Processing files...")
-for f in os.listdir(os.path.join(DEST_DIR, 'textbook')):
+for f in os.listdir(os.path.join(DEST_DIR, 'anatomia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
-        process_ts_file(os.path.join(DEST_DIR, 'textbook', f), 'anatomia')
+        process_ts_file(os.path.join(DEST_DIR, 'anatomia', f), 'anatomia')
 
 for f in os.listdir(os.path.join(DEST_DIR, 'biologia')):
     if f.endswith('.ts') and f not in ('index.ts', 'index.test.ts'):
