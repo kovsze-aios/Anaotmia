@@ -1,5 +1,0 @@
-allowBuilds:
-  # Native image optimizer used by `next build` / next/image.
-  sharp: true
-  # Native module resolver used by eslint-config-next's import plugin.
-  unrs-resolver: true
