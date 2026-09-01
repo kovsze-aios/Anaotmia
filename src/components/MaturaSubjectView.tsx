@@ -63,9 +63,16 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // ⚡ Bolt: Memoize the filtered array to prevent O(N) recalculation
+  // and array recreation on every render, especially on scroll or URL change.
+  // Impact: Reduces CPU work and maintains referential stability for downstream lists.
+  const filtered = useMemo(
+    () =>
+      filterTopic
+        ? questions.filter((q) => q.topicCategory === filterTopic)
+        : questions,
+    [questions, filterTopic]
+  );
 
   const changeYear = useCallback(
     (year: number) => {
