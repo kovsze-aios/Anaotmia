@@ -39,11 +39,7 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  // Slice to a safe maximum length before applying global regex replacements.
-  // We use .trimStart() first so we don't truncate visible characters if the string
-  // starts with massive whitespace padding.
-  const sliced = text.trimStart().slice(0, max * 3);
-  const clean = sliced.replace(/\s+/g, " ").trim();
+  const clean = text.replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
