@@ -1,5 +1,5 @@
 import { getDomain, getDomains } from "./index";
-import { osteology } from "./domain-01-osteology";
+import { osteology } from "../../../data/anatomia/domain-01-osteology";
 
 describe("Textbook Data Index", () => {
   describe("getDomains", () => {
