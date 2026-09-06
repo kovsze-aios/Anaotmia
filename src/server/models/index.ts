@@ -33,3 +33,11 @@ export type {
 } from "./navigation";
 
 export type { Subject, SearchResult } from "./search";
+
+export type {
+  SystemId,
+  AtlasPart,
+  AtlasConcept,
+  AtlasChunk,
+  Atlas,
+} from "./atlas";

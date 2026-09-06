@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "./atlas.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -3149,4 +3150,53 @@ main hr {
 
 .dark .recommendations h2.text-center {
   color: #f4f4f5;
+}
+
+/* ─── Primary section nav: Atlas 3D vs. Podręcznik ─────────────────────── */
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 22px;
+}
+
+.topbar-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 34px;
+  padding: 0 13px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.16s ease,
+    color 0.16s ease;
+}
+
+.topbar-nav__link:hover {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+.topbar-nav__link.is-active {
+  background: var(--accent);
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* Below the hamburger breakpoint the drawer carries these links instead. */
+@media (max-width: 767px) {
+  .topbar-nav {
+    display: none;
+  }
+}
+
+.drawer-link--section {
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }

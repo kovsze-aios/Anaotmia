@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { Activity } from "lucide-react";
+import { Activity, Box, BookOpen } from "lucide-react";
 
 import type { SidebarNavigation } from "@/server/models";
 
@@ -171,6 +171,20 @@ export function SidebarDrawer({
           </button>
         </div>
         <nav className="mobile-drawer__nav">
+
+          {/* ─── Top-level sections: the 3D atlas vs. the textbook ─── */}
+          <Link href="/" className="drawer-link drawer-link--section focus-ring" onClick={onClose}>
+            <Box className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> ATLAS 3D
+          </Link>
+          <Link
+            href="/theory"
+            className="drawer-link drawer-link--section focus-ring"
+            onClick={onClose}
+          >
+            <BookOpen className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> PODRĘCZNIK
+          </Link>
+
+          <div className="mobile-drawer__divider" />
 
           {/* ─── 🩺 ANATOMIA ─── */}
           <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>

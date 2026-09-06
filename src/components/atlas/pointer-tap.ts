@@ -1,0 +1,36 @@
+/**
+ * Distinguishes a tap from an orbit, pinch, pan, or cancelled touch sequence.
+ *
+ * Without this a drag that ends over a structure would select it, which makes
+ * orbiting the model on a touchscreen almost unusable.
+ */
+export class PointerTap {
+  private active = new Map<number, { x: number; y: number; threshold: number }>();
+  private blocked = false;
+
+  down(id: number, x: number, y: number, threshold: number) {
+    if (this.active.size === 0) this.blocked = false;
+    this.active.set(id, { x, y, threshold });
+    // A second finger means a pinch or two-finger pan, never a tap.
+    if (this.active.size > 1) this.blocked = true;
+  }
+
+  move(id: number, x: number, y: number) {
+    const start = this.active.get(id);
+    if (start && Math.hypot(x - start.x, y - start.y) > start.threshold) {
+      this.blocked = true;
+    }
+  }
+
+  up(id: number, x: number, y: number) {
+    this.move(id, x, y);
+    const tap = this.active.has(id) && this.active.size === 1 && !this.blocked;
+    this.active.delete(id);
+    return tap;
+  }
+
+  cancel(id: number) {
+    this.active.delete(id);
+    this.blocked = true;
+  }
+}

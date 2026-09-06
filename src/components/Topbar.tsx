@@ -1,16 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SidebarDrawer } from "./Sidebar";
 import { useTheme } from "@/hooks/useTheme";
 import { GlobalSearch } from "./GlobalSearch";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Box, BookOpen } from "lucide-react";
 import type { SidebarNavigation } from "@/server/models";
 
 export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { dark, toggleTheme } = useTheme();
+  const pathname = usePathname();
+
+  // The atlas lives at the root; everything textbook-shaped lives under /theory.
+  const onAtlas = pathname === "/";
+  const onTheory = pathname.startsWith("/theory") || pathname.startsWith("/matura");
 
   return (
     <>
@@ -29,6 +35,25 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
           <Link href="/" className="logo focus-ring rounded-sm">
             <span className="logo-text">Medycyna</span>
           </Link>
+
+          <nav className="topbar-nav" aria-label="Główna nawigacja">
+            <Link
+              href="/"
+              className={`topbar-nav__link focus-ring ${onAtlas ? "is-active" : ""}`}
+              aria-current={onAtlas ? "page" : undefined}
+            >
+              <Box className="w-4 h-4" aria-hidden="true" />
+              <span>Atlas 3D</span>
+            </Link>
+            <Link
+              href="/theory"
+              className={`topbar-nav__link focus-ring ${onTheory ? "is-active" : ""}`}
+              aria-current={onTheory ? "page" : undefined}
+            >
+              <BookOpen className="w-4 h-4" aria-hidden="true" />
+              <span>Podręcznik</span>
+            </Link>
+          </nav>
 
           <div className="ml-auto flex items-center gap-2">
             <GlobalSearch />

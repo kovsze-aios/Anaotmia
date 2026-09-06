@@ -1,0 +1,1133 @@
+/*
+ * Styles for the 3D Human Atlas.
+ *
+ * Everything is namespaced under `atlas-` and built on this project's own design
+ * tokens (`--background`, `--card`, `--border`, …) rather than the upstream
+ * project's palette, so the viewer follows our light/dark theme instead of
+ * forcing its own. Layout geometry is adapted from `ashemag/human-atlas` (MIT).
+ */
+
+/* ─── Landing poster ─────────────────────────────────────────────────────── */
+
+.atlas-poster {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(120% 100% at 80% 0%, color-mix(in oklab, var(--primary) 7%, transparent), transparent 60%),
+    var(--background);
+}
+
+.atlas-poster__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.atlas-poster__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--muted-foreground);
+  margin-bottom: 18px;
+}
+
+.atlas-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #10b981;
+  box-shadow: 0 0 0 3px color-mix(in oklab, #10b981 22%, transparent);
+}
+
+.atlas-poster h1 {
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.03;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+  margin: 0 0 18px;
+}
+
+.atlas-poster__accent {
+  color: #10b981;
+}
+
+.atlas-poster__lead {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  max-width: 52ch;
+  margin: 0 0 30px;
+}
+
+.atlas-poster__highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 34px;
+  display: grid;
+  gap: 16px;
+}
+
+.atlas-poster__highlights li {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.atlas-poster__highlights svg {
+  color: var(--muted-foreground);
+  flex: none;
+  margin-top: 2px;
+}
+
+.atlas-poster__highlights strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.atlas-poster__highlights span {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+}
+
+.atlas-poster__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 15.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.atlas-poster__cta:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.atlas-poster__weight {
+  margin: 14px 0 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+  max-width: 42ch;
+}
+
+.atlas-poster__art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  color: color-mix(in oklab, var(--foreground) 26%, transparent);
+}
+
+.atlas-poster__orb {
+  position: absolute;
+  inset: 12% 8%;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, color-mix(in oklab, #10b981 22%, transparent), transparent 68%);
+  filter: blur(14px);
+}
+
+.atlas-poster__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 72%);
+  opacity: 0.55;
+}
+
+.atlas-poster__art > svg {
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .atlas-poster__inner {
+    grid-template-columns: 1fr;
+    padding: 52px 20px 60px;
+    gap: 28px;
+  }
+  .atlas-poster__art {
+    min-height: 200px;
+    order: -1;
+  }
+}
+
+/* ─── Immersive viewer shell ─────────────────────────────────────────────── */
+
+.atlas-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: var(--background);
+}
+
+.atlas-studio {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  color: var(--foreground);
+  font-size: 14px;
+}
+
+.atlas-scene {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+
+.atlas-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.atlas-boot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+
+.atlas-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 40%, transparent 55%, color-mix(in oklab, var(--background) 55%, transparent));
+}
+
+.atlas-glass {
+  background: color-mix(in oklab, var(--card) 88%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow:
+    0 2px 5px rgb(0 0 0 / 0.04),
+    0 16px 48px rgb(0 0 0 / 0.07);
+  backdrop-filter: blur(24px);
+}
+
+/* ─── Header / top actions ───────────────────────────────────────────────── */
+
+.atlas-identity {
+  position: absolute;
+  top: 26px;
+  left: 28px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.atlas-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--muted-foreground);
+}
+
+.atlas-identity h1 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 9px 0;
+  color: var(--foreground);
+}
+
+.atlas-edition {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+}
+
+.atlas-identity-meta {
+  font-size: 11.5px;
+  color: var(--muted-foreground);
+}
+
+.atlas-identity-meta span {
+  margin: 0 5px;
+  opacity: 0.5;
+}
+
+.atlas-top-actions {
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.atlas-top-actions button,
+.atlas-theory-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 88%, transparent);
+  backdrop-filter: blur(24px);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: background 0.16s ease;
+}
+
+.atlas-top-actions button:hover,
+.atlas-theory-link:hover {
+  background: var(--accent);
+}
+
+.atlas-top-actions button.active {
+  border-color: color-mix(in oklab, var(--foreground) 34%, transparent);
+}
+
+.atlas-icon-button {
+  width: 40px;
+  padding: 0 !important;
+  justify-content: center;
+}
+
+.atlas-top-actions kbd {
+  font-family: inherit;
+  font-size: 10.5px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  color: var(--muted-foreground);
+}
+
+/* ─── Layers panel ───────────────────────────────────────────────────────── */
+
+.atlas-layers-panel {
+  position: absolute;
+  top: 165px;
+  bottom: 165px;
+  left: 28px;
+  z-index: 20;
+  width: 248px;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 14px;
+}
+
+.atlas-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 2px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--border);
+}
+
+.atlas-small-number {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}
+
+.atlas-layer-presets {
+  display: flex;
+  gap: 6px;
+  padding-top: 10px;
+}
+
+.atlas-layer-presets button {
+  flex: 1;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+
+.atlas-layer-presets button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--foreground);
+  border-color: color-mix(in oklab, var(--foreground) 26%, transparent);
+}
+
+.atlas-system-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-top: 6px;
+  padding-right: 4px;
+}
+
+.atlas-system-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 36px;
+  opacity: 0.5;
+  transition: opacity 0.16s ease;
+}
+
+.atlas-system-row.enabled {
+  opacity: 1;
+}
+
+.atlas-system-name {
+  flex: 1;
+  display: flex !important;
+  align-items: center;
+  gap: 9px;
+  justify-content: flex-start !important;
+  min-height: 36px;
+  padding: 0 !important;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.atlas-system-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  flex: none;
+}
+
+.atlas-system-count {
+  margin-left: auto;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}
+
+.atlas-panel-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 2px 13px;
+  border-top: 1px solid var(--border);
+  font-size: 11.5px;
+  color: var(--muted-foreground);
+}
+
+.atlas-panel-foot button {
+  height: auto;
+  padding: 0 !important;
+  font-size: 11.5px;
+  color: var(--muted-foreground);
+}
+
+/* ─── Search ─────────────────────────────────────────────────────────────── */
+
+.atlas-search-panel {
+  position: absolute;
+  top: 92px;
+  right: 28px;
+  z-index: 40;
+  width: 330px;
+  padding: 0 14px 14px;
+}
+
+.atlas-search-results {
+  max-height: 340px !important;
+}
+
+.atlas-search-result-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-search-note {
+  margin: 10px 2px 12px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+
+/* ─── Camera controls ────────────────────────────────────────────────────── */
+
+.atlas-view-controls {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px;
+}
+
+.atlas-view-controls button {
+  width: 38px;
+  height: 36px;
+  padding: 0 !important;
+  border-radius: 9px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  justify-content: center;
+}
+
+.atlas-view-controls button.active {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+.atlas-view-controls button:disabled {
+  opacity: 0.32;
+}
+
+.atlas-view-controls i {
+  height: 1px;
+  margin: 3px 6px;
+  background: var(--border);
+}
+
+/* ─── Caption, dock, footer ──────────────────────────────────────────────── */
+
+.atlas-scene-caption {
+  position: absolute;
+  bottom: 152px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: var(--muted-foreground);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.atlas-caption-line {
+  width: 26px;
+  height: 1px;
+  background: var(--border);
+}
+
+.atlas-bottom-dock {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: min(560px, calc(100% - 56px));
+  padding: 14px 20px;
+}
+
+.atlas-explode-control {
+  flex: 1;
+  min-width: 0;
+}
+
+.atlas-explode-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.atlas-explode-label output {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}
+
+.atlas-explode-label output span {
+  opacity: 0.6;
+  margin-left: 1px;
+}
+
+.atlas-slider-endpoints {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  font-size: 10.5px;
+  color: var(--muted-foreground);
+}
+
+.atlas-dock-layers,
+.atlas-dock-reset {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: auto !important;
+  padding: 4px 0 !important;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.atlas-dock-reset {
+  padding-left: 14px !important;
+  border-left: 1px solid var(--border);
+}
+
+.atlas-studio-footer {
+  position: absolute;
+  bottom: 14px;
+  left: 28px;
+  right: 28px;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10.5px;
+  color: var(--muted-foreground);
+  pointer-events: none;
+}
+
+.atlas-studio-footer b {
+  margin: 0 4px;
+  opacity: 0.45;
+}
+
+.atlas-studio-footer button {
+  pointer-events: auto;
+  height: auto;
+  padding: 0 !important;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+}
+
+/* ─── Loading / error ────────────────────────────────────────────────────── */
+
+.atlas-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 290px;
+  padding: 20px 24px;
+}
+
+.atlas-loading strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.atlas-loading span {
+  display: block;
+  margin-top: 3px;
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}
+
+.atlas-loading-track {
+  margin-top: 11px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.atlas-loading-track i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--foreground);
+  transition: width 0.3s ease;
+}
+
+.atlas-loading.error {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-color: color-mix(in oklab, var(--destructive) 45%, var(--border));
+}
+
+.atlas-loading.error p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+/* ─── Hover tooltip (created imperatively by the scene) ──────────────────── */
+
+.atlas-part-hover {
+  position: absolute;
+  z-index: 45;
+  max-width: 250px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 94%, transparent);
+  backdrop-filter: blur(18px);
+  font-size: 12px;
+  color: var(--foreground);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Detail / about sheets ──────────────────────────────────────────────── */
+
+/*
+ * Both sheets portal to `document.body`, so they land outside `.atlas-fullscreen`
+ * and its stacking context — they must therefore out-rank its z-index rather
+ * than merely the panels inside it.
+ */
+.atlas-detail-sheet,
+.atlas-about-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 90 !important;
+}
+
+.atlas-detail-sheet {
+  top: 92px !important;
+  right: 28px !important;
+  left: auto !important;
+  bottom: 152px !important;
+  /* `height` from the primitive would win over `bottom` and overflow the viewport. */
+  height: auto !important;
+  width: 340px !important;
+  max-width: none !important;
+  padding: 24px !important;
+}
+
+.atlas-about-sheet {
+  top: 92px !important;
+  right: 28px !important;
+  left: auto !important;
+  bottom: 92px !important;
+  height: auto !important;
+  width: 380px !important;
+  max-width: none !important;
+  padding: 28px !important;
+}
+
+.atlas-detail-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-left: 13px;
+}
+
+.atlas-detail-accent {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 3px;
+  border-radius: 999px;
+}
+
+.atlas-structure-title {
+  font-size: 27px !important;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.atlas-detail-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.atlas-structure-description {
+  font-size: 14px !important;
+  line-height: 1.62;
+  color: var(--muted-foreground);
+}
+
+.atlas-context-note {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  opacity: 0.8;
+}
+
+.atlas-structure-meta {
+  display: flex;
+  gap: 26px;
+  padding: 13px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted-foreground);
+}
+
+.atlas-structure-meta span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.atlas-structure-meta strong {
+  font-size: 14px;
+  letter-spacing: 0;
+  color: var(--foreground);
+}
+
+.atlas-member-list h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted-foreground);
+  margin: 0 0 7px;
+}
+
+.atlas-member-list button {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 !important;
+  font-size: 13px;
+  text-align: left;
+  color: var(--foreground);
+}
+
+.atlas-member-list p {
+  margin: 7px 0 0;
+  font-size: 11.5px;
+  color: var(--muted-foreground);
+}
+
+.atlas-source-link,
+.atlas-about-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--muted-foreground);
+  text-decoration: none;
+}
+
+.atlas-source-link:hover,
+.atlas-about-copy a:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
+.atlas-detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.atlas-primary-action {
+  display: flex !important;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  height: 44px;
+  border-radius: 11px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.atlas-primary-action svg:last-child {
+  margin-left: auto;
+}
+
+.atlas-secondary-action {
+  width: 100%;
+  height: 36px;
+  font-size: 12.5px;
+  color: var(--muted-foreground);
+}
+
+.atlas-about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: var(--muted-foreground);
+  overflow-y: auto;
+}
+
+.atlas-about-copy p {
+  margin: 0;
+}
+
+.atlas-about-copy strong {
+  color: var(--foreground);
+}
+
+.atlas-about-copy h3 {
+  margin: 8px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--foreground);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+.atlas-mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .atlas-layers-panel {
+    width: 222px;
+    left: 20px;
+  }
+  .atlas-identity {
+    left: 22px;
+  }
+  .atlas-top-actions,
+  .atlas-view-controls {
+    right: 20px;
+  }
+  .atlas-detail-sheet {
+    right: 20px !important;
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .atlas-mobile-only {
+    display: flex !important;
+  }
+  .atlas-desktop-only {
+    display: none !important;
+  }
+
+  .atlas-identity {
+    top: max(18px, env(safe-area-inset-top));
+    left: 18px;
+  }
+  .atlas-identity h1 {
+    font-size: 29px;
+    margin: 7px 0;
+  }
+  .atlas-identity-meta {
+    font-size: 10px;
+  }
+
+  .atlas-top-actions {
+    top: max(18px, env(safe-area-inset-top));
+    right: 12px;
+    gap: 5px;
+  }
+  .atlas-top-actions button,
+  .atlas-theory-link {
+    width: 38px;
+    padding: 0;
+    justify-content: center;
+  }
+  .atlas-top-actions span,
+  .atlas-top-actions kbd,
+  .atlas-theory-link span {
+    display: none;
+  }
+
+  .atlas-layers-panel {
+    display: none;
+  }
+  .atlas-layers-panel.mobile-open {
+    display: flex;
+    z-index: 30;
+    top: auto;
+    left: 12px;
+    right: 12px;
+    bottom: calc(150px + env(safe-area-inset-bottom));
+    width: auto;
+    max-height: calc(100dvh - 280px);
+  }
+  .atlas-system-row,
+  .atlas-system-name {
+    min-height: 44px;
+  }
+
+  .atlas-view-controls {
+    right: 12px;
+    padding: 3px;
+  }
+  .atlas-view-controls button {
+    width: 38px;
+    height: 42px;
+  }
+
+  .atlas-bottom-dock {
+    bottom: calc(26px + env(safe-area-inset-bottom));
+    width: calc(100% - 24px);
+    padding: 13px;
+    gap: 14px;
+  }
+  .atlas-dock-layers {
+    padding-right: 12px !important;
+    border-right: 1px solid var(--border);
+  }
+
+  .atlas-scene-caption {
+    bottom: calc(152px + env(safe-area-inset-bottom));
+    font-size: 8.5px;
+  }
+  .atlas-studio-footer {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    left: 15px;
+    right: 15px;
+    justify-content: center;
+  }
+  .atlas-studio-footer > span {
+    display: none;
+  }
+
+  .atlas-search-panel {
+    top: 108px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+  .atlas-search-results {
+    max-height: calc(100dvh - 320px) !important;
+  }
+
+  .atlas-detail-sheet {
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: calc(150px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: 48dvh;
+    padding: 20px !important;
+  }
+
+  .atlas-about-sheet {
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: calc(26px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: 76dvh;
+    padding: 22px !important;
+  }
+  .atlas-detail-sheet.is-isolated {
+    max-height: 40dvh;
+  }
+  .atlas-structure-title {
+    font-size: 23px !important;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .atlas-identity h1 {
+    font-size: 25px;
+  }
+  .atlas-identity-meta,
+  .atlas-scene-caption {
+    display: none;
+  }
+  .atlas-layers-panel {
+    display: none;
+  }
+  .atlas-mobile-only {
+    display: flex !important;
+  }
+  .atlas-layers-panel.mobile-open {
+    display: flex;
+    top: 84px;
+    bottom: 110px;
+    left: 12px;
+    width: 240px;
+    max-height: none;
+    z-index: 30;
+  }
+  .atlas-bottom-dock {
+    bottom: 18px;
+    width: 400px;
+  }
+  .atlas-view-controls {
+    flex-direction: row;
+  }
+  .atlas-view-controls i {
+    height: auto;
+    width: 1px;
+    margin: 6px 3px;
+  }
+  .atlas-detail-sheet {
+    top: 76px !important;
+    bottom: 106px !important;
+    width: 290px !important;
+    max-height: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atlas-poster__cta,
+  .atlas-loading-track i {
+    transition: none;
+  }
+}
+
+/*
+ * Base UI portals popups (combobox listbox, sheets) to `document.body` with a
+ * `z-50` positioner. That sits below `.atlas-fullscreen` (z-80), so the search
+ * results rendered but were painted underneath the viewer. Scoped to
+ * `body.atlas-open` so popups elsewhere in the app keep their normal stacking.
+ */
+body.atlas-open div:has(> [data-slot="combobox-content"]) {
+  z-index: 95 !important;
+}
