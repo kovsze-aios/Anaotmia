@@ -203,6 +203,19 @@ const en = {
     sensory: "Sense Organs",
     sensoryBody: "Eye, ear and skin — receptor structure and conduction pathways.",
   },
+
+  pagination: {
+    label: "Pagination",
+    previous: "Previous page",
+    next: "Next page",
+    goToPage: "Go to page {page}",
+    currentPage: "Page {page}, current page",
+    morePages: "More pages",
+    jumpToPage: "Go to page…",
+    go: "Go",
+    status: "Page {current} of {total}",
+    invalidPage: "Enter a number between 1 and {total}.",
+  },
   /** Anatomical system labels — panel chrome, so they are translated. */
   systems: {
     skeletal: "Skeleton",

@@ -188,6 +188,19 @@ const es: Dictionary = {
     sensory: "Órganos de los sentidos",
     sensoryBody: "Ojo, oído y piel: estructura de los receptores y vías de conducción.",
   },
+
+  pagination: {
+    label: "Paginación",
+    previous: "Página anterior",
+    next: "Página siguiente",
+    goToPage: "Ir a la página {page}",
+    currentPage: "Página {page}, página actual",
+    morePages: "Más páginas",
+    jumpToPage: "Ir a la página…",
+    go: "Ir",
+    status: "Página {current} de {total}",
+    invalidPage: "Introduce un número entre 1 y {total}.",
+  },
   systems: {
     skeletal: "Esqueleto",
     muscular: "Músculos",

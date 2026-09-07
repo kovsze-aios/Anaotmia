@@ -188,6 +188,19 @@ const de: Dictionary = {
     sensory: "Sinnesorgane",
     sensoryBody: "Auge, Ohr und Haut — Aufbau der Rezeptoren und Leitungsbahnen.",
   },
+
+  pagination: {
+    label: "Seitennummerierung",
+    previous: "Vorherige Seite",
+    next: "Nächste Seite",
+    goToPage: "Zu Seite {page}",
+    currentPage: "Seite {page}, aktuelle Seite",
+    morePages: "Weitere Seiten",
+    jumpToPage: "Zu Seite springen…",
+    go: "Los",
+    status: "Seite {current} von {total}",
+    invalidPage: "Geben Sie eine Zahl zwischen 1 und {total} ein.",
+  },
   systems: {
     skeletal: "Skelett",
     muscular: "Muskeln",

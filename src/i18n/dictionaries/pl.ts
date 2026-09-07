@@ -189,6 +189,19 @@ const pl: Dictionary = {
     sensory: "Narządy Zmysłów",
     sensoryBody: "Oko, ucho, skóra — budowa receptorów i dróg przewodzenia.",
   },
+
+  pagination: {
+    label: "Paginacja",
+    previous: "Poprzednia strona",
+    next: "Następna strona",
+    goToPage: "Przejdź do strony {page}",
+    currentPage: "Strona {page}, bieżąca strona",
+    morePages: "Więcej stron",
+    jumpToPage: "Przejdź do strony…",
+    go: "Idź",
+    status: "Strona {current} z {total}",
+    invalidPage: "Podaj liczbę od 1 do {total}.",
+  },
   systems: {
     skeletal: "Układ kostny",
     muscular: "Mięśnie",
