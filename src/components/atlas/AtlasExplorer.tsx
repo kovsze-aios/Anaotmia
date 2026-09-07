@@ -20,7 +20,7 @@ import {
 import type { Atlas, AtlasConcept, SystemId } from "@/server/models";
 import { getAtlas } from "@/services/atlasService";
 import { useTheme } from "@/hooks/useTheme";
-import { useI18n } from "@/i18n";
+import { useI18n, translateAnatomyName, anatomySearchHaystack } from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
@@ -170,15 +170,17 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
     return atlas.concepts
       .filter(
         (c) =>
-          c.name.toLowerCase().includes(term) ||
+          // Matches either language, so "watroba" and "liver" both find it.
+          anatomySearchHaystack(c.name, locale).includes(term) ||
           c.id.toLowerCase().includes(term),
       )
       .sort((a, b) => a.name.length - b.name.length)
       .slice(0, 80);
-  }, [atlas, query]);
+  }, [atlas, query, locale]);
 
   const sceneLabels = useMemo(
     () => ({
+      formatPartName: (name: string) => translateAnatomyName(name, locale),
       sceneAria: t.atlas.sceneAria,
       errorWebgl: t.atlas.errorWebgl,
       errorContextLost: t.atlas.errorContextLost,
@@ -187,7 +189,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
       errorGeometry: t.atlas.errorGeometry,
       errorGeneric: t.atlas.errorGeneric,
     }),
-    [t],
+    [t, locale],
   );
 
   const choose = (c: AtlasConcept) => {
@@ -449,7 +451,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
             }}
             inputValue={query}
             onInputValueChange={setQuery}
-            itemToStringLabel={(c) => c.name}
+            itemToStringLabel={(c) => translateAnatomyName(c.name, locale)}
             filter={null}
             open
             onOpenChange={(isOpen) => {
@@ -467,7 +469,9 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               <ComboboxList>
                 {(c: AtlasConcept) => (
                   <ComboboxItem key={c.id} value={c}>
-                    <span className="atlas-search-result-name">{c.name}</span>
+                    <span className="atlas-search-result-name">
+                      {translateAnatomyName(c.name, locale)}
+                    </span>
                     <span className="atlas-small-number">
                       {n(c.elements.length)} {plural(c.elements.length)}
                     </span>
@@ -521,7 +525,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         <span className="atlas-caption-line" />
         <span>
           {state.isolate
-            ? (chosen?.name ?? t.atlas.captionSelected)
+            ? (chosen ? translateAnatomyName(chosen.name, locale) : t.atlas.captionSelected)
             : state.explode > 0.95
               ? t.atlas.captionInventory
               : state.explode > 0.05
@@ -639,7 +643,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               {system ? t.systems[system.id] : t.atlas.detailFallback}
             </div>
             <SheetTitle ref={detailTitle} tabIndex={-1} className="atlas-structure-title">
-              {chosen?.name}
+              {chosen ? translateAnatomyName(chosen.name, locale) : ""}
             </SheetTitle>
           </div>
           <div className="atlas-detail-scroll" key={`${chosen?.id}-${state.isolate}`}>
@@ -666,7 +670,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
                 <h3>{t.atlas.includedStructures}</h3>
                 {selectedParts.slice(0, 50).map((p) => (
                   <Button variant="ghost" key={p.id} onClick={() => choosePart(p.id)}>
-                    <span>{p.name}</span>
+                    <span>{translateAnatomyName(p.name, locale)}</span>
                     <ChevronRight size={14} />
                   </Button>
                 ))}

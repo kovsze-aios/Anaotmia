@@ -14,10 +14,9 @@
     },
     {
       "name": "prod",
-      "runtimeExecutable": "npx",
+      "runtimeExecutable": "node",
       "runtimeArgs": [
-        "next",
-        "start",
+        "scripts/start-standalone.mjs",
         "--port",
         "3211"
       ],

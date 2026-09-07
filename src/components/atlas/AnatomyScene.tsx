@@ -38,6 +38,12 @@ const PALETTE = {
 
 /** Strings the scene needs. Passed in so the engine stays locale-agnostic. */
 export interface SceneLabels {
+  /**
+   * Localizes a structure name for display only. The scene keeps addressing
+   * parts by id, so highlighting and picking are unaffected by what this
+   * returns.
+   */
+  formatPartName: (englishName: string) => string;
   sceneAria: string;
   errorWebgl: string;
   errorContextLost: string;
@@ -539,7 +545,7 @@ export default function AnatomyScene({
       hover.hidden = index < 0;
       renderer.domElement.style.cursor = index < 0 ? "grab" : "pointer";
       if (index >= 0) {
-        hover.textContent = atlas.parts[index].name;
+        hover.textContent = labelsRef.current.formatPartName(atlas.parts[index].name);
         hover.style.left = `${Math.max(8, Math.min(x + 14, el.clientWidth - 260))}px`;
         hover.style.top = `${Math.max(8, Math.min(y + 18, el.clientHeight - 55))}px`;
       }

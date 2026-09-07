@@ -9,3 +9,14 @@ export {
   type Locale,
 } from "./config";
 export type { Dictionary } from "./dictionaries";
+export {
+  translateAnatomyName,
+  anatomySearchHaystack,
+  hasAnatomyTranslation,
+} from "./anatomyNames";
+export {
+  ANATOMY_TERMS_PL,
+  POLISH_SIDE,
+  type AnatomyTerm,
+  type PolishGender,
+} from "./anatomy-terms-pl";
