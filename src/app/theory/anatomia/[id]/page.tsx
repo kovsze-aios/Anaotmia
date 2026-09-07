@@ -114,8 +114,11 @@ export default async function TextbookSectionPage({ params }: Props) {
   };
 
   return (
-    <>
-      <nav aria-label="Okruszki" className="px-4 pt-3 text-sm">
+    // The reading view no longer sits inside the dashboard's sidebar layout, so
+    // it supplies its own shell: full-height ground and the vertical rhythm the
+    // old `.textbook-content` wrapper used to provide.
+    <div className="min-h-screen pb-8 pt-4">
+      <nav aria-label="Okruszki" className="mx-auto w-full max-w-3xl px-4 pb-2 text-sm">
         <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
           <li>
             <Link href="/" className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100">
@@ -160,6 +163,6 @@ export default async function TextbookSectionPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-    </>
+    </div>
   );
 }
