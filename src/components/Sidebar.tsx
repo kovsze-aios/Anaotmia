@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { Activity, Box, BookOpen } from "lucide-react";
 
 import type { SidebarNavigation } from "@/server/models";
+import { useI18n } from "@/i18n";
 
 /* ─── Accordion group ─── */
 function AccordionGroup({
@@ -102,6 +103,7 @@ export function SidebarDrawer({
     chemistryOrganic: chemistryOrganicLinks,
   } = navigation;
 
+  const { t } = useI18n();
   const drawerRef = useRef<HTMLElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -159,13 +161,13 @@ export function SidebarDrawer({
       >
         <div className="mobile-drawer__header">
           <Link href="/" className="drawer-brand focus-ring rounded-sm" onClick={onClose}>
-            Medycyna
+            {t.nav.brand}
           </Link>
           <button
             ref={closeButtonRef}
             className="mobile-drawer__close focus-ring rounded-sm"
             onClick={onClose}
-            aria-label="Zamknij menu"
+            aria-label={t.sidebar.closeMenu}
           >
             ✕
           </button>
@@ -174,20 +176,20 @@ export function SidebarDrawer({
 
           {/* ─── Top-level sections: the 3D atlas vs. the textbook ─── */}
           <Link href="/" className="drawer-link drawer-link--section focus-ring" onClick={onClose}>
-            <Box className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> ATLAS 3D
+            <Box className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> {t.nav.atlas.toUpperCase()}
           </Link>
           <Link
             href="/theory"
             className="drawer-link drawer-link--section focus-ring"
             onClick={onClose}
           >
-            <BookOpen className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> PODRĘCZNIK
+            <BookOpen className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> {t.nav.textbook.toUpperCase()}
           </Link>
 
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🩺 ANATOMIA ─── */}
-          <AccordionGroup label="🩺 ANATOMIA" defaultExpanded={false}>
+          <AccordionGroup label={`🩺 ${t.sidebar.anatomy}`} defaultExpanded={false}>
             {anatomyLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
@@ -199,35 +201,35 @@ export function SidebarDrawer({
 
           {/* ─── 🫀 FIZJOLOGIA ─── */}
           <Link href="/theory/fizjologia" className="drawer-link focus-ring" onClick={onClose}>
-            <Activity className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> FIZJOLOGIA
+            <Activity className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> {t.sidebar.physiology}
           </Link>
 
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🌿 BIOLOGIA ─── */}
-          <AccordionGroup label="🌿 BIOLOGIA" defaultExpanded={false}>
+          <AccordionGroup label={`🌿 ${t.sidebar.biology}`} defaultExpanded={false}>
             {biologyLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
             <Link href="/matura/biologia" className="drawer-link focus-ring" onClick={onClose}>
-              📝 Arkusze CKE — Biologia
+              📝 {t.sidebar.examSheetsBiology}
             </Link>
           </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🧪 CHEMIA ─── */}
-          <div className="drawer-section-label">🧪 CHEMIA — Matura Formuła 2015</div>
-          <SubAccordion label="Chemia nieorganiczna i obliczenia">
+          <div className="drawer-section-label">🧪 {t.sidebar.chemistry}</div>
+          <SubAccordion label={t.sidebar.chemistryInorganic}>
             {chemistryInorganicLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
           </SubAccordion>
-          <SubAccordion label="Chemia organiczna">
+          <SubAccordion label={t.sidebar.chemistryOrganic}>
             {chemistryOrganicLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
@@ -235,12 +237,12 @@ export function SidebarDrawer({
             ))}
           </SubAccordion>
           <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
-            📝 Arkusze CKE — Chemia
+            📝 {t.sidebar.examSheetsChemistry}
           </Link>
 
           <div className="mobile-drawer__divider" />
           <Link href="/" className="drawer-link drawer-link--home focus-ring" onClick={onClose}>
-            🏠 Strona główna
+            🏠 {t.sidebar.home}
           </Link>
         </nav>
       </aside>

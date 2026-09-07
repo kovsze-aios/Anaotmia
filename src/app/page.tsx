@@ -5,10 +5,13 @@ import { Footer } from "@/components/Footer";
 import { AtlasStage } from "@/components/atlas/AtlasStage";
 import { getSidebarNavigation } from "@/server";
 
+// Route metadata is rendered on the server and cannot follow the client-side
+// language switcher without giving up static generation, so it is written in
+// English — the primary language, and what crawlers index.
 export const metadata: Metadata = {
-  title: "Atlas 3D — Interaktywna anatomia człowieka | Medycyna",
+  title: "3D Atlas — Interactive human anatomy | Medycyna",
   description:
-    "Interaktywny atlas anatomiczny 3D: 2 234 struktury w 15 układach. Obracaj, rozkładaj i badaj model ciała człowieka, a potem przejdź do podręcznika teorii.",
+    "Interactive 3D anatomy atlas: 2,234 structures across 15 systems. Rotate, explode and explore a model of the human body, then move on to the textbook.",
 };
 
 export default function Home() {

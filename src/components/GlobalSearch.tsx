@@ -11,6 +11,7 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import { searchSections, type SearchResult } from "@/services/searchService";
+import { useI18n } from "@/i18n";
 
 /** Groups results by subject, ignoring any subject the UI has no section for. */
 const SUBJECT_GROUPS = ["Anatomia", "Biologia", "Chemia", "Fizjologia", "Matura"] as const;
@@ -103,13 +104,15 @@ export function GlobalSearch() {
     return grouped;
   }, [results]);
 
+  const { t } = useI18n();
+
   const showDropdown = open && debouncedQuery.trim().length >= MIN_QUERY_LENGTH;
 
   return (
     <div className="relative" ref={searchRef}>
       <Command className="overflow-visible bg-transparent border-none">
         <CommandInput
-          placeholder="Szukaj..."
+          placeholder={t.topbar.searchPlaceholder}
           value={query}
           onValueChange={setQuery}
           onFocus={() => setOpen(true)}
@@ -128,12 +131,12 @@ export function GlobalSearch() {
             <CommandList className="max-h-[60vh] overflow-y-auto overscroll-contain">
               {isLoading ? (
                 <div className="py-6 text-center text-sm text-zinc-500 dark:text-zinc-400">
-                  Szukanie…
+                  {t.topbar.searching}
                 </div>
               ) : (
                 <>
                   <CommandEmpty>
-                    Nie znaleziono wyników dla &quot;{debouncedQuery}&quot;.
+                    {t.topbar.noResults.replace("{query}", debouncedQuery)}
                   </CommandEmpty>
 
                   {SUBJECT_GROUPS.map((subject) =>

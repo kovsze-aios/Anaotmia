@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { Activity, Box, Layers3, MousePointerClick, Search } from "lucide-react";
 
+import { useI18n } from "@/i18n";
+
 /**
  * The WebGL viewer is loaded on demand for two reasons: it pulls in `three`
  * (~600 kB) plus ~30 MB of mesh data, and it touches `window` at module scope,
@@ -14,30 +16,24 @@ const AtlasExplorer = dynamic(() => import("./AtlasExplorer"), {
   loading: () => (
     <div className="atlas-boot" role="status">
       <Activity size={20} aria-hidden="true" />
-      <span>Uruchamianie widoku 3D…</span>
+      {/* Localised by `AtlasBootLabel`, which can reach the locale context. */}
+      <AtlasBootLabel />
     </div>
   ),
 });
 
-const HIGHLIGHTS = [
-  {
-    icon: Layers3,
-    title: "15 układów",
-    body: "Włączaj i wyłączaj układ kostny, mięśniowy, nerwowy, krwionośny i pozostałe.",
-  },
-  {
-    icon: MousePointerClick,
-    title: "2 234 struktury",
-    body: "Dotknij dowolnej struktury, aby ją wyizolować i poznać jej opis.",
-  },
-  {
-    icon: Search,
-    title: "Wyszukiwarka",
-    body: "Znajdź konkretną kość, mięsień lub nerw spośród 3 432 nazwanych pojęć.",
-  },
-];
+function AtlasBootLabel() {
+  const { t } = useI18n();
+  return <span>{t.atlasPoster.booting}</span>;
+}
 
 export function AtlasStage() {
+  const { t } = useI18n();
+  const highlights = [
+    { icon: Layers3, title: t.atlasPoster.systemsTitle, body: t.atlasPoster.systemsBody },
+    { icon: MousePointerClick, title: t.atlasPoster.structuresTitle, body: t.atlasPoster.structuresBody },
+    { icon: Search, title: t.atlasPoster.searchTitle, body: t.atlasPoster.searchBody },
+  ];
   const [launched, setLaunched] = useState(false);
 
   // The immersive view is fixed-position and full-bleed, so the page behind it
@@ -69,18 +65,18 @@ export function AtlasStage() {
         <div className="atlas-poster__copy">
           <div className="atlas-poster__eyebrow">
             <span className="atlas-status-dot" aria-hidden="true" />
-            INTERAKTYWNA ANATOMIA 3D
+            {t.atlasPoster.eyebrow}
           </div>
           <h1 id="atlas-poster-heading">
-            Atlas 3D<span className="atlas-poster__accent">.</span>
+            {t.atlasPoster.title}
+            <span className="atlas-poster__accent">.</span>
           </h1>
           <p className="atlas-poster__lead">
-            Obracaj, rozkładaj i badaj kompletny model anatomiczny dorosłego
-            człowieka — 2 234 struktury w 15 układach, prosto w przeglądarce.
+{t.atlasPoster.lead}
           </p>
 
           <ul className="atlas-poster__highlights">
-            {HIGHLIGHTS.map(({ icon: Icon, title, body }) => (
+            {highlights.map(({ icon: Icon, title, body }) => (
               <li key={title}>
                 <Icon size={18} aria-hidden="true" />
                 <div>
@@ -98,12 +94,11 @@ export function AtlasStage() {
               onClick={() => setLaunched(true)}
             >
               <Box size={20} aria-hidden="true" />
-              Uruchom Atlas 3D
+              {t.atlasPoster.launch}
             </button>
             {/* Stated up front: this is a large download on a metered connection. */}
             <p className="atlas-poster__weight">
-              Model waży ok. 30 MB i wczytuje się dopiero po uruchomieniu.
-              Wymaga przeglądarki z obsługą WebGL.
+{t.atlasPoster.weight}
             </p>
           </div>
         </div>

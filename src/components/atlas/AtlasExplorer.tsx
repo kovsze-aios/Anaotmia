@@ -20,6 +20,7 @@ import {
 import type { Atlas, AtlasConcept, SystemId } from "@/server/models";
 import { getAtlas } from "@/services/atlasService";
 import { useTheme } from "@/hooks/useTheme";
+import { useI18n } from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
@@ -42,8 +43,8 @@ import AnatomyScene from "./AnatomyScene";
 import {
   DEFAULT_VISIBLE,
   SYSTEMS,
-  EXPLANATIONS,
   explanation,
+  hasOrganExplanation,
   type SceneState,
   type View,
 } from "./anatomy";
@@ -58,7 +59,7 @@ const initial: SceneState = {
   reset: 0,
 };
 
-/** Organs offered before the visitor has typed anything. Dataset names are English. */
+/** Organs offered before the visitor has typed. Dataset names are English. */
 const SUGGESTED = [
   "heart",
   "brain",
@@ -70,6 +71,15 @@ const SUGGESTED = [
   "trachea",
 ];
 
+const ORGAN_PRESET: SystemId[] = [
+  "cardiac",
+  "respiratory",
+  "digestive",
+  "urinary",
+  "endocrine",
+  "reproductive",
+];
+
 export interface AtlasExplorerProps {
   /** Leaves the immersive view and returns to the landing poster. */
   onExit?: () => void;
@@ -78,6 +88,7 @@ export interface AtlasExplorerProps {
 export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
   const detailTitle = useRef<HTMLHeadingElement>(null);
   const { dark } = useTheme();
+  const { t, n, plural, locale } = useI18n();
 
   const [atlas, setAtlas] = useState<Atlas | null>(null);
   const [state, setState] = useState(initial);
@@ -89,6 +100,8 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
   const [query, setQuery] = useState("");
   const [chosen, setChosen] = useState<AtlasConcept | null>(null);
 
+  // Re-reads on locale change so a language switch relabels the error too.
+  const catalogueError = t.atlas.errorCatalogue;
   useEffect(() => {
     const abort = new AbortController();
     setProgress(0);
@@ -96,10 +109,10 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
     getAtlas({ signal: abort.signal })
       .then(setAtlas)
       .catch((e: Error) => {
-        if (e.name !== "AbortError") setError(e.message);
+        if (e.name !== "AbortError") setError(e.message || catalogueError);
       });
     return () => abort.abort();
-  }, []);
+  }, [catalogueError]);
 
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
@@ -164,6 +177,19 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
       .slice(0, 80);
   }, [atlas, query]);
 
+  const sceneLabels = useMemo(
+    () => ({
+      sceneAria: t.atlas.sceneAria,
+      errorWebgl: t.atlas.errorWebgl,
+      errorContextLost: t.atlas.errorContextLost,
+      errorFile: t.atlas.errorFile,
+      errorIncomplete: t.atlas.errorIncomplete,
+      errorGeometry: t.atlas.errorGeometry,
+      errorGeneric: t.atlas.errorGeneric,
+    }),
+    [t],
+  );
+
   const choose = (c: AtlasConcept) => {
     setChosen(c);
     setState((s) => ({ ...s, selected: c.elements, isolate: false, rotate: false }));
@@ -204,17 +230,25 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
     setPanel((p) => (p === next ? null : next));
   };
 
+  const viewTitles = [
+    t.atlas.viewThreeQuarter,
+    t.atlas.viewFront,
+    t.atlas.viewSide,
+    t.atlas.viewBack,
+  ];
+
   return (
     <div className="atlas-studio">
       {atlas && (
         <AnatomyScene
           atlas={atlas}
           dark={dark}
+          labels={sceneLabels}
           state={{ ...state, inspectorOpen: details && selectedParts.length > 0 }}
           onSelect={choosePart}
-          onProgress={(n) => {
-            setProgress(n);
-            if (n === 100) setError("");
+          onProgress={(p) => {
+            setProgress(p);
+            if (p === 100) setError("");
           }}
           onError={setError}
         />
@@ -223,39 +257,39 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
 
       <header className="atlas-identity">
         <div className="atlas-eyebrow">
-          <span className="atlas-status-dot" /> INTERAKTYWNA ANATOMIA
+          <span className="atlas-status-dot" /> {t.atlas.eyebrow}
         </div>
         <h1>
-          Atlas 3D
+          {t.nav.atlas}
           <Badge variant="outline" className="atlas-edition">
             3D
           </Badge>
         </h1>
         <div className="atlas-identity-meta">
-          {atlas ? atlas.parts.length.toLocaleString("pl-PL") : "2 234"} struktur{" "}
+          {atlas ? n(atlas.parts.length) : n(2234)} {t.atlas.structures}{" "}
           <span>·</span> BodyParts3D
         </div>
       </header>
 
-      <nav className="atlas-top-actions" aria-label="Panele eksploratora">
+      <nav className="atlas-top-actions" aria-label={t.atlas.panelsLabel}>
         <Button
           variant="ghost"
           className={panel === "search" ? "active" : ""}
           onClick={() => openPanel("search")}
-          aria-label="Szukaj struktury anatomicznej"
+          aria-label={t.atlas.findStructureAria}
         >
           <Search size={18} />
-          <span>Znajdź strukturę</span>
+          <span>{t.atlas.findStructure}</span>
           <kbd>/</kbd>
         </Button>
         <Link href="/theory" className="atlas-theory-link focus-ring">
           <BookOpen size={18} />
-          <span>Podręcznik</span>
+          <span>{t.nav.textbook}</span>
         </Link>
         <Button
           variant="ghost"
           className="atlas-icon-button"
-          aria-label="O tym atlasie"
+          aria-label={t.atlas.about}
           onClick={() => {
             setDetails(false);
             setPanel(null);
@@ -268,7 +302,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
           <Button
             variant="ghost"
             className="atlas-icon-button"
-            aria-label="Zamknij atlas 3D"
+            aria-label={t.atlas.close}
             onClick={onExit}
           >
             <X size={18} />
@@ -278,15 +312,15 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
 
       <section
         className={`atlas-layers-panel atlas-glass ${panel === "layers" ? "mobile-open" : ""}`}
-        aria-label="Warstwy anatomiczne"
+        aria-label={t.atlas.layersLabel}
       >
         <div className="atlas-panel-heading">
-          <span>Układy</span>
+          <span>{t.atlas.systems}</span>
           <Button
             variant="ghost"
             className="atlas-mobile-only atlas-icon-button"
             onClick={() => setPanel(null)}
-            aria-label="Zamknij listę układów"
+            aria-label={t.atlas.closeSystems}
           >
             <X size={18} />
           </Button>
@@ -307,7 +341,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               }))
             }
           >
-            Wszystko
+            {t.atlas.presetAll}
           </Button>
           <Button
             variant="ghost"
@@ -321,104 +355,91 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               }))
             }
           >
-            Szkielet
+            {t.atlas.presetSkeleton}
           </Button>
           <Button
             variant="ghost"
             aria-pressed={
-              state.visible.length === 6 &&
-              (
-                [
-                  "cardiac",
-                  "respiratory",
-                  "digestive",
-                  "urinary",
-                  "endocrine",
-                  "reproductive",
-                ] as SystemId[]
-              ).every((id) => state.visible.includes(id))
+              state.visible.length === ORGAN_PRESET.length &&
+              ORGAN_PRESET.every((id) => state.visible.includes(id))
             }
             onClick={() =>
               setState((s) => ({
                 ...s,
                 selected: [],
                 isolate: false,
-                visible: [
-                  "cardiac",
-                  "respiratory",
-                  "digestive",
-                  "urinary",
-                  "endocrine",
-                  "reproductive",
-                ],
+                visible: [...ORGAN_PRESET],
               }))
             }
           >
-            Narządy
+            {t.atlas.presetOrgans}
           </Button>
         </div>
         <div className="atlas-system-list">
-          {activeSystems.map((s) => (
-            <div
-              className={`atlas-system-row ${state.visible.includes(s.id) ? "enabled" : ""}`}
-              key={s.id}
-            >
-              <Button
-                variant="ghost"
-                className="atlas-system-name"
-                title={`Pokaż tylko: ${s.name.toLowerCase()}`}
-                onClick={() =>
-                  setState((v) => ({
-                    ...v,
-                    visible: [s.id],
-                    isolate: false,
-                    selected: [],
-                  }))
-                }
+          {activeSystems.map((s) => {
+            const label = t.systems[s.id];
+            return (
+              <div
+                className={`atlas-system-row ${state.visible.includes(s.id) ? "enabled" : ""}`}
+                key={s.id}
               >
-                <span className="atlas-system-dot" style={{ background: s.color }} />
-                {s.name}
-                <span className="atlas-system-count">{counts[s.id]}</span>
-              </Button>
-              <Switch
-                checked={state.visible.includes(s.id)}
-                onCheckedChange={() => toggle(s.id)}
-                aria-label={`Pokaż: ${s.name.toLowerCase()}`}
-              />
-            </div>
-          ))}
+                <Button
+                  variant="ghost"
+                  className="atlas-system-name"
+                  title={`${t.atlas.showOnly} ${label.toLowerCase()}`}
+                  onClick={() =>
+                    setState((v) => ({
+                      ...v,
+                      visible: [s.id],
+                      isolate: false,
+                      selected: [],
+                    }))
+                  }
+                >
+                  <span className="atlas-system-dot" style={{ background: s.color }} />
+                  {label}
+                  <span className="atlas-system-count">{counts[s.id]}</span>
+                </Button>
+                <Switch
+                  checked={state.visible.includes(s.id)}
+                  onCheckedChange={() => toggle(s.id)}
+                  aria-label={`${t.atlas.show} ${label.toLowerCase()}`}
+                />
+              </div>
+            );
+          })}
         </div>
         <div className="atlas-panel-foot">
-          <span>{visibleCount.toLocaleString("pl-PL")} widocznych struktur</span>
+          <span>
+            {n(visibleCount)} {t.atlas.visibleStructures}
+          </span>
           <Button
             variant="ghost"
             onClick={() =>
               setState((s) => ({ ...s, visible: [], selected: [], isolate: false }))
             }
           >
-            Ukryj wszystko
+            {t.atlas.hideAll}
           </Button>
         </div>
       </section>
 
       {panel === "search" && (
-        <section className="atlas-search-panel atlas-glass" aria-label="Znajdź strukturę">
+        <section className="atlas-search-panel atlas-glass" aria-label={t.atlas.findLabel}>
           <div className="atlas-panel-heading">
-            <span>Znajdź strukturę</span>
+            <span>{t.atlas.searchPanelTitle}</span>
             <Button
               variant="ghost"
               className="atlas-icon-button"
               onClick={() => setPanel(null)}
-              aria-label="Zamknij wyszukiwarkę"
+              aria-label={t.atlas.closeSearch}
             >
               <X size={18} />
             </Button>
           </div>
           {/* Above the field: the results popup floats over anything below it. */}
           <p className="atlas-search-note">
-            {query
-              ? "Pokazujemy do 80 dopasowań. Doprecyzuj zapytanie, aby znaleźć mniejsze struktury."
-              : "Nazwy struktur pochodzą z bazy BodyParts3D i są w języku angielskim."}
+            {query ? t.atlas.searchHintTyping : t.atlas.searchHintIdle}
           </p>
           <Combobox<AtlasConcept>
             items={results}
@@ -431,25 +452,24 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
             itemToStringLabel={(c) => c.name}
             filter={null}
             open
-            onOpenChange={(open) => {
-              if (!open) setPanel(null);
+            onOpenChange={(isOpen) => {
+              if (!isOpen) setPanel(null);
             }}
           >
             <ComboboxInput
               autoFocus
-              placeholder="Heart, femur, cranial nerve…"
-              aria-label="Szukaj nazwanych struktur anatomicznych"
+              placeholder={t.atlas.searchPlaceholder}
+              aria-label={t.atlas.searchAria}
               showTrigger={false}
             />
             <ComboboxContent className="atlas-search-results">
-              <ComboboxEmpty>Brak struktur pasujących do zapytania.</ComboboxEmpty>
+              <ComboboxEmpty>{t.atlas.searchEmpty}</ComboboxEmpty>
               <ComboboxList>
                 {(c: AtlasConcept) => (
                   <ComboboxItem key={c.id} value={c}>
                     <span className="atlas-search-result-name">{c.name}</span>
                     <span className="atlas-small-number">
-                      {c.elements.length}{" "}
-                      {c.elements.length === 1 ? "element" : "elementów"}
+                      {n(c.elements.length)} {plural(c.elements.length)}
                     </span>
                   </ComboboxItem>
                 )}
@@ -459,7 +479,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         </section>
       )}
 
-      <nav className="atlas-view-controls atlas-glass" aria-label="Sterowanie kamerą">
+      <nav className="atlas-view-controls atlas-glass" aria-label={t.atlas.cameraControls}>
         {(["three-quarter", "front", "side", "back"] as View[]).map((v, i) => (
           <Button
             variant="ghost"
@@ -470,18 +490,18 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
             onClick={() =>
               setState((s) => ({ ...s, view: v, reset: s.reset + 1, rotate: false }))
             }
-            title={["Widok 3/4", "Z przodu", "Z boku", "Z tyłu"][i]}
-            aria-label={["Widok 3/4", "Z przodu", "Z boku", "Z tyłu"][i]}
+            title={viewTitles[i]}
+            aria-label={viewTitles[i]}
           >
-            <span>{["¾", "P", "B", "T"][i]}</span>
+            <span>{t.atlas.viewLetters[i]}</span>
           </Button>
         ))}
         <i />
         <Button
           variant="ghost"
           disabled={state.explode >= 0.4}
-          aria-label={state.rotate ? "Zatrzymaj obrót" : "Obracaj model"}
-          title="Automatyczny obrót"
+          aria-label={state.rotate ? t.atlas.pauseRotation : t.atlas.rotateModel}
+          title={t.atlas.autoRotate}
           className={state.rotate ? "active" : ""}
           onClick={() => setState((s) => ({ ...s, rotate: !s.rotate }))}
         >
@@ -489,8 +509,8 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         </Button>
         <Button
           variant="ghost"
-          aria-label="Zresetuj widok i warstwy"
-          title="Reset"
+          aria-label={t.atlas.resetView}
+          title={t.atlas.reset}
           onClick={reset}
         >
           <RotateCcw size={17} />
@@ -501,12 +521,12 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         <span className="atlas-caption-line" />
         <span>
           {state.isolate
-            ? (chosen?.name ?? "WYBRANA STRUKTURA")
+            ? (chosen?.name ?? t.atlas.captionSelected)
             : state.explode > 0.95
-              ? "INWENTARZ ANATOMICZNY"
+              ? t.atlas.captionInventory
               : state.explode > 0.05
-                ? "STRUKTURY ROZDZIELONE"
-                : "DOROSŁY CZŁOWIEK · MĘŻCZYZNA"}
+                ? t.atlas.captionSeparated
+                : t.atlas.captionAdult}
         </span>
         <span className="atlas-caption-line" />
       </div>
@@ -516,14 +536,14 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
           variant="ghost"
           className="atlas-mobile-only atlas-dock-layers"
           onClick={() => openPanel("layers")}
-          aria-label="Otwórz warstwy układów"
+          aria-label={t.atlas.openLayers}
         >
           <Layers3 size={20} />
-          <span>Układy</span>
+          <span>{t.atlas.systems}</span>
         </Button>
         <div className="atlas-explode-control">
           <div className="atlas-explode-label">
-            <label id="atlas-explode-label">Rozłóż anatomię</label>
+            <label id="atlas-explode-label">{t.atlas.explode}</label>
             <output>
               {Math.round(state.explode * 100)}
               <span>%</span>
@@ -546,25 +566,25 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
             }}
           />
           <div className="atlas-slider-endpoints">
-            <span>Złożone</span>
-            <span>Każdy element</span>
+            <span>{t.atlas.assembled}</span>
+            <span>{t.atlas.everyPiece}</span>
           </div>
         </div>
         <Button
           variant="ghost"
           className="atlas-dock-reset"
           onClick={reset}
-          aria-label="Złóż i zresetuj"
+          aria-label={t.atlas.resetDock}
         >
           <RotateCcw size={18} />
-          <span>Reset</span>
+          <span>{t.atlas.reset}</span>
         </Button>
       </div>
 
       <footer className="atlas-studio-footer">
         <span>
-          {state.explode > 0.8 ? "Przeciągnij, aby przesunąć" : "Przeciągnij, aby obracać"}{" "}
-          <b>·</b> Szczypnij, aby przybliżyć <b>·</b> Dotknij, aby zbadać
+          {state.explode > 0.8 ? t.atlas.dragPan : t.atlas.dragOrbit} <b>·</b>{" "}
+          {t.atlas.pinchZoom} <b>·</b> {t.atlas.tapInspect}
         </span>
         <Button
           variant="ghost"
@@ -574,7 +594,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
             setAbout(true);
           }}
         >
-          Źródło i licencja <ArrowUpRight size={12} />
+          {t.atlas.sourceCredits} <ArrowUpRight size={12} />
         </Button>
       </footer>
 
@@ -582,10 +602,10 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         <div className="atlas-loading atlas-glass" role="status">
           <Activity size={18} />
           <div>
-            <strong>Przygotowujemy anatomię</strong>
+            <strong>{t.atlas.preparing}</strong>
             <span>
-              {progress}% · Wczytywanie{" "}
-              {atlas?.parts.length.toLocaleString("pl-PL") ?? "2 234"} struktur
+              {progress}% · {t.atlas.loadingPieces}{" "}
+              {n(atlas?.parts.length ?? 2234)} {t.atlas.structures}
             </span>
             <div className="atlas-loading-track">
               <i style={{ width: `${progress}%` }} />
@@ -597,7 +617,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         <div className="atlas-loading atlas-glass error" role="alert">
           <p>{error}</p>
           <Button variant="ghost" onClick={() => location.reload()}>
-            Odśwież widok
+            {t.atlas.reload}
           </Button>
         </div>
       )}
@@ -615,32 +635,35 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
         >
           <div className="atlas-detail-header">
             <div className="atlas-detail-accent" style={{ background: system?.color }} />
-            <div className="atlas-eyebrow">{system?.name ?? "ANATOMIA"}</div>
+            <div className="atlas-eyebrow">
+              {system ? t.systems[system.id] : t.atlas.detailFallback}
+            </div>
             <SheetTitle ref={detailTitle} tabIndex={-1} className="atlas-structure-title">
               {chosen?.name}
             </SheetTitle>
           </div>
           <div className="atlas-detail-scroll" key={`${chosen?.id}-${state.isolate}`}>
             <SheetDescription className="atlas-structure-description">
-              {chosen && selected ? explanation(chosen.name, selected.system) : ""}
+              {chosen && selected
+                ? explanation(chosen.name, selected.system, locale)
+                : ""}
             </SheetDescription>
-            {chosen && !EXPLANATIONS[chosen.name.toLowerCase()] && (
-              <span className="atlas-context-note">
-                Opis układu · struktura rozpoznana na podstawie danych źródłowych
-              </span>
+            {chosen && !hasOrganExplanation(chosen.name, locale) && (
+              <span className="atlas-context-note">{t.atlas.systemOverviewNote}</span>
             )}
             <div className="atlas-structure-meta">
               <span>
-                Identyfikator<strong>{chosen?.id}</strong>
+                {t.atlas.atlasReference}
+                <strong>{chosen?.id}</strong>
               </span>
               <span>
-                Wybrane elementy
-                <strong>{state.selected.length.toLocaleString("pl-PL")}</strong>
+                {t.atlas.selectedPieces}
+                <strong>{n(state.selected.length)}</strong>
               </span>
             </div>
             {selectedParts.length > 1 && (
               <div className="atlas-member-list">
-                <h3>Struktury składowe</h3>
+                <h3>{t.atlas.includedStructures}</h3>
                 {selectedParts.slice(0, 50).map((p) => (
                   <Button variant="ghost" key={p.id} onClick={() => choosePart(p.id)}>
                     <span>{p.name}</span>
@@ -648,7 +671,12 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
                   </Button>
                 ))}
                 {selectedParts.length > 50 && (
-                  <p>I jeszcze {selectedParts.length - 50} modelowanych elementów.</p>
+                  <p>
+                    {t.atlas.andMore.replace(
+                      "{count}",
+                      n(selectedParts.length - 50),
+                    )}
+                  </p>
                 )}
               </div>
             )}
@@ -658,7 +686,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               target="_blank"
               rel="noreferrer"
             >
-              Zobacz źródło anatomiczne <ArrowUpRight size={14} />
+              {t.atlas.viewSource} <ArrowUpRight size={14} />
             </a>
           </div>
           <div className="atlas-detail-actions">
@@ -667,7 +695,7 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               onClick={() => setState((s) => ({ ...s, isolate: !s.isolate, explode: 0 }))}
             >
               <Focus size={18} />
-              {state.isolate ? "Pokaż otoczenie" : "Izoluj strukturę"}
+              {state.isolate ? t.atlas.showSurrounding : t.atlas.isolate}
               <ChevronRight size={16} />
             </Button>
             <Button
@@ -678,38 +706,45 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
                 setDetails(false);
               }}
             >
-              Wyczyść wybór
+              {t.atlas.clearSelection}
             </Button>
           </div>
         </SheetContent>
       </Sheet>
 
+      {/*
+        Source and licence notice. Kept in English in every locale: it reproduces
+        the BodyParts3D attribution, and a licence is safest quoted as published
+        rather than paraphrased into six languages. See ATTRIBUTION.md.
+      */}
       <Sheet open={about} onOpenChange={setAbout}>
         <SheetContent className="atlas-about-sheet atlas-glass">
-          <div className="atlas-eyebrow">ŹRÓDŁO I ZAKRES</div>
-          <SheetTitle className="atlas-structure-title">Ciało, odsłonięte.</SheetTitle>
+          <div className="atlas-eyebrow">SOURCE &amp; SCOPE</div>
+          <SheetTitle className="atlas-structure-title">A body, revealed.</SheetTitle>
           <SheetDescription>
-            Poznaj referencyjną anatomię dorosłego mężczyzny z bazy BodyParts3D.
+            Explore the adult male reference anatomy from BodyParts3D.
           </SheetDescription>
-          <div className="atlas-about-copy">
+          <div className="atlas-about-copy" lang="en">
             <p>
-              <strong>Mężczyzna · BodyParts3D</strong>
-              <br />2 234 pojedynczych siatek i 3 432 nazwanych pojęć anatomicznych.
+              <strong>Male · BodyParts3D</strong>
+              <br />
+              2,234 individual meshes and 3,432 named concepts from an adult male
+              reference anatomy.
             </p>
             <p>
-              Ta baza nie zawiera wszystkich struktur ani wariantów anatomicznych
-              człowieka. Jedno pojęcie może obejmować wiele elementów; każda siatka
-              źródłowa jest renderowana raz.
+              This reference does not contain every human structure or variation.
+              Named concepts can contain multiple pieces; each source mesh is
+              rendered once.
             </p>
             <p>
-              Kolory i podział na układy dobrano na potrzeby eksploracji. Geometria
-              została uproszczona na potrzeby sieci, a krótkie opisy mają charakter
-              ogólnoedukacyjny. To materiał anatomiczny, <strong>nie narzędzie
-              diagnostyczne ani kliniczne</strong>.
+              Colors and system groupings are designed for exploration. The geometry
+              is simplified for the web, and short explanations provide general
+              educational context. This is an anatomical reference,{" "}
+              <strong>not a diagnostic or clinical tool</strong>.
             </p>
-            <h3>Źródło danych</h3>
+            <h3>Source</h3>
             <p>
-              BodyParts3D, © The Database Center for Life Science, na licencji
+              BodyParts3D, © The Database Center for Life Science, licensed under
               Creative Commons Attribution 4.0 International (CC BY 4.0).
             </p>
             <a
@@ -717,28 +752,28 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
               target="_blank"
               rel="noreferrer"
             >
-              Licencja zbioru danych <ArrowUpRight size={14} />
+              Dataset license <ArrowUpRight size={14} />
             </a>
             <a
               href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html"
               target="_blank"
               rel="noreferrer"
             >
-              Oryginalna geometria i metadane <ArrowUpRight size={14} />
+              Original geometry &amp; metadata <ArrowUpRight size={14} />
             </a>
             <a
               href="https://academic.oup.com/nar/article/37/suppl_1/D782/1000752"
               target="_blank"
               rel="noreferrer"
             >
-              Publikacja źródłowa <ArrowUpRight size={14} />
+              Read the source publication <ArrowUpRight size={14} />
             </a>
             <a
               href="https://github.com/ashemag/human-atlas"
               target="_blank"
               rel="noreferrer"
             >
-              Silnik atlasu (MIT) <ArrowUpRight size={14} />
+              Atlas viewer engine (MIT) <ArrowUpRight size={14} />
             </a>
           </div>
         </SheetContent>

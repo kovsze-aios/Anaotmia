@@ -9,8 +9,9 @@ export async function decodeModelResponse(
   response: Response,
   expectedBytes: number,
   compressed: boolean,
+  messages: { failed: string; incomplete: string },
 ): Promise<ArrayBuffer> {
-  if (!response.ok) throw new Error("Nie udało się wczytać pliku anatomii.");
+  if (!response.ok) throw new Error(messages.failed);
 
   const payload = await response.arrayBuffer();
   const signature = new Uint8Array(payload, 0, Math.min(2, payload.byteLength));
@@ -25,7 +26,7 @@ export async function decodeModelResponse(
   // Byte offsets in the manifest are absolute, so a short read would silently
   // produce corrupt geometry rather than an error.
   if (buffer.byteLength !== expectedBytes) {
-    throw new Error("Plik anatomii jest niekompletny. Odśwież stronę.");
+    throw new Error(messages.incomplete);
   }
   return buffer;
 }

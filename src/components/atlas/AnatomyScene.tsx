@@ -36,10 +36,22 @@ const PALETTE = {
   },
 } as const;
 
+/** Strings the scene needs. Passed in so the engine stays locale-agnostic. */
+export interface SceneLabels {
+  sceneAria: string;
+  errorWebgl: string;
+  errorContextLost: string;
+  errorFile: string;
+  errorIncomplete: string;
+  errorGeometry: string;
+  errorGeneric: string;
+}
+
 interface Props {
   atlas: Atlas;
   state: SceneState;
   dark: boolean;
+  labels: SceneLabels;
   onSelect: (id: string) => void;
   onProgress: (n: number) => void;
   onError: (s: string) => void;
@@ -60,6 +72,7 @@ export default function AnatomyScene({
   atlas,
   state,
   dark,
+  labels,
   onSelect,
   onProgress,
   onError,
@@ -70,6 +83,7 @@ export default function AnatomyScene({
   const theme = useRef<ThemeTargets | null>(null);
   // Read inside the init effect, which must not re-run when the theme flips.
   const darkRef = useRef(dark);
+  const labelsRef = useRef(labels);
 
   // Keep the render loop and pointer handlers pointed at the latest props
   // without making them effect dependencies — rebuilding the scene for a prop
@@ -79,6 +93,7 @@ export default function AnatomyScene({
     latest.current = state;
     select.current = onSelect;
     darkRef.current = dark;
+    labelsRef.current = labels;
   });
 
   useEffect(() => {
@@ -103,9 +118,7 @@ export default function AnatomyScene({
         powerPreference: "high-performance",
       });
     } catch {
-      onError(
-        "Ta przeglądarka nie mogła uruchomić widoku 3D. Spróbuj przeglądarki z obsługą WebGL.",
-      );
+      onError(labelsRef.current.errorWebgl);
       return;
     }
 
@@ -117,10 +130,7 @@ export default function AnatomyScene({
     renderer.toneMapping = T.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.12;
     el.appendChild(renderer.domElement);
-    renderer.domElement.setAttribute(
-      "aria-label",
-      "Interaktywna anatomia człowieka. Przeciągnij, aby obracać, przybliż szczypaniem lub kółkiem myszy, dotknij struktury, aby ją zbadać.",
-    );
+    renderer.domElement.setAttribute("aria-label", labelsRef.current.sceneAria);
 
     const scene = new T.Scene();
     const camera = new T.PerspectiveCamera(34, 1, 0.005, 100);
@@ -353,7 +363,10 @@ export default function AnatomyScene({
       const response = await fetch(compressed ? urls.gzip! : urls.url, {
         signal: abort.signal,
       });
-      const buffer = await decodeModelResponse(response, chunk.bytes, compressed);
+      const buffer = await decodeModelResponse(response, chunk.bytes, compressed, {
+        failed: labelsRef.current.errorFile,
+        incomplete: labelsRef.current.errorIncomplete,
+      });
       if (disposed) return;
 
       const groups = new Map<string, T.BufferGeometry[]>();
@@ -399,7 +412,7 @@ export default function AnatomyScene({
 
       groups.forEach((gs, system) => {
         const geometry = mergeGeometries(gs, false);
-        if (!geometry) throw new Error("Nie udało się złożyć geometrii anatomii.");
+        if (!geometry) throw new Error(labelsRef.current.errorGeometry);
         geometries.push(geometry);
         const mesh = new T.Mesh(geometry, mats.get(system as never));
         mesh.frustumCulled = false;
@@ -431,9 +444,7 @@ export default function AnatomyScene({
         }
       } catch (e) {
         if (!disposed) {
-          onError(
-            e instanceof Error ? e.message : "Nie udało się wczytać anatomii.",
-          );
+          onError(e instanceof Error ? e.message : labelsRef.current.errorGeneric);
         }
       }
     })();
@@ -857,9 +868,7 @@ export default function AnatomyScene({
 
     const contextLost = (e: Event) => {
       e.preventDefault();
-      onError(
-        "Sesja 3D została wstrzymana przez urządzenie. Odśwież stronę, aby kontynuować.",
-      );
+      onError(labelsRef.current.errorContextLost);
     };
     renderer.domElement.addEventListener("webglcontextlost", contextLost);
 
