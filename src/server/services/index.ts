@@ -36,3 +36,5 @@ export {
   type Subject,
   type SearchResult,
 } from "./search.service";
+
+export { getReaderSpine, getReaderPosition } from "./reader.service";

@@ -201,6 +201,21 @@ const it: Dictionary = {
     status: "Pagina {current} di {total}",
     invalidPage: "Inserisci un numero tra 1 e {total}.",
   },
+
+  reader: {
+    toc: "Indice",
+    openToc: "Apri l'indice",
+    closeToc: "Chiudi l'indice",
+    previous: "Pagina precedente",
+    next: "Pagina successiva",
+    chapterOf: "Capitolo {current} di {total}",
+    volumes: "Volumi",
+    topics: "Argomenti",
+    newVolume: "Inizio di",
+    endOfBook: "Fine del manuale",
+    startOfBook: "Inizio del manuale",
+    jumpToChapter: "Vai al capitolo",
+  },
   systems: {
     skeletal: "Scheletro",
     muscular: "Muscoli",

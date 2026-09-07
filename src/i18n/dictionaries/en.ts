@@ -216,6 +216,21 @@ const en = {
     status: "Page {current} of {total}",
     invalidPage: "Enter a number between 1 and {total}.",
   },
+
+  reader: {
+    toc: "Table of contents",
+    openToc: "Open the table of contents",
+    closeToc: "Close the table of contents",
+    previous: "Previous page",
+    next: "Next page",
+    chapterOf: "Chapter {current} of {total}",
+    volumes: "Volumes",
+    topics: "Topics",
+    newVolume: "Start of",
+    endOfBook: "End of the textbook",
+    startOfBook: "Start of the textbook",
+    jumpToChapter: "Jump to chapter",
+  },
   /** Anatomical system labels — panel chrome, so they are translated. */
   systems: {
     skeletal: "Skeleton",

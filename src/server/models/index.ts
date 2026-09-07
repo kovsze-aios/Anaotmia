@@ -41,3 +41,12 @@ export type {
   AtlasChunk,
   Atlas,
 } from "./atlas";
+
+export type {
+  ReaderTopic,
+  ReaderChapter,
+  ReaderVolumeSummary,
+  ReaderSpine,
+  ReaderNeighbour,
+  ReaderPosition,
+} from "./reader";

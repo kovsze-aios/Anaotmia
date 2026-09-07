@@ -202,6 +202,21 @@ const pl: Dictionary = {
     status: "Strona {current} z {total}",
     invalidPage: "Podaj liczbę od 1 do {total}.",
   },
+
+  reader: {
+    toc: "Spis treści",
+    openToc: "Otwórz spis treści",
+    closeToc: "Zamknij spis treści",
+    previous: "Poprzednia strona",
+    next: "Następna strona",
+    chapterOf: "Rozdział {current} z {total}",
+    volumes: "Tomy",
+    topics: "Tematy",
+    newVolume: "Początek:",
+    endOfBook: "Koniec podręcznika",
+    startOfBook: "Początek podręcznika",
+    jumpToChapter: "Przejdź do rozdziału",
+  },
   systems: {
     skeletal: "Układ kostny",
     muscular: "Mięśnie",

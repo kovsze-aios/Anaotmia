@@ -2,7 +2,14 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TextbookContent } from "@/components/TextbookContent";
-import { getAnatomyDomains, getAnatomySectionWithDomain } from "@/server";
+import { ReaderToc } from "@/components/reader/ReaderToc";
+import { ReaderPagination } from "@/components/reader/ReaderPagination";
+import {
+  getAnatomyDomains,
+  getAnatomySectionWithDomain,
+  getReaderSpine,
+  getReaderPosition,
+} from "@/server";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -78,6 +85,10 @@ export default async function TextbookSectionPage({ params }: Props) {
   }
 
   const { section, domain } = found;
+  // Reading spine and position are resolved server-side; only the light
+  // projections cross to the client, never the chapter corpus.
+  const spine = getReaderSpine();
+  const position = getReaderPosition(section.id);
   const sectionUrl = `${SITE_URL}/theory/anatomia/${section.id}`;
   const domainUrl = `${SITE_URL}/theory/anatomia/${domain.sections[0]?.id ?? ""}`;
 
@@ -133,7 +144,13 @@ export default async function TextbookSectionPage({ params }: Props) {
         </ol>
       </nav>
 
-      <TextbookContent section={section} />
+      {/* Centred reading column — comfortable measure for long-form prose. */}
+      <div className="mx-auto w-full max-w-3xl px-4">
+        <TextbookContent section={section} />
+      </div>
+
+      {position && <ReaderPagination position={position} />}
+      {position && <ReaderToc spine={spine} position={position} />}
 
       <script
         type="application/ld+json"
