@@ -1,4 +1,4 @@
-import type { TextbookDomain } from "../../models";
+import type { TextbookDomain } from "../../server/models";
 
 export const urinaryReproductive: TextbookDomain = {
   "id": "urinary-reproductive",
