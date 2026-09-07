@@ -109,7 +109,7 @@ export function GlobalSearch() {
   const showDropdown = open && debouncedQuery.trim().length >= MIN_QUERY_LENGTH;
 
   return (
-    <div className="relative" ref={searchRef}>
+    <div className="topbar-search relative min-w-0 flex-1 sm:flex-none" ref={searchRef}>
       <Command className="overflow-visible bg-transparent border-none">
         <CommandInput
           placeholder={t.topbar.searchPlaceholder}

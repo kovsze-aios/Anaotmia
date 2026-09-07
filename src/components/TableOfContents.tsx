@@ -29,7 +29,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
             <li key={`${item.id}-${index}`} className={`${indentClass}`}>
               <a
                 href={`#${item.id}`}
-                className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-800 dark:hover:text-blue-300 transition-colors text-sm"
+                className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline transition-colors text-sm"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById(item.id);

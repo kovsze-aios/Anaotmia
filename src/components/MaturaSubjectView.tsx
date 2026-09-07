@@ -4,6 +4,7 @@ import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import type { MaturaYearRecord } from "@/server/models";
+import { HIDE_SCROLLBAR } from "@/lib/utils";
 
 export interface MaturaSubjectViewProps {
   /** Heading shown in the sidebar, e.g. "🧬 Biologia". */
@@ -95,7 +96,7 @@ function MaturaSubjectViewInner({
   return (
     <div className="matura-layout">
       {/* Sidebar */}
-      <aside className="matura-sidebar">
+      <aside className={`matura-sidebar ${HIDE_SCROLLBAR} overscroll-contain`}>
         <div className="matura-sidebar__header">
           <a href="/matura" className="matura-sidebar__back focus-ring rounded-sm">
             <span>←</span> Matura

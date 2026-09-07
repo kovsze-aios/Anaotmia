@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ChapterNav } from "./ChapterNav";
 import type { NavDomain } from "@/server/models";
+import { HIDE_SCROLLBAR } from "@/lib/utils";
 
 interface TextbookLayoutProps {
   domains: NavDomain[];
@@ -45,8 +46,11 @@ export function TextbookLayout({
       )}
 
       {/* Sidebar */}
+      {/* Scrollbar is hidden, not disabled — the panel still scrolls by wheel,
+          touch and keyboard. A platform scrollbar reads as a bright stripe
+          against the NOIR sidebar. */}
       <aside
-        className={`textbook-sidebar ${
+        className={`textbook-sidebar ${HIDE_SCROLLBAR} overscroll-contain ${
           sidebarOpen ? "textbook-sidebar--open" : ""
         }`}
       >

@@ -6,6 +6,7 @@ import { Activity, Box, BookOpen } from "lucide-react";
 
 import type { SidebarNavigation } from "@/server/models";
 import { useI18n } from "@/i18n";
+import { HIDE_SCROLLBAR } from "@/lib/utils";
 
 /* ─── Accordion group ─── */
 function AccordionGroup({
@@ -172,7 +173,7 @@ export function SidebarDrawer({
             ✕
           </button>
         </div>
-        <nav className="mobile-drawer__nav">
+        <nav className={`mobile-drawer__nav ${HIDE_SCROLLBAR} overscroll-contain`}>
 
           {/* ─── Top-level sections: the 3D atlas vs. the textbook ─── */}
           <Link href="/" className="drawer-link drawer-link--section focus-ring" onClick={onClose}>

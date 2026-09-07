@@ -32,6 +32,11 @@ const plutoLightItalic = localFont({
   display: "swap",
   weight: "300",
   style: "italic",
+  // Declared so the variable stays available, but nothing references it yet.
+  // Preloading it spent a request per page load and logged a browser warning
+  // that the font went unused; it will still load on demand if something
+  // starts using the variable.
+  preload: false,
 });
 
 export const metadata: Metadata = {

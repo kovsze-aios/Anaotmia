@@ -22,7 +22,11 @@ export default function TextbookPage() {
       </p>
 
       <div className="textbook-welcome__exam">
-        <h2 className="w-fit rounded-md bg-blue-100 px-2 py-1 text-blue-900 dark:bg-blue-900 dark:text-blue-100">Zakres Materiału Egzaminacyjnego</h2>
+        {/* Neutral chip: a blue badge was the loudest non-NOIR element on the
+            textbook landing view. Border carries the emphasis instead of hue. */}
+        <h2 className="w-fit rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+          Zakres Materiału Egzaminacyjnego
+        </h2>
         <p>Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:</p>
         <div className="textbook-welcome__domain-grid">
           {domains

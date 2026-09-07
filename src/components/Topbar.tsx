@@ -35,6 +35,10 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
             <span className="topbar-hamburger__line" />
           </button>
 
+          {/* Hidden below 640px so the search field gets its width back — see
+              the rule in globals.css. A Tailwind `max-sm:hidden` cannot do it:
+              utilities live in a cascade layer and lose to the unlayered
+              `.l-topbar-container .logo` rule regardless of specificity. */}
           <Link href="/" className="logo focus-ring rounded-sm">
             <span className="logo-text">{t.nav.brand}</span>
           </Link>
@@ -58,7 +62,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
             </Link>
           </nav>
 
-          <div className="ml-auto flex items-center gap-2">
+          <div className="ml-auto flex min-w-0 flex-1 items-center justify-end gap-2 sm:flex-none">
             <GlobalSearch />
             <LanguageSwitcher />
             <a

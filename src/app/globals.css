@@ -110,13 +110,15 @@
   --color-kenhub-border: #d4d4d8;
 }
 
+/* Monochrome selection: a blue highlight was the most pervasive non-NOIR
+   colour in the reading view, appearing on any text the reader drags over. */
 ::selection {
-  background-color: #bfdbfe; /* tailwind blue-200 */
-  color: #172554; /* tailwind blue-950 */
+  background-color: #e4e4e7; /* zinc-200 */
+  color: #09090b; /* zinc-950 */
 }
 .dark ::selection {
-  background-color: #1e3a8a; /* tailwind blue-900 */
-  color: #eff6ff; /* tailwind blue-50 */
+  background-color: #3f3f46; /* zinc-700 */
+  color: #fafafa; /* zinc-50 */
 }
 
 .dark {
@@ -3199,4 +3201,27 @@ main hr {
 .drawer-link--section {
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+/* ===== Topbar: narrow-screen breathing room ===== */
+
+/*
+ * On phones the brand, the search field and four controls compete for ~343px
+ * and the search input collapses to about 22px. The brand yields first: the
+ * hamburger is the left anchor there and the drawer still links home.
+ *
+ * These live here rather than as Tailwind utilities because the topbar's own
+ * rules are unlayered, and unlayered declarations beat anything in Tailwind's
+ * `utilities` layer no matter how specific the utility is.
+ */
+@media (max-width: 639px) {
+  .l-topbar-container .logo {
+    display: none;
+  }
+
+  /* Let the search consume the width the brand gave up. */
+  .l-topbar-container .topbar-search {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }
