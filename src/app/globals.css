@@ -844,28 +844,6 @@ footer {
   text-align: center;
 }
 
-/* Topbar coffee button */
-.topbar-coffee {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.2s ease;
-  line-height: 1;
-}
-
-.topbar-coffee:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
 /* Topics */
 .topics {
   padding: 60px 0;
@@ -1812,48 +1790,6 @@ main hr {
   text-align: center;
 }
 
-/* Coffee button */
-.footer-minimal__coffee-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 32px;
-  background: #f4f4f5;
-  color: #18181b;
-  font-family: var(--font-pluto-medium), Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border: 1px solid #27272a;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  cursor: pointer;
-}
-
-.footer-minimal__coffee-btn:hover {
-  transform: translateY(-2px) scale(1.03);
-  background: #e4e4e7;
-  border-color: #a1a1aa;
-  color: #18181b;
-}
-
-.dark .footer-minimal__coffee-btn {
-  background: #18181b;
-  color: #f4f4f5;
-  border-color: #27272a;
-}
-
-.dark .footer-minimal__coffee-btn:hover {
-  background: #27272a;
-  border-color: #3f3f46;
-  color: #ffffff;
-}
-
-.footer-minimal__coffee-icon {
-  font-size: 22px;
-  line-height: 1;
-}
-
 /* Social icons row */
 .footer-minimal__socials {
   display: flex;
@@ -2545,8 +2481,7 @@ main hr {
   .topbar-link,
   .topbar-register,
   .topbar-textbook,
-  .language-switcher,
-  .topbar-coffee {
+  .language-switcher {
     display: none !important;
   }
 }

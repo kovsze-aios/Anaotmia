@@ -35,8 +35,6 @@ const en = {
   topbar: {
     openMenu: "Open navigation menu",
     toggleTheme: "Change theme",
-    supportTitle: "Buy me a coffee",
-    supportAria: "Support the project (opens in a new tab)",
     searchPlaceholder: "Search…",
     language: "Change language",
     languageCurrent: "Current language",
@@ -215,6 +213,11 @@ const en = {
     go: "Go",
     status: "Page {current} of {total}",
     invalidPage: "Enter a number between 1 and {total}.",
+  },
+
+  /** Global footer. */
+  footer: {
+    donate: "Support the project",
   },
 
   reader: {

@@ -1,4 +1,5 @@
 import { GitHubIcon, LinkedInIcon, InstagramIcon } from "./icons";
+import { DonateButton } from "./DonateButton";
 
 const socialLinks = [
   { icon: GitHubIcon, href: "#", title: "GitHub" },
@@ -30,6 +31,10 @@ export function Footer() {
               );
             })}
           </div>
+
+          {/* Support — deliberately down here rather than in the topbar, where
+              a monetisation control competes with navigation on every page. */}
+          <DonateButton />
 
           {/* Attribution */}
           <p className="footer-minimal__attribution">

@@ -20,8 +20,6 @@ const fr: Dictionary = {
   topbar: {
     openMenu: "Ouvrir le menu de navigation",
     toggleTheme: "Changer de thème",
-    supportTitle: "Offrez-moi un café",
-    supportAria: "Soutenir le projet (s'ouvre dans un nouvel onglet)",
     searchPlaceholder: "Rechercher…",
     language: "Changer de langue",
     languageCurrent: "Langue actuelle",
@@ -200,6 +198,11 @@ const fr: Dictionary = {
     go: "OK",
     status: "Page {current} sur {total}",
     invalidPage: "Saisissez un nombre entre 1 et {total}.",
+  },
+
+  /** Global footer. */
+  footer: {
+    donate: "Soutenir le projet",
   },
 
   reader: {

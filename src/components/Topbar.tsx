@@ -65,16 +65,10 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
           <div className="ml-auto flex min-w-0 flex-1 items-center justify-end gap-2 sm:flex-none">
             <GlobalSearch />
             <LanguageSwitcher />
-            <a
-              href="https://buycoff.ee/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="theme-pill w-8 h-8 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-800 hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 text-xs font-bold transition-colors focus-ring"
-              title={t.topbar.supportTitle}
-              aria-label={t.topbar.supportAria}
-            >
-              <span aria-hidden="true">☕</span>
-            </a>
+            {/* The "buy me a coffee" pill used to sit here. Support belongs in
+                the footer: in the topbar it competed with search, language and
+                the theme toggle for the width that the search field needs on
+                small screens. See `DonateButton`. */}
 
             <button
               onClick={toggleTheme}
