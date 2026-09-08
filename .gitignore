@@ -50,3 +50,7 @@ temp/
 
 # Ignoruj ciezkie pliki PDF
 **/*.pdf
+
+# Python bytecode from the ingestion pipeline
+__pycache__/
+*.pyc
