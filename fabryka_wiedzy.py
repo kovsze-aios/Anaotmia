@@ -96,6 +96,7 @@ BLACKLIST_PATTERNS = [
     r"pytania\s+zamkni",
     r"pytania\s+otwart",
     r"klucz\s+odpowiedzi",
+    r"pytanie\s+nr",
 ]
 BLACKLIST_RE = [re.compile(p, re.IGNORECASE | re.DOTALL) for p in BLACKLIST_PATTERNS]
 
@@ -230,6 +231,87 @@ def strip_markdown(html: str) -> str:
     html = re.sub(r"^\s{0,3}[-*+]\s+(.+)$", r"<p>\1</p>", html, flags=re.MULTILINE)
     # Cokolwiek zostało jest już tylko szumem.
     return html.replace("**", "").replace("__", "")
+
+
+#: Numerowany nagłówek sekcji, np. "3.1.1.1 OBOJCZYK".
+#
+# Celowo NIE kotwiczony do początku linii. Sprawdzone na korpusie: przy
+# kotwiczeniu `^\d+\.\d+` liczba trafień w tomach Narkiewicza wynosi 0, bo OCR
+# wtapia nagłówki w sąsiedni tekst. Bez kotwicy jest ich 228/324/361/390.
+#
+# Separator to `\s{1,6}`, a nie spacja: w tym OCR numer sekcji stoi we własnej
+# linii, a tytuł zaczyna się dopiero w następnej. Przy `[ \t]+` regex znajduje
+# 0 nagłówków, przy przejściu przez znak nowej linii — 328 w samym tomie 2.
+# Górna granica trzyma dopasowanie w obrębie sąsiednich linii, żeby numer nie
+# skleił się z nagłówkiem oddalonym o kilka pustych wierszy.
+SECTION_HEADER_RE = re.compile(
+    r"(?<![\d.])(\d+(?:\.\d+){1,3})\s{1,6}([A-ZŁŚŻŹĆĘĄÓŃ][A-ZŁŚŻŹĆĘĄÓŃa-ząćęłńóśźż ,\-]{3,60})"
+)
+
+#: Poniżej tylu nagłówków uznajemy tom za pozbawiony numeracji i wracamy do
+#: podziału po rozmiarze. Bochenek ma ich 0 — sam tekst ciągły.
+MIN_HEADERS_FOR_STRUCTURE = 20
+
+
+def _looks_like_heading(title: str) -> bool:
+    """
+    Odróżnia nagłówek sekcji od podpisu ryciny o tym samym numerze.
+
+    W źródle ten sam numer występuje dwa razy: raz jako nagłówek pisany
+    wersalikami ("3.1 KOŚCI KOŃCZYNY GÓRNEJ") i raz jako podpis ryciny pisany
+    normalnie ("3.1 Obojczyk prawy"). Dzielimy wyłącznie na tych pierwszych,
+    inaczej rozdział pękałby na każdym odsyłaczu do ilustracji.
+    """
+    letters = [c for c in title if c.isalpha()]
+    if len(letters) < 4:
+        return False
+    upper_ratio = sum(1 for c in letters if c.isupper()) / len(letters)
+    return upper_ratio >= 0.8
+
+
+def split_by_structure(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str] | None:
+    """
+    Dzieli tom na sekcje po numerowanych nagłówkach.
+
+    Zwraca None, gdy tom nie ma wystarczającej numeracji — wtedy wywołujący
+    wraca do podziału po rozmiarze. Sekcje dłuższe niż limit są dodatkowo
+    cięte przez `split_into_chunks`, bo sam nagłówek nie gwarantuje, że
+    fragment zmieści się w oknie modelu.
+    """
+    heads = [
+        m for m in SECTION_HEADER_RE.finditer(text)
+        if _looks_like_heading(m.group(2))
+    ]
+    if len(heads) < MIN_HEADERS_FOR_STRUCTURE:
+        return None
+
+    sections: list[str] = []
+    for i, m in enumerate(heads):
+        end = heads[i + 1].start() if i + 1 < len(heads) else len(text)
+        body = text[m.start():end].strip()
+        if body:
+            sections.append(body)
+
+    # Sekcja nadal ponad limitem trafia do podziału po rozmiarze; bardzo krótka
+    # (sam nagłówek bez treści) doklejana jest do następnej.
+    out: list[str] = []
+    carry = ""
+    for sec in sections:
+        sec = (carry + "\n\n" + sec).strip() if carry else sec
+        carry = ""
+        if len(sec) < 400:
+            carry = sec
+            continue
+        if len(sec) > max_chars:
+            out.extend(split_into_chunks(sec))
+        else:
+            out.append(sec)
+    if carry:
+        if out:
+            out[-1] = out[-1] + "\n\n" + carry
+        else:
+            out.append(carry)
+    return out
 
 
 def split_into_chunks(
@@ -634,7 +716,13 @@ def build_tasks(out_dir: Path) -> list[tuple]:
             print(f"  [POMINIĘTO] Nie udało się odczytać {txt_file.name}")
             continue
 
-        chunks = split_into_chunks(clean_ocr_text(raw_text))
+        cleaned = clean_ocr_text(raw_text)
+        # Podział po numerowanych nagłówkach, gdy tom je ma; inaczej po
+        # rozmiarze. Bochenek nie ma numeracji, więc dla niego zawsze zadziała
+        # ścieżka zapasowa.
+        structural = split_by_structure(cleaned)
+        mode = "nagłówki" if structural is not None else "rozmiar"
+        chunks = structural if structural is not None else split_into_chunks(cleaned)
         chunks, dupes = dedupe_chunks(chunks)
 
         kept, blacklisted, cross_volume = [], 0, 0
@@ -652,6 +740,7 @@ def build_tasks(out_dir: Path) -> list[tuple]:
 
         oversized = sum(1 for c in kept if len(c) > MAX_CHUNK_CHARS)
         print(f"\n{desc} (tag: {tag})")
+        print(f"  podział: {mode}")
         print(f"  pakiety: {len(kept)} | duplikaty: {dupes} | "
               f"międzytomowe duplikaty: {cross_volume} | czarna lista: {blacklisted} | "
               f"ponad limit: {oversized}")
