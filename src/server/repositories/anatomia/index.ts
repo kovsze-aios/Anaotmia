@@ -1,34 +1,24 @@
 import type { TextbookDomain } from "../../models";
-import { osteology } from "./domain-01-osteology";
-import { myology } from "./domain-02-myology";
-import { nervous } from "./domain-03-nervous";
-import { endocrine } from "./domain-04-endocrine";
-import { cardiovascularRespiratory } from "./domain-05-cardiovascular-respiratory";
-import { digestive } from "./domain-06-digestive";
-import { urinaryReproductive } from "./domain-07-urinary-reproductive";
-import { sensory } from "./domain-08-sensory";
 import { tom1Domain } from "./domain-tom1";
 import { tom2Domain } from "./domain-tom2";
 import { tom3Domain } from "./domain-tom3";
 import { tom4Domain } from "./domain-tom4";
-import { bochenek1Domain } from "./domain-bochenek1";
 
-const domains: TextbookDomain[] = [
-  tom1Domain,
-  tom2Domain,
-  tom3Domain,
-  tom4Domain,
-  bochenek1Domain,
-  osteology,
-  myology,
-  nervous,
-  endocrine,
-  cardiovascularRespiratory,
-  digestive,
-  urinaryReproductive,
-  sensory,
-];
-
+/**
+ * The anatomy book, in reading order.
+ *
+ * Exactly the four volumes of the source textbook — nothing else. The earlier
+ * hand-written system domains (osteologia, miologia, układ nerwowy…) and the
+ * Bochenek compendium were removed: the four volumes already cover that
+ * material chapter for chapter, so every extra domain was a second route to
+ * the same anatomy under a different name.
+ *
+ * This array is the single source of ordering. The sidebar, the welcome grid,
+ * the reading spine and `generateStaticParams` all derive from `getDomains()`,
+ * so adding or removing a volume here is the whole change — there is no second
+ * list to keep in sync.
+ */
+const domains: TextbookDomain[] = [tom1Domain, tom2Domain, tom3Domain, tom4Domain];
 
 export function getDomains(): TextbookDomain[] {
   return domains;
