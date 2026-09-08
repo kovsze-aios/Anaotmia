@@ -39,7 +39,13 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+  // ⚡ Bolt Optimization: Slice massive strings before regex replacement
+  // 💡 What: Slicing the string to a safe maximum length before running replace.
+  // 🎯 Why: Running a global regex replace on a multi-megabyte string just to extract the first 160 characters blocks the main thread.
+  // 📊 Impact: Prevents massive CPU and memory overhead during search index initialization.
+  const safeLimit = max * 3;
+  const sliced = text.trimStart().slice(0, safeLimit);
+  const clean = sliced.replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
