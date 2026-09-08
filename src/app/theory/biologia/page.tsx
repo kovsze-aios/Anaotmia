@@ -3,7 +3,7 @@ import { TheorySubjectView } from "@/components/TheorySubjectView";
 import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
-  title: "Biologia — Teoria (Formuła 2015) | Medycyna",
+  title: "Biologia — Teoria (Formuła 2015)",
   description:
     "Kompleksowy materiał teoretyczny z biologii zgodny z podstawą programową CKE. Rozdziały z pytaniami Active Recall z autentycznych arkuszy maturalnych.",
 };

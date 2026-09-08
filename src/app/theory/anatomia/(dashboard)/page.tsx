@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
-  title: "Anatomia — Inteligentny Podręcznik Medyczny | Medycyna",
+  title: "Anatomia — Inteligentny Podręcznik Medyczny",
   description:
     "Zagadnienia z anatomii zmapowane pod wymagania akademickie oraz maturalne. Active Recall, pytania egzaminacyjne i pełne opisy akademickie.",
 };

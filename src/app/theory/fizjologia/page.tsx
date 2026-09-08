@@ -3,7 +3,7 @@ import { TheorySubjectView } from "@/components/TheorySubjectView";
 import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
-  title: "Fizjologia — Teoria | Medycyna",
+  title: "Fizjologia — Teoria",
   description:
     "Kompleksowy materiał teoretyczny z fizjologii. Każdy rozdział zawiera wbudowane pytania Active Recall.",
 };

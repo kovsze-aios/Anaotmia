@@ -36,12 +36,13 @@ export async function generateMetadata(
 
   if (!found) {
     return {
-      title: "Rozdział nie znaleziony - Interaktywny Podręcznik Medyczny",
+      title: "Rozdział nie znaleziony",
     };
   }
 
   const { section, domain } = found;
-  const title = `${section.title} - Interaktywny Podręcznik Medyczny`;
+  // Bare chapter name: the root template appends the brand exactly once.
+  const title = section.title;
   const description = `Opanuj temat ${section.title} dzięki aktywnym fiszkom Active Recall i pełnym opisom akademickim Bochenka.`;
 
   // Encode parameters for dynamic OG image
@@ -53,7 +54,8 @@ export async function generateMetadata(
     title,
     description,
     openGraph: {
-      title,
+      // Shared links carry no title template, so the brand is spelled out.
+      title: `${section.title} | Medycyna`,
       description,
       type: "article",
       url: `${SITE_URL}/theory/anatomia/${section.id}`,
@@ -68,7 +70,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: `${section.title} | Medycyna`,
       description,
       images: [ogImage],
     },

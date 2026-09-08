@@ -9,6 +9,9 @@ import { getSidebarNavigation } from "@/server";
 // language switcher without giving up static generation, so it is written in
 // English — the primary language, and what crawlers index.
 export const metadata: Metadata = {
+  // Brand spelled out rather than left to the root template: `title.template`
+  // applies to child route segments only, and this page shares the root
+  // layout's segment — so the template would never reach it.
   title: "3D Atlas — Interactive human anatomy | Medycyna",
   description:
     "Interactive 3D anatomy atlas: 2,234 structures across 15 systems. Rotate, explode and explore a model of the human body, then move on to the textbook.",

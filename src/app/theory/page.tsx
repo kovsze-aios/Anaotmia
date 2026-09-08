@@ -5,7 +5,7 @@ import { TheoryIndex } from "@/components/TheoryIndex";
 import { getSidebarNavigation } from "@/server";
 
 export const metadata: Metadata = {
-  title: "Textbook — Anatomy, Physiology, Biology, Chemistry | Medycyna",
+  title: "Textbook — Anatomy, Physiology, Biology, Chemistry",
   description:
     "Interactive textbook with Active Recall questions: academic anatomy and physiology, plus biology and chemistry for the Polish Matura 2015 syllabus.",
 };

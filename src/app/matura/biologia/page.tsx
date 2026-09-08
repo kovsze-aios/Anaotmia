@@ -3,7 +3,7 @@ import { MaturaSubjectView } from "@/components/MaturaSubjectView";
 import { getMaturaRecords } from "@/server";
 
 export const metadata: Metadata = {
-  title: "Matura Biologia — Arkusze CKE | Medycyna",
+  title: "Matura Biologia — Arkusze CKE",
   description:
     "Autentyczne arkusze CKE z biologii (2015–2024) z kluczem odpowiedzi. Filtruj według roku i działu tematycznego.",
 };

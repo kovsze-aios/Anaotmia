@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Trening Maturalny — Formuła 2015 | Medycyna",
+  title: "Trening Maturalny — Formuła 2015",
   description:
     "Rozwiązuj autentyczne arkusze CKE z poprzednich lat z biologii i chemii. Klucz odpowiedzi i filtry według roku i działu.",
 };

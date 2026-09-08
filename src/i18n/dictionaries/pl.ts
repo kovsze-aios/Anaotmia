@@ -150,7 +150,7 @@ const pl: Dictionary = {
     maturaSubtitle: "Matura Formuła 2015",
     anatomy: "Anatomia",
     anatomyBody: "8 działów anatomicznych — od osteologii po narządy zmysłów.",
-    anatomyEmphasis: "Pełen zakres egzaminu WF.",
+    anatomyEmphasis: "Pełen zakres egzaminu z anatomii.",
     physiology: "Fizjologia",
     physiologyBody: "Zasady działania ludzkiego organizmu.",
     physiologyEmphasis: "Neurofizjologia, krążenie, mięśnie.",

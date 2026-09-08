@@ -40,9 +40,15 @@ const plutoLightItalic = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Medycyna — Smart anatomy textbook",
+  // A template rather than a fixed string: every page states only its own
+  // subject and the brand is appended once, here. Pages that set no title of
+  // their own fall back to `default`.
+  title: {
+    default: "Medycyna",
+    template: "%s | Medycyna",
+  },
   description:
-    "A free, open-source anatomy textbook built around the anatomy exam syllabus. Active Recall, exam questions, and material from Bochenek and Reicher.",
+    "Inteligentny podręcznik i baza wiedzy medycznej. Anatomia, interaktywny atlas 3D i system Active Recall.",
   metadataBase: new URL(SITE_URL),
   icons: {
     icon: [
