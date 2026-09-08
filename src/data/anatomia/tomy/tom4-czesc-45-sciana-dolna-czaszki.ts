@@ -1,0 +1,39 @@
+import type { StructuredChapter } from "@/types/theory";
+
+export const tom4_czesc_45_scianaDolnaCzaszkiData: StructuredChapter = {
+  "chapterTitle": "Ściana dolna czaszki",
+  "toc": [
+    {
+      "title": "Przednia część podstawy czaszki",
+      "anchorId": "przednia-czesc-podstawy-czaszki"
+    },
+    {
+      "title": "Tylna część podstawy czaszki",
+      "anchorId": "tylna-czesc-podstawy-czaszki"
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "htmlContent": "<h3 id=\"przednia-czesc-podstawy-czaszki\">Przednia część podstawy czaszki</h3><p>Dolną ścianę czaszki tworzy zewnętrzna powierzchnia podstawy czaszki (<em>basis cranii externa</em>) po usunięciu żuchwy. W części przedniej znajdują się kości związane z początkowymi odcinkami dróg oddechowych i przewodu pokarmowego, głównie kości podniebienia. Część tylną tworzą kości mózgoczaszki, takie jak powierzchnie podstawne kości potylicznej, większej części kości klinowej i kości skroniowych.</p><p>Przednią część podstawy czaszki stanowi przede wszystkim podniebienie kostne (<em>palatum osseum</em>), które tworzą wyrostki podniebienne kości szczękowych oraz leżące ku tyłowi blaszki poziome kości podniebiennych (<em>laminae horizontales</em>). Łączą je szwy: podniebienny pośrodkowy (<em>sutura palatina mediana</em>) i podniebienny poprzeczny (<em>sutura palatina transversa</em>). W przedniej części szwu podniebiennego pośrodkowego znajduje się zagłębienie prowadzące do kanału przysiecznego (<em>canalis incisivus</em>).</p><p>W tylno-bocznym kącie podniebienia kostnego, obustronnie, leży otwór podniebienny większy (<em>foramen palatinum majus</em>), a ku tyłowi od niego zwykle dwa otwory podniebienne mniejsze (<em>foramina palatina minora</em>). Stanowią one ujścia kanałów podniebiennych (<em>canales palatini</em>). Tylny brzeg podniebienia kostnego tworzy w płaszczyźnie pośrodkowej kolec nosowy tylny (<em>spina nasalis posterior</em>).</p><p>Nad tylnym brzegiem podniebienia kostnego znajdują się nozdrza tylne (<em>choanae</em>), przedzielone lemieszem. Boczne ograniczenie nozdrzy tylnych stanowi obustronnie blaszka przyśrodkowa wyrostka skrzydłowatego (<em>lamina medialis processus pterygoidei</em>) kości klinowej, zakończona haczykiem skrzydłowym (<em>hamulus pterygoideus</em>). Dwie blaszki wyrostka skrzydłowatego, przyśrodkowa i boczna, obejmują skierowany ku tyłowi dół skrzydłowy (<em>fossa pterygoidea</em>). Nasada wyrostka jest przebita biegnącym strzałkowo kanałem skrzydłowym (<em>canalis pterygoideus</em>).</p>"
+    },
+    {
+      "pageNumber": 2,
+      "htmlContent": "<h3 id=\"tylna-czesc-podstawy-czaszki\">Tylna część podstawy czaszki</h3><p>Część tylną, większą, podstawy czaszki tworzą: kość potyliczna, większa część kości klinowej oraz kości skroniowe.</p><p><strong>Kość potyliczna</strong> otacza otwór wielki (<em>foramen magnum</em>). Po obu stronach otworu wielkiego znajdują się części boczne, na których uwypuklają się kłykcie potyliczne (<em>condyli occipitales</em>); zawierają one powierzchnie stawowe do połączenia z odpowiednimi powierzchniami na kręgu szczytowym. Podstawę każdego kłykcia przebija kanał nerwu podjęzykowego (<em>canalis hypoglossi</em>), a z tyłu przebiega kanał kłykciowy (<em>canalis condylaris</em>) dla żyły wypustowej kłykciowej. Do tyłu od otworu wielkiego na łusce zaznacza się grzebień potyliczny zewnętrzny, guzowatość potyliczna zewnętrzna i kresy karkowe. Do przodu od otworu wielkiego leży część podstawna kości potylicznej, na której środku uwypukla się guzek gardłowy (<em>tuberculum pharyngeum</em>).</p><p><strong>Kość klinowa</strong> na powierzchni dolnej ukazuje, oprócz wyrostka skrzydłowatego, trzon i powierzchnię podskroniową skrzydła większego. Trzon kości klinowej leży ku przodowi od części podstawnej kości potylicznej, od której oddziela go chrząstkozrost klinowo-potyliczny (<em>synchondrosis sphenooccipitalis</em>), który z wiekiem przekształca się w kościozrost. W skrzydle większym znajduje się otwór owalny (<em>foramen ovale</em>) dla nerwu żuchwowego oraz położony bocznie i ku tyłowi otwór kolcowy (<em>foramen spinosum</em>) dla tętnicy oponowej środkowej i gałęzi oponowej nerwu żuchwowego. Jeszcze bardziej bocznie skrzydło większe tworzy kolec kości klinowej (<em>spina ossis sphenoidalis</em>).</p><p><strong>Kość skroniowa</strong> – przyśrodkowy obszar powierzchni dolnej zajmuje część skalista, określana jako piramida. Część skalistą łączy z kością klinową chrząstkozrost klinowo-skalisty, który wypełnia otwór poszarpany (<em>foramen lacerum</em>) leżący u podstawy blaszki przyśrodkowej wyrostka skrzydłowatego. Bocznie od otworu poszarpanego na dolnej powierzchni kości skroniowej znajduje się wejście do kanału mięśniowo-trąbkowego (<em>canalis musculotubarius</em>), przez który przechodzą trąbka słuchowa i mięsień napinacz błony bębenkowej.</p><p>Między piramidą kości skroniowej a kością potyliczną przebiega w części przedniej szczelina skalisto-potyliczna (<em>fissura petrooccipitalis</em>) wypełniona chrząstką włóknistą; w części tylno-bocznej znajduje się otwór szyjny (<em>foramen jugulare</em>), przez który przechodzą nerwy czaszkowe: językowo-gardłowy, błędny i dodatkowy, żyła szyjna wewnętrzna, zatoka skalista dolna oraz tętnica oponowa tylna.</p><p>Na części skalistej obok otworu szyjnego znajduje się dół szyjny (<em>fossa jugularis</em>) wypełniony opuszką górną żyły szyjnej wewnętrznej. Z dołu szyjnego w bok biegnie kanalik sutkowy (<em>canaliculus mastoideus</em>) zawierający gałąź uszną nerwu błędnego. Między dołem szyjnym a otworem zewnętrznym kanału tętnicy szyjnej znajduje się dołek skalisty (<em>fossula petrosa</em>) zawierający zwój dolny nerwu językowo-gardłowego. W stropie dołka skalistego widoczny jest mały otwór prowadzący do kanalika bębenkowego (<em>canaliculus tympanicus</em>), przez który przechodzi nerw bębenkowy od nerwu językowo-gardłowego do jamy bębenkowej.</p><p>W części środkowej powierzchni dolnej piramidy kości skroniowej znajduje się szeroki otwór zewnętrzny kanału tętnicy szyjnej (<em>apertura externa canalis carotici</em>), przez który wchodzi do kanału tętnica szyjna wewnętrzna. W obszarze bocznym widoczny jest dół żuchwowy (<em>fossa mandibularis</em>), który tworzą trzy części kości skroniowej: z przodu część łuskowa, z tyłu część bębenkowa, a wcinająca się między nie od góry część skalista. Część skalistą od łuskowej oddziela szczelina skalisto-łuskowa (<em>fissura petrosquamosa</em>), a od bębenkowej – szczelina skalisto-bębenkowa (<em>fissura petrotympanica</em>), przez którą przechodzi struna bębenkowa. Ku przodowi dół żuchwowy przechodzi w guzek stawowy (<em>tuberculum articulare</em>) i wyrostek jarzmowy (<em>processus zygomaticus</em>), które należą do części łuskowej.</p><p>Część bębenkowa kości skroniowej (<em>pars tympanica ossis temporalis</em>) tworzy tylną część dołu żuchwowego i otacza od dołu i z przodu przewód słuchowy zewnętrzny (<em>meatus acusticus externus</em>). Ku tyłowi od części bębenkowej położony jest wyrostek sutkowaty, ograniczony po stronie przyśrodkowej wcięciem sutkowym (<em>incisura mastoidea</em>); przyśrodkowo od wcięcia przebiega bruzda tętnicy potylicznej.</p>"
+    }
+  ],
+  "chapterQuiz": [
+    {
+      "question": "Jakie kości tworzą podniebienie kostne?",
+      "answer": "Podniebienie kostne tworzą wyrostki podniebienne kości szczękowych oraz blaszki poziome kości podniebiennych."
+    },
+    {
+      "question": "Przez jaki otwór przechodzi nerw żuchwowy?",
+      "answer": "Nerw żuchwowy przechodzi przez otwór owalny (foramen ovale)."
+    },
+    {
+      "question": "Jakie struktury przechodzą przez otwór szyjny?",
+      "answer": "Przez otwór szyjny przechodzą nerwy czaszkowe IX, X i XI, żyła szyjna wewnętrzna, zatoka skalista dolna oraz tętnica oponowa tylna."
+    }
+  ]
+};

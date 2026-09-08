@@ -4,8 +4,8 @@ export const bochenek1_czesc_10_ewolucjaCzlowiekaILiniaRozwojowaHominidaeData: S
   "chapterTitle": "Ewolucja człowieka i linia rozwojowa Hominidae",
   "toc": [
     {
-      "title": "Etapy rozwoju form ludzkich",
-      "anchorId": "etapy-rozwoju-form-ludzkich"
+      "title": "Etapy rozwoju Hominidae",
+      "anchorId": "etapy-rozwoju-hominidae"
     },
     {
       "title": "Linia rozwojowa człowieka a inne Naczelne",
@@ -13,35 +13,47 @@ export const bochenek1_czesc_10_ewolucjaCzlowiekaILiniaRozwojowaHominidaeData: S
     },
     {
       "title": "Próby poszukiwania bezpośrednich przodków form ludzkich",
-      "anchorId": "proby-poszukiwania-bezposrednich-przodkow"
+      "anchorId": "proby-poszukiwania-przodkow"
+    },
+    {
+      "title": "Najstarsi przedstawiciele Homo sapiens",
+      "anchorId": "najstarsi-przedstawiciele-homo-sapiens"
     }
   ],
   "pages": [
     {
       "pageNumber": 1,
-      "htmlContent": "<h3 id='etapy-rozwoju-form-ludzkich'>Etapy rozwoju form ludzkich</h3><p>Na podstawie dotychczasowych odkryć kopalnych można zarysować ogólny obraz kolejnych stadiów ewolucji człowieka. Najstarszą znaną formą hominidów jest praczłowiek, żyjący w dolnym i środkowym plejstocenie. Następnie pojawił się człowiek pierwotny (datowany na środkowy i górny plejstocen) oraz formy określane jako praesapiens (ze środkowego plejstocenu). Kulminacją tego procesu był człowiek rozumny kopalny (Homo sapiens fossilis), którego szczątki pochodzą z końca plejstocenu. Większość antropologów uznaje grupę neandertalską za kolejne ogniwo ewolucyjne po praczłowieku, stanowiące punkt wyjścia dla współczesnych ludzi. Niemniej jednak niektórzy badacze, jak H. Vallois, uważają, że większość neandertalczyków reprezentuje boczną, wymarłą gałąź rozwojową, a bezpośrednich przodków Homo sapiens należy szukać wśród form określanych jako praesapiens, do których zalicza się m.in. znaleziska z plejstocenu środkowego.</p>"
+      "htmlContent": "<h3 id=\"etapy-rozwoju-hominidae\">Etapy rozwoju Hominidae</h3><p>Na podstawie dotychczasowych znalezisk kopalnych można prześledzić ogólne etapy ewolucji rodziny człowiekowatych (<em>Hominidae</em>). Najstarszą znaną formą jest <strong>praczłowiek</strong>, żyjący w dolnym i środkowym plejstocenie. Kolejnym ogniwem był <strong>człowiek pierwotny</strong> (datowany na środkowy i górny plejstocen), a następnie formy określane jako <strong>praesapiens</strong> (ze środkowego plejstocenu). Dopiero pod koniec plejstocenu pojawia się <strong>człowiek rozumny kopalny</strong> (<em>Homo sapiens fossilis</em>).</p><p>Większość antropologów uznaje grupę neandertalską za kolejny etap rozwojowy po praczłowieku, stanowiący punkt wyjścia dla wszystkich współczesnych form ludzkich. Część badaczy, jak H. Vallois, uważa jednak neandertalczyków za boczną, wymarłą gałąź linii ewolucyjnej <em>Hominidae</em>, a bezpośrednich przodków dzisiejszego człowieka upatruje w formach <em>praesapiens</em>.</p>"
     },
     {
       "pageNumber": 2,
-      "htmlContent": "<h3 id='linia-rozwojowa-czlowieka-a-inne-naczelne'>Linia rozwojowa człowieka a inne Naczelne</h3><p>Pomimo licznych badań, wciąż nie ustalono jednoznacznie, z jakiej formy kopalnej Naczelnych wyodrębniła się linia prowadząca do człowieka, ani kiedy dokładnie to nastąpiło. Wiadomo, że przedstawiciele niższych Naczelnych, takich jak lemury i wyraki (Lemuriformes, Tarsiiformes), istnieli już w paleocenie. Z kolei w oligocenie (około 35 milionów lat temu) pojawiły się wczesne małpy wąskonose, w tym Parapithecus, które mogą być związane z pochodzeniem małp Starego Świata i człowieka. W miocenie występowały prymitywne małpy człekokształtne z rodziny Dryopithecidae, z których część dała początek współczesnym orangutanom, szympansom i gorylom, a inne mogły być przodkami Hominidae. Linia człowieka musiała oddzielić się prawdopodobnie w pliocenie (1–12 milionów lat temu), jednak brak wystarczającej liczby skamieniałości z tego okresu utrudnia dokładne określenie tych powiązań.</p>"
+      "htmlContent": "<h3 id=\"linia-rozwojowa-czlowieka-a-inne-naczelne\">Linia rozwojowa człowieka a inne Naczelne</h3><p>Nie ustalono dotąd jednoznacznie, z której grupy kopalnych naczelnych wyodrębniła się linia prowadząca do człowieka, ani kiedy dokładnie to nastąpiło. Główną przeszkodą jest niedostatek materiału kopalnego z okresów poprzedzających plejstocen. Wiadomo natomiast, że przedstawiciele niższych naczelnych, jak lemury i wyraki, żyli już w paleocenie (najstarsza epoka trzeciorzędu).</p><p>W oligocenie (około 35 milionów lat temu) pojawiły się formy małpie, takie jak <em>Parapithecus</em>, z którymi wiąże się pochodzenie małp wąskonosych i człowieka. W miocenie występowały już prymitywne, ale zróżnicowane małpy człekokształtne z rodziny <em>Dryopithecidae</em>. Część z nich dała początek dzisiejszym orangutanom, szympansom i gorylom, inne mogły być przodkami <em>Hominidae</em>. Linia człowieka wyodrębniła się prawdopodobnie w pliocenie (1–12 milionów lat temu).</p>"
     },
     {
       "pageNumber": 3,
-      "htmlContent": "<h3 id='proby-poszukiwania-bezposrednich-przodkow'>Próby poszukiwania bezpośrednich przodków form ludzkich</h3><p>W historii badań podejmowano różne próby wskazania bezpośredniego przodka człowieka. W okresie międzywojennym Weidenreich zaproponował, aby za najstarszego przedstawiciela linii ludzkiej uznać olbrzymią małpę człekokształtną Gigantopithecus blacki, znaną z Chin Południowych, datowaną na dolny lub środkowy plejstocen. Opierał się na podobieństwie zębów tej formy do ludzkich, proponując nawet zmianę nazwy na Giganthropus. Jednak późniejsze badania wielu zębów i żuchw, odkrytych w latach 50. XX wieku, wykazały, że Gigantopithecus należy do wymarłej grupy małp człekokształtnych o pewnych cechach ludzkich w uzębieniu, ale jego linia rozwojowa biegła równolegle do linii człowieka, a nie była jego bezpośrednim przodkiem.</p><p>Inną koncepcję przedstawił Hürzeler, który na podstawie badań szczątków mioceńskiej małpy Oreopithecus bamboli z Toskanii (w tym prawie kompletnego szkieletu znalezionego w 1958 r.) uznał ją za formę bliską przodkom Hominidae. Oreopithecus wykazywał cechy ludzkie w uzębieniu, takie jak mały kieł, brak diastemy, dwuguzkowe pierwsze przedtrzonowce, co sugerowało możliwe pokrewieństwo. Niemniej jednak współczesna klasyfikacja umieszcza go wśród wymarłych małp człekokształtnych, a jego związek z linią człowieka pozostaje niepewny.</p><p>W Polsce również dokonano interesujących odkryć: czaszka z Nowosiółki (1908 r., K. Stołyhwo) i szkielet z Poniatówki (1949 r., T. Dzierżykray-Rogalska) zostały uznane za formy neandertalskie. Stołyhwo nazwał je postneandertaloidami, sugerując ich pośrednią pozycję między neandertalczykami a człowiekiem współczesnym. Najstarsi przedstawiciele Homo sapiens pochodzą z końca plejstocenu, a ich szczątki są liczne i zróżnicowane, co wskazuje na szybkie rozprzestrzenienie się współczesnego człowieka. Formy takie jak Cro-Magnon, Aurignac czy Grimaldi są często klasyfikowane jako wczesne odmiany Homo sapiens sapiens.</p>"
+      "htmlContent": "<h3 id=\"proby-poszukiwania-przodkow\">Próby poszukiwania bezpośrednich przodków form ludzkich</h3><p>W okresie międzywojennym Weidenreich zaproponował, aby za najstarszego przedstawiciela linii ludzkiej uznać olbrzymią kopalną małpę człekokształtną <em>Gigantopithecus blacki</em>, znaną wówczas tylko z trzech zębów trzonowych. Sugerował nawet zmianę nazwy na <em>Giganthropus</em>. Jednak późniejsze badania wielu zębów i żuchw, odkrytych w latach 50. XX wieku, wykazały, że <em>Gigantopithecus</em> był przedstawicielem wymarłej grupy małp o cechach ludzkich w uzębieniu, ale jego linia biegła równolegle do linii człowieka.</p><p>Inną koncepcję wysunął Hürzeler na podstawie badań szczątków mioceńskiej małpy <em>Oreopithecus bamboli</em>. Początkowo sporne było, czy należy ona do małp ogoniastych, czy człekokształtnych. Po odkryciu w 1958 roku w Toskanii prawie kompletnego szkieletu, Hürzeler uznał ją za małpę człekokształtną o wielu ludzkich cechach uzębienia, takich jak mały kieł, brak diastem czy dwuguzkowe pierwsze przedtrzonowce. Mimo to, obecnie <em>Oreopithecus</em> nie jest uznawany za bezpośredniego przodka człowieka.</p>"
+    },
+    {
+      "pageNumber": 4,
+      "htmlContent": "<h3 id=\"najstarsi-przedstawiciele-homo-sapiens\">Najstarsi przedstawiciele Homo sapiens</h3><p>Najstarsze znane szczątki <strong>człowieka rozumnego</strong> (<em>Homo sapiens</em>) pochodzą z końca plejstocenu. Od tego momentu nie znajdujemy już śladów form neandertalskich. Człowiek rozumny pojawia się w postaci licznych i zróżnicowanych grup, które ze względu na wyższe sklepienie czaszki i inne cechy zaliczane są do gatunku <em>Homo sapiens</em>, a nie <em>Homo primigenius</em> czy <em>neandertalensis</em>.</p><p>Wszystkie te grupy łączy się w zbiorczą kategorię <strong>człowieka rozumnego kopalnego</strong> (<em>Homo sapiens fossilis</em>). Niektóre znaleziska, takie jak typ <em>Cro-Magnon</em>, <em>Aurignac</em> czy <em>Grimaldi</em>, bywają odnoszone bezpośrednio do poszczególnych form człowieka współczesnego.</p>"
     }
   ],
   "chapterQuiz": [
     {
-      "question": "Jakie są główne etapy ewolucji człowieka według znalezisk kopalnych?",
-      "answer": "Praczłowiek, człowiek pierwotny, formy praesapiens, człowiek rozumny kopalny (Homo sapiens fossilis)."
+      "question": "Jakie są główne etapy ewolucji Hominidae w plejstocenie?",
+      "answer": "Praczłowiek (dolny i środkowy plejstocen), człowiek pierwotny (środkowy i górny plejstocen), formy praesapiens (środkowy plejstocen) oraz człowiek rozumny kopalny (koniec plejstocenu)."
     },
     {
-      "question": "Dlaczego Gigantopithecus blacki nie jest uznawany za bezpośredniego przodka człowieka?",
-      "answer": "Ponieważ późniejsze badania wykazały, że jego linia rozwojowa biegła równolegle do linii człowieka, a nie była jego przodkiem."
+      "question": "Dlaczego trudno ustalić związek linii człowieka z innymi naczelnymi?",
+      "answer": "Z powodu niedostatecznej ilości materiałów kopalnych naczelnych z okresów poprzedzających plejstocen."
     },
     {
-      "question": "Kiedy prawdopodobnie wyodrębniła się linia rozwojowa Hominidae?",
-      "answer": "Prawdopodobnie w pliocenie (1–12 milionów lat temu)."
+      "question": "Jakie cechy uzębienia Oreopithecus bamboli uznano za ludzkie?",
+      "answer": "Mały kieł, brak diastem, zarys łuku zębodołowego oraz dwuguzkowość pierwszego przedtrzonowca."
+    },
+    {
+      "question": "Do jakiego gatunku zaliczane są najstarsze formy człowieka rozumnego?",
+      "answer": "Do gatunku Homo sapiens, a nie Homo primigenius czy neandertalensis."
     }
   ]
 };

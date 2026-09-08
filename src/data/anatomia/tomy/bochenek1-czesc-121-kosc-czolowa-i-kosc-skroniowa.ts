@@ -5,63 +5,35 @@ export const bochenek1_czesc_121_koscCzolowaIKoscSkroniowaData: StructuredChapte
   "toc": [
     {
       "title": "Kość czołowa",
-      "anchorId": "kos-czolowa"
+      "anchorId": "kosc-czolowa"
     },
     {
       "title": "Kość skroniowa",
-      "anchorId": "kos-skroniowa"
+      "anchorId": "kosc-skroniowa"
     }
   ],
   "pages": [
     {
       "pageNumber": 1,
-      "htmlContent": "<h3 id='kos-czolowa'>Kość czołowa</h3><p>W miejscu, gdzie łuska czołowa przechodzi w części oczodołowe, kość zawiera dwie zatoki czołowe (sinus frontales), które są oddzielone przegrodą zatok czołowych (septum sinuum frontalium). Ujście każdej zatoki (apertura sinus frontalis) znajduje się w przednio-przyśrodkowym kącie części oczodołowej. U noworodka kość czołowa składa się z dwóch symetrycznych połówek rozdzielonych szwem czołowym (sutura frontalis), który zwykle zanika około 8. roku życia, ale u około 8% osób pozostaje na stałe.</p>"
+      "htmlContent": "<h3 id=\"kosc-czolowa\">Kość czołowa</h3><p>Kość czołowa (os frontale) w swej części łuskowej ma postać płyty ustawionej strzałkowo, która początkowo stanowi jednolitą strukturę z pozostałymi częściami kości. Dopiero później, wraz z wytworzeniem brzegu nadoczodołowego, zaznacza się podział na część łuskową, oczodołową i nosową. Część łuskowa tworzy boczną ścianę czaszki, podczas gdy część oczodołowa i nosowa biorą udział w budowie oczodołów i jamy nosowej.</p><p>Proces kostnienia rozpoczyna się od głównych punktów kostnienia, ale jeszcze przed urodzeniem pojawiają się dodatkowe, mniejsze punkty dla wyrostków jarzmowych i kolca nosowego, które szybko zlewają się z punktami głównymi. U noworodka kość czołowa składa się z dwóch połówek, które są oddzielone szwem czołowym (sutura frontalis s. metopica). Między 1. a 2. rokiem życia obie połowy zrastają się, a proces ten postępuje od okolicy nosowej ku szczytowi czaszki. Zazwyczaj do 8. roku życia szew czołowy zanika bez śladu, z wyjątkiem części dolnej, która może się utrzymywać.</p><p><strong>Zmienność.</strong> Najczęstszą odmianą jest zachowany szew czołowy, który nie jest cechą atawistyczną, lecz prawdopodobnie formą progresywną związaną z silnym rozwojem płatów czołowych mózgu. Inne odmiany, takie jak zmienność wcięcia lub otworu nadoczodołowego, zostały już wspomniane wcześniej.</p><p><strong>Połączenia.</strong> Kość czołowa łączy się z dwunastoma kośćmi: klinową, sitową, obiema ciemieniowymi, obiema nosowymi, obiema szczękami, obiema łzowymi i obiema jarzmowymi.</p>"
     },
     {
       "pageNumber": 2,
-      "htmlContent": "<h3 id='kos-skroniowa'>Kość skroniowa</h3><p>Kość skroniowa (os temporale) dzieli się na części: łuskową, sutkową, bębenkową i skalistą. Zawiera narząd przedsionkowo-ślimakowy, który składa się z ucha zewnętrznego, środkowego i wewnętrznego.</p><p><strong>Część łuskowa</strong> (pars squamosa) ma powierzchnię zewnętrzną (skroniową) i wewnętrzną (mózgową). Od jej dolnej części odchodzi wyrostek jarzmowy (processus zygomaticus), który łączy się z wyrostkiem skroniowym kości jarzmowej. U podstawy wyrostka znajduje się powierzchnia stawowa stawu skroniowo-żuchwowego, obejmująca guzek stawowy (tuberculum articulare) i dół żuchwowy (fossa mandibularis). Przez dół żuchwowy przebiega szczelina skalisto-bębenkowa (fissura petrotympanica), która bywa podzielona dolnym brzegiem pokrywki jamy bębenkowej na część tylną (właściwą szczelinę skalisto-bębenkową) i przednią (szczelinę skalisto-łuskową, często kostniejącą). Górny brzeg łuski łączy się z kością ciemieniową szwem łuskowym, a przednio-dolny brzeg (margo sphenoidalis) łączy się ze skrzydłem większym kości klinowej szwem klinowo-łuskowym.</p>"
-    },
-    {
-      "pageNumber": 3,
-      "htmlContent": "<p><strong>Część sutkowa</strong> (pars mastoidea) leży ku tyłowi od przewodu słuchowego zewnętrznego i tworzy wyrostek sutkowaty (processus mastoideus). Często jest przecięta szwem łuskowo-sutkowym. Na jej tylnej powierzchni znajdują się otwory sutkowe (foramina mastoidea), prowadzące do zatoki esowatej. Na przyśrodkowej stronie wyrostka sutkowatego jest wcięcie sutkowe (incisura mastoidea). Na powierzchni wewnętrznej części sutkowej przebiega bruzda zatoki esowatej (sulcus sinus sigmoidei). Górny brzeg łączy się z kością ciemieniową (szew ciemieniowo-sutkowy) i potyliczną (szew potyliczno-sutkowy). Wyrostek sutkowaty zawiera komórki sutkowe (cellulae mastoideae), w tym większą jamę sutkową (antrum mastoideum), która łączy się z jamą bębenkową i jest wyścielona błoną śluzową ciągłą z błoną śluzową ucha środkowego. Jama sutkowa jest od góry przykryta pokrywką jamy bębenkowej (tegmen tympani) i łączy się z górną częścią jamy bębenkowej poprzez zachyłek nadbębenkowy (recessus epitympanicus).</p>"
-    },
-    {
-      "pageNumber": 4,
-      "htmlContent": "<p><strong>Część skalista</strong> (pars petrosa), zwana też piramidą, ma podstawę, szczyt, trzy powierzchnie i trzy krawędzie. W szczycie znajduje się otwór wewnętrzny kanału tętnicy szyjnej (foramen caroticum internum). Powierzchnia przednia stanowi tylną część środkowego dołu czaszki. Od części łuskowej oddziela ją szczelina skalisto-łuskowa (fissura petrosquamosa), zwykle zarastająca. Przy górnej krawędzi widnieje wyniosłość łukowata (eminentia arcuata), spowodowana przez przedni kanał półkolisty błędnika kostnego. Cienka ściana górna jamy bębenkowej, czyli pokrywka jamy bębenkowej (tegmen tympani), zawiera zwykle komórki pokrywkowe (cellulae tegmentales). W pobliżu otworu wewnętrznego kanału tętnicy szyjnej uchodzi kanał mięśniowo-trąbkowy (canalis musculotubarius), podzielony na półkanał mięśnia napinacza błony bębenkowej (semicanalis musculi tensoris tympani) i półkanał trąbki słuchowej (semicanalis tubae auditivae). W ścianach tego ostatniego często występują komórki trąbkowe (cellulae tubariae). Powyżej i do tyłu od otworu kanału mięśniowo-trąbkowego znajdują się dwa otworki: rozwór nerwu skalistego większego (hiatus canalis nervi petrosi majoris), od którego zaczyna się bruzda nerwu skalistego większego (sulcus nervi petrosi majoris), oraz rozwór nerwu skalistego mniejszego (hiatus canalis nervi petrosi minoris), od którego odchodzi bruzda nerwu skalistego mniejszego (sulcus nervi petrosi minoris). W pobliżu szczytu piramidy na ścianie przedniej leży wycisk nerwu trójdzielnego (impressio trigemini).</p>"
-    },
-    {
-      "pageNumber": 5,
-      "htmlContent": "<p>Na powierzchni tylnej części skalistej znajduje się otwór słuchowy wewnętrzny (porus acusticus internus), który jest ujściem przewodu słuchowego wewnętrznego (meatus acusticus internus). Końcowa część tego kanału tworzy dno przewodu słuchowego wewnętrznego (fundus meatus acustici interni), podzielone grzebieniem poprzecznym (crista transversa) na część górną i dolną. Część górna zawiera pole nerwu twarzowego (area nervi facialis) i pole przedsionkowe górne (area vestibularis superior). Część dolna obejmuje pole ślimaka (area cochleae) z pasmem spiralnym dziurkowatym (tractus spiralis foraminosus), pole przedsionkowe dolne (area vestibularis inferior) oraz otwór pojedynczy (foramen singulare). Na tylnej powierzchni piramidy znajduje się również dół podłukowy (fossa subarcuata).</p><p>Na powierzchni dolnej części skalistej, na tylnym brzegu, znajduje się wcięcie szyjne (incisura jugularis), które wraz z analogicznym wcięciem kości potylicznej tworzy otwór szyjny (foramen jugulare). Do przodu od niego leży dół szyjny (fossa jugularis), którego dno stanowi jednocześnie dno jamy bębenkowej (solum tympani) i często zawiera komórki bębenkowe (cellulae tympanicae). Dół szyjny łączy się ze szczeliną bębenkowo-sutkową poprzez kanalik sutkowy (canaliculus mastoideus). Przyśrodkowo od dołu szyjnego znajduje się otwór zewnętrzny kanalika ślimaka (apertura externa canaliculi cochleae), a do przodu od niego otwór zewnętrzny kanału tętnicy szyjnej. W kanale tym, w pobliżu otworu zewnętrznego, widoczne są początki kanalików szyjno-bębenkowych (canaliculi caroticotympanici). Między otworem zewnętrznym kanału tętnicy szyjnej a dołem szyjnym leży dołek skalisty (fossula petrosa), w którym znajduje się otwór dolny kanalika bębenkowego (apertura inferior canaliculi tympanici). Bocznie od niego wystaje wyrostek rylcowaty (processus styloideus), otoczony u nasady pochwą wyrostka rylcowatego (vagina processus styloidei). Pomiędzy wyrostkiem rylcowatym a sutkowatym znajduje się otwór rylcowo-sutkowy (foramen stylomastoideum), który jest zakończeniem kanału nerwu twarzowego (canalis facialis). Szczyt piramidy łączy się z częścią podstawną kości potylicznej chrząstkozrostem skalisto-potylicznym (synchondrosis petrooccipitalis).</p>"
-    },
-    {
-      "pageNumber": 6,
-      "htmlContent": "<p>Wzdłuż górnego brzegu części skalistej biegnie bruzda zatoki skalistej górnej (sulcus sinus petrosi superioris). Tylny brzeg łączy się z kością potyliczną chrząstkozrostem skalisto-potylicznym, a w miejscu połączenia przebiega bruzda zatoki skalistej dolnej (sulcus sinus petrosi inferioris). Boczny odcinek tego brzegu tworzy wcięcie szyjne. Przedni brzeg w części tylnej jest oddzielony od części łuskowej szczeliną skalisto-łuskową, a w części przedniej łączy się z kością klinową (synchondroza i szczelina klinowo-skalista).</p><p>Przez część skalistą kości skroniowej przebiegają następujące kanały: 1) kanał tętnicy szyjnej (canalis caroticus), 2) kanał nerwu twarzowego (canalis facialis), 3) kanalik bębenkowy (canaliculus tympanicus), 4) kanaliki szyjno-bębenkowe (canaliculi caroticotympanici), 5) kanalik sutkowy (canaliculus mastoideus), 6) wodociąg przedsionka (aqueductus vestibuli), 7) kanalik ślimaka (canaliculus cochleae).</p>"
-    },
-    {
-      "pageNumber": 7,
-      "htmlContent": "<p><strong>Część bębenkowa</strong> (pars tympanica) ma kształt rynienki i tworzy przyśrodkowy odcinek przewodu słuchowego zewnętrznego (meatus acusticus externus). Do okrężnej bruzdy bębenkowej (sulcus tympanicus) przyczepia się błona bębenkowa. Ku górze część bębenkowa kończy się kolcami bębenkowymi większym i mniejszym (spinae tympanicae major et minor), które obejmują wcięcie bębenkowe (incisura tympanica) dla części wiotkiej błony bębenkowej. Ku dołowi część bębenkowa kończy się grzebieniem bębenkowym (crista tympanica), który obejmując od przodu nasadę wyrostka rylcowatego, tworzy jego pochwę.</p>"
+      "htmlContent": "<h3 id=\"kosc-skroniowa\">Kość skroniowa</h3><p>Parzysta kość skroniowa (os temporale) leży między kością potyliczną a klinową, uczestnicząc w budowie podstawy i bocznej ściany czaszki. Ze względu na różnorodność pełnionych funkcji ma złożoną budowę. Przede wszystkim stanowi ochronę dla narządu przedsionkowo-ślimakowego (organum vestibulocochleare), dawniej zwanego statyczno-słuchowym, który obejmuje ucho zewnętrzne, środkowe i wewnętrzne (błędnik, labyrinthus).</p><p>Kość skroniowa jest silnie spneumatyzowana i przebita przez liczne drogi naczyniowe i nerwowe. Do niej przyczepiają się mięśnie, m.in. najsilniejszy mięsień poruszający głową – mostkowo-obojczykowo-sutkowy – oraz mięśnie żwaczowe. Kość ta dźwiga panewkę stawu skroniowo-żuchwowego, a łuk jarzmowy łączy ją z trzewioczaszką, co umożliwia przenoszenie sił żucia na czaszkę. Wyrostki rylcowate obu kości skroniowych, podobnie jak żuchwa, stanowią podporę dla kości gnykowej i trzewi szyi.</p><p>U dorosłego kość skroniowa jest zespołem kilku zrośniętych kości, które w ontogenezie i filogenezie rozwijają się oddzielnie. Wyróżnia się cztery części: łuskową, sutkową, bębenkową i skalistą (piramidę). Według obowiązującego Mianownictwa anatomicznego (PZWL 1989) wyróżnia się trzy części: skalistą, bębenkową i łuskową, przy czym część sutkowa wchodzi w skład części skalistej. Ze względu na postać ostateczną zachowuje się tu podział na cztery części.</p><p><strong>Część łuskowa</strong> i <strong>część bębenkowa</strong> tworzą ściany kostne przewodu słuchowego zewnętrznego oraz ramę dla błony bębenkowej (membrana tympani). Błona ta oddziela przewód słuchowy zewnętrzny od jamy bębenkowej (cavitas tympanica), która przez trąbkę słuchową (tuba auditiva) łączy się z gardłem. W jamie bębenkowej znajdują się kosteczki słuchowe (ossicula auditus): młoteczek (malleus), kowadełko (incus) i strzemiączko (stapes), które przewodzą drgania błony bębenkowej.</p><p>W ścianie przyśrodkowej jamy bębenkowej, oddzielającej ją od ucha wewnętrznego, znajdują się dwa otwory: okienko przedsionka (fenestra vestibuli), zamykane podstawą strzemiączka, oraz okienko ślimaka (fenestra cochleae), zamknięte błoną bębenkową wtórną (membrana tympani secundaria). Część skalista zawiera błędnik, a część sutkowa stanowi tylną część kości, położoną za przewodem słuchowym wewnętrznym; u dorosłego jest ona wykształcona jako masywny wyrostek sutkowy.</p>"
     }
   ],
   "chapterQuiz": [
     {
-      "question": "Jakie zatoki znajdują się w kości czołowej i czym są oddzielone?",
-      "answer": "Zatoki czołowe (sinus frontales), oddzielone przegrodą zatok czołowych (septum sinuum frontalium)."
+      "question": "Ile kości łączy się z kością czołową?",
+      "answer": "Kość czołowa łączy się z dwunastoma kośćmi: klinową, sitową, obiema ciemieniowymi, obiema nosowymi, obiema szczękami, obiema łzowymi i obiema jarzmowymi."
     },
     {
-      "question": "W którym miejscu kości skroniowej znajduje się otwór słuchowy wewnętrzny?",
-      "answer": "Na powierzchni tylnej części skalistej (pars petrosa)."
+      "question": "Jakie są główne części kości skroniowej?",
+      "answer": "Wyróżnia się cztery części: łuskową, sutkową, bębenkową i skalistą (piramidę). Według współczesnego mianownictwa część sutkowa jest wliczana do części skalistej."
     },
     {
-      "question": "Jakie elementy wchodzą w skład dna przewodu słuchowego wewnętrznego?",
-      "answer": "Grzebień poprzeczny (crista transversa) dzieli dno na część górną (z polem nerwu twarzowego i polem przedsionkowym górnym) i dolną (z polem ślimaka, polem przedsionkowym dolnym i otworem pojedynczym)."
-    },
-    {
-      "question": "Jaka struktura łączy jamę sutkową z jamą bębenkową?",
-      "answer": "Zachyłek nadbębenkowy (recessus epitympanicus)."
-    },
-    {
-      "question": "Wymień kanały przebijające część skalistą kości skroniowej.",
-      "answer": "Kanał tętnicy szyjnej, kanał nerwu twarzowego, kanalik bębenkowy, kanaliki szyjno-bębenkowe, kanalik sutkowy, wodociąg przedsionka, kanalik ślimaka."
+      "question": "Co znajduje się w jamie bębenkowej?",
+      "answer": "W jamie bębenkowej znajdują się kosteczki słuchowe: młoteczek, kowadełko i strzemiączko."
     }
   ]
 };

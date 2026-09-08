@@ -8,28 +8,28 @@ export const bochenek1_czesc_347_miesienProstownikPalcowIKanalNadgarstkaData: St
       "anchorId": "przyczepy-i-przebieg-miesnia-prostownika-palcow"
     },
     {
-      "title": "Kanał nadgarstka i troczek zginaczy",
-      "anchorId": "kanal-nadgarstka-i-troczek-zginaczy"
+      "title": "Troczek zginaczy i kanał nadgarstka",
+      "anchorId": "troczek-zginaczy-i-kanal-nadgarstka"
     }
   ],
   "pages": [
     {
       "pageNumber": 1,
-      "htmlContent": "<h3 id=\"przyczepy-i-przebieg-miesnia-prostownika-palcow\">Przyczepy i przebieg mięśnia prostownika palców</h3><p><strong>Mięsień prostownik palców</strong> (łac. <em>musculus extensor digitorum</em>) rozpoczyna się na <strong>nadkłykciu bocznym kości ramiennej</strong>, w <strong>więzadle pobocznym promieniowym</strong> oraz w <strong>więzadle pierścieniowatym</strong> i powięzi przedramienia. Jego ścięgno przebiega na powierzchni grzbietowej bliższej części nadgarstka, a następnie dzieli się na cztery ścięgna, które kierują się do palców II–V.</p><p>Każde z tych ścięgien przechodzi w <strong>rozcięgno grzbietowe</strong> (łac. <em>aponeurosis dorsalis</em>), które kończy się na podstawach paliczków dalszych. Dzięki temu mięsień ten prostuje palce w stawach śródręczno-paliczkowych i międzypaliczkowych.</p>"
+      "htmlContent": "<h3 id=\"przyczepy-i-przebieg-miesnia-prostownika-palcow\">Przyczepy i przebieg mięśnia prostownika palców</h3><p><strong>Mięsień prostownik palców</strong> (<em>musculus extensor digitorum</em>) rozpoczyna się na <strong>nadkłykciu bocznym kości ramiennej</strong> (<em>epicondylus lateralis humeri</em>), w <strong>więzadle pobocznym promieniowym</strong> (<em>ligamentum collaterale radiale</em>), w <strong>więzadle pierścieniowatym</strong> (<em>ligamentum anulare</em>) oraz w <strong>powięzi przedramienia</strong> (<em>fascia antebrachii</em>).</p><p>Od strony dłoniowej, pod <strong>więzadłem poprzecznym nadgarstka</strong> (częścią troczka zginaczy), przebiega ścięgno <strong>mięśnia dłoniowego długiego</strong> (<em>musculus palmaris longus</em>), a także nerwy i naczynia łokciowe.</p><p>Mięsień ten dzieli się na cztery ścięgna, które kierują się ku stronie grzbietowej palców II–V. Każde ścięgno przechodzi w <strong>rozcięgno grzbietowe</strong> (<em>aponeurosis dorsalis</em>), które przyczepia się do podstaw paliczków dalszych i środkowych.</p>"
     },
     {
       "pageNumber": 2,
-      "htmlContent": "<h3 id=\"kanal-nadgarstka-i-troczek-zginaczy\">Kanał nadgarstka i troczek zginaczy</h3><p><strong>Troczek zginaczy</strong> (łac. <em>retinaculum flexorum</em>) to mocne pasmo tkanki łącznej, które rozpięte jest pomiędzy wyniosłością łokciową a promieniową nadgarstka. Łączy on te struktury, przekształcając bruzdę nadgarstka w <strong>kanał nadgarstka</strong> (łac. <em>canalis carpi</em>).</p><p>Przez kanał nadgarstka przebiegają ścięgna mięśni zginaczy palców oraz <strong>nerw pośrodkowy</strong> (łac. <em>nervus medianus</em>). Dodatkowo, w obrębie nadgarstka, po stronie łokciowej, biegną nerw i naczynia łokciowe, a po stronie dłoniowej – ścięgno mięśnia dłoniowego długiego, które przechodzi przez blaszkę powierzchowną troczka zginaczy.</p>"
+      "htmlContent": "<h3 id=\"troczek-zginaczy-i-kanal-nadgarstka\">Troczek zginaczy i kanał nadgarstka</h3><p><strong>Troczek zginaczy</strong> (<em>retinaculum flexorum</em>) to mocne pasmo tkanki łącznej, które rozpięte jest między <strong>wyniosłością łokciową</strong> a <strong>wyniosłością promieniową</strong> nadgarstka. Łączy on w ten sposób struktury kostne po stronie łokciowej i promieniowej, tworząc zamkniętą przestrzeń.</p><p>Troczek zginaczy uzupełnia bruzdę nadgarstka, przekształcając ją w <strong>kanał nadgarstka</strong> (<em>canalis carpi</em>). Przez kanał ten przebiegają ścięgna mięśni zginaczy palców oraz <strong>nerw pośrodkowy</strong> (<em>nervus medianus</em>).</p><p>Dzięki tej budowie możliwy jest sprawny poślizg ścięgien podczas ruchów zginania palców, a także ochrona nerwu pośrodkowego przed uciskiem.</p>"
     }
   ],
   "chapterQuiz": [
     {
-      "question": "Wymień przyczepy początkowe mięśnia prostownika palców.",
+      "question": "Wymień miejsca przyczepu początkowego mięśnia prostownika palców.",
       "answer": "Mięsień prostownik palców rozpoczyna się na nadkłykciu bocznym kości ramiennej, więzadle pobocznym promieniowym, więzadle pierścieniowatym oraz powięzi przedramienia."
     },
     {
-      "question": "Jakie struktury przechodzą przez kanał nadgarstka?",
-      "answer": "Przez kanał nadgarstka przechodzą ścięgna mięśni zginaczy palców oraz nerw pośrodkowy."
+      "question": "Jakie struktury przebiegają przez kanał nadgarstka?",
+      "answer": "Przez kanał nadgarstka przebiegają ścięgna mięśni zginaczy palców oraz nerw pośrodkowy."
     }
   ]
 };

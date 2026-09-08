@@ -1,0 +1,39 @@
+import type { StructuredChapter } from "@/types/theory";
+
+export const tom3_czesc_23_unaczynienieIUnerwienieSercaData: StructuredChapter = {
+  "chapterTitle": "Unaczynienie i unerwienie serca",
+  "toc": [
+    {
+      "title": "Tętnice serca",
+      "anchorId": "tetnice-serca"
+    },
+    {
+      "title": "Żyły serca",
+      "anchorId": "zyly-serca"
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "htmlContent": "<h3 id=\"tetnice-serca\">Tętnice serca</h3><p>Serce jest zaopatrywane w krew przez dwie tętnice wieńcowe (<em>arteriae coronariae</em>), prawą i lewą, które odchodzą od opuszki aorty.</p><h4>Tętnica wieńcowa prawa</h4><p><strong>Tętnica wieńcowa prawa</strong> (<em>arteria coronaria dextra</em>) rozpoczyna się w opuszce aorty, powyżej przyczepu prawego płatka półksiężycowatego. Początkowo przebiega między pniem płucnym a prawym uszkiem, następnie kieruje się w bruździe wieńcowej, oddzielającej prawy przedsionek od prawej komory. Na granicy komór zagina się ku dołowi i przechodzi w bruzdę międzykomorową tylną jako <strong>gałąź międzykomorowa tylna</strong> (<em>ramus interventricularis posterior</em>).</p><p>Od tętnicy wieńcowej prawej, wraz z jej gałęzią międzykomorową tylną, odchodzą liczne odgałęzienia:</p><ul><li>gałęzie unaczyniające prawy przedsionek, w tym istotna <strong>gałąź do węzła zatokowo-przedsionkowego</strong> (<em>ramus nodi sinuatrialis</em>);</li><li>gałęzie zaopatrujące większą część prawej komory oraz tylną część lewej komory przylegającą do bruzdy międzykomorowej tylnej; wśród nich wyróżnia się <strong>gałąź brzeżną prawą</strong> (<em>ramus marginalis dexter</em>), biegnącą na granicy powierzchni mostkowo-żebrowej i przeponowej serca;</li><li>gałęzie przegrodowe, które unaczyniają tylną jedną trzecią przegrody międzykomorowej.</li></ul><h4>Tętnica wieńcowa lewa</h4><p><strong>Tętnica wieńcowa lewa</strong> (<em>arteria coronaria sinistra</em>) również odchodzi od opuszki aorty, powyżej przyczepu lewego płatka półksiężycowatego. Jej krótki pień (około 1 cm długości) biegnie między pniem płucnym a lewym uszkiem, po czym dzieli się na dwie główne gałęzie: okalającą i międzykomorową przednią.</p><p><strong>Gałąź okalająca</strong> (<em>ramus circumflexus</em>) podąża w bruździe wieńcowej, między lewym przedsionkiem a lewą komorą, zwykle nie osiągając bruzdy międzykomorowej tylnej. Od niej odchodzą:</p><ul><li>gałęzie unaczyniające większą część lewego przedsionka;</li><li>gałęzie zaopatrujące boczną ścianę lewej komory, w tym dobrze wykształcona <strong>gałąź brzeżna lewa</strong> (<em>ramus marginalis sinister</em>).</li></ul><p><strong>Gałąź międzykomorowa przednia</strong> (<em>ramus interventricularis anterior</em>) kieruje się w bruździe międzykomorowej przedniej w stronę koniuszka serca. Oddaje:</p><ul><li>gałęzie do przednich części obu komór, w okolicy bruzdy międzykomorowej przedniej;</li><li>gałęzie przegrodowe unaczyniające przednie dwie trzecie przegrody międzykomorowej.</li></ul><p>W terminologii klinicznej gałęzie międzykomorowe tętnic wieńcowych są często nazywane odpowiednio: <strong>LAD</strong> (left anterior descending – przednia zstępująca lewa) oraz <strong>PDA</strong> (posterior descending artery – tylna zstępująca).</p><h4>Zmienność tętnic wieńcowych</h4><p>Przebieg i obszar unaczynienia tętnic wieńcowych wykazują dużą zmienność osobniczą. U około 15% osób gałąź międzykomorowa tylna odchodzi od tętnicy wieńcowej lewej, co znacznie poszerza jej zakres unaczynienia. Również unaczynienie układu przewodzącego serca bywa zmienne; najczęściej odpowiada za nie prawa tętnica wieńcowa, z wyjątkiem gałęzi przedniej odnogi lewej pęczka przedsionkowo-komorowego. Co więcej, niemal w połowie przypadków węzeł zatokowo-przedsionkowy jest zaopatrywany przez gałąź pochodzącą od lewej tętnicy wieńcowej.</p><p>Tętnice wieńcowe można uwidocznić podczas <strong>koronarografii</strong>, polegającej na wprowadzeniu cewnika do ujścia prawej lub lewej tętnicy wieńcowej i podaniu środka cieniującego. Procesy miażdżycowe mogą prowadzić do zwężenia lub zamknięcia światła tętnic wieńcowych, czego skutkiem jest niedokrwienie mięśnia sercowego, a w konsekwencji jego martwica, czyli <strong>zawał serca</strong>. Typowym objawem zawału jest silny ból zamostkowy, często promieniujący do lewej kończyny górnej. W leczeniu stosuje się <strong>angioplastykę wieńcową</strong> (rozszerzenie zwężonego odcinka balonem wprowadzonym przez cewnik) lub, gdy jest ona nieskuteczna, <strong>pomostowanie aortalno-wieńcowe</strong> – zabieg polegający na wszczepieniu pobranego odcinka naczynia (np. żyły odpiszczelowej) między aortę wstępującą a tętnicę wieńcową poniżej miejsca zwężenia.</p>"
+    },
+    {
+      "pageNumber": 2,
+      "htmlContent": "<h3 id=\"zyly-serca\">Żyły serca</h3><p>Około 60% krwi żylnej z serca odprowadzane jest do prawego przedsionka przez <strong>zatokę wieńcową</strong> (<em>sinus coronarius</em>). Pozostałe 40% dociera do prawego przedsionka przez <strong>żyły przednie serca</strong> (<em>venae cordis anteriores</em>) lub do różnych jam serca przez <strong>żyły najmniejsze serca</strong> (<em>venae cordis minimae</em>).</p><h4>Zatoka wieńcowa</h4><p><strong>Zatoka wieńcowa</strong> (<em>sinus coronarius</em>) to główny pień żylny, przebiegający w bruździe wieńcowej na powierzchni przeponowej serca, między lewym przedsionkiem a lewą komorą. Stanowi przedłużenie <strong>żyły wielkiej serca</strong> (<em>vena cordis magna</em>) i powstaje z połączenia tej żyły z <strong>żyłą skośną przedsionka lewego</strong> (<em>vena obliqua atrii sinistri</em>) od góry oraz <strong>żyłą tylną komory lewej</strong> (<em>vena posterior ventriculi sinistri</em>) od dołu. Uchodzi do prawego przedsionka, a w jej ujściu zwykle znajduje się zastawka (zastawka zatoki wieńcowej).</p><h4>Główne dopływy zatoki wieńcowej</h4><ul><li><strong>Żyła wielka serca</strong> (<em>vena cordis magna</em>) rozpoczyna się w okolicy wcięcia koniuszka serca, biegnie w bruździe międzykomorowej przedniej, a następnie w bruździe wieńcowej między lewym przedsionkiem a lewą komorą.</li><li><strong>Żyła skośna przedsionka lewego</strong> (<em>vena obliqua atrii sinistri</em>) przebiega po tylnej powierzchni lewego przedsionka.</li><li><strong>Żyła tylna komory lewej</strong> (<em>vena posterior ventriculi sinistri</em>) wstępuje z tylnej ściany lewej komory.</li><li><strong>Żyła średnia serca</strong> (<em>vena cordis media</em>) biegnie od wcięcia koniuszka serca w bruździe międzykomorowej tylnej i uchodzi do zatoki wieńcowej od dołu po stronie prawej.</li><li><strong>Żyła mała serca</strong> (<em>vena cordis parva</em>) znajduje się w bruździe wieńcowej między prawym przedsionkiem a prawą komorą, uchodząc do zatoki wieńcowej od strony prawej.</li></ul><h4>Żyły uchodzące bezpośrednio do jam serca</h4><p><strong>Żyły przednie serca</strong> (<em>venae cordis anteriores</em>) rozpoczynają się na przedniej ścianie prawej komory, krzyżują bruzdę wieńcową i uchodzą do prawego przedsionka. <strong>Żyły najmniejsze serca</strong> (<em>venae cordis minimae</em>) zbierają krew ze ścian serca i uchodzą bezpośrednio do przedsionków i komór.</p>"
+    }
+  ],
+  "chapterQuiz": [
+    {
+      "question": "Jakie dwie główne gałęzie oddaje tętnica wieńcowa lewa?",
+      "answer": "Gałąź okalającą (ramus circumflexus) i gałąź międzykomorową przednią (ramus interventricularis anterior)."
+    },
+    {
+      "question": "Która struktura żylna odprowadza około 60% krwi z serca do prawego przedsionka?",
+      "answer": "Zatoka wieńcowa (sinus coronarius)."
+    },
+    {
+      "question": "Jakie są kliniczne odpowiedniki gałęzi międzykomorowych tętnic wieńcowych?",
+      "answer": "LAD (left anterior descending) dla gałęzi międzykomorowej przedniej i PDA (posterior descending artery) dla gałęzi międzykomorowej tylnej."
+    }
+  ]
+};

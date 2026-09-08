@@ -1,0 +1,39 @@
+import type { StructuredChapter } from "@/types/theory";
+
+export const bochenek1_czesc_375_miesnieGrzbietuStopyIPrzedzialuPrzedniegoGoleniData: StructuredChapter = {
+  "chapterTitle": "Mięśnie grzbietu stopy i przedziału przedniego goleni",
+  "toc": [
+    {
+      "title": "Mięsień piszczelowy przedni",
+      "anchorId": "miesien-piszczelowy-przedni"
+    },
+    {
+      "title": "Prostownik długi palców i strzałkowy trzeci",
+      "anchorId": "prostownik-dlugi-palcow-i-strzalkowy-trzeci"
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "htmlContent": "<h3 id=\"miesien-piszczelowy-przedni\">Mięsień piszczelowy przedni</h3><p><strong>Mięsień piszczelowy przedni</strong> (<em>musculus tibialis anterior</em>) pełni funkcję odwracacza stopy, działając wspólnie z mięśniem piszczelowym tylnym. Jest antagonistą mięśni strzałkowych, które odpowiadają za nawracanie stopy. Jego działanie zapobiega powstawaniu płaskostopia.</p><p>Przy obciążonej stopie mięsień ten przyciąga goleń do grzbietu stopy, co tłumaczy zmęczenie i bolesność podczas szybkiego chodzenia lub jazdy na nartach. Przy stopie odciążonej wykonuje zgięcie grzbietowe w stawie skokowym górnym oraz nawracanie w stawie skokowym dolnym.</p><p>Mięsień leży powierzchownie na goleni. Od przodu graniczy z powięzią i skórą, przyśrodkowo z kością piszczelową, a bocznie – w górnej części z prostownikiem długim palców, w dolnej – z prostownikiem długim palucha. Na stopie jego ścięgno kieruje się skośnie ku dołowi i przyśrodkowo, jest przykryte powięzią i skórą, a do tyłu spoczywa na kośćcu stopy.</p><p>Wzdłuż tylnego i bocznego brzegu mięśnia, na błonie międzykostnej, przebiega tętnica piszczelowa przednia wraz z żyłami towarzyszącymi oraz nerw strzałkowy głęboki. Podczas skurczu ścięgno unosi się i jest wyraźnie wyczuwalne oraz widoczne przez skórę.</p><p>Mięsień jest unaczyniony przez tętnicę piszczelową przednią, a unerwiony przez nerw strzałkowy głęboki (L4–S1). Między ścięgnem końcowym a kością klinowatą przyśrodkową znajduje się zwykle kaletka podścięgnowa (<em>bursa subtendinea musculi tibialis anterioris</em>), która chroni ścięgno przed ocieraniem. Ponadto ścięgno, przechodząc pod troczkami prostowników górnym i dolnym, jest objęte pochewką maziową (<em>vagina synovialis tendinis musculi tibialis anterioris</em>).</p><p>Warianty anatomiczne obejmują podział ścięgna końcowego na dwie odnogi – jedną dla pierwszej kości śródstopia, drugą dla kości klinowatej przyśrodkowej – który może sięgać aż do brzuśca. Czasami występuje pasmo ścięgniste lub mięśniowe do troczka dolnego prostowników (<em>musculus tensor fasciae dorsalis pedis</em>), a także pasma dodatkowe przyczepiające się w różnych miejscach stopy.</p>"
+    },
+    {
+      "pageNumber": 2,
+      "htmlContent": "<h3 id=\"prostownik-dlugi-palcow-i-strzalkowy-trzeci\">Prostownik długi palców i strzałkowy trzeci</h3><p><strong>Mięsień prostownik długi palców</strong> (<em>musculus extensor digitorum longus</em>) leży bocznie od mięśnia piszczelowego przedniego. Jest spłaszczony bocznie i rozpięty między górnym końcem goleni a czterema ostatnimi palcami stopy. <strong>Mięsień strzałkowy trzeci</strong> (<em>musculus peroneus tertius</em> s. <em>fibularis tertius</em>) stanowi boczną, odszczepioną część prostownika długiego palców, przyczepiającą się do grzbietowej powierzchni podstawy piątej, a często także czwartej kości śródstopia.</p><p>Prostownik długi palców rozpoczyna się na kłykciu bocznym kości piszczelowej, na głowie i brzegu przednim strzałki (aż do jej dolnej czwartej), na przegrodzie międzymięśniowej przedniej goleni, na błonie międzykostnej oraz na wewnętrznej powierzchni powięzi goleni. Jego włókna biegną ku dołowi i do przodu, a w połowie goleni przechodzą w silne ścięgno po przyśrodkowej stronie brzuśca. Ścięgno to przechodzi przez boczny przedział troczków prostowników górnego i dolnego, po czym dzieli się na grzbiecie stopy na cztery ścięgna dla palców II–V. Ścięgna te, wraz ze ścięgnami prostownika krótkiego palców, przechodzą w rozcięgna grzbietowe palców, podobnie jak w przypadku ścięgien prostownika palców ręki.</p><p>Mięsień strzałkowy trzeci może mieć zupełnie samodzielny brzusiec lub też od niepodzielonego prostownika wspólnego może odchodzić odrębne ścięgno. Często pasmo ścięgniste dochodzi do rozcięgna grzbietowego piątego palca.</p><p>Działanie prostownika długiego palców i mięśnia strzałkowego trzeciego zależy od obciążenia stopy. Przy stopie obciążonej działają podobnie jak mięsień piszczelowy przedni, ale ich wpływ na palce jest nieznaczny. Przy stopie odciążonej wywierają silne działanie na oba stawy skokowe, choć mniejsze niż mięsień piszczelowy przedni. W stawie skokowym górnym wykonują zgięcie grzbietowe, a w dolnym – nawracanie. Mięsień strzałkowy trzeci działa jako nawracacz i odwodziciel stopy.</p><p>Prostownik długi palców leży bezpośrednio pod skórą. Na goleni graniczy przyśrodkowo – w górnej części z mięśniem piszczelowym przednim, w dolnej z prostownikiem długim palucha, a bocznie – w górnej części z mięśniem strzałkowym długim, w dolnej ze strzałkowym krótkim. Na stopie cztery ścięgna prostownika długiego palców oraz ścięgno mięśnia strzałkowego trzeciego biegną po prostowniku krótkim palców i po członach palców. Na goleni powrózek naczyniowo-nerwowy (tętnica i żyły piszczelowe przednie oraz nerw strzałkowy głęboki) początkowo biegnie wzdłuż tylnego i przyśrodkowego brzegu prostownika długiego palców, następnie oddala się od niego i przechodzi na przyśrodkową stronę prostownika długiego palucha, między nim a mięśniem piszczelowym przednim.</p><p>Mięsień prostownik długi palców i mięsień strzałkowy trzeci są unaczynione przez tętnicę piszczelową przednią, a unerwione przez gałązki nerwu strzałkowego głębokiego (L4–S1). Ścięgna prostownika długiego palców i mięśnia strzałkowego trzeciego są objęte wspólną pochewką maziową.</p><p>Warianty anatomiczne prostownika długiego palców obejmują podwójne ścięgna końcowe, z których jedno może mieć nietypowy przyczep, np. do sąsiedniego palca lub innego miejsca na grzbiecie stopy. Rzadko dodatkowe ścięgno biegnie do palucha, a ścięgna mogą być połączone pasmami ścięgnistymi. Bardzo rzadko mięsień bywa podzielony na oddzielne brzuśce. Mięsień strzałkowy trzeci nie występuje w około 8% przypadków. Istnieją różne formy pośrednie między całkowitym odszczepieniem a całkowitym zlaniem się z prostownikiem długim palców. U naczelnych niższych odpowiednikiem jest mięsień strzałkowy mały (<em>musculus peroneus parvus</em>), a u świni i przeżuwaczy jest on normalnie rozwinięty, leżąc powierzchownie na goleni i działając jako prostownik stawu kolanowego oraz zginacz stępu. Według badań Przystasza, mięsień strzałkowy trzeci stanowi samodzielny mięsień w 18,2% przypadków, odszczepioną część boczną prostownika długiego palców w 62,6%, a tylko ścięgno odchodzące od prostownika długiego palców w 19,2%.</p>"
+    }
+  ],
+  "chapterQuiz": [
+    {
+      "question": "Jakie funkcje pełni mięsień piszczelowy przedni?",
+      "answer": "Przy obciążonej stopie zbliża goleń do grzbietu stopy, a przy odciążonej wykonuje zgięcie grzbietowe w stawie skokowym górnym i nawracanie w dolnym. Jest odwracaczem stopy i zapobiega płaskostopiu."
+    },
+    {
+      "question": "Jakie są przyczepy mięśnia prostownika długiego palców?",
+      "answer": "Rozpoczyna się na kłykciu bocznym kości piszczelowej, głowie i brzegu przednim strzałki, przegrodzie międzymięśniowej przedniej goleni, błonie międzykostnej oraz powięzi goleni. Kończy się czterema ścięgnami na palcach II–V."
+    },
+    {
+      "question": "Jakie jest unerwienie mięśni przedziału przedniego goleni?",
+      "answer": "Mięsień piszczelowy przedni, prostownik długi palców i strzałkowy trzeci są unerwione przez nerw strzałkowy głęboki (L4–S1)."
+    }
+  ]
+};

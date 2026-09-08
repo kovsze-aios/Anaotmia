@@ -58,13 +58,24 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
 load_dotenv()
 load_dotenv("../.env")
 
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Konfiguracja
+# Konfiguracja silnika przetwarzającego (Dual-Model Architecture)
 # ─────────────────────────────────────────────────────────────────────────────
 
-MODEL = "deepseek-chat"
+# Jeśli dostępny jest klucz Gemini, używamy Flash API; w przeciwnym razie DeepSeek.
+if GEMINI_API_KEY:
+    MODEL = os.getenv("PROCESSOR_MODEL", "gemini-2.0-flash")
+    BASE_URL = os.getenv("PROCESSOR_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
+    API_KEY = GEMINI_API_KEY
+    MODEL_DISPLAY = f"Google Flash ({MODEL})"
+else:
+    MODEL = os.getenv("PROCESSOR_MODEL", "deepseek-chat")
+    BASE_URL = os.getenv("PROCESSOR_BASE_URL", "https://api.deepseek.com")
+    API_KEY = DEEPSEEK_API_KEY
+    MODEL_DISPLAY = f"DeepSeek ({MODEL})"
 
 # Poprzednio 4000 — model regularnie kończył w połowie zdania i ucięty tekst
 # trafiał do plików .ts.
@@ -73,7 +84,7 @@ MAX_TOKENS = 8192
 MIN_CHUNK_CHARS = 5000
 MAX_CHUNK_CHARS = 8000
 
-MAX_WORKERS = 5
+MAX_WORKERS = 8
 MAX_RETRIES = 3
 
 # Pakiety zawierające którykolwiek z tych wzorców nie są wysyłane do modelu.
@@ -234,7 +245,8 @@ ZASADY BEZWZGLĘDNE (TRYB REDAKCYJNY "ANTIGRAVITY"):
    - <strong> do wyróżnień kluczowych struktur anatomicznych (NIGDY **tekst**!),
    - <em> dla nazw łacińskich i pojęć drugorzędnych,
    - <ul>, <ol> i <li> dla wyliczeń i list,
-   - <h3 id="..."> dla nagłówków sekcji (z unikalnym anchorId pasującym do toc).
+   - <br> dla pojedynczych załamań linii w razie konieczności,
+   - <h3 id="..."> i <h4 id="..."> dla nagłówków sekcji (z unikalnym anchorId pasującym do toc).
 
 5. FILTR BLACKLISTY I TREŚCI NIEPODRĘCZNIKOWYCH
    Całkowicie pomiń i odrzuć wszelkie materiały zawierające frazę "egzamin 2026", arkusze
@@ -530,12 +542,12 @@ def to_slug(name: str) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def get_client() -> OpenAI:
-    """Klient DeepSeek z obsługą środowiska Windows."""
+    """Klient API (Google Flash lub DeepSeek) z obsługą środowiska Windows."""
     insecure = os.getenv("FABRYKA_INSECURE_TLS", "1") == "1"
     http_client = httpx.Client(verify=not insecure, timeout=180.0)
     return OpenAI(
-        api_key=DEEPSEEK_API_KEY,
-        base_url="https://api.deepseek.com",
+        api_key=API_KEY,
+        base_url=BASE_URL,
         http_client=http_client,
     )
 
@@ -711,13 +723,20 @@ def get_volume_tag(filename: str) -> tuple[str, str]:
 
 
 def process_single_task(args) -> dict | None:
-    tag, chunk_idx, total_chunks, chunk, out_dir = args
+    tag, chunk_idx, total_chunks, chunk, out_dir, force = args
 
-    existing = list(out_dir.glob(f"{tag}-czesc-{chunk_idx + 1}-*.ts"))
-    if existing:
-        fn = existing[0].name.replace(".ts", "")
-        return {"tag": tag, "filename": fn, "varName": to_valid_identifier(fn),
-                "status": "skipped", "path": existing[0]}
+    if not force:
+        existing = list(out_dir.glob(f"{tag}-czesc-{chunk_idx + 1}-*.ts"))
+        if existing:
+            fn = existing[0].name.replace(".ts", "")
+            return {"tag": tag, "filename": fn, "varName": to_valid_identifier(fn),
+                    "status": "skipped", "path": existing[0]}
+    else:
+        for old in out_dir.glob(f"{tag}-czesc-{chunk_idx + 1}-*.ts"):
+            try:
+                old.unlink()
+            except Exception:
+                pass
 
     client = get_client()
     try:
@@ -776,7 +795,7 @@ def update_barrel_files(out_dir: Path) -> None:
 
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_tasks(out_dir: Path) -> list[tuple]:
+def build_tasks(out_dir: Path, force: bool = False) -> list[tuple]:
     src_dir = Path("materiały-źródłowe/anatomia")
     if not src_dir.exists():
         src_dir = Path("../materiały-źródłowe/anatomia")
@@ -847,7 +866,7 @@ def build_tasks(out_dir: Path) -> list[tuple]:
               f"ponad limit: {oversized}")
 
         for idx, chunk in enumerate(kept):
-            all_tasks.append((tag, idx, len(kept), chunk, out_dir))
+            all_tasks.append((tag, idx, len(kept), chunk, out_dir, force))
 
     return all_tasks
 
@@ -856,30 +875,41 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Fabryka wiedzy — potok ingestii anatomii.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Podziel i zwaliduj wejście bez wywołań API.")
+    parser.add_argument("--limit", type=int, default=None,
+                        help="Przetwórz tylko pierwsze N pakietów.")
+    parser.add_argument("--force", action="store_true",
+                        help="Wymuś ponowne wygenerowanie nawet jeśli pliki docelowe istnieją.")
+    parser.add_argument("--workers", type=int, default=MAX_WORKERS,
+                        help=f"Liczba wątków roboczych (domyślnie: {MAX_WORKERS}).")
     args = parser.parse_args()
 
     out_dir = Path("src/data/anatomia/tomy")
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    all_tasks = build_tasks(out_dir)
+    all_tasks = build_tasks(out_dir, force=args.force)
     if not all_tasks:
         return
 
-    print(f"\nŁĄCZNIE: {len(all_tasks)} pakietów.")
+    if args.limit is not None:
+        all_tasks = all_tasks[:args.limit]
+        print(f"\n[PILOT RUN] Nałożono limit do pierwszych {args.limit} pakietów.")
+
+    print(f"\nŁĄCZNIE: {len(all_tasks)} pakietów do przetworzenia.")
 
     if args.dry_run:
         print("[DRY RUN] Zakończono bez wywołań API.")
         return
 
-    if not DEEPSEEK_API_KEY:
-        print("\n[BŁĄD] Brak DEEPSEEK_API_KEY. Uzupełnij .env (patrz .env.example).")
+    if not API_KEY:
+        print("\n[BŁĄD] Brak klucza API (GEMINI_API_KEY lub DEEPSEEK_API_KEY). Uzupełnij .env.")
         sys.exit(1)
 
-    print(f"Start ({MAX_WORKERS} wątków, max_tokens={MAX_TOKENS})…")
+    workers = min(args.workers, len(all_tasks))
+    print(f"Start (silnik: {MODEL_DISPLAY}, {workers} wątków, max_tokens={MAX_TOKENS})…")
     start = time.time()
     done = 0
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(process_single_task, task) for task in all_tasks]
         for _ in concurrent.futures.as_completed(futures):
             done += 1

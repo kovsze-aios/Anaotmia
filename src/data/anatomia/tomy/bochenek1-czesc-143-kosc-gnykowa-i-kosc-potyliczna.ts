@@ -1,0 +1,35 @@
+import type { StructuredChapter } from "@/types/theory";
+
+export const bochenek1_czesc_143_koscGnykowaIKoscPotylicznaData: StructuredChapter = {
+  "chapterTitle": "Kość gnykowa i kość potyliczna",
+  "toc": [
+    {
+      "title": "Kość gnykowa",
+      "anchorId": "kos-gnykowa"
+    },
+    {
+      "title": "Kość potyliczna",
+      "anchorId": "kos-potyliczna"
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "htmlContent": "<h3 id=\"kos-gnykowa\">Kość gnykowa</h3><p>Kość gnykowa (<em>os hyoideum</em>) to nieparzysta, podkowiasto zagięta struktura kostna, którą można wyczuć przez skórę w fałdzie między dolną powierzchnią żuchwy a przednią powierzchnią szyi. Nie łączy się ona bezpośrednio z żadną inną kością, lecz jest zawieszona na więzadłach i mięśniach. Składa się z trzonu (<em>corpus</em>) oraz dwóch par rogów: większych (<em>cornua majora</em>) i mniejszych (<em>cornua minora</em>).</p><p>Trzon kości gnykowej jest spłaszczony w kierunku strzałkowym, wypukły od przodu i wklęsły od tyłu. Jego przednia powierzchnia jest chropowata ze względu na przyczepy mięśni: żuchwowo-gnykowego (<em>m. mylohyoideus</em>), bródkowo-gnykowego (<em>m. geniohyoideus</em>), bródkowo-językowego (<em>m. genioglossus</em>), gnykowo-językowego (<em>m. hyoglossus</em>), mostkowo-gnykowego (<em>m. sternohyoideus</em>) i tarczowo-gnykowego (<em>m. thyrohyoideus</em>). Tylna powierzchnia trzonu jest gładka. Na bocznych końcach trzonu znajdują się drobne dołki, które służą do połączenia z rogami większymi (od dołu) i mniejszymi (od góry).</p><p>Rogi większe (<em>cornua majora</em>) to cienkie, bocznie spłaszczone listewki kostne, dłuższe od trzonu. Odchodzą od jego bocznych końców, kierując się ku tyłowi i nieco ku górze, a ich końce są guzkowato zgrubiałe. Do rogów większych przyczepiają się mięśnie: gnykowo-językowy, zwieracz środkowy gardła (<em>m. constrictor pharyngis medius</em>) oraz tarczowo-gnykowy. Rogi większe łączą się z trzonem za pośrednictwem chrząstkozrostu, który w późniejszym wieku często ulega kostnieniu; odsetek kostnienia wzrasta z wiekiem, ale nawet u osób w wieku starczym nie przekracza 40%.</p><p>Rogi mniejsze (<em>cornua minora</em>) to dwie małe, stożkowate wyniosłości chrzęstne, skierowane ku górze i nieco ku tyłowi. Odchodzą one od miejsca połączenia trzonu z rogami większymi. W stanie chrzęstnym pozostają zwykle do wieku średniego, po czym kostnieją. Do rogów mniejszych przyczepiają się więzadło rylcowo-gnykowe (<em>lig. stylohyoideum</em>), biegnące od wyrostka rylcowatego kości skroniowej, oraz część środkowego zwieracza gardła i mięsień chrząstkowo-językowy (<em>m. chondroglossus</em>).</p><p>Struktura kości gnykowej jest wyjątkowa, ponieważ zbudowana jest prawie wyłącznie z istoty zbitej; ślady istoty gąbczastej występują jedynie w najgrubszych partiach trzonu i rogów większych.</p><p>Rozwój kości gnykowej jest ściśle związany z chrząstkowym szkieletem trzewnym. Rogi mniejsze powstają z drugiej pary łuków skrzelowych, rogi większe z trzeciej pary, a trzon ze wspólnej części łączącej te łuki (<em>copula</em>). Każda z tych części rozwija się z osobnego punktu kostnienia, co daje łącznie pięć punktów. Punkty kostnienia dla trzonu i rogów większych pojawiają się tuż przed urodzeniem, natomiast punkty dla rogów mniejszych mogą wystąpić dopiero po urodzeniu lub wcale. Więzadła rylcowo-gnykowe mogą ulegać skostnieniu na mniejszej lub większej przestrzeni.</p><p>Warto zaznaczyć, że przekształcenie podstawy żuchwy i kości gnykowej wiąże się z przyjęciem pionowej postawy ciała, co zmieniło relacje między głową a szyją. Nie ma to jednak związku z powstaniem mowy ludzkiej, jak pierwotnie przypuszczano. Wyrostek dziobiasty żuchwy, do którego przyczepia się mięsień skroniowy, wykazuje dużą zmienność osobniczą – szeroki i niski wskazuje na silny rozwój mięśnia, a wysoki i spiczasty na jego słabszy rozwój.</p>"
+    },
+    {
+      "pageNumber": 2,
+      "htmlContent": "<h3 id=\"kos-potyliczna\">Kość potyliczna</h3><p>Kość potyliczna (<em>os occipitale</em>) jest częścią mózgowej czaszki i składa się z czterech części: podstawnej (<em>pars basilaris</em>), łuski potylicznej (<em>squama occipitalis</em>) oraz dwóch części bocznych (<em>partes laterales</em>). Wszystkie te elementy otaczają otwór wielki (<em>foramen magnum</em>).</p><p>Część podstawna u osób młodych łączy się z otaczającymi kośćmi za pośrednictwem chrząstkozrostów: klinowo-potylicznego (<em>synchondrosis sphenooccipitalis</em>) i skalisto-potylicznego (<em>synchondrosis petrooccipitalis</em>). Na górnej powierzchni tego ostatniego biegnie bruzda zatoki skalistej dolnej (<em>sulcus sinus petrosi inferioris</em>). Pośrodku dolnej powierzchni części podstawnej znajduje się guzek gardłowy (<em>tuberculum pharyngeum</em>), do którego oraz do całej dolnej powierzchni przyczepiają się liczne mięśnie, więzadła i błony łącznotkankowe. Górna powierzchnia części podstawnej wraz z trzonem kości klinowej tworzy stok (<em>clivus</em>), na którym spoczywają rdzeń przedłużony i most.</p><p>Części boczne charakteryzują się obecnością na dolnej powierzchni kłykci potylicznych (<em>condyli occipitales</em>), pokrytych chrząstką stawową. Podstawę każdego kłykcia przebija kanał nerwu podjęzykowego (<em>canalis hypoglossi</em>). Do przodu od kłykcia leży dół kłykciowy (<em>fossa condylaris</em>), którego dno jest przebite kanałem kłykciowym (<em>canalis condylaris</em>) dla żyły wypustowej. Na górnej powierzchni, nad kanałem nerwu podjęzykowego, znajduje się guzek szyjny (<em>tuberculum jugulare</em>). Brzeg boczny części bocznej tworzy głębokie wcięcie szyjne (<em>incisura jugularis</em>), które wraz z odpowiadającą mu częścią piramidy kości skroniowej formuje otwór szyjny (<em>foramen jugulare</em>). Przez otwór ten przechodzą: żyła szyjna wewnętrzna, nerwy IX, X i XI oraz tętnica oponowa tylna.</p><p>Łuska potyliczna na powierzchni zewnętrznej ma guzowatość potyliczną zewnętrzną (<em>protuberantia occipitalis externa</em>). Od guzowatości tej biegną ku bokom kresy karkowe górne (<em>lineae nuchae superiores</em>), a ku otworowi wielkiemu – grzebień potyliczny zewnętrzny (<em>crista occipitalis externa</em>). Od grzebienia odchodzą ku bokom kresy karkowe dolne (<em>lineae nuchae inferiores</em>). Niestała kresa karkowa najwyższa oddziela płaszczyznę potyliczną (<em>planum occipitale</em>) od płaszczyzny karkowej (<em>planum nuchale</em>). Na powierzchni wewnętrznej łuski znajduje się wyniosłość krzyżowata (<em>eminentia cruciformis</em>), która dzieli ją na cztery doły: dwa górne (płat potyliczny mózgu) i dwa dolne (móżdżek).</p>"
+    }
+  ],
+  "chapterQuiz": [
+    {
+      "question": "Z ilu punktów kostnienia rozwija się kość gnykowa i jakie to są punkty?",
+      "answer": "Kość gnykowa rozwija się z pięciu punktów kostnienia: jeden dla trzonu, dwa dla rogów większych i dwa dla rogów mniejszych."
+    },
+    {
+      "question": "Jakie struktury przechodzą przez otwór szyjny (foramen jugulare)?",
+      "answer": "Przez otwór szyjny przechodzą: żyła szyjna wewnętrzna, nerwy IX, X i XI oraz tętnica oponowa tylna."
+    }
+  ]
+};

@@ -15,7 +15,7 @@ describe("searchTerms", () => {
 
   it("indexes physiology alongside the other subjects", () => {
     const subjects = new Set(
-      ["serce", "komórka", "mięsień", "układ"].flatMap((q) =>
+      ["serce", "komórka", "mięsień", "układ", "fizjologia"].flatMap((q) =>
         searchTerms(q, SEARCH_RESULT_LIMIT).map((r) => r.subject),
       ),
     );

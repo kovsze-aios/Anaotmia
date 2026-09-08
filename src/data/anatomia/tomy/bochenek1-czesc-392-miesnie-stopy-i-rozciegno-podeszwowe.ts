@@ -5,55 +5,51 @@ export const bochenek1_czesc_392_miesnieStopyIRozciegnoPodeszwoweData: Structure
   "toc": [
     {
       "title": "Budowa podeszwy i rozcięgno podeszwowe",
-      "anchorId": "budowa-podeszwy-rozciegno"
+      "anchorId": "budowa-podeszwy"
     },
     {
       "title": "Mięśnie grzbietu stopy",
-      "anchorId": "miesnie-grzbietu-stopy"
+      "anchorId": "miesnie-grzbietu"
     },
     {
-      "title": "Mięśnie podeszwy: grupa przyśrodkowa",
-      "anchorId": "miesnie-podeszwy-przysrodkowa"
-    },
-    {
-      "title": "Mięśnie podeszwy: grupa boczna",
-      "anchorId": "miesnie-podeszwy-boczna"
+      "title": "Mięśnie podeszwy",
+      "anchorId": "miesnie-podeszwy"
     }
   ],
   "pages": [
     {
       "pageNumber": 1,
-      "htmlContent": "<h3 id=\"budowa-podeszwy-rozciegno\">Budowa podeszwy i rozcięgno podeszwowe</h3><p>Na podeszwie stopy, podobnie jak na dłoni, wyróżniamy trzy grupy mięśni, które są oddzielone przegrodami podeszwowymi. Przegroda przyśrodkowa (septum plantare mediale) przyczepia się do pierwszej kości śródstopia, kości klinowatej przyśrodkowej oraz kości łódkowatej. Przegroda boczna (septum plantare laterale) biegnie do piątej kości śródstopia i więzadła podeszwowego długiego. W ten sposób powstają trzy komory wypełnione mięśniami.</p><p>Dzięki prawom hydrodynamiki, ucisk działający na te komory rozkłada się równomiernie na całą ich powierzchnię, co chroni poszczególne struktury przed miejscowym uszkodzeniem. Komory mięśniowe podeszwy są zatem komorami uciskowymi, podobnie jak w dłoni. Pokrywa je podskórna tkanka tłuszczowa, przedzielona troczkami (retinacula cutis), tworzącymi drobne komórki tłuszczowe. Stanowią one drugą warstwę podściółki odporną na ciśnienie. Całość uzupełnia gruba, odporna skóra podeszwy.</p><p>Rozcięgno podeszwowe (aponeurosis plantaris) ma podłużny układ włókien, które silnie łączą kościec stopy z piętą i nasadą palców. Włókna te przeciwdziałają spłaszczeniu podłużnego sklepienia stopy. Rozcięgno podeszwowe stanowi ważne, biernie napięte usztywnienie sklepienia. W fałdach międzypalcowych skóry przebiega poprzeczne pasmo, głównie od drugiego do piątego palca, które nie łączy się z rozcięgnem – jest to więzadło poprzeczne powierzchowne śródstopia (ligamentum metatarseum transversum superficiale). Hamuje ono ruchy odwodzenia palców oraz ich zginanie i prostowanie.</p><p>Wzdłuż brzegów środkowego pasma rozcięgna podeszwowego wnikają w głąb podeszwy dwie mocne, podłużne przegrody łącznotkankowe (septa plantaria), przyśrodkowa i boczna. Przytwierdzają one rozcięgno do kośćca i dzielą mięśniówkę podeszwy na trzy grupy. Wskutek tego wyróżniamy trzy wyniosłości podeszwowe: przyśrodkową, boczną i pośrodkową (eminentiae plantares medialis, lateralis et intermedia). Oddzielają je bruzdy podeszwowe: przyśrodkowa i boczna (sulcus plantaris medialis et lateralis).</p><p>Na pięcie zwykle znajduje się kaletka maziowa podskórna (bursa subcutanea calcanea), położona na dolnej powierzchni guza piętowego. Druga kaletka leży na przyśrodkowej wyniosłości podeszwowej. Rozcięgno podeszwowe u wielu ssaków stanowi część dalszą mięśnia podeszwowego, ale u człowieka, wraz z przyjęciem pionowej postawy, związek ten zanikł.</p>"
+      "htmlContent": "<h3 id=\"budowa-podeszwy\">Budowa podeszwy i rozcięgno podeszwowe</h3><p>Na podeszwie wyróżniamy trzy grupy mięśni, oddzielone przegrodami podeszwowymi. Przegroda przyśrodkowa przyczepia się do kości I śródstopia, kości klinowatej przyśrodkowej i łódkowatej, natomiast przegroda boczna do kości V śródstopia i więzadła podeszwowego długiego. W ten sposób powstają trzy komory wypełnione mięśniami.</p><p>Dzięki prawom hydrodynamicznym ucisk działający na te komory rozkłada się równomiernie na całą ich powierzchnię, co chroni poszczególne struktury przed miejscowymi uszkodzeniami. Komory podeszwy, podobnie jak komory dłoni, są przykryte podskórną tkanką tłuszczową, przedzieloną przegrodami łącznotkankowymi (troczkami, <em>retinacula cutis</em>). Tworzą one drugą warstwę podściółki odporną na ciśnienie, a całość uzupełnia gruba i odporna skóra podeszwy.</p><p>Rozcięgno podeszwowe (<em>aponeurosis plantaris</em>) ma podłużny układ włókien, które silnie spajają kościec stopy z piętą i nasadą palców, przeciwdziałając spłaszczeniu podłużnego sklepienia stopy. Stanowi ono ważne, biernie napięte usztywnienie sklepienia. Ponadto na podeszwie znajdują się kaletki maziowe, m.in. podskórna kaletka na pięcie (<em>bursa subcutanea calcanea</em>) na dolnej powierzchni guza piętowego.</p><p>Mięśnie podeszwy dzielą się na trzy grupy odpowiadające wyniosłościom: przyśrodkowej (palucha), bocznej (palca małego) i pośrodkowej. Wyniosłości te (<em>eminentiae plantares medialis, lateralis et intermedia</em>) oddzielone są bruzdami podeszwowymi: przyśrodkową i boczną (<em>sulcus plantaris medialis et lateralis</em>). Bruzdy te powstają dzięki rozcięgnowi podeszwowemu, które wysyła w głąb dwie przegrody, tworząc trzy komory mięśniowe.</p><p>W fałdach międzypalcowych skóry przebiega poprzeczne pasmo więzadła poprzecznego powierzchownego śródstopia (<em>ligamentum metatarseum transversum superficiale</em>), które nie łączy się z rozcięgnem podeszwowym. Hamuje ono ruchy odwodzenia palców oraz ich zginanie i prostowanie. Wzdłuż brzegów głównego pasma rozcięgna podeszwowego wnikają w głąb podeszwy dwie mocne przegrody łącznotkankowe (<em>septa plantaria</em>), przyśrodkowa i boczna, które przytwierdzają rozcięgno do kośćca.</p>"
     },
     {
       "pageNumber": 2,
-      "htmlContent": "<h3 id=\"miesnie-grzbietu-stopy\">Mięśnie grzbietu stopy</h3><p>Mięśnie grzbietu stopy obejmują dwa krótkie mięśnie: prostownik krótki palców (musculus extensor digitorum brevis) oraz prostownik krótki palucha (musculus extensor hallucis brevis). Rozpoczynają się one wspólnie na górnej powierzchni kości piętowej. Ścięgno prostownika krótkiego palucha kończy się na bliższym paliczku palucha. Pozostała część mięśnia, zwana głową boczną, dzieli się na trzy ścięgna, które biegną do palców II–IV i kończą się na rozcięgnach grzbietowych palców, zlewając się ze ścięgnami prostownika długiego palców. Palec V jest zaopatrywany przez ścięgno mięśnia strzałkowego trzeciego lub strzałkowego krótkiego.</p><p>Oba mięśnie grzbietu stopy zginają grzbietowo palce I–IV, prostują je i rozstawiają. Są unerwione przez nerw strzałkowy głęboki (nervus fibularis profundus).</p>"
+      "htmlContent": "<h3 id=\"miesnie-grzbietu\">Mięśnie grzbietu stopy</h3><p>Mięśnie grzbietu stopy obejmują dwa mięśnie: prostownik krótki palców (<em>m. extensor digitorum brevis</em>) oraz prostownik krótki palucha (<em>m. extensor hallucis brevis</em>). Rozpoczynają się one wspólnie na górnej powierzchni kości piętowej. Ścięgno prostownika krótkiego palucha kończy się na bliższym paliczku palucha, a pozostała część (głowa boczna) dzieli się na trzy ścięgna dla palców II–IV, które łączą się z rozcięgnami grzbietowymi palców i zlewają ze ścięgnami prostownika długiego palców.</p><p>Palec V jest zaopatrywany przez ścięgno mięśnia strzałkowego trzeciego lub strzałkowego krótkiego. Oba mięśnie grzbietu stopy zginają grzbietowo palce I–IV, prostują je i rozstawiają. Unerwione są przez nerw strzałkowy głęboki.</p>"
     },
     {
       "pageNumber": 3,
-      "htmlContent": "<h3 id=\"miesnie-podeszwy-przysrodkowa\">Mięśnie podeszwy: grupa przyśrodkowa</h3><p>Mięśnie wyniosłości przyśrodkowej podeszwy to trzy mięśnie związane z paluchem. Pierwszym jest odwodziciel palucha (musculus abductor hallucis), położony na przyśrodkowym brzegu stopy. Rozpoczyna się na guzie piętowym, kości łódkowatej i klinowatej przyśrodkowej oraz na rozcięgnie podeszwowym, a przyczepia się do podstawy bliższego paliczka palucha. Unerwia go nerw podeszwowy przyśrodkowy. Między ścięgnem a stawem śródstopno-paliczkowym palucha występuje kaletka maziowa.</p><p>Kolejnym mięśniem jest zginacz krótki palucha (musculus flexor hallucis brevis). Rozpoczyna się na trzech kościach klinowatych, kości łódkowatej i więzadle piętowo-sześciennym podeszwowym, a przyczepia się do trzeszczek i podstawy bliższego paliczka palucha. Mięsień ten wzmacnia sklepienie stopy i zgina paluch podeszwowo. Jest unerwiony przez oba nerwy podeszwowe: przyśrodkowy i boczny.</p><p>Trzecim mięśniem jest przywodziciel palucha (musculus adductor hallucis), który ma dwie głowy. Głowa skośna (caput obliquum) rozpoczyna się na kościach śródstopia II–IV, kości klinowatej bocznej, kości sześciennej i więzadle podeszwowym długim. Głowa poprzeczna (caput transversum) bierze początek na torebkach stawów śródstopno-paliczkowych. Mięsień ten jest unerwiony przez nerw podeszwowy boczny. Między mięśniem a podstawą piątej kości śródstopia leży kaletka maziowa.</p>"
-    },
-    {
-      "pageNumber": 4,
-      "htmlContent": "<h3 id=\"miesnie-podeszwy-boczna\">Mięśnie podeszwy: grupa boczna</h3><p>Mięśnie wyniosłości bocznej podeszwy to przede wszystkim odwodziciel palca małego (musculus abductor digiti minimi). Jest to najbardziej powierzchowny mięsień tej grupy. Rozpoczyna się na wyrostku bocznym guza piętowego, a kończy na guzowatości podstawy piątej kości śródstopia oraz na bliższym paliczku palca małego. Jego główną funkcją jest odwodzenie palca małego, a także pomoc w utrzymaniu sklepienia stopy. Unerwiony jest przez nerw podeszwowy boczny.</p><p>Oprócz odwodziciela, w grupie bocznej znajdują się również zginacz krótki palca małego (musculus flexor digiti minimi brevis) oraz mięsień przeciwstawiający palca małego (musculus opponens digiti minimi), które wspomagają ruchy palca małego i stabilizują łuk boczny stopy.</p>"
+      "htmlContent": "<h3 id=\"miesnie-podeszwy\">Mięśnie podeszwy</h3><p>Mięśnie wyniosłości przyśrodkowej (palucha) obejmują trzy mięśnie. Odwodziciel palucha (<em>m. abductor hallucis</em>) leży na przyśrodkowym brzegu stopy; rozpoczyna się na guzie piętowym, kości łódkowatej i klinowatej przyśrodkowej oraz na rozcięgnie podeszwowym, a kończy na podstawie bliższego paliczka palucha. Unerwiony jest przez nerw podeszwowy przyśrodkowy. Między jego ścięgnem a stawem śródstopno-paliczkowym znajduje się kaletka maziowa.</p><p>Zginacz krótki palucha (<em>m. flexor hallucis brevis</em>) rozpoczyna się na trzech kościach klinowatych, kości łódkowatej i więzadle piętowo-sześciennym podeszwowym, a przyczepia się do trzeszczek i podstawy bliższego paliczka palucha. Wzmacnia sklepienie stopy i zgina paluch podeszwowo. Unerwiony jest przez oba nerwy podeszwowe: przyśrodkowy i boczny.</p><p>Przywodziciel palucha (<em>m. adductor hallucis</em>) ma dwie głowy: skośną (<em>caput obliquum</em>) rozpoczynającą się na kościach śródstopia II–IV, kości klinowatej bocznej, kości sześciennej i więzadle podeszwowym długim oraz poprzeczną (<em>caput transversum</em>) rozpoczynającą się na torebkach stawów śródstopno-paliczkowych. Unerwiony jest przez nerw podeszwowy boczny. Między mięśniem a podstawą V kości śródstopia leży kaletka maziowa.</p><p>Mięśnie wyniosłości bocznej (palca małego) obejmują odwodziciel palca małego (<em>m. abductor digiti minimi</em>), który jest najbardziej powierzchowny. Rozpoczyna się na wyrostku bocznym guza piętowego, a kończy na guzku kości V śródstopia.</p>"
     }
   ],
   "chapterQuiz": [
     {
       "question": "Jakie przegrody dzielą mięśnie podeszwy na trzy komory?",
-      "answer": "Przegroda podeszwowa przyśrodkowa (septum plantare mediale) i boczna (septum plantare laterale)."
+      "answer": "Przegroda podeszwowa przyśrodkowa i boczna (septa plantaria medialis et lateralis)."
     },
     {
-      "question": "Wymień mięśnie grzbietu stopy i ich unerwienie.",
-      "answer": "Prostownik krótki palców (m. extensor digitorum brevis) i prostownik krótki palucha (m. extensor hallucis brevis); unerwione przez nerw strzałkowy głęboki."
+      "question": "Wymień mięśnie grzbietu stopy.",
+      "answer": "Prostownik krótki palców (m. extensor digitorum brevis) i prostownik krótki palucha (m. extensor hallucis brevis)."
     },
     {
-      "question": "Jakie mięśnie tworzą wyniosłość przyśrodkową podeszwy?",
+      "question": "Który nerw unerwia mięśnie grzbietu stopy?",
+      "answer": "Nerw strzałkowy głęboki."
+    },
+    {
+      "question": "Jakie mięśnie należą do wyniosłości przyśrodkowej podeszwy?",
       "answer": "Odwodziciel palucha, zginacz krótki palucha i przywodziciel palucha."
     },
     {
-      "question": "Jaka jest funkcja rozcięgna podeszwowego?",
-      "answer": "Wzmacnia sklepienie stopy, przeciwdziałając jego spłaszczeniu."
+      "question": "Jaką rolę pełni rozcięgno podeszwowe?",
+      "answer": "Wzmacnia podłużne sklepienie stopy i chroni przed jego spłaszczeniem."
     }
   ]
 };

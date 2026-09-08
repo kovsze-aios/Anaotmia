@@ -1,0 +1,39 @@
+import type { StructuredChapter } from "@/types/theory";
+
+export const bochenek1_czesc_115_koscPotylicznaIKoscKlinowaData: StructuredChapter = {
+  "chapterTitle": "Kość potyliczna i kość klinowa",
+  "toc": [
+    {
+      "title": "Kość potyliczna",
+      "anchorId": "kosć-potyliczna"
+    },
+    {
+      "title": "Kość klinowa",
+      "anchorId": "kosć-klinowa"
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "htmlContent": "<h3 id=\"kosć-potyliczna\">Kość potyliczna</h3><p>Kość potyliczna (<em>os occipitale</em>) tworzy tylną i dolną część czaszki. Na jej powierzchni zewnętrznej wyróżniamy guzowatość potyliczną zewnętrzną (<em>protuberantia occipitalis externa</em>), od której odchodzą kresa karkowa górna (<em>linea nuchae superior</em>) i najwyższa (<em>linea nuchae suprema</em>). Poniżej, mniej więcej w połowie wysokości, biegnie wypukła ku górze kresa karkowa dolna (<em>linea nuchae inferior</em>).</p><p>Pole powyżej guzowatości zewnętrznej i kresy najwyższej to płaszczyzna potyliczna (<em>planum occipitale</em>), która stanowi przyczep dla mięśnia potyliczno-czołowego. Poniżej znajduje się płaszczyzna karkowa (<em>planum nuchale</em>), służąca do przyczepu mięśni karku, grzbietu i szyi.</p><p>Powierzchnia wewnętrzna kości potylicznej jest wklęsła i podzielona na cztery doły przez wyniosłość krzyżowatą (<em>eminentia cruciformis</em>). Dwa górne doły, o kształcie trójkątnym, mieszczą płaty potyliczne mózgu; dolne, bardziej czworokątne, przylegają do półkul móżdżku. W centrum wyniosłości znajduje się guzowatość potyliczna wewnętrzna (<em>protuberantia occipitalis interna</em>), odpowiadająca położeniem guzowatości zewnętrznej. Na niej znajduje się spływ zatok oraz przyczep sierpa mózgu i namiotu móżdżku.</p><p>Od guzowatości wewnętrznej odchodzą trzy bruzdy: bruzda zatoki strzałkowej górnej (<em>sulcus sinus sagittalis superioris</em>) ku górze, dla zatoki strzałkowej górnej i przyczepu sierpa mózgu, oraz dwie bruzdy zatok poprzecznych (<em>sulcus sinus transversi</em>) biegnące bocznie, dla zatok poprzecznych i przyczepu namiotu móżdżku. W linii pośrodkowej, od guzowatości do otworu wielkiego, ciągnie się grzebień potyliczny wewnętrzny (<em>crista occipitalis interna</em>), któremu czasem towarzyszy bruzda dla zatoki potylicznej.</p><p>Otwór wielki (<em>foramen magnum</em>) ma kształt szerokiego owalu. Przechodzą przezeń rdzeń przedłużony z oponami, nerwy dodatkowe (<em>nervi accessorii</em>), tętnice kręgowe ze splotem żylnym podstawnym, przednie i tylne tętnice rdzeniowe oraz gałązki oponowe tętnic kręgowych.</p><p>Kość potyliczna ma trzy kąty: górny łączy się z kośćmi ciemieniowymi, dolny z trzonem kości klinowej, a kąty boczne leżą przy końcach bruzd zatok poprzecznych, między kątem sutkowym kości ciemieniowej a częścią sutkową kości skroniowej. Brzegi górne, zwane węgłowymi (<em>margines lambdoidei</em>), tworzą szew węgłowy (<em>sutura lambdoidea</em>) z kośćmi ciemieniowymi. Brzegi dolne dzielą się na część górną, sutkową (<em>margo mastoideus</em>), łączącą się z kością skroniową szwem potyliczno-sutkowym (<em>sutura occipitomastoidea</em>), oraz część dolną, łączącą się z częścią skalistą kości skroniowej chrząstkozrostem skalisto-potylicznym (<em>synchondrosis petrooccipitalis</em>). Obie części oddziela wyrostek szyjny (<em>processus jugularis</em>).</p><p>Struktura kości potylicznej jest typowa dla kości płaskich: dwie blaszki istoty zbitej (<em>lamina externa et interna</em>) z warstwą gąbczastą, czyli śródkościem (<em>diploë</em>), pomiędzy nimi. Kość jest gruba w okolicach kres, guzowatości, kłykci i przedniej części podstawnej, natomiast cienka w dołach dolnych powierzchni wewnętrznej, gdzie brak śródkościa.</p><p>Rozwój kości potylicznej jest złożony: powstaje z pięciu części – części podstawnej, dwóch bocznych oraz dolnej i górnej części łuski. Górna część łuski rozwija się jako kość łącznotkankowa, pozostałe jako kości zastępcze (śródchrzęstnie). Punkty kostnienia pojawiają się w różnym czasie: w części podstawnej około 10. tygodnia życia płodowego, w częściach bocznych pod koniec 8. tygodnia, w dolnej części łuski z pary punktów w 6.–7. tygodniu, a w górnej części łuski z kolejnej pary punktów, które łączą się z dolną częścią. U noworodka kość składa się z czterech oddzielnych części, które zrastają się: łuska z częściami bocznymi w 1.–4. roku życia, a części boczne z częścią podstawną w 3.–6. roku. W obrębie szwów, zwłaszcza w okolicy lambdy, mogą występować dodatkowe kostki szwów (<em>ossa suturalia</em>).</p><p>Wśród odmian kości potylicznej wymienia się wyrostek przysutkowy (<em>processus paramastoideus</em>), który może być silnie rozwinięty i łączyć się stawowo z wyrostkiem poprzecznym kręgu szczytowego, a także guzek lub powierzchnię stawową na przednim brzegu otworu wielkiego, tzw. kłykieć trzeci (<em>condylus tertius</em>), który może łączyć się z łukiem przednim kręgu szczytowego. Brzegi otworu wielkiego bywają zgrubiałe, a kanał nerwu podjęzykowego może być przedzielony przegrodą kostną. W rzadkich przypadkach, gdy odmiany te są silnie zaznaczone, kość potyliczna przypomina krąg, co tłumaczy się jej pochodzeniem ze zlania się kręgów. Ponadto na czaszkach peruwiańskich Inkasów często występuje szew poprzeczny, tzw. szew potyliczno-poprzeczny (<em>sutura occipitalis transversa</em>), który może oddzielać górną część łuski – stąd nazwa „kość Inkasów” (<em>os incae</em>).</p><p>Kość potyliczna łączy się z sześcioma kośćmi: dwiema ciemieniowymi, dwiema skroniowymi, kością klinową i kręgiem szczytowym.</p>"
+    },
+    {
+      "pageNumber": 2,
+      "htmlContent": "<h3 id=\"kosć-klinowa\">Kość klinowa</h3><p>Kość klinowa (<em>os sphenoidale</em>) jest nieparzystą kością położoną pośrodku podstawy czaszki, łączącą się z wieloma kośćmi. Jej nazwa pochodzi od greckich słów <em>sfen</em> (klin) i <em>ejdes</em> (podobny), ze względu na charakterystyczny kształt. Dawni anatomowie nazywali ją również <em>os sphenoides</em>.</p><p>W budowie kości klinowej wyróżnia się nieparzysty trzon (<em>corpus</em>) oraz sześć parzystych wyrostków: dwa skrzydła większe (<em>alae majores</em>), dwa skrzydła mniejsze (<em>alae minores</em>) i dwa wyrostki skrzydłowate (<em>processus pterygoidei</em>). Na trzonie znajduje się dół przysadki (<em>fossa hypophysialis</em>) w obrębie siodła tureckiego (<em>sella turcica</em>), a także bruzda przedskrzyżowania (<em>sulcus prechiasmatis</em>) i guzek siodła (<em>tuberculum sellae</em>). Przez kanał wzrokowy (<em>canalis opticus</em>) przechodzi nerw wzrokowy (<em>nervus opticus</em>) i tętnica oczna.</p><p>Kość klinowa rozwija się z wielu punktów kostnienia, zarówno śródchrzęstnie, jak i śródskórnie (łącznotkankowo). Jej złożony rozwój i liczne połączenia czynią ją kluczowym elementem podstawy czaszki.</p>"
+    }
+  ],
+  "chapterQuiz": [
+    {
+      "question": "Wymień struktury przechodzące przez otwór wielki (foramen magnum).",
+      "answer": "Przez otwór wielki przechodzą: rdzeń przedłużony z oponami, nerwy dodatkowe (nervi accessorii), tętnice kręgowe ze splotem żylnym podstawnym, przednie i tylne tętnice rdzeniowe oraz gałązki oponowe tętnic kręgowych."
+    },
+    {
+      "question": "Jakie są główne części kości potylicznej u noworodka i kiedy się zrastają?",
+      "answer": "U noworodka kość potyliczna składa się z czterech części: łuski, dwóch części bocznych i części podstawnej. Łuska zrasta się z częściami bocznymi w 1.–4. roku życia, a części boczne z częścią podstawną w 3.–6. roku życia."
+    },
+    {
+      "question": "Co to jest kość Inkasów (os incae) i jak powstaje?",
+      "answer": "Kość Inkasów to odmiana kości potylicznej, w której górna część łuski jest oddzielona szwem poprzecznym (sutura occipitalis transversa). Występuje często na czaszkach peruwiańskich Inkasów, stąd nazwa."
+    }
+  ]
+};
