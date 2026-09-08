@@ -1,4 +1,6 @@
 import type { TextbookDomain } from "../../models";
+import { miesnieSzyiData } from "@/data/anatomia";
+
 
 export const myology: TextbookDomain = {
   "id": "myology",
@@ -260,6 +262,22 @@ export const myology: TextbookDomain = {
         }
       ],
       "academic_detail": "Mięsień piersiowy większy (pectoralis major) jest dużym, wachlarzowatym mięśniem przedniej ściany klatki piersiowej. Składa się z trzech części: część obojczykowa (przyczep na przyśrodkowej połowie obojczyka), część mostkowo-żebrowa (przyczep na mostku i chrząstkach żeber I-VI) oraz część brzuszna (przyczep na przedniej blaszce pochewki mięśnia prostego brzucha). Wszystkie części zbiegają się i przyczepiają do grzebienia guzka większego kości ramiennej. Funkcje: przywodzenie, rotacja wewnętrzna i zginanie ramienia. Unerwienie: nerwy piersiowe przyśrodkowy i boczny (ze splotu ramiennego). Mięsień piersiowy mniejszy (pectoralis minor) leży pod piersiowym większym, przyczepia się do wyrostka kruczego łopatki i żeber III-V. Pociąga łopatkę w dół i do przodu, unosi żebra (pomocniczy mięsień wdechowy).\n\nPrzepona (diaphragma) jest płaskim, kopulastym mięśniem oddzielającym jamę klatki piersiowej od jamy brzusznej. Część mięśniowa znajduje się na obwodzie i przyczepia się do: mostka (część mostkowa), żeber VII-XII (część żebrowa) oraz kręgów lędźwiowych L1-L3 za pomocą odnóg (część lędźwiowa). Odnoga prawa (crus dextrum) sięga do L3, lewa (crus sinistrum) do L2. Część ścięgnista tworzy środek ścięgnisty (centrum tendineum). W przeponie znajdują się otwory: rozwór aortowy (hiatus aorticus — na poziomie Th12, aorta + przewód piersiowy), rozwór przełykowy (hiatus oesophageus — Th10, przełyk + nerwy błędne) i otwór żyły głównej dolnej (foramen venae cavae — Th8, w środek ścięgnistym). Unerwienie: nerw przeponowy (C3-C5 — pamiętaj: C3,4,5 keeps the diaphragm alive). Podczas skurczu przepona spłaszcza się, zwiększając objętość klatki piersiowej i powodując wdech. Przy rozkurczu unosi się, zmniejszając objętość — wydech.",
+    },
+    {
+      id: "miesnie-szyi",
+      title: miesnieSzyiData.chapterTitle,
+      pages: miesnieSzyiData.pages,
+      toc: miesnieSzyiData.toc,
+      chapterQuiz: miesnieSzyiData.chapterQuiz,
+      content: [],
+      recallQuestions: miesnieSzyiData.chapterQuiz.map((q, idx) => ({
+        id: `myo-szyja-${idx + 1}`,
+        question: q.question,
+        answer: q.answer,
+      })),
+      summary: "- Mięśnie nadgnykowe (Musculi suprahyoidei) unoszą krtań i opuszczają żuchwę.\n- Mięśnie podgnykowe (Musculi infrahyoidei) obniżają i stabilizują kość gnykową.\n- Mięśnie pochyłe (Musculi scaleni) tworzą szczelinę przednią i tylną.\n- Mięśnie przedkręgowe (Musculi prevertebrales) odpowiadają za zginanie i ruchy obrotowe głowy i szyi.",
+      academic_detail: miesnieSzyiData.pages.map((p) => p.htmlContent.replace(/<[^>]*>/g, " ")).join("\n\n"),
     }
   ]
 };
+

@@ -78,5 +78,12 @@ export function getSectionWordCount(section: TextbookSection): number {
     });
   }
 
+  if (section.pages) {
+    section.pages.forEach((page) => {
+      count += countWords(page.htmlContent.replace(/<[^>]*>/g, " "));
+    });
+  }
+
   return count;
 }
+

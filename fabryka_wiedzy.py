@@ -112,6 +112,96 @@ FILENAME_BLACKLIST_RE = re.compile(r"egzamin|arkusz|test\b|klucz", re.IGNORECASE
 # Markdown, którego frontend nie parsuje — renderuje się dosłownie.
 MARKDOWN_RE = re.compile(r"\*\*|__|^\s{0,3}#{1,6}\s|^\s{0,3}[-*+]\s", re.MULTILINE)
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Biała lista HTML
+#
+# Treść z tego potoku trafia do `dangerouslySetInnerHTML` w TextbookContent,
+# czyli jest wykonywana przez przeglądarkę dokładnie taka, jaka przyjdzie.
+# Autorem HTML-a jest model, więc "zaufany tekst akademicki" trzeba sprawdzać,
+# a nie zakładać. Audyt poprzedniego korpusu (2835 stron) nie wykazał żadnego
+# wektora, ale to własność tamtego wyniku, nie gwarancja na przyszłość —
+# biała lista zamienia obserwację w regułę.
+#
+# Bez <a> i <img>: potok produkuje tekst dydaktyczny, a linki i obrazy to
+# odpowiednio przekierowania i żądania sieciowe, których nie chcemy przyjmować
+# od modelu. Z atrybutów tylko `id`, bo na nim opiera się nawigacja po sekcjach.
+# ─────────────────────────────────────────────────────────────────────────────
+
+ALLOWED_TAGS = frozenset({
+    "p", "br",
+    "strong", "b", "em", "i",
+    "ul", "ol", "li",
+    "h3", "h4",
+    "span",
+})
+# `id` niesie nawigację po sekcjach; `start` pozwala liście uporządkowanej
+# kontynuować numerację (<ol start="5">). Oba są nieszkodliwe — nie ładują
+# niczego z sieci i nie wykonują kodu. `start` dopuszczony po sprawdzeniu
+# istniejącego korpusu: to jedyny atrybut poza `id`, który faktycznie w nim
+# wystąpił (raz na 2835 stron), więc bez niego biała lista odrzucałaby
+# poprawną treść.
+ALLOWED_ATTRS = frozenset({"id", "start"})
+
+TAG_RE = re.compile(r"<\s*/?\s*([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>")
+ATTR_RE = re.compile(r"<\s*[a-zA-Z][a-zA-Z0-9]*\b([^>]*)>")
+ATTR_NAME_RE = re.compile(r"([a-zA-Z_:][a-zA-Z0-9_.:-]*)\s*=")
+
+
+def disallowed_html(html: str) -> list[str]:
+    """Zwraca listę naruszeń białej listy: nieznane tagi i atrybuty."""
+    problems: list[str] = []
+
+    for tag in TAG_RE.findall(html):
+        if tag.lower() not in ALLOWED_TAGS:
+            problems.append(f"tag <{tag.lower()}>")
+
+    for attr_blob in ATTR_RE.findall(html):
+        for attr in ATTR_NAME_RE.findall(attr_blob):
+            if attr.lower() not in ALLOWED_ATTRS:
+                problems.append(f"atrybut {attr.lower()}=")
+
+    # Wektory, które nie muszą wystąpić jako tag ani atrybut z "=".
+    if re.search(r"javascript\s*:", html, re.I):
+        problems.append("URL javascript:")
+    if re.search(r"\son[a-z]+\s*=", html, re.I):
+        problems.append("handler on*=")
+
+    # Zachowujemy kolejność, usuwamy powtórzenia.
+    return list(dict.fromkeys(problems))
+
+
+def sanitize_html(html: str) -> str:
+    """
+    Usuwa wszystko spoza białej listy, zachowując tekst.
+
+    Ostatnia deska ratunku, analogicznie do `strip_markdown`: najpierw
+    ponawiamy zapytanie licząc na czyste wyjście, a dopiero gdy to zawiedzie
+    zdejmujemy niedozwolone znaczniki zamiast tracić rozdział. Treść zostaje,
+    znika tylko opakowanie.
+    """
+    def keep_or_drop(match: re.Match[str]) -> str:
+        tag = match.group(1).lower()
+        if tag not in ALLOWED_TAGS:
+            return ""  # zdejmujemy znacznik, tekst w środku zostaje
+        # Dozwolony tag: przepuszczamy wyłącznie dozwolone atrybuty.
+        closing = match.group(0).lstrip("<").lstrip().startswith("/")
+        if closing:
+            return f"</{tag}>"
+        attrs = ATTR_RE.findall(match.group(0))
+        kept = []
+        for blob in attrs:
+            for name, value in re.findall(r"([a-zA-Z_:][\w.:-]*)\s*=\s*\"([^\"]*)\"", blob):
+                if name.lower() in ALLOWED_ATTRS:
+                    kept.append(f'{name.lower()}="{value}"')
+        return f"<{tag}{(' ' + ' '.join(kept)) if kept else ''}>"
+
+    # Całe elementy wykonywalne usuwamy z zawartością, nie tylko znacznik.
+    html = re.sub(r"<\s*(script|style|iframe|object|embed)\b.*?<\s*/\s*\1\s*>",
+                  "", html, flags=re.I | re.S)
+    html = re.sub(r"<\s*(script|style|iframe|object|embed)\b[^>]*>", "", html, flags=re.I)
+    return TAG_RE.sub(keep_or_drop, html)
+
+
 SYSTEM_PROMPT = """\
 Jesteś doświadczonym redaktorem medycznym przygotowującym materiał dydaktyczny dla \
 studentów medycyny. Otrzymujesz surowy, zeskanowany (OCR) fragment akademickiego \
@@ -495,6 +585,13 @@ def validate_payload(data: dict) -> dict:
         if found:
             raise PayloadError(f"Markdown w treści: {found.group(0)!r}")
 
+        # Biała lista HTML. Treść idzie do `dangerouslySetInnerHTML`, więc to
+        # jedyne miejsce, w którym da się zagwarantować, że przeglądarka nie
+        # dostanie niczego wykonywalnego.
+        violations = disallowed_html(html)
+        if violations:
+            raise PayloadError("HTML poza białą listą: " + ", ".join(violations[:4]))
+
         if "--- STRONA" in html or re.search(r"\bRyc\.\s*\d", html) or re.search(r"\bTab\.\s*\d", html):
             raise PayloadError("nieusunięty marker OCR lub znacznik książkowy w treści")
 
@@ -549,11 +646,15 @@ def process_chunk_with_retry(chunk: str, client: OpenAI, max_retries: int = MAX_
                 try:
                     return validate_payload(data)
                 except PayloadError as err:
-                    if "Markdown" not in str(err):
+                    rescuable = "Markdown" in str(err) or "białą listą" in str(err)
+                    if not rescuable:
                         raise
-                    print(f"  [SANITYZACJA] {err} — czyszczę znaczniki zamiast odrzucać pakiet.")
+                    print(f"  [SANITYZACJA] {err} — czyszczę treść zamiast odrzucać pakiet.")
                     for page in data.get("pages", []):
-                        page["htmlContent"] = strip_markdown(page.get("htmlContent", ""))
+                        html = strip_markdown(page.get("htmlContent", ""))
+                        page["htmlContent"] = sanitize_html(html)
+                    # Ponowna walidacja jest istotna: jeśli sanityzacja czegoś
+                    # nie domknęła, pakiet i tak nie trafi na dysk.
                     return validate_payload(data)
 
             return validate_payload(data)

@@ -165,9 +165,36 @@ export function TextbookContent({ section }: TextbookContentProps) {
         )}
       </div>
 
+      {section.pages && section.pages.length > 0 && (
+        <div className="structured-pages-section flex flex-col gap-8 mb-8">
+          {section.toc && section.toc.length > 0 && (
+            <TableOfContents
+              items={section.toc.map((t) => ({ id: t.anchorId, title: t.title, level: 3 }))}
+            />
+          )}
+          {section.pages.map((page) => (
+            <section
+              key={page.pageNumber}
+              className="page-card bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm"
+            >
+              <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-100 dark:border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                <span>Strona {page.pageNumber}</span>
+                <span className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-zinc-600 dark:text-zinc-300">
+                  Microlearning
+                </span>
+              </div>
+              <div
+                className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: page.htmlContent }}
+              />
+            </section>
+          ))}
+        </div>
+      )}
+
       {(() => {
         const allSources = [];
-        if (section.academic_detail) {
+        if (!section.pages && section.academic_detail) {
           allSources.push({ title: "Notatki", content: section.academic_detail });
         }
         if (section.academic_sources) {
@@ -180,6 +207,7 @@ export function TextbookContent({ section }: TextbookContentProps) {
 
         return (
           <div className="deep-theory-section border-t border-zinc-100 dark:border-zinc-800 pt-6">
+
             {allSources.length === 1 ? (
               <>
                 <h3 className="text-xl font-bold mb-4">Pełny opis akademicki</h3>
