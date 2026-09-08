@@ -230,6 +230,11 @@ const en = {
     endOfBook: "End of the textbook",
     startOfBook: "Start of the textbook",
     jumpToChapter: "Jump to chapter",
+    /* Read-aloud player. */
+    listen: "Listen to this chapter",
+    pauseListening: "Pause reading",
+    resumeListening: "Resume reading",
+    stopListening: "Stop reading",
   },
   /** Anatomical system labels — panel chrome, so they are translated. */
   systems: {

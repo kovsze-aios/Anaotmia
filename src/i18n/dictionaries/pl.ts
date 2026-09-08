@@ -216,6 +216,11 @@ const pl: Dictionary = {
     endOfBook: "Koniec podręcznika",
     startOfBook: "Początek podręcznika",
     jumpToChapter: "Przejdź do rozdziału",
+    /* Read-aloud player. */
+    listen: "Odsłuchaj ten rozdział",
+    pauseListening: "Wstrzymaj czytanie",
+    resumeListening: "Wznów czytanie",
+    stopListening: "Zatrzymaj czytanie",
   },
   systems: {
     skeletal: "Układ kostny",

@@ -215,6 +215,11 @@ const it: Dictionary = {
     endOfBook: "Fine del manuale",
     startOfBook: "Inizio del manuale",
     jumpToChapter: "Vai al capitolo",
+    /* Read-aloud player. */
+    listen: "Ascolta questo capitolo",
+    pauseListening: "Metti in pausa la lettura",
+    resumeListening: "Riprendi la lettura",
+    stopListening: "Interrompi la lettura",
   },
   systems: {
     skeletal: "Scheletro",

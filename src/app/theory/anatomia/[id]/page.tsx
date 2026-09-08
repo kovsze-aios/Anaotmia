@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { TextbookContent } from "@/components/TextbookContent";
 import { ReaderToc } from "@/components/reader/ReaderToc";
 import { ReaderPagination } from "@/components/reader/ReaderPagination";
+import { TextToSpeechPlayer } from "@/components/reader/TextToSpeechPlayer";
 import {
   getAnatomyDomains,
   getAnatomySectionWithDomain,
@@ -156,6 +157,18 @@ export default async function TextbookSectionPage({ params }: Props) {
 
       {position && <ReaderPagination position={position} />}
       {position && <ReaderToc spine={spine} position={position} />}
+
+      {/* Reads the chapter aloud and turns the page when it ends. Only the
+          page bodies are handed over: `summary` is an excerpt of the first
+          one, so including it would have the chapter open by repeating
+          itself, and the recall questions are meant to be answered, not
+          listened to. */}
+      <TextToSpeechPlayer
+        chapterId={section.id}
+        title={section.title}
+        html={(section.pages ?? []).map((page) => page.htmlContent).join("\n")}
+        nextChapterId={position?.next?.id}
+      />
 
       <script
         type="application/ld+json"
