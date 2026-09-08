@@ -40,8 +40,103 @@ const ENTITIES: Record<string, string> = {
 };
 
 /**
- * Chapter markup to speakable prose: one line per block, no tags, no runs of
- * whitespace.
+ * An italic span *and everything in it*.
+ *
+ * The pipeline prompt reserves `<em>` for "nazw łacińskich i pojęć
+ * drugorzędnych", and in practice it is Latin: of 11,601 spans in the corpus,
+ * 9 contain a Polish letter — 0.08%. Those nine are the price of the rule, and
+ * they buy the removal of ~11,590 Latin terms that a pl-PL voice mangles.
+ *
+ * `<i>` is matched too. The corpus does not use it today, but the pipeline's
+ * allow-list permits it and it carries the same meaning.
+ *
+ * The backreference makes the closing tag match the opening one, so a stray
+ * `</em>` cannot swallow a paragraph. An unclosed `<em>` simply fails to match
+ * here and loses only its tag to the general strip below — the text survives,
+ * which is the right way to fail.
+ */
+const ITALIC_SPAN = /<(em|i)\b[^>]*>[\s\S]*?<\/\1\s*>/gi;
+
+/** Innermost parenthetical, so a gloss can be judged on its own contents. */
+const PARENTHETICAL = /[ \t]*\(([^()]*)\)/g;
+
+/**
+ * Words that cannot hold a bracket up on their own: the gloss markers that
+ * introduce a term ("łac.", "ang.") and the conjunctions that join two of
+ * them ("… lub …").
+ */
+const FILLER_WORDS = new Set([
+  "łac",
+  "ang",
+  "gr",
+  "lat",
+  "np",
+  "syn",
+  "zob",
+  "por",
+  "i",
+  "oraz",
+  "lub",
+  "albo",
+  "czyli",
+]);
+
+/** Splits a gloss into words, discarding the punctuation between them. */
+const WORD_SEPARATOR = /[\s,;:.–—/()-]+/;
+
+/**
+ * True when a parenthetical has nothing left to say.
+ *
+ * Latin in this corpus is nearly always a parenthesised gloss — `(<em>…</em>)`
+ * is the single commonest shape, over two thousand times — so removing the
+ * term strands an empty bracket. What can remain is a marker, a conjunction
+ * and punctuation, none of it worth speaking.
+ *
+ * Tokenising rather than pattern-matching the fillers in place, because `\b`
+ * is defined over `[A-Za-z0-9_]`: there is no word boundary before the `ł` of
+ * "łac", so a `\b`-anchored pattern silently never fires on the one prefix
+ * that matters most — it accounts for 73 of the 78 glosses in the corpus.
+ * Tags are dropped first, or the letters inside `<strong>` would read as
+ * content and hold the bracket open.
+ */
+function isHollow(inner: string): boolean {
+  return inner
+    .replace(ANY_TAG, " ")
+    .split(WORD_SEPARATOR)
+    .filter(Boolean)
+    .every((word) => FILLER_WORDS.has(word.toLowerCase()));
+}
+
+/**
+ * Drops Latin terminology and the punctuation it leaves behind.
+ *
+ * Runs on the markup, before tags are stripped, because `<em>` is the only
+ * signal distinguishing a Latin term from the Polish around it — once the tags
+ * are gone, so is the ability to tell them apart.
+ */
+export function stripLatinTerms(html: string): string {
+  return (
+    html
+      .replace(ITALIC_SPAN, "")
+      .replace(PARENTHETICAL, (whole: string, inner: string) => {
+        if (isHollow(inner)) return "";
+        // A gloss that keeps a Polish note loses the comma that separated it
+        // from the term now gone: "(, u dorosłych)" opens on a bare pause.
+        const tidied = inner.replace(/^[\s,;]+/, "").replace(/[\s,;]+$/, "");
+        return tidied === inner ? whole : ` (${tidied})`;
+      })
+      // "Kość udowa , widziana z przodu ." — close the gaps the removal opened.
+      .replace(/[ \t]{2,}/g, " ")
+      .replace(/[ \t]+([,.;:!?])/g, "$1")
+  );
+}
+
+/** A line worth speaking has at least one letter or digit in it. */
+const SPEAKABLE = /[0-9a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/;
+
+/**
+ * Chapter markup to speakable Polish prose: Latin gone, one line per block,
+ * no tags, no runs of whitespace.
  *
  * Entities are decoded *after* the tags are stripped, never before. Decoding
  * first would turn an escaped `&lt;p&gt;` — text the author meant to be read —
@@ -50,13 +145,15 @@ const ENTITIES: Record<string, string> = {
 export function htmlToSpeechText(html: string): string {
   if (!html) return "";
 
-  return html
+  return stripLatinTerms(html)
     .replace(BLOCK_TAG, "\n")
     .replace(ANY_TAG, "")
     .replace(ENTITY, (match) => ENTITIES[match] ?? match)
     .split("\n")
     .map((line) => line.replace(/\s+/g, " ").trim())
-    .filter(Boolean)
+    // A line reduced to "." by the Latin strip would be announced as a pause
+    // out of nowhere, so it goes with the empty ones.
+    .filter((line) => SPEAKABLE.test(line))
     .join("\n");
 }
 

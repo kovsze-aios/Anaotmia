@@ -1,6 +1,67 @@
 import { describe, expect, it } from "vitest";
 
-import { MAX_SPEECH_CHUNK, chunkForSpeech, htmlToSpeechText } from "./speechText";
+import {
+  MAX_SPEECH_CHUNK,
+  chunkForSpeech,
+  htmlToSpeechText,
+  stripLatinTerms,
+} from "./speechText";
+
+describe("stripLatinTerms", () => {
+  it("removes an italic span together with its text", () => {
+    expect(stripLatinTerms("<p>Serce <em>cor</em> bije.</p>")).toBe("<p>Serce bije.</p>");
+  });
+
+  it("removes the parenthesis a Latin gloss leaves behind", () => {
+    // The commonest shape in the corpus by far: a parenthesised gloss.
+    expect(stripLatinTerms("<p>Kość udowa (<em>femur</em>) jest długa.</p>")).toBe(
+      "<p>Kość udowa jest długa.</p>",
+    );
+  });
+
+  it("removes a gloss prefix left with nothing to introduce", () => {
+    expect(stripLatinTerms("<p>Przepona (łac. <em>diaphragma</em>) dzieli.</p>")).toBe(
+      "<p>Przepona dzieli.</p>",
+    );
+    expect(stripLatinTerms("<p>Wątroba (ang. <em>liver</em>) leży.</p>")).toBe(
+      "<p>Wątroba leży.</p>",
+    );
+  });
+
+  it("removes a bracket holding only a conjunction between two removed terms", () => {
+    expect(stripLatinTerms("<p>Mięśnie (<em>a</em> lub <em>b</em>) działają.</p>")).toBe(
+      "<p>Mięśnie działają.</p>",
+    );
+    expect(stripLatinTerms("<p>Nerwy (<em>a</em>, <em>b</em>) biegną.</p>")).toBe(
+      "<p>Nerwy biegną.</p>",
+    );
+  });
+
+  it("keeps a parenthesis that still says something", () => {
+    expect(stripLatinTerms("<p>Kość udowa (najdłuższa) jest długa.</p>")).toBe(
+      "<p>Kość udowa (najdłuższa) jest długa.</p>",
+    );
+    // Only the Latin half goes; the Polish note earns its brackets, and the
+    // comma that separated it from the removed term goes with the term.
+    expect(stripLatinTerms("<p>Serce (<em>cor</em>, u dorosłych) bije.</p>")).toBe(
+      "<p>Serce (u dorosłych) bije.</p>",
+    );
+  });
+
+  it("leaves other emphasis alone", () => {
+    expect(stripLatinTerms("<p>To jest <strong>ważne</strong>.</p>")).toBe(
+      "<p>To jest <strong>ważne</strong>.</p>",
+    );
+  });
+
+  it("does not let a stray closing tag swallow the paragraph", () => {
+    // Unclosed <em>: the span match fails, so only the tag is lost later and
+    // the words survive. Losing a sentence would be the worse failure.
+    expect(htmlToSpeechText("<p>Serce <em>cor bije dalej.</p>")).toBe(
+      "Serce cor bije dalej.",
+    );
+  });
+});
 
 describe("htmlToSpeechText", () => {
   it("keeps block boundaries so adjacent paragraphs are not read as one word", () => {
@@ -11,8 +72,24 @@ describe("htmlToSpeechText", () => {
 
   it("drops inline markup without eating the words inside it", () => {
     expect(
-      htmlToSpeechText("<p>Kość udowa (<strong>femur</strong>) jest <em>długa</em>.</p>"),
-    ).toBe("Kość udowa (femur) jest długa.");
+      htmlToSpeechText("<p>Kość udowa jest <strong>najdłuższa</strong>.</p>"),
+    ).toBe("Kość udowa jest najdłuższa.");
+  });
+
+  it("speaks Polish only: the Latin and its brackets never reach the voice", () => {
+    expect(
+      htmlToSpeechText(
+        "<h3>Kość udowa (<em>os femoris</em>)</h3>" +
+          "<p>Kość udowa (<em>femur</em>) jest najdłuższą kością. " +
+          "Jej trzon (łac. <em>corpus femoris</em>) jest trójścienny.</p>",
+      ),
+    ).toBe(
+      "Kość udowa\nKość udowa jest najdłuższą kością. Jej trzon jest trójścienny.",
+    );
+  });
+
+  it("drops a line that was nothing but a Latin term", () => {
+    expect(htmlToSpeechText("<p><em>Cor</em>.</p><p>Serce bije.</p>")).toBe("Serce bije.");
   });
 
   it("treats <br> and list items as line breaks", () => {
