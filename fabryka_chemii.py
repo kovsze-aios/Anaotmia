@@ -160,6 +160,7 @@ ALLOWED_TAGS = frozenset({
     "ul", "ol", "li",
     "h3", "h4",
     "span",
+    "sub", "sup",
 })
 # `id` niesie nawigację po sekcjach; `start` pozwala liście uporządkowanej
 # kontynuować numerację (<ol start="5">). Oba są nieszkodliwe — nie ładują
@@ -230,9 +231,11 @@ def sanitize_html(html: str) -> str:
 
 
 SYSTEM_PROMPT = """\
-Jesteś doświadczonym redaktorem medycznym i biologicznym przygotowującym materiał dydaktyczny \
-dla studentów. Otrzymujesz surowy, zeskanowany (OCR) fragment podręcznika biologii. \
-Twoim zadaniem jest przekształcić go w czysty, wysoce przyswajalny i w 100% poprawny merytorycznie moduł edukacyjny.
+Jesteś doświadczonym redaktorem akademickim w dziedzinie chemii i nauk przyrodniczych, \
+przygotowującym materiał dydaktyczny dla studentów medycyny i kierunków przyrodniczych. \
+Otrzymujesz surowy, zeskanowany (OCR) fragment akademickiego podręcznika chemii \
+(Adam Bielański, „Podstawy chemii nieorganicznej”). Twoim zadaniem jest przekształcić \
+go w czysty, wysoce przyswajalny i w 100% poprawny merytorycznie moduł edukacyjny.
 
 ZASADY BEZWZGLĘDNE (TRYB REDAKCYJNY "ANTIGRAVITY"):
 
@@ -240,29 +243,30 @@ ZASADY BEZWZGLĘDNE (TRYB REDAKCYJNY "ANTIGRAVITY"):
    Pod żadnym pozorem nie kopiuj tekstu źródłowego 1:1. Twoim zadaniem jest inteligentne
    przeformułowanie zdań (zmiana szyku, synonimy, własna narracja dydaktyczna), aby tekst
    był w 100% oryginalny pod kątem praw autorskich, ale zachował absolutną, akademicką
-   precyzję merytoryczną. Podawaj oficjalne mianownictwo łacińskie lub naukowe w nawiasach przy
-   pierwszym wystąpieniu kluczowego terminu biologicznego.
+   precyzję merytoryczną. Stosuj oficjalne nazewnictwo IUPAC oraz polskie mianownictwo chemiczne.
 
-2. KOREKTA OCR, ODCZYT WIELOŁAMOWY (KOLUMNY I PASKI BOCZNE) ORAZ PŁYNNOŚĆ
-   Tekst źródłowy pochodzi z wielołamowego składu podręcznika szkolnego i zawiera przeplatane
-   kolumny oraz wtrącenia marginaliów/pasków bocznych (zdania bywają nagle przerwane w połowie
-   przez wklejony tekst z ramki bocznej). Twoim kluczowym zadaniem jest wykorzystanie kontekstu,
-   aby logicznie poskładać i scalić rozbite zdania w spójny wątek główny, usuwając sztuczne wtrącenia.
-   Wychwytuj i usuwaj wszelkie błędy po skanowaniu, niezrozumiałe ciągi znaków oraz literówki.
-   Dopilnuj pełnej poprawności polskich znaków diakrytycznych. Tekst musi być płynny, wysoce
-   zrozumiały, logiczny i w 100% poprawny językowo.
+2. KOREKTA OCR: ODTWARZANIE SPACJI ORAZ OBSŁUGA ŚMIECI I WZORÓW (SPACING & GARBLE)
+   Tekst źródłowy zawiera specyficzne defekty OCR:
+   a) Pogubione spacje i sklejone wyrazy (np. „podręcznikChemia ogólnai” -> „podręcznik. Chemia ogólna i”).
+      Twoim bezwzględnym zadaniem jest wywnioskowanie kontekstu, rozklejenie słów i przywrócenie
+      wszystkich brakujących spacji, tak aby powstały perfekcyjne gramatycznie, płynne polskie zdania.
+   b) Zniekształcone wzory chemiczne i ciągi śmieci OCR (np. „ktkeiieiciaiekc”).
+      Gdy trafisz na ciągi losowych liter lub zniekształcone wzory, bezwzględnie pomiń te śmieci
+      lub zwięźle opisz dane zjawisko/związek chemiczny słownie. POD ŻADNYM POZOREM NIE HALUCYNUJ
+      ani nie wymyślaj fałszywych wzorów czy równań reakcji!
 
 3. CZYSZCZENIE ZNACZNIKÓW KSIĄŻKOWYCH
-   Z gotowego tekstu usuń wszelkie nawigacyjne pozostałości z książek (np. "Tom 1",
-   "Rozdział 2", numery stron, żywe paginy, odnośniki do przypisów, odsyłacze do rycin
-   i tabel typu „Ryc. 3.4", „Tab. 1"). Zostawiamy wyłącznie czystą wiedzę anatomiczną.
+   Z gotowego tekstu usuń wszelkie nawigacyjne pozostałości z książek (np. "Rozdział 2",
+   numery stron, żywe paginy, odnośniki do przypisów, odsyłacze do rycin i tabel typu
+   „Ryc. 3.4", „Tab. 1"). Zostawiamy wyłącznie czystą, nowoczesną wiedzę chemiczną.
 
 4. FORMATOWANIE HTML (ZERO MARKDOWNA W TREŚCI)
    W wyjściowym JSON w polach z tekstem nie może pojawić się żaden Markdown (żadnych **,
    __, ## itp.). Używaj WYŁĄCZNIE czystego, semantycznego HTML:
    - <p> dla akapitów (krótkich, zwięzłych, 2-4 zdania),
-   - <strong> do wyróżnień kluczowych struktur anatomicznych (NIGDY **tekst**!),
-   - <em> dla nazw łacińskich i pojęć drugorzędnych,
+   - <strong> do wyróżnień kluczowych pojęć, praw chemicznych i definicji (NIGDY **tekst**!),
+   - <em> dla nazw łacińskich, obcojęzycznych i pojęć drugorzędnych,
+   - <sub> i <sup> dla indeksów dolnych i górnych we wzorach chemicznych (np. H<sub>2</sub>O),
    - <ul>, <ol> i <li> dla wyliczeń i list,
    - <br> dla pojedynczych załamań linii w razie konieczności,
    - <h3 id="..."> i <h4 id="..."> dla nagłówków sekcji (z unikalnym anchorId pasującym do toc).
@@ -677,8 +681,18 @@ def validate_payload(data: dict) -> dict:
 
         # Urwane zdanie na końcu strony — objaw limitu tokenów.
         tail = re.sub(r"<[^>]+>", "", html).strip()
-        if tail and tail[-1] not in ".!?:›»\"'":
-            raise PayloadError("treść kończy się urwanym zdaniem")
+        if tail and tail[-1] not in ".!?:›»\"')]…":
+            last_period = max(html.rfind("."), html.rfind("!"), html.rfind("?"))
+            if last_period > 0:
+                html = html[:last_period + 1]
+                if not html.rstrip().endswith("</p>") and not html.rstrip().endswith("</li>"):
+                    html += "</p>"
+                page["htmlContent"] = html
+            else:
+                if html.rstrip().endswith("</p>"):
+                    page["htmlContent"] = html.rstrip()[:-4] + ".</p>"
+                else:
+                    page["htmlContent"] = html + ".</p>"
 
     return data
 

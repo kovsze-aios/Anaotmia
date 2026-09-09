@@ -30,14 +30,23 @@ function lowerFirst(value: string): string {
 }
 
 /**
- * Returns the localized display name for an anatomical structure, or the
- * original English string when there is no translation for it.
+ * Returns the display name for an anatomical structure as
+ * `Polska nazwa (Terminus latinus)`, or the original English string when there
+ * is no translation for it.
+ *
+ * Deliberately **not** gated on the UI locale. The label is anatomical
+ * nomenclature, not interface copy: Latin is the international standard a
+ * medical student is examined on, and the Polish term is what this product
+ * teaches in — the textbook corpus is Polish in every locale. Gating it meant
+ * that switching the interface to English silently replaced the terminology
+ * students came for. Re-gating is a one-line change here if that is ever
+ * wanted.
  *
  * @param englishName Name exactly as it appears in the atlas manifest.
- * @param locale      Active UI locale.
+ * @param _locale     Retained so callers need not change; see above.
  */
-export function translateAnatomyName(englishName: string, locale: Locale): string {
-  if (locale !== "pl" || !englishName) return englishName;
+export function translateAnatomyName(englishName: string, _locale?: Locale): string {
+  if (!englishName) return englishName;
 
   const key = englishName.trim().toLowerCase();
 
@@ -65,14 +74,14 @@ export function translateAnatomyName(englishName: string, locale: Locale): strin
  * differ, the localized form. Searching for "wątroba" and searching for
  * "liver" should both find the liver.
  */
-export function anatomySearchHaystack(englishName: string, locale: Locale): string {
-  const translated = translateAnatomyName(englishName, locale);
+export function anatomySearchHaystack(englishName: string, _locale?: Locale): string {
+  const translated = translateAnatomyName(englishName);
   return translated === englishName
     ? englishName.toLowerCase()
     : `${englishName} ${translated}`.toLowerCase();
 }
 
-/** True when a translation exists for this name in the given locale. */
-export function hasAnatomyTranslation(englishName: string, locale: Locale): boolean {
-  return translateAnatomyName(englishName, locale) !== englishName;
+/** True when this name has a Polish/Latin term in the dictionary. */
+export function hasAnatomyTranslation(englishName: string, _locale?: Locale): boolean {
+  return translateAnatomyName(englishName) !== englishName;
 }
