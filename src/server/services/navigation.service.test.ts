@@ -1,5 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { getNavDomains, getSidebarNavigation, toNavDomain } from "./navigation.service";
+import {
+  classifyChemistry,
+  getNavDomains,
+  getSidebarNavigation,
+  toNavDomain,
+} from "./navigation.service";
 import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
 const SUBJECTS: TheorySubject[] = ["anatomia", "biologia", "chemia", "fizjologia"];
@@ -91,5 +96,32 @@ describe("getSidebarNavigation", () => {
     for (const link of nav.chemistryOrganic) {
       expect(inorganic.has(link.label)).toBe(false);
     }
+  });
+
+  // The split keys on words in the title, so it only covers titles phrased to
+  // suit it. These are the cases that motivated the third bucket: the genitive
+  // title of the generated volume matches neither keyword, and before "other"
+  // existed it fell out of the drawer with nothing reporting a problem.
+  it.each([
+    ["Chemia nieorganiczna — kwasy, zasady, sole", "inorganic"],
+    ["Budowa atomu i wiązania chemiczne", "inorganic"],
+    ["Stechiometria — podstawy obliczeń chemicznych", "inorganic"],
+    ["Chemia organiczna — węglowodory i grupy funkcyjne", "organic"],
+    ["Podstawy chemii nieorganicznej — Bielański, część 1", "other"],
+  ] as const)("classifies %s as %s", (label, group) => {
+    expect(classifyChemistry(label)).toBe(group);
+  });
+
+  // Whatever the keyword groups do not claim must still be rendered, so the
+  // three buckets have to account for every chemistry domain.
+  it("loses no chemistry domain between the three buckets", () => {
+    const bucketed = [
+      ...nav.chemistryInorganic,
+      ...nav.chemistryOrganic,
+      ...nav.chemistryOther,
+    ].map((l) => l.label);
+
+    expect(new Set(bucketed).size).toBe(bucketed.length);
+    expect(bucketed.length).toBe(getTheoryDomains("chemia").length);
   });
 });

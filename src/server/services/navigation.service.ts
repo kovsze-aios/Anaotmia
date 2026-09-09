@@ -30,6 +30,35 @@ export function getNavDomains(subject: TheorySubject): NavDomain[] {
   return getTheoryDomains(subject).map(toNavDomain);
 }
 
+/** Which chemistry group a domain's label belongs to. */
+export type ChemistryGroup = "inorganic" | "organic" | "other";
+
+/**
+ * Sorts a chemistry domain into the CKE syllabus split.
+ *
+ * Exported so the classification can be tested against a title directly. The
+ * grouping is keyword-based, which means it only recognises titles phrased to
+ * suit it: "Podstawy chemii nieorganicznej" is genitive and contains neither
+ * "nieorganiczna" nor "organiczna", so both filters miss it. It used to fall
+ * out of the drawer entirely at that point, with nothing reporting a problem.
+ * Returning "other" instead of nothing is what makes the split exhaustive.
+ *
+ * "nieorganiczna" contains "organiczna", so the inorganic test has to run
+ * first — otherwise the inorganic domains land in both groups.
+ */
+export function classifyChemistry(label: string): ChemistryGroup {
+  if (
+    label.includes("nieorganiczna") ||
+    label.includes("atomu") ||
+    label.includes("Stechiometria")
+  ) {
+    return "inorganic";
+  }
+  if (label.includes("organiczna")) return "organic";
+  return "other";
+}
+
+
 /**
  * Everything the global drawer renders, as flat links.
  *
@@ -66,21 +95,12 @@ export function getSidebarNavigation(): SidebarNavigation {
     label: `${domain.icon} ${domain.title}`,
   }));
 
-  const isInorganic = (label: string) =>
-    label.includes("nieorganiczna") ||
-    label.includes("atomu") ||
-    label.includes("Stechiometria");
-
-  // "nieorganiczna" contains "organiczna", so the organic check must exclude
-  // the inorganic domains explicitly — otherwise they land in both groups.
-  const isOrganic = (label: string) =>
-    !isInorganic(label) && label.includes("organiczna");
-
   return {
     anatomy,
     physiology,
     biology,
-    chemistryInorganic: chemistry.filter((l) => isInorganic(l.label)),
-    chemistryOrganic: chemistry.filter((l) => isOrganic(l.label)),
+    chemistryInorganic: chemistry.filter((l) => classifyChemistry(l.label) === "inorganic"),
+    chemistryOrganic: chemistry.filter((l) => classifyChemistry(l.label) === "organic"),
+    chemistryOther: chemistry.filter((l) => classifyChemistry(l.label) === "other"),
   };
 }

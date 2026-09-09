@@ -103,6 +103,7 @@ export function SidebarDrawer({
     biology: biologyLinks,
     chemistryInorganic: chemistryInorganicLinks,
     chemistryOrganic: chemistryOrganicLinks,
+    chemistryOther: chemistryOtherLinks,
   } = navigation;
 
   const { t } = useI18n();
@@ -227,24 +228,33 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🧪 CHEMIA ─── */}
-          <div className="drawer-section-label">🧪 {t.sidebar.chemistry}</div>
-          <SubAccordion label={t.sidebar.chemistryInorganic}>
-            {chemistryInorganicLinks.map((l) => (
+          {/* A collapsible section like the three above it, rather than a bare
+              label. The CKE split into inorganic and organic is kept inside,
+              because that is how the syllabus is examined. */}
+          <AccordionGroup label={`🧪 ${t.sidebar.chemistry}`} defaultExpanded={false}>
+            {chemistryOtherLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-          </SubAccordion>
-          <SubAccordion label={t.sidebar.chemistryOrganic}>
-            {chemistryOrganicLinks.map((l) => (
-              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
-                {l.label}
-              </Link>
-            ))}
-          </SubAccordion>
-          <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
-            📝 {t.sidebar.examSheetsChemistry}
-          </Link>
+            <SubAccordion label={t.sidebar.chemistryInorganic}>
+              {chemistryInorganicLinks.map((l) => (
+                <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                  {l.label}
+                </Link>
+              ))}
+            </SubAccordion>
+            <SubAccordion label={t.sidebar.chemistryOrganic}>
+              {chemistryOrganicLinks.map((l) => (
+                <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                  {l.label}
+                </Link>
+              ))}
+            </SubAccordion>
+            <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
+              📝 {t.sidebar.examSheetsChemistry}
+            </Link>
+          </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
           <Link href="/" className="drawer-link drawer-link--home focus-ring" onClick={onClose}>
