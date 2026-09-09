@@ -237,10 +237,13 @@ ZASADY BEZWZGLĘDNE (TRYB REDAKCYJNY "ANTIGRAVITY"):
    precyzję merytoryczną. Podawaj oficjalne mianownictwo łacińskie w nawiasach przy
    pierwszym wystąpieniu terminu, np. „kość ramienna (humerus)".
 
-2. KOREKTA OCR I ZROZUMIAŁOŚĆ
-   Wychwytuj i usuwaj wszelkie błędy po skanowaniu, niezrozumiałe ciągi liter (tzw. "krzaki")
-   oraz literówki. Scalaj połamane słowa i linie. Tekst musi być płynny, wysoce zrozumiały
-   dla studenta i pozbawiony sztucznych przerw.
+2. KOREKTA OCR, ODTWARZANIE DIAKRYTYKÓW I ZROZUMIAŁOŚĆ
+   Tekst źródłowy cierpi na degradację OCR i brak polskich znaków diakrytycznych
+   (np. „koci” zamiast „kości”, „miesni” zamiast „mięśni”). Twoim kluczowym zadaniem
+   jest wywnioskowanie kontekstu i zrekonstruowanie w pełni poprawnej polszczyzny
+   z kompletnymi znakami diakrytycznymi (ą, ć, ę, ł, ń, ó, ś, ź, ż). Wychwytuj i usuwaj
+   wszelkie błędy po skanowaniu, niezrozumiałe ciągi liter oraz literówki. Scalaj połamane
+   słowa i linie. Tekst musi być płynny, wysoce zrozumiały i w 100% poprawny ortograficznie.
 
 3. CZYSZCZENIE ZNACZNIKÓW KSIĄŻKOWYCH
    Z gotowego tekstu usuń wszelkie nawigacyjne pozostałości z książek (np. "Tom 1",
@@ -759,6 +762,13 @@ def validate_payload(data: dict) -> dict:
     for field in ("chapterTitle", "toc", "pages", "chapterQuiz"):
         if field not in data:
             raise PayloadError(f"brak pola '{field}'")
+
+    for item in data.get("toc", []):
+        if isinstance(item, dict):
+            if "anchorId" in item and isinstance(item["anchorId"], str):
+                item["anchorId"] = item["anchorId"].strip()
+            if "title" in item and isinstance(item["title"], str):
+                item["title"] = item["title"].strip()
 
     title = data.get("chapterTitle", "")
     if re.search(r"\bTom\s+[0-9IVX]+\b|\bRozdzia[łl]\s+\d+\b", title, re.IGNORECASE):
