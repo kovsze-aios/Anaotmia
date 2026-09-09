@@ -1,0 +1,47 @@
+import type { StructuredChapter } from "@/types/theory";
+
+export const bio4_czesc_63_biotechnologiaTradycyjnaIInzynieriaGenetycznaData: StructuredChapter = {
+  "chapterTitle": "Biotechnologia tradycyjna i inżynieria genetyczna",
+  "toc": [
+    {
+      "title": "Biotechnologia tradycyjna w rolnictwie i ochronie środowiska",
+      "anchorId": "biotechnologia-tradycyjna-w-rolnictwie"
+    },
+    {
+      "title": "Biotechnologia tradycyjna w przemyśle spożywczym",
+      "anchorId": "biotechnologia-tradycyjna-w-przemysle-spozywczym"
+    },
+    {
+      "title": "Podstawowe narzędzia i techniki inżynierii genetycznej",
+      "anchorId": "narzedzia-inzynierii-genetycznej"
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "htmlContent": "<h3 id=\"biotechnologia-tradycyjna-w-rolnictwie\">Biotechnologia tradycyjna w rolnictwie i ochronie środowiska</h3><p>Współczesne rolnictwo, oparte na ciężkich maszynach i intensywnym stosowaniu chemicznych środków, a także ogromne ilości odpadów i ścieków produkowanych przez człowieka, prowadzą do degradacji gleby i zanieczyszczenia środowiska. Rozwiązaniem tych problemów mogą być metody wypracowane przez biotechnologię tradycyjną, które wykorzystują naturalne procesy biologiczne.</p><h4>Szczepionki glebowe</h4><p>Szczepionki glebowe to preparaty zawierające szczepy mikroorganizmów, których rozwój zwiększa w glebie zawartość związków niezbędnych do wzrostu i rozwoju roślin. Mogą one zawierać na przykład bakterie dostarczające roślinom azot, co ogranicza potrzebę stosowania sztucznych nawozów.</p><h4>Wykorzystanie naturalnych interakcji między organizmami</h4><p>Dzięki wykorzystaniu naturalnych interakcji między organizmami można ograniczyć stosowanie nawozów sztucznych i chemicznych środków ochrony roślin. Przykładem takiej interakcji jest <strong>mikoryza</strong>, czyli obustronnie korzystna relacja między grzybami a roślinami. Grzyby otrzymują od roślin cukry, a rośliny od grzybów wodę z solami mineralnymi. Rośliny wchodzące w związek z grzybami lepiej rosną i dają obfitsze plony. W uprawach można stosować szczepionki zawierające grzyby mikoryzowe.</p><p>Biologiczna walka z organizmami uważanymi za szkodniki może odbywać się dzięki wykorzystaniu ich naturalnych wrogów – pasożytów lub drapieżników. Na przykład larwy kruszynka odżywiają się jajami szkodników, a biedronki i ich larwy żywią się mszycami i przędziorkami, które są powszechnymi szkodnikami roślin.</p><h4>Gospodarka odpadami i oczyszczanie ścieków</h4><p>Ludzie wytwarzają ogromne ilości odpadów – każdy Polak produkuje ich średnio około 300 kg rocznie. Odpady pochodzą także z zakładów przemysłowych, firm i gospodarstw rolnych. Biotechnologia tradycyjna wypracowała wiele sposobów na racjonalne gospodarowanie odpadami.</p><p><strong>Kompost</strong> to naturalny nawóz powstający z odpadów organicznych. W tym celu zakłada się pryzmę kompostową, czyli kopiec z ułożonych na przemian warstw odpadów organicznych i gleby. Procesy rozkładu przeprowadzane przez mikroorganizmy glebowe zmieniają odpady w żyzny nawóz, który można wykorzystać na przykład do nawożenia warzyw w ogrodzie.</p><p><strong>Biogaz</strong> to palny gaz wytwarzany z odpadów organicznych i ścieków. Produkcja biogazu odbywa się w biogazowniach, gdzie odpady organiczne są gromadzone w komorach, w których zachodzi fermentacja metanowa. Biogazownia rolnicza umożliwia wytworzenie biogazu z organicznych odpadów rolnych, takich jak gnojowica czy odpady z pól uprawnych. Biogaz może być stosowany jako paliwo do ogrzewania budynków.</p><p><strong>Biologiczne oczyszczanie ścieków</strong> polega na rozkładzie nieczystości organicznych przez mikroorganizmy. Przeprowadza się je zwykle w warunkach tlenowych, w specjalnie napowietrzanych komorach. Niekiedy, aby oczyszczanie było skuteczniejsze, stwarza się warunki zarówno tlenowe, jak i beztlenowe. Oczyszczanie biologiczne przeprowadza się w specjalnych zbiornikach i komorach fermentacyjnych.</p><p><strong>Polimery biodegradowalne</strong> to związki szybko rozkładane przez mikroorganizmy naturalnie występujące w przyrodzie. Z naturalnych biodegradowalnych polimerów, na przykład skrobi, wykonuje się wiele opakowań jednorazowego użytku, które w środowisku są rozkładane w ciągu kilkudziesięciu dni.</p>"
+    },
+    {
+      "pageNumber": 2,
+      "htmlContent": "<h3 id=\"biotechnologia-tradycyjna-w-przemysle-spozywczym\">Biotechnologia tradycyjna w przemyśle spożywczym</h3><p>Metody biotechnologii tradycyjnej umożliwiają otrzymywanie wielu produktów spożywczych, takich jak pieczywo, sery, kiszone warzywa czy alkohole. Procesy wykorzystywane w tym celu to fermentacja alkoholowa oraz fermentacja mleczanowa, które są przeprowadzane przez mikroorganizmy.</p><h4>Fermentacja alkoholowa</h4><p>Fermentacja alkoholowa polega na rozkładzie cukrów do alkoholu etylowego i dwutlenku węgla. Ten rodzaj fermentacji stosuje się między innymi do produkcji piwa, wina i innych napojów alkoholowych oraz do produkcji pieczywa. W przemyśle spożywczym wykorzystuje się szlachetne szczepy drożdży należących do gatunku <em>Saccharomyces cerevisiae</em>. Ciasto drożdżowe rośnie dzięki dwutlenkowi węgla uwalnianemu podczas fermentacji alkoholowej. Piwo produkuje się w ogromnych fermentatorach nazywanych kadziami.</p><h4>Fermentacja mleczanowa</h4><p>Fermentacja mleczanowa polega na rozkładzie cukrów do kwasu mlekowego. Kwas mlekowy zakwasza produkty, dzięki czemu otrzymuje się kiszone warzywa, na przykład ogórki lub kapustę. Powoduje też ścinanie się białka mleka, co umożliwia produkcję serów i jogurtów. Ma on również właściwości konserwujące – produkty poddane jego działaniu są dłużej przydatne do spożycia. Do produkcji nabiału wykorzystuje się głównie bakterie z rodzajów <em>Lactobacillus</em> lub <em>Lactococcus</em>.</p>"
+    },
+    {
+      "pageNumber": 3,
+      "htmlContent": "<h3 id=\"narzedzia-inzynierii-genetycznej\">Podstawowe narzędzia i techniki inżynierii genetycznej</h3><p>Organizmy o wybranych cechach można uzyskać dzięki selekcji sztucznej, jednak proces ten trwa bardzo długo, a powstałe w jego wyniku organizmy mogą mieć tylko te cechy, które naturalnie występują u osobników ich gatunku. W drugiej połowie XX wieku zaczęto opracowywać metody izolowania genów z chromosomów, co umożliwiło manipulowanie genami, a w rezultacie genetyczne modyfikowanie organizmów oraz wirusów. Metody te pozwalają na uzyskiwanie organizmów o określonych cechach znacznie szybciej niż za pomocą selekcji sztucznej. Dziedzinę nauki, która zajmuje się opracowywaniem technik i metod umożliwiających wprowadzanie zmian w genomach organizmów, nazwano <strong>inżynierią genetyczną</strong>.</p><h4>Enzymy – narzędzia stosowane w inżynierii genetycznej</h4><p>W inżynierii genetycznej komórki o określonych cechach uzyskuje się przez wprowadzenie zmian w ich DNA. Jest to możliwe dzięki wykorzystaniu niektórych enzymów. Najczęściej są to: <strong>enzymy restrykcyjne</strong>, <strong>ligazy</strong> oraz <strong>polimerazy DNA</strong>.</p><p>Enzymy restrykcyjne (nukleazy restrykcyjne) służą do rozcinania DNA. Każdy enzym restrykcyjny rozpoznaje i przecina określoną sekwencję DNA, składającą się zwykle z 4–8 par zasad. Są to zazwyczaj sekwencje palindromowe, czyli identyczne, jeżeli odczytuje się je w tym samym kierunku (na przykład 5' → 3') na obu niciach, np. 5'-GAATTC-3' i 3'-CTTAAG-5'. Do tej pory opisano kilkaset enzymów restrykcyjnych, z których każdy rozpoznaje inną sekwencję DNA. Określony enzym restrykcyjny rozcina daną cząsteczkę DNA zawsze w tych samych miejscach i daje stałą liczbę fragmentów. Na przykład enzym EcoRI trawi genom faga λ zawsze na sześć fragmentów, a enzym HindIII – zawsze na osiem fragmentów. Enzymy restrykcyjne naturalnie występują w komórkach bakterii i archeowców, gdzie służą do niszczenia genomów wirusów podczas infekcji wirusowej.</p><h4>Wpływ rozwoju inżynierii genetycznej na różne dziedziny życia</h4><p>Inżynieria genetyczna niesie za sobą wiele nowych wyzwań i możliwości w niemal wszystkich dziedzinach życia. Intensywny rozwój tej nauki pozwolił między innymi na: zbadanie struktury i funkcji wielu genów, zbadanie struktury i funkcji wielu białek, poznanie molekularnych mechanizmów rozwoju roślin i zwierząt, poznanie molekularnych mechanizmów ewolucji organizmów, ulepszenie diagnostyki medycznej i weterynaryjnej, wprowadzenie nowoczesnych terapii wielu chorób, zwiększenie wydajności rolnictwa, udoskonalenie technologii przemysłowych oraz udoskonalenie technologii ochrony środowiska.</p>"
+    }
+  ],
+  "chapterQuiz": [
+    {
+      "question": "Czym różni się biotechnologia tradycyjna od biotechnologii molekularnej?",
+      "answer": "Biotechnologia tradycyjna wykorzystuje naturalne procesy biologiczne, takie jak fermentacja, do produkcji żywności i innych produktów, podczas gdy biotechnologia molekularna (inżynieria genetyczna) polega na celowych modyfikacjach DNA organizmów."
+    },
+    {
+      "question": "Wymień trzy przykłady zastosowania biotechnologii tradycyjnej w rolnictwie i ochronie środowiska.",
+      "answer": "Przykłady to: szczepionki glebowe zwiększające żyzność gleby, wykorzystanie mikoryzy do poprawy wzrostu roślin, oraz biologiczne oczyszczanie ścieków."
+    },
+    {
+      "question": "Jakie enzymy są kluczowe w inżynierii genetycznej i jakie pełnią funkcje?",
+      "answer": "Kluczowe enzymy to: enzymy restrykcyjne (tną DNA w specyficznych miejscach), ligazy (łączą fragmenty DNA) oraz polimerazy DNA (syntetyzują nowe nici DNA)."
+    }
+  ]
+};
