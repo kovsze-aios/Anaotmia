@@ -3,7 +3,7 @@ import type {
   SidebarNavigation,
   TextbookDomain,
 } from "../models";
-import { biologiaTheory, chemiaTheory, getDomains } from "../repositories";
+import { biologiaTheory, chemiaTheory, fizjologiaTheory, getDomains } from "../repositories";
 import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
 /**
@@ -47,6 +47,15 @@ export function getSidebarNavigation(): SidebarNavigation {
     };
   });
 
+  // Physiology is not routed per section — the whole subject lives at one
+  // page — so its links carry the domain in the query instead. The page opens
+  // that chapter and drops the parameter, which is what makes ten links to one
+  // route land somewhere different each time.
+  const physiology = fizjologiaTheory.map((domain) => ({
+    href: `/theory/fizjologia?domain=${encodeURIComponent(domain.id)}`,
+    label: `${domain.icon} ${domain.title}`,
+  }));
+
   const biology = biologiaTheory.map((domain) => ({
     href: "/theory/biologia",
     label: `${domain.icon} ${domain.title}`,
@@ -69,6 +78,7 @@ export function getSidebarNavigation(): SidebarNavigation {
 
   return {
     anatomy,
+    physiology,
     biology,
     chemistryInorganic: chemistry.filter((l) => isInorganic(l.label)),
     chemistryOrganic: chemistry.filter((l) => isOrganic(l.label)),

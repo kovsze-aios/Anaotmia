@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { Activity, Box, BookOpen } from "lucide-react";
+import { Box, BookOpen } from "lucide-react";
 
 import type { SidebarNavigation } from "@/server/models";
 import { useI18n } from "@/i18n";
@@ -99,6 +99,7 @@ export function SidebarDrawer({
 }) {
   const {
     anatomy: anatomyLinks,
+    physiology: physiologyLinks,
     biology: biologyLinks,
     chemistryInorganic: chemistryInorganicLinks,
     chemistryOrganic: chemistryOrganicLinks,
@@ -201,9 +202,13 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🫀 FIZJOLOGIA ─── */}
-          <Link href="/theory/fizjologia" className="drawer-link focus-ring" onClick={onClose}>
-            <Activity className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> {t.sidebar.physiology}
-          </Link>
+          <AccordionGroup label={`🫀 ${t.sidebar.physiology}`} defaultExpanded={false}>
+            {physiologyLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+          </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
 

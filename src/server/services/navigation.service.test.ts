@@ -54,6 +54,7 @@ describe("getSidebarNavigation", () => {
 
   it("produces links for every group", () => {
     expect(nav.anatomy.length).toBeGreaterThan(0);
+    expect(nav.physiology.length).toBeGreaterThan(0);
     expect(nav.biology.length).toBeGreaterThan(0);
     expect(nav.chemistryInorganic.length).toBeGreaterThan(0);
     expect(nav.chemistryOrganic.length).toBeGreaterThan(0);
@@ -64,12 +65,25 @@ describe("getSidebarNavigation", () => {
   // produced duplicate-key warnings.
   it.each([
     ["anatomy", nav.anatomy],
+    ["physiology", nav.physiology],
     ["biology", nav.biology],
     ["chemistryInorganic", nav.chemistryInorganic],
     ["chemistryOrganic", nav.chemistryOrganic],
   ] as const)("has unique labels within %s", (_group, links) => {
     const labels = links.map((l) => l.label);
     expect(new Set(labels).size).toBe(labels.length);
+  });
+
+  // Physiology has no per-section route, so each link carries its chapter in
+  // the query. Without that the drawer would render ten links to one page and
+  // the accordion would be decoration.
+  it("deep-links every physiology chapter to a distinct domain", () => {
+    const targets = nav.physiology.map((l) => l.href);
+    expect(targets.length).toBeGreaterThan(1);
+    expect(new Set(targets).size).toBe(targets.length);
+    for (const href of targets) {
+      expect(href.startsWith("/theory/fizjologia?domain=")).toBe(true);
+    }
   });
 
   it("splits chemistry without overlap", () => {

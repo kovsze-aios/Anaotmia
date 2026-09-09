@@ -32,6 +32,7 @@ export interface NavLink {
 /** Everything the global sidebar drawer needs to render. */
 export interface SidebarNavigation {
   anatomy: NavLink[];
+  physiology: NavLink[];
   biology: NavLink[];
   chemistryInorganic: NavLink[];
   chemistryOrganic: NavLink[];
