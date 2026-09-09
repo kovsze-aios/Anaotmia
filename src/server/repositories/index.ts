@@ -8,7 +8,7 @@
  */
 
 export { getDomains, getDomain } from "./anatomia";
-export { biologiaTheory } from "./biologia/theory";
+export { biologiaDomains as biologiaTheory } from "./biologia/domains";
 export { chemiaTheory } from "./chemia/theory";
 export { fizjologiaTheory } from "./fizjologia";
 
