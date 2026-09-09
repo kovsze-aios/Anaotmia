@@ -8,15 +8,23 @@ import {
 import { ANATOMY_TERMS_PL } from "./anatomy-terms-pl";
 
 describe("translateAnatomyName", () => {
-  it("returns the original English string for the English locale", () => {
-    expect(translateAnatomyName("Liver", "en")).toBe("Liver");
-    expect(translateAnatomyName("Left femur", "en")).toBe("Left femur");
+  // Anatomical nomenclature is not interface copy. Latin is the standard a
+  // student is examined on and the textbook corpus is Polish in every locale,
+  // so the label does not follow the language switcher; gating it meant
+  // switching to English silently removed the terminology.
+  it("renders Polish and Latin whatever the interface language is", () => {
+    for (const locale of ["en", "pl", "de", "fr", "it", "es"] as const) {
+      expect(translateAnatomyName("Liver", locale), locale).toBe("Wątroba (Hepar)");
+    }
   });
 
-  it("leaves locales without an anatomy dictionary untouched", () => {
-    for (const locale of ["de", "fr", "it", "es"] as const) {
-      expect(translateAnatomyName("Liver", locale)).toBe("Liver");
-    }
+  it("still falls back to English when a term is not in the dictionary", () => {
+    expect(translateAnatomyName("Nonexistent structure", "pl")).toBe(
+      "Nonexistent structure",
+    );
+    expect(translateAnatomyName("Nonexistent structure", "en")).toBe(
+      "Nonexistent structure",
+    );
   });
 
   it("renders Polish with the Latin term in parentheses", () => {
@@ -90,8 +98,44 @@ describe("anatomy dictionary integrity", () => {
     }
   });
 
-  it("covers a meaningful baseline of major structures", () => {
-    expect(Object.keys(ANATOMY_TERMS_PL).length).toBeGreaterThanOrEqual(50);
+  /**
+   * The required display contract: `Polska nazwa (Terminus latinus)`.
+   *
+   * Checked against every entry rather than a sample, because an entry that
+   * silently loses its Latin half still renders — it just renders wrong, and
+   * only to whoever happens to click that structure.
+   */
+  it("renders every entry as 'Polish (Latin)'", () => {
+    for (const [key, term] of Object.entries(ANATOMY_TERMS_PL)) {
+      expect(translateAnatomyName(key), key).toBe(`${term.pl} (${term.latin})`);
+      expect(translateAnatomyName(key), key).toMatch(/^[^()]+ \([^()]+\)$/);
+    }
+  });
+
+  it("never leaves an entry in English", () => {
+    for (const key of Object.keys(ANATOMY_TERMS_PL)) {
+      expect(translateAnatomyName(key), key).not.toBe(key);
+    }
+  });
+
+  it("covers the major structures a student meets in the viewer", () => {
+    // Measured against the pinned manifest by scripts/audit-atlas-terms.mjs:
+    // 403 entries reach 735 of the 2,234 meshes. Guard the dictionary size so
+    // a bad merge cannot quietly shrink it back.
+    expect(Object.keys(ANATOMY_TERMS_PL).length).toBeGreaterThanOrEqual(380);
+
+    // A spread of what the expansion added, one per system.
+    for (const [english, expected] of [
+      ["Splenic artery", "Tętnica śledzionowa (Arteria splenica)"],
+      ["Portal vein", "Żyła wrotna (Vena portae)"],
+      ["Hippocampus", "Hipokamp (Hippocampus)"],
+      ["Left piriformis", "Lewy mięsień gruszkowaty (Musculus piriformis)"],
+      ["Right first rib", "Prawe żebro pierwsze (Costa prima)"],
+      ["Cornea", "Rogówka (Cornea)"],
+      ["Rectum", "Odbytnica (Rectum)"],
+    ] as const) {
+      expect(translateAnatomyName(english), english).toBe(expected);
+    }
   });
 });
 
