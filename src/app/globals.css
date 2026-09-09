@@ -1785,15 +1785,44 @@ main hr {
 .footer-minimal__inner {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+/*
+ * Bottom row: signature at one end, support at the other.
+ *
+ * Laid out here rather than with utilities because `.footer-minimal__inner`
+ * is unlayered CSS — a Tailwind `flex-row` on the same element would lose to
+ * it regardless of specificity, which is the same trap the topbar logo hit.
+ */
+.footer-minimal__bar {
+  display: flex;
   align-items: center;
-  gap: 20px;
-  text-align: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #e4e4e7;
+}
+
+.dark .footer-minimal__bar {
+  border-top-color: #18181b;
+}
+
+/* Below 640px the two ends have nowhere to go, so they stack and centre. */
+@media (max-width: 640px) {
+  .footer-minimal__bar {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
 }
 
 /* Social icons row */
 .footer-minimal__socials {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 

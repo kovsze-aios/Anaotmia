@@ -32,14 +32,13 @@ export function Footer() {
             })}
           </div>
 
-          {/* Support — deliberately down here rather than in the topbar, where
-              a monetisation control competes with navigation on every page. */}
-          <DonateButton />
-
-          {/* Attribution */}
-          <p className="footer-minimal__attribution">
-            Projekt Medycyna © 2026
-          </p>
+          {/* Signature at one end, support at the other. Support stays down
+              here rather than in the topbar, where a monetisation control
+              competes with navigation on every page. */}
+          <div className="footer-minimal__bar">
+            <p className="footer-minimal__attribution">Projekt Medycyna © 2026</p>
+            <DonateButton />
+          </div>
         </div>
       </div>
     </footer>
