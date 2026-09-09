@@ -11,6 +11,7 @@ import {
   getReaderSpine,
   getReaderPosition,
 } from "@/server";
+import { absoluteUrl, chapterDescription } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -44,7 +45,10 @@ export async function generateMetadata(
   const { section, domain } = found;
   // Bare chapter name: the root template appends the brand exactly once.
   const title = section.title;
-  const description = `Opanuj temat ${section.title} dzięki aktywnym fiszkom Active Recall i pełnym opisom akademickim Bochenka.`;
+  // Drawn from the chapter's own prose. The template this replaced produced
+  // the same sentence on all 687 pages, which search engines read as
+  // boilerplate and discard in favour of a snippet they pick themselves.
+  const description = chapterDescription(section);
 
   // Encode parameters for dynamic OG image
   const ogTitle = encodeURIComponent(section.title);
@@ -54,12 +58,15 @@ export async function generateMetadata(
   return {
     title,
     description,
+    alternates: { canonical: absoluteUrl(`/theory/anatomia/${section.id}`) },
     openGraph: {
       // Shared links carry no title template, so the brand is spelled out.
       title: `${section.title} | Medycyna`,
       description,
       type: "article",
-      url: `${SITE_URL}/theory/anatomia/${section.id}`,
+      siteName: "Medycyna",
+      locale: "pl_PL",
+      url: absoluteUrl(`/theory/anatomia/${section.id}`),
       images: [
         {
           url: ogImage,
@@ -99,7 +106,9 @@ export default async function TextbookSectionPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: section.title,
-    description: `Opanuj temat ${section.title} dzięki aktywnym fiszkom Active Recall i pełnym opisom akademickim Bochenka.`,
+    description: chapterDescription(section),
+    articleSection: domain.title,
+    inLanguage: "pl",
     author: { "@type": "Organization", name: "Medycyna" },
     publisher: { "@type": "Organization", name: "Medycyna" },
     mainEntityOfPage: sectionUrl,

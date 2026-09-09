@@ -10,6 +10,7 @@ export {
   getAnatomyDomains,
   getAnatomyDomain,
   getTheorySection,
+  getTheorySectionWithDomain,
   getAnatomySectionWithDomain,
   type TheorySubject,
 } from "./textbook.service";

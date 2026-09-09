@@ -48,6 +48,24 @@ export function getTheorySection(
   return undefined;
 }
 
+/**
+ * Finds a section together with the domain that owns it, for any subject.
+ *
+ * Chapter pages need the domain as well as the section — for the breadcrumb,
+ * for the sibling list, and for the volume name in Open Graph — and looking it
+ * up twice would walk the corpus twice.
+ */
+export function getTheorySectionWithDomain(
+  subject: TheorySubject,
+  sectionId: string,
+): { domain: TextbookDomain; section: TextbookSection } | undefined {
+  for (const domain of getTheoryDomains(subject)) {
+    const section = domain.sections.find((s) => s.id === sectionId);
+    if (section) return { domain, section };
+  }
+  return undefined;
+}
+
 /** Finds an anatomy section together with the domain that owns it. */
 export function getAnatomySectionWithDomain(
   sectionId: string,
