@@ -11,3 +11,6 @@
 ## 2026-08-01 - Screen Reader Noise in Linked Cards
 **Learning:** Found that custom linked cards containing decorative icons and generic/repetitive "Learn more" style call-to-actions are read out by screen readers in an annoying and noisy way.
 **Action:** Always add `aria-hidden="true"` to purely decorative icons and generic repetitive CTA text inside complex wrapper links (like `<Link>` cards), allowing users to focus on meaningful content like the title and description to provide the link's accessible name.
+## 2026-09-09 - PNPM Workspace CI
+**Learning:** Found that newer versions of `pnpm` (v9+) strictly require a `packages` array in `pnpm-workspace.yaml` files, otherwise `pnpm install` fails in CI with `packages field missing or empty`.
+**Action:** When a repository uses `pnpm-workspace.yaml` (even just for settings like `allowBuilds`), ensure it includes at minimum `packages: ['.']`.
