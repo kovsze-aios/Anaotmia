@@ -1,10 +1,5 @@
 import { describe, it, expect } from "vitest";
-import {
-  classifyChemistry,
-  getNavDomains,
-  getSidebarNavigation,
-  toNavDomain,
-} from "./navigation.service";
+import { getNavDomains, getSidebarNavigation, toNavDomain } from "./navigation.service";
 import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
 const SUBJECTS: TheorySubject[] = ["anatomia", "biologia", "chemia", "fizjologia"];
@@ -61,8 +56,7 @@ describe("getSidebarNavigation", () => {
     expect(nav.anatomy.length).toBeGreaterThan(0);
     expect(nav.physiology.length).toBeGreaterThan(0);
     expect(nav.biology.length).toBeGreaterThan(0);
-    expect(nav.chemistryInorganic.length).toBeGreaterThan(0);
-    expect(nav.chemistryOrganic.length).toBeGreaterThan(0);
+    expect(nav.chemistry.length).toBeGreaterThan(0);
   });
 
   // Every anatomy domain points at the same route, so `label` — not `href` —
@@ -72,8 +66,7 @@ describe("getSidebarNavigation", () => {
     ["anatomy", nav.anatomy],
     ["physiology", nav.physiology],
     ["biology", nav.biology],
-    ["chemistryInorganic", nav.chemistryInorganic],
-    ["chemistryOrganic", nav.chemistryOrganic],
+    ["chemistry", nav.chemistry],
   ] as const)("has unique labels within %s", (_group, links) => {
     const labels = links.map((l) => l.label);
     expect(new Set(labels).size).toBe(labels.length);
@@ -91,37 +84,11 @@ describe("getSidebarNavigation", () => {
     }
   });
 
-  it("splits chemistry without overlap", () => {
-    const inorganic = new Set(nav.chemistryInorganic.map((l) => l.label));
-    for (const link of nav.chemistryOrganic) {
-      expect(inorganic.has(link.label)).toBe(false);
-    }
-  });
-
-  // The split keys on words in the title, so it only covers titles phrased to
-  // suit it. These are the cases that motivated the third bucket: the genitive
-  // title of the generated volume matches neither keyword, and before "other"
-  // existed it fell out of the drawer with nothing reporting a problem.
-  it.each([
-    ["Chemia nieorganiczna — kwasy, zasady, sole", "inorganic"],
-    ["Budowa atomu i wiązania chemiczne", "inorganic"],
-    ["Stechiometria — podstawy obliczeń chemicznych", "inorganic"],
-    ["Chemia organiczna — węglowodory i grupy funkcyjne", "organic"],
-    ["Podstawy chemii nieorganicznej — Bielański, część 1", "other"],
-  ] as const)("classifies %s as %s", (label, group) => {
-    expect(classifyChemistry(label)).toBe(group);
-  });
-
-  // Whatever the keyword groups do not claim must still be rendered, so the
-  // three buckets have to account for every chemistry domain.
-  it("loses no chemistry domain between the three buckets", () => {
-    const bucketed = [
-      ...nav.chemistryInorganic,
-      ...nav.chemistryOrganic,
-      ...nav.chemistryOther,
-    ].map((l) => l.label);
-
-    expect(new Set(bucketed).size).toBe(bucketed.length);
-    expect(bucketed.length).toBe(getTheoryDomains("chemia").length);
+  // Chemistry was split into inorganic and organic groups by keywords in the
+  // domain titles. That split described the hand-written thematic domains,
+  // which are gone; one generated volume remains and it is listed like any
+  // other subject, so every chemistry domain must appear in the one group.
+  it("lists every chemistry domain in one group", () => {
+    expect(nav.chemistry.length).toBe(getTheoryDomains("chemia").length);
   });
 });

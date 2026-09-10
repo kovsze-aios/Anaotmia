@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
 import type { TextbookSection, ContentBlock } from "@/server/models";
 import { formatOcrText, getSectionWordCount, uniqueId } from "@/lib/textbookFormatting";
+import { AnatomyRichText } from "./textbook/AnatomyRichText";
+import { AtlasPeekDrawer } from "./textbook/AtlasPeekDrawer";
 
 
 function parseMarkdownContent(text: string) {
@@ -42,6 +44,13 @@ function parseMarkdownContent(text: string) {
 
 interface TextbookContentProps {
   section: TextbookSection;
+  /**
+   * Turns chapter words that name an anatomical structure into links into the
+   * 3D atlas. Off by default: the atlas models human anatomy, so the terms
+   * mean something in the anatomy and physiology corpora and would be noise in
+   * a chemistry chapter that happens to mention "jelito".
+   */
+  linkAnatomy?: boolean;
 }
 
 function ContentBlockRenderer({ block }: { block: ContentBlock }) {
@@ -118,7 +127,18 @@ function ScrollProgressBar() {
   );
 }
 
-export function TextbookContent({ section }: TextbookContentProps) {
+export function TextbookContent({ section, linkAnatomy = false }: TextbookContentProps) {
+  // Which structure the 3D drawer is showing, if any. Null keeps the viewer
+  // unmounted, so its chunk is never even fetched until a reader asks.
+  const [atlasFocus, setAtlasFocus] = useState<{ name: string; label: string } | null>(
+    null,
+  );
+  const openAtlas = useCallback(
+    (name: string, label: string) => setAtlasFocus({ name, label }),
+    [],
+  );
+  const closeAtlas = useCallback(() => setAtlasFocus(null), []);
+
   // The corpus is static per route, so the count is stable — memoising it
   // stops a full text rescan on every re-render (theme toggle, etc.).
   const wordCount = useMemo(() => getSectionWordCount(section), [section]);
@@ -183,10 +203,18 @@ export function TextbookContent({ section }: TextbookContentProps) {
                   Microlearning
                 </span>
               </div>
-              <div
-                className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: page.htmlContent }}
-              />
+              {linkAnatomy ? (
+                <AnatomyRichText
+                  html={page.htmlContent}
+                  onSelectTerm={openAtlas}
+                  className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
+                />
+              ) : (
+                <div
+                  className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: page.htmlContent }}
+                />
+              )}
             </section>
           ))}
         </div>
@@ -245,6 +273,14 @@ export function TextbookContent({ section }: TextbookContentProps) {
           </div>
         );
       })()}
+
+      {linkAnatomy && (
+        <AtlasPeekDrawer
+          focusName={atlasFocus?.name ?? null}
+          label={atlasFocus?.label ?? ""}
+          onClose={closeAtlas}
+        />
+      )}
     </article>
   );
 }

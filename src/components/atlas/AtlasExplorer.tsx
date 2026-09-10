@@ -83,9 +83,30 @@ const ORGAN_PRESET: SystemId[] = [
 export interface AtlasExplorerProps {
   /** Leaves the immersive view and returns to the landing poster. */
   onExit?: () => void;
+  /**
+   * BodyParts3D name to open focused on, e.g. "heart".
+   *
+   * Set when the atlas is opened from a word in the textbook: the reader asked
+   * about one structure, so the viewer selects it and isolates it rather than
+   * dropping them into the whole body to find it themselves.
+   */
+  focusName?: string;
+  /**
+   * Running inside another panel rather than full screen.
+   *
+   * Suppresses the viewer's own detail sheet: Base UI portals it to
+   * `document.body`, so inside a drawer it escapes the drawer's box and lands
+   * over the page behind it. The host panel names the structure in its header
+   * anyway, so the sheet would only repeat it.
+   */
+  embedded?: boolean;
 }
 
-export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
+export default function AtlasExplorer({
+  onExit,
+  focusName,
+  embedded = false,
+}: AtlasExplorerProps) {
   const detailTitle = useRef<HTMLHeadingElement>(null);
   const { dark } = useTheme();
   const { t, n, plural, locale } = useI18n();
@@ -198,6 +219,27 @@ export default function AtlasExplorer({ onExit }: AtlasExplorerProps) {
     setDetails(true);
     setPanel(null);
   };
+
+  /**
+   * Opens on the requested structure once the catalogue has loaded.
+   *
+   * Runs on `atlas` rather than on mount because the concept list arrives with
+   * the manifest; `focusName` is compared case-insensitively since it comes
+   * from the term dictionary, which is keyed in lower case.
+   */
+  useEffect(() => {
+    if (!atlas || !focusName) return;
+    const wanted = focusName.trim().toLowerCase();
+    const concept =
+      atlas.concepts.find((c) => c.name.toLowerCase() === wanted) ??
+      atlas.parts.find((p) => p.name.toLowerCase() === wanted);
+    if (!concept) return;
+
+    const elements = "elements" in concept ? concept.elements : [concept.id];
+    setChosen({ id: concept.id, name: concept.name, elements });
+    setState((s) => ({ ...s, selected: elements, isolate: true, rotate: false }));
+    if (!embedded) setDetails(true);
+  }, [atlas, focusName, embedded]);
 
   const choosePart = (id: string) => {
     const p = parts.get(id);

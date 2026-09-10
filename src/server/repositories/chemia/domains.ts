@@ -1,7 +1,7 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
+import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import * as generated from "@/data/chemia/dzialy";
-import { chemiaTheory as legacyDomains } from "./theory";
 
 /**
  * Generated chemistry sources.
@@ -73,15 +73,18 @@ const generatedParts: TextbookDomain[] = CZESCI.map((czesc) => ({
   title: czesc.title,
   shortTitle: czesc.shortTitle,
   icon: czesc.icon,
-  sections: (chapters[`${czesc.tag}Chapters`] ?? []).map(mapToSection),
+  sections: disambiguateSectionTitles(
+    (chapters[`${czesc.tag}Chapters`] ?? []).map(mapToSection),
+  ),
 })).filter((domain) => domain.sections.length > 0);
 
 /**
- * Chemistry, generated sources first and the existing domains after them.
+ * Chemistry, the Bielanski volume and nothing else.
  *
- * Additive, like biology and unlike physiology: `theory.ts` here is 5.1 MB of
- * real material across four domains, so none of it is discarded. The academic
- * volume and the exam-oriented domains cover overlapping ground, but choosing
- * between them is a content decision rather than a wiring one.
+ * The four hand-written thematic domains that used to sit after these were
+ * removed for the same reason as biology's: "Pytania Maturalne CKE" answer-key
+ * sections in the table of contents, and contents-page dot leaders in the
+ * prose. The CKE exam papers remain a separate feature at /matura/chemia,
+ * sourced from `./index`.
  */
-export const chemiaDomains: TextbookDomain[] = [...generatedParts, ...legacyDomains];
+export const chemiaDomains: TextbookDomain[] = generatedParts;

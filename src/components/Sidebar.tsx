@@ -46,42 +46,6 @@ function AccordionGroup({
   );
 }
 
-/* ─── Sub-accordion (for chemistry sections) ─── */
-function SubAccordion({
-  label,
-  defaultExpanded = false,
-  children,
-}: {
-  label: string;
-  defaultExpanded?: boolean;
-  children: React.ReactNode;
-}) {
-  const [expanded, setExpanded] = useState(defaultExpanded);
-
-  return (
-    <div className="sidebar-sub-accordion">
-      <button
-        className="sidebar-sub-accordion__trigger focus-ring"
-        onClick={() => setExpanded(!expanded)}
-        aria-expanded={expanded}
-      >
-        <span>{label}</span>
-        <span className="sidebar-sub-accordion__chevron" aria-hidden="true">
-          {expanded ? "–" : "+"}
-        </span>
-      </button>
-      <div
-        className={`sidebar-sub-accordion__body ${expanded ? "sidebar-sub-accordion__body--open" : ""}`}
-        style={{ opacity: expanded ? 1 : 0 }}
-      >
-        <div className="min-h-0 overflow-hidden">
-          <div className="sidebar-sub-accordion__inner">{children}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ─── Mobile drawer ─── */
 export function SidebarDrawer({
   open,
@@ -101,9 +65,7 @@ export function SidebarDrawer({
     anatomy: anatomyLinks,
     physiology: physiologyLinks,
     biology: biologyLinks,
-    chemistryInorganic: chemistryInorganicLinks,
-    chemistryOrganic: chemistryOrganicLinks,
-    chemistryOther: chemistryOtherLinks,
+    chemistry: chemistryLinks,
   } = navigation;
 
   const { t } = useI18n();
@@ -228,29 +190,12 @@ export function SidebarDrawer({
           <div className="mobile-drawer__divider" />
 
           {/* ─── 🧪 CHEMIA ─── */}
-          {/* A collapsible section like the three above it, rather than a bare
-              label. The CKE split into inorganic and organic is kept inside,
-              because that is how the syllabus is examined. */}
           <AccordionGroup label={`🧪 ${t.sidebar.chemistry}`} defaultExpanded={false}>
-            {chemistryOtherLinks.map((l) => (
+            {chemistryLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-            <SubAccordion label={t.sidebar.chemistryInorganic}>
-              {chemistryInorganicLinks.map((l) => (
-                <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
-                  {l.label}
-                </Link>
-              ))}
-            </SubAccordion>
-            <SubAccordion label={t.sidebar.chemistryOrganic}>
-              {chemistryOrganicLinks.map((l) => (
-                <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
-                  {l.label}
-                </Link>
-              ))}
-            </SubAccordion>
             <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
               📝 {t.sidebar.examSheetsChemistry}
             </Link>

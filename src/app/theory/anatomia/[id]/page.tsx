@@ -161,7 +161,7 @@ export default async function TextbookSectionPage({ params }: Props) {
 
       {/* Centred reading column — comfortable measure for long-form prose. */}
       <div className="mx-auto w-full max-w-3xl px-4">
-        <TextbookContent section={section} />
+        <TextbookContent section={section} linkAnatomy />
       </div>
 
       {position && <ReaderPagination position={position} />}

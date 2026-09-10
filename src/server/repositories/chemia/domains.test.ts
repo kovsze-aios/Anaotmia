@@ -3,7 +3,6 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 import { chemiaDomains } from "./domains";
-import { chemiaTheory as legacyDomains } from "./theory";
 
 /** The pipeline that fills this module. */
 const PIPELINE = path.resolve(__dirname, "../../../../fabryka_chemii.py");
@@ -16,16 +15,27 @@ describe("chemia repository", () => {
   });
 
   /**
-   * The generated volume is added to chemistry, not swapped in for it.
-   *
-   * `theory.ts` is 5.1 MB of real material across four domains. Losing any of
-   * it to a wiring change would be silent.
+   * Only the generated corpus. The hand-written thematic domains were removed:
+   * their sections included "Pytania Maturalne CKE" answer keys and prose
+   * still carrying contents-page dot leaders, both of which reached the
+   * sidebar and the table of contents.
    */
-  it("keeps every existing thematic domain", () => {
-    const ids = new Set(chemiaDomains.map((d) => d.id));
-    expect(legacyDomains.length).toBeGreaterThan(0);
-    for (const domain of legacyDomains) {
-      expect(ids.has(domain.id), `lost existing domain ${domain.id}`).toBe(true);
+  it("exposes only generated Bielański domains", () => {
+    expect(chemiaDomains.length).toBeGreaterThan(0);
+    for (const domain of chemiaDomains) {
+      expect(domain.sections.length, domain.id).toBeGreaterThan(0);
+      for (const section of domain.sections) {
+        expect(section.id, section.id).toMatch(/^chem\d+-czesc-/);
+      }
+    }
+  });
+
+  it("carries no exam-key sections and no contents-page dot leaders", () => {
+    for (const domain of chemiaDomains) {
+      for (const section of domain.sections) {
+        expect(section.title, section.id).not.toMatch(/Pytania Maturalne CKE/i);
+        expect(section.title, section.id).not.toMatch(/\.{4,}/);
+      }
     }
   });
 

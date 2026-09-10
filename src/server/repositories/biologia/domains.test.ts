@@ -3,7 +3,6 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 import { biologiaDomains } from "./domains";
-import { biologiaTheory as legacyDomains } from "./theory";
 
 /** The pipeline that fills this module. */
 const PIPELINE = path.resolve(__dirname, "../../../../fabryka_biologii.py");
@@ -16,18 +15,27 @@ describe("biologia repository", () => {
   });
 
   /**
-   * The series is added to biology, not swapped in for it.
-   *
-   * `theory.ts` is 3.7 MB of real material — twenty sections across cytologia,
-   * genetyka, metabolizm, botanika and fizjologia człowieka. The physiology
-   * bootstrap could drop its five headings because they were empty; these are
-   * not, and losing them to a wiring change would be silent.
+   * Only the generated corpus. The hand-written thematic domains were removed:
+   * their sections included "Pytania Maturalne CKE" answer keys and prose
+   * still carrying contents-page dot leaders, both of which reached the
+   * sidebar and the table of contents.
    */
-  it("keeps every existing thematic domain", () => {
-    const ids = new Set(biologiaDomains.map((d) => d.id));
-    expect(legacyDomains.length).toBeGreaterThan(0);
-    for (const domain of legacyDomains) {
-      expect(ids.has(domain.id), `lost existing domain ${domain.id}`).toBe(true);
+  it("exposes only generated Biologia na czasie domains", () => {
+    expect(biologiaDomains.length).toBeGreaterThan(0);
+    for (const domain of biologiaDomains) {
+      expect(domain.sections.length, domain.id).toBeGreaterThan(0);
+      for (const section of domain.sections) {
+        expect(section.id, section.id).toMatch(/^bio\d+-czesc-/);
+      }
+    }
+  });
+
+  it("carries no exam-key sections and no contents-page dot leaders", () => {
+    for (const domain of biologiaDomains) {
+      for (const section of domain.sections) {
+        expect(section.title, section.id).not.toMatch(/Pytania Maturalne CKE/i);
+        expect(section.title, section.id).not.toMatch(/\.{4,}/);
+      }
     }
   });
 

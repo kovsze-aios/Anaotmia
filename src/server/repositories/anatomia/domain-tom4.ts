@@ -1,4 +1,5 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
+import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import { tom4Chapters } from "@/data/anatomia/tomy";
 
@@ -39,5 +40,5 @@ export const tom4Domain: TextbookDomain = {
   title: "Tom 4: Szyja, Głowa i Mózgowie",
   shortTitle: "Tom 4: Głowa i Mózgowie",
   icon: "🧠",
-  sections: tom4Chapters.map(mapToSection),
+  sections: disambiguateSectionTitles(tom4Chapters.map(mapToSection)),
 };

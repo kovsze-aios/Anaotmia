@@ -1,4 +1,5 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
+import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import { tom3Chapters } from "@/data/anatomia/tomy";
 
@@ -39,5 +40,5 @@ export const tom3Domain: TextbookDomain = {
   title: "Tom 3: Układy Narządów Wewnętrznych",
   shortTitle: "Tom 3: Narządy",
   icon: "🫀",
-  sections: tom3Chapters.map(mapToSection),
+  sections: disambiguateSectionTitles(tom3Chapters.map(mapToSection)),
 };

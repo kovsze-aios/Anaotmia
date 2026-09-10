@@ -1,7 +1,7 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
+import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import * as generated from "@/data/fizjologia/dzialy";
-import { fizjologiaPlaceholders } from "./theory";
 
 /**
  * The physiology textbook, in reading order.
@@ -75,18 +75,16 @@ const generatedDomains: TextbookDomain[] = DZIALY.map((dzial) => ({
   title: dzial.title,
   shortTitle: dzial.shortTitle,
   icon: dzial.icon,
-  sections: (chapters[`${dzial.tag}Chapters`] ?? []).map(mapToSection),
+  sections: disambiguateSectionTitles(
+    (chapters[`${dzial.tag}Chapters`] ?? []).map(mapToSection),
+  ),
 })).filter((domain) => domain.sections.length > 0);
 
 /**
- * The physiology module, generated chapters where they exist.
+ * The physiology module.
  *
- * Falls back to the interim headings only while nothing has been generated.
- * The alternative — shipping an empty subject — fails the invariant the
- * navigation and search tests encode, that every subject indexes something,
- * and would leave `/theory/fizjologia` blank between this commit and the
- * first pipeline run. The fallback disappears on that run without anyone
- * editing anything; `theory.ts` can be deleted once it has.
+ * The five interim headings this used to fall back to are gone: they were
+ * titles with no body, kept only until the pipeline had run, and it has. The
+ * ten generated chapters stand on their own.
  */
-export const fizjologiaTheory: TextbookDomain[] =
-  generatedDomains.length > 0 ? generatedDomains : fizjologiaPlaceholders;
+export const fizjologiaTheory: TextbookDomain[] = generatedDomains;

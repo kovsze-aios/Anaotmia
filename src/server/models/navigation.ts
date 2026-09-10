@@ -34,8 +34,5 @@ export interface SidebarNavigation {
   anatomy: NavLink[];
   physiology: NavLink[];
   biology: NavLink[];
-  chemistryInorganic: NavLink[];
-  chemistryOrganic: NavLink[];
-  /** Chemistry domains matching neither keyword group; see the service. */
-  chemistryOther: NavLink[];
+  chemistry: NavLink[];
 }

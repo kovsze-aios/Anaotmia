@@ -1,7 +1,7 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
+import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import * as generated from "@/data/biologia/dzialy";
-import { biologiaTheory as legacyDomains } from "./theory";
 
 /**
  * The "Biologia na czasie" series, in publication order.
@@ -91,17 +91,19 @@ const generatedParts: TextbookDomain[] = CZESCI.map((czesc) => ({
   title: czesc.title,
   shortTitle: czesc.shortTitle,
   icon: czesc.icon,
-  sections: (chapters[`${czesc.tag}Chapters`] ?? []).map(mapToSection),
+  sections: disambiguateSectionTitles(
+    (chapters[`${czesc.tag}Chapters`] ?? []).map(mapToSection),
+  ),
 })).filter((domain) => domain.sections.length > 0);
 
 /**
- * Biology, series first and the existing thematic domains after it.
+ * Biology, the "Biologia na czasie" series and nothing else.
  *
- * Additive on purpose. Unlike the physiology module, whose five headings were
- * empty placeholders, `theory.ts` holds 3.7 MB of real material across twenty
- * sections — cytologia, genetyka, metabolizm, botanika, fizjologia człowieka.
- * None of it is discarded here. The two sets do overlap topically, and pruning
- * one against the other is a content decision, not a wiring decision, so it is
- * left to be made deliberately rather than as a side effect of this bootstrap.
+ * The five hand-written thematic domains that used to sit after these were
+ * removed: half their sections were "Pytania Maturalne CKE" answer keys, and
+ * their prose still carried the raw contents-page dot leaders the extraction
+ * left behind ("Atom.........19"). Both were showing up in the sidebar and the
+ * table of contents. The CKE exam papers themselves are untouched — they are a
+ * separate feature at /matura/biologia, sourced from `./index`.
  */
-export const biologiaDomains: TextbookDomain[] = [...generatedParts, ...legacyDomains];
+export const biologiaDomains: TextbookDomain[] = generatedParts;

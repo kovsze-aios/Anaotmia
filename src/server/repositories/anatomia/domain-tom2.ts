@@ -1,4 +1,5 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
+import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import { tom2Chapters } from "@/data/anatomia/tomy";
 
@@ -39,5 +40,5 @@ export const tom2Domain: TextbookDomain = {
   title: "Tom 2: Kończyna Górna i Kończyna Dolna",
   shortTitle: "Tom 2: Kończyny",
   icon: "🦾",
-  sections: tom2Chapters.map(mapToSection),
+  sections: disambiguateSectionTitles(tom2Chapters.map(mapToSection)),
 };

@@ -107,7 +107,9 @@ export function TheoryChapterPage({ subject, subjectLabel, id }: TheoryChapterPa
         <p className="mb-4 text-xs uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
           {domain.icon} {domain.title}
         </p>
-        <TextbookContent section={section} />
+        {/* The atlas models human anatomy, so its terms mean something in
+            physiology and biology and would be noise in inorganic chemistry. */}
+        <TextbookContent section={section} linkAnatomy={subject !== "chemia"} />
       </div>
 
       <nav
