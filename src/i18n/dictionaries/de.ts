@@ -33,12 +33,11 @@ const de: Dictionary = {
     anatomy: "ANATOMIE",
     physiology: "PHYSIOLOGIE",
     biology: "BIOLOGIE",
-    chemistry: "CHEMIE — Lehrplan Matura 2015",
+    chemistry: "CHEMIE",
     chemistryInorganic: "Anorganische Chemie und Berechnungen",
     chemistryOrganic: "Organische Chemie",
     examSheetsBiology: "CKE-Prüfungsbögen — Biologie",
     examSheetsChemistry: "CKE-Prüfungsbögen — Chemie",
-    home: "Startseite",
   },
 
   atlasPoster: {

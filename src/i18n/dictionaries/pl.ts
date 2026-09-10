@@ -34,12 +34,11 @@ const pl: Dictionary = {
     anatomy: "ANATOMIA",
     physiology: "FIZJOLOGIA",
     biology: "BIOLOGIA",
-    chemistry: "CHEMIA — Matura Formuła 2015",
+    chemistry: "CHEMIA",
     chemistryInorganic: "Chemia nieorganiczna i obliczenia",
     chemistryOrganic: "Chemia organiczna",
     examSheetsBiology: "Arkusze CKE — Biologia",
     examSheetsChemistry: "Arkusze CKE — Chemia",
-    home: "Strona główna",
   },
 
   atlasPoster: {

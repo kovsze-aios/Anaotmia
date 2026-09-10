@@ -48,12 +48,11 @@ const en = {
     anatomy: "ANATOMY",
     physiology: "PHYSIOLOGY",
     biology: "BIOLOGY",
-    chemistry: "CHEMISTRY — Matura 2015 syllabus",
+    chemistry: "CHEMISTRY",
     chemistryInorganic: "Inorganic chemistry and calculations",
     chemistryOrganic: "Organic chemistry",
     examSheetsBiology: "CKE exam papers — Biology",
     examSheetsChemistry: "CKE exam papers — Chemistry",
-    home: "Home",
   },
 
   atlasPoster: {

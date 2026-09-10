@@ -200,11 +200,6 @@ export function SidebarDrawer({
               📝 {t.sidebar.examSheetsChemistry}
             </Link>
           </AccordionGroup>
-
-          <div className="mobile-drawer__divider" />
-          <Link href="/" className="drawer-link drawer-link--home focus-ring" onClick={onClose}>
-            🏠 {t.sidebar.home}
-          </Link>
         </nav>
       </aside>
     </>

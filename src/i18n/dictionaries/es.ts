@@ -33,12 +33,11 @@ const es: Dictionary = {
     anatomy: "ANATOMÍA",
     physiology: "FISIOLOGÍA",
     biology: "BIOLOGÍA",
-    chemistry: "QUÍMICA — plan de estudios Matura 2015",
+    chemistry: "QUÍMICA",
     chemistryInorganic: "Química inorgánica y cálculos",
     chemistryOrganic: "Química orgánica",
     examSheetsBiology: "Exámenes CKE — Biología",
     examSheetsChemistry: "Exámenes CKE — Química",
-    home: "Inicio",
   },
 
   atlasPoster: {

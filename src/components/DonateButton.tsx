@@ -1,7 +1,5 @@
 "use client";
 
-import { Heart } from "lucide-react";
-
 import { useI18n } from "@/i18n";
 
 /**
@@ -22,11 +20,14 @@ const DONATE_HREF = "#donate";
  * from `Footer` so the footer itself stays a server component — this is the
  * only part of it that needs the locale context.
  *
- * The label is now visible rather than only a tooltip, which is what turns
- * this from an unexplained icon into an invitation. That also makes `title`
- * and `aria-label` redundant: the visible text is already the accessible name,
- * and a tooltip repeating it is noise for pointer users and duplication for
- * screen readers.
+ * Text only. The heart that used to sit beside the label is gone: with the
+ * words visible the icon was decoration, and the footer reads cleaner without
+ * it. `title` and `aria-label` are absent for the same reason — the visible
+ * text is already the accessible name, so a tooltip repeating it is noise for
+ * pointer users and duplication for screen readers.
+ *
+ * Hover moves the border, surface and text one step, which is the whole state
+ * change; no colour is introduced.
  *
  * 44px tall — the touch-target floor the reader controls, pagination and the
  * ToC tab all hold to — and only as wide as its content.
@@ -38,7 +39,7 @@ export function DonateButton() {
     <a
       href={DONATE_HREF}
       className={
-        "group inline-flex h-11 shrink-0 items-center gap-2 rounded-lg border px-4 " +
+        "inline-flex h-11 shrink-0 items-center rounded-lg border px-4 " +
         "text-sm font-medium transition-colors focus-ring " +
         "border-zinc-200 bg-white text-zinc-700 " +
         "hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-900 " +
@@ -46,12 +47,6 @@ export function DonateButton() {
         "dark:hover:border-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
       }
     >
-      {/* Fills in on hover — the whole state change, no colour introduced.
-          The palette stays NOIR; the heart just goes solid. */}
-      <Heart
-        className="size-4 shrink-0 transition-[fill] group-hover:fill-current"
-        aria-hidden="true"
-      />
       {t.footer.donate}
     </a>
   );

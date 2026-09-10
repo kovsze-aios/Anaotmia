@@ -33,12 +33,11 @@ const fr: Dictionary = {
     anatomy: "ANATOMIE",
     physiology: "PHYSIOLOGIE",
     biology: "BIOLOGIE",
-    chemistry: "CHIMIE — programme Matura 2015",
+    chemistry: "CHIMIE",
     chemistryInorganic: "Chimie inorganique et calculs",
     chemistryOrganic: "Chimie organique",
     examSheetsBiology: "Sujets d'examen CKE — Biologie",
     examSheetsChemistry: "Sujets d'examen CKE — Chimie",
-    home: "Accueil",
   },
 
   atlasPoster: {
