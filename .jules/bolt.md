@@ -24,3 +24,7 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2025-02-12 - Word Count Optimization on Massive Strings (Regex vs Bounded Iteration)
+**Learning:** Using global regex replacements (like `replace(/\s+/g)`) on extremely large string fields (such as `academic_detail` which can contain thousands of words) causes huge memory allocation spikes and main thread GC pauses because V8 has to parse and potentially copy the entire massive string dynamically.
+**Action:** Always use a highly optimized, bounded `charCodeAt` loop that processes characters up to the maximum limit while collapsing contiguous whitespace, reducing complexity to O(max). Do not use global regex replacements or naive slicing on massive strings when only an excerpt is needed.
