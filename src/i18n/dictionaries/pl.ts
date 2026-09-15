@@ -203,6 +203,7 @@ const pl: Dictionary = {
   /** Global footer. */
   footer: {
     donate: "Wesprzyj projekt",
+    donateAria: "Wesprzyj projekt (otwiera się w nowej karcie)",
   },
 
   reader: {

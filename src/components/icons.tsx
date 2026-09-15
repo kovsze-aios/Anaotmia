@@ -105,7 +105,14 @@ export function YoutubeIcon(props: IconProps) {
 export function InstagramIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 512 512" className="fa fa-instagram" {...props}>
-      <path d="m352 0l-192 0c-88 0-160 72-160 160l0 192c0 88 72 160 160 160l192 0c88 0 160-72 160-160l0-192c0-88-72-160-160-160z m-64 105c22 0 39 2 46 3l0 57c-14-2-31-3-49-3-72 0-134 47-134 130 0 51 30 92 83 104 14 3 29 5 44 5 58 0 101-40 112-96 2-12 4-24 4-37l0-173c-9-1-26-3-57-3-10 0-19 9-19 19l0 13c0 10 9 19 19 19 18 0 37 2 49 5z m-123 198c0 38 32 69 70 69 38 0 69-31 69-69 0-39-31-70-69-70-38 0-70 31-70 70z" />
+      {/* The glyph is one path whose lens ring and flash are meant to be holes
+          punched in the camera body. Under the default nonzero fill rule those
+          subpaths fill solid and the icon renders as an indistinguishable
+          rounded square, so it needs evenodd to read as Instagram. */}
+      <path
+        fillRule="evenodd"
+        d="m352 0l-192 0c-88 0-160 72-160 160l0 192c0 88 72 160 160 160l192 0c88 0 160-72 160-160l0-192c0-88-72-160-160-160z m-64 105c22 0 39 2 46 3l0 57c-14-2-31-3-49-3-72 0-134 47-134 130 0 51 30 92 83 104 14 3 29 5 44 5 58 0 101-40 112-96 2-12 4-24 4-37l0-173c-9-1-26-3-57-3-10 0-19 9-19 19l0 13c0 10 9 19 19 19 18 0 37 2 49 5z m-123 198c0 38 32 69 70 69 38 0 69-31 69-69 0-39-31-70-69-70-38 0-70 31-70 70z"
+      />
     </svg>
   );
 }

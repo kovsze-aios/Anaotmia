@@ -202,6 +202,7 @@ const es: Dictionary = {
   /** Global footer. */
   footer: {
     donate: "Apoyar el proyecto",
+    donateAria: "Apoyar el proyecto (se abre en una pestaña nueva)",
   },
 
   reader: {

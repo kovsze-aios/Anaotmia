@@ -2,16 +2,8 @@
 
 import { useI18n } from "@/i18n";
 
-/**
- * Where the button will point once a payment provider is chosen.
- *
- * A same-page anchor on purpose: an external `href` that is not live yet would
- * be a dead outbound link, and swapping one constant is the whole change when
- * the Stripe or Buy Me a Coffee URL exists. Add `target="_blank"` and
- * `rel="noopener noreferrer"` at the same time — and say so in the label,
- * which is why the wording here does not promise a new tab yet.
- */
-const DONATE_HREF = "#donate";
+/** Where support goes. External, so the link opens in a new tab. */
+const DONATE_HREF = "https://buycoffee.to/sportnotes.ai";
 
 /**
  * Support button for the footer.
@@ -22,9 +14,12 @@ const DONATE_HREF = "#donate";
  *
  * Text only. The heart that used to sit beside the label is gone: with the
  * words visible the icon was decoration, and the footer reads cleaner without
- * it. `title` and `aria-label` are absent for the same reason — the visible
- * text is already the accessible name, so a tooltip repeating it is noise for
- * pointer users and duplication for screen readers.
+ * it.
+ *
+ * `aria-label` is the one place the visible text is not the whole accessible
+ * name. The link now leaves the site for buycoffee.to in a new tab, and a new
+ * tab that opens unannounced is disorienting for screen reader users, so the
+ * name says so where the visible label stays short.
  *
  * Hover moves the border, surface and text one step, which is the whole state
  * change; no colour is introduced.
@@ -38,6 +33,11 @@ export function DonateButton() {
   return (
     <a
       href={DONATE_HREF}
+      target="_blank"
+      // `noopener` keeps buycoffee.to from reaching back through
+      // `window.opener`; `noreferrer` withholds the referring URL.
+      rel="noopener noreferrer"
+      aria-label={t.footer.donateAria}
       className={
         "inline-flex h-11 shrink-0 items-center rounded-lg border px-4 " +
         "text-sm font-medium transition-colors focus-ring " +

@@ -1,10 +1,22 @@
-import { GitHubIcon, LinkedInIcon, InstagramIcon } from "./icons";
+import { FacebookIcon, GitHubIcon, InstagramIcon } from "./icons";
 import { DonateButton } from "./DonateButton";
 
+/**
+ * The project's accounts, in the order they are worth following: the two
+ * places the material is published, then the place it is built.
+ *
+ * LinkedIn used to sit here on a `#` href. There is no LinkedIn account behind
+ * it, and an icon that goes nowhere costs a reader a click to learn that, so
+ * it is gone rather than pointing somewhere plausible.
+ *
+ * `title` carries the same text as `aria-label` on purpose: the icons have no
+ * visible text, so pointer users need the tooltip and assistive tech needs the
+ * name, and they should agree.
+ */
 const socialLinks = [
-  { icon: GitHubIcon, href: "#", title: "GitHub" },
-  { icon: LinkedInIcon, href: "#", title: "LinkedIn" },
-  { icon: InstagramIcon, href: "#", title: "Instagram" },
+  { icon: FacebookIcon, href: "https://www.facebook.com/sportnotespl/", title: "Facebook" },
+  { icon: InstagramIcon, href: "https://www.instagram.com/sportnotes.ai", title: "Instagram" },
+  { icon: GitHubIcon, href: "https://github.com/kovsze-aios", title: "GitHub" },
 ];
 
 export function Footer() {
@@ -23,6 +35,9 @@ export function Footer() {
                   title={social.title}
                   aria-label={social.title}
                   className="footer-minimal__social-link focus-ring"
+                  // Leaving the site, so a new tab — and `noopener` with it, or
+                  // the opened page gets a handle on this one through
+                  // `window.opener`.
                   target="_blank"
                   rel="noopener noreferrer"
                 >

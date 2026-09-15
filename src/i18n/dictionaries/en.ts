@@ -217,6 +217,7 @@ const en = {
   /** Global footer. */
   footer: {
     donate: "Support the project",
+    donateAria: "Support the project (opens in a new tab)",
   },
 
   reader: {
