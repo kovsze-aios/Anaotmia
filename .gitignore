@@ -54,3 +54,6 @@ temp/
 # Python bytecode from the ingestion pipeline
 __pycache__/
 *.pyc
+
+# Playwright MCP debugging artifacts
+.playwright-mcp/

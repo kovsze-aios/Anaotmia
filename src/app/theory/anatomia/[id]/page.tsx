@@ -1,80 +1,53 @@
-import type { Metadata, ResolvingMetadata } from "next";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { TextbookContent } from "@/components/TextbookContent";
-import { ReaderToc } from "@/components/reader/ReaderToc";
-import { ReaderPagination } from "@/components/reader/ReaderPagination";
-import { TextToSpeechPlayer } from "@/components/reader/TextToSpeechPlayer";
-import {
-  getAnatomyDomains,
-  getAnatomySectionWithDomain,
-  getReaderSpine,
-  getReaderPosition,
-} from "@/server";
+import type { Metadata } from "next";
+
+import { TheoryReaderPage, theoryChapterParams } from "@/components/TheoryReaderPage";
+import { getTheorySectionWithDomain } from "@/server";
 import { absoluteUrl, chapterDescription } from "@/lib/seo";
+
+const SUBJECT = "anatomia" as const;
+const SUBJECT_LABEL = "Anatomia";
+const BASE_PATH = "/theory/anatomia";
 
 interface Props {
   params: Promise<{ id: string }>;
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anatomia2026.pl";
-
-// Every anatomy section is prerendered at build time. The textbook corpus is
-// static, so there is no reason to pay per-request rendering — and these are
-// the most-linked pages on the site (sidebar, welcome grid, search, OG).
+// Prerendered at build time. The corpus is static, and these are the pages the
+// sitemap points search engines at, so there is no reason to render them per
+// request.
 export function generateStaticParams() {
-  return getAnatomyDomains().flatMap((domain) =>
-    domain.sections.map((section) => ({ id: section.id })),
-  );
+  return theoryChapterParams(SUBJECT);
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  _parent: ResolvingMetadata
-): Promise<Metadata> {
-  const resolvedParams = await params;
-  const id = resolvedParams.id;
-  const found = getAnatomySectionWithDomain(id);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const found = getTheorySectionWithDomain(SUBJECT, id);
 
   if (!found) {
-    return {
-      title: "Rozdział nie znaleziony",
-    };
+    return { title: "Rozdział nie znaleziony" };
   }
 
   const { section, domain } = found;
-  // Bare chapter name: the root template appends the brand exactly once.
+  // The root layout's template appends "| Medycyna", so the title carries the
+  // topic and nothing else.
   const title = section.title;
-  // Drawn from the chapter's own prose. The template this replaced produced
-  // the same sentence on all 687 pages, which search engines read as
-  // boilerplate and discard in favour of a snippet they pick themselves.
   const description = chapterDescription(section);
-
-  // Encode parameters for dynamic OG image
-  const ogTitle = encodeURIComponent(section.title);
-  const ogDomain = encodeURIComponent(domain.title);
-  const ogImage = `/api/og?title=${ogTitle}&domain=${ogDomain}`;
+  const url = absoluteUrl(`${BASE_PATH}/${section.id}`);
+  const ogImage = `/api/og?title=${encodeURIComponent(section.title)}&domain=${encodeURIComponent(domain.title)}`;
 
   return {
     title,
     description,
-    alternates: { canonical: absoluteUrl(`/theory/anatomia/${section.id}`) },
+    alternates: { canonical: url },
     openGraph: {
-      // Shared links carry no title template, so the brand is spelled out.
+      // Social cards carry no title template, so the brand is spelled out.
       title: `${section.title} | Medycyna`,
       description,
       type: "article",
+      url,
       siteName: "Medycyna",
       locale: "pl_PL",
-      url: absoluteUrl(`/theory/anatomia/${section.id}`),
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: section.title,
-        },
-      ],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: section.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -85,108 +58,7 @@ export async function generateMetadata(
   };
 }
 
-export default async function TextbookSectionPage({ params }: Props) {
-  const resolvedParams = await params;
-  const id = resolvedParams.id;
-  const found = getAnatomySectionWithDomain(id);
-
-  if (!found) {
-    notFound();
-  }
-
-  const { section, domain } = found;
-  // Reading spine and position are resolved server-side; only the light
-  // projections cross to the client, never the chapter corpus.
-  const spine = getReaderSpine();
-  const position = getReaderPosition(section.id);
-  const sectionUrl = `${SITE_URL}/theory/anatomia/${section.id}`;
-  const domainUrl = `${SITE_URL}/theory/anatomia/${domain.sections[0]?.id ?? ""}`;
-
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: section.title,
-    description: chapterDescription(section),
-    articleSection: domain.title,
-    inLanguage: "pl",
-    author: { "@type": "Organization", name: "Medycyna" },
-    publisher: { "@type": "Organization", name: "Medycyna" },
-    mainEntityOfPage: sectionUrl,
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Strona główna", item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "Anatomia", item: `${SITE_URL}/theory/anatomia` },
-      { "@type": "ListItem", position: 3, name: domain.title, item: domainUrl },
-      { "@type": "ListItem", position: 4, name: section.title, item: sectionUrl },
-    ],
-  };
-
-  return (
-    // The reading view no longer sits inside the dashboard's sidebar layout, so
-    // it supplies its own shell: full-height ground and the vertical rhythm the
-    // old `.textbook-content` wrapper used to provide.
-    <div className="min-h-screen pb-8 pt-4">
-      <nav aria-label="Okruszki" className="mx-auto w-full max-w-3xl px-4 pb-2 text-sm">
-        <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
-          <li>
-            <Link href="/" className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100">
-              Strona główna
-            </Link>
-          </li>
-          <li aria-hidden="true">/</li>
-          <li>
-            <Link href="/theory/anatomia" className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100">
-              Anatomia
-            </Link>
-          </li>
-          <li aria-hidden="true">/</li>
-          <li>
-            <Link
-              href={domainUrl}
-              className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100"
-            >
-              {domain.title}
-            </Link>
-          </li>
-          <li aria-hidden="true">/</li>
-          <li aria-current="page" className="truncate text-zinc-900 dark:text-zinc-100">
-            {section.title}
-          </li>
-        </ol>
-      </nav>
-
-      {/* Centred reading column — comfortable measure for long-form prose. */}
-      <div className="mx-auto w-full max-w-3xl px-4">
-        <TextbookContent section={section} linkAnatomy />
-      </div>
-
-      {position && <ReaderPagination position={position} />}
-      {position && <ReaderToc spine={spine} position={position} />}
-
-      {/* Reads the chapter aloud and turns the page when it ends. Only the
-          page bodies are handed over: `summary` is an excerpt of the first
-          one, so including it would have the chapter open by repeating
-          itself, and the recall questions are meant to be answered, not
-          listened to. */}
-      <TextToSpeechPlayer
-        chapterId={section.id}
-        title={section.title}
-        html={(section.pages ?? []).map((page) => page.htmlContent).join("\n")}
-        nextChapterId={position?.next?.id}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-    </div>
-  );
+export default async function AnatomiaChapterPage({ params }: Props) {
+  const { id } = await params;
+  return <TheoryReaderPage subject={SUBJECT} subjectLabel={SUBJECT_LABEL} id={id} />;
 }

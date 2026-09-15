@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 
-import {
-  TheoryChapterPage,
-  theoryChapterParams,
-} from "@/components/TheoryChapterPage";
+import { TheoryReaderPage, theoryChapterParams } from "@/components/TheoryReaderPage";
 import { getTheorySectionWithDomain } from "@/server";
 import { absoluteUrl, chapterDescription } from "@/lib/seo";
 
 const SUBJECT = "fizjologia" as const;
 const SUBJECT_LABEL = "Fizjologia";
+const BASE_PATH = "/theory/fizjologia";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -34,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // topic and nothing else.
   const title = section.title;
   const description = chapterDescription(section);
-  const url = absoluteUrl(`/theory/fizjologia/${section.id}`);
+  const url = absoluteUrl(`${BASE_PATH}/${section.id}`);
   const ogImage = `/api/og?title=${encodeURIComponent(section.title)}&domain=${encodeURIComponent(domain.title)}`;
 
   return {
@@ -62,5 +60,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function FizjologiaChapterPage({ params }: Props) {
   const { id } = await params;
-  return <TheoryChapterPage subject={SUBJECT} subjectLabel={SUBJECT_LABEL} id={id} />;
+  return <TheoryReaderPage subject={SUBJECT} subjectLabel={SUBJECT_LABEL} id={id} />;
 }

@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils";
 
 export interface ReaderPaginationProps {
   position: ReaderPosition;
+  /** Subject route the chapters live under, e.g. `/theory/fizjologia`. */
+  basePath: string;
 }
 
 /** 44px minimum in both axes, matching the touch-target floor used elsewhere. */
@@ -24,7 +26,7 @@ const CONTROL =
  * this component knowing volumes exist. When a jump does cross a volume, the
  * label says so — otherwise the reader silently changes book.
  */
-export function ReaderPagination({ position }: ReaderPaginationProps) {
+export function ReaderPagination({ position, basePath }: ReaderPaginationProps) {
   const { t, n } = useI18n();
   const { prev, next } = position;
 
@@ -42,7 +44,7 @@ export function ReaderPagination({ position }: ReaderPaginationProps) {
       <div className="flex flex-col gap-3 sm:flex-row">
         {prev ? (
           <Link
-            href={`/theory/anatomia/${prev.id}`}
+            href={`${basePath}/${prev.id}`}
             rel="prev"
             className={cn(
               CONTROL,
@@ -82,7 +84,7 @@ export function ReaderPagination({ position }: ReaderPaginationProps) {
 
         {next ? (
           <Link
-            href={`/theory/anatomia/${next.id}`}
+            href={`${basePath}/${next.id}`}
             rel="next"
             className={cn(
               CONTROL,

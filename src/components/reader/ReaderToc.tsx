@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronRight, List, X } from "lucide-react";
 
@@ -9,9 +9,18 @@ import { useI18n } from "@/i18n";
 import { HIDE_SCROLLBAR, cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 
+/**
+ * Frames the drawer gets to lay itself out before the auto-scroll gives up.
+ * ~20 frames is a third of a second at 60Hz — long enough for the portal and
+ * the slide-in, short enough that a list with nothing to scroll costs nothing.
+ */
+const MAX_SCROLL_ATTEMPTS = 20;
+
 export interface ReaderTocProps {
   spine: ReaderSpine;
   position: ReaderPosition;
+  /** Subject route the chapters live under, e.g. `/theory/biologia`. */
+  basePath: string;
 }
 
 /**
@@ -25,9 +34,56 @@ export interface ReaderTocProps {
  * Topics are only rendered under the chapter currently open, because they are
  * in-page anchors — they only mean anything on the page you are already on.
  */
-export function ReaderToc({ spine, position }: ReaderTocProps) {
+export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
   const { t, n } = useI18n();
   const [open, setOpen] = useState(false);
+  const currentChapter = useRef<HTMLAnchorElement>(null);
+
+  /**
+   * Brings the chapter being read into view when the drawer opens.
+   *
+   * A volume runs to a couple of hundred chapters, so the list opened at the
+   * top and left the reader scrolling to find where they already were —
+   * further every chapter they advanced.
+   *
+   * The scroll cannot run on the effect itself: the drawer renders into a
+   * portal and slides in, so on the frame the effect fires the list may not be
+   * mounted yet, and scrolling a panel with no resolved height is silently a
+   * no-op. So it waits for a frame on which the list is both present and
+   * actually scrollable, then scrolls once and stops.
+   *
+   * Once, deliberately — `scrollIntoView` restarts a smooth scroll from
+   * wherever the list currently is, so calling it every frame would pin the
+   * list in place instead of moving it.
+   *
+   * `block: "center"` rather than "start" so the chapters either side stay
+   * visible — that is what makes the list read as a position in the book
+   * rather than a jump.
+   */
+  useEffect(() => {
+    if (!open) return;
+
+    let frame = 0;
+    let attempts = 0;
+
+    const attempt = () => {
+      const node = currentChapter.current;
+      const list = node?.closest<HTMLElement>("[data-toc-list]");
+
+      if (node && list && list.scrollHeight > list.clientHeight) {
+        node.scrollIntoView({ block: "center", behavior: "smooth" });
+        return;
+      }
+
+      // A short volume never becomes scrollable, and there is nothing to
+      // scroll to; the cap is what stops that case spinning a frame loop for
+      // as long as the drawer stays open.
+      if (++attempts < MAX_SCROLL_ATTEMPTS) frame = requestAnimationFrame(attempt);
+    };
+
+    frame = requestAnimationFrame(attempt);
+    return () => cancelAnimationFrame(frame);
+  }, [open, position.chapterId]);
 
   return (
     <>
@@ -75,6 +131,9 @@ export function ReaderToc({ spine, position }: ReaderTocProps) {
 
           <nav
             aria-label={t.reader.toc}
+            // Marks the scrolling element for the auto-scroll effect, which has
+            // to know whether this panel is scrollable yet before it tries.
+            data-toc-list=""
             className={cn("min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-3", HIDE_SCROLLBAR)}
           >
             {spine.volumes.map((volume) => {
@@ -89,8 +148,8 @@ export function ReaderToc({ spine, position }: ReaderTocProps) {
                     key={volume.id}
                     href={
                       volume.firstChapterId
-                        ? `/theory/anatomia/${volume.firstChapterId}`
-                        : "/theory/anatomia"
+                        ? `${basePath}/${volume.firstChapterId}`
+                        : basePath
                     }
                     onClick={() => setOpen(false)}
                     className="mb-1 flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-ring dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
@@ -130,9 +189,11 @@ export function ReaderToc({ spine, position }: ReaderTocProps) {
                       return (
                         <li key={chapter.id}>
                           <Link
-                            href={`/theory/anatomia/${chapter.id}`}
+                            ref={isCurrent ? currentChapter : undefined}
+                            href={`${basePath}/${chapter.id}`}
                             onClick={() => setOpen(false)}
                             aria-current={isCurrent ? "page" : undefined}
+                            data-current={isCurrent || undefined}
                             className={cn(
                               "block rounded-md px-3 py-2 text-[13px] leading-snug transition-colors focus-ring",
                               isCurrent

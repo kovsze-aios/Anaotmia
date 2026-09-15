@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { TheorySubjectLanding } from "@/components/TheorySubjectLanding";
 import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
@@ -8,45 +8,22 @@ export const metadata: Metadata = {
     "Zagadnienia z anatomii zmapowane pod wymagania akademickie oraz maturalne. Active Recall, pytania egzaminacyjne i pełne opisy akademickie.",
 };
 
-export default function TextbookPage() {
+export default function TeoriaAnatomiaPage() {
   // Only the chapter tree is needed here, and every action is a navigation —
   // so this page ships no client JavaScript at all.
-  const domains = getNavDomains("anatomia");
-
   return (
-    <div className="textbook-welcome">
-      <h1>Inteligentny Podręcznik Medyczny</h1>
-      <p>
-        Wybierz interesujący Cię dział z panelu bocznego lub poniższego menu, aby rozpocząć aktywną
-        naukę z systemem <strong>Active Recall</strong>.
-      </p>
-
-      <div className="textbook-welcome__exam">
-        {/* Neutral chip: a blue badge was the loudest non-NOIR element on the
-            textbook landing view. Border carries the emphasis instead of hue. */}
-        <h2 className="w-fit rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
-          Zakres Materiału Egzaminacyjnego
-        </h2>
-        <p>Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:</p>
-        <div className="textbook-welcome__domain-grid">
-          {domains
-            .filter((domain) => domain.sections.length > 0)
-            .map((domain) => (
-              <Link
-                key={domain.id}
-                href={`/theory/anatomia/${domain.sections[0].id}`}
-                className="textbook-welcome__domain-btn focus-ring"
-              >
-                {domain.icon} {domain.title}
-              </Link>
-            ))}
-        </div>
-      </div>
-
-      <p className="text-sm text-muted-foreground">
-        System oparty na metodzie aktywnego przypominania (<em>Active Recall</em>) — kliknij na
-        pytanie w tekście, aby odsłonić oficjalny klucz odpowiedzi.
-      </p>
-    </div>
+    <TheorySubjectLanding
+      basePath="/theory/anatomia"
+      heading="Inteligentny Podręcznik Medyczny"
+      intro={
+        <>
+          Wybierz interesujący Cię dział z panelu bocznego lub poniższego menu, aby rozpocząć
+          aktywną naukę z systemem <strong>Active Recall</strong>.
+        </>
+      }
+      scopeHeading="Zakres Materiału Egzaminacyjnego"
+      domainsLabel="Zagadnienia zmapowane pod wymagania akademickie oraz maturalne Formuły 2015:"
+      domains={getNavDomains("anatomia")}
+    />
   );
 }

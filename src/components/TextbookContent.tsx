@@ -192,9 +192,14 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
               items={section.toc.map((t) => ({ id: t.anchorId, title: t.title, level: 3 }))}
             />
           )}
-          {section.pages.map((page) => (
+          {/* Keyed by index, not by `pageNumber`: 24 chapters across the four
+              corpora carry repeated page numbers (all of them "1") from the
+              ingestion pipeline, and React drops or duplicates children when
+              two siblings share a key. The array is static per route and never
+              reordered, so the index is a stable identity here. */}
+          {section.pages.map((page, pageIndex) => (
             <section
-              key={page.pageNumber}
+              key={pageIndex}
               className="page-card bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm"
             >
               <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-100 dark:border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">

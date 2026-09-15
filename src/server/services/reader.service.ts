@@ -6,20 +6,20 @@ import type {
   ReaderTopic,
   ReaderVolumeSummary,
 } from "../models";
-import { getDomains } from "../repositories";
+import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
 /**
- * Builds the reading spine for the anatomy book.
+ * Builds the reading spine for a subject.
  *
- * The ordering is exactly the domain order declared in the anatomy repository,
- * flattened across volumes — so paging forward from the last chapter of Tom 1
- * lands on the first chapter of Tom 2 without the UI knowing anything about
- * volume boundaries.
+ * The ordering is exactly the domain order declared in that subject's
+ * repository, flattened across volumes — so paging forward from the last
+ * chapter of Tom 1 lands on the first chapter of Tom 2 without the UI knowing
+ * anything about volume boundaries.
  *
  * Derived rather than stored: neighbours and indices are a property of the
- * sequence. Writing `prevId`/`nextId` into each of the 796 generated data files
- * would go stale the first time a chapter was inserted, and the pipeline would
- * have to rewrite every neighbour on each run.
+ * sequence. Writing `prevId`/`nextId` into each generated data file would go
+ * stale the first time a chapter was inserted, and the pipeline would have to
+ * rewrite every neighbour on each run.
  *
  * Only the open volume's chapters travel to the client. Sending all of them put
  * ~104 kB of titles on every chapter page for a drawer that shows one volume at
@@ -39,16 +39,24 @@ interface BuiltSpine {
   chaptersByVolume: Map<string, ReaderChapter[]>;
 }
 
-let cache: BuiltSpine | null = null;
-let positionCache: Map<string, ReaderPosition> | null = null;
+/**
+ * Built per subject and kept.
+ *
+ * The spine used to be a single cached object over the anatomy repository,
+ * because anatomy was the only subject with a reading view. Every subject has
+ * one now, and they have different chapters, so the cache is keyed by subject
+ * rather than shared.
+ */
+const cache = new Map<TheorySubject, BuiltSpine>();
+const positionCache = new Map<TheorySubject, Map<string, ReaderPosition>>();
 
-function build(): BuiltSpine {
+function build(subject: TheorySubject): BuiltSpine {
   let order = 0;
   const flat: FlatEntry[] = [];
   const chaptersByVolume = new Map<string, ReaderChapter[]>();
   const volumes: ReaderVolumeSummary[] = [];
 
-  for (const domain of getDomains()) {
+  for (const domain of getTheoryDomains(subject)) {
     const chapters = domain.sections.map<ReaderChapter>((section) => ({
       id: section.id,
       title: section.title,
@@ -78,14 +86,18 @@ function build(): BuiltSpine {
   return { spine: { volumes, totalChapters: order }, flat, chaptersByVolume };
 }
 
-function built(): BuiltSpine {
-  cache ??= build();
-  return cache;
+function built(subject: TheorySubject): BuiltSpine {
+  let entry = cache.get(subject);
+  if (!entry) {
+    entry = build(subject);
+    cache.set(subject, entry);
+  }
+  return entry;
 }
 
 /** Volume list for the drawer. Chapters travel with `getReaderPosition`. */
-export function getReaderSpine(): ReaderSpine {
-  return built().spine;
+export function getReaderSpine(subject: TheorySubject): ReaderSpine {
+  return built(subject).spine;
 }
 
 /**
@@ -95,8 +107,8 @@ export function getReaderSpine(): ReaderSpine {
  * not, so their headings are read out of the content blocks instead. Either way
  * a topic is only useful if it has an anchor to scroll to.
  */
-function topicsFor(sectionId: string): ReaderTopic[] {
-  for (const domain of getDomains()) {
+function topicsFor(subject: TheorySubject, sectionId: string): ReaderTopic[] {
+  for (const domain of getTheoryDomains(subject)) {
     const section = domain.sections.find((s) => s.id === sectionId);
     if (!section) continue;
 
@@ -121,8 +133,8 @@ function topicsFor(sectionId: string): ReaderTopic[] {
   return [];
 }
 
-function buildPositions(): Map<string, ReaderPosition> {
-  const { spine, flat, chaptersByVolume } = built();
+function buildPositions(subject: TheorySubject): Map<string, ReaderPosition> {
+  const { spine, flat, chaptersByVolume } = built(subject);
 
   const toNeighbour = (
     entry: FlatEntry | undefined,
@@ -146,7 +158,7 @@ function buildPositions(): Map<string, ReaderPosition> {
       volumeTitle: entry.volumeTitle,
       volumeShortTitle: entry.volumeShortTitle,
       volumeChapters: chaptersByVolume.get(entry.volumeId) ?? [],
-      topics: topicsFor(entry.chapter.id),
+      topics: topicsFor(subject, entry.chapter.id),
       prev: toNeighbour(flat[i - 1], entry.volumeId),
       next: toNeighbour(flat[i + 1], entry.volumeId),
     });
@@ -155,7 +167,14 @@ function buildPositions(): Map<string, ReaderPosition> {
 }
 
 /** Position, neighbours, sibling chapters and topics for one chapter. */
-export function getReaderPosition(chapterId: string): ReaderPosition | undefined {
-  positionCache ??= buildPositions();
-  return positionCache.get(chapterId);
+export function getReaderPosition(
+  subject: TheorySubject,
+  chapterId: string,
+): ReaderPosition | undefined {
+  let positions = positionCache.get(subject);
+  if (!positions) {
+    positions = buildPositions(subject);
+    positionCache.set(subject, positions);
+  }
+  return positions.get(chapterId);
 }

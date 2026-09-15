@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { TheorySubjectView } from "@/components/TheorySubjectView";
+import { TheorySubjectLanding } from "@/components/TheorySubjectLanding";
 import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TeoriaFizjologiaPage() {
   return (
-    <TheorySubjectView
+    <TheorySubjectLanding
       basePath="/theory/fizjologia"
       heading="Fizjologia — Teoria"
       intro="Kompleksowy materiał teoretyczny. Każdy rozdział zawiera wbudowane pytania Active Recall."

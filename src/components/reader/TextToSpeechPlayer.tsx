@@ -31,6 +31,8 @@ export interface TextToSpeechPlayerProps {
   html: string;
   /** Turned to when the chapter finishes. Absent on the last chapter. */
   nextChapterId?: string;
+  /** Subject route the chapters live under, e.g. `/theory/chemia`. */
+  basePath: string;
 }
 
 /** 44px floor, the same touch target the rest of the reader chrome uses. */
@@ -56,6 +58,7 @@ export function TextToSpeechPlayer({
   title,
   html,
   nextChapterId,
+  basePath,
 }: TextToSpeechPlayerProps) {
   const router = useRouter();
   const { t } = useI18n();
@@ -119,7 +122,7 @@ export function TextToSpeechPlayer({
       setStatus("idle");
       setProgress(0);
       if (nextChapterId) {
-        router.push(`/theory/anatomia/${nextChapterId}?${AUTOPLAY_PARAM}=1`);
+        router.push(`${basePath}/${nextChapterId}?${AUTOPLAY_PARAM}=1`);
       }
     };
 
@@ -134,7 +137,7 @@ export function TextToSpeechPlayer({
       utterance.onerror = advance;
       synth.speak(utterance);
     }
-  }, [html, nextChapterId, router, teardown, title]);
+  }, [basePath, html, nextChapterId, router, teardown, title]);
 
   // Held in a ref so the reset effect below can call the current version
   // without listing every prop `start` closes over among its dependencies —
