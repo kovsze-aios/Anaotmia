@@ -8,3 +8,6 @@
 ## 2026-07-20 - Global Navigation Interactive Elements Focus Visible Styles
 **Learning:** Found multiple instances of mismatched or missing `focus-visible` utility classes for interactive elements (`Link` buttons) on theoretical and topics page causing accessibility regressions during keyboard navigation. Custom styles were missing or mismatched `focus:ring-blue-500` instead of the app design tokens.
 **Action:** Standardize on `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` across all custom interactive components to ensure consistent keyboard accessibility.
+## 2026-09-17 - Reduced Screen Reader Noise in Card Layouts
+**Learning:** When building card-based navigation with full-card `<Link>` wrappers, purely visual elements (like large background icons) and generic repetitive text (like 'Click here' or 'Go to course') create immense auditory noise for screen reader users. The screen reader will read the whole content of the link block, confusing the user with redundant context.
+**Action:** Apply `aria-hidden="true"` to these secondary structural elements so screen readers focus exclusively on the meaningful, unique card content (Title, Subtitle, Description) inside the wrapper.
