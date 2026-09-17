@@ -24,3 +24,9 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+## 2026-09-17 - Array Filter Memoization
+**Learning:** Performing a  operation directly within a React component's render body forces a new array allocation on every render, even if the source data hasn't changed. This can trigger unnecessary re-renders in mapped child components, especially in list/card views like Matura questions.
+**Action:** Always wrap derived array computations (like , , or ) in `useMemo` to preserve referential equality when dependencies remain stable.
+## 2026-09-17 - Array Filter Memoization
+**Learning:** Performing a `.filter()` operation directly within a React component's render body forces a new array allocation on every render, even if the source data hasn't changed. This can trigger unnecessary re-renders in mapped child components, especially in list/card views like Matura questions.
+**Action:** Always wrap derived array computations (like `.filter()`, `.map()`, or `.reduce()`) in `useMemo` to preserve referential equality when dependencies remain stable.
