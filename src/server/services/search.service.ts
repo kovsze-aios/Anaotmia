@@ -38,10 +38,63 @@ interface SearchItem {
 
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
+  // ⚡ Bolt Optimization: Optimized makeExcerpt
+  // 💡 What: Replaced global regex replace (/\s+/g) with a bounded charCodeAt loop.
+  // 🎯 Why: Eagerly replacing whitespace on massive string fields during index build causes severe memory overhead and CPU blockage.
+  // 📊 Impact: O(max) processing time instead of O(N). Prevents large memory allocations.
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  let result = "";
+  let inSpace = false;
+  let hasChars = false;
+  let i = 0;
+
+  // Skip leading whitespace
+  while (i < text.length) {
+    const code = text.charCodeAt(i);
+    // 32 = space, 9-13 = tab/newlines, 160 = nbsp
+    if (code <= 32 || code === 160) {
+      i++;
+    } else {
+      break;
+    }
+  }
+
+  // Process until max length
+  for (; i < text.length && result.length < max; i++) {
+    const code = text.charCodeAt(i);
+    const isSpace = code <= 32 || code === 160;
+
+    if (isSpace) {
+      if (hasChars && !inSpace) {
+        result += " ";
+        inSpace = true;
+      }
+    } else {
+      result += text[i];
+      inSpace = false;
+      hasChars = true;
+    }
+  }
+
+  if (!hasChars) return undefined;
+
+  // Check if there are non-whitespace characters remaining
+  if (result.length === max) {
+    let hasMore = false;
+    for (let j = i; j < text.length; j++) {
+      const code = text.charCodeAt(j);
+      if (code > 32 && code !== 160) {
+        hasMore = true;
+        break;
+      }
+    }
+    if (hasMore) {
+      return `${result.trimEnd()}…`;
+    }
+  }
+
+  return result.trimEnd();
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
