@@ -26,7 +26,7 @@ export function Topics() {
         {SUBJECT_CARDS.map((card) => (
           <Link key={card.key} href={card.href} className="subject-card focus-ring">
             <div className="subject-card__img" style={{ background: card.color }}>
-              <span className="subject-card__icon">{card.icon}</span>
+              <span className="subject-card__icon" aria-hidden="true">{card.icon}</span>
             </div>
             <div className="subject-card__content">
               <div className="subject-card__subtitle">{t.subjects[card.subtitleKey]}</div>
@@ -35,7 +35,7 @@ export function Topics() {
                 {t.subjects[card.bodyKey]}{" "}
                 <strong>{t.subjects[card.emphasisKey]}</strong>
               </div>
-              <div className="subject-card__cta">{t.subjects.subjectCta}</div>
+              <div className="subject-card__cta" aria-hidden="true">{t.subjects.subjectCta}</div>
             </div>
           </Link>
         ))}
@@ -54,6 +54,7 @@ export function Topics() {
             <div className="topicbox__img" style={{ background: topic.color }}>
               <span
                 className="topicbox__icon"
+                aria-hidden="true"
                 style={{
                   fontSize: "60px",
                   display: "flex",
@@ -69,7 +70,7 @@ export function Topics() {
             <div className="topicbox__content">
               <div className="topicbox__title">{t.domains[topic.key]}</div>
               <div className="topicbox__description">{t.domains[topic.bodyKey]}</div>
-              <div className="topicbox__cta">{t.domains.cta}</div>
+              <div className="topicbox__cta" aria-hidden="true">{t.domains.cta}</div>
             </div>
           </Link>
         ))}
