@@ -11,3 +11,6 @@
 ## 2026-09-18 - Hide redundant decorative content in link wrappers
 **Learning:** When entire card components (like subjects) are wrapped in a single `<Link>`, screen readers will announce all text inside it sequentially. Repetitive generic texts like 'Wybierz' (Select) and decorative icons add unnecessary audio clutter.
 **Action:** Use `aria-hidden="true"` on purely decorative icon containers and generic, repetitive Call-To-Action texts within full-card links to streamline the screen reader experience, focusing users on the meaningful titles and descriptions.
+## 2026-09-18 - CI failure due to missing packages array
+**Learning:** The CI check failed during `pnpm install --frozen-lockfile` with the error `packages field missing or empty`. This occurs in pnpm v9+ when a workspace file exists but lacks an explicit packages definition.
+**Action:** Ensure `pnpm-workspace.yaml` explicitly defines a packages array (e.g., `packages: ['.']`) to satisfy pnpm requirements and prevent CI installation failures.
