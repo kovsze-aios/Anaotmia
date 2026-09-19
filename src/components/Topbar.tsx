@@ -30,9 +30,9 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
             onClick={() => setDrawerOpen(true)}
             aria-label={t.topbar.openMenu}
           >
-            <span className="topbar-hamburger__line" />
-            <span className="topbar-hamburger__line" />
-            <span className="topbar-hamburger__line" />
+            <span className="topbar-hamburger__line" aria-hidden="true" />
+            <span className="topbar-hamburger__line" aria-hidden="true" />
+            <span className="topbar-hamburger__line" aria-hidden="true" />
           </button>
 
           {/* Hidden below 640px so the search field gets its width back — see
@@ -76,13 +76,14 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
               aria-label={t.topbar.toggleTheme}
             >
               {/* Icons Layer */}
-              <div className="flex w-full justify-between px-0.5 text-zinc-400 dark:text-zinc-500 z-10 pointer-events-none">
+              <div className="flex w-full justify-between px-0.5 text-zinc-400 dark:text-zinc-500 z-10 pointer-events-none" aria-hidden="true">
                 <Sun className={`h-3.5 w-3.5 transition-colors duration-300 ${!dark ? 'text-zinc-900' : 'text-zinc-600'}`} />
                 <Moon className={`h-3.5 w-3.5 transition-colors duration-300 ${dark ? 'text-zinc-100' : 'text-zinc-400'}`} />
               </div>
 
               {/* Smooth Sliding Circle */}
               <span
+                aria-hidden="true"
                 className={`absolute left-1 top-1 h-5 w-5 rounded-full bg-white dark:bg-zinc-950 shadow-sm transition-transform duration-300 ease-in-out transform ${
                   dark ? 'translate-x-7' : 'translate-x-0'
                 }`}
