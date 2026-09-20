@@ -11,3 +11,4 @@
 ## 2026-09-20 - Screen Reader Artifact Cleanup
 **Learning:** Found multiple instances of unstyled decorative characters (like '✕', '☰', and '←') used directly inside `<button>` and `<Link>` elements that already had an `aria-label` or visible semantic text. These characters are dictated by screen readers and clutter the audio experience (e.g., 'leftwards arrow Matura', 'trigram for heaven Menu').
 **Action:** Always wrap non-semantic decorative unicode characters inside interactive elements in `<span aria-hidden="true">`. Avoid using them directly as raw text nodes.
+## 2026-09-20 - PNPM Workspace Validation\n**Learning:** The `pnpm install --frozen-lockfile` command in CI fails with `packages field missing or empty` if `pnpm-workspace.yaml` doesn't explicitly define a `packages` array, even if there are no sub-packages.\n**Action:** Ensure `pnpm-workspace.yaml` contains at least `packages:\n  - "."` to satisfy pnpm v9+ requirements for workspaces.
