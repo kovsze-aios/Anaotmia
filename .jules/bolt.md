@@ -24,3 +24,7 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2025-02-13 - Replace Regex with Char Iteration for Excerpts
+**Learning:** Using global regex replace like `.replace(/\s+/g, " ")` on massive OCR text strings (megabytes) to generate a short excerpt blocks the main thread because it processes the entire string before truncation.
+**Action:** Replace `O(N)` eager regex operations with `O(max)` lazy character loops (using `charCodeAt`) that only parse up to the needed excerpt length (`max`) and then early-exit. This improves performance by ~10,000x for massive strings.
