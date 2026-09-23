@@ -64,9 +64,15 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // ⚡ Bolt Optimization: Memoize filtered questions array
+  // 💡 What: Wrapped the derived array filtering logic in useMemo.
+  // 🎯 Why: When performing array operations like .filter() inside a React component's render body, derived array computations should be memoized to preserve referential equality and prevent unnecessary re-renders of child components when unrelated state changes.
+  // 📊 Impact: Prevents creating a new array reference on every render when the filter topic and question list have not changed, reducing main thread workload and React reconciliation overhead.
+  const filtered = useMemo(() => {
+    return filterTopic
+      ? questions.filter((q) => q.topicCategory === filterTopic)
+      : questions;
+  }, [questions, filterTopic]);
 
   const changeYear = useCallback(
     (year: number) => {
