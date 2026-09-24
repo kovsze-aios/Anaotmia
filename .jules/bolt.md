@@ -28,3 +28,7 @@
 ## 2025-02-12 - Regex vs Zero-Allocation Bounded Loop for Excerpts
 **Learning:** Using global regex replacements like `replace(/<[^>]*>/g, " ")` and `replace(/\s+/g, " ")` to parse short excerpts from massive OCR strings (often multiple megabytes) creates massive intermediate string allocations and triggers significant O(N) main thread garbage collection pauses.
 **Action:** When extracting a short prefix or excerpt from a massive string, never use global regex replacements. Instead, use a custom bounded `charCodeAt` loop that processes characters O(limit) and halts execution as soon as the target slice length is reached.
+
+## 2025-02-12 - pnpm Workspace Configuration
+**Learning:** In projects using pnpm v9+, the `pnpm-workspace.yaml` file must strictly define a `packages` array (e.g., `packages: ['.']`) even for a monorepo setup at the root. Failing to do so throws a `packages field missing or empty` error during `pnpm install --frozen-lockfile` (common in CI pipelines).
+**Action:** Always ensure `pnpm-workspace.yaml` contains `packages: ['.']` if the project leverages workspaces but lacks explicit package globs.
