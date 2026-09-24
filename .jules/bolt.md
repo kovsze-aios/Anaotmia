@@ -24,3 +24,11 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2025-02-12 - Regex vs Zero-Allocation Bounded Loop for Excerpts
+**Learning:** Using global regex replacements like `replace(/<[^>]*>/g, " ")` and `replace(/\s+/g, " ")` to parse short excerpts from massive OCR strings (often multiple megabytes) creates massive intermediate string allocations and triggers significant O(N) main thread garbage collection pauses.
+**Action:** When extracting a short prefix or excerpt from a massive string, never use global regex replacements. Instead, use a custom bounded `charCodeAt` loop that processes characters O(limit) and halts execution as soon as the target slice length is reached.
+
+## 2025-02-12 - pnpm Workspace Configuration
+**Learning:** In projects using pnpm v9+, the `pnpm-workspace.yaml` file must strictly define a `packages` array (e.g., `packages: ['.']`) even for a monorepo setup at the root. Failing to do so throws a `packages field missing or empty` error during `pnpm install --frozen-lockfile` (common in CI pipelines).
+**Action:** Always ensure `pnpm-workspace.yaml` contains `packages: ['.']` if the project leverages workspaces but lacks explicit package globs.
