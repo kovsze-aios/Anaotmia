@@ -56,7 +56,7 @@ export function TextbookLayout({
       >
         <div className="textbook-sidebar__header">
           <Link href="/" className="textbook-sidebar__home focus-ring rounded-sm">
-            <span aria-hidden="true">←</span> Strona główna
+            <span>←</span> Strona główna
           </Link>
           <h2>Podręcznik</h2>
           <button
@@ -64,7 +64,7 @@ export function TextbookLayout({
             onClick={() => setSidebarOpen(false)}
             aria-label="Zamknij pasek boczny"
           >
-            <span aria-hidden="true">✕</span>
+            ✕
           </button>
         </div>
         <ChapterNav
@@ -85,7 +85,7 @@ export function TextbookLayout({
           onClick={() => setSidebarOpen(true)}
           aria-expanded={sidebarOpen}
         >
-          <span aria-hidden="true">☰</span> Menu
+          ☰ Menu
         </button>
 
         {children}

@@ -99,7 +99,7 @@ function MaturaSubjectViewInner({
       <aside className={`matura-sidebar ${HIDE_SCROLLBAR} overscroll-contain`}>
         <div className="matura-sidebar__header">
           <a href="/matura" className="matura-sidebar__back focus-ring rounded-sm">
-            <span aria-hidden="true">←</span> Matura
+            <span>←</span> Matura
           </a>
           <h2>{sidebarTitle}</h2>
         </div>
