@@ -166,19 +166,37 @@ export default function AtlasExplorer({
       ),
     [atlas],
   );
-  const activeSystems = SYSTEMS.filter((s) => counts[s.id] > 0);
 
-  const selectedParts = state.selected
-    .map((id) => parts.get(id))
-    .filter((p) => !!p);
+  // ⚡ Bolt Optimization: Memoize derived arrays
+  // 💡 What: Wrapped activeSystems, selectedParts, and visibleCount in useMemo.
+  // 🎯 Why: AtlasExplorer has high-frequency state updates (like `progress` from 0-100 during 3D model load). Re-computing these O(N) array operations on every frame block the main thread unnecessarily.
+  // 📊 Impact: Eliminates redundant array filtering and allocation across hundreds of renders during model loading.
+  const activeSystems = useMemo(
+    () => SYSTEMS.filter((s) => counts[s.id] > 0),
+    [counts]
+  );
+
+  const selectedParts = useMemo(
+    () => state.selected.map((id) => parts.get(id)).filter((p) => !!p),
+    [state.selected, parts]
+  );
+
   const selected = selectedParts[0];
-  const system = SYSTEMS.find((s) => s.id === selected?.system);
-  const visibleCount =
-    atlas?.parts.filter((p) =>
-      state.isolate
-        ? state.selected.includes(p.id)
-        : state.visible.includes(p.system) || state.selected.includes(p.id),
-    ).length ?? 0;
+
+  const system = useMemo(
+    () => SYSTEMS.find((s) => s.id === selected?.system),
+    [selected?.system]
+  );
+
+  const visibleCount = useMemo(
+    () =>
+      atlas?.parts.filter((p) =>
+        state.isolate
+          ? state.selected.includes(p.id)
+          : state.visible.includes(p.system) || state.selected.includes(p.id),
+      ).length ?? 0,
+    [atlas?.parts, state.isolate, state.selected, state.visible]
+  );
 
   const results = useMemo(() => {
     if (!atlas) return [];
