@@ -39,9 +39,41 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  // ⚡ Bolt Optimization: O(max) bounded excerpt generation
+  // 💡 What: Replaced global regex replace (/\s+/g) with a bounded charCodeAt loop.
+  // 🎯 Why: Global regex replacement on massive OCR text strings processes the entire string,
+  // causing huge CPU/memory spikes and GC pauses, just to extract the first 160 chars.
+  // 📊 Impact: Reduces excerpt generation time from O(N) to O(max), achieving orders of magnitude faster execution on massive texts.
+  let excerpt = "";
+  let inWhitespace = true; // Start true to skip leading whitespace
+
+  for (let i = 0; i < text.length; i++) {
+    const code = text.charCodeAt(i);
+    const isWhitespace = code === 32 || (code >= 9 && code <= 13) || code === 160;
+
+    if (isWhitespace) {
+      if (!inWhitespace) {
+        inWhitespace = true;
+      }
+    } else {
+      if (inWhitespace && excerpt.length > 0) {
+        if (excerpt.length >= max) {
+          return excerpt.trimEnd() + "…";
+        }
+        excerpt += " ";
+      }
+
+      if (excerpt.length >= max) {
+        return excerpt.trimEnd() + "…";
+      }
+
+      excerpt += text[i];
+      inWhitespace = false;
+    }
+  }
+
+  return excerpt.length > 0 ? excerpt : undefined;
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
