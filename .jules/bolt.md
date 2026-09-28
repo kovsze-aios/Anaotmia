@@ -24,3 +24,7 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2025-02-12 - Excerpt Generation Memory and CPU Overhead
+**Learning:** Generating string excerpts from massive multi-megabyte texts using global regex like `text.replace(/\s+/g, " ")` processes the entire O(N) length of the document and creates massive intermediate strings, even if you only need the first 160 characters. This causes major CPU spikes and GC pauses during index initialization.
+**Action:** When extracting a short bounded snippet or excerpt from a potentially massive string, use a bounded `charCodeAt` loop that stops iterating exactly when the `max` target length is reached, dropping complexity from O(N) to O(max).
