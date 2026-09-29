@@ -3,3 +3,5 @@ allowBuilds:
   sharp: true
   # Native module resolver used by eslint-config-next's import plugin.
   unrs-resolver: true
+packages:
+  - "."
