@@ -1,0 +1,12 @@
+
+> ai-website-clone-template@0.3.1 dev
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 463ms
+
+○ Compiling / ...
+ GET / 200 in 14.7s (next.js: 12.1s, application-code: 2.5s)
+ GET / 200 in 117ms (next.js: 5ms, application-code: 111ms)
