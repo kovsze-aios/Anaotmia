@@ -39,9 +39,51 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  // ⚡ Bolt Optimization: Fast Excerpt Generation
+  // 💡 What: Replace global regex replace (O(N) with massive allocations) with a bounded `charCodeAt` loop (O(max)).
+  // 🎯 Why: Global regex on huge strings (like full textbook sections) allocates memory and causes GC pauses even though we only need the first 160 chars.
+  // 📊 Impact: Reduces memory allocation and main thread blocking significantly when building the search index for large texts.
+
+  let result = "";
+  let lastWasSpace = true; // start true to trim leading spaces
+  let textIndex = 0;
+
+  while (textIndex < text.length && result.length < max) {
+    const code = text.charCodeAt(textIndex);
+    // 32=space, 9=tab, 10=LF, 13=CR
+    const isSpace = code === 32 || code === 9 || code === 10 || code === 13;
+
+    if (isSpace) {
+      if (!lastWasSpace) {
+        result += " ";
+        lastWasSpace = true;
+      }
+    } else {
+      result += text[textIndex];
+      lastWasSpace = false;
+    }
+    textIndex++;
+  }
+
+  if (lastWasSpace && result.length > 0) {
+    result = result.slice(0, -1);
+  }
+
+  if (!result) return undefined;
+
+  // Check if there are more non-whitespace characters to determine if we need an ellipsis
+  let hasMore = false;
+  while (textIndex < text.length) {
+    const code = text.charCodeAt(textIndex);
+    if (code !== 32 && code !== 9 && code !== 10 && code !== 13) {
+      hasMore = true;
+      break;
+    }
+    textIndex++;
+  }
+
+  return hasMore ? result + "…" : result;
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
