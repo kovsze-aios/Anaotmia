@@ -39,9 +39,57 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  // ⚡ Bolt Optimization: Replace regex global replace with bounded charCodeAt loop
+  // 💡 What: Generate excerpts by stepping through characters up to 'max', collapsing spaces manually instead of calling `.replace(/\s+/g, " ")` on the entire massive string.
+  // 🎯 Why: `.replace` with global flags on massive strings (like academic_detail) forces V8 to allocate a completely new massive string in memory, causing main thread blocking and severe GC spikes.
+  // 📊 Impact: O(max) complexity instead of O(N). Prevents large memory allocations during search index build.
+
+  let result = "";
+  let lastWasSpace = true;
+  let i = 0;
+
+  // Skip leading whitespace
+  while (i < text.length) {
+    const charCode = text.charCodeAt(i);
+    if (!((charCode >= 9 && charCode <= 13) || charCode === 32 || charCode === 160)) break;
+    i++;
+  }
+
+  if (i === text.length) return undefined;
+
+  for (; i < text.length; i++) {
+    const charCode = text.charCodeAt(i);
+    const isSpace = (charCode >= 9 && charCode <= 13) || charCode === 32 || charCode === 160;
+
+    if (isSpace) {
+      if (!lastWasSpace) {
+        if (result.length >= max) break;
+        result += " ";
+        lastWasSpace = true;
+      }
+    } else {
+      if (result.length >= max) break;
+      result += text[i];
+      lastWasSpace = false;
+    }
+  }
+
+  result = result.trimEnd();
+
+  let hasMore = false;
+  if (i < text.length) {
+    for (let j = i; j < text.length; j++) {
+      const charCode = text.charCodeAt(j);
+      const isSpace = (charCode >= 9 && charCode <= 13) || charCode === 32 || charCode === 160;
+      if (!isSpace) {
+        hasMore = true;
+        break;
+      }
+    }
+  }
+
+  return hasMore ? `${result}…` : result;
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
