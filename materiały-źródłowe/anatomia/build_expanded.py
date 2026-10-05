@@ -17,7 +17,6 @@ def write_file(path, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print(f"  Written: {os.path.basename(path)} ({len(content):,} chars, {content.count(chr(10))+1} lines)")
 
 # ===================================================================
 # 1. EXPAND BIOLOGY
@@ -35,25 +34,16 @@ def expand_biology():
     anchor = "Efekt: 4 komórki potomne n (haploidalne), zróżnicowane genetycznie (crossing-over + losowe rozchodzenie chromosomów homologicznych = rekombinacja genetyczna). Znaczenie: gametogeneza, zmienność genetyczna.`"
     if anchor in content:
         content = content.replace(anchor, anchor + BIOLOGY_EXTRA_CYTOLOGIA)
-        print("  Biology: Injected cytologia expansion")
-    else:
-        print("  WARNING: Cytologia anchor not found!")
 
     # Inject expanded metabolizm content
     anchor2 = "Mikroelementy (B, Cu, Zn, Mn, Mo, Cl) – niewielkie ilości, ale niezbędne jako kofaktory enzymów.`"
     if anchor2 in content:
         content = content.replace(anchor2, anchor2 + BIOLOGY_EXTRA_METABOLIZM)
-        print("  Biology: Injected metabolizm expansion")
-    else:
-        print("  WARNING: Metabolizm anchor not found!")
 
     # Inject expanded genetyka content
     anchor3 = "CRISPR-Cas9 (nagroda Nobla 2020, Charpentier i Doudna) – precyzyjna edycja genomu: guide RNA kieruje Cas9 do specyficznej sekwencji → pęknięcie dwuniciowe → naprawa NHEJ (indele) lub HDR (wstawienie nowego fragmentu)."
     if anchor3 in content:
         content = content.replace(anchor3, anchor3 + BIOLOGY_EXTRA_GENETYKA)
-        print("  Biology: Injected genetyka expansion")
-    else:
-        print("  WARNING: Genetyka anchor not found!")
 
     write_file(bio_path, content)
     return len(content)
@@ -106,7 +96,6 @@ def expand_chemistry():
             cke_end = content.rfind("];")
             if cke_end > 0:
                 content = content[:cke_end] + extra_chem_tasks + "\n];" + content[cke_end+2:]
-                print("  Chemistry: Added 8 more CKE tasks")
 
     write_file(chem_path, content)
     return len(content)
@@ -120,9 +109,7 @@ def expand_anatomy():
     if os.path.exists(ANATOMY_NOTES_FILE):
         with open(ANATOMY_NOTES_FILE, 'r', encoding='utf-8') as f:
             anatomy_text = f.read()
-        print(f"  Anatomy notes loaded: {len(anatomy_text):,} chars")
     else:
-        print("  WARNING: anatomy_notes_extracted.txt not found!")
         return 0
 
     textbook_dir = os.path.join(BASE, "textbook")
@@ -140,31 +127,14 @@ def expand_anatomy():
 
         total += len(content)
 
-    print(f"  Anatomy total: {total:,} chars across {len(files)} files")
     return total
 
 # ===================================================================
 # MAIN EXECUTION
 # ===================================================================
 if __name__ == "__main__":
-    print("=" * 60)
-    print("MASSIVE CONTENT EXPANSION — BUILD SCRIPT")
-    print("=" * 60)
-
-    print("\n[1/3] Expanding Biology...")
     bio_size = expand_biology()
-    print(f"  Biology complete: {bio_size:,} chars")
-
-    print("\n[2/3] Expanding Chemistry...")
     chem_size = expand_chemistry()
-    print(f"  Chemistry complete: {chem_size:,} chars")
-
-    print("\n[3/3] Expanding Anatomy Textbook files...")
     anatomy_size = expand_anatomy()
 
     total = bio_size + chem_size + anatomy_size
-    print(f"\n{'='*60}")
-    print(f"ALL EXPANSIONS COMPLETE")
-    print(f"Total content: {total:,} chars ({total/1000:.0f} KB)")
-    print(f"Estimated lines: ~{total//80:,}")
-    print(f"{'='*60}")
