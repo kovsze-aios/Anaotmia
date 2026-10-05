@@ -2,14 +2,8 @@ import type { TextbookDomain, TextbookSection } from "../../models";
 import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import { tom3Chapters } from "@/data/anatomia/tomy";
+import { excerpt } from "../../utils/text";
 
-/** Pierwsze ~300 znaków tekstu strony, ucięte na granicy słowa. */
-function excerpt(html: string, limit = 300): string {
-  const text = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-  if (text.length <= limit) return text;
-  const cut = text.lastIndexOf(" ", limit);
-  return text.slice(0, cut > 0 ? cut : limit) + "…";
-}
 
 function mapToSection(item: { id: string; data: StructuredChapter }): TextbookSection {
   const d = item.data;
