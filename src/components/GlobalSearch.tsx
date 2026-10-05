@@ -47,15 +47,30 @@ export function GlobalSearch() {
   }, [query]);
 
   React.useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setOpen((open) => !open);
+        if (!open && searchRef.current) {
+          const input = searchRef.current.querySelector("input");
+          input?.focus();
+        }
+      }
+    };
+
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setOpen(false);
       }
     };
 
+    document.addEventListener("keydown", down);
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    return () => {
+      document.removeEventListener("keydown", down);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   const runCommand = React.useCallback((command: () => unknown) => {
     setOpen(false);
