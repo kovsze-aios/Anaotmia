@@ -67,6 +67,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "jest": "^30.4.2",
+    "jsdom": "^30.1.2",
     "playwright": "^1.62.0-alpha-1783623505000",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.11",
