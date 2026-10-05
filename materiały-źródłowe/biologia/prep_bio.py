@@ -15,5 +15,3 @@ footer_start = original.index("// ========================" + "=================
 header = original[:header_end]
 footer = original[footer_start:]
 
-print(f"Header: {len(header)} chars, Footer: {len(footer)} chars")
-print("Ready to build expanded content. Run build_bio.py next.")
