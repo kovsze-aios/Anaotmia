@@ -2,6 +2,7 @@ import type { TextbookDomain, TextbookSection } from "../../models";
 import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter } from "@/types/theory";
 import * as generated from "@/data/chemia/dzialy";
+import { excerpt } from "../../utils/text";
 
 /**
  * Generated chemistry sources.
@@ -39,13 +40,6 @@ interface ChapterEntry {
  */
 const chapters = generated as unknown as Record<string, ChapterEntry[] | undefined>;
 
-/** Pierwsze ~300 znaków tekstu strony, ucięte na granicy słowa. */
-function excerpt(html: string, limit = 300): string {
-  const text = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-  if (text.length <= limit) return text;
-  const cut = text.lastIndexOf(" ", limit);
-  return text.slice(0, cut > 0 ? cut : limit) + "…";
-}
 
 function mapToSection(item: ChapterEntry): TextbookSection {
   const d = item.data;

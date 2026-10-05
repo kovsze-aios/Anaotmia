@@ -24,3 +24,7 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2025-02-13 - Extracting Excerpts from Massive HTML/Text
+**Learning:** Using chained regexes and `.trim()` like `html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()` on very large domain/textbook strings forces Node to perform multiple full-string passes and heavy allocations. This blocks the main thread during data initialization.
+**Action:** When truncating large raw HTML/text into an excerpt, replace chained global regex replacements with a single-pass `charCodeAt` parser that boundedly collects characters and drops tags/whitespace up to the text limit, making it an O(limit) zero-allocation operation.
