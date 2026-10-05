@@ -11,7 +11,6 @@ def readf(p):
 def writef(p, c):
     with open(p, 'w', encoding='utf-8') as f:
         f.write(c)
-    print(f"  Wrote {os.path.basename(p)}: {len(c):,} chars")
 
 # Biology extra tasks
 bio = """
@@ -76,16 +75,12 @@ chem = """
 """
 
 if __name__ == "__main__":
-    print("SAFE EXPANSION - CKE Tasks Only")
-    print("=" * 40)
-
     bio_path = os.path.join(BASE, "biologia", "domain-01-biology.ts")
     c = readf(bio_path)
     pos = c.rfind("];")
     if pos > 0:
         c = c[:pos] + bio + "\n];" + c[pos+2:]
         writef(bio_path, c)
-        print(f"  Biology: +{bio.count('id:')} CKE tasks")
 
     chem_path = os.path.join(BASE, "chemia", "domain-01-chemistry.ts")
     c = readf(chem_path)
@@ -93,6 +88,3 @@ if __name__ == "__main__":
     if pos > 0:
         c = c[:pos] + chem + "\n];" + c[pos+2:]
         writef(chem_path, c)
-        print(f"  Chemistry: +{chem.count('id:')} CKE tasks")
-
-    print("\nDone!")
