@@ -16,6 +16,8 @@ describe("formatOcrText", () => {
 
   it("strips OCR page markers", () => {
     expect(formatOcrText("tekst--- STRONA 12 ---tekst")).toBe("teksttekst");
+    expect(formatOcrText("tekst---strona 1---tekst")).toBe("teksttekst");
+    expect(formatOcrText("tekst---  STRONA   99  ---tekst")).toBe("teksttekst");
   });
 
   it("joins single newlines (OCR line wrap) into spaces", () => {
@@ -24,14 +26,17 @@ describe("formatOcrText", () => {
 
   it("keeps paragraph breaks (double newlines)", () => {
     expect(formatOcrText("akapit 1\n\nakapit 2")).toBe("akapit 1\n\nakapit 2");
+    expect(formatOcrText("akapit 1\n\n\nakapit 2")).toBe("akapit 1\n\n\nakapit 2");
   });
 
   it("trims surrounding whitespace", () => {
     expect(formatOcrText("  tekst  ")).toBe("tekst");
   });
 
-  it("returns an empty string for empty input", () => {
+  it("returns an empty string for empty input or falsy values", () => {
     expect(formatOcrText("")).toBe("");
+    expect(formatOcrText(null as unknown as string)).toBe("");
+    expect(formatOcrText(undefined as unknown as string)).toBe("");
   });
 });
 
@@ -94,6 +99,17 @@ describe("getSectionWordCount", () => {
       ],
     };
     expect(getSectionWordCount(section)).toBe(9);
+  });
+
+  it("counts words in section pages and strips HTML tags", () => {
+    const section: TextbookSection = {
+      ...base,
+      pages: [
+        { pageNumber: 1, htmlContent: "<p>jeden dwa</p>" },
+        { pageNumber: 2, htmlContent: "<div>trzy <span>cztery</span></div>" },
+      ],
+    };
+    expect(getSectionWordCount(section)).toBe(4);
   });
 
   it("ignores undefined optional fields", () => {
