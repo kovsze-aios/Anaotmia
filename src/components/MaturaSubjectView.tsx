@@ -2,7 +2,7 @@
 
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ActiveRecall } from "@/components/ActiveRecall";
+import { MaturaQuestionCard } from "@/components/MaturaQuestionCard";
 import type { MaturaYearRecord } from "@/server/models";
 import { HIDE_SCROLLBAR } from "@/lib/utils";
 
@@ -179,35 +179,7 @@ function MaturaSubjectViewInner({
           ) : (
             <div className="matura-questions">
               {filtered.map((q) => (
-                <div key={q.id} className="matura-question">
-                  <div className="matura-question__header">
-                    <span className="matura-question__number">
-                      Zadanie {q.questionNumber}
-                    </span>
-                    <span className="matura-question__points">
-                      {q.points} pkt
-                    </span>
-                    <span className="matura-question__topic">
-                      {q.topicCategory}
-                    </span>
-                  </div>
-
-                  {q.instruction && (
-                    <div className="matura-question__instruction">
-                      <p>{q.instruction}</p>
-                    </div>
-                  )}
-
-                  <div className="matura-question__text">
-                    <p>{q.questionText}</p>
-                  </div>
-
-                  <ActiveRecall
-                    question={`Zadanie ${q.questionNumber} — zobacz odpowiedź`}
-                    answer={q.officialCkeAnswer}
-                    examRef={`CKE ${q.year}`}
-                  />
-                </div>
+                <MaturaQuestionCard key={q.id} question={q} />
               ))}
             </div>
           )}
