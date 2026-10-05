@@ -57,3 +57,4 @@ __pycache__/
 
 # Playwright MCP debugging artifacts
 .playwright-mcp/
+coverage/
