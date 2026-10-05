@@ -28,11 +28,4 @@ for page_num in range(len(doc)):
         for line in lines[:5]:
             print(f'p{page_num+1}: {line[:150]}')
 
-print("\n=== PAGES 17-22 FULL TEXT (Lower limb / Femur area) ===")
-for pn in range(16, 23):
-    page = doc[pn]
-    t = page.get_text()
-    print(f'\n--- Page {pn+1} ---')
-    print(t[:2000])
-
 doc.close()
