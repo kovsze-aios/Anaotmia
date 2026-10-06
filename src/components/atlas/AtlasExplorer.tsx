@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useDeferredValue } from "react";
 import Link from "next/link";
 import {
   Activity,
@@ -119,6 +119,11 @@ export default function AtlasExplorer({
   const [details, setDetails] = useState(false);
   const [about, setAbout] = useState(false);
   const [query, setQuery] = useState("");
+  // ⚡ Bolt Optimization: UI Search Responsiveness
+  // 💡 What: Used useDeferredValue to debounce the search query.
+  // 🎯 Why: Decouples input state update from expensive search iteration on atlas.concepts, keeping the keyboard responsive.
+  // 📊 Impact: Prevents main thread blockage on every keystroke during typing.
+  const deferredQuery = useDeferredValue(query);
   const [chosen, setChosen] = useState<AtlasConcept | null>(null);
 
   // Re-reads on locale change so a language switch relabels the error too.
@@ -182,7 +187,7 @@ export default function AtlasExplorer({
 
   const results = useMemo(() => {
     if (!atlas) return [];
-    const term = query.toLowerCase().trim();
+    const term = deferredQuery.toLowerCase().trim();
     if (!term) {
       return SUGGESTED.map((name) =>
         atlas.concepts.find((c) => c.name.toLowerCase() === name),
@@ -197,7 +202,7 @@ export default function AtlasExplorer({
       )
       .sort((a, b) => a.name.length - b.name.length)
       .slice(0, 80);
-  }, [atlas, query, locale]);
+  }, [atlas, deferredQuery, locale]);
 
   const sceneLabels = useMemo(
     () => ({
