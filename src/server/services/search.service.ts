@@ -8,6 +8,7 @@ import {
   getBiologiaRecords,
   getChemiaRecords,
 } from "../repositories";
+import { makeExcerpt } from "../utils/text";
 
 export type { SearchResult, Subject };
 
@@ -35,14 +36,6 @@ interface SearchItem {
   excerpt?: string;
   searchBody?: string;
 }
-
-/** A one-line preview of the matched text, shown under the result title. */
-const makeExcerpt = (text?: string, max = 160): string | undefined => {
-  if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
-};
 
 const THEORY_SOURCES: ReadonlyArray<{
   subject: Subject;
