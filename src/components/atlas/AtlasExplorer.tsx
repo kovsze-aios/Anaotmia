@@ -166,19 +166,34 @@ export default function AtlasExplorer({
       ),
     [atlas],
   );
-  const activeSystems = SYSTEMS.filter((s) => counts[s.id] > 0);
+  // ⚡ Bolt Optimization: Wrap derived state in useMemo
+  // 💡 What: Memoize activeSystems, selectedParts, system, and visibleCount
+  // 🎯 Why: Avoids O(N) array operations (filter, map) blocking the main thread during high-frequency state updates (e.g. 3D model loading progress)
+  // 📈 Impact: Prevents massive GC spikes and improves render performance significantly
+  const activeSystems = useMemo(
+    () => SYSTEMS.filter((s) => counts[s.id] > 0),
+    [counts]
+  );
 
-  const selectedParts = state.selected
-    .map((id) => parts.get(id))
-    .filter((p) => !!p);
+  const selectedParts = useMemo(
+    () => state.selected.map((id) => parts.get(id)).filter((p) => !!p),
+    [state.selected, parts]
+  );
   const selected = selectedParts[0];
-  const system = SYSTEMS.find((s) => s.id === selected?.system);
-  const visibleCount =
-    atlas?.parts.filter((p) =>
+
+  const system = useMemo(
+    () => SYSTEMS.find((s) => s.id === selected?.system),
+    [selected?.system]
+  );
+
+  const visibleCount = useMemo(
+    () => atlas?.parts.filter((p) =>
       state.isolate
         ? state.selected.includes(p.id)
         : state.visible.includes(p.system) || state.selected.includes(p.id),
-    ).length ?? 0;
+    ).length ?? 0,
+    [atlas?.parts, state.isolate, state.selected, state.visible]
+  );
 
   const results = useMemo(() => {
     if (!atlas) return [];
