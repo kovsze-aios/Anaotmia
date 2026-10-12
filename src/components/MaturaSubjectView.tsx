@@ -64,9 +64,17 @@ function MaturaSubjectViewInner({
     [questions],
   );
 
-  const filtered = filterTopic
-    ? questions.filter((q) => q.topicCategory === filterTopic)
-    : questions;
+  // ⚡ Bolt Optimization: Memoize filtered questions
+  // 💡 What: Wrapped the filtering of questions based on topic in a useMemo hook.
+  // 🎯 Why: Prevents unnecessary array filtering operations on every render, especially when the component re-renders due to unrelated state changes.
+  // 📈 Impact: Reduces unnecessary array processing and re-allocations on render, preserving referential equality of the filtered array.
+  const filtered = useMemo(
+    () =>
+      filterTopic
+        ? questions.filter((q) => q.topicCategory === filterTopic)
+        : questions,
+    [filterTopic, questions],
+  );
 
   const changeYear = useCallback(
     (year: number) => {
