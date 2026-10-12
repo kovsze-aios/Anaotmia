@@ -8,3 +8,7 @@
 ## 2026-07-20 - Global Navigation Interactive Elements Focus Visible Styles
 **Learning:** Found multiple instances of mismatched or missing `focus-visible` utility classes for interactive elements (`Link` buttons) on theoretical and topics page causing accessibility regressions during keyboard navigation. Custom styles were missing or mismatched `focus:ring-blue-500` instead of the app design tokens.
 **Action:** Standardize on `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` across all custom interactive components to ensure consistent keyboard accessibility.
+
+## 2026-08-01 - Toggle and Switch Accessibility
+**Learning:** Found a custom theme toggle button in the topbar that relied solely on `aria-label` without a proper `role="switch"` or dynamic `aria-checked` state. This prevents screen readers from dynamically announcing state changes when the user toggles the theme.
+**Action:** When building custom toggle or switch components that do not use a native `<input type="checkbox">`, always include `role="switch"` and dynamically manage `aria-checked={booleanValue}` to ensure screen reader users are properly informed of state changes.
