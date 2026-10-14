@@ -166,19 +166,40 @@ export default function AtlasExplorer({
       ),
     [atlas],
   );
-  const activeSystems = SYSTEMS.filter((s) => counts[s.id] > 0);
+  // ⚡ Bolt Optimization: Memoize activeSystems
+  // 💡 What: Wrapped activeSystems derivation in useMemo
+  // 🎯 Why: Prevents unnecessary filtering of SYSTEMS on every render
+  // 📊 Impact: Minor CPU savings during frequent state updates like slider dragging
+  const activeSystems = useMemo(
+    () => SYSTEMS.filter((s) => counts[s.id] > 0),
+    [counts]
+  );
 
-  const selectedParts = state.selected
-    .map((id) => parts.get(id))
-    .filter((p) => !!p);
+  // ⚡ Bolt Optimization: Memoize selectedParts
+  // 💡 What: Wrapped selectedParts derivation in useMemo
+  // 🎯 Why: Prevents unnecessary array mapping and filtering on every render
+  // 📊 Impact: Prevents GC spikes during high-frequency renders (e.g. rotation/explosion)
+  const selectedParts = useMemo(
+    () => state.selected.map((id) => parts.get(id)).filter((p) => !!p),
+    [state.selected, parts]
+  );
   const selected = selectedParts[0];
-  const system = SYSTEMS.find((s) => s.id === selected?.system);
-  const visibleCount =
-    atlas?.parts.filter((p) =>
+  const system = useMemo(
+    () => SYSTEMS.find((s) => s.id === selected?.system),
+    [selected?.system]
+  );
+
+  // ⚡ Bolt Optimization: Memoize visibleCount
+  // 💡 What: Wrapped visibleCount derivation in useMemo
+  // 🎯 Why: Prevents iterating over thousands of atlas parts on every render
+  // 📊 Impact: Significant main-thread time savings, preventing UI lag on state changes
+  const visibleCount = useMemo(() => {
+    return atlas?.parts.filter((p) =>
       state.isolate
         ? state.selected.includes(p.id)
         : state.visible.includes(p.system) || state.selected.includes(p.id),
     ).length ?? 0;
+  }, [atlas, state.isolate, state.selected, state.visible]);
 
   const results = useMemo(() => {
     if (!atlas) return [];
