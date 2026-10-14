@@ -1,0 +1,20 @@
+--- src/components/atlas/AtlasExplorer.tsx
++++ src/components/atlas/AtlasExplorer.tsx
+@@ -165,10 +165,11 @@
+   const system = SYSTEMS.find((s) => s.id === selected?.system);
+-  const visibleCount =
+-    atlas?.parts.filter((p) =>
+-      state.isolate
+-        ? state.selected.includes(p.id)
+-        : state.visible.includes(p.system) || state.selected.includes(p.id),
+-    ).length ?? 0;
++
++  const visibleCount = useMemo(() => {
++    return atlas?.parts.filter((p) =>
++        state.isolate
++          ? state.selected.includes(p.id)
++          : state.visible.includes(p.system) || state.selected.includes(p.id),
++      ).length ?? 0;
++  }, [atlas, state.isolate, state.selected, state.visible]);
+
+   const results = useMemo(() => {
