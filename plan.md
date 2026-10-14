@@ -1,13 +1,14 @@
-1. **Refactor `src/app/theory/biologia/page.tsx` to handle `?domain=` query param**:
-   - Wrap the main component's contents in a `<Suspense>` boundary to safely use `useSearchParams` without de-opting from static rendering.
-   - Use `useSearchParams` from `next/navigation` to catch the `?domain=` parameter.
-   - Add a `useEffect` that checks if `domain` is present in the query string. If so, find the first section for that domain in `biologiaTheory` and set `activeSectionId` and `activeSection`. We can also remove the query param using `router.replace('/theory/biologia', undefined, { shallow: true })` or similar to clean up the URL.
-2. **Update Domain Cards in `TeoriaBiologiaPage`**:
-   - Change `<ol className="textbook-welcome__domains">` to `<div className="textbook-welcome__domain-grid">` to match the anatomy layout.
-   - Replace the `<li>` tags with `<Link>` tags from `next/link`.
-   - The `href` for each link should be `/theory/biologia?domain=${d.id}`.
-   - Add Tailwind classes for interactivity: `className="textbook-welcome__domain-btn flex items-center cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors w-full text-left"`.
-3. **Pre Commit Steps**:
-   - Ensure proper testing, verifications, reviews and reflections are done.
-4. **Submit changes**:
-   - Submit.
+1. **Add `role="switch"` and `aria-checked` to the Theme Toggle button in `Topbar.tsx`**
+   - The theme toggle button currently functions as a switch but lacks the appropriate `role="switch"` and `aria-checked` attributes. This makes it difficult for screen reader users to understand its state and purpose.
+   - I will update the `<button>` element in `src/components/Topbar.tsx` to include `role="switch"` and `aria-checked={dark}`.
+
+2. **Add a journal entry for this accessibility improvement**
+   - In accordance with the Palette guidelines, I will append an entry to `.jules/palette.md` noting the importance of `role="switch"` and `aria-checked` for custom toggle components.
+
+3. **Complete pre-commit steps to ensure proper testing, verification, review, and reflection are done.**
+   - Run `pnpm run check` and `pnpm test` to verify changes.
+   - This ensures code health and quality.
+
+4. **Use the `submit` tool to push changes and trigger CI**
+   - Title: `🎨 Palette: [Theme toggle accessibility]`
+   - Description formatted correctly with 💡 What, 🎯 Why, 📸 Before/After, and ♿ Accessibility.
