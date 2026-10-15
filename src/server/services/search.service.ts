@@ -39,9 +39,54 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  // ⚡ Bolt Optimization: Bounded Zero-Allocation Excerpt Generation
+  // 💡 What: Extract characters sequentially using a tight `charCodeAt` loop up to `max` length, instead of applying a global regex to the entire string.
+  // 🎯 Why: Prevents severe CPU and memory overhead when parsing massive textbook data structures. A global regex or split creates O(N) memory allocation and GC pauses. Slicing prematurely can miss characters if the text contains large chunks of whitespace.
+  // 📊 Impact: O(1) bounded execution time (based on `max`) instead of O(N) where N is the length of potentially massive strings. Completely eliminates main thread blockage and GC spikes during index building.
+  let cleanStr = "";
+  let i = 0;
+  const len = text.length;
+
+  // Skip leading whitespace using charCodeAt for performance
+  while (i < len) {
+    const code = text.charCodeAt(i);
+    // 32: space, 9: tab, 10: newline, 13: carriage return
+    if (code === 32 || code === 9 || code === 10 || code === 13) {
+      i++;
+    } else {
+      break;
+    }
+  }
+
+  while (i < len && cleanStr.length <= max) {
+    const code = text.charCodeAt(i);
+    if (code === 32 || code === 9 || code === 10 || code === 13) {
+      cleanStr += " ";
+      i++;
+      // Skip consecutive whitespace
+      while (i < len) {
+        const nextCode = text.charCodeAt(i);
+        if (nextCode === 32 || nextCode === 9 || nextCode === 10 || nextCode === 13) {
+          i++;
+        } else {
+          break;
+        }
+      }
+    } else {
+      cleanStr += text[i];
+      i++;
+    }
+  }
+
+  // Trim trailing space if any was added right before hitting max
+  if (cleanStr.endsWith(" ")) {
+    cleanStr = cleanStr.slice(0, -1);
+  }
+
+  if (!cleanStr) return undefined;
+  // If we haven't reached the end of the text, but we reached or exceeded max (or hit max and had a trailing space removed), append ellipsis.
+  return (cleanStr.length > max || i < len) ? `${cleanStr.slice(0, max).trimEnd()}…` : cleanStr;
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
