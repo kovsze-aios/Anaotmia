@@ -24,3 +24,6 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+## 2025-02-12 - Prevent Focus Trapping in Hidden Off-Canvas Sidebars
+**Learning:** When implementing off-canvas mobile sidebars or drawers, relying solely on CSS translations (e.g. `left: -100vw`) to visually hide the component still leaves its entire DOM sub-tree accessible to keyboard navigation and screen readers. This can cause focus trapping and invisible interactions.
+**Action:** Always use the `inert` HTML attribute tied to the open/close state of off-canvas elements (e.g., `inert={!sidebarOpen}`) to remove hidden UI from the accessibility tree and prevent the browser from doing focus layout calculations for hundreds of off-screen links.
