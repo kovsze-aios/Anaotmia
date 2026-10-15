@@ -24,7 +24,7 @@ export function TheoryIndex() {
         {SUBJECT_CARDS.map((card) => (
           <Link key={card.key} href={card.href} className="subject-card focus-ring">
             <div className="subject-card__img" style={{ background: card.color }}>
-              <span className="subject-card__icon">{card.icon}</span>
+              <span className="subject-card__icon" aria-hidden="true">{card.icon}</span>
             </div>
             <div className="subject-card__content">
               <div className="subject-card__subtitle">{t.subjects[card.subtitleKey]}</div>
@@ -33,7 +33,7 @@ export function TheoryIndex() {
                 {t.subjects[card.bodyKey]}{" "}
                 <strong>{t.subjects[card.emphasisKey]}</strong>
               </div>
-              <div className="subject-card__cta">{t.subjects.subjectCta}</div>
+              <div className="subject-card__cta" aria-hidden="true">{t.subjects.subjectCta}</div>
             </div>
           </Link>
         ))}
@@ -45,12 +45,12 @@ export function TheoryIndex() {
         {EXAM_SHEETS.map((sheet) => (
           <Link key={sheet.href} href={sheet.href} className="subject-card focus-ring">
             <div className="subject-card__img" style={{ background: sheet.color }}>
-              <span className="subject-card__icon">{sheet.icon}</span>
+              <span className="subject-card__icon" aria-hidden="true">{sheet.icon}</span>
             </div>
             <div className="subject-card__content">
               <div className="subject-card__subtitle">{t.subjects.maturaSubtitle}</div>
               <div className="subject-card__title">{t.sidebar[sheet.key]}</div>
-              <div className="subject-card__cta">{t.subjects.examSheetsCta}</div>
+              <div className="subject-card__cta" aria-hidden="true">{t.subjects.examSheetsCta}</div>
             </div>
           </Link>
         ))}
