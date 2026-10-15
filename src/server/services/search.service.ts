@@ -39,7 +39,10 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+  // Slice early to avoid running global regex replacements on massive OCR text chunks
+  // which blocks the main thread and spikes memory allocation.
+  const sliced = text.length > max * 3 ? text.slice(0, max * 3) : text;
+  const clean = sliced.replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
