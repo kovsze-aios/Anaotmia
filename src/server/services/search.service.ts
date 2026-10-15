@@ -39,7 +39,13 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+
+  // ⚡ Bolt: Slice text to a safe length before running the global regex.
+  // This prevents severe CPU/memory overhead when initializing the search index
+  // on massive multi-megabyte textbook sections.
+  const safeText = text.length > max * 3 ? text.slice(0, max * 3) : text;
+
+  const clean = safeText.replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
