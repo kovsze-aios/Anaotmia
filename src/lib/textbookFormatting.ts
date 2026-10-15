@@ -10,7 +10,10 @@ export function formatOcrText(text: string): string {
   if (!text) return "";
   let formatted = text.replace(/\r\n/g, "\n");
   formatted = formatted.replace(/---\s*STRONA\s+\d+\s*---/gi, "");
-  formatted = formatted.replace(/(?<!\n)\n(?!\n)/g, " ");
+  // Uses a capture group and negative lookahead instead of negative lookbehind.
+  // This avoids performance overhead in V8 for massive strings and is fully supported
+  // in older browsers (e.g., Safari < 16.4).
+  formatted = formatted.replace(/([^\n])\n(?!\n)/g, "$1 ");
   return formatted.trim();
 }
 
