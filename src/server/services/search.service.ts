@@ -39,7 +39,10 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+  // Slice early to avoid running global regex replacements over massive strings
+  // (like entire academic_detail texts) just to grab the first 160 characters.
+  const sliced = text.trimStart().slice(0, max * 3);
+  const clean = sliced.replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };

@@ -24,3 +24,6 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+## 2024-05-30 - [Optimize massive string regex by slicing first]
+**Learning:** Running global regex replacements (like `.replace(/\s+/g, " ")`) over massive text strings (e.g., entire `academic_detail` textbook chapters) just to extract a short 160-character excerpt causes severe thread blocking and CPU/memory overhead during index initialization.
+**Action:** When extracting short excerpts from massive strings, apply `.trimStart()` and `.slice(0, max * 3)` *before* applying any complex regex sanitization to keep the operation O(1) instead of O(N).
