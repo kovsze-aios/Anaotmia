@@ -10,7 +10,8 @@ export function formatOcrText(text: string): string {
   if (!text) return "";
   let formatted = text.replace(/\r\n/g, "\n");
   formatted = formatted.replace(/---\s*STRONA\s+\d+\s*---/gi, "");
-  formatted = formatted.replace(/(?<!\n)\n(?!\n)/g, " ");
+  // Bolt: Regex optimized to avoid negative lookbehinds which are slower in V8 for massive OCR strings.
+  formatted = formatted.replace(/([^\n])\n(?!\n)/g, "$1 ");
   return formatted.trim();
 }
 
