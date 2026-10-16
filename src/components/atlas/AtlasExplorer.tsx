@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useDeferredValue } from "react";
 import Link from "next/link";
 import {
   Activity,
@@ -119,6 +119,12 @@ export default function AtlasExplorer({
   const [details, setDetails] = useState(false);
   const [about, setAbout] = useState(false);
   const [query, setQuery] = useState("");
+  // ⚡ Bolt Optimization: Use useDeferredValue for synchronous fuzzy search
+  // 💡 What: Defer the query value used for fuzzy searching atlas concepts.
+  // 🎯 Why: Eagerly scanning ~3,400 concepts blocks the main thread on every keystroke, causing severe input lag.
+  // 📊 Impact: Keeps the UI completely responsive by allowing React to interrupt the heavy filtering task to handle typing.
+  const deferredQuery = useDeferredValue(query);
+
   const [chosen, setChosen] = useState<AtlasConcept | null>(null);
 
   // Re-reads on locale change so a language switch relabels the error too.
@@ -182,7 +188,7 @@ export default function AtlasExplorer({
 
   const results = useMemo(() => {
     if (!atlas) return [];
-    const term = query.toLowerCase().trim();
+    const term = deferredQuery.toLowerCase().trim();
     if (!term) {
       return SUGGESTED.map((name) =>
         atlas.concepts.find((c) => c.name.toLowerCase() === name),
@@ -197,7 +203,7 @@ export default function AtlasExplorer({
       )
       .sort((a, b) => a.name.length - b.name.length)
       .slice(0, 80);
-  }, [atlas, query, locale]);
+  }, [atlas, deferredQuery, locale]);
 
   const sceneLabels = useMemo(
     () => ({
