@@ -27,3 +27,7 @@
 ## 2025-02-12 - Re-renders and Filtering on Large Lists
 **Learning:** Performing filtering and deriving state un-memoized on large lists (like a 2,234-item `atlas.parts` array) can block the main thread and cause lagging, particularly when another state in the component updates frequently (like `progress` during loading).
 **Action:** Use `useMemo` to cache derived states for large lists and consider `useDeferredValue` when doing client-side filtering on large arrays based on user input, to ensure the UI remains responsive.
+
+## 2025-02-12 - CI Dependency Resolution
+**Learning:** `pnpm-workspace.yaml` in pnpm v9+ requires an explicit `packages` array configuration, otherwise `pnpm install --frozen-lockfile` will fail in CI with the error: "packages field missing or empty".
+**Action:** When setting up or troubleshooting a monorepo or standard workspace with pnpm in CI, ensure `packages: ['*']` is explicitly added to `pnpm-workspace.yaml` to prevent installation errors.
