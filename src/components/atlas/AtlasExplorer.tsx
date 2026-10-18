@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useDeferredValue } from "react";
 import Link from "next/link";
 import {
   Activity,
@@ -166,23 +166,37 @@ export default function AtlasExplorer({
       ),
     [atlas],
   );
-  const activeSystems = SYSTEMS.filter((s) => counts[s.id] > 0);
+  // ⚡ Bolt Optimization: Wrap derived state computations in useMemo
+  // 💡 What: Wrapping derived computations (activeSystems, selectedParts, system, visibleCount) in useMemo.
+  // 🎯 Why: Prevents expensive iterations over the 2,234-item `atlas.parts` array on every single render (especially when `progress` updates rapidly during load).
+  // 📊 Impact: Eliminates redundant O(N) operations during state updates, reducing main thread blocking and lowering render times.
+  const activeSystems = useMemo(() => SYSTEMS.filter((s) => counts[s.id] > 0), [counts]);
 
-  const selectedParts = state.selected
+  const selectedParts = useMemo(() => state.selected
     .map((id) => parts.get(id))
-    .filter((p) => !!p);
+    .filter((p) => !!p), [state.selected, parts]);
+
   const selected = selectedParts[0];
-  const system = SYSTEMS.find((s) => s.id === selected?.system);
-  const visibleCount =
+  const system = useMemo(() => SYSTEMS.find((s) => s.id === selected?.system), [selected?.system]);
+
+  const visibleCount = useMemo(() =>
     atlas?.parts.filter((p) =>
       state.isolate
         ? state.selected.includes(p.id)
         : state.visible.includes(p.system) || state.selected.includes(p.id),
-    ).length ?? 0;
+    ).length ?? 0,
+    [atlas?.parts, state.isolate, state.selected, state.visible]
+  );
+
+  // ⚡ Bolt Optimization: Use useDeferredValue for query filtering
+  // 💡 What: Added useDeferredValue to debounce the query filtering.
+  // 🎯 Why: Keeps typing responsive by yielding to the main thread before performing the search on the 3,432-item concepts array.
+  // 📊 Impact: Prevents UI lag while typing in the search bar.
+  const deferredQuery = useDeferredValue(query);
 
   const results = useMemo(() => {
     if (!atlas) return [];
-    const term = query.toLowerCase().trim();
+    const term = deferredQuery.toLowerCase().trim();
     if (!term) {
       return SUGGESTED.map((name) =>
         atlas.concepts.find((c) => c.name.toLowerCase() === name),
@@ -197,7 +211,7 @@ export default function AtlasExplorer({
       )
       .sort((a, b) => a.name.length - b.name.length)
       .slice(0, 80);
-  }, [atlas, query, locale]);
+  }, [atlas, deferredQuery, locale]);
 
   const sceneLabels = useMemo(
     () => ({
