@@ -24,3 +24,6 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+## 2025-02-12 - Re-renders and Filtering on Large Lists
+**Learning:** Performing filtering and deriving state un-memoized on large lists (like a 2,234-item `atlas.parts` array) can block the main thread and cause lagging, particularly when another state in the component updates frequently (like `progress` during loading).
+**Action:** Use `useMemo` to cache derived states for large lists and consider `useDeferredValue` when doing client-side filtering on large arrays based on user input, to ensure the UI remains responsive.
