@@ -8,10 +8,15 @@
  * repositories into the browser bundle.
  */
 
+import type { CkeFormula, CkeTopicStatus } from "./textbook";
+
 /** A single selectable section inside a domain. */
 export interface NavSection {
   id: string;
   title: string;
+  ckeStatus?: CkeTopicStatus;
+  formulas?: CkeFormula[];
+  requirementCodes?: string[];
 }
 
 /** A domain and its sections, stripped of all content blocks. */
@@ -27,6 +32,8 @@ export interface NavDomain {
 export interface NavLink {
   href: string;
   label: string;
+  badge?: string;
+  formula?: CkeFormula;
 }
 
 /** Everything the global sidebar drawer needs to render. */
@@ -35,4 +42,7 @@ export interface SidebarNavigation {
   physiology: NavLink[];
   biology: NavLink[];
   chemistry: NavLink[];
+  maturaBiology: NavLink[];
+  maturaChemistry: NavLink[];
 }
+

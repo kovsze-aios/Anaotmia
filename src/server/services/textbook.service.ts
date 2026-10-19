@@ -5,10 +5,22 @@ import {
   biologiaTheory,
   chemiaTheory,
   fizjologiaTheory,
+  biologiaMatura2015Theory,
+  biologiaMatura2023Theory,
+  chemiaMatura2015Theory,
+  chemiaMatura2023Theory,
 } from "../repositories";
 
 /** The subjects that have a theory textbook. */
-export type TheorySubject = "anatomia" | "biologia" | "chemia" | "fizjologia";
+export type TheorySubject =
+  | "anatomia"
+  | "biologia"
+  | "chemia"
+  | "fizjologia"
+  | "biologia-matura-2015"
+  | "biologia-matura-2023"
+  | "chemia-matura-2015"
+  | "chemia-matura-2023";
 
 /**
  * Reads every subject's domains through one entry point so callers never have
@@ -24,6 +36,14 @@ export function getTheoryDomains(subject: TheorySubject): TextbookDomain[] {
       return chemiaTheory;
     case "fizjologia":
       return fizjologiaTheory;
+    case "biologia-matura-2015":
+      return biologiaMatura2015Theory;
+    case "biologia-matura-2023":
+      return biologiaMatura2023Theory;
+    case "chemia-matura-2015":
+      return chemiaMatura2015Theory;
+    case "chemia-matura-2023":
+      return chemiaMatura2023Theory;
   }
 }
 

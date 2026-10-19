@@ -31,6 +31,7 @@ interface FlatEntry {
   volumeId: string;
   volumeTitle: string;
   volumeShortTitle: string;
+  ckeMetadata?: ReaderPosition["ckeMetadata"];
 }
 
 interface BuiltSpine {
@@ -57,11 +58,22 @@ function build(subject: TheorySubject): BuiltSpine {
   const volumes: ReaderVolumeSummary[] = [];
 
   for (const domain of getTheoryDomains(subject)) {
-    const chapters = domain.sections.map<ReaderChapter>((section) => ({
-      id: section.id,
-      title: section.title,
-      order: ++order,
-    }));
+    const chapters = domain.sections.map<ReaderChapter>((section) =>
+      section.ckeMetadata
+        ? {
+            id: section.id,
+            title: section.title,
+            order: ++order,
+            ckeStatus: section.ckeMetadata.status,
+            formulas: section.ckeMetadata.formulas,
+            requirementCodes: section.ckeMetadata.requirementCodes,
+          }
+        : {
+            id: section.id,
+            title: section.title,
+            order: ++order,
+          },
+    );
 
     chaptersByVolume.set(domain.id, chapters);
     volumes.push({
@@ -73,14 +85,15 @@ function build(subject: TheorySubject): BuiltSpine {
       firstChapterId: chapters[0]?.id,
     });
 
-    for (const chapter of chapters) {
+    domain.sections.forEach((section, idx) => {
       flat.push({
-        chapter,
+        chapter: chapters[idx],
         volumeId: domain.id,
         volumeTitle: domain.title,
         volumeShortTitle: domain.shortTitle,
+        ckeMetadata: section.ckeMetadata,
       });
-    }
+    });
   }
 
   return { spine: { volumes, totalChapters: order }, flat, chaptersByVolume };
@@ -161,6 +174,7 @@ function buildPositions(subject: TheorySubject): Map<string, ReaderPosition> {
       topics: topicsFor(subject, entry.chapter.id),
       prev: toNeighbour(flat[i - 1], entry.volumeId),
       next: toNeighbour(flat[i + 1], entry.volumeId),
+      ...(entry.ckeMetadata ? { ckeMetadata: entry.ckeMetadata } : {}),
     });
   });
   return map;

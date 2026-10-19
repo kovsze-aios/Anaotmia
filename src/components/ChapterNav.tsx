@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import type { NavDomain } from "@/server/models";
+import {
+  CkeFormulaSwitcher,
+  CkeStatusBadge,
+  matchesFormulaFilter,
+  type FormulaFilterMode,
+} from "./matura/CkeFormulaControls";
 
 interface ChapterNavProps {
   domains: NavDomain[];
@@ -16,6 +22,11 @@ export function ChapterNav({
 }: ChapterNavProps) {
   const [expandedDomains, setExpandedDomains] = useState<Set<string>>(
     new Set(domains.length > 0 ? [domains[0].id] : []),
+  );
+  const [formulaFilter, setFormulaFilter] = useState<FormulaFilterMode>("all");
+
+  const hasCkeMetadata = domains.some((d) =>
+    d.sections.some((s) => Boolean(s.ckeStatus)),
   );
 
   const toggleDomain = (id: string) => {
@@ -43,47 +54,70 @@ export function ChapterNav({
 
   return (
     <nav className="chapter-nav">
-      {domains.map((domain) => (
-        <div key={domain.id} className="chapter-nav__domain">
-          <button
-            className={`chapter-nav__domain-title focus-ring ${
-              expandedDomains.has(domain.id)
-                ? "chapter-nav__domain-title--expanded"
-                : ""
-            }`}
-            onClick={() => toggleDomain(domain.id)}
-            aria-expanded={expandedDomains.has(domain.id)}
-          >
-            <span>
-              {domain.icon && (
-                <span className="chapter-nav__icon">{domain.icon}</span>
-              )}
-              {domain.shortTitle}
-            </span>
-            <span className="chapter-nav__chevron" aria-hidden="true">
-              {expandedDomains.has(domain.id) ? "▾" : "▸"}
-            </span>
-          </button>
-
-          {expandedDomains.has(domain.id) && (
-            <div className="chapter-nav__sections">
-              {domain.sections.map((section) => (
-                <button
-                  key={section.id}
-                  className={`chapter-nav__section focus-ring ${
-                    activeSection === section.id
-                      ? "chapter-nav__section--active"
-                      : ""
-                  }`}
-                  onClick={() => onSectionSelect(domain.id, section.id)}
-                >
-                  {section.title}
-                </button>
-              ))}
-            </div>
-          )}
+      {hasCkeMetadata && (
+        <div className="px-3 pb-3 pt-1">
+          <CkeFormulaSwitcher
+            value={formulaFilter}
+            onChange={setFormulaFilter}
+            compact
+          />
         </div>
-      ))}
+      )}
+      {domains.map((domain) => {
+        const filteredSections = hasCkeMetadata
+          ? domain.sections.filter((s) =>
+              matchesFormulaFilter(formulaFilter, s.formulas, s.ckeStatus),
+            )
+          : domain.sections;
+
+        if (filteredSections.length === 0) return null;
+
+        return (
+          <div key={domain.id} className="chapter-nav__domain">
+            <button
+              className={`chapter-nav__domain-title focus-ring ${
+                expandedDomains.has(domain.id)
+                  ? "chapter-nav__domain-title--expanded"
+                  : ""
+              }`}
+              onClick={() => toggleDomain(domain.id)}
+              aria-expanded={expandedDomains.has(domain.id)}
+            >
+              <span>
+                {domain.icon && (
+                  <span className="chapter-nav__icon">{domain.icon}</span>
+                )}
+                {domain.shortTitle}
+              </span>
+              <span className="chapter-nav__chevron" aria-hidden="true">
+                {expandedDomains.has(domain.id) ? "▾" : "▸"}
+              </span>
+            </button>
+
+            {expandedDomains.has(domain.id) && (
+              <div className="chapter-nav__sections">
+                {filteredSections.map((section) => (
+                  <button
+                    key={section.id}
+                    className={`chapter-nav__section flex items-center justify-between gap-2 focus-ring ${
+                      activeSection === section.id
+                        ? "chapter-nav__section--active"
+                        : ""
+                    }`}
+                    onClick={() => onSectionSelect(domain.id, section.id)}
+                  >
+                    <span className="truncate text-left">{section.title}</span>
+                    {section.ckeStatus && (
+                      <CkeStatusBadge status={section.ckeStatus} />
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
     </nav>
   );
 }
+

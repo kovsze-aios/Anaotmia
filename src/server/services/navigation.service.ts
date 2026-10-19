@@ -3,7 +3,14 @@ import type {
   SidebarNavigation,
   TextbookDomain,
 } from "../models";
-import { biologiaTheory, chemiaTheory, fizjologiaTheory, getDomains } from "../repositories";
+import {
+  biologiaTheory,
+  chemiaTheory,
+  fizjologiaTheory,
+  getDomains,
+  biologiaMatura2023Theory,
+  chemiaMatura2023Theory,
+} from "../repositories";
 import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
 /**
@@ -18,10 +25,20 @@ export function toNavDomain(domain: TextbookDomain): NavDomain {
     title: domain.title,
     shortTitle: domain.shortTitle,
     icon: domain.icon,
-    sections: domain.sections.map((section) => ({
-      id: section.id,
-      title: section.title,
-    })),
+    sections: domain.sections.map((section) =>
+      section.ckeMetadata
+        ? {
+            id: section.id,
+            title: section.title,
+            ckeStatus: section.ckeMetadata.status,
+            formulas: section.ckeMetadata.formulas,
+            requirementCodes: section.ckeMetadata.requirementCodes,
+          }
+        : {
+            id: section.id,
+            title: section.title,
+          },
+    ),
   };
 }
 
@@ -68,10 +85,61 @@ export function getSidebarNavigation(): SidebarNavigation {
     label: `${domain.icon} ${domain.title}`,
   }));
 
+  const maturaBiology = [
+    {
+      href: "/theory/biologia-matura-2023",
+      label: "🟢 Biologia — Nowa Matura (Formuła 2023+)",
+      badge: "NOWA 2023+",
+      formula: "2023" as const,
+    },
+    {
+      href: "/theory/biologia-matura-2015",
+      label: "🟡 Biologia — Matura Formuła 2015",
+      badge: "FORMUŁA 2015",
+      formula: "2015" as const,
+    },
+    ...biologiaMatura2023Theory.map((domain) => {
+      const first = domain.sections[0];
+      return {
+        href: first
+          ? `/theory/biologia-matura-2023/${first.id}`
+          : "/theory/biologia-matura-2023",
+        label: `${domain.icon ?? "🧬"} ${domain.shortTitle}`,
+      };
+    }),
+  ];
+
+  const maturaChemistry = [
+    {
+      href: "/theory/chemia-matura-2023",
+      label: "🟢 Chemia — Nowa Matura (Formuła 2023+)",
+      badge: "NOWA 2023+",
+      formula: "2023" as const,
+    },
+    {
+      href: "/theory/chemia-matura-2015",
+      label: "🟡 Chemia — Matura Formuła 2015",
+      badge: "FORMUŁA 2015",
+      formula: "2015" as const,
+    },
+    ...chemiaMatura2023Theory.map((domain) => {
+      const first = domain.sections[0];
+      return {
+        href: first
+          ? `/theory/chemia-matura-2023/${first.id}`
+          : "/theory/chemia-matura-2023",
+        label: `${domain.icon ?? "⚗️"} ${domain.shortTitle}`,
+      };
+    }),
+  ];
+
   return {
     anatomy,
     physiology,
     biology,
     chemistry,
+    maturaBiology,
+    maturaChemistry,
   };
 }
+

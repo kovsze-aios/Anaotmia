@@ -6,6 +6,10 @@ const SUBJECTS: readonly TheorySubject[] = [
   "biologia",
   "chemia",
   "fizjologia",
+  "biologia-matura-2015",
+  "biologia-matura-2023",
+  "chemia-matura-2015",
+  "chemia-matura-2023",
 ];
 
 /**

@@ -17,6 +17,9 @@ export type {
   AcademicSource,
   TextbookSection,
   TextbookDomain,
+  CkeFormula,
+  CkeTopicStatus,
+  CkeMetadata,
 } from "./textbook";
 
 export type {

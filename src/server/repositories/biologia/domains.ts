@@ -73,6 +73,7 @@ function mapToSection(item: ChapterEntry): TextbookSection {
     pages: d.pages,
     toc: d.toc,
     chapterQuiz: d.chapterQuiz,
+    ckeMetadata: d.ckeMetadata,
     content: [],
     recallQuestions: (d.chapterQuiz || []).map((q, idx) => ({
       id: `${item.id}-q-${idx + 1}`,

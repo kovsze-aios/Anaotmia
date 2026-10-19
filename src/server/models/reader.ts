@@ -17,6 +17,8 @@
  * and crosses volume boundaries seamlessly; topics are anchors within the page.
  */
 
+import type { CkeFormula, CkeMetadata, CkeTopicStatus } from "./textbook";
+
 /** A heading inside a chapter — an in-page anchor target. */
 export interface ReaderTopic {
   /** Anchor id, matching the `id` attribute in the chapter's HTML. */
@@ -30,6 +32,9 @@ export interface ReaderChapter {
   title: string;
   /** 1-based position in the whole reading sequence, across all volumes. */
   order: number;
+  ckeStatus?: CkeTopicStatus;
+  formulas?: CkeFormula[];
+  requirementCodes?: string[];
 }
 
 /**
@@ -89,4 +94,6 @@ export interface ReaderPosition {
   topics: ReaderTopic[];
   prev?: ReaderNeighbour;
   next?: ReaderNeighbour;
+  ckeMetadata?: CkeMetadata;
 }
+

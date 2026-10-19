@@ -1,25 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 import type { NavDomain } from "@/server/models";
-
-/**
- * A subject's entry page: pick a part, start reading.
- *
- * This replaced `TheorySubjectView`, which fetched a chapter over
- * `/api/section` and rendered it inline. That made a third reading layout —
- * after anatomy's reader and the static chapter routes — and it was the one
- * without the paginated view, the table-of-contents drawer, the read-aloud
- * player or the 3D term links, because those all live on the chapter route it
- * never navigated to.
- *
- * Linking to the chapter instead means there is one reader, and it is the good
- * one. It also costs nothing at runtime: this is a server component rendering
- * links, so the corpus never reaches the browser and there is no loading state
- * to sit through.
- *
- * Deliberately the same markup as the anatomy dashboard, down to the class
- * names, so the four subjects present identically.
- */
+import {
+  CkeFormulaSwitcher,
+  CkeStatusBadge,
+  defaultFormulaForPath,
+  matchesFormulaFilter,
+  type FormulaFilterMode,
+} from "./matura/CkeFormulaControls";
 
 export interface TheorySubjectLandingProps {
   /** Route the chapters live under, e.g. `/theory/biologia`. */
@@ -42,32 +33,78 @@ export function TheorySubjectLanding({
   scopeHeading = "Zakres Materiału",
   domains,
 }: TheorySubjectLandingProps) {
+  const hasCkeMetadata = domains.some((d) =>
+    d.sections.some((s) => Boolean(s.ckeStatus)),
+  );
+  const [formulaFilter, setFormulaFilter] = useState<FormulaFilterMode>(() =>
+    defaultFormulaForPath(basePath),
+  );
+
   return (
     <div className="textbook-welcome">
       <h1>{heading}</h1>
       <p>{intro}</p>
 
+      {hasCkeMetadata && (
+        <div className="my-5 flex flex-col gap-3 rounded-xl border border-zinc-800 bg-zinc-950/90 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="text-xs font-semibold tracking-wider uppercase text-zinc-300">
+              🎓 Filtr wymagań egzaminacyjnych CKE:
+            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <CkeStatusBadge status="core" />
+              <CkeStatusBadge status="2023-only" />
+              <CkeStatusBadge status="2015-only" />
+            </div>
+          </div>
+          <CkeFormulaSwitcher value={formulaFilter} onChange={setFormulaFilter} />
+        </div>
+      )}
+
       <div className="textbook-welcome__exam">
-        {/* Neutral chip: a blue badge was the loudest non-NOIR element on the
-            textbook landing view. Border carries the emphasis instead of hue. */}
         <h2 className="w-fit rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
           {scopeHeading}
         </h2>
         <p>{domainsLabel}</p>
         <div className="textbook-welcome__domain-grid">
           {domains
-            // A domain with no chapters has nothing to open, and a dead card is
-            // worse than an absent one.
-            .filter((domain) => domain.sections.length > 0)
-            .map((domain) => (
-              <Link
-                key={domain.id}
-                href={`${basePath}/${domain.sections[0].id}`}
-                className="textbook-welcome__domain-btn focus-ring"
-              >
-                {domain.icon} {domain.title}
-              </Link>
-            ))}
+            .map((domain) => {
+              const matchingSections = hasCkeMetadata
+                ? domain.sections.filter((s) =>
+                    matchesFormulaFilter(formulaFilter, s.formulas, s.ckeStatus),
+                  )
+                : domain.sections;
+              return { domain, matchingSections };
+            })
+            .filter(({ matchingSections }) => matchingSections.length > 0)
+            .map(({ domain, matchingSections }) => {
+              const has2023Only = matchingSections.some(
+                (s) => s.ckeStatus === "2023-only",
+              );
+              const has2015Only = matchingSections.some(
+                (s) => s.ckeStatus === "2015-only",
+              );
+              return (
+                <Link
+                  key={domain.id}
+                  href={`${basePath}/${matchingSections[0].id}`}
+                  className="textbook-welcome__domain-btn flex items-center justify-between gap-2 focus-ring"
+                >
+                  <span>
+                    {domain.icon} {domain.title}
+                  </span>
+                  {hasCkeMetadata && (
+                    <span className="flex shrink-0 items-center gap-1">
+                      {has2023Only && <CkeStatusBadge status="2023-only" />}
+                      {has2015Only && <CkeStatusBadge status="2015-only" />}
+                      {!has2023Only && !has2015Only && (
+                        <CkeStatusBadge status="core" />
+                      )}
+                    </span>
+                  )}
+                </Link>
+              );
+            })}
         </div>
       </div>
 
@@ -78,3 +115,4 @@ export function TheorySubjectLanding({
     </div>
   );
 }
+

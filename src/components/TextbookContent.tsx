@@ -8,6 +8,7 @@ import type { TextbookSection, ContentBlock } from "@/server/models";
 import { formatOcrText, getSectionWordCount, uniqueId } from "@/lib/textbookFormatting";
 import { AnatomyRichText } from "./textbook/AnatomyRichText";
 import { AtlasPeekDrawer } from "./textbook/AtlasPeekDrawer";
+import { CkeStatusBadge } from "./matura/CkeFormulaControls";
 
 
 function parseMarkdownContent(text: string) {
@@ -148,8 +149,24 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
     <article className="textbook-article relative pt-4">
       <ScrollProgressBar />
 
-      <div className="flex flex-wrap items-center gap-4 mb-6">
+      <div className="flex flex-wrap items-center gap-3 mb-6">
         <h1 className="textbook-article__title !mb-0">{section.title}</h1>
+        {section.ckeMetadata && (
+          <div className="flex flex-wrap items-center gap-2">
+            <CkeStatusBadge status={section.ckeMetadata.status} />
+            <span className="rounded border border-zinc-700/80 bg-zinc-900/90 px-2 py-0.5 text-[11px] font-semibold text-zinc-300">
+              {section.ckeMetadata.sectionCode}
+            </span>
+            {section.ckeMetadata.requirementCodes.slice(0, 4).map((code) => (
+              <span
+                key={code}
+                className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400"
+              >
+                {code}
+              </span>
+            ))}
+          </div>
+        )}
         <span className="text-xs text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-full whitespace-nowrap border border-zinc-200 dark:border-zinc-700 font-medium">
           ⏱ Czas czytania: ~{readingTime} min
         </span>
@@ -192,36 +209,46 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
               items={section.toc.map((t) => ({ id: t.anchorId, title: t.title, level: 3 }))}
             />
           )}
-          {/* Keyed by index, not by `pageNumber`: 24 chapters across the four
-              corpora carry repeated page numbers (all of them "1") from the
-              ingestion pipeline, and React drops or duplicates children when
-              two siblings share a key. The array is static per route and never
-              reordered, so the index is a stable identity here. */}
-          {section.pages.map((page, pageIndex) => (
-            <section
-              key={pageIndex}
-              className="page-card bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm"
-            >
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-100 dark:border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                <span>Strona {page.pageNumber}</span>
-                <span className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-zinc-600 dark:text-zinc-300">
-                  Microlearning
-                </span>
-              </div>
-              {linkAnatomy ? (
-                <AnatomyRichText
-                  html={page.htmlContent}
-                  onSelectTerm={openAtlas}
-                  className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
-                />
-              ) : (
-                <div
-                  className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: page.htmlContent }}
-                />
-              )}
-            </section>
-          ))}
+          {section.pages.map((page, pageIndex) => {
+            const isCkeGuidelinesPage = page.htmlContent.includes(
+              "Wytyczne CKE i Pewniaki Maturalne",
+            );
+            return (
+              <section
+                key={pageIndex}
+                className={
+                  isCkeGuidelinesPage
+                    ? "page-card bg-zinc-950/95 border-2 border-emerald-800/60 rounded-xl p-6 shadow-md text-zinc-100"
+                    : "page-card bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm"
+                }
+              >
+                <div className="flex items-center justify-between pb-3 mb-4 border-b border-zinc-100 dark:border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                  <span>Strona {page.pageNumber}</span>
+                  <span
+                    className={
+                      isCkeGuidelinesPage
+                        ? "bg-emerald-950/90 border border-emerald-700/60 px-2.5 py-0.5 rounded text-emerald-300"
+                        : "bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-zinc-600 dark:text-zinc-300"
+                    }
+                  >
+                    {isCkeGuidelinesPage ? "🎯 Klucz CKE & Pewniaki" : "Microlearning"}
+                  </span>
+                </div>
+                {linkAnatomy ? (
+                  <AnatomyRichText
+                    html={page.htmlContent}
+                    onSelectTerm={openAtlas}
+                    className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
+                  />
+                ) : (
+                  <div
+                    className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: page.htmlContent }}
+                  />
+                )}
+              </section>
+            );
+          })}
         </div>
       )}
 

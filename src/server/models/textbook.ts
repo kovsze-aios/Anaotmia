@@ -56,11 +56,23 @@ export interface ChapterQuizItem {
   answer: string;
 }
 
+export type CkeFormula = "2015" | "2023";
+export type CkeTopicStatus = "core" | "2015-only" | "2023-only";
+
+export interface CkeMetadata {
+  formulas: CkeFormula[];
+  sectionCode: string; // e.g., "Dział III"
+  requirementCodes: string[]; // e.g., ["III.2.a", "III.2.b"]
+  status: CkeTopicStatus;
+  examTips?: string[]; // CKE traps & operational verbs tips
+}
+
 export interface StructuredChapter {
   chapterTitle: string;
   toc: TableOfContentsItem[];
   pages: TextbookPage[];
   chapterQuiz: ChapterQuizItem[];
+  ckeMetadata?: CkeMetadata;
 }
 
 export interface AcademicSource {
@@ -80,6 +92,7 @@ export interface TextbookSection {
   pages?: TextbookPage[];
   toc?: TableOfContentsItem[];
   chapterQuiz?: ChapterQuizItem[];
+  ckeMetadata?: CkeMetadata;
 }
 
 export interface TextbookDomain {
@@ -89,4 +102,5 @@ export interface TextbookDomain {
   icon?: string;
   sections: TextbookSection[];
 }
+
 

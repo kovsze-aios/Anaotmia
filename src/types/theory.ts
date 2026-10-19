@@ -13,11 +13,16 @@ export interface ChapterQuizItem {
   answer: string;
 }
 
+import type { CkeMetadata, CkeFormula, CkeTopicStatus } from "@/server/models/textbook";
+
+export type { CkeMetadata, CkeFormula, CkeTopicStatus };
+
 export interface StructuredChapter {
   chapterTitle: string;
   toc: TableOfContentsItem[];
   pages: TextbookPage[];
   chapterQuiz: ChapterQuizItem[];
+  ckeMetadata?: CkeMetadata;
 }
 
 export type {
@@ -27,4 +32,5 @@ export type {
   ContentBlock,
   AcademicSource,
 } from "@/server/models";
+
 

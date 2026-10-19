@@ -8,6 +8,13 @@ import type { ReaderPosition, ReaderSpine } from "@/server/models";
 import { useI18n } from "@/i18n";
 import { HIDE_SCROLLBAR, cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import {
+  CkeFormulaSwitcher,
+  CkeStatusBadge,
+  defaultFormulaForPath,
+  matchesFormulaFilter,
+  type FormulaFilterMode,
+} from "@/components/matura/CkeFormulaControls";
 
 /**
  * Frames the drawer gets to lay itself out before the auto-scroll gives up.
@@ -37,28 +44,21 @@ export interface ReaderTocProps {
 export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
   const { t, n } = useI18n();
   const [open, setOpen] = useState(false);
+  const [formulaFilter, setFormulaFilter] = useState<FormulaFilterMode>(() =>
+    defaultFormulaForPath(basePath),
+  );
   const currentChapter = useRef<HTMLAnchorElement>(null);
+
+  const hasCkeMetadata =
+    Boolean(position.ckeMetadata) ||
+    position.volumeChapters.some((ch) => Boolean(ch.ckeStatus));
+
+  useEffect(() => {
+    setFormulaFilter(defaultFormulaForPath(basePath));
+  }, [basePath]);
 
   /**
    * Brings the chapter being read into view when the drawer opens.
-   *
-   * A volume runs to a couple of hundred chapters, so the list opened at the
-   * top and left the reader scrolling to find where they already were —
-   * further every chapter they advanced.
-   *
-   * The scroll cannot run on the effect itself: the drawer renders into a
-   * portal and slides in, so on the frame the effect fires the list may not be
-   * mounted yet, and scrolling a panel with no resolved height is silently a
-   * no-op. So it waits for a frame on which the list is both present and
-   * actually scrollable, then scrolls once and stops.
-   *
-   * Once, deliberately — `scrollIntoView` restarts a smooth scroll from
-   * wherever the list currently is, so calling it every frame would pin the
-   * list in place instead of moving it.
-   *
-   * `block: "center"` rather than "start" so the chapters either side stay
-   * visible — that is what makes the list read as a position in the book
-   * rather than a jump.
    */
   useEffect(() => {
     if (!open) return;
@@ -75,15 +75,18 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
         return;
       }
 
-      // A short volume never becomes scrollable, and there is nothing to
-      // scroll to; the cap is what stops that case spinning a frame loop for
-      // as long as the drawer stays open.
       if (++attempts < MAX_SCROLL_ATTEMPTS) frame = requestAnimationFrame(attempt);
     };
 
     frame = requestAnimationFrame(attempt);
     return () => cancelAnimationFrame(frame);
   }, [open, position.chapterId]);
+
+  const filteredChapters = hasCkeMetadata
+    ? position.volumeChapters.filter((ch) =>
+        matchesFormulaFilter(formulaFilter, ch.formulas, ch.ckeStatus),
+      )
+    : position.volumeChapters;
 
   return (
     <>
@@ -94,8 +97,6 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
         aria-label={t.reader.openToc}
         aria-expanded={open}
         className={cn(
-          // min-w-11/min-h-11 keeps the 44px touch-target floor used across
-          // the app; the default padding left it a pixel short.
           "fixed right-0 top-1/2 z-40 flex min-h-11 min-w-11 -translate-y-1/2 items-center justify-center rounded-l-xl border border-r-0 border-zinc-200 bg-white/90 py-4 pl-3 pr-2.5 shadow-lg backdrop-blur transition-colors focus-ring",
           "hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950/90 dark:hover:bg-zinc-900",
         )}
@@ -110,38 +111,45 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
           showCloseButton={false}
           className="w-full gap-0 p-0 sm:max-w-md"
         >
-          <div className="flex items-center justify-between border-b border-zinc-200 px-5 py-4 dark:border-zinc-800">
-            <div>
-              <SheetTitle className="text-base font-semibold">{t.reader.toc}</SheetTitle>
-              <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
-                {t.reader.chapterOf
-                  .replace("{current}", n(position.order))
-                  .replace("{total}", n(position.totalChapters))}
-              </p>
+          <div className="flex flex-col gap-3 border-b border-zinc-200 px-5 py-4 dark:border-zinc-800">
+            <div className="flex items-center justify-between">
+              <div>
+                <SheetTitle className="text-base font-semibold">{t.reader.toc}</SheetTitle>
+                <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
+                  {t.reader.chapterOf
+                    .replace("{current}", n(position.order))
+                    .replace("{total}", n(position.totalChapters))}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                aria-label={t.reader.closeToc}
+                className="rounded-lg p-2 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-ring dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
+              >
+                <X className="size-4" aria-hidden="true" />
+              </button>
             </div>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              aria-label={t.reader.closeToc}
-              className="rounded-lg p-2 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-ring dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
-            >
-              <X className="size-4" aria-hidden="true" />
-            </button>
+
+            {hasCkeMetadata && (
+              <div className="pt-1">
+                <CkeFormulaSwitcher
+                  value={formulaFilter}
+                  onChange={setFormulaFilter}
+                  compact
+                />
+              </div>
+            )}
           </div>
 
           <nav
             aria-label={t.reader.toc}
-            // Marks the scrolling element for the auto-scroll effect, which has
-            // to know whether this panel is scrollable yet before it tries.
             data-toc-list=""
             className={cn("min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-3", HIDE_SCROLLBAR)}
           >
             {spine.volumes.map((volume) => {
               const isCurrentVolume = volume.id === position.volumeId;
 
-              // Volumes other than the one being read are entry points, not
-              // trees: their chapters are not in this payload, so opening one
-              // navigates to its first chapter, where they are.
               if (!isCurrentVolume) {
                 return (
                   <Link
@@ -179,12 +187,12 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                     {volume.icon && <span aria-hidden="true">{volume.icon}</span>}
                     <span className="flex-1 truncate">{volume.shortTitle}</span>
                     <span className="shrink-0 text-xs font-normal tabular-nums text-zinc-400 dark:text-zinc-500">
-                      {n(volume.chapterCount)}
+                      {n(filteredChapters.length)}
                     </span>
                   </summary>
 
                   <ul className="mb-2 ml-4 border-l border-zinc-200 pl-2 dark:border-zinc-800">
-                    {position.volumeChapters.map((chapter) => {
+                    {filteredChapters.map((chapter) => {
                       const isCurrent = chapter.id === position.chapterId;
                       return (
                         <li key={chapter.id}>
@@ -195,20 +203,23 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                             aria-current={isCurrent ? "page" : undefined}
                             data-current={isCurrent || undefined}
                             className={cn(
-                              "block rounded-md px-3 py-2 text-[13px] leading-snug transition-colors focus-ring",
+                              "flex items-start justify-between gap-2 rounded-md px-3 py-2 text-[13px] leading-snug transition-colors focus-ring",
                               isCurrent
                                 ? "bg-zinc-100 font-medium text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100"
                                 : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-200",
                             )}
                           >
-                            <span className="mr-2 tabular-nums text-zinc-400 dark:text-zinc-600">
-                              {n(chapter.order)}
+                            <span className="flex-1">
+                              <span className="mr-2 tabular-nums text-zinc-400 dark:text-zinc-600">
+                                {n(chapter.order)}
+                              </span>
+                              {chapter.title}
                             </span>
-                            {chapter.title}
+                            {chapter.ckeStatus && (
+                              <CkeStatusBadge status={chapter.ckeStatus} className="mt-0.5" />
+                            )}
                           </Link>
 
-                          {/* Topics are in-page anchors, so they are only
-                              meaningful under the chapter already open. */}
                           {isCurrent && position.topics.length > 0 && (
                             <ul className="mb-2 ml-3 border-l border-zinc-200 pl-3 dark:border-zinc-800">
                               {position.topics.map((topic) => (

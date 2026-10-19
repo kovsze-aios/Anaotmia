@@ -66,6 +66,8 @@ export function SidebarDrawer({
     physiology: physiologyLinks,
     biology: biologyLinks,
     chemistry: chemistryLinks,
+    maturaBiology: maturaBiologyLinks = [],
+    maturaChemistry: maturaChemistryLinks = [],
   } = navigation;
 
   const { t } = useI18n();
@@ -192,6 +194,37 @@ export function SidebarDrawer({
           {/* ─── 🧪 CHEMIA ─── */}
           <AccordionGroup label={`🧪 ${t.sidebar.chemistry}`} defaultExpanded={false}>
             {chemistryLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+            <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
+              📝 {t.sidebar.examSheetsChemistry}
+            </Link>
+          </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+          <div className="px-4 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-zinc-400 dark:text-zinc-500">
+            PODRĘCZNIKI MATURALNE CKE
+          </div>
+
+          {/* ─── 🎓 MATURA — BIOLOGIA (2023+ / 2015) ─── */}
+          <AccordionGroup label="🎓 MATURA — BIOLOGIA (2023+ / 2015)" defaultExpanded={false}>
+            {maturaBiologyLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+            <Link href="/matura/biologia" className="drawer-link focus-ring" onClick={onClose}>
+              📝 {t.sidebar.examSheetsBiology}
+            </Link>
+          </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+
+          {/* ─── 🎓 MATURA — CHEMIA (2023+ / 2015) ─── */}
+          <AccordionGroup label="🎓 MATURA — CHEMIA (2023+ / 2015)" defaultExpanded={false}>
+            {maturaChemistryLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>

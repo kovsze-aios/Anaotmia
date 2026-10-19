@@ -11,6 +11,13 @@ export { getDomains, getDomain } from "./anatomia";
 export { biologiaDomains as biologiaTheory } from "./biologia/domains";
 export { chemiaDomains as chemiaTheory } from "./chemia/domains";
 export { fizjologiaTheory } from "./fizjologia";
+export {
+  biologiaMatura2023Theory,
+  biologiaMatura2015Theory,
+  chemiaMatura2023Theory,
+  chemiaMatura2015Theory,
+} from "./matura-cke";
 
 export { biologia, getBiologiaRecords, getBiologiaRecord } from "./biologia";
 export { chemia, getChemiaRecords, getChemiaRecord } from "./chemia";
+
