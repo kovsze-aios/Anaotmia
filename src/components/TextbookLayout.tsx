@@ -60,11 +60,12 @@ export function TextbookLayout({
           </Link>
           <h2>Podręcznik</h2>
           <button
+            type="button"
             className="textbook-sidebar__close focus-ring rounded-sm"
             onClick={() => setSidebarOpen(false)}
             aria-label="Zamknij pasek boczny"
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
         <ChapterNav
@@ -81,11 +82,12 @@ export function TextbookLayout({
       <main className="textbook-content">
         {/* Mobile toggle */}
         <button
+          type="button"
           className="textbook-mobile-toggle focus-ring"
           onClick={() => setSidebarOpen(true)}
           aria-expanded={sidebarOpen}
         >
-          ☰ Menu
+          <span aria-hidden="true">☰</span> Menu
         </button>
 
         {children}

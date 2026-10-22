@@ -26,8 +26,10 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
       <div className="l-topbar">
         <div className="l-topbar-container">
           <button
+            type="button"
             className="topbar-hamburger focus-ring"
             onClick={() => setDrawerOpen(true)}
+            aria-expanded={drawerOpen}
             aria-label={t.topbar.openMenu}
           >
             <span className="topbar-hamburger__line" />
@@ -71,6 +73,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
                 small screens. See `DonateButton`. */}
 
             <button
+              type="button"
               onClick={toggleTheme}
               className="relative inline-flex h-7 w-14 items-center rounded-full bg-zinc-200 dark:bg-zinc-800 p-1 cursor-pointer transition-colors duration-300 focus-ring"
               aria-label={t.topbar.toggleTheme}
