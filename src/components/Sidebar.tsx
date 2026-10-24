@@ -134,7 +134,7 @@ export function SidebarDrawer({
             onClick={onClose}
             aria-label={t.sidebar.closeMenu}
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
         <nav className={`mobile-drawer__nav ${HIDE_SCROLLBAR} overscroll-contain`}>
