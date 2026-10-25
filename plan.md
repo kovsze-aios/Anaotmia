@@ -1,13 +1,13 @@
-1. **Refactor `src/app/theory/biologia/page.tsx` to handle `?domain=` query param**:
-   - Wrap the main component's contents in a `<Suspense>` boundary to safely use `useSearchParams` without de-opting from static rendering.
-   - Use `useSearchParams` from `next/navigation` to catch the `?domain=` parameter.
-   - Add a `useEffect` that checks if `domain` is present in the query string. If so, find the first section for that domain in `biologiaTheory` and set `activeSectionId` and `activeSection`. We can also remove the query param using `router.replace('/theory/biologia', undefined, { shallow: true })` or similar to clean up the URL.
-2. **Update Domain Cards in `TeoriaBiologiaPage`**:
-   - Change `<ol className="textbook-welcome__domains">` to `<div className="textbook-welcome__domain-grid">` to match the anatomy layout.
-   - Replace the `<li>` tags with `<Link>` tags from `next/link`.
-   - The `href` for each link should be `/theory/biologia?domain=${d.id}`.
-   - Add Tailwind classes for interactivity: `className="textbook-welcome__domain-btn flex items-center cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors w-full text-left"`.
-3. **Pre Commit Steps**:
-   - Ensure proper testing, verifications, reviews and reflections are done.
-4. **Submit changes**:
-   - Submit.
+1. **Add `type="button"` and `aria-expanded` to hamburger button in `src/components/Topbar.tsx`**
+   - The hamburger button toggles `drawerOpen`, so it should include `aria-expanded={drawerOpen}` and `type="button"`.
+2. **Add `type="button"`, `role="switch"`, and `aria-checked` to the theme toggle button in `src/components/Topbar.tsx`**
+   - The theme toggle acts as a switch, so it should have `role="switch"` and `aria-checked={dark}` for screen reader compatibility, as well as `type="button"`.
+3. **Run all tests and static checks**
+   - Execute `pnpm run check` and `pnpm test` to verify changes.
+4. **Complete pre-commit steps to ensure proper testing, verification, review, and reflection are done.**
+   - Run `pre_commit_instructions` and follow the steps.
+5. **Update Palette's Journal**
+   - Append learning about `role="switch"` to `.jules/palette.md`.
+6. **Submit PR**
+   - Title: `🎨 Palette: [UX improvement] - Theme switch & Hamburger accessibility`
+   - Description formatted properly.
