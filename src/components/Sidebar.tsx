@@ -129,12 +129,13 @@ export function SidebarDrawer({
             {t.nav.brand}
           </Link>
           <button
+            type="button"
             ref={closeButtonRef}
             className="mobile-drawer__close focus-ring rounded-sm"
             onClick={onClose}
             aria-label={t.sidebar.closeMenu}
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
         <nav className={`mobile-drawer__nav ${HIDE_SCROLLBAR} overscroll-contain`}>
