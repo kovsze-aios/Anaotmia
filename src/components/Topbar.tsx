@@ -29,6 +29,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
             className="topbar-hamburger focus-ring"
             onClick={() => setDrawerOpen(true)}
             aria-label={t.topbar.openMenu}
+            aria-expanded={drawerOpen}
           >
             <span className="topbar-hamburger__line" />
             <span className="topbar-hamburger__line" />
@@ -72,6 +73,8 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
 
             <button
               onClick={toggleTheme}
+              role="switch"
+              aria-checked={dark}
               className="relative inline-flex h-7 w-14 items-center rounded-full bg-zinc-200 dark:bg-zinc-800 p-1 cursor-pointer transition-colors duration-300 focus-ring"
               aria-label={t.topbar.toggleTheme}
             >
