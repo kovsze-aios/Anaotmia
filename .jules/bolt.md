@@ -24,3 +24,7 @@
 ## 2025-02-12 - Module-Level Data Parsing Blocks App Load
 **Learning:** Eagerly parsing massive domain data structures (like aggregating all textbook sections into a single search index array) and initializing libraries like `Fuse.js` at the top level of a module (e.g., `src/lib/search.ts`) blocks the main thread during initial app hydration and route loads, even if the user never opens the search UI.
 **Action:** Always lazily initialize heavy data aggregations and search indices. Wrap the generation in a getter function and only execute it when the user performs an action (like typing in a search bar) for the first time.
+
+## 2025-02-12 - Regex vs Iteration for Substring Extraction
+**Learning:** Using `text.replace(/\s+/g, ' ')` to normalize spaces before truncating a string with a maximum length forces V8 to process and allocate the entire original string. For massive text fields (like domain texts or OCR structures), this leads to massive O(N) memory allocations and main-thread stalls, even if the final result is tiny.
+**Action:** When extracting short, normalized excerpts (e.g. `makeExcerpt`) from potentially enormous text blobs, avoid global `.replace` calls. Instead, use a zero-allocation `for` loop that iterates over character codes, normalizing inline, and terminating immediately once the target `max` length is reached (O(K)).
