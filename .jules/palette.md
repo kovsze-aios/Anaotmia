@@ -8,3 +8,6 @@
 ## 2026-07-20 - Global Navigation Interactive Elements Focus Visible Styles
 **Learning:** Found multiple instances of mismatched or missing `focus-visible` utility classes for interactive elements (`Link` buttons) on theoretical and topics page causing accessibility regressions during keyboard navigation. Custom styles were missing or mismatched `focus:ring-blue-500` instead of the app design tokens.
 **Action:** Standardize on `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` across all custom interactive components to ensure consistent keyboard accessibility.
+## 2023-11-01 - Topbar semantic a11y improvements
+**Learning:** Found instances where custom hamburger and theme toggle buttons were missing essential state announcements (`aria-expanded` and `role="switch" / aria-checked`). Even custom controls need standard web ARIA patterns.
+**Action:** Remember to explicitly add semantic state attributes (like `aria-expanded` for drawers/menus and `role="switch" / aria-checked` for binary toggles) to all custom interactive components moving forward.
