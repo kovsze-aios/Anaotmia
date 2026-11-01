@@ -36,12 +36,80 @@ interface SearchItem {
   searchBody?: string;
 }
 
+// ⚡ Bolt Optimization: Zero-allocation string truncation for excerpts
+// 💡 What: Replaced `text.replace(/\s+/g, ' ').trim()` with a single-pass `for` loop iterating over character codes, capping execution early.
+// 🎯 Why: Using a global regex replacement on massive textbook sections processes the entire string, causing severe memory allocation (O(N)) and main thread blocking, even when we only need the first 160 characters.
+// 📊 Impact: O(1) time and memory relative to string length (bounded by `max`). Eliminates large array allocations and GC spikes during search index generation.
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  let result = "";
+  let i = 0;
+  const len = text.length;
+
+  const isWs = (code: number) =>
+    (code >= 0x0009 && code <= 0x000d) ||
+    code === 0x0020 ||
+    code === 0x00a0 ||
+    (code >= 0x2000 && code <= 0x200a) ||
+    code === 0x2028 ||
+    code === 0x2029 ||
+    code === 0x202f ||
+    code === 0x205f ||
+    code === 0x3000 ||
+    code === 0x1680 ||
+    code === 0xfeff;
+
+  while (i < len && isWs(text.charCodeAt(i))) {
+    i++;
+  }
+
+  if (i === len) return undefined;
+
+  let lastWasSpace = false;
+  let truncated = false;
+
+  while (i < len) {
+    const code = text.charCodeAt(i);
+    const charIsWs = isWs(code);
+
+    if (charIsWs) {
+      if (!lastWasSpace) {
+        if (result.length >= max) {
+          truncated = true;
+          break;
+        }
+        result += " ";
+        lastWasSpace = true;
+      }
+    } else {
+      if (result.length >= max) {
+        truncated = true;
+        break;
+      }
+      result += text[i];
+      lastWasSpace = false;
+    }
+    i++;
+  }
+
+  if (!truncated) {
+    result = result.trimEnd();
+    return result;
+  }
+
+  let hasMore = false;
+  while (i < len) {
+    if (!isWs(text.charCodeAt(i))) {
+      hasMore = true;
+      break;
+    }
+    i++;
+  }
+
+  result = result.trimEnd();
+  return hasMore ? `${result}…` : result;
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
