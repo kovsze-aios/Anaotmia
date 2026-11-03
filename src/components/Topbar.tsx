@@ -26,8 +26,10 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
       <div className="l-topbar">
         <div className="l-topbar-container">
           <button
+            type="button"
             className="topbar-hamburger focus-ring"
             onClick={() => setDrawerOpen(true)}
+            aria-expanded={drawerOpen}
             aria-label={t.topbar.openMenu}
           >
             <span className="topbar-hamburger__line" />
@@ -71,12 +73,15 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
                 small screens. See `DonateButton`. */}
 
             <button
+              type="button"
+              role="switch"
+              aria-checked={dark}
               onClick={toggleTheme}
               className="relative inline-flex h-7 w-14 items-center rounded-full bg-zinc-200 dark:bg-zinc-800 p-1 cursor-pointer transition-colors duration-300 focus-ring"
               aria-label={t.topbar.toggleTheme}
             >
               {/* Icons Layer */}
-              <div className="flex w-full justify-between px-0.5 text-zinc-400 dark:text-zinc-500 z-10 pointer-events-none">
+              <div className="flex w-full justify-between px-0.5 text-zinc-400 dark:text-zinc-500 z-10 pointer-events-none" aria-hidden="true">
                 <Sun className={`h-3.5 w-3.5 transition-colors duration-300 ${!dark ? 'text-zinc-900' : 'text-zinc-600'}`} />
                 <Moon className={`h-3.5 w-3.5 transition-colors duration-300 ${dark ? 'text-zinc-100' : 'text-zinc-400'}`} />
               </div>
