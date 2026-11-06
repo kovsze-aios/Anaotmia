@@ -37,11 +37,23 @@ interface SearchItem {
 }
 
 /** A one-line preview of the matched text, shown under the result title. */
+// ⚡ Bolt Optimization: Bound input string length before applying regex for excerpts
+// 💡 What: Replaced unbounded global regex with a bounded slice `text.trim().slice(0, max * 3).replace(/\s+/g, ' ')`.
+// 🎯 Why: Global regex on large blocks of text causes huge memory allocations. Bounding the input preserves readability while capping CPU/memory at O(1) relative to string length.
+// 📊 Impact: Drops excerpt generation from O(N) memory/CPU to bounded O(max).
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return undefined;
-  return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
+
+  const trimmed = text.trim();
+  if (!trimmed) return undefined;
+
+  const chunk = trimmed.slice(0, max * 3);
+  const clean = chunk.replace(/\s+/g, " ");
+
+  if (clean.length > max || trimmed.length > max * 3) {
+      return `${clean.slice(0, max).trimEnd()}…`;
+  }
+  return clean;
 };
 
 const THEORY_SOURCES: ReadonlyArray<{
