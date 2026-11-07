@@ -1,3 +1,6 @@
+packages:
+  - '.'
+
 allowBuilds:
   # Native image optimizer used by `next build` / next/image.
   sharp: true
