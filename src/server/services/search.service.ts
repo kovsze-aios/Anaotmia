@@ -39,7 +39,11 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+  // ⚡ Bolt Optimization: Pre-bound excerpt text before global regex replace
+  // 💡 What: Apply trimStart and slice the text to 3x the max length before replacing whitespace.
+  // 🎯 Why: Global regex on large strings (search corpus) is O(N) and blocks the main thread.
+  // 📊 Impact: Prevents massive memory allocations and CPU spikes when generating excerpts for long textbook sections.
+  const clean = text.trimStart().slice(0, max * 3).replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
