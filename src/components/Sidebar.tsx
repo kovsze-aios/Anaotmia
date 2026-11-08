@@ -23,6 +23,7 @@ function AccordionGroup({
   return (
     <div className="sidebar-accordion">
       <button
+        type="button"
         className="sidebar-accordion__trigger focus-ring"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
