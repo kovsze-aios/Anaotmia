@@ -23,6 +23,7 @@ function AccordionGroup({
   return (
     <div className="sidebar-accordion">
       <button
+        type="button"
         className="sidebar-accordion__trigger focus-ring"
         onClick={() => setExpanded(!expanded)}
         aria-expanded={expanded}
@@ -130,11 +131,12 @@ export function SidebarDrawer({
           </Link>
           <button
             ref={closeButtonRef}
+            type="button"
             className="mobile-drawer__close focus-ring rounded-sm"
             onClick={onClose}
             aria-label={t.sidebar.closeMenu}
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
         <nav className={`mobile-drawer__nav ${HIDE_SCROLLBAR} overscroll-contain`}>
