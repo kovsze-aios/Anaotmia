@@ -39,7 +39,14 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+
+  // ⚡ Bolt Optimization: Prevent O(N) allocation in excerpts
+  // 💡 What: Bound input with `slice(0, max * 3)` before applying the regex whitespace replacement.
+  // 🎯 Why: Avoids applying expensive global regex over potentially massive full-chapter domain text strings, mitigating severe memory allocations and main-thread blocking.
+  // 📊 Impact: O(1) time and memory scaling for extracting small excerpts from enormous strings.
+  const sliced = text.trimStart().slice(0, max * 3);
+  const clean = sliced.replace(/\s+/g, " ").trim();
+
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
