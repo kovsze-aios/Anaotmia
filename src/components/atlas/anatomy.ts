@@ -4,35 +4,183 @@ import type { Locale } from "@/i18n";
 /**
  * Presentation config for the 3D atlas.
  *
- * Only the parts that are *not* language-dependent live here: the display order
- * and the colour coding, which is anatomical rather than decorative and so is
- * identical in every locale and both themes. Panel labels come from the
- * dictionaries (`t.systems`).
+ * Colours are tuned for high-contrast medical realism (PBR subsurface + clearcoat
+ * in `AnatomyScene.tsx`), differentiating muscles, vessels, nerves, bone, and viscera.
  */
 export const SYSTEMS: { id: SystemId; color: string }[] = [
-  { id: "skeletal", color: "#e2d9ba" },
-  { id: "muscular", color: "#a85b50" },
-  { id: "cardiac", color: "#b96760" },
-  { id: "sensory", color: "#b0c8ce" },
-  { id: "arterial", color: "#c05245" },
-  { id: "venous", color: "#527c9f" },
-  { id: "nervous", color: "#d8b565" },
-  { id: "respiratory", color: "#b98991" },
-  { id: "digestive", color: "#b8916b" },
-  { id: "urinary", color: "#b47961" },
-  { id: "lymphatic", color: "#879f7c" },
-  { id: "endocrine", color: "#c5a09a" },
-  { id: "reproductive", color: "#bda098" },
-  { id: "integumentary", color: "#ba9b7d" },
-  { id: "connective", color: "#aec3bb" },
+  { id: "skeletal", color: "#e8dec3" },
+  { id: "muscular", color: "#a84239" },
+  { id: "cardiac", color: "#b83232" },
+  { id: "sensory", color: "#9ec4cf" },
+  { id: "arterial", color: "#d13b30" },
+  { id: "venous", color: "#3b6ea5" },
+  { id: "nervous", color: "#e2bd64" },
+  { id: "respiratory", color: "#c2828d" },
+  { id: "digestive", color: "#c28e62" },
+  { id: "urinary", color: "#b56e52" },
+  { id: "lymphatic", color: "#769e6b" },
+  { id: "endocrine", color: "#c99690" },
+  { id: "reproductive", color: "#bfa096" },
+  { id: "integumentary", color: "#c4a384" },
+  { id: "connective", color: "#a6bdb6" },
 ];
 
 export type View = "three-quarter" | "front" | "back" | "side";
+
+export type RegionId =
+  | "whole"
+  | "head"
+  | "thorax"
+  | "abdomen"
+  | "pelvis"
+  | "hand"
+  | "arm"
+  | "leg"
+  | "foot"
+  | "spine";
+
+export type InteractionMode = "inspect" | "peel";
+
+export interface RegionPreset {
+  id: RegionId;
+  labelPl: string;
+  labelEn: string;
+  shortPl: string;
+  shortEn: string;
+  /** Default camera target in metres (Y-up). */
+  target: [number, number, number];
+  /** Camera offset direction (normalized in scene). */
+  direction: [number, number, number];
+  /** Distance from target in metres. */
+  distance: number;
+}
+
+export const REGION_PRESETS: RegionPreset[] = [
+  {
+    id: "whole",
+    labelPl: "Całe ciało",
+    labelEn: "Whole body",
+    shortPl: "Ciało",
+    shortEn: "Body",
+    target: [0, 0.85, 0],
+    direction: [0.35, 0.06, 1],
+    distance: 3.4,
+  },
+  {
+    id: "head",
+    labelPl: "Głowa i szyja (Mózgowie)",
+    labelEn: "Head & Neck (Brain)",
+    shortPl: "Głowa",
+    shortEn: "Head",
+    target: [0, 1.54, 0.02],
+    direction: [0.28, 0.06, 0.96],
+    distance: 0.56,
+  },
+  {
+    id: "thorax",
+    labelPl: "Klatka piersiowa (Serce i płuca)",
+    labelEn: "Thorax (Heart & Lungs)",
+    shortPl: "Klatka",
+    shortEn: "Thorax",
+    target: [0, 1.25, 0.02],
+    direction: [0.22, 0.05, 0.97],
+    distance: 0.78,
+  },
+  {
+    id: "abdomen",
+    labelPl: "Jama brzuszna (Narządy)",
+    labelEn: "Abdomen (Viscera)",
+    shortPl: "Brzuch",
+    shortEn: "Abdomen",
+    target: [0, 1.0, 0.02],
+    direction: [0.2, 0.04, 0.98],
+    distance: 0.74,
+  },
+  {
+    id: "hand",
+    labelPl: "Ręka i nadgarstek (Zbliżenie)",
+    labelEn: "Hand & Wrist (Close-up)",
+    shortPl: "Ręka",
+    shortEn: "Hand",
+    target: [-0.26, 0.79, 0.06],
+    direction: [-0.32, 0.14, 0.94],
+    distance: 0.44,
+  },
+  {
+    id: "arm",
+    labelPl: "Kończyna górna i bark",
+    labelEn: "Upper Limb & Shoulder",
+    shortPl: "Ramię",
+    shortEn: "Arm",
+    target: [-0.22, 1.12, 0.02],
+    direction: [-0.42, 0.08, 0.9],
+    distance: 0.88,
+  },
+  {
+    id: "spine",
+    labelPl: "Kręgosłup i grzbiet",
+    labelEn: "Spine & Back",
+    shortPl: "Kręgosłup",
+    shortEn: "Spine",
+    target: [0, 1.16, -0.04],
+    direction: [0.22, 0.05, -0.97],
+    distance: 1.05,
+  },
+  {
+    id: "pelvis",
+    labelPl: "Miednica i biodro",
+    labelEn: "Pelvis & Hip",
+    shortPl: "Miednica",
+    shortEn: "Pelvis",
+    target: [0, 0.83, 0.02],
+    direction: [0.26, 0.08, 0.96],
+    distance: 0.68,
+  },
+  {
+    id: "leg",
+    labelPl: "Kończyna dolna i kolano",
+    labelEn: "Lower Limb & Knee",
+    shortPl: "Noga",
+    shortEn: "Leg",
+    target: [-0.1, 0.46, 0.02],
+    direction: [-0.28, 0.06, 0.96],
+    distance: 1.15,
+  },
+  {
+    id: "foot",
+    labelPl: "Stopa i staw skokowy",
+    labelEn: "Foot & Ankle",
+    shortPl: "Stopa",
+    shortEn: "Foot",
+    target: [-0.1, 0.07, 0.05],
+    direction: [-0.38, 0.24, 0.89],
+    distance: 0.46,
+  },
+];
 
 /** Everything the WebGL scene needs to know about what to draw. */
 export interface SceneState {
   inspectorOpen?: boolean;
   explode: number;
+  /** 0 = all layers intact, 1 = superficial layers peeled to deep core. */
+  peelDepth?: number;
+  /** IDs of individual structures peeled/hidden by user dissection. */
+  peeled?: string[];
+  /** Translucent X-Ray ghosting of unselected structures when a part is selected. */
+  xray?: boolean;
+  /** Click behavior: inspect structure vs. peel layer on click. */
+  mode?: InteractionMode;
+  /** Active regional camera preset. */
+  region?: RegionId;
+  /** Incremented to smoothly fly the camera to the current selection. */
+  focusTrigger?: number;
+  /** Incremented with zoomStep (-1 or +1) to zoom in/out via UI buttons. */
+  zoomTrigger?: number;
+  zoomStep?: number;
+  /** Incremented with azimuth/polar step to orbit via UI buttons. */
+  orbitTrigger?: number;
+  orbitAzimuth?: number;
+  orbitPolar?: number;
   visible: SystemId[];
   selected: string[];
   isolate: boolean;
@@ -99,35 +247,35 @@ const SYSTEM_DESCRIPTIONS: Partial<Record<Locale, Record<SystemId, string>>> = {
   },
   pl: {
     skeletal:
-      "Kości tworzą rusztowanie ciała, chronią narządy i stanowią przyczepy dla mięśni. Tkanka kostna magazynuje też składniki mineralne i wytwarza komórki krwi.",
+      "Kości tworzą rusztowanie ciała, chronią narządy i stanowią przyczepy dla mięśni. Tkanka kostna magazynuje też składniki mineralne i wytwarza komórki krwi w szpiku czerwonym.",
     muscular:
-      "Mięśnie szkieletowe wytwarzają ruch, pociągając za swoje przyczepy. Wraz ze ścięgnami poruszają stawami, stabilizują postawę i wytwarzają ciepło.",
+      "Mięśnie szkieletowe wytwarzają ruch, pociągając za swoje przyczepy kostne. Układają się warstwowo (powierzchowne i głębokie), poruszają stawami, stabilizują postawę i wytwarzają ciepło.",
     cardiac:
-      "Serce to mięśniowa pompa o czterech jamach. Jego zastawki kierują krew do przodu przez krążenie płucne i systemowe.",
+      "Serce to mięśniowa pompa o czterech jamach zbudowana z tkanki mięśniowej poprzecznie prążkowanej typu sercowego. Jego zastawki kierują krew przez krążenie płucne i ustrojowe.",
     sensory:
-      "Struktury odpowiedzialne za zmysły — wzrok, słuch i równowagę. Ich wyspecjalizowane tkanki odbierają bodźce i przekazują informacje do układu nerwowego.",
+      "Struktury odpowiedzialne za zmysły specjalne — wzrok, słuch i równowagę. Ich wyspecjalizowane receptory odbierają bodźce i przekazują impulsy do ośrodkowego układu nerwowego.",
     arterial:
-      "Tętnice prowadzą krew z serca do tkanek, a w krążeniu płucnym — do płuc.",
+      "Tętnice o sprężystych i mięśniowych ścianach wyprowadzają krew pod wysokim ciśnieniem z komór serca do tkanek (krążenie duże) oraz do płuc (krążenie małe).",
     venous:
-      "Żyły odprowadzają krew w kierunku serca. Sieci powierzchowne i głębokie zbierają krew z tkanek; żyły płucne wracają z krwią utlenowaną.",
+      "Żyły odprowadzają krew z tkanek z powrotem do przedsionków serca. Wyposażone w zastawki sieci powierzchowne i głębokie zapobiegają cofaniu się krwi.",
     nervous:
-      "Mózgowie, rdzeń kręgowy i nerwy obwodowe przewodzą oraz przetwarzają sygnały. Odpowiadają za czucie, ruch, koordynację i regulację czynności organizmu.",
+      "Mózgowie, rdzeń kręgowy oraz nerwy czaszkowe i rdzeniowe przewodzą i integrują sygnały bioelektryczne, odpowiadając za czucie, ruch dowolny oraz regulację autonomiczną.",
     respiratory:
-      "Drogi oddechowe doprowadzają powietrze do płuc, gdzie zachodzi wymiana tlenu i dwutlenku węgla między powietrzem a krwią.",
+      "Drogi oddechowe doprowadzają powietrze do pęcherzyków płucnych, gdzie przez barierę pęcherzykowo-włośniczkową zachodzi dyfuzyjna wymiana tlenu i dwutlenku węgla.",
     digestive:
-      "Przewód pokarmowy rozkłada pokarm, wchłania składniki odżywcze i wodę oraz przesuwa treść dalej. Narządy dodatkowe dostarczają żółć i enzymy trawienne.",
+      "Przewód pokarmowy trawi pokarm mechanicznie i chemicznie, wchłania składniki odżywcze oraz wodę. Gruczoły dodatkowe (wątroba, trzustka) dostarczają żółć i enzymy trawienne.",
     urinary:
-      "Nerki filtrują krew i regulują gospodarkę wodno-elektrolitową oraz kwasowo-zasadową. Mocz spływa moczowodami do pęcherza.",
+      "Nerki filtrują osocze krwi w nefronach, utrzymując homeostazę wodno-elektrolitową i kwasowo-zasadową. Mocz spływa moczowodami do pęcherza moczowego.",
     lymphatic:
-      "Naczynia limfatyczne odprowadzają nadmiar płynu tkankowego do krążenia. Węzły chłonne uczestniczą w nadzorze immunologicznym.",
+      "Naczynia chłonne odprowadzają chłonkę (limfę) z przestrzeni międzykomórkowych do układu żylnego. Węzły chłonne i śledziona filtrują antygeny i wspierają odporność.",
     endocrine:
-      "Gruczoły dokrewne wydzielają hormony do krwi, koordynując metabolizm, wzrost, reakcje na stres i rozród.",
+      "Gruczoły wydzielania wewnętrznego uwalniają hormony bezpośrednio do krwiobiegu, regulując metabolizm, wzrost, odpowiedź stresową i gospodarkę wapniowo-fosforanową.",
     reproductive:
-      "Przedstawione struktury męskiego układu rozrodczego uczestniczą w wytwarzaniu i transporcie plemników oraz produkcji hormonów płciowych.",
+      "Struktury męskiego układu rozrodczego odpowiadają za spermatogenezę, dojrzewanie i transport plemników oraz syntezę androgenów (testosteronu).",
     integumentary:
-      "Powierzchnia ciała stanowi zewnętrzny punkt odniesienia. Skóra tworzy barierę ochronną i uczestniczy w czuciu oraz termoregulacji.",
+      "Powłoka wspólna (skóra i tkanka podskórna) stanowi zewnętrzną barierę ochronną organizmu, uczestniczy w termoregulacji, recepcji dotyku i syntezie witaminy D.",
     connective:
-      "Chrząstki, więzadła i inne tkanki łączne podpierają, łączą i rozdzielają struktury, stabilizując stawy i rozkładając obciążenia mechaniczne.",
+      "Chrząstki stawowe, więzadła, powięzie i krążki międzykręgowe łączą, amortyzują i stabilizują poszczególne elementy układu ruchu oraz narządy wewnętrzne.",
   },
 };
 
@@ -135,43 +283,43 @@ const SYSTEM_DESCRIPTIONS: Partial<Record<Locale, Record<SystemId, string>>> = {
 const ORGAN_EXPLANATIONS: Partial<Record<Locale, Record<string, string>>> = {
   en: {
     heart:
-      "A muscular pump in the chest. Its right side sends blood to the lungs; its left side sends blood through the systemic circulation.",
+      "A muscular pump in the middle mediastinum. Its right side sends deoxygenated blood to the lungs; its left side pumps oxygenated blood into the aorta.",
     liver:
-      "A large organ beneath the right side of the diaphragm. It processes absorbed nutrients, produces bile, and synthesizes many proteins carried in the blood.",
+      "The largest internal gland, located beneath the right diaphragm. It detoxifies blood, processes nutrients from the portal vein, produces bile, and synthesizes plasma proteins.",
     brain:
-      "The central organ of the nervous system. Its interconnected regions support perception, movement, memory, language, and the regulation of bodily functions.",
+      "The central command organ of the nervous system housed inside the neurocranium. Comprises the cerebrum, diencephalon, brainstem, and cerebellum.",
     stomach:
-      "A muscular chamber between the esophagus and small intestine. It stores and mixes food with acid and enzymes before releasing it into the duodenum.",
+      "A J-shaped muscular dilatation of the digestive tract between the esophagus and duodenum. Secretes hydrochloric acid and pepsinogen to initiate protein digestion.",
     spleen:
-      "A lymphoid organ in the upper left abdomen. It filters blood, removes aging blood cells, and participates in immune responses.",
+      "The largest lymphoid organ, situated in the left hypochondrium. Filters senescent erythrocytes, stores platelets, and mounts adaptive immune responses.",
     pancreas:
-      "An abdominal organ with digestive and endocrine roles. It supplies enzymes to the small intestine and releases hormones including insulin and glucagon.",
+      "A retroperitoneal exocrine and endocrine gland. Acinar cells secrete digestive enzymes into the duodenum, while islets of Langerhans release insulin and glucagon.",
     "urinary bladder":
-      "A muscular reservoir in the pelvis that stores urine arriving from the kidneys through the ureters.",
+      "A hollow smooth-muscle organ (detrusor) on the pelvic floor that stores urine received via the ureters before micturition.",
     trachea:
-      "The main airway connecting the larynx to the bronchi. Its cartilage supports keep the airway open during breathing.",
+      "A cartilaginous and membranous tube of C-shaped hyaline rings connecting the cricoid cartilage of the larynx to the main bronchi at the carina.",
     diaphragm:
-      "A broad muscle separating the chest and abdomen. When it contracts, it increases chest volume and helps draw air into the lungs.",
+      "The primary dome-shaped muscle of inspiration separating the thoracic and abdominal cavities. Contraction flattens the dome and lowers intrathoracic pressure.",
   },
   pl: {
     heart:
-      "Mięśniowa pompa w klatce piersiowej. Prawa połowa tłoczy krew do płuc, lewa — do krążenia systemowego.",
+      "Czterojamowa pompa mięśniowa w śródpiersiu środkowym. Prawa komora tłoczy krew odtlenowaną pniem płucnym do płuc, a lewa komora — krew utlenowaną do aorty.",
     liver:
-      "Duży narząd pod prawą kopułą przepony. Przetwarza wchłonięte składniki odżywcze, wytwarza żółć i syntetyzuje wiele białek osocza.",
+      "Największy gruczoł ustroju położony w prawym podżebrzu pod przeponą. Odbiera krew z żyły wrotnej, metabolizuje składniki pokarmowe, detoksykuje ksenobiotyki i wytwarza żółć.",
     brain:
-      "Centralny narząd układu nerwowego. Jego połączone obszary odpowiadają za percepcję, ruch, pamięć, mowę i regulację czynności organizmu.",
+      "Nadrzędny ośrodek układu nerwowego chroniony przez kości mózgoczaszki i opony. Obejmuje kresomózgowie (korę mózgową), międzymózgowie, pień mózgu oraz móżdżek.",
     stomach:
-      "Mięśniowy zbiornik między przełykiem a jelitem cienkim. Magazynuje i miesza pokarm z kwasem i enzymami przed przejściem do dwunastnicy.",
+      "Workowate rozszerzenie przewodu pokarmowego między przełykiem a dwunastnicą. Gruczoły żołądkowe wydzielają kwas solny (HCl) i pepsynogen, rozpoczynając trawienie białek.",
     spleen:
-      "Narząd limfatyczny w lewym górnym kwadrancie brzucha. Filtruje krew, usuwa zużyte krwinki i uczestniczy w odpowiedzi immunologicznej.",
+      "Największy narząd limfatyczny położony wewnątrzotrzewnowo w lewym podżebrzu. Odpowiada za hemolizę zużytych erytrocytów, magazynowanie krwi i proliferację limfocytów.",
     pancreas:
-      "Narząd jamy brzusznej o funkcji trawiennej i dokrewnej. Dostarcza enzymy do jelita cienkiego oraz wydziela insulinę i glukagon.",
+      "Gruczoł położony zaotrzewnowo o podwójnej funkcji: zewnątrzwydzielniczej (sok trzustkowy z amylazą, lipazą i trypsynogenem) oraz wewnątrzwydzielniczej (wyspy Langerhansa: insulina i glukagon).",
     "urinary bladder":
-      "Mięśniowy zbiornik w miednicy, gromadzący mocz spływający z nerek moczowodami.",
+      "Mięśniowo-błoniasty zbiornik w miednicy mniejszej zbudowany z mięśnia wypieracza moczu. Gromadzi mocz spływający moczowodami z nerek.",
     trachea:
-      "Główna droga oddechowa łącząca krtań z oskrzelami. Pierścienie chrzęstne utrzymują jej drożność podczas oddychania.",
+      "Droga oddechowa łącząca krtań (od wysokości kręgu C6) z rozdwojeniem na oskrzela główne (Th4/Th5). Usztywniona podkowiastymi chrząstkami szklistymi.",
     diaphragm:
-      "Szeroki mięsień oddzielający klatkę piersiową od jamy brzusznej. Kurcząc się, zwiększa objętość klatki i wspomaga wdech.",
+      "Główny mięsień wdechowy oddzielający jamę klatki piersiowej od jamy brzusznej. Posiada rozwory dla aorty, przełyku oraz żyły głównej dolnej.",
   },
 };
 

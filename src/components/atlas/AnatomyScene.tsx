@@ -6,12 +6,12 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
-import type { Atlas } from "@/server/models";
+import type { Atlas, SystemId } from "@/server/models";
 import { resolveChunkUrls } from "@/services/atlasService";
 import { createExplosionLayout } from "./explosion-layout";
 import { decodeModelResponse } from "./model-download";
 import { PointerTap } from "./pointer-tap";
-import { SYSTEMS, type SceneState } from "./anatomy";
+import { REGION_PRESETS, SYSTEMS, type SceneState } from "./anatomy";
 
 /**
  * Stage colours per theme. Structure colours come from `SYSTEMS` and are the
@@ -19,30 +19,163 @@ import { SYSTEMS, type SceneState } from "./anatomy";
  */
 const PALETTE = {
   light: {
-    clear: "#f2f3f3",
-    ground: 0xd5d9dc,
-    platform: 0xeeeeec,
-    ring: 0x8c969f,
-    innerRing: 0xa4aeb8,
-    marker: 0x64748b,
+    clear: "#eef1f4",
+    ground: 0xd4d9df,
+    platform: 0xebeeef,
+    ring: 0x7e8b96,
+    innerRing: 0x9aa6b2,
+    marker: 0x475569,
   },
   dark: {
-    clear: "#000000",
-    ground: 0x0a0a0b,
-    platform: 0x18181b,
-    ring: 0x3f3f46,
-    innerRing: 0x27272a,
-    marker: 0xa1a1aa,
+    clear: "#050608",
+    ground: 0x090b0e,
+    platform: 0x14171c,
+    ring: 0x3b424d,
+    innerRing: 0x23272f,
+    marker: 0x94a3b8,
   },
 } as const;
 
+/**
+ * Per-system physical surface presets (roughness, clearcoat, sheen) so bones look
+ * like mineralised ivory, muscles have moist fascial striation sheen, and vessels
+ * & viscera have wet serous membrane reflections.
+ */
+const MATERIAL_PROPS: Record<
+  SystemId,
+  {
+    roughness: number;
+    metalness: number;
+    clearcoat: number;
+    clearcoatRoughness: number;
+    sheen: number;
+    sssStrength: number;
+  }
+> = {
+  skeletal: {
+    roughness: 0.42,
+    metalness: 0.02,
+    clearcoat: 0.16,
+    clearcoatRoughness: 0.38,
+    sheen: 0.12,
+    sssStrength: 0.14,
+  },
+  muscular: {
+    roughness: 0.35,
+    metalness: 0.04,
+    clearcoat: 0.36,
+    clearcoatRoughness: 0.26,
+    sheen: 0.38,
+    sssStrength: 0.28,
+  },
+  cardiac: {
+    roughness: 0.26,
+    metalness: 0.05,
+    clearcoat: 0.58,
+    clearcoatRoughness: 0.18,
+    sheen: 0.35,
+    sssStrength: 0.32,
+  },
+  arterial: {
+    roughness: 0.24,
+    metalness: 0.05,
+    clearcoat: 0.56,
+    clearcoatRoughness: 0.16,
+    sheen: 0.3,
+    sssStrength: 0.3,
+  },
+  venous: {
+    roughness: 0.26,
+    metalness: 0.05,
+    clearcoat: 0.5,
+    clearcoatRoughness: 0.2,
+    sheen: 0.28,
+    sssStrength: 0.26,
+  },
+  nervous: {
+    roughness: 0.32,
+    metalness: 0.02,
+    clearcoat: 0.42,
+    clearcoatRoughness: 0.22,
+    sheen: 0.32,
+    sssStrength: 0.3,
+  },
+  sensory: {
+    roughness: 0.22,
+    metalness: 0.04,
+    clearcoat: 0.65,
+    clearcoatRoughness: 0.12,
+    sheen: 0.25,
+    sssStrength: 0.25,
+  },
+  respiratory: {
+    roughness: 0.34,
+    metalness: 0.02,
+    clearcoat: 0.46,
+    clearcoatRoughness: 0.24,
+    sheen: 0.34,
+    sssStrength: 0.3,
+  },
+  digestive: {
+    roughness: 0.32,
+    metalness: 0.03,
+    clearcoat: 0.5,
+    clearcoatRoughness: 0.2,
+    sheen: 0.32,
+    sssStrength: 0.28,
+  },
+  urinary: {
+    roughness: 0.3,
+    metalness: 0.03,
+    clearcoat: 0.52,
+    clearcoatRoughness: 0.2,
+    sheen: 0.3,
+    sssStrength: 0.28,
+  },
+  lymphatic: {
+    roughness: 0.3,
+    metalness: 0.03,
+    clearcoat: 0.44,
+    clearcoatRoughness: 0.22,
+    sheen: 0.25,
+    sssStrength: 0.25,
+  },
+  endocrine: {
+    roughness: 0.32,
+    metalness: 0.03,
+    clearcoat: 0.46,
+    clearcoatRoughness: 0.22,
+    sheen: 0.3,
+    sssStrength: 0.28,
+  },
+  reproductive: {
+    roughness: 0.34,
+    metalness: 0.02,
+    clearcoat: 0.42,
+    clearcoatRoughness: 0.24,
+    sheen: 0.28,
+    sssStrength: 0.26,
+  },
+  integumentary: {
+    roughness: 0.48,
+    metalness: 0.01,
+    clearcoat: 0.18,
+    clearcoatRoughness: 0.4,
+    sheen: 0.35,
+    sssStrength: 0.35,
+  },
+  connective: {
+    roughness: 0.38,
+    metalness: 0.02,
+    clearcoat: 0.3,
+    clearcoatRoughness: 0.28,
+    sheen: 0.22,
+    sssStrength: 0.2,
+  },
+};
+
 /** Strings the scene needs. Passed in so the engine stays locale-agnostic. */
 export interface SceneLabels {
-  /**
-   * Localizes a structure name for display only. The scene keeps addressing
-   * parts by id, so highlighting and picking are unaffected by what this
-   * returns.
-   */
   formatPartName: (englishName: string) => string;
   sceneAria: string;
   errorWebgl: string;
@@ -59,6 +192,7 @@ interface Props {
   dark: boolean;
   labels: SceneLabels;
   onSelect: (id: string) => void;
+  onPeelPart?: (id: string) => void;
   onProgress: (n: number) => void;
   onError: (s: string) => void;
 }
@@ -80,24 +214,22 @@ export default function AnatomyScene({
   dark,
   labels,
   onSelect,
+  onPeelPart,
   onProgress,
   onError,
 }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const latest = useRef(state);
   const select = useRef(onSelect);
+  const peel = useRef(onPeelPart);
   const theme = useRef<ThemeTargets | null>(null);
-  // Read inside the init effect, which must not re-run when the theme flips.
   const darkRef = useRef(dark);
   const labelsRef = useRef(labels);
 
-  // Keep the render loop and pointer handlers pointed at the latest props
-  // without making them effect dependencies — rebuilding the scene for a prop
-  // change would re-download the geometry. Declared before the init effect so
-  // it has already synced by the time that one runs.
   useEffect(() => {
     latest.current = state;
     select.current = onSelect;
+    peel.current = onPeelPart;
     darkRef.current = dark;
     labelsRef.current = labels;
   });
@@ -109,12 +241,23 @@ export default function AnatomyScene({
     let dirty = true;
     let ready = false;
     let lastView = "";
+    let lastRegion = "whole";
     let lastReset = -1;
+    let lastFocusTrigger = 0;
+    let lastZoomTrigger = 0;
+    let lastOrbitTrigger = 0;
     let lastIsolate = "";
     let layoutKey = "";
     let amount = 0;
     let lastState: SceneState | null = null;
+    let hoveredIndex = -1;
+    let lastHoverRayTime = 0;
     const abort = new AbortController();
+
+    // Smooth camera interpolation state
+    let cameraAnimating = false;
+    const goalTarget = new T.Vector3(0, 0.85, 0);
+    const goalPosition = new T.Vector3(1.4, 1.05, 3.6);
 
     let renderer: T.WebGLRenderer;
     try {
@@ -130,46 +273,59 @@ export default function AnatomyScene({
 
     const palette = PALETTE[darkRef.current ? "dark" : "light"];
 
-    renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 768 ? 1.5 : 2));
+    renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 768 ? 1.75 : 2));
     renderer.setClearColor(palette.clear);
     renderer.outputColorSpace = T.SRGBColorSpace;
     renderer.toneMapping = T.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.12;
+    renderer.toneMappingExposure = 1.16;
     el.appendChild(renderer.domElement);
     renderer.domElement.setAttribute("aria-label", labelsRef.current.sceneAria);
 
     const scene = new T.Scene();
-    const camera = new T.PerspectiveCamera(34, 1, 0.005, 100);
+    const camera = new T.PerspectiveCamera(32, 1, 0.004, 100);
     const controls = new OrbitControls(camera, renderer.domElement);
-    camera.position.set(1.4, 1.05, 3.6);
-    controls.target.set(0, 0.85, 0);
+    camera.position.copy(goalPosition);
+    controls.target.copy(goalTarget);
     controls.enableDamping = true;
-    controls.dampingFactor = 0.085;
-    controls.minDistance = 0.07;
+    controls.dampingFactor = 0.09;
+    controls.minDistance = 0.05;
     controls.maxDistance = 40;
     controls.maxPolarAngle = Math.PI * 0.96;
+    controls.zoomSpeed = 1.15;
+    controls.rotateSpeed = 0.85;
+    controls.panSpeed = 0.85;
+
+    // Stop automatic camera fly-to as soon as the user manually grabs/scrolls
+    const stopCameraAnimation = () => {
+      cameraAnimating = false;
+    };
+    controls.addEventListener("start", stopCameraAnimation);
     controls.addEventListener("change", () => {
       dirty = true;
     });
 
     const pmrem = new T.PMREMGenerator(renderer);
     const room = new RoomEnvironment();
-    const env = pmrem.fromScene(room, 0.04);
+    const env = pmrem.fromScene(room, 0.035);
     scene.environment = env.texture;
     room.dispose();
     pmrem.dispose();
 
-    scene.add(new T.HemisphereLight(0xffffff, 0xa7acb2, 1.05));
-    const key = new T.DirectionalLight(0xfffaf4, 2.3);
-    key.position.set(-2, 4, 3);
+    // Studio 3-point + anatomical warm sub-fill lighting
+    scene.add(new T.HemisphereLight(0xfffcf7, 0x8d96a3, 1.1));
+    const key = new T.DirectionalLight(0xfff8ef, 2.45);
+    key.position.set(-2.2, 4.2, 3.2);
     scene.add(key);
-    const rim = new T.DirectionalLight(0xe9f0ff, 1.8);
-    rim.position.set(2, 2, -3);
+    const fill = new T.DirectionalLight(0xf3f7ff, 1.15);
+    fill.position.set(2.5, 1.2, 2.4);
+    scene.add(fill);
+    const rim = new T.DirectionalLight(0xdbeafe, 1.95);
+    rim.position.set(1.8, 2.5, -3.2);
     scene.add(rim);
 
     const groundMaterial = new T.MeshStandardMaterial({
       color: palette.ground,
-      roughness: 1,
+      roughness: 0.95,
     });
     const ground = new T.Mesh(new T.CircleGeometry(30, 96), groundMaterial);
     ground.rotation.x = -Math.PI / 2;
@@ -178,8 +334,8 @@ export default function AnatomyScene({
 
     const platformMaterial = new T.MeshStandardMaterial({
       color: palette.platform,
-      metalness: 0.12,
-      roughness: 0.67,
+      metalness: 0.16,
+      roughness: 0.58,
     });
     const platform = new T.Mesh(
       new T.CylinderGeometry(0.68, 0.7, 0.028, 100),
@@ -191,10 +347,10 @@ export default function AnatomyScene({
     const ringMaterial = new T.MeshBasicMaterial({
       color: palette.ring,
       transparent: true,
-      opacity: 0.4,
+      opacity: 0.42,
       side: T.DoubleSide,
     });
-    const ring = new T.Mesh(new T.RingGeometry(0.63, 0.632, 128), ringMaterial);
+    const ring = new T.Mesh(new T.RingGeometry(0.63, 0.633, 128), ringMaterial);
     ring.rotation.x = -Math.PI / 2;
     ring.position.y = 0.001;
     scene.add(ring);
@@ -202,19 +358,19 @@ export default function AnatomyScene({
     const innerRingMaterial = new T.MeshBasicMaterial({
       color: palette.innerRing,
       transparent: true,
-      opacity: 0.16,
+      opacity: 0.2,
       side: T.DoubleSide,
     });
     const innerRing = new T.Mesh(
-      new T.RingGeometry(0.55, 0.551, 128),
+      new T.RingGeometry(0.55, 0.552, 128),
       innerRingMaterial,
     );
     innerRing.rotation.x = -Math.PI / 2;
     innerRing.position.y = 0.001;
     scene.add(innerRing);
 
-    // Per-part transform + visibility live in a texture, so one draw call per
-    // system can move and hide 2,234 meshes without CPU-side matrix updates.
+    // Per-part transform + visibility live in a texture:
+    // R,G,B = dx,dy,dz offset; A = visibility/opacity (0 = hidden, 0.17 = X-Ray ghost, 1 = solid)
     const width = T.MathUtils.ceilPowerOfTwo(atlas.parts.length);
     const data = new Float32Array(width * 4);
     const partTexture = new T.DataTexture(
@@ -225,6 +381,8 @@ export default function AnatomyScene({
       T.FloatType,
     );
     partTexture.needsUpdate = true;
+
+    // selectionTexture: R = selected (255), G = hovered (255), B = depth shade
     const selectedData = new Uint8Array(width * 4);
     const selectionTexture = new T.DataTexture(selectedData, width, 1);
     selectionTexture.needsUpdate = true;
@@ -246,6 +404,60 @@ export default function AnatomyScene({
           new T.Vector3().fromArray(p.bounds[1]),
         ),
     );
+
+    // Compute anatomical superficial-to-deep peel score (0 = outermost, 1 = deepest bone)
+    // so the Peel Depth slider strips layers naturally from skin -> outer muscles -> deep muscles -> vessels/organs -> skeleton.
+    const partPeelOrder = atlas.parts.map((p, i) => {
+      const c = centers[i];
+      const bSize = bounds[i].getSize(new T.Vector3());
+      const radialSurface = Math.min(
+        1,
+        Math.hypot(c.x * 0.85, c.z * 1.35) / 0.22 + (bSize.x + bSize.y) * 0.25,
+      );
+      switch (p.system) {
+        case "integumentary":
+          return 0.03;
+        case "muscular":
+        case "connective":
+          // Outer muscles peel between 0.08 and 0.42; deeper muscles between 0.42 and 0.58
+          return 0.58 - radialSurface * 0.5;
+        case "lymphatic":
+        case "venous":
+          return 0.66 - radialSurface * 0.12;
+        case "arterial":
+        case "nervous":
+          return 0.75 - radialSurface * 0.1;
+        case "digestive":
+        case "respiratory":
+        case "urinary":
+        case "reproductive":
+        case "endocrine":
+        case "cardiac":
+        case "sensory":
+          return 0.86 - radialSurface * 0.08;
+        case "skeletal":
+        default:
+          return 0.98;
+      }
+    });
+
+    // Pre-compute hand bounding box from actual hand/wrist parts for precision zoom
+    const handBox = new T.Box3();
+    atlas.parts.forEach((p, i) => {
+      const n = p.name.toLowerCase();
+      if (
+        (n.includes("hand") ||
+          n.includes("carpal") ||
+          n.includes("metacarpal") ||
+          n.includes("phalanx of finger") ||
+          n.includes("thenar") ||
+          n.includes("palmar")) &&
+        centers[i].x < -0.08
+      ) {
+        handBox.union(bounds[i]);
+      }
+    });
+
     let packingWidth = 1;
     let packingHeight = 1;
 
@@ -322,37 +534,69 @@ export default function AnatomyScene({
       return best;
     };
 
-    const materialFor = (system: string) => {
-      const m = new T.MeshStandardMaterial({
-        color: SYSTEMS.find((s) => s.id === system)?.color ?? "#aebbb8",
-        metalness: 0.08,
-        roughness: 0.53,
+    const materialFor = (system: SystemId) => {
+      const baseColor = SYSTEMS.find((s) => s.id === system)?.color ?? "#aebbb8";
+      const props = MATERIAL_PROPS[system] ?? MATERIAL_PROPS.skeletal;
+      const m = new T.MeshPhysicalMaterial({
+        color: baseColor,
+        metalness: props.metalness,
+        roughness: props.roughness,
+        clearcoat: props.clearcoat,
+        clearcoatRoughness: props.clearcoatRoughness,
+        sheen: props.sheen,
+        sheenColor: new T.Color(baseColor).lerp(new T.Color("#ffffff"), 0.35),
         side: T.DoubleSide,
-        transparent: system === "integumentary",
-        opacity: system === "integumentary" ? 0.1 : 1,
-        depthWrite: system !== "integumentary",
       });
       m.onBeforeCompile = (shader) => {
         shader.uniforms.partState = { value: partTexture };
         shader.uniforms.selectionState = { value: selectionTexture };
         shader.uniforms.stateWidth = { value: width };
+        shader.uniforms.sssStrength = { value: props.sssStrength };
         shader.vertexShader =
-          "attribute float partIndex; uniform sampler2D partState; uniform sampler2D selectionState; uniform float stateWidth; varying float partVisible; varying float partSelected;\n" +
+          "attribute float partIndex; uniform sampler2D partState; uniform sampler2D selectionState; uniform float stateWidth; varying float partVisible; varying float vPartSelected; varying float vPartHovered; varying float vPartHash;\n" +
           shader.vertexShader;
         shader.vertexShader = shader.vertexShader.replace(
           "#include <begin_vertex>",
-          "#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); vec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w; partSelected = texture2D(selectionState, stateUv).r;",
+          "#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); vec4 state = texture2D(partState, stateUv); vec4 selState = texture2D(selectionState, stateUv); transformed += state.xyz; partVisible = state.w; vPartSelected = selState.r; vPartHovered = selState.g; vPartHash = fract(sin(partIndex * 12.9898) * 43758.5453);",
         );
         shader.fragmentShader =
-          "varying float partVisible; varying float partSelected;\n" +
+          "uniform float sssStrength; varying float partVisible; varying float vPartSelected; varying float vPartHovered; varying float vPartHash;\n" +
           shader.fragmentShader;
         shader.fragmentShader = shader.fragmentShader.replace(
           "#include <clipping_planes_fragment>",
-          "#include <clipping_planes_fragment>\nif (partVisible < 0.5) discard;",
+          `#include <clipping_planes_fragment>
+          if (partVisible < 0.02) discard;
+          if (partVisible < 0.95) {
+            float ign = fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(0.06711056, 0.00583715))));
+            if (ign > partVisible) discard;
+          }`,
         );
         shader.fragmentShader = shader.fragmentShader.replace(
           "#include <color_fragment>",
-          "#include <color_fragment>\ndiffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.42, 0.85, 0.78), partSelected * 0.75);",
+          `#include <color_fragment>
+          // Subtle anatomical per-part tonal variation so neighboring muscles & bones are distinct
+          diffuseColor.rgb *= (0.91 + 0.17 * vPartHash);
+          // X-Ray ghost tint when translucent
+          if (partVisible < 0.95) {
+            diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.52, 0.74, 0.92), 0.38);
+          }
+          // Hover highlight (warm amber)
+          diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.98, 0.80, 0.36), vPartHovered * 0.52);
+          // Selected highlight (vivid emerald-cyan)
+          diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.18, 0.90, 0.76), vPartSelected * 0.72);`,
+        );
+        shader.fragmentShader = shader.fragmentShader.replace(
+          "#include <dithering_fragment>",
+          `#include <dithering_fragment>
+          vec3 viewDir = normalize(vViewPosition);
+          float fresnel = pow(1.0 - abs(dot(normalize(vNormal), viewDir)), 2.5);
+          // Organic subsurface scattering & rim contour
+          gl_FragColor.rgb += gl_FragColor.rgb * fresnel * sssStrength;
+          if (vPartSelected > 0.5) {
+            gl_FragColor.rgb += vec3(0.15, 0.88, 0.74) * fresnel * 0.65;
+          } else if (vPartHovered > 0.5) {
+            gl_FragColor.rgb += vec3(1.0, 0.82, 0.38) * fresnel * 0.45;
+          }`,
         );
       };
       materials.push(m);
@@ -386,7 +630,6 @@ export default function AnatomyScene({
             3,
           ),
         );
-        // GPU-normalized signed-short normals keep the atlas compact in memory.
         g.setAttribute(
           "normal",
           new T.BufferAttribute(
@@ -431,8 +674,6 @@ export default function AnatomyScene({
       dirty = true;
     };
 
-    // Three concurrent downloads: enough to saturate a connection without
-    // delaying the first chunk that puts something on screen.
     void (async () => {
       try {
         let cursor = 0;
@@ -455,17 +696,59 @@ export default function AnatomyScene({
       }
     })();
 
-    const fit = (view: string, extent = 0) => {
+    const setCameraGoal = (
+      target: T.Vector3,
+      pos: T.Vector3,
+      instant = false,
+    ) => {
+      goalTarget.copy(target);
+      goalPosition.copy(pos);
+      if (instant) {
+        controls.target.copy(target);
+        camera.position.copy(pos);
+        controls.update();
+        cameraAnimating = false;
+      } else {
+        cameraAnimating = true;
+      }
+      dirty = true;
+    };
+
+    const fit = (view: string, extent = 0, regionId = "whole", instant = false) => {
       const mobile = el.clientWidth < 768;
+      const preset =
+        REGION_PRESETS.find((r) => r.id === regionId) ?? REGION_PRESETS[0];
+
+      if (regionId !== "whole" && extent < 0.2) {
+        const target = new T.Vector3(...preset.target);
+        let baseDist = preset.distance * (mobile ? 1.22 : 1.0);
+        if (regionId === "hand" && !handBox.isEmpty()) {
+          handBox.getCenter(target);
+          const handSize = handBox.getSize(new T.Vector3());
+          baseDist = Math.max(handSize.x, handSize.y, handSize.z) * (mobile ? 2.15 : 1.75);
+        }
+        const dir =
+          view === "front"
+            ? new T.Vector3(0, 0.04, 1).normalize()
+            : view === "back"
+              ? new T.Vector3(0, 0.04, -1).normalize()
+              : view === "side"
+                ? new T.Vector3(target.x < -0.05 ? -1 : 1, 0.04, 0.15).normalize()
+                : new T.Vector3(...preset.direction).normalize();
+        const pos = target.clone().addScaledVector(dir, baseDist);
+        setCameraGoal(target, pos, instant);
+        return;
+      }
+
       const normalDistance = mobile
         ? Math.max(
-            4.5,
-            (1.8 * el.clientHeight) /
-              Math.max(160, el.clientHeight - 350) /
+            4.2,
+            (1.75 * el.clientHeight) /
+              Math.max(160, el.clientHeight - 330) /
               (2 * Math.tan(T.MathUtils.degToRad(camera.fov / 2))),
           )
-        : 4;
-      const reservedHeight = mobile ? 350 : 270;
+        : 3.65;
+      const reservedHeight = mobile ? 330 : 250;
       const availableAspect = Math.max(
         0.35,
         (el.clientWidth - (mobile ? 40 : 340)) /
@@ -490,14 +773,51 @@ export default function AnatomyScene({
             : view === "side"
               ? new T.Vector3(1, 0.02, 0)
               : new T.Vector3(0.35, 0.06, 1).normalize();
-      controls.target.set(
+      const target = new T.Vector3(
         extent > 0.1 && el.clientWidth > 767 ? -packingWidth * 0.12 : 0,
-        extent > 0.1 || mobile ? 0.85 : 0.68,
+        extent > 0.1 || mobile ? 0.85 : 0.76,
         0,
       );
-      camera.position.copy(controls.target).addScaledVector(direction, distance);
-      controls.update();
-      dirty = true;
+      const pos = target.clone().addScaledVector(direction, distance);
+      setCameraGoal(target, pos, instant);
+    };
+
+    const focusOnParts = (partIds: string[]) => {
+      if (!partIds.length) return;
+      const box = new T.Box3();
+      atlas.parts.forEach((p, i) => {
+        if (partIds.includes(p.id)) {
+          box.union(
+            bounds[i]
+              .clone()
+              .translate(
+                new T.Vector3(data[i * 4], data[i * 4 + 1], data[i * 4 + 2]),
+              ),
+          );
+        }
+      });
+      if (box.isEmpty()) return;
+      const center = box.getCenter(new T.Vector3());
+      const size = box.getSize(new T.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z, 0.08);
+      const mobile = el.clientWidth < 768;
+      const dist = Math.max(
+        0.16,
+        (maxDim / (2 * Math.tan(T.MathUtils.degToRad(camera.fov / 2)))) *
+          (mobile ? 2.6 : 2.1),
+      );
+      // Pick an intelligent viewing direction based on where the structure sits on the body
+      const currentDir = camera.position
+        .clone()
+        .sub(controls.target)
+        .normalize();
+      const smartDir = new T.Vector3(
+        Math.abs(center.x) > 0.12 ? Math.sign(center.x) * 0.45 : currentDir.x * 0.4,
+        0.12,
+        center.z < -0.03 ? -0.9 : 0.9,
+      ).normalize();
+      const pos = center.clone().addScaledVector(smartDir, dist);
+      setCameraGoal(center, pos, false);
     };
 
     const resize = () => {
@@ -506,13 +826,18 @@ export default function AnatomyScene({
       renderer.setPixelRatio(
         Math.min(
           devicePixelRatio,
-          el.clientWidth < 768 || el.clientHeight < 600 ? 1.5 : 2,
+          el.clientWidth < 768 || el.clientHeight < 600 ? 1.75 : 2,
         ),
       );
       camera.aspect = el.clientWidth / el.clientHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(el.clientWidth, el.clientHeight);
-      fit(latest.current.view, amount);
+      fit(
+        latest.current.view,
+        amount,
+        latest.current.region ?? "whole",
+        true,
+      );
     };
     const observer = new ResizeObserver(resize);
     observer.observe(el);
@@ -523,65 +848,110 @@ export default function AnatomyScene({
     const worldBox = new T.Box3();
     const hitPoint = new T.Vector3();
 
-    const down = (e: PointerEvent) => {
-      hover.hidden = true;
-      tap.down(
-        e.pointerId,
-        e.clientX,
-        e.clientY,
-        e.pointerType === "touch" ? 12 : 5,
-      );
-    };
-    const move = (e: PointerEvent) => {
-      tap.move(e.pointerId, e.clientX, e.clientY);
-      if (e.buttons || amount < 0.5 || e.pointerType === "touch") {
-        hover.hidden = true;
-        return;
+    const setHoveredPart = (nextIndex: number) => {
+      if (hoveredIndex === nextIndex) return;
+      if (hoveredIndex >= 0) {
+        selectedData[hoveredIndex * 4 + 1] = 0;
       }
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const index = findTarget(x, y, 12);
-      hover.hidden = index < 0;
-      renderer.domElement.style.cursor = index < 0 ? "grab" : "pointer";
-      if (index >= 0) {
-        hover.textContent = labelsRef.current.formatPartName(atlas.parts[index].name);
-        hover.style.left = `${Math.max(8, Math.min(x + 14, el.clientWidth - 260))}px`;
-        hover.style.top = `${Math.max(8, Math.min(y + 18, el.clientHeight - 55))}px`;
+      hoveredIndex = nextIndex;
+      if (hoveredIndex >= 0) {
+        selectedData[hoveredIndex * 4 + 1] = 255;
       }
+      selectionTexture.needsUpdate = true;
+      dirty = true;
     };
-    const cancel = (e: PointerEvent) => tap.cancel(e.pointerId);
-    const up = (e: PointerEvent) => {
-      const validTap = tap.up(e.pointerId, e.clientX, e.clientY);
-      if (!validTap || !ready) return;
+
+    const raycastPartAt = (clientX: number, clientY: number) => {
       const rect = renderer.domElement.getBoundingClientRect();
       pointer.set(
-        ((e.clientX - rect.left) / rect.width) * 2 - 1,
-        -((e.clientY - rect.top) / rect.height) * 2 + 1,
+        ((clientX - rect.left) / rect.width) * 2 - 1,
+        -((clientY - rect.top) / rect.height) * 2 + 1,
       );
       raycaster.setFromCamera(pointer, camera);
       let nearest = Infinity;
       let found = -1;
-      // Skin would swallow every ray, so it is only pickable when shown alone.
-      const hasSolid = atlas.parts.some(
+      // Only pick solid (non-ghosted, non-hidden) parts; skin only when shown alone.
+      const hasSolidNonSkin = atlas.parts.some(
         (p, i) => p.system !== "integumentary" && data[i * 4 + 3] > 0.5,
       );
       pickers.forEach((mesh, i) => {
         if (
           !mesh ||
           data[i * 4 + 3] < 0.5 ||
-          (hasSolid && atlas.parts[i].system === "integumentary")
+          (hasSolidNonSkin && atlas.parts[i].system === "integumentary")
         ) {
           return;
         }
         worldBox.copy(bounds[i]).translate(mesh.position);
         if (!raycaster.ray.intersectBox(worldBox, hitPoint)) return;
+        if (hitPoint.distanceTo(raycaster.ray.origin) > nearest) return;
         const hits = raycaster.intersectObject(mesh, false);
         if (hits[0] && hits[0].distance < nearest) {
           nearest = hits[0].distance;
           found = i;
         }
       });
+      return found;
+    };
+
+    const down = (e: PointerEvent) => {
+      hover.hidden = true;
+      tap.down(
+        e.pointerId,
+        e.clientX,
+        e.clientY,
+        e.pointerType === "touch" ? 14 : 6,
+      );
+    };
+
+    const move = (e: PointerEvent) => {
+      tap.move(e.pointerId, e.clientX, e.clientY);
+      if (e.buttons || e.pointerType === "touch" || !ready) {
+        hover.hidden = true;
+        setHoveredPart(-1);
+        return;
+      }
+      const now = performance.now();
+      if (now - lastHoverRayTime < 38) return;
+      lastHoverRayTime = now;
+
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      let index = amount >= 0.5 ? findTarget(x, y, 12) : -1;
+      if (index < 0) {
+        index = raycastPartAt(e.clientX, e.clientY);
+      }
+      setHoveredPart(index);
+      hover.hidden = index < 0;
+      renderer.domElement.style.cursor =
+        index < 0
+          ? "grab"
+          : latest.current.mode === "peel"
+            ? "crosshair"
+            : "pointer";
+      if (index >= 0) {
+        const partName = labelsRef.current.formatPartName(atlas.parts[index].name);
+        hover.textContent =
+          latest.current.mode === "peel" ? `🔪 Odsłoń: ${partName}` : partName;
+        hover.style.left = `${Math.max(8, Math.min(x + 14, el.clientWidth - 260))}px`;
+        hover.style.top = `${Math.max(8, Math.min(y + 18, el.clientHeight - 55))}px`;
+      }
+    };
+
+    const cancel = (e: PointerEvent) => {
+      tap.cancel(e.pointerId);
+      setHoveredPart(-1);
+    };
+
+    let lastTapTime = 0;
+    let lastTappedId = "";
+
+    const up = (e: PointerEvent) => {
+      const validTap = tap.up(e.pointerId, e.clientX, e.clientY);
+      if (!validTap || !ready) return;
+      const rect = renderer.domElement.getBoundingClientRect();
+      let found = raycastPartAt(e.clientX, e.clientY);
       if (found < 0 && amount > 0.45) {
         found = findTarget(
           e.clientX - rect.left,
@@ -591,7 +961,25 @@ export default function AnatomyScene({
       }
       if (found >= 0) {
         hover.hidden = true;
-        select.current(atlas.parts[found].id);
+        setHoveredPart(-1);
+        const partId = atlas.parts[found].id;
+
+        // In Peel/Dissection mode, clicking peels the clicked muscle/layer away
+        // to reveal deeper structures directly underneath!
+        if (latest.current.mode === "peel" && peel.current) {
+          peel.current(partId);
+          return;
+        }
+
+        const now = performance.now();
+        const isDoubleTap = now - lastTapTime < 360 && lastTappedId === partId;
+        lastTapTime = now;
+        lastTappedId = partId;
+
+        select.current(partId);
+        if (isDoubleTap && !latest.current.isolate) {
+          focusOnParts([partId]);
+        }
       }
     };
 
@@ -608,26 +996,57 @@ export default function AnatomyScene({
       frame = requestAnimationFrame(animate);
       const dt = Math.min(clock.getDelta(), 0.05);
       const s = latest.current;
+
       const changed =
         lastState?.visible !== s.visible ||
         lastState?.selected !== s.selected ||
-        lastState?.isolate !== s.isolate;
+        lastState?.isolate !== s.isolate ||
+        lastState?.peeled !== s.peeled ||
+        lastState?.peelDepth !== s.peelDepth ||
+        lastState?.xray !== s.xray;
       const moving = Math.abs(amount - s.explode) > 0.0001;
       if (moving) {
         amount = T.MathUtils.damp(amount, s.explode, 8, dt);
         dirty = true;
       }
 
+      // Smooth camera interpolation toward goalTarget & goalPosition
+      if (cameraAnimating) {
+        controls.target.x = T.MathUtils.damp(controls.target.x, goalTarget.x, 9, dt);
+        controls.target.y = T.MathUtils.damp(controls.target.y, goalTarget.y, 9, dt);
+        controls.target.z = T.MathUtils.damp(controls.target.z, goalTarget.z, 9, dt);
+        camera.position.x = T.MathUtils.damp(camera.position.x, goalPosition.x, 9, dt);
+        camera.position.y = T.MathUtils.damp(camera.position.y, goalPosition.y, 9, dt);
+        camera.position.z = T.MathUtils.damp(camera.position.z, goalPosition.z, 9, dt);
+        if (
+          controls.target.distanceToSquared(goalTarget) < 0.00001 &&
+          camera.position.distanceToSquared(goalPosition) < 0.00001
+        ) {
+          cameraAnimating = false;
+        }
+        dirty = true;
+      }
+
       if (changed || moving || lastExtent < 0) {
         const visible = new Set(s.visible);
         const selection = new Set(s.selected);
-        const visibleParts = atlas.parts.filter((p) =>
-          s.isolate
-            ? selection.has(p.id)
-            : visible.has(p.system) || selection.has(p.id),
-        );
+        const peeledSet = new Set(s.peeled ?? []);
+        const peelThreshold = (s.peelDepth ?? 0) * 0.9;
+        const xrayActive = Boolean(s.xray && selection.size > 0 && !s.isolate);
+
+        const isPartShown = (p: Atlas["parts"][number], i: number) => {
+          if (selection.has(p.id)) return true;
+          if (s.isolate) return false;
+          if (peeledSet.has(p.id)) return false;
+          if (peelThreshold > 0.01 && partPeelOrder[i] <= peelThreshold) return false;
+          return visible.has(p.system);
+        };
+
+        const visibleParts = atlas.parts.filter((p, i) => isPartShown(p, i));
         const nextLayoutKey =
-          visibleParts.map((p) => p.id).join(",") +
+          visibleParts.length +
+          ":" +
+          (s.isolate ? s.selected.join(",") : s.visible.join(",")) +
           ":" +
           camera.aspect.toFixed(3);
         if (nextLayoutKey !== layoutKey) {
@@ -642,7 +1061,7 @@ export default function AnatomyScene({
           });
           layoutKey = nextLayoutKey;
           if (amount > 0.05 && !s.isolate) {
-            fit(s.view, Math.max(0, (amount - 0.3) / 0.7));
+            fit(s.view, Math.max(0, (amount - 0.3) / 0.7), s.region ?? "whole");
           }
         }
 
@@ -655,33 +1074,34 @@ export default function AnatomyScene({
           let dy = 0;
           let dz = 0;
           if (amount <= 0.45) {
-            // First half: fan the systems apart radially.
             const t = amount / 0.45;
             dx = Math.sin(angle) * t * 0.48;
             dy = (c.y - 0.85) * t * 0.28;
             dz = Math.cos(angle) * t * 0.48;
           } else {
-            // Second half: settle every piece into its packed cell.
             const t = (amount - 0.45) / 0.55;
             dx = T.MathUtils.lerp(Math.sin(angle) * 0.48, destination.x - c.x, t);
             dy = T.MathUtils.lerp((c.y - 0.85) * 0.28, destination.y - c.y, t);
             dz = T.MathUtils.lerp(Math.cos(angle) * 0.48, -c.z, t);
           }
           const selected = selection.has(p.id);
-          data.set(
-            [
-              dx,
-              dy,
-              dz,
-              (s.isolate ? selected : visible.has(p.system) || selected) ? 1 : 0,
-            ],
-            i * 4,
-          );
+          const shown = isPartShown(p, i);
+          let alpha = 0;
+          if (shown) {
+            if (selected) {
+              alpha = 1;
+            } else if (xrayActive) {
+              alpha = 0.16;
+            } else if (p.system === "integumentary") {
+              alpha = 0.18;
+            } else {
+              alpha = 1;
+            }
+          }
+          data.set([dx, dy, dz, alpha], i * 4);
           selectedData[i * 4] = selected ? 255 : 0;
           markerPositions.set(
-            data[i * 4 + 3] > 0.5
-              ? [c.x + dx, c.y + dy, c.z + dz]
-              : [10000, 10000, 10000],
+            alpha > 0.5 ? [c.x + dx, c.y + dy, c.z + dz] : [10000, 10000, 10000],
             i * 3,
           );
           const mesh = pickers[i];
@@ -699,13 +1119,68 @@ export default function AnatomyScene({
         dirty = true;
       }
 
-      if (s.view !== lastView || s.reset !== lastReset) {
-        fit(s.view, amount);
+      const currentRegion = s.region ?? "whole";
+      if (
+        s.view !== lastView ||
+        currentRegion !== lastRegion ||
+        s.reset !== lastReset
+      ) {
+        fit(s.view, amount, currentRegion, false);
         lastView = s.view;
+        lastRegion = currentRegion;
         lastReset = s.reset;
       }
+
+      if ((s.focusTrigger ?? 0) !== lastFocusTrigger) {
+        lastFocusTrigger = s.focusTrigger ?? 0;
+        focusOnParts(s.selected);
+      }
+
+      if ((s.zoomTrigger ?? 0) !== lastZoomTrigger) {
+        lastZoomTrigger = s.zoomTrigger ?? 0;
+        const step = s.zoomStep ?? -1;
+        const offset = camera.position.clone().sub(controls.target);
+        const factor = step > 0 ? 0.72 : 1.35;
+        const nextLen = T.MathUtils.clamp(
+          offset.length() * factor,
+          controls.minDistance,
+          controls.maxDistance,
+        );
+        offset.setLength(nextLen);
+        setCameraGoal(
+          controls.target.clone(),
+          controls.target.clone().add(offset),
+          false,
+        );
+      }
+
+      if ((s.orbitTrigger ?? 0) !== lastOrbitTrigger) {
+        lastOrbitTrigger = s.orbitTrigger ?? 0;
+        const az = s.orbitAzimuth ?? 0;
+        const pol = s.orbitPolar ?? 0;
+        const offset = camera.position.clone().sub(controls.target);
+        const spherical = new T.Spherical().setFromVector3(offset);
+        spherical.theta += az;
+        spherical.phi = T.MathUtils.clamp(
+          spherical.phi + pol,
+          0.12,
+          Math.PI * 0.92,
+        );
+        offset.setFromSpherical(spherical);
+        setCameraGoal(
+          controls.target.clone(),
+          controls.target.clone().add(offset),
+          false,
+        );
+      }
+
       if (moving && !s.isolate) {
-        fit(amount > 0.5 ? "front" : s.view, Math.max(0, (amount - 0.3) / 0.7));
+        fit(
+          amount > 0.5 ? "front" : s.view,
+          Math.max(0, (amount - 0.3) / 0.7),
+          currentRegion,
+          true,
+        );
       }
 
       const isolateKey = s.isolate
@@ -742,7 +1217,6 @@ export default function AnatomyScene({
             const h = el.clientHeight;
             const mobile = w < 768;
             const landscape = w > h && h <= 600;
-            // Frame the structure inside whatever space the panels leave free.
             let left = 20;
             let right = w - 20;
             let top = mobile ? 175 : 110;
@@ -787,21 +1261,18 @@ export default function AnatomyScene({
                 1.35,
             );
             controls.maxDistance = Math.max(40, distance * 2);
-            controls.target.copy(center);
-            camera.position
-              .copy(center)
+            const pos = center
+              .clone()
               .add(new T.Vector3(0.2, 0.1, 1).normalize().multiplyScalar(distance));
-            controls.update();
-            dirty = true;
+            setCameraGoal(center, pos, false);
           }
         } else if (lastIsolate) {
           camera.clearViewOffset();
-          fit(s.view, amount);
+          fit(s.view, amount, currentRegion, false);
         }
         lastIsolate = isolateKey;
       }
 
-      // Past ~0.8 the pieces are a flat sheet, so orbiting is disorienting.
       controls.enableRotate = amount < 0.8;
       controls.mouseButtons.LEFT = amount < 0.8 ? T.MOUSE.ROTATE : T.MOUSE.PAN;
       controls.touches.ONE = amount < 0.8 ? T.TOUCH.ROTATE : T.TOUCH.PAN;
@@ -811,8 +1282,8 @@ export default function AnatomyScene({
         innerRing.visible =
           amount < 0.5 && !s.isolate;
       markers.visible = amount > 0.75;
-      controls.autoRotate = s.rotate && !s.isolate && amount < 0.4;
-      controls.autoRotateSpeed = 0.65;
+      controls.autoRotate = s.rotate && !s.isolate && amount < 0.4 && !cameraAnimating;
+      controls.autoRotateSpeed = 0.75;
       controls.update();
       if (controls.autoRotate) dirty = true;
 
@@ -903,12 +1374,9 @@ export default function AnatomyScene({
       renderer.dispose();
       renderer.domElement.remove();
     };
-    // Rebuilding on a theme change would re-download ~57 MB, so `dark` is
-    // applied by the effect below rather than being a dependency here.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [atlas]);
 
-  // Recolour the stage in place when the theme flips.
   useEffect(() => {
     const t = theme.current;
     if (!t) return;

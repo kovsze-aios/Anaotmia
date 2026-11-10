@@ -6,15 +6,25 @@ import {
   Activity,
   ArrowUpRight,
   BookOpen,
+  ChevronLeft,
   ChevronRight,
+  Crosshair,
+  Eye,
   Focus,
+  Hand,
   Info,
+  Layers,
   Layers3,
   Pause,
   RotateCcw,
   RotateCw,
+  Scissors,
   Search,
+  Sparkles,
+  Undo2,
   X,
+  ZoomIn,
+  ZoomOut,
 } from "lucide-react";
 
 import type { Atlas, AtlasConcept, SystemId } from "@/server/models";
@@ -42,15 +52,28 @@ import {
 import AnatomyScene from "./AnatomyScene";
 import {
   DEFAULT_VISIBLE,
+  REGION_PRESETS,
   SYSTEMS,
   explanation,
   hasOrganExplanation,
+  type RegionId,
   type SceneState,
   type View,
 } from "./anatomy";
 
 const initial: SceneState = {
   explode: 0,
+  peelDepth: 0,
+  peeled: [],
+  xray: false,
+  mode: "inspect",
+  region: "whole",
+  focusTrigger: 0,
+  zoomTrigger: 0,
+  zoomStep: 1,
+  orbitTrigger: 0,
+  orbitAzimuth: 0,
+  orbitPolar: 0,
   visible: DEFAULT_VISIBLE,
   selected: [],
   isolate: false,
@@ -59,7 +82,7 @@ const initial: SceneState = {
   reset: 0,
 };
 
-/** Organs offered before the visitor has typed. Dataset names are English. */
+/** Structures offered before the visitor has typed. Dataset names are English. */
 const SUGGESTED = [
   "heart",
   "brain",
@@ -69,6 +92,7 @@ const SUGGESTED = [
   "pancreas",
   "urinary bladder",
   "trachea",
+  "diaphragm",
 ];
 
 const ORGAN_PRESET: SystemId[] = [
@@ -80,24 +104,30 @@ const ORGAN_PRESET: SystemId[] = [
   "reproductive",
 ];
 
+const MUSCLE_SKELETON_PRESET: SystemId[] = [
+  "skeletal",
+  "muscular",
+  "connective",
+];
+
+const NEUROVASCULAR_PRESET: SystemId[] = [
+  "skeletal",
+  "cardiac",
+  "arterial",
+  "venous",
+  "nervous",
+  "lymphatic",
+];
+
 export interface AtlasExplorerProps {
   /** Leaves the immersive view and returns to the landing poster. */
   onExit?: () => void;
   /**
    * BodyParts3D name to open focused on, e.g. "heart".
-   *
-   * Set when the atlas is opened from a word in the textbook: the reader asked
-   * about one structure, so the viewer selects it and isolates it rather than
-   * dropping them into the whole body to find it themselves.
    */
   focusName?: string;
   /**
    * Running inside another panel rather than full screen.
-   *
-   * Suppresses the viewer's own detail sheet: Base UI portals it to
-   * `document.body`, so inside a drawer it escapes the drawer's box and lands
-   * over the page behind it. The host panel names the structure in its header
-   * anyway, so the sheet would only repeat it.
    */
   embedded?: boolean;
 }
@@ -110,9 +140,11 @@ export default function AtlasExplorer({
   const detailTitle = useRef<HTMLHeadingElement>(null);
   const { dark } = useTheme();
   const { t, n, plural, locale } = useI18n();
+  const isPl = locale === "pl";
 
   const [atlas, setAtlas] = useState<Atlas | null>(null);
   const [state, setState] = useState(initial);
+  const [sliderMode, setSliderMode] = useState<"peel" | "explode">("peel");
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState("");
   const [panel, setPanel] = useState<"layers" | "search" | null>(null);
@@ -121,7 +153,6 @@ export default function AtlasExplorer({
   const [query, setQuery] = useState("");
   const [chosen, setChosen] = useState<AtlasConcept | null>(null);
 
-  // Re-reads on locale change so a language switch relabels the error too.
   const catalogueError = t.atlas.errorCatalogue;
   useEffect(() => {
     const abort = new AbortController();
@@ -138,15 +169,30 @@ export default function AtlasExplorer({
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (
-        e.key === "/" &&
-        !(e.target instanceof HTMLInputElement) &&
-        !(e.target instanceof HTMLTextAreaElement)
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
       ) {
+        return;
+      }
+      if (e.key === "/") {
         e.preventDefault();
         setPanel("search");
         setDetails(false);
+      } else if (e.key === "Escape" && onExit) {
+        onExit();
+      } else if (e.key === "x" || e.key === "X") {
+        setState((s) => ({ ...s, xray: !s.xray }));
+      } else if (e.key === "p" || e.key === "P") {
+        setState((s) => ({
+          ...s,
+          mode: s.mode === "peel" ? "inspect" : "peel",
+        }));
+      } else if ((e.key === "z" || e.key === "Z") && (e.ctrlKey || e.metaKey)) {
+        setState((s) => ({
+          ...s,
+          peeled: (s.peeled ?? []).slice(0, -1),
+        }));
       }
-      if (e.key === "Escape" && onExit) onExit();
     };
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
@@ -173,11 +219,13 @@ export default function AtlasExplorer({
     .filter((p) => !!p);
   const selected = selectedParts[0];
   const system = SYSTEMS.find((s) => s.id === selected?.system);
+  const peeledList = state.peeled ?? [];
   const visibleCount =
     atlas?.parts.filter((p) =>
       state.isolate
         ? state.selected.includes(p.id)
-        : state.visible.includes(p.system) || state.selected.includes(p.id),
+        : !peeledList.includes(p.id) &&
+          (state.visible.includes(p.system) || state.selected.includes(p.id)),
     ).length ?? 0;
 
   const results = useMemo(() => {
@@ -191,7 +239,6 @@ export default function AtlasExplorer({
     return atlas.concepts
       .filter(
         (c) =>
-          // Matches either language, so "watroba" and "liver" both find it.
           anatomySearchHaystack(c.name, locale).includes(term) ||
           c.id.toLowerCase().includes(term),
       )
@@ -215,18 +262,17 @@ export default function AtlasExplorer({
 
   const choose = (c: AtlasConcept) => {
     setChosen(c);
-    setState((s) => ({ ...s, selected: c.elements, isolate: false, rotate: false }));
-    setDetails(true);
+    setState((s) => ({
+      ...s,
+      selected: c.elements,
+      isolate: false,
+      rotate: false,
+      focusTrigger: (s.focusTrigger ?? 0) + 1,
+    }));
+    if (!embedded) setDetails(true);
     setPanel(null);
   };
 
-  /**
-   * Opens on the requested structure once the catalogue has loaded.
-   *
-   * Runs on `atlas` rather than on mount because the concept list arrives with
-   * the manifest; `focusName` is compared case-insensitively since it comes
-   * from the term dictionary, which is keyed in lower case.
-   */
   useEffect(() => {
     if (!atlas || !focusName) return;
     const wanted = focusName.trim().toLowerCase();
@@ -237,7 +283,12 @@ export default function AtlasExplorer({
 
     const elements = "elements" in concept ? concept.elements : [concept.id];
     setChosen({ id: concept.id, name: concept.name, elements });
-    setState((s) => ({ ...s, selected: elements, isolate: true, rotate: false }));
+    setState((s) => ({
+      ...s,
+      selected: elements,
+      isolate: true,
+      rotate: false,
+    }));
     if (!embedded) setDetails(true);
   }, [atlas, focusName, embedded]);
 
@@ -246,8 +297,172 @@ export default function AtlasExplorer({
     if (!p) return;
     setChosen({ id: p.conceptId, name: p.name, elements: [id] });
     setState((s) => ({ ...s, selected: [id], isolate: false, rotate: false }));
-    setDetails(true);
+    if (!embedded) setDetails(true);
     setPanel(null);
+  };
+
+  /**
+   * Peels a clicked structure away (dissection mode) and selects the deeper
+   * neighbor if needed.
+   */
+  const peelPart = (id: string) => {
+    setState((s) => {
+      const currentPeeled = s.peeled ?? [];
+      if (currentPeeled.includes(id)) return s;
+      return {
+        ...s,
+        peeled: [...currentPeeled, id],
+        selected: s.selected.filter((x) => x !== id),
+      };
+    });
+  };
+
+  /**
+   * Peels the currently selected structure(s) AND automatically reveals/selects
+   * the structure lying directly deeper underneath its 3D bounding box.
+   */
+  const peelSelectedAndRevealDeeper = () => {
+    if (!atlas || state.selected.length === 0) return;
+    const selectedIds = new Set(state.selected);
+    const currentPeeled = new Set(state.peeled ?? []);
+    const visibleSys = new Set(state.visible);
+
+    // Compute union bounding box of currently selected parts
+    let minX = Infinity,
+      minY = Infinity,
+      minZ = Infinity;
+    let maxX = -Infinity,
+      maxY = -Infinity,
+      maxZ = -Infinity;
+    selectedParts.forEach((p) => {
+      minX = Math.min(minX, p.bounds[0][0]);
+      minY = Math.min(minY, p.bounds[0][1]);
+      minZ = Math.min(minZ, p.bounds[0][2]);
+      maxX = Math.max(maxX, p.bounds[1][0]);
+      maxY = Math.max(maxY, p.bounds[1][1]);
+      maxZ = Math.max(maxZ, p.bounds[1][2]);
+    });
+    const cx = (minX + maxX) * 0.5;
+    const cy = (minY + maxY) * 0.5;
+    const cz = (minZ + maxZ) * 0.5;
+
+    // Find the closest non-peeled, visible part overlapping/underneath the peeled structure
+    let bestPart: Atlas["parts"][number] | null = null;
+    let bestScore = Infinity;
+    for (const p of atlas.parts) {
+      if (
+        selectedIds.has(p.id) ||
+        currentPeeled.has(p.id) ||
+        !visibleSys.has(p.system) ||
+        p.system === "integumentary"
+      ) {
+        continue;
+      }
+      const px = (p.bounds[0][0] + p.bounds[1][0]) * 0.5;
+      const py = (p.bounds[0][1] + p.bounds[1][1]) * 0.5;
+      const pz = (p.bounds[0][2] + p.bounds[1][2]) * 0.5;
+      const dist = Math.hypot(px - cx, py - cy, pz - cz);
+      if (dist < bestScore) {
+        bestScore = dist;
+        bestPart = p;
+      }
+    }
+
+    const nextPeeled = [
+      ...(state.peeled ?? []),
+      ...state.selected.filter((id) => !(state.peeled ?? []).includes(id)),
+    ];
+
+    if (bestPart && bestScore < 0.22) {
+      setChosen({
+        id: bestPart.conceptId,
+        name: bestPart.name,
+        elements: [bestPart.id],
+      });
+      setState((s) => ({
+        ...s,
+        peeled: nextPeeled,
+        selected: [bestPart.id],
+        isolate: false,
+      }));
+    } else {
+      setState((s) => ({
+        ...s,
+        peeled: nextPeeled,
+        selected: [],
+        isolate: false,
+      }));
+      setDetails(false);
+    }
+  };
+
+  /**
+   * Peels away superficial overlying layers (skin, fascia, outer muscles) that
+   * overlap the currently selected structure's 3D bounding box so the target
+   * structure and its deep bed are clearly exposed.
+   */
+  const peelOverlyingAroundSelected = () => {
+    if (!atlas || selectedParts.length === 0) return;
+    const selectedIds = new Set(state.selected);
+    let minX = Infinity,
+      minY = Infinity,
+      minZ = Infinity;
+    let maxX = -Infinity,
+      maxY = -Infinity,
+      maxZ = -Infinity;
+    selectedParts.forEach((p) => {
+      minX = Math.min(minX, p.bounds[0][0] - 0.03);
+      minY = Math.min(minY, p.bounds[0][1] - 0.03);
+      minZ = Math.min(minZ, p.bounds[0][2] - 0.03);
+      maxX = Math.max(maxX, p.bounds[1][0] + 0.03);
+      maxY = Math.max(maxY, p.bounds[1][1] + 0.03);
+      maxZ = Math.max(maxZ, p.bounds[1][2] + 0.03);
+    });
+    const selRad = Math.hypot(
+      (minX + maxX) * 0.5,
+      (minZ + maxZ) * 0.5,
+    );
+
+    const overlyingIds: string[] = [];
+    for (const p of atlas.parts) {
+      if (selectedIds.has(p.id) || p.system === "skeletal") continue;
+      const overlapsBox =
+        p.bounds[1][0] >= minX &&
+        p.bounds[0][0] <= maxX &&
+        p.bounds[1][1] >= minY &&
+        p.bounds[0][1] <= maxY &&
+        p.bounds[1][2] >= minZ &&
+        p.bounds[0][2] <= maxZ;
+      if (!overlapsBox) continue;
+      const px = (p.bounds[0][0] + p.bounds[1][0]) * 0.5;
+      const pz = (p.bounds[0][2] + p.bounds[1][2]) * 0.5;
+      const partRad = Math.hypot(px, pz);
+      if (
+        p.system === "integumentary" ||
+        p.system === "connective" ||
+        (p.system === "muscular" && partRad >= selRad - 0.015)
+      ) {
+        overlyingIds.push(p.id);
+      }
+    }
+
+    if (overlyingIds.length > 0) {
+      setState((s) => {
+        const merged = new Set([...(s.peeled ?? []), ...overlyingIds]);
+        return {
+          ...s,
+          peeled: Array.from(merged),
+          focusTrigger: (s.focusTrigger ?? 0) + 1,
+        };
+      });
+    } else {
+      // Fallback: enable X-Ray ghosting and focus camera if no outer muscles overlap
+      setState((s) => ({
+        ...s,
+        xray: true,
+        focusTrigger: (s.focusTrigger ?? 0) + 1,
+      }));
+    }
   };
 
   const toggle = (id: SystemId) => {
@@ -262,8 +477,24 @@ export default function AtlasExplorer({
     }));
   };
 
+  const selectRegion = (region: RegionId) => {
+    setState((s) => ({
+      ...s,
+      region,
+      isolate: false,
+      explode: 0,
+      rotate: false,
+      view: region === "spine" ? "back" : s.view,
+      reset: s.reset + 1,
+    }));
+  };
+
   const reset = () => {
-    setState((s) => ({ ...initial, visible: DEFAULT_VISIBLE, reset: s.reset + 1 }));
+    setState((s) => ({
+      ...initial,
+      visible: DEFAULT_VISIBLE,
+      reset: s.reset + 1,
+    }));
     setChosen(null);
     setDetails(false);
     setPanel(null);
@@ -281,6 +512,10 @@ export default function AtlasExplorer({
     t.atlas.viewBack,
   ];
 
+  const activeRegion = state.region ?? "whole";
+  const peelDepthPct = Math.round((state.peelDepth ?? 0) * 100);
+  const explodePct = Math.round(state.explode * 100);
+
   return (
     <div className="atlas-studio">
       {atlas && (
@@ -290,6 +525,7 @@ export default function AtlasExplorer({
           labels={sceneLabels}
           state={{ ...state, inspectorOpen: details && selectedParts.length > 0 }}
           onSelect={choosePart}
+          onPeelPart={peelPart}
           onProgress={(p) => {
             setProgress(p);
             if (p === 100) setError("");
@@ -306,7 +542,7 @@ export default function AtlasExplorer({
         <h1>
           {t.nav.atlas}
           <Badge variant="outline" className="atlas-edition">
-            3D
+            3D HD
           </Badge>
         </h1>
         <div className="atlas-identity-meta">
@@ -315,7 +551,68 @@ export default function AtlasExplorer({
         </div>
       </header>
 
+      {/* Quick Regional Camera Presets Bar (Desktop & Mobile Horizontal Scroll) */}
+      <nav
+        className="atlas-region-bar atlas-glass"
+        aria-label={isPl ? "Zbliżenia regionalne" : "Regional camera views"}
+      >
+        <span className="atlas-region-bar__label">
+          <Crosshair size={13} />
+          <span>{isPl ? "Zbliżenie:" : "Focus:"}</span>
+        </span>
+        <div className="atlas-region-bar__scroll">
+          {REGION_PRESETS.map((r) => {
+            const active = activeRegion === r.id && !state.isolate;
+            return (
+              <button
+                key={r.id}
+                type="button"
+                className={`atlas-region-pill ${active ? "active" : ""}`}
+                onClick={() => selectRegion(r.id)}
+                title={isPl ? r.labelPl : r.labelEn}
+              >
+                {r.id === "hand" && <Hand size={12} />}
+                <span>{isPl ? r.shortPl : r.shortEn}</span>
+              </button>
+            );
+          })}
+        </div>
+      </nav>
+
       <nav className="atlas-top-actions" aria-label={t.atlas.panelsLabel}>
+        <Button
+          variant="ghost"
+          className={state.mode === "peel" ? "active atlas-mode-peel-btn" : ""}
+          onClick={() =>
+            setState((s) => ({
+              ...s,
+              mode: s.mode === "peel" ? "inspect" : "peel",
+            }))
+          }
+          title={
+            isPl
+              ? "Tryb Sekcji (Skalpel): Kliknij w dowolny mięsień lub tkankę, aby odsłonić głębszą warstwę [P]"
+              : "Dissection Mode: Click any muscle or tissue to peel it away and reveal deeper layers [P]"
+          }
+        >
+          <Scissors size={16} />
+          <span>{isPl ? "Tryb odsłaniania" : "Peel Mode"}</span>
+          <kbd>P</kbd>
+        </Button>
+        <Button
+          variant="ghost"
+          className={state.xray ? "active atlas-mode-xray-btn" : ""}
+          onClick={() => setState((s) => ({ ...s, xray: !s.xray }))}
+          title={
+            isPl
+              ? "Prześwietlenie X-Ray: Otaczające warstwy stają się półprzezroczyste po wybraniu struktury [X]"
+              : "X-Ray Ghosting: Surrounding layers become translucent when a structure is selected [X]"
+          }
+        >
+          <Eye size={16} />
+          <span>X-Ray</span>
+          <kbd>X</kbd>
+        </Button>
         <Button
           variant="ghost"
           className={panel === "search" ? "active" : ""}
@@ -326,10 +623,12 @@ export default function AtlasExplorer({
           <span>{t.atlas.findStructure}</span>
           <kbd>/</kbd>
         </Button>
-        <Link href="/theory" className="atlas-theory-link focus-ring">
-          <BookOpen size={18} />
-          <span>{t.nav.textbook}</span>
-        </Link>
+        {!embedded && (
+          <Link href="/theory" className="atlas-theory-link focus-ring">
+            <BookOpen size={18} />
+            <span>{t.nav.textbook}</span>
+          </Link>
+        )}
         <Button
           variant="ghost"
           className="atlas-icon-button"
@@ -353,6 +652,126 @@ export default function AtlasExplorer({
           </Button>
         )}
       </nav>
+
+      {/* Active Dissection / Peeled Layers Floating Banner */}
+      {(peeledList.length > 0 || state.mode === "peel") && (
+        <div className="atlas-peel-banner atlas-glass" role="status">
+          <Scissors size={14} className="atlas-peel-banner__icon" />
+          <span>
+            {state.mode === "peel"
+              ? isPl
+                ? `Tryb Odsłaniania aktywny — kliknij mięsień, aby odsłonić głębiej (${peeledList.length})`
+                : `Peel Mode active — click any muscle to reveal deeper layers (${peeledList.length})`
+              : isPl
+                ? `Odsłonięto warstw: ${peeledList.length}`
+                : `Peeled layers: ${peeledList.length}`}
+          </span>
+          {peeledList.length > 0 && (
+            <div className="atlas-peel-banner__actions">
+              <button
+                type="button"
+                onClick={() =>
+                  setState((s) => ({
+                    ...s,
+                    peeled: (s.peeled ?? []).slice(0, -1),
+                  }))
+                }
+                title={isPl ? "Cofnij ostatnie odsłonięcie" : "Undo last peel"}
+              >
+                <Undo2 size={13} />
+                <span>{isPl ? "Cofnij" : "Undo"}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setState((s) => ({ ...s, peeled: [] }))}
+              >
+                {isPl ? "Przywróć wszystkie" : "Restore all"}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Quick Action Bar for Selected Structure (Always accessible on Mobile & Embedded) */}
+      {selectedParts.length > 0 && chosen && (
+        <div className="atlas-selection-bar atlas-glass">
+          <div className="atlas-selection-bar__info">
+            <span
+              className="atlas-system-dot"
+              style={{ background: system?.color }}
+            />
+            <strong className="atlas-selection-bar__name">
+              {translateAnatomyName(chosen.name, locale)}
+            </strong>
+          </div>
+          <div className="atlas-selection-bar__actions">
+            <button
+              type="button"
+              className="atlas-selection-chip"
+              onClick={() =>
+                setState((s) => ({
+                  ...s,
+                  isolate: false,
+                  focusTrigger: (s.focusTrigger ?? 0) + 1,
+                }))
+              }
+              title={isPl ? "Zbliż kamerę do tego miejsca" : "Zoom camera here"}
+            >
+              <ZoomIn size={13} />
+              <span>{isPl ? "Zbliż" : "Zoom"}</span>
+            </button>
+            <button
+              type="button"
+              className="atlas-selection-chip highlight"
+              onClick={peelSelectedAndRevealDeeper}
+              title={
+                isPl
+                  ? "Ukryj ten element i odsłoń warstwę leżącą bezpośrednio pod nim"
+                  : "Peel this structure away to reveal the layer directly underneath"
+              }
+            >
+              <Scissors size={13} />
+              <span>{isPl ? "Odsłoń głębiej" : "Peel deeper"}</span>
+            </button>
+            <button
+              type="button"
+              className="atlas-selection-chip"
+              onClick={peelOverlyingAroundSelected}
+              title={
+                isPl
+                  ? "Odsłoń powierzchowne warstwy zakrywające okolicę tej struktury"
+                  : "Peel superficial layers covering this structure"
+              }
+            >
+              <Sparkles size={13} />
+              <span>{isPl ? "Odsłoń okolicę" : "Expose area"}</span>
+            </button>
+            <button
+              type="button"
+              className={`atlas-selection-chip ${state.xray ? "active" : ""}`}
+              onClick={() => setState((s) => ({ ...s, xray: !s.xray, isolate: false }))}
+              title={
+                isPl
+                  ? "Prześwietl ciało (X-Ray) wokół wybranej struktury"
+                  : "X-Ray ghost surrounding structures"
+              }
+            >
+              <Eye size={13} />
+              <span>X-Ray</span>
+            </button>
+            <button
+              type="button"
+              className={`atlas-selection-chip ${state.isolate ? "active" : ""}`}
+              onClick={() =>
+                setState((s) => ({ ...s, isolate: !s.isolate, explode: 0 }))
+              }
+            >
+              <Focus size={13} />
+              <span>{state.isolate ? (isPl ? "Całość" : "Context") : (isPl ? "Izoluj" : "Isolate")}</span>
+            </button>
+          </div>
+        </div>
+      )}
 
       <section
         className={`atlas-layers-panel atlas-glass ${panel === "layers" ? "mobile-open" : ""}`}
@@ -381,11 +800,30 @@ export default function AtlasExplorer({
                 ...s,
                 selected: [],
                 isolate: false,
+                peeled: [],
+                peelDepth: 0,
                 visible: activeSystems.map((x) => x.id),
               }))
             }
           >
             {t.atlas.presetAll}
+          </Button>
+          <Button
+            variant="ghost"
+            aria-pressed={
+              state.visible.length === MUSCLE_SKELETON_PRESET.length &&
+              MUSCLE_SKELETON_PRESET.every((id) => state.visible.includes(id))
+            }
+            onClick={() =>
+              setState((s) => ({
+                ...s,
+                selected: [],
+                isolate: false,
+                visible: [...MUSCLE_SKELETON_PRESET],
+              }))
+            }
+          >
+            {isPl ? "Mięśnie" : "Muscles"}
           </Button>
           <Button
             variant="ghost"
@@ -417,6 +855,23 @@ export default function AtlasExplorer({
             }
           >
             {t.atlas.presetOrgans}
+          </Button>
+          <Button
+            variant="ghost"
+            aria-pressed={
+              state.visible.length === NEUROVASCULAR_PRESET.length &&
+              NEUROVASCULAR_PRESET.every((id) => state.visible.includes(id))
+            }
+            onClick={() =>
+              setState((s) => ({
+                ...s,
+                selected: [],
+                isolate: false,
+                visible: [...NEUROVASCULAR_PRESET],
+              }))
+            }
+          >
+            {isPl ? "Naczynia/Nerwy" : "Vessels/Nerves"}
           </Button>
         </div>
         <div className="atlas-system-list">
@@ -481,7 +936,6 @@ export default function AtlasExplorer({
               <X size={18} />
             </Button>
           </div>
-          {/* Above the field: the results popup floats over anything below it. */}
           <p className="atlas-search-note">
             {query ? t.atlas.searchHintTyping : t.atlas.searchHintIdle}
           </p>
@@ -545,6 +999,98 @@ export default function AtlasExplorer({
         <i />
         <Button
           variant="ghost"
+          aria-label={isPl ? "Przybliż (+)" : "Zoom in (+)"}
+          title={isPl ? "Przybliż widok" : "Zoom in"}
+          onClick={() =>
+            setState((s) => ({
+              ...s,
+              zoomStep: 1,
+              zoomTrigger: (s.zoomTrigger ?? 0) + 1,
+              rotate: false,
+            }))
+          }
+        >
+          <ZoomIn size={17} />
+        </Button>
+        <Button
+          variant="ghost"
+          aria-label={isPl ? "Oddal (-)" : "Zoom out (-)"}
+          title={isPl ? "Oddal widok" : "Zoom out"}
+          onClick={() =>
+            setState((s) => ({
+              ...s,
+              zoomStep: -1,
+              zoomTrigger: (s.zoomTrigger ?? 0) + 1,
+              rotate: false,
+            }))
+          }
+        >
+          <ZoomOut size={17} />
+        </Button>
+        <Button
+          variant="ghost"
+          aria-label={isPl ? "Obróć w lewo" : "Orbit left"}
+          title={isPl ? "Obróć o 35° w lewo" : "Orbit 35° left"}
+          disabled={state.explode >= 0.8}
+          onClick={() =>
+            setState((s) => ({
+              ...s,
+              orbitAzimuth: -0.6,
+              orbitPolar: 0,
+              orbitTrigger: (s.orbitTrigger ?? 0) + 1,
+              rotate: false,
+            }))
+          }
+        >
+          <ChevronLeft size={18} />
+        </Button>
+        <Button
+          variant="ghost"
+          aria-label={isPl ? "Obróć w prawo" : "Orbit right"}
+          title={isPl ? "Obróć o 35° w prawo" : "Orbit 35° right"}
+          disabled={state.explode >= 0.8}
+          onClick={() =>
+            setState((s) => ({
+              ...s,
+              orbitAzimuth: 0.6,
+              orbitPolar: 0,
+              orbitTrigger: (s.orbitTrigger ?? 0) + 1,
+              rotate: false,
+            }))
+          }
+        >
+          <ChevronRight size={18} />
+        </Button>
+        <i />
+        <Button
+          variant="ghost"
+          className={state.mode === "peel" ? "active" : ""}
+          aria-pressed={state.mode === "peel"}
+          title={
+            isPl
+              ? "Tryb Sekcji: Kliknięcie w mięsień odsłania głębszą warstwę"
+              : "Peel Mode: Clicking a muscle peels it away"
+          }
+          onClick={() =>
+            setState((s) => ({
+              ...s,
+              mode: s.mode === "peel" ? "inspect" : "peel",
+            }))
+          }
+        >
+          <Scissors size={16} />
+        </Button>
+        <Button
+          variant="ghost"
+          className={state.xray ? "active" : ""}
+          aria-pressed={state.xray}
+          title={isPl ? "Prześwietlenie (X-Ray)" : "X-Ray Ghost Mode"}
+          onClick={() => setState((s) => ({ ...s, xray: !s.xray }))}
+        >
+          <Eye size={16} />
+        </Button>
+        <Button
+          variant="ghost"
           disabled={state.explode >= 0.4}
           aria-label={state.rotate ? t.atlas.pauseRotation : t.atlas.rotateModel}
           title={t.atlas.autoRotate}
@@ -567,12 +1113,18 @@ export default function AtlasExplorer({
         <span className="atlas-caption-line" />
         <span>
           {state.isolate
-            ? (chosen ? translateAnatomyName(chosen.name, locale) : t.atlas.captionSelected)
+            ? chosen
+              ? translateAnatomyName(chosen.name, locale)
+              : t.atlas.captionSelected
             : state.explode > 0.95
               ? t.atlas.captionInventory
               : state.explode > 0.05
                 ? t.atlas.captionSeparated
-                : t.atlas.captionAdult}
+                : (state.peelDepth ?? 0) > 0.05
+                  ? isPl
+                    ? `Odsłanianie warstw: ${peelDepthPct}% głębokości`
+                    : `Layer dissection: ${peelDepthPct}% depth`
+                  : t.atlas.captionAdult}
         </span>
         <span className="atlas-caption-line" />
       </div>
@@ -589,32 +1141,76 @@ export default function AtlasExplorer({
         </Button>
         <div className="atlas-explode-control">
           <div className="atlas-explode-label">
-            <label id="atlas-explode-label">{t.atlas.explode}</label>
+            <div className="atlas-slider-tabs">
+              <button
+                type="button"
+                className={`atlas-slider-tab ${sliderMode === "peel" ? "active" : ""}`}
+                onClick={() => setSliderMode("peel")}
+              >
+                <Layers size={12} />
+                <span>{isPl ? "Głębokość warstw" : "Layer Depth"}</span>
+              </button>
+              <button
+                type="button"
+                className={`atlas-slider-tab ${sliderMode === "explode" ? "active" : ""}`}
+                onClick={() => setSliderMode("explode")}
+              >
+                <Layers3 size={12} />
+                <span>{t.atlas.explode}</span>
+              </button>
+            </div>
             <output>
-              {Math.round(state.explode * 100)}
+              {sliderMode === "peel" ? peelDepthPct : explodePct}
               <span>%</span>
             </output>
           </div>
-          <Slider
-            aria-labelledby="atlas-explode-label"
-            min={0}
-            max={100}
-            step={1}
-            value={[state.explode * 100]}
-            onValueChange={(v) => {
-              const next = Array.isArray(v) ? v[0] : v;
-              setState((s) => ({
-                ...s,
-                explode: next / 100,
-                view: next > 80 ? "front" : s.view,
-                rotate: false,
-              }));
-            }}
-          />
-          <div className="atlas-slider-endpoints">
-            <span>{t.atlas.assembled}</span>
-            <span>{t.atlas.everyPiece}</span>
-          </div>
+          {sliderMode === "peel" ? (
+            <>
+              <Slider
+                aria-label={isPl ? "Głębokość odsłaniania warstw" : "Layer peel depth"}
+                min={0}
+                max={100}
+                step={1}
+                value={[peelDepthPct]}
+                onValueChange={(v) => {
+                  const next = Array.isArray(v) ? v[0] : v;
+                  setState((s) => ({
+                    ...s,
+                    peelDepth: next / 100,
+                    isolate: false,
+                  }));
+                }}
+              />
+              <div className="atlas-slider-endpoints">
+                <span>{isPl ? "Warstwy powierzchowne" : "Superficial"}</span>
+                <span>{isPl ? "Mięśnie głębokie / Narządy" : "Deep / Organs"}</span>
+                <span>{isPl ? "Szkielet" : "Skeleton"}</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <Slider
+                aria-label={t.atlas.explode}
+                min={0}
+                max={100}
+                step={1}
+                value={[explodePct]}
+                onValueChange={(v) => {
+                  const next = Array.isArray(v) ? v[0] : v;
+                  setState((s) => ({
+                    ...s,
+                    explode: next / 100,
+                    view: next > 80 ? "front" : s.view,
+                    rotate: false,
+                  }));
+                }}
+              />
+              <div className="atlas-slider-endpoints">
+                <span>{t.atlas.assembled}</span>
+                <span>{t.atlas.everyPiece}</span>
+              </div>
+            </>
+          )}
         </div>
         <Button
           variant="ghost"
@@ -630,7 +1226,10 @@ export default function AtlasExplorer({
       <footer className="atlas-studio-footer">
         <span>
           {state.explode > 0.8 ? t.atlas.dragPan : t.atlas.dragOrbit} <b>·</b>{" "}
-          {t.atlas.pinchZoom} <b>·</b> {t.atlas.tapInspect}
+          {t.atlas.pinchZoom} <b>·</b>{" "}
+          {isPl
+            ? "Kliknij strukturę lub użyj Trybu Odsłaniania [P], by odsłaniać mięśnie warstwami"
+            : t.atlas.tapInspect}
         </span>
         <Button
           variant="ghost"
@@ -736,6 +1335,50 @@ export default function AtlasExplorer({
             </a>
           </div>
           <div className="atlas-detail-actions">
+            <div className="atlas-detail-dissect-grid">
+              <Button
+                variant="outline"
+                className="atlas-dissect-btn"
+                onClick={peelSelectedAndRevealDeeper}
+              >
+                <Scissors size={15} />
+                <span>{isPl ? "Ukryj i odsłoń pod spodem" : "Peel & reveal deeper"}</span>
+              </Button>
+              <Button
+                variant="outline"
+                className="atlas-dissect-btn"
+                onClick={peelOverlyingAroundSelected}
+              >
+                <Sparkles size={15} />
+                <span>{isPl ? "Odsłoń warstwy wokół" : "Expose surrounding"}</span>
+              </Button>
+            </div>
+            <div className="atlas-detail-dissect-grid">
+              <Button
+                variant="outline"
+                className={`atlas-dissect-btn ${state.xray ? "active" : ""}`}
+                onClick={() =>
+                  setState((s) => ({ ...s, xray: !s.xray, isolate: false }))
+                }
+              >
+                <Eye size={15} />
+                <span>{isPl ? "Prześwietl ciało (X-Ray)" : "X-Ray Context"}</span>
+              </Button>
+              <Button
+                variant="outline"
+                className="atlas-dissect-btn"
+                onClick={() =>
+                  setState((s) => ({
+                    ...s,
+                    isolate: false,
+                    focusTrigger: (s.focusTrigger ?? 0) + 1,
+                  }))
+                }
+              >
+                <ZoomIn size={15} />
+                <span>{isPl ? "Przybliż tutaj" : "Zoom to structure"}</span>
+              </Button>
+            </div>
             <Button
               className={`atlas-primary-action ${state.isolate ? "active" : ""}`}
               onClick={() => setState((s) => ({ ...s, isolate: !s.isolate, explode: 0 }))}
@@ -758,11 +1401,6 @@ export default function AtlasExplorer({
         </SheetContent>
       </Sheet>
 
-      {/*
-        Source and licence notice. Kept in English in every locale: it reproduces
-        the BodyParts3D attribution, and a licence is safest quoted as published
-        rather than paraphrased into six languages. See ATTRIBUTION.md.
-      */}
       <Sheet open={about} onOpenChange={setAbout}>
         <SheetContent className="atlas-about-sheet atlas-glass">
           <div className="atlas-eyebrow">SOURCE &amp; SCOPE</div>
@@ -798,28 +1436,7 @@ export default function AtlasExplorer({
               target="_blank"
               rel="noreferrer"
             >
-              Dataset license <ArrowUpRight size={14} />
-            </a>
-            <a
-              href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Original geometry &amp; metadata <ArrowUpRight size={14} />
-            </a>
-            <a
-              href="https://academic.oup.com/nar/article/37/suppl_1/D782/1000752"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Read the source publication <ArrowUpRight size={14} />
-            </a>
-            <a
-              href="https://github.com/ashemag/human-atlas"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Atlas viewer engine (MIT) <ArrowUpRight size={14} />
+              View license terms <ArrowUpRight size={12} />
             </a>
           </div>
         </SheetContent>
