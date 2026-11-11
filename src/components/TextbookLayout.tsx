@@ -64,7 +64,7 @@ export function TextbookLayout({
             onClick={() => setSidebarOpen(false)}
             aria-label="Zamknij pasek boczny"
           >
-            ✕
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
         <ChapterNav
