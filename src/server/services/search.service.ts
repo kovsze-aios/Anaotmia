@@ -39,7 +39,12 @@ interface SearchItem {
 /** A one-line preview of the matched text, shown under the result title. */
 const makeExcerpt = (text?: string, max = 160): string | undefined => {
   if (!text) return undefined;
-  const clean = text.replace(/\s+/g, " ").trim();
+  // ⚡ Bolt Optimization: Eager substring extraction for large string excerpts
+  // 💡 What: Pre-bound the input text using `slice(0, max * 3)` before running regex.
+  // 🎯 Why: Avoids applying expensive global regex `replace(/\s+/g, " ")` across potentially huge sections of academic detail, which causes massive O(N) memory allocation and blocks the main thread.
+  // 📊 Impact: CPU and memory overhead is bounded to `max` characters rather than scaling with document length.
+  const sliced = text.trimStart().slice(0, max * 3);
+  const clean = sliced.replace(/\s+/g, " ").trim();
   if (!clean) return undefined;
   return clean.length > max ? `${clean.slice(0, max).trimEnd()}…` : clean;
 };
