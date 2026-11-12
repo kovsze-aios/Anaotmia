@@ -8,3 +8,7 @@
 ## 2026-07-20 - Global Navigation Interactive Elements Focus Visible Styles
 **Learning:** Found multiple instances of mismatched or missing `focus-visible` utility classes for interactive elements (`Link` buttons) on theoretical and topics page causing accessibility regressions during keyboard navigation. Custom styles were missing or mismatched `focus:ring-blue-500` instead of the app design tokens.
 **Action:** Standardize on `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600` across all custom interactive components to ensure consistent keyboard accessibility.
+
+## 2026-11-12 - Button Semantics and Decorative Characters
+**Learning:** Found multiple standard interactive buttons lacking `type="button"`, causing potential form submission issues if wrapped in a form. Additionally, buttons with `aria-label` often contained visible text symbols like '✕' or '☰' that were not hidden from screen readers, leading to redundant or confusing announcements. Toggles and collapsible triggers were also missing semantic states like `role="switch"` and `aria-expanded`.
+**Action:** Always explicitly set `type="button"` on non-submit buttons. Wrap decorative characters in `<span aria-hidden="true">` when an `aria-label` provides the accessible name. Ensure stateful buttons use appropriate attributes like `aria-expanded` and `aria-checked`.
