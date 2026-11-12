@@ -46,6 +46,7 @@ export function ChapterNav({
       {domains.map((domain) => (
         <div key={domain.id} className="chapter-nav__domain">
           <button
+            type="button"
             className={`chapter-nav__domain-title focus-ring ${
               expandedDomains.has(domain.id)
                 ? "chapter-nav__domain-title--expanded"
@@ -69,6 +70,7 @@ export function ChapterNav({
             <div className="chapter-nav__sections">
               {domain.sections.map((section) => (
                 <button
+                  type="button"
                   key={section.id}
                   className={`chapter-nav__section focus-ring ${
                     activeSection === section.id
