@@ -1,1 +1,97 @@
-[]
+[
+  {
+    "id": "oer-fizy-wprowadzenie-do-fizyki-opartej-na-rachunku-r-5151bc",
+    "domainId": "fizyka-mechanika-i-termodynamika",
+    "domainTitle": "Mechanika klasyczna, płyny i termodynamika medyczna",
+    "sourcePdf": "Calculus_Based_Physics_Schnick_CC-BY-SA.pdf",
+    "pageRange": "6-13",
+    "processingMode": "DIRECT_ADAPTATION",
+    "data": {
+      "chapterTitle": "Wprowadzenie do fizyki opartej na rachunku różniczkowym i całkowym – adaptacja OER",
+      "toc": [
+        {
+          "title": "Dlaczego napisano tę książkę i udostępniono ją bezpłatnie?",
+          "anchorId": "dlaczego-napisano-ksiazke"
+        },
+        {
+          "title": "Wymagania wobec zadań czytelniczych – perspektywa studenta",
+          "anchorId": "wymagania-czytelnicze"
+        },
+        {
+          "title": "Konflikt między maksymalizacją czytelnictwa a maksymalizacją uczenia się",
+          "anchorId": "konflikt-czytelnictwo-uczenie"
+        },
+        {
+          "title": "Koncepcja „Starting Point Physics” i elastyczność podręcznika",
+          "anchorId": "starting-point-physics"
+        },
+        {
+          "title": "Wolna licencja i poprawianie błędów",
+          "anchorId": "wolna-licencja-poprawianie-bledow"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"dlaczego-napisano-ksiazke\">Dlaczego napisano tę książkę i udostępniono ją bezpłatnie?</h2><p>Podręcznik <em>Calculus-Based Physics</em> powstał z potrzeby stworzenia materiału dydaktycznego, który wspierałby aktywne uczenie się w klasie. Autor, poszukując najlepszych metod aktywizujących, zauważył, że kluczowym warunkiem ich skuteczności jest wcześniejsze przeczytanie przez studentów odpowiedniego fragmentu podręcznika. Wybrano metodę <strong>Peer Tutoring</strong> (tutoring rówieśniczy) Erica Mazura, ale pojawiło się pytanie: jak zmaksymalizować terminowe czytelnictwo podręcznika?</p><p>Idealnie byłoby, gdyby każdy student czytał zadany materiał przed zajęciami. Autor zadał więc pytanie: co zrobić (poza quizami na początku zajęć), aby zachęcić studentów do jak najbliższego zbliżenia się do tego ideału? Odpowiedź wymagała zaprojektowania podręcznika o określonych cechach, które autor – pamiętając własne doświadczenia studenckie – szczegółowo opisał.</p><p>W rezultacie powstał podręcznik, który jest krótki, zrozumiały i nie odsyła czytelnika do wcześniejszych fragmentów tekstu. Autor udostępnił go bezpłatnie, aby ułatwić innym nauczycielom adaptację i modyfikację treści.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"wymagania-czytelnicze\">Wymagania wobec zadań czytelniczych – perspektywa studenta</h2><p>Autor, wcielając się w rolę studenta, sformułował trzy główne postulaty dotyczące zadań czytelniczych:</p><ul><li><strong>Krótkość i zwięzłość</strong> – zadania muszą być jak najkrótsze, pozbawione zbędnych historii, obrazków niezwiązanych z tematem, powtórzeń i bananów. Należy podawać tylko niezbędne fakty i wyjaśnienia, a część zastosowań pozostawić na zajęcia.</li><li><strong>Zrozumiałość</strong> – unikać żargonu lub dokładnie go definiować przy pierwszym użyciu; powtarzać definicje, jeśli od ostatniego użycia minęło dużo czasu. Krótkość oznacza minimalizację czasu potrzebnego na zrozumienie, a nie liczby stron.</li><li><strong>Brak konieczności wyszukiwania wcześniejszych wzorów i rysunków</strong> – zamiast odsyłać do wcześniejszych fragmentów, należy powtórzyć wzór lub rysunek w miejscu, w którym jest potrzebny, aby nie przerywać czytania.</li></ul><p>Te postulaty mają na celu maksymalizację zrozumienia przy minimalnym nakładzie czasu.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"konflikt-czytelnictwo-uczenie\">Konflikt między maksymalizacją czytelnictwa a maksymalizacją uczenia się</h2><p>Autor zauważa, że tradycyjne podręczniki często stoją w sprzeczności z celem maksymalizacji terminowego czytelnictwa i maksymalizacji uczenia się. Przykładem jest kolejność tematów: tradycyjnie zaczyna się od kinematyki, a następnie przechodzi do drugiej zasady dynamiki Newtona. To prowadzi studentów do stosowania równań ruchu o stałym przyspieszeniu nawet w problemach, gdzie przyspieszenie nie jest stałe (np. sprężyny, grawitacja, prawo Coulomba).</p><p>Autor proponuje rozpoczęcie kursu od krótkiego wprowadzenia do zasad zachowania (pędu i energii), co skłania studentów do częstszego ich stosowania. Jednak podręczniki o tradycyjnym układzie tematów zakładają znajomość pojęć z wcześniejszych rozdziałów, co utrudnia takie podejście. Przenoszenie rozdziałów nie rozwiązuje problemu, ponieważ późniejszy materiał opiera się na wcześniejszym. Potrzebna jest elastyczność, której tradycyjne podręczniki nie oferują.</p>"
+        },
+        {
+          "pageNumber": 4,
+          "htmlContent": "<h2 id=\"starting-point-physics\">Koncepcja „Starting Point Physics” i elastyczność podręcznika</h2><p>Autor rozważał tytuł „Starting Point Physics” (Fizyka od punktu wyjścia), który miałby trzy interpretacje:</p><ol><li>Podręcznik dla studenta rozpoczynającego naukę fizyki na poziomie akademickim.</li><li>Punkt wyjścia dla doświadczonego nauczyciela, który może dostosować książkę do własnego kursu poprzez zmiany kolejności rozdziałów, dodawanie/usuwanie treści, modyfikację wzorów i wyjaśnień.</li><li>Podręcznik dla nowego nauczyciela, który uczy przedmiotu po raz pierwszy – może go użyć jako podstawy i z czasem dostosować do własnych mocnych stron i potrzeb studentów.</li></ol><p>Autor ma nadzieję, że inni fizycy będą edytować i udostępniać swoje wersje podręcznika, co stworzy ekosystem elastycznych materiałów dydaktycznych.</p>"
+        },
+        {
+          "pageNumber": 5,
+          "htmlContent": "<h2 id=\"wolna-licencja-poprawianie-bledow\">Wolna licencja i poprawianie błędów</h2><p>Bezpłatne udostępnienie podręcznika umożliwia szybkie poprawianie błędów. Autor zauważa, że tradycyjne podręczniki często zawierają błędy z powodu pośpiechu w wydawaniu nowych edycji. Dzięki wersji online może na bieżąco wprowadzać poprawki, dążąc do perfekcji.</p><p>Autor nie uważa rosnących kosztów podręczników za główny powód napisania książki, ale dostrzega korzyść w postaci niskiej ceny. Rozumie obawy o koszty, ale uważa, że mechanizmy rynkowe i grupy nacisku (np. „Make Textbooks Affordable”) mają wpływ na rynek. Podkreśla, że autorzy i wydawcy reagują na popyt, dodając kolorowe zdjęcia, nowe edycje i bogactwo zadań, co podnosi koszty, ale zwiększa sprzedaż.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Wyjaśnij, dlaczego autor podręcznika „Calculus-Based Physics” zdecydował się na jego bezpłatne udostępnienie. Podaj dwa główne powody.",
+          "answer": "Przyczyna: Potrzeba stworzenia elastycznego podręcznika wspierającego aktywne uczenie się i możliwość szybkiej poprawy błędów. Mechanizm: Udostępnienie na wolnej licencji pozwala nauczycielom na adaptację i modyfikację treści, a autorowi na natychmiastowe wprowadzanie poprawek. Skutek: Zwiększenie dostępności i jakości materiałów dydaktycznych oraz stworzenie ekosystemu edytowalnych podręczników."
+        },
+        {
+          "question": "Jakie trzy cechy powinny mieć zadania czytelnicze, aby zmaksymalizować prawdopodobieństwo, że student je wykona? Uzasadnij każdą z nich.",
+          "answer": "1. Krótkość – minimalizuje czas potrzebny na czytanie, co jest istotne przy wielu obowiązkach. 2. Zrozumiałość – jasny język i definiowanie żargonu减少 czasu potrzebnego na zrozumienie. 3. Brak konieczności wyszukiwania wcześniejszych wzorów – powtarzanie wzorów i rysunków w miejscu użycia zapobiega przerwom w czytaniu i oszczędza czas."
+        },
+        {
+          "question": "Wykaż, w jaki sposób tradycyjny układ podręcznika (kinematyka, następnie dynamika Newtona) może prowadzić do błędów w rozwiązywaniu problemów przez studentów. Podaj przykład.",
+          "answer": "Przyczyna: Studenci uczą się najpierw kinematyki i równań ruchu o stałym przyspieszeniu, a następnie dynamiki Newtona. Mechanizm: W problemach, gdzie przyspieszenie nie jest stałe (np. sprężyny, grawitacja), studenci mogą niewłaściwie stosować równania dla stałego przyspieszenia, zamiast zasad zachowania energii lub pędu. Skutek: Błędne rozwiązania i niezrozumienie koncepcji."
+        },
+        {
+          "question": "Wyjaśnij koncepcję „Starting Point Physics” i jej trzy interpretacje. Dlaczego autor uważa, że elastyczność podręcznika jest istotna?",
+          "answer": "Koncepcja: Tytuł podręcznika odnoszący się do punktu wyjścia. Interpretacje: 1) podręcznik dla studenta rozpoczynającego naukę fizyki; 2) punkt wyjścia dla doświadczonego nauczyciela do dostosowania kursu; 3) podstawa dla nowego nauczyciela. Elastyczność jest istotna, ponieważ pozwala nauczycielom dopasować materiał do własnego stylu nauczania i potrzeb studentów, co poprawia skuteczność dydaktyki."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
+        "sectionCode": "Fizyka i Biofizyka (OER) – Mechanika klasyczna, płyny i termodynamika medyczna",
+        "requirementCodes": [
+          "OER-1"
+        ],
+        "status": "core",
+        "diffs2015vs2023": "Wymagania maturalne 2015 i 2023+ koncentrują się na treściach fizycznych, a nie na metadydaktyce. Ten materiał jest dodatkiem akademickim, który wyjaśnia filozofię tworzenia podręcznika i może być użyteczny dla przyszłych nauczycieli. Nie jest bezpośrednio egzaminowany, ale wspiera zrozumienie procesu uczenia się.",
+        "examTraps": [
+          "Studenci mogą błędnie sądzić, że podręcznik akademicki musi być obszerny i encyklopedyczny – wręcz przeciwnie, zwięzłość i klarowność są kluczowe dla skutecznego uczenia się.",
+          "Częstym błędem jest stosowanie równań kinematyki dla stałego przyspieszenia w sytuacjach, gdy przyspieszenie nie jest stałe – należy zawsze sprawdzić założenia."
+        ],
+        "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / LibreTexts (Licencja CC BY-SA 4.0 / CC BY 4.0)"
+      },
+      "processingMode": "DIRECT_ADAPTATION",
+      "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / LibreTexts (Licencja CC BY-SA 4.0 / CC BY 4.0)"
+    },
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / LibreTexts (Licencja CC BY-SA 4.0 / CC BY 4.0)"
+  }
+]

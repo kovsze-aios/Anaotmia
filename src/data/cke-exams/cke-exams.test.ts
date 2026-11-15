@@ -35,12 +35,38 @@ describe("1:1 Full CKE Exam Corpus, Media & Animated Walkthroughs", () => {
     }
   });
 
-  it("groups Biology and Chemistry tasks into ordered full CKE sheets with 60-point exams", () => {
+  it("groups Biology and Chemistry tasks into ordered full CKE sheets covering 2015–2024 and both formulas", () => {
     const bioSheets = getCkeExamSheets("biologia");
     const chemSheets = getCkeExamSheets("chemia");
 
-    expect(bioSheets.length).toBeGreaterThanOrEqual(2);
-    expect(chemSheets.length).toBeGreaterThanOrEqual(2);
+    expect(bioSheets.length).toBeGreaterThanOrEqual(10);
+    expect(chemSheets.length).toBeGreaterThanOrEqual(10);
+
+    const bioSubtasks = BIOLOGY_CKE_TASKS.flatMap((t) => t.subTasks ?? []);
+    const chemSubtasks = CHEMISTRY_CKE_TASKS.flatMap((t) => t.subTasks ?? []);
+    expect(bioSubtasks.length).toBeGreaterThan(500);
+    expect(chemSubtasks.length).toBeGreaterThan(450);
+
+    expect(new Set(bioSheets.map((s) => s.formula))).toEqual(
+      new Set(["2015", "2023"]),
+    );
+    expect(new Set(chemSheets.map((s) => s.formula))).toEqual(
+      new Set(["2015", "2023"]),
+    );
+
+    const expectedYears = [
+      2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024,
+    ];
+    for (const year of expectedYears) {
+      const bioSheet = bioSheets.find((s) => s.year === year);
+      const chemSheet = chemSheets.find((s) => s.year === year);
+      expect(bioSheet, `Missing Biology CKE sheet for ${year}`).toBeDefined();
+      expect(chemSheet, `Missing Chemistry CKE sheet for ${year}`).toBeDefined();
+      expect(bioSheet!.totalPoints).toBeGreaterThanOrEqual(58);
+      expect(chemSheet!.totalPoints).toBeGreaterThanOrEqual(58);
+      expect(bioSheet!.pageImageUrls?.length ?? 0).toBeGreaterThanOrEqual(20);
+      expect(chemSheet!.pageImageUrls?.length ?? 0).toBeGreaterThanOrEqual(18);
+    }
 
     const bio2024 = bioSheets.find((s) => s.year === 2024 && s.month === "maj");
     const bio2023 = bioSheets.find((s) => s.year === 2023 && s.month === "maj");

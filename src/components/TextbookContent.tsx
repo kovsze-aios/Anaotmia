@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import dynamic from "next/dynamic";
 import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
@@ -10,6 +11,23 @@ import { AnatomicalTextLinker, AnatomyRichText } from "./textbook/AnatomyRichTex
 import { AtlasPeekDrawer } from "./textbook/AtlasPeekDrawer";
 import { TextbookFigureCard } from "./textbook/TextbookFigureCard";
 import { getFiguresForChapter } from "@/data/textbook-figures";
+import { getInteractiveWidgetsForChapter } from "@/data/interactive-widgets";
+
+const ChemistryInteractiveWidget = dynamic(
+  () =>
+    import("./interactive/ChemistryInteractiveWidget").then(
+      (m) => m.ChemistryInteractiveWidget,
+    ),
+  { ssr: false },
+);
+
+const BiologyInteractiveWidget = dynamic(
+  () =>
+    import("./interactive/BiologyInteractiveWidget").then(
+      (m) => m.BiologyInteractiveWidget,
+    ),
+  { ssr: false },
+);
 import {
   CkeStatusBadge,
   CurriculumModeSwitcher,
@@ -199,6 +217,16 @@ export function TextbookContent({
       }),
     [subject, section.id, section.title],
   );
+
+  const interactiveWidgets = useMemo(
+    () =>
+      getInteractiveWidgetsForChapter({
+        subject,
+        chapterId: section.id,
+        chapterTitle: section.title,
+      }),
+    [subject, section.id, section.title],
+  );
   const hasCke = Boolean(section.ckeMetadata);
   const isChapterRequiredInMode =
     !section.ckeMetadata ||
@@ -322,6 +350,61 @@ export function TextbookContent({
               onOpenAtlas={openAtlas}
             />
           ))}
+        </section>
+      )}
+
+      {interactiveWidgets.length > 0 && (
+        <section
+          aria-label="Interaktywne laboratoria 3D i symulatory"
+          className="my-8 space-y-5"
+        >
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800/80 pb-3">
+            <div>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
+                3D Lab &amp; Symulator
+              </span>
+              <h3 className="mt-1.5 text-base font-semibold text-zinc-100">
+                Interaktywne Laboratoria 3D i Symulacje
+              </h3>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            {interactiveWidgets.map((w) => (
+              <div
+                key={w.id}
+                className="rounded-xl border border-zinc-800/90 bg-zinc-950/60 p-4 shadow-lg"
+              >
+                <div className="mb-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded bg-zinc-800/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-300">
+                      {w.badge}
+                    </span>
+                    <h4 className="text-sm font-semibold text-zinc-100">
+                      {w.titlePl}
+                    </h4>
+                  </div>
+                  <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                    {w.subtitlePl}
+                  </p>
+                </div>
+
+                {w.domain === "chemistry" ? (
+                  <ChemistryInteractiveWidget
+                    initialMode={
+                      w.id as "vsepr-orbitals-3d" | "periodic-table-3d"
+                    }
+                  />
+                ) : (
+                  <BiologyInteractiveWidget
+                    initialMode={
+                      w.id as "biomolecules-3d" | "metabolism-simulator"
+                    }
+                  />
+                )}
+              </div>
+            ))}
+          </div>
         </section>
       )}
 

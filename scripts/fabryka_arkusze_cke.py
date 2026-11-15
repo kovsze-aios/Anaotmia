@@ -286,7 +286,7 @@ def parse_scoring_key_pdf(key_path: Path | None) -> tuple[dict[str, dict[str, An
         for b in blocks:
             if b[6] != 0:
                 continue
-            txt = b[4].strip()
+            txt = b[4].replace("\xa0", " ").strip()
             if not txt:
                 continue
             if re.match(r"^Strona\s+\d+\s+z\s+\d+$", txt):
@@ -295,7 +295,21 @@ def parse_scoring_key_pdf(key_path: Path | None) -> tuple[dict[str, dict[str, An
                 continue
             if re.match(r"^Egzamin maturalny z ", txt) and b[1] < 60:
                 continue
-            pages_blocks.append((pno + 1, b[0], b[1], txt))
+            key_split_re = re.compile(
+                r"(?m)(?=^(?:Zadanie\s+\d+(?:\.\d+)?\.|\d+\.\d+\.\s*\((?:0[–-])?\d+))"
+            )
+            parts = [p.strip() for p in key_split_re.split(txt) if p.strip()]
+            if len(parts) <= 1:
+                pages_blocks.append((pno + 1, b[0], b[1], txt))
+            else:
+                total_len = max(1, len(txt))
+                offset = 0
+                h = b[3] - b[1]
+                for part in parts:
+                    pos = txt.find(part, offset)
+                    frac0 = (pos if pos >= 0 else offset) / total_len
+                    offset = (pos if pos >= 0 else offset) + len(part)
+                    pages_blocks.append((pno + 1, b[0], b[1] + h * frac0, part))
 
     entries: dict[str, dict[str, Any]] = {}
     current_id: str | None = None
@@ -304,7 +318,9 @@ def parse_scoring_key_pdf(key_path: Path | None) -> tuple[dict[str, dict[str, An
     current_start_y = 0.0
     buf: list[str] = []
 
-    header_re = re.compile(r"^Zadanie\s+(\d+(?:\.\d+)?)\.\s*(?:\((?:0[–-])?(\d+)\s*(?:pkt)?\))?")
+    header_re = re.compile(
+        r"^(?:Zadanie\s+(\d+(?:\.\d+)?)|(\d+\.\d+))\.\s*(?:\((?:0[–-])?(\d+)\s*(?:pkt)?\))?"
+    )
 
     def flush(end_page: int, end_y: float) -> None:
         nonlocal current_id, current_max_pts, current_start_page, current_start_y, buf
@@ -339,13 +355,16 @@ def parse_scoring_key_pdf(key_path: Path | None) -> tuple[dict[str, dict[str, An
 
     for page_no, x0, y0, txt in pages_blocks:
         m = header_re.match(txt)
-        # Only start a scoring entry if points "(0-k)" appear OR x0 < 95 and it's in zasady body
-        if m and ("(" in txt.splitlines()[0] or page_no >= 3):
-            has_pts = bool(re.match(r"^Zadanie\s+\d+(?:\.\d+)?\.\s*\(0[–-]\d+\)", txt))
-            if has_pts or (page_no >= 3 and m.group(2)):
+        # Only start a scoring entry if points "(0-k)" appear OR it's in zasady body (page >= 2)
+        if m and ("(" in txt.splitlines()[0] or page_no >= 2):
+            has_pts = bool(
+                re.match(r"^(?:Zadanie\s+\d+(?:\.\d+)?|\d+\.\d+)\.\s*\(0[–-]\d+\)", txt)
+            )
+            matched_pts = m.group(3)
+            if has_pts or (page_no >= 2 and matched_pts):
                 flush(page_no, y0)
-                current_id = m.group(1)
-                current_max_pts = int(m.group(2)) if m.group(2) else 1
+                current_id = m.group(1) or m.group(2)
+                current_max_pts = int(matched_pts) if matched_pts else 1
                 current_start_page = page_no
                 current_start_y = y0
                 buf = [txt]
@@ -724,13 +743,23 @@ def extract_exam_bundle_from_pair(pair: dict[str, Any]) -> tuple[list[dict[str, 
         page_fname = f"page_{pno + 1:02d}.png"
         page_out = asset_dir / page_fname
         if not page_out.exists() or page_out.stat().st_size < 1000:
-            pix = page.get_pixmap(dpi=105)
+            pix = page.get_pixmap(dpi=96)
             pix.save(str(page_out))
         page_urls.append(f"{public_prefix}/{page_fname}")
 
-    # Build linear stream of blocks across pages >= 4 (where tasks start in CKE sheets)
+    # Build linear stream of blocks dynamically starting where Zadanie 1 appears
     stream: list[dict[str, Any]] = []
-    start_page_idx = 3 if len(adoc) > 4 else 0
+    start_page_idx = next(
+        (
+            i
+            for i in range(1, len(adoc))
+            if re.search(
+                r"(?m)^(?:Zadanie[\s\xa0]+1\b|Informacja[\s\xa0]+do[\s\xa0]+zadań[\s\xa0]+1\b)",
+                adoc[i].get_text("text"),
+            )
+        ),
+        1 if len(adoc) > 1 else 0,
+    )
     for pno in range(start_page_idx, len(adoc)):
         page = adoc[pno]
         full_txt = page.get_text("text")
@@ -1002,13 +1031,13 @@ def extract_exam_bundle_from_pair(pair: dict[str, Any]) -> tuple[list[dict[str, 
                 if not any(m["imageUrl"] == sm["imageUrl"] for m in media_list):
                     media_list.append(sm)
 
-            z_entry = z_map.get(gnum)
+            z_entry = z_map.get(gnum) or z_map.get(str(mnum))
             key_text = (
                 z_entry["answer_key"]
                 if z_entry
                 else f"1 pkt – poprawna odpowiedź zgodna z oficjalnymi zasadami oceniania CKE ({year})."
             )
-            if z_entry and z_entry["points"]:
+            if z_entry and z_entry["id"] == gnum and z_entry["points"] and not gsec["points"]:
                 gpts = z_entry["points"]
 
             # Crop key visual snippet from zasady if key references Rozwiązanie with table/diagram/scheme
@@ -1351,7 +1380,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--subject", choices=("biologia", "chemia", "all"), default="all")
     parser.add_argument("--year", type=int, default=0, help="Single exam year filter")
-    parser.add_argument("--years", type=str, default="2024,2023", help="Comma-separated exam years (default: 2024,2023)")
+    parser.add_argument(
+        "--years",
+        type=str,
+        default="2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
+        help="Comma-separated exam years (default: 2015..2024)",
+    )
     parser.add_argument("--formula", choices=("all", "2015", "2023"), default="all")
     parser.add_argument("--limit", type=int, default=0, help="Max PDF pairs to process")
     parser.add_argument("--concurrency", type=int, default=3)

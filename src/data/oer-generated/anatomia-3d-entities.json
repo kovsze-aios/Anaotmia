@@ -1,1 +1,81 @@
-[]
+[
+  {
+    "id": "heart",
+    "meshId": "heart",
+    "namePl": "Serce",
+    "nameLat": "Cor",
+    "system": "Układ krążenia",
+    "summary": "Mięśniowy narząd pompujący krew w układzie krążenia, złożony z czterech jam: dwóch przedsionków i dwóch komór.",
+    "forms": [
+      "serce",
+      "serca",
+      "sercu",
+      "serce",
+      "sercem",
+      "cor"
+    ],
+    "pins": [
+      {
+        "id": "right-atrium",
+        "meshNodeName": "right atrium",
+        "labelPl": "Przedsionek prawy",
+        "labelLat": "Atrium dextrum",
+        "topographyAndStructure": "Położony po prawej stronie serca, ku przodowi i prawo od lewego przedsionka. Tworzy prawą część podstawy serca. Obejmuje uszko prawe (auricula dextra).",
+        "vascularizationAndInnervation": "Otrzymuje krew z żyły głównej górnej i dolnej oraz zatoki wieńcowej. Zaopatrzenie tętnicze z gałęzi prawej tętnicy wieńcowej. Unaczynienie nerwowe przez splot sercowy.",
+        "physiologyAndFunction": "Zbiera krew odtlenowaną z krążenia systemowego. Przewodzi krew do prawej komory przez zastawkę trójdzielną.",
+        "clinicalNotes": "Migotanie przedsionków, poszerzenie żył szyjnych, zatorowość paradoksalna przez otwór owalny.",
+        "position": [
+          -0.25,
+          0.1,
+          0.15
+        ]
+      },
+      {
+        "id": "right-ventricle",
+        "meshNodeName": "right ventricle",
+        "labelPl": "Komora prawa",
+        "labelLat": "Ventriculus dexter",
+        "topographyAndStructure": "Położona ku przodowi i po prawej stronie, tworzy większość powierzchni mostkowej serca. Ściana cieńsza niż w lewej komorze. Zawiera beleczki mięśniowe i mięśnie brodawkowate.",
+        "vascularizationAndInnervation": "Krew odpływa przez pień płucny. Zaopatrzenie tętnicze z prawej tętnicy wieńcowej. Unaczynienie nerwowe przez splot sercowy.",
+        "physiologyAndFunction": "Tłoczy krew odtlenowaną do krążenia płucnego. Wytwarza niższe ciśnienie skurczowe niż lewa komora.",
+        "clinicalNotes": "Przerost prawej komory, zatorowość płucna, tetralogia Fallota.",
+        "position": [
+          -0.15,
+          -0.1,
+          0.25
+        ]
+      },
+      {
+        "id": "left-atrium",
+        "meshNodeName": "left atrium",
+        "labelPl": "Przedsionek lewy",
+        "labelLat": "Atrium sinistrum",
+        "topographyAndStructure": "Położony najbardziej tylno-górnie spośród jam serca. Tworzy większość podstawy serca. Obejmuje uszko lewe (auricula sinistra).",
+        "vascularizationAndInnervation": "Otrzymuje krew utlenowaną z czterech żył płucnych. Zaopatrzenie tętnicze z gałęzi lewej tętnicy wieńcowej. Unaczynienie nerwowe przez splot sercowy.",
+        "physiologyAndFunction": "Zbiera krew utlenowaną z krążenia płucnego. Przewodzi krew do lewej komory przez zastawkę mitralną.",
+        "clinicalNotes": "Migotanie przedsionków, zakrzepica uszka lewego, zwężenie zastawki mitralnej.",
+        "position": [
+          0.2,
+          0.15,
+          -0.1
+        ]
+      },
+      {
+        "id": "left-ventricle",
+        "meshNodeName": "left ventricle",
+        "labelPl": "Komora lewa",
+        "labelLat": "Ventriculus sinister",
+        "topographyAndStructure": "Położona ku tyłowi i po lewej stronie, tworzy koniuszek serca. Ściana najgrubsza spośród jam serca. Zawiera beleczki mięśniowe i mięśnie brodawkowate.",
+        "vascularizationAndInnervation": "Krew odpływa przez aortę. Zaopatrzenie tętnicze z lewej tętnicy wieńcowej. Unaczynienie nerwowe przez splot sercowy.",
+        "physiologyAndFunction": "Tłoczy krew utlenowaną do krążenia systemowego. Wytwarza wysokie ciśnienie skurczowe.",
+        "clinicalNotes": "Przerost lewej komory, zawał mięśnia sercowego, niewydolność serca.",
+        "position": [
+          0.25,
+          -0.15,
+          0.2
+        ]
+      }
+    ],
+    "processingMode": "CONCEPT_SYNTHESIS"
+  }
+]

@@ -858,21 +858,26 @@ export const ANATOMICAL_ENTITIES: Record<string, AnatomicalEntity> = {
 function mergeGeneratedEntities(): Record<string, AnatomicalEntity> {
   const merged: Record<string, AnatomicalEntity> = { ...ANATOMICAL_ENTITIES };
   const list = Array.isArray(generatedEntities)
-    ? (generatedEntities as Partial<AnatomicalEntity>[])
+    ? (generatedEntities as unknown as Partial<AnatomicalEntity>[])
     : [];
   for (const item of list) {
     if (!item?.id || !item?.meshId) continue;
     const key = item.id.toLowerCase();
     const existing = merged[key];
     if (existing) {
+      const mergedPins = new Map(existing.pins.map((p) => [p.id, p]));
+      if (Array.isArray(item.pins)) {
+        for (const gp of item.pins) {
+          if (gp?.id && !mergedPins.has(gp.id)) {
+            mergedPins.set(gp.id, gp);
+          }
+        }
+      }
       merged[key] = {
         ...existing,
         ...item,
         forms: Array.from(new Set([...(existing.forms ?? []), ...(item.forms ?? [])])),
-        pins:
-          Array.isArray(item.pins) && item.pins.length > 0
-            ? item.pins
-            : existing.pins,
+        pins: Array.from(mergedPins.values()),
       };
     } else if (item.namePl && item.nameLat && item.summary && item.system) {
       merged[key] = {
