@@ -241,7 +241,7 @@ export function TextbookContent({
           </div>
 
           {section.ckeMetadata && !isChapterRequiredInMode && (
-            <div className="mb-6 rounded-lg border border-amber-800/60 bg-amber-950/30 px-4 py-2.5 text-xs text-amber-200">
+            <div className="mb-6 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5 text-xs text-zinc-300">
               Ten temat ma oznaczenie{" "}
               <strong>
                 {section.ckeMetadata.tier === "academic-extra"

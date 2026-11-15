@@ -178,7 +178,7 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
                 }
                 className={
                   maturaPair.activeFormula === "2023"
-                    ? "rounded-md border border-indigo-700/70 bg-indigo-950/90 px-2.5 py-1 font-semibold text-indigo-200"
+                    ? "rounded-md border border-zinc-700 bg-zinc-800 px-2.5 py-1 font-semibold text-zinc-100"
                     : "rounded-md px-2.5 py-1 text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
                 }
               >
@@ -192,7 +192,7 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
                 }
                 className={
                   maturaPair.activeFormula === "2015"
-                    ? "rounded-md border border-amber-700/70 bg-amber-950/90 px-2.5 py-1 font-semibold text-amber-200"
+                    ? "rounded-md border border-zinc-700 bg-zinc-800 px-2.5 py-1 font-semibold text-zinc-100"
                     : "rounded-md px-2.5 py-1 text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
                 }
               >

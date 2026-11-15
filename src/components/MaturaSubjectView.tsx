@@ -122,7 +122,6 @@ function MaturaSubjectViewInner({
   );
   const [activePdfPage, setActivePdfPage] = useState<number>(4);
   const [onlyCurrentPageTasks, setOnlyCurrentPageTasks] = useState<boolean>(false);
-  const [pdfDarkFilter, setPdfDarkFilter] = useState<boolean>(false);
 
   // Keep topic filter in sync with browser back/forward
   useEffect(() => {
@@ -302,8 +301,8 @@ function MaturaSubjectViewInner({
                   <span
                     className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-mono ${
                       entry.kind === "cke-sheet"
-                        ? "bg-emerald-950/80 text-emerald-300 border border-emerald-800/60"
-                        : "bg-zinc-900 text-zinc-400 border border-zinc-800"
+                        ? "border border-zinc-700 bg-zinc-800 text-zinc-200"
+                        : "border border-zinc-800 bg-zinc-900 text-zinc-400"
                     }`}
                   >
                     {entry.badge}
@@ -431,7 +430,7 @@ function MaturaSubjectViewInner({
           </h1>
           <p className="matura-content__subtitle">
             {activeSheet
-              ? `Kompletny arkusz CKE 1:1 (${activeSheet.totalPoints} pkt, ${activeSheet.totalTasks} zadań) z oryginalnymi rycinami PNG, tabelami P/F i odtwarzaczem lemo-opuscar.`
+              ? `Kompletny arkusz CKE 1:1 (${activeSheet.totalPoints} pkt, ${activeSheet.totalTasks} zadań) z oryginalnymi rycinami PNG, tabelami P/F i oficjalnym kluczem CKE.`
               : "Kliknij zadanie, aby odsłonić oficjalną odpowiedź z klucza CKE."}
           </p>
 
@@ -463,10 +462,10 @@ function MaturaSubjectViewInner({
                   role="tab"
                   aria-selected={presentationMode === "interactive"}
                   onClick={() => setPresentationMode("interactive")}
-                  className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold transition-colors ${
+                  className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
                     presentationMode === "interactive"
-                      ? "bg-emerald-600 text-white"
-                      : "text-zinc-400 hover:text-zinc-100"
+                      ? "border-zinc-700 bg-zinc-800 text-zinc-100"
+                      : "border-transparent text-zinc-400 hover:text-zinc-100"
                   }`}
                 >
                   <Zap className="size-3.5" aria-hidden="true" />
@@ -477,10 +476,10 @@ function MaturaSubjectViewInner({
                   role="tab"
                   aria-selected={presentationMode === "pdf-split"}
                   onClick={() => setPresentationMode("pdf-split")}
-                  className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold transition-colors ${
+                  className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
                     presentationMode === "pdf-split"
-                      ? "bg-sky-600 text-white"
-                      : "text-zinc-400 hover:text-zinc-100"
+                      ? "border-zinc-700 bg-zinc-800 text-zinc-100"
+                      : "border-transparent text-zinc-400 hover:text-zinc-100"
                   }`}
                 >
                   <Columns2 className="size-3.5" aria-hidden="true" />
@@ -495,11 +494,11 @@ function MaturaSubjectViewInner({
               {/* Sheet metadata & quick-jump task pills */}
               <div className="mb-5 space-y-2.5 rounded-xl border border-zinc-800 bg-zinc-950/90 p-3.5">
                 <div className="flex flex-wrap items-center gap-2 text-xs">
-                  <span className="inline-flex items-center gap-1 rounded border border-emerald-800/70 bg-emerald-950/60 px-2 py-0.5 font-semibold text-emerald-200">
-                    <FileText className="size-3.5" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-1 rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-semibold text-zinc-200">
+                    <FileText className="size-3.5 text-zinc-400" aria-hidden="true" />
                     {activeSheet.symbol ?? activeSheet.id}
                   </span>
-                  <span className="rounded border border-indigo-800/60 bg-indigo-950/60 px-2 py-0.5 font-semibold text-indigo-200">
+                  <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-semibold text-zinc-200">
                     Formuła {activeSheet.formula}
                   </span>
                   <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-mono text-zinc-300">
@@ -527,8 +526,8 @@ function MaturaSubjectViewInner({
                           }
                           className={`rounded border px-2 py-0.5 text-[11px] font-mono transition-colors ${
                             isSplitView && t.pdfPageNumber === clampedPage
-                              ? "border-sky-600 bg-sky-950/70 text-sky-200"
-                              : "border-zinc-800 bg-zinc-950 text-zinc-300 hover:border-emerald-700 hover:text-emerald-200"
+                              ? "border-zinc-500 bg-zinc-800 text-zinc-100"
+                              : "border-zinc-800 bg-zinc-950 text-zinc-300 hover:border-zinc-600 hover:text-zinc-100"
                           }`}
                         >
                           {num}
@@ -595,19 +594,12 @@ function MaturaSubjectViewInner({
                         <div className="flex items-center gap-1.5">
                           <button
                             type="button"
-                            onClick={() => setPdfDarkFilter((d) => !d)}
-                            className="rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-[11px] text-zinc-300 hover:text-white"
-                          >
-                            {pdfDarkFilter ? "☀️ Papier CKE" : "🌙 NOIR"}
-                          </button>
-                          <button
-                            type="button"
                             onClick={() =>
                               setOnlyCurrentPageTasks((o) => !o)
                             }
                             className={`rounded-md border px-2 py-1 text-[11px] font-medium ${
                               onlyCurrentPageTasks
-                                ? "border-sky-600 bg-sky-950/70 text-sky-200"
+                                ? "border-zinc-600 bg-zinc-800 text-zinc-100"
                                 : "border-zinc-700 bg-zinc-950 text-zinc-300"
                             }`}
                           >
@@ -628,11 +620,7 @@ function MaturaSubjectViewInner({
                             height={1358}
                             loading="lazy"
                             decoding="async"
-                            className={`mx-auto w-full object-contain ${
-                              pdfDarkFilter
-                                ? "invert contrast-125 brightness-95"
-                                : ""
-                            }`}
+                            className="mx-auto w-full object-contain"
                           />
                         )}
                       </div>

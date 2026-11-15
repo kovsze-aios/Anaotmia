@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   AlertTriangle,
-  Calculator,
   CheckCircle2,
   ChevronDown,
   ChevronLeft,
@@ -11,13 +10,7 @@ import {
   Columns2,
   FileText,
   Maximize2,
-  Moon,
-  Pause,
-  Play,
-  RotateCcw,
   Search,
-  Sparkles,
-  Sun,
   X,
   Zap,
 } from "lucide-react";
@@ -79,8 +72,8 @@ export function CkeChapterCallout({ metadata }: { metadata?: CkeMetadata }) {
       </div>
 
       {metadata.diffs2015vs2023 && (
-        <div className="mb-3 rounded-lg border border-indigo-900/50 bg-indigo-950/30 px-3.5 py-2.5 text-xs leading-relaxed text-indigo-200">
-          <span className="font-semibold uppercase tracking-wider text-indigo-300">
+        <div className="mb-3 rounded-lg border border-zinc-800 bg-zinc-900/70 px-3.5 py-2.5 text-xs leading-relaxed text-zinc-300">
+          <span className="font-semibold uppercase tracking-wider text-zinc-100">
             Różnice Formuła 2015 vs 2023+:{" "}
           </span>
           {metadata.diffs2015vs2023}
@@ -89,8 +82,8 @@ export function CkeChapterCallout({ metadata }: { metadata?: CkeMetadata }) {
 
       {traps.length > 0 && (
         <div className="space-y-1.5">
-          <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-300">
-            <AlertTriangle className="size-3.5" aria-hidden="true" />
+          <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-200">
+            <AlertTriangle className="size-3.5 text-zinc-400" aria-hidden="true" />
             Pułapki CKE i czasowniki operacyjne:
           </p>
           <ul className="space-y-1 text-xs leading-relaxed text-zinc-300">
@@ -106,33 +99,14 @@ export function CkeChapterCallout({ metadata }: { metadata?: CkeMetadata }) {
   );
 }
 
-const PHASE_LABELS: Record<CkeAnimatedStep["phase"], { short: string; accent: string }> = {
-  "analiza-ryciny": {
-    short: "1. Rycina i dane",
-    accent: "border-cyan-700/70 bg-cyan-950/60 text-cyan-200",
-  },
-  "czasownik-operacyjny": {
-    short: "2. Czasownik CKE",
-    accent: "border-amber-700/70 bg-amber-950/60 text-amber-200",
-  },
-  mechanizm: {
-    short: "3. Mechanizm",
-    accent: "border-indigo-700/70 bg-indigo-950/60 text-indigo-200",
-  },
-  "klucz-cke": {
-    short: "4. Klucz 1:1",
-    accent: "border-emerald-700/70 bg-emerald-950/60 text-emerald-200",
-  },
-};
-
 export function CkeMediaGallery({
   media,
   highlightDiagram,
 }: {
   media: CkeTaskMedia[];
-  highlightDiagram: boolean;
+  highlightDiagram?: boolean;
 }) {
-  const [darkFilter, setDarkFilter] = useState(false);
+  void highlightDiagram;
   const [zoomed, setZoomed] = useState<CkeTaskMedia | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -150,35 +124,16 @@ export function CkeMediaGallery({
 
   return (
     <div className="my-4 space-y-3">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
-          Materiał graficzny arkusza CKE ({media.length})
-        </span>
-        <button
-          type="button"
-          onClick={() => setDarkFilter((prev) => !prev)}
-          className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1 text-[11px] font-medium text-zinc-300 hover:border-zinc-700 hover:text-zinc-100"
-        >
-          {darkFilter ? <Sun className="size-3 text-amber-300" /> : <Moon className="size-3 text-indigo-300" />}
-          {darkFilter ? "Oryginał CKE (Jasne tło)" : "Kontrast NOIR (Odwróć)"}
-        </button>
-      </div>
+      <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+        Materiał graficzny arkusza CKE ({media.length})
+      </p>
 
       <div className={`grid gap-3 ${media.length > 1 ? "sm:grid-cols-2" : "grid-cols-1"}`}>
         {media.map((item) => (
           <figure
             key={item.id}
-            className={`group relative overflow-hidden rounded-xl border transition-all duration-300 ${
-              highlightDiagram
-                ? "border-cyan-400/80 ring-2 ring-cyan-500/30"
-                : "border-zinc-800"
-            } ${darkFilter ? "bg-zinc-950" : "bg-white"}`}
+            className="group relative overflow-hidden rounded-xl border border-zinc-800 bg-white"
           >
-            {highlightDiagram && (
-              <div className="bg-cyan-950/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-cyan-200">
-                🔍 Krok 1 (lemo-opuscar): Zwróć uwagę na etykiety, osie i zależności na rycinie
-              </div>
-            )}
             <div className="relative min-h-[180px] p-2.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -188,16 +143,9 @@ export function CkeMediaGallery({
                 height={600}
                 loading="lazy"
                 decoding="async"
-                className={`mx-auto max-h-96 w-auto object-contain transition-all ${
-                  darkFilter ? "invert contrast-125 brightness-95" : ""
-                }`}
+                onClick={() => setZoomed(item)}
+                className="mx-auto max-h-96 w-auto cursor-zoom-in object-contain"
               />
-              {highlightDiagram && (
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-4 animate-pulse rounded-lg border-2 border-dashed border-cyan-400/80 bg-cyan-400/10"
-                />
-              )}
               <button
                 type="button"
                 onClick={() => setZoomed(item)}
@@ -294,9 +242,9 @@ export function InteractiveTruthTable({
                   key={idx}
                   className={`border-b border-zinc-800/70 transition-colors ${
                     isCorrect
-                      ? "bg-emerald-950/25"
+                      ? "bg-zinc-900/90"
                       : isWrong
-                        ? "bg-rose-950/25"
+                        ? "bg-zinc-900/50"
                         : "hover:bg-zinc-900/40"
                   }`}
                 >
@@ -304,10 +252,10 @@ export function InteractiveTruthTable({
                     {row.statement}
                     {checked && (
                       <span
-                        className={`ml-2 inline-block rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+                        className={`ml-2 inline-block rounded border px-1.5 py-0.5 text-[10px] font-semibold ${
                           isCorrect
-                            ? "bg-emerald-900/60 text-emerald-200"
-                            : "bg-rose-900/60 text-rose-200"
+                            ? "border-zinc-700 bg-zinc-800 text-zinc-100"
+                            : "border-zinc-800 bg-zinc-900 text-zinc-300"
                         }`}
                       >
                         {isCorrect ? "✓ Dobrze" : `✗ Klucz CKE: ${row.correctAnswer}`}
@@ -326,7 +274,7 @@ export function InteractiveTruthTable({
                           }}
                           className={`min-w-[2.1rem] rounded-md px-2 py-1 text-xs font-bold transition-colors ${
                             chosen === letter
-                              ? "bg-emerald-600 text-white shadow-sm"
+                              ? "bg-zinc-100 text-zinc-950 shadow-sm"
                               : "text-zinc-400 hover:text-zinc-100"
                           }`}
                         >
@@ -363,7 +311,7 @@ export function InteractiveTruthTable({
           <button
             type="button"
             onClick={() => setChecked(true)}
-            className="rounded-md border border-emerald-700/70 bg-emerald-950/70 px-3 py-1 text-[11px] font-semibold text-emerald-200 hover:bg-emerald-900/70"
+            className="rounded-md border border-zinc-700 bg-zinc-800 px-3 py-1 text-[11px] font-semibold text-zinc-100 hover:bg-zinc-700"
           >
             ✓ Sprawdź tabelę P/F
           </button>
@@ -374,53 +322,8 @@ export function InteractiveTruthTable({
 }
 
 export function CalculationScratchpad({ defaultOpen }: { defaultOpen?: boolean }) {
-  const [open, setOpen] = useState(Boolean(defaultOpen));
-  const [notes, setNotes] = useState("");
-
-  return (
-    <div className="my-2.5">
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-900/80 px-2.5 py-1 text-[11px] font-medium text-zinc-300 hover:border-zinc-700 hover:text-zinc-100"
-      >
-        <Calculator className="size-3.5 text-sky-400" aria-hidden="true" />
-        {open ? "Ukryj brudnopis / kratkę CKE" : "📐 Brudnopis / Kratka obliczeniowa CKE"}
-      </button>
-
-      {open && (
-        <div
-          className="mt-2 rounded-xl border border-zinc-800 p-3"
-          style={{
-            backgroundColor: "#0a0d12",
-            backgroundImage:
-              "linear-gradient(to right, rgba(56,189,248,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(56,189,248,0.08) 1px, transparent 1px)",
-            backgroundSize: "18px 18px",
-          }}
-        >
-          <div className="mb-1.5 flex items-center justify-between text-[10px] font-semibold uppercase tracking-wider text-sky-300/80">
-            <span>Miejsce na obliczenia / równania reakcji (brudnopis CKE)</span>
-            {notes && (
-              <button
-                type="button"
-                onClick={() => setNotes("")}
-                className="text-zinc-400 hover:text-zinc-200"
-              >
-                Wyczyść kratkę
-              </button>
-            )}
-          </div>
-          <textarea
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-            rows={4}
-            placeholder="Zapisz dane, wzór (np. n = m/M, pV = nRT), równanie reakcji lub tok rozumowania..."
-            className="w-full resize-y bg-transparent font-mono text-xs leading-[18px] text-zinc-100 placeholder:text-zinc-600 focus:outline-none"
-          />
-        </div>
-      )}
-    </div>
-  );
+  void defaultOpen;
+  return null;
 }
 
 export function CkeLemoSolutionPlayer({
@@ -434,200 +337,81 @@ export function CkeLemoSolutionPlayer({
   officialKeyCropUrl?: string;
   onPhaseChange?: (phase: CkeAnimatedStep["phase"] | null) => void;
 }) {
+  void onPhaseChange;
   const [expanded, setExpanded] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
 
-  const safeSteps = useMemo(() => steps, [steps]);
-  const currentStep = safeSteps[activeIndex] ?? safeSteps[0];
-
-  useEffect(() => {
-    if (!expanded) {
-      onPhaseChange?.(null);
-      return;
-    }
-    onPhaseChange?.(currentStep?.phase ?? null);
-  }, [expanded, currentStep?.phase, onPhaseChange]);
-
-  useEffect(() => {
-    if (!isPlaying || !expanded) return;
-    const timer = window.setInterval(() => {
-      setActiveIndex((prev) => {
-        if (prev + 1 >= safeSteps.length) {
-          setIsPlaying(false);
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, 3400);
-    return () => window.clearInterval(timer);
-  }, [isPlaying, expanded, safeSteps.length]);
-
-  const progressPct = Math.round(((activeIndex + 1) / Math.max(1, safeSteps.length)) * 100);
+  const reasoningSteps = useMemo(
+    () => steps.filter((step) => step.phase !== "klucz-cke"),
+    [steps],
+  );
 
   return (
     <div className="mt-3">
       <button
         type="button"
-        onClick={() => {
-          setExpanded((prev) => !prev);
-          if (expanded) setIsPlaying(false);
-        }}
+        onClick={() => setExpanded((prev) => !prev)}
         aria-expanded={expanded}
-        className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-xs font-semibold text-emerald-300 transition-colors hover:border-emerald-700 hover:bg-emerald-950/40 focus-ring"
+        className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:bg-zinc-800 focus-ring"
       >
-        <Sparkles className="size-3.5 text-emerald-400" aria-hidden="true" />
-        {expanded
-          ? "Ukryj odtwarzacz rozwiązania lemo-opuscar i klucz CKE"
-          : "▶ Odtwórz analizę krok po kroku (lemo-opuscar + Klucz CKE)"}
+        {expanded ? "Ukryj odpowiedź" : "Zobacz odpowiedź i klucz CKE"}
         <ChevronDown
-          className={`size-3.5 transition-transform ${expanded ? "rotate-180" : ""}`}
+          className={`size-3.5 text-zinc-400 transition-transform ${expanded ? "rotate-180" : ""}`}
           aria-hidden="true"
         />
       </button>
 
-      {expanded && currentStep && (
-        <div className="mt-3 overflow-hidden rounded-xl border border-emerald-900/60 bg-zinc-950/95 shadow-inner">
-          {/* Player toolbar */}
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800/90 bg-zinc-900/90 px-3.5 py-2.5">
-            <div className="flex flex-wrap items-center gap-1.5">
-              <button
-                type="button"
-                onClick={() => {
-                  if (!isPlaying && activeIndex === safeSteps.length - 1) {
-                    setActiveIndex(0);
-                  }
-                  setIsPlaying((p) => !p);
-                }}
-                className="inline-flex items-center gap-1.5 rounded-md border border-emerald-700/80 bg-emerald-950/80 px-2.5 py-1 text-[11px] font-semibold text-emerald-200 hover:bg-emerald-900/80"
-              >
-                {isPlaying ? <Pause className="size-3" /> : <Play className="size-3" />}
-                {isPlaying ? "Pauza" : "Odtwórz auto"}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setActiveIndex((i) => Math.max(0, i - 1));
-                }}
-                disabled={activeIndex === 0}
-                aria-label="Poprzedni krok"
-                className="rounded-md border border-zinc-800 bg-zinc-950 p-1 text-zinc-300 hover:bg-zinc-800 disabled:opacity-40"
-              >
-                <ChevronLeft className="size-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setActiveIndex((i) => Math.min(safeSteps.length - 1, i + 1));
-                }}
-                disabled={activeIndex >= safeSteps.length - 1}
-                aria-label="Następny krok"
-                className="rounded-md border border-zinc-800 bg-zinc-950 p-1 text-zinc-300 hover:bg-zinc-800 disabled:opacity-40"
-              >
-                <ChevronRight className="size-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setActiveIndex(0);
-                }}
-                aria-label="Od początku"
-                className="rounded-md border border-zinc-800 bg-zinc-950 p-1 text-zinc-400 hover:text-zinc-100"
-              >
-                <RotateCcw className="size-3" />
-              </button>
-            </div>
+      {expanded && (
+        <div className="mt-3 space-y-4 rounded-xl border border-zinc-800 bg-zinc-900/50 p-4 text-xs leading-relaxed text-zinc-300">
+          <div className="space-y-2">
+            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-zinc-200">
+              <CheckCircle2 className="size-3.5 text-zinc-400" aria-hidden="true" />
+              Oficjalne kryteria oceniania CKE:
+            </p>
+            <p className="whitespace-pre-line rounded-lg border border-zinc-800 bg-zinc-950/80 p-3 text-xs leading-relaxed text-zinc-100">
+              {officialAnswerKey}
+            </p>
+            {officialKeyCropUrl && (
+              <div className="rounded-lg border border-zinc-800 bg-white p-2">
+                <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-600">
+                  Oryginalny wycinek z Zasad Oceniania CKE:
+                </p>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={officialKeyCropUrl}
+                  alt="Oficjalny wycinek z klucza CKE"
+                  width={800}
+                  height={320}
+                  loading="lazy"
+                  decoding="async"
+                  className="mx-auto max-h-72 w-auto object-contain"
+                />
+              </div>
+            )}
+          </div>
 
-            <div className="flex flex-wrap gap-1">
-              {safeSteps.map((st, idx) => {
-                const meta = PHASE_LABELS[st.phase] ?? PHASE_LABELS["klucz-cke"];
-                const active = idx === activeIndex;
-                return (
-                  <button
-                    key={st.stepNumber}
-                    type="button"
-                    onClick={() => {
-                      setIsPlaying(false);
-                      setActiveIndex(idx);
-                    }}
-                    className={`rounded-md border px-2 py-0.5 text-[10px] font-semibold transition-all ${
-                      active
-                        ? `${meta.accent} scale-[1.02] shadow-sm`
-                        : idx < activeIndex
-                          ? "border-emerald-900/60 bg-emerald-950/30 text-emerald-400/90"
-                          : "border-zinc-800 bg-zinc-950 text-zinc-500 hover:text-zinc-300"
-                    }`}
+          {reasoningSteps.length > 0 && (
+            <div className="space-y-3 border-t border-zinc-800/80 pt-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+                Uzasadnienie krok po kroku:
+              </p>
+              <ol className="space-y-3">
+                {reasoningSteps.map((step) => (
+                  <li
+                    key={step.stepNumber}
+                    className="rounded-lg border border-zinc-800/80 bg-zinc-950/60 p-3"
                   >
-                    {meta.short}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Animated progress bar */}
-          <div className="h-1 w-full bg-zinc-900">
-            <div
-              className="h-full bg-gradient-to-r from-cyan-400 via-indigo-400 to-emerald-400 transition-all duration-500"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
-
-          {/* Active step body */}
-          <div key={currentStep.stepNumber} className="space-y-3 p-4 text-xs leading-relaxed">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <h4 className="text-sm font-bold text-zinc-100">{currentStep.title}</h4>
-              <span className="rounded-full border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-[10px] font-mono text-zinc-400">
-                Krok {activeIndex + 1} / {safeSteps.length}
-              </span>
-            </div>
-
-            {currentStep.highlightQuote && (
-              <div className="rounded-lg border border-amber-800/50 bg-amber-950/25 px-3 py-2 text-[11px] text-amber-200">
-                <span className="font-semibold uppercase tracking-wider text-amber-300">
-                  Słowo kluczowe / cytat CKE:{" "}
-                </span>
-                <span className="font-mono">{currentStep.highlightQuote}</span>
-              </div>
-            )}
-
-            <div
-              className="prose prose-xs prose-invert max-w-none leading-relaxed text-zinc-200"
-              dangerouslySetInnerHTML={{ __html: currentStep.explanationHtml }}
-            />
-
-            {currentStep.phase === "klucz-cke" && (
-              <div className="space-y-2.5 border-t border-zinc-800 pt-3">
-                <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
-                  <CheckCircle2 className="size-3.5" aria-hidden="true" />
-                  Oficjalne kryteria oceniania CKE (1 pkt vs 0 pkt):
-                </p>
-                <p className="whitespace-pre-line rounded-lg border border-emerald-900/50 bg-emerald-950/20 p-3 text-xs leading-relaxed text-zinc-200">
-                  {officialAnswerKey}
-                </p>
-                {officialKeyCropUrl && (
-                  <div className="rounded-lg border border-zinc-800 bg-white p-2">
-                    <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-600">
-                      Oryginalny wycinek z Zasad Oceniania CKE:
-                    </p>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={officialKeyCropUrl}
-                      alt="Oficjalny wycinek z klucza CKE"
-                      width={800}
-                      height={320}
-                      loading="lazy"
-                      decoding="async"
-                      className="mx-auto max-h-72 w-auto object-contain"
+                    <h4 className="mb-1.5 text-xs font-semibold text-zinc-100">
+                      {step.title}
+                    </h4>
+                    <div
+                      className="prose prose-xs prose-invert max-w-none leading-relaxed text-zinc-300"
+                      dangerouslySetInnerHTML={{ __html: step.explanationHtml }}
                     />
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -636,10 +420,8 @@ export function CkeLemoSolutionPlayer({
 
 function SubTaskBlock({
   subTask,
-  onPhaseChange,
 }: {
   subTask: CkeSubTask;
-  onPhaseChange?: (phase: CkeAnimatedStep["phase"] | null) => void;
 }) {
   const steps = useMemo(
     () => buildDefaultAnimatedSteps(subTask),
@@ -653,7 +435,7 @@ function SubTaskBlock({
           <span className="rounded bg-zinc-800 px-2 py-0.5 text-[11px] font-bold text-zinc-100">
             Zadanie {subTask.subTaskNumber}
           </span>
-          <span className="rounded border border-emerald-800/60 bg-emerald-950/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
+          <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-300">
             {subTask.operationalVerb}
           </span>
         </div>
@@ -671,15 +453,10 @@ function SubTaskBlock({
         <InteractiveTruthTable tableData={subTask.interactiveTableData} />
       )}
 
-      {(subTask.taskType === "calculation-grid" || subTask.points >= 2) && (
-        <CalculationScratchpad defaultOpen={subTask.taskType === "calculation-grid"} />
-      )}
-
       <CkeLemoSolutionPlayer
         steps={steps}
         officialAnswerKey={subTask.officialAnswerKey}
         officialKeyCropUrl={subTask.officialKeyCropUrl}
-        onPhaseChange={onPhaseChange}
       />
     </div>
   );
@@ -692,7 +469,6 @@ export function ExamTaskCard({
   task: CkeExamTask;
   onOpenPdfPage?: (pageNo: number) => void;
 }) {
-  const [activePhase, setActivePhase] = useState<CkeAnimatedStep["phase"] | null>(null);
   const subTasks = task.subTasks ?? [];
   const hasMultipleSubTasks = subTasks.length > 1;
   const singleSub = subTasks.length === 1 ? subTasks[0] : undefined;
@@ -714,26 +490,20 @@ export function ExamTaskCard({
     >
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800/80 pb-3">
         <div className="flex flex-wrap items-center gap-2">
-          <span
-            className={
-              task.formula === "2023"
-                ? "rounded border border-indigo-800/70 bg-indigo-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-indigo-300"
-                : "rounded border border-amber-800/70 bg-amber-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-300"
-            }
-          >
+          <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-300">
             Formuła {task.formula}
           </span>
           <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-[11px] font-mono text-zinc-200">
             CKE {task.year} ({task.month}) • {task.taskNumber}
           </span>
-          <span className="rounded border border-emerald-800/60 bg-emerald-950/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
+          <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-300">
             {task.operationalVerb}
           </span>
           {task.pdfPageNumber && (
             <button
               type="button"
               onClick={() => onOpenPdfPage?.(task.pdfPageNumber!)}
-              className="inline-flex items-center gap-1 rounded border border-sky-800/60 bg-sky-950/50 px-2 py-0.5 text-[10px] font-medium text-sky-200 hover:bg-sky-900/60"
+              className="inline-flex items-center gap-1 rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 text-[10px] font-medium text-zinc-300 hover:border-zinc-700 hover:bg-zinc-800 hover:text-zinc-100"
             >
               <FileText className="size-3" aria-hidden="true" />
               Strona {task.pdfPageNumber} arkusza
@@ -753,20 +523,13 @@ export function ExamTaskCard({
       )}
 
       {task.media && task.media.length > 0 && (
-        <CkeMediaGallery
-          media={task.media}
-          highlightDiagram={activePhase === "analiza-ryciny"}
-        />
+        <CkeMediaGallery media={task.media} />
       )}
 
       {hasMultipleSubTasks ? (
         <div className="mt-4 space-y-3">
           {subTasks.map((st) => (
-            <SubTaskBlock
-              key={st.subTaskNumber}
-              subTask={st}
-              onPhaseChange={setActivePhase}
-            />
+            <SubTaskBlock key={st.subTaskNumber} subTask={st} />
           ))}
         </div>
       ) : singleSub ? (
@@ -785,14 +548,10 @@ export function ExamTaskCard({
           {singleSub.interactiveTableData && (
             <InteractiveTruthTable tableData={singleSub.interactiveTableData} />
           )}
-          {(singleSub.taskType === "calculation-grid" || task.taskType === "calculation-grid") && (
-            <CalculationScratchpad defaultOpen />
-          )}
           <CkeLemoSolutionPlayer
             steps={buildDefaultAnimatedSteps(singleSub)}
             officialAnswerKey={singleSub.officialAnswerKey}
             officialKeyCropUrl={singleSub.officialKeyCropUrl}
-            onPhaseChange={setActivePhase}
           />
         </div>
       ) : (
@@ -804,7 +563,6 @@ export function ExamTaskCard({
             steps={fallbackSteps}
             officialAnswerKey={task.officialAnswerKey}
             officialKeyCropUrl={task.officialKeyCropUrl}
-            onPhaseChange={setActivePhase}
           />
         </div>
       )}
@@ -851,7 +609,7 @@ export function CkeExamTasksSection({
           id="cke-chapter-tasks-heading"
           className="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
         >
-          📄 Zadania Maturalne CKE z tego tematu (Klucz 1:1 + Animowana analiza)
+          📄 Zadania Maturalne CKE z tego tematu
         </h2>
         <span className="rounded-full border border-zinc-800 bg-zinc-950 px-2.5 py-0.5 text-xs font-medium text-zinc-400">
           {tasks.length} {tasks.length === 1 ? "wiązka CKE" : "wiązek CKE"}
@@ -890,7 +648,6 @@ export function CkeExamSheetsRepositoryView({
   const [search, setSearch] = useState("");
   const [activePdfPage, setActivePdfPage] = useState<number>(4);
   const [onlyCurrentPageTasks, setOnlyCurrentPageTasks] = useState<boolean>(false);
-  const [pdfDarkFilter, setPdfDarkFilter] = useState<boolean>(false);
 
   const activeSheet: CkeExamSheet | undefined = useMemo(
     () => sheets.find((s) => s.id === selectedSheetId) ?? sheets[0],
@@ -955,11 +712,11 @@ export function CkeExamSheetsRepositoryView({
       <div className="flex flex-wrap items-start justify-between gap-3 border-b border-zinc-800 pb-4">
         <div>
           <h2 className="flex items-center gap-2 text-lg font-bold text-zinc-100">
-            <FileText className="size-5 text-emerald-400" aria-hidden="true" />
-            📄 Pełne Arkusze Maturalne CKE 1:1 (Ryciny + Player Krok Po Kroku)
+            <FileText className="size-5 text-zinc-400" aria-hidden="true" />
+            Pełne Arkusze Maturalne CKE 1:1
           </h2>
           <p className="mt-1 text-xs text-zinc-400">
-            Kompletne arkusze CKE od Zadania 1. do ostatniego, z wyciętymi rycinami, interaktywnymi tabelami P/F i animowanym kluczem egzaminatora.
+            Kompletne arkusze CKE od Zadania 1. do ostatniego, z wyciętymi rycinami, interaktywnymi tabelami P/F i oficjalnym kluczem odpowiedzi.
           </p>
         </div>
 
@@ -974,14 +731,14 @@ export function CkeExamSheetsRepositoryView({
               role="tab"
               aria-selected={presentationMode === "interactive"}
               onClick={() => setPresentationMode("interactive")}
-              className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold transition-colors ${
+              className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
                 presentationMode === "interactive"
-                  ? "bg-emerald-600 text-white"
-                  : "text-zinc-400 hover:text-zinc-100"
+                  ? "border-zinc-700 bg-zinc-800 text-zinc-100"
+                  : "border-transparent text-zinc-400 hover:text-zinc-100"
               }`}
             >
               <Zap className="size-3.5" aria-hidden="true" />
-              Widok Interaktywny CKE + AI Player
+              Widok Interaktywny CKE
             </button>
             <button
               type="button"
@@ -993,10 +750,10 @@ export function CkeExamSheetsRepositoryView({
                 }
                 setPresentationMode("pdf-split");
               }}
-              className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-semibold transition-colors ${
+              className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
                 presentationMode === "pdf-split"
-                  ? "bg-sky-600 text-white"
-                  : "text-zinc-400 hover:text-zinc-100"
+                  ? "border-zinc-700 bg-zinc-800 text-zinc-100"
+                  : "border-transparent text-zinc-400 hover:text-zinc-100"
               }`}
             >
               <Columns2 className="size-3.5" aria-hidden="true" />
@@ -1031,7 +788,7 @@ export function CkeExamSheetsRepositoryView({
                 }}
                 className={`rounded-lg border px-3 py-1.5 text-left text-xs transition-colors ${
                   active
-                    ? "border-emerald-600 bg-emerald-950/60 font-semibold text-emerald-200"
+                    ? "border-zinc-600 bg-zinc-800 font-semibold text-zinc-100"
                     : "border-zinc-800 bg-zinc-900/70 text-zinc-300 hover:border-zinc-700 hover:text-zinc-100"
                 }`}
               >
@@ -1048,7 +805,7 @@ export function CkeExamSheetsRepositoryView({
               onClick={() => setSelectedSheetId("all")}
               className={`rounded-lg border px-3 py-1.5 text-xs transition-colors ${
                 selectedSheetId === "all"
-                  ? "border-indigo-500 bg-indigo-950/60 font-semibold text-indigo-200"
+                  ? "border-zinc-600 bg-zinc-800 font-semibold text-zinc-100"
                   : "border-zinc-800 bg-zinc-900/70 text-zinc-400 hover:text-zinc-100"
               }`}
             >
@@ -1124,8 +881,8 @@ export function CkeExamSheetsRepositoryView({
                 onClick={() => handleJumpToTask(t)}
                 className={`rounded border px-2 py-0.5 text-[11px] font-mono transition-colors ${
                   presentationMode === "pdf-split" && t.pdfPageNumber === clampedPage
-                    ? "border-sky-600 bg-sky-950/70 text-sky-200"
-                    : "border-zinc-800 bg-zinc-950 text-zinc-300 hover:border-emerald-700 hover:text-emerald-200"
+                    ? "border-zinc-500 bg-zinc-800 text-zinc-100"
+                    : "border-zinc-800 bg-zinc-950 text-zinc-300 hover:border-zinc-600 hover:text-zinc-100"
                 }`}
               >
                 {num}
@@ -1182,17 +939,10 @@ export function CkeExamSheetsRepositoryView({
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
-                    onClick={() => setPdfDarkFilter((d) => !d)}
-                    className="rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-[11px] text-zinc-300 hover:text-white"
-                  >
-                    {pdfDarkFilter ? "☀️ Papier CKE" : "🌙 NOIR"}
-                  </button>
-                  <button
-                    type="button"
                     onClick={() => setOnlyCurrentPageTasks((o) => !o)}
                     className={`rounded-md border px-2 py-1 text-[11px] font-medium ${
                       onlyCurrentPageTasks
-                        ? "border-sky-600 bg-sky-950/70 text-sky-200"
+                        ? "border-zinc-600 bg-zinc-800 text-zinc-100"
                         : "border-zinc-700 bg-zinc-950 text-zinc-300"
                     }`}
                   >
@@ -1211,9 +961,7 @@ export function CkeExamSheetsRepositoryView({
                     height={1358}
                     loading="lazy"
                     decoding="async"
-                    className={`mx-auto w-full object-contain ${
-                      pdfDarkFilter ? "invert contrast-125 brightness-95" : ""
-                    }`}
+                    className="mx-auto w-full object-contain"
                   />
                 )}
               </div>

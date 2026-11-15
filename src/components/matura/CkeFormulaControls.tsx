@@ -98,6 +98,9 @@ export function useCurriculumViewMode(
   return [mode, setMode];
 }
 
+const MONOCHROME_BADGE_CLASS =
+  "inline-flex shrink-0 items-center rounded border px-1.5 py-0.5 text-[10px] font-semibold tracking-wider uppercase bg-zinc-900/90 text-zinc-300 border-zinc-800";
+
 export function CkeStatusBadge({
   status,
   tier,
@@ -112,60 +115,20 @@ export function CkeStatusBadge({
   if (!status && !tier) return null;
 
   const resolvedTier = normalizeCurriculumTier(tier ?? status);
+  const label =
+    resolvedTier === "cke-2023-only"
+      ? compact
+        ? "NOWA 2023+"
+        : "NOWA MATURA 2023+"
+      : resolvedTier === "cke-2015-only"
+        ? "FORMUŁA 2015"
+        : resolvedTier === "academic-extra"
+          ? "EXTRA / STUDIA"
+          : compact
+            ? "CKE RDZEŃ"
+            : "CKE RDZEŃ (2015 + 2023)";
 
-  if (resolvedTier === "cke-2023-only") {
-    return (
-      <span
-        className={cn(
-          "inline-flex shrink-0 items-center rounded border px-1.5 py-0.5 text-[10px] font-semibold tracking-wider uppercase",
-          "bg-indigo-950/70 text-indigo-300 border-indigo-800/60",
-          className,
-        )}
-      >
-        {compact ? "NOWA 2023+" : "NOWA MATURA 2023+"}
-      </span>
-    );
-  }
-
-  if (resolvedTier === "cke-2015-only") {
-    return (
-      <span
-        className={cn(
-          "inline-flex shrink-0 items-center rounded border px-1.5 py-0.5 text-[10px] font-semibold tracking-wider uppercase",
-          "bg-amber-950/70 text-amber-300 border-amber-800/60",
-          className,
-        )}
-      >
-        FORMUŁA 2015
-      </span>
-    );
-  }
-
-  if (resolvedTier === "academic-extra") {
-    return (
-      <span
-        className={cn(
-          "inline-flex shrink-0 items-center rounded border px-1.5 py-0.5 text-[10px] font-semibold tracking-wider uppercase",
-          "bg-purple-950/70 text-purple-300 border-purple-800/60",
-          className,
-        )}
-      >
-        EXTRA / STUDIA
-      </span>
-    );
-  }
-
-  return (
-    <span
-      className={cn(
-        "inline-flex shrink-0 items-center rounded border px-1.5 py-0.5 text-[10px] font-semibold tracking-wider uppercase",
-        "bg-emerald-950/70 text-emerald-300 border-emerald-800/60",
-        className,
-      )}
-    >
-      {compact ? "CKE RDZEŃ" : "CKE RDZEŃ (2015 + 2023)"}
-    </span>
-  );
+  return <span className={cn(MONOCHROME_BADGE_CLASS, className)}>{label}</span>;
 }
 
 /**
@@ -190,35 +153,26 @@ export function CurriculumModeSwitcher({
     id: CurriculumViewMode;
     label: string;
     shortLabel: string;
-    activeClass: string;
   }[] = [
     {
       id: "full",
       label: "🔬 Pełna Wiedza (100% + Extra)",
       shortLabel: "🔬 Pełna (100%)",
-      activeClass:
-        "bg-purple-950/90 text-purple-200 border border-purple-700/60 shadow-sm",
     },
     {
       id: "matura-2023",
       label: "🎓 Matura 2023+ (Nowa)",
       shortLabel: "🎓 Matura 2023+",
-      activeClass:
-        "bg-indigo-950/90 text-indigo-200 border border-indigo-700/60 shadow-sm",
     },
     {
       id: "matura-2015",
       label: "📜 Matura 2015 (Stara)",
       shortLabel: "📜 Matura 2015",
-      activeClass:
-        "bg-amber-950/90 text-amber-200 border border-amber-700/60 shadow-sm",
     },
     {
       id: "cke-exams",
       label: "📄 Oficjalne Arkusze CKE",
       shortLabel: "📄 Arkusze CKE",
-      activeClass:
-        "bg-emerald-950/80 text-emerald-200 border border-emerald-700/60 shadow-sm",
     },
   ];
 
@@ -241,10 +195,10 @@ export function CurriculumModeSwitcher({
             onClick={() => onChange(opt.id)}
             aria-pressed={active}
             className={cn(
-              "rounded-md px-2 py-1.5 font-medium transition-colors focus-ring truncate text-center",
+              "rounded-md border px-2 py-1.5 font-medium transition-colors focus-ring truncate text-center",
               active
-                ? opt.activeClass
-                : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200",
+                ? "border-zinc-700 bg-zinc-800 text-zinc-100 shadow-sm"
+                : "border-transparent text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200",
             )}
             title={opt.label}
           >
@@ -292,14 +246,10 @@ export function CkeFormulaSwitcher({
             onClick={() => onChange(opt.id)}
             aria-pressed={active}
             className={cn(
-              "flex-1 rounded-md px-2.5 py-1.5 font-medium transition-colors focus-ring whitespace-nowrap",
+              "flex-1 rounded-md border px-2.5 py-1.5 font-medium transition-colors focus-ring whitespace-nowrap",
               active
-                ? opt.id === "2023"
-                  ? "bg-indigo-950/90 text-indigo-200 border border-indigo-700/60 shadow-sm"
-                  : opt.id === "2015"
-                    ? "bg-amber-950/90 text-amber-200 border border-amber-700/60 shadow-sm"
-                    : "bg-emerald-950/80 text-emerald-200 border border-emerald-800/60 shadow-sm"
-                : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200",
+                ? "border-zinc-700 bg-zinc-800 text-zinc-100 shadow-sm"
+                : "border-transparent text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200",
             )}
           >
             {compact ? opt.shortLabel : opt.label}
