@@ -93,10 +93,16 @@ describe("parseChapterHtml", () => {
   });
 
   describe("term linking", () => {
-    it("turns a structure into a button when linking is on", () => {
+    it("turns a structure into a button with monochrome NOIR styling when linking is on", () => {
       const nodes = parse("<p>Wątroba leży pod przeponą.</p>", true);
       expect(tags(nodes)).toContain("button");
       expect(text(nodes)).toBe("Wątroba leży pod przeponą.");
+      const button = findFirst(nodes, "button")!;
+      const cls = (button.props as { className?: string }).className ?? "";
+      expect(cls).toContain(
+        "text-zinc-100 underline decoration-zinc-600 decoration-dotted underline-offset-4 hover:decoration-zinc-300 transition-colors cursor-help",
+      );
+      expect(cls).not.toContain("emerald");
     });
 
     it("leaves the prose untouched when linking is off", () => {
@@ -105,12 +111,18 @@ describe("parseChapterHtml", () => {
       expect(text(nodes)).toBe("Wątroba leży pod przeponą.");
     });
 
-    it("hands the atlas the mesh name, not the inflected word", () => {
+    it("hands the atlas the mesh name when onSelectTerm is provided, and stays safe when omitted", () => {
       const onSelect = vi.fn();
       const nodes = parseChapterHtml("<p>Badanie wątroby.</p>", true, onSelect);
       const button = findFirst(nodes, "button")!;
       (button.props as { onClick: () => void }).onClick();
       expect(onSelect).toHaveBeenCalledWith("liver", "Wątroba (Hepar)");
+
+      const nodesWithoutCallback = parseChapterHtml("<p>Badanie wątroby.</p>", true);
+      const buttonNoop = findFirst(nodesWithoutCallback, "button")!;
+      expect(() =>
+        (buttonNoop.props as { onClick: () => void }).onClick(),
+      ).not.toThrow();
     });
 
     /**

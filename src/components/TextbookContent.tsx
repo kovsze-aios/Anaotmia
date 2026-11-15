@@ -1,33 +1,14 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import dynamic from "next/dynamic";
+import React, { useEffect, useMemo, useState } from "react";
 import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
 import type { TextbookSection, ContentBlock } from "@/server/models";
 import { formatOcrText, getSectionWordCount, uniqueId } from "@/lib/textbookFormatting";
 import { AnatomicalTextLinker, AnatomyRichText } from "./textbook/AnatomyRichText";
-import { AtlasPeekDrawer } from "./textbook/AtlasPeekDrawer";
 import { TextbookFigureCard } from "./textbook/TextbookFigureCard";
 import { getFiguresForChapter } from "@/data/textbook-figures";
-import { getInteractiveWidgetsForChapter } from "@/data/interactive-widgets";
-
-const ChemistryInteractiveWidget = dynamic(
-  () =>
-    import("./interactive/ChemistryInteractiveWidget").then(
-      (m) => m.ChemistryInteractiveWidget,
-    ),
-  { ssr: false },
-);
-
-const BiologyInteractiveWidget = dynamic(
-  () =>
-    import("./interactive/BiologyInteractiveWidget").then(
-      (m) => m.BiologyInteractiveWidget,
-    ),
-  { ssr: false },
-);
 import {
   CkeStatusBadge,
   CurriculumModeSwitcher,
@@ -88,18 +69,15 @@ interface TextbookContentProps {
 function ContentBlockRenderer({
   block,
   linkAnatomy = false,
-  onSelectTerm,
 }: {
   block: ContentBlock;
   linkAnatomy?: boolean;
-  onSelectTerm?: (name: string, label: string) => void;
 }) {
   switch (block.type) {
     case "paragraph":
-      return linkAnatomy && onSelectTerm ? (
+      return linkAnatomy ? (
         <AnatomicalTextLinker
           html={`<p>${block.text}</p>`}
-          onSelectTerm={onSelectTerm}
           className="textbook-paragraph"
         />
       ) : (
@@ -114,10 +92,9 @@ function ContentBlockRenderer({
         <ul className="textbook-list">
           {block.items.map((item, i) => (
             <li key={i}>
-              {linkAnatomy && onSelectTerm ? (
+              {linkAnatomy ? (
                 <AnatomicalTextLinker
                   html={item}
-                  onSelectTerm={onSelectTerm}
                   className="inline"
                 />
               ) : (
@@ -192,16 +169,6 @@ export function TextbookContent({
   subject,
   linkAnatomy = false,
 }: TextbookContentProps) {
-  // Which structure the 3D drawer is showing, if any. Null keeps the viewer
-  // unmounted, so its chunk is never even fetched until a reader asks.
-  const [atlasFocus, setAtlasFocus] = useState<{ name: string; label: string } | null>(
-    null,
-  );
-  const openAtlas = useCallback(
-    (name: string, label: string) => setAtlasFocus({ name, label }),
-    [],
-  );
-  const closeAtlas = useCallback(() => setAtlasFocus(null), []);
   const [viewMode, setViewMode] = useCurriculumViewMode(subject);
 
   // The corpus is static per route, so the count is stable — memoising it
@@ -211,16 +178,6 @@ export function TextbookContent({
   const chapterFigures = useMemo(
     () =>
       getFiguresForChapter({
-        subject,
-        chapterId: section.id,
-        chapterTitle: section.title,
-      }),
-    [subject, section.id, section.title],
-  );
-
-  const interactiveWidgets = useMemo(
-    () =>
-      getInteractiveWidgetsForChapter({
         subject,
         chapterId: section.id,
         chapterTitle: section.title,
@@ -331,12 +288,12 @@ export function TextbookContent({
 
       {chapterFigures.length > 0 && (
         <section
-          aria-label="Interaktywne ryciny i schematy anatomiczne"
+          aria-label="Ryciny i schematy anatomiczne"
           className="mb-8"
         >
           <div className="mb-2 flex items-center justify-between gap-2">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
-              🫀 Interaktywne ryciny (2D→3D + Tryb Szpilek + lemo-opuscar)
+              Ryciny i schematy
             </h2>
             <span className="rounded border border-zinc-800 bg-zinc-950 px-2 py-0.5 text-[10px] font-mono text-zinc-400">
               {chapterFigures.length}{" "}
@@ -344,67 +301,8 @@ export function TextbookContent({
             </span>
           </div>
           {chapterFigures.map((fig) => (
-            <TextbookFigureCard
-              key={fig.id}
-              figure={fig}
-              onOpenAtlas={openAtlas}
-            />
+            <TextbookFigureCard key={fig.id} figure={fig} />
           ))}
-        </section>
-      )}
-
-      {interactiveWidgets.length > 0 && (
-        <section
-          aria-label="Interaktywne laboratoria 3D i symulatory"
-          className="my-8 space-y-5"
-        >
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800/80 pb-3">
-            <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
-                3D Lab &amp; Symulator
-              </span>
-              <h3 className="mt-1.5 text-base font-semibold text-zinc-100">
-                Interaktywne Laboratoria 3D i Symulacje
-              </h3>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            {interactiveWidgets.map((w) => (
-              <div
-                key={w.id}
-                className="rounded-xl border border-zinc-800/90 bg-zinc-950/60 p-4 shadow-lg"
-              >
-                <div className="mb-3">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded bg-zinc-800/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-300">
-                      {w.badge}
-                    </span>
-                    <h4 className="text-sm font-semibold text-zinc-100">
-                      {w.titlePl}
-                    </h4>
-                  </div>
-                  <p className="mt-1 text-xs leading-relaxed text-zinc-400">
-                    {w.subtitlePl}
-                  </p>
-                </div>
-
-                {w.domain === "chemistry" ? (
-                  <ChemistryInteractiveWidget
-                    initialMode={
-                      w.id as "vsepr-orbitals-3d" | "periodic-table-3d"
-                    }
-                  />
-                ) : (
-                  <BiologyInteractiveWidget
-                    initialMode={
-                      w.id as "biomolecules-3d" | "metabolism-simulator"
-                    }
-                  />
-                )}
-              </div>
-            ))}
-          </div>
         </section>
       )}
 
@@ -424,7 +322,7 @@ export function TextbookContent({
                 key={pageIndex}
                 className={
                   isCkeGuidelinesPage
-                    ? "page-card bg-zinc-950/95 border-2 border-emerald-800/60 rounded-xl p-6 shadow-md text-zinc-100"
+                    ? "page-card bg-zinc-950/95 border border-zinc-700 rounded-xl p-6 shadow-md text-zinc-100"
                     : "page-card bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm"
                 }
               >
@@ -433,17 +331,16 @@ export function TextbookContent({
                   <span
                     className={
                       isCkeGuidelinesPage
-                        ? "bg-emerald-950/90 border border-emerald-700/60 px-2.5 py-0.5 rounded text-emerald-300"
+                        ? "bg-zinc-900 border border-zinc-700 px-2.5 py-0.5 rounded text-zinc-200"
                         : "bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-zinc-600 dark:text-zinc-300"
                     }
                   >
-                    {isCkeGuidelinesPage ? "🎯 Klucz CKE & Pewniaki" : "Microlearning"}
+                    {isCkeGuidelinesPage ? "Klucz CKE i Pewniaki" : "Microlearning"}
                   </span>
                 </div>
                 {linkAnatomy ? (
                   <AnatomyRichText
                     html={page.htmlContent}
-                    onSelectTerm={openAtlas}
                     className="prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed"
                   />
                 ) : (
@@ -508,7 +405,6 @@ export function TextbookContent({
                     key={index}
                     block={block}
                     linkAnatomy={linkAnatomy}
-                    onSelectTerm={openAtlas}
                   />
                 ))}
               </div>
@@ -533,14 +429,6 @@ export function TextbookContent({
         </footer>
       )}
         </>
-      )}
-
-      {(linkAnatomy || atlasFocus !== null) && (
-        <AtlasPeekDrawer
-          focusName={atlasFocus?.name ?? null}
-          label={atlasFocus?.label ?? ""}
-          onClose={closeAtlas}
-        />
       )}
     </article>
   );

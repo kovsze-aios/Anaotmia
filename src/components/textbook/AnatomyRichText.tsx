@@ -82,7 +82,7 @@ function readAttrs(raw: string): { id?: string; start?: number } {
 export interface AnatomyRichTextProps {
   html: string;
   /** Called with the BodyParts3D name / meshId when a linked structure is clicked. */
-  onSelectTerm: (englishName: string, label: string) => void;
+  onSelectTerm?: (englishName: string, label: string) => void;
   /** Off for subjects the 3D atlas does not cover. */
   linkTerms?: boolean;
   className?: string;
@@ -202,37 +202,25 @@ export function AnatomyRichText({
           }}
           onMouseLeave={handleLeaveMatch}
           style={{ top: preview.top, left: preview.left }}
-          className="absolute z-50 w-80 max-w-[90vw] rounded-xl border border-emerald-700/60 bg-zinc-950/98 p-3.5 text-left text-zinc-100 shadow-2xl backdrop-blur-md"
+          className="absolute z-50 w-80 max-w-[90vw] rounded-xl bg-zinc-950/95 border border-zinc-800 p-3.5 text-left text-zinc-200 shadow-2xl backdrop-blur-md"
         >
           <div className="mb-1.5 flex items-start justify-between gap-2">
             <div>
-              <div className="text-sm font-bold text-emerald-200">
+              <div className="text-sm font-bold text-zinc-100">
                 {entity?.namePl ?? preview.match.pl}
               </div>
               <div className="text-xs italic text-zinc-400">
                 {entity?.nameLat ?? preview.match.latin}
               </div>
             </div>
-            <span className="shrink-0 rounded-md border border-emerald-800/70 bg-emerald-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
-              {entity?.system ?? "Anatomia 3D"}
+            <span className="shrink-0 rounded-md bg-zinc-900 text-zinc-300 border border-zinc-800 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider">
+              {entity?.system ?? "Anatomia"}
             </span>
           </div>
-          <p className="mb-3 text-xs leading-relaxed text-zinc-300">
+          <p className="text-xs leading-relaxed text-zinc-300">
             {entity?.summary ??
-              "Kliknij, aby otworzyć model 3D, przekroje anatomiczne oraz interaktywne podpisy struktur."}
+              `${entity?.namePl ?? preview.match.pl} (${entity?.nameLat ?? preview.match.latin}) — struktura anatomiczna człowieka.`}
           </p>
-          <button
-            type="button"
-            onClick={() => {
-              clearTimers();
-              const label = `${entity?.namePl ?? preview.match.pl} (${entity?.nameLat ?? preview.match.latin})`;
-              onSelectTerm(preview.match.englishName, label);
-              setPreview(null);
-            }}
-            className="w-full cursor-pointer rounded-lg border border-emerald-600/70 bg-emerald-900/60 px-3 py-1.5 text-xs font-semibold text-emerald-100 transition-colors hover:bg-emerald-800/80"
-          >
-            🫀 Zbadaj w 3D z opisem struktur
-          </button>
         </div>
       )}
     </div>
@@ -245,7 +233,7 @@ export const AnatomicalTextLinker = AnatomyRichText;
 export function parseChapterHtml(
   html: string,
   linkTerms: boolean,
-  onSelectTerm: (englishName: string, label: string) => void,
+  onSelectTerm?: (englishName: string, label: string) => void,
   options: ParseChapterHtmlOptions = {},
 ): React.ReactNode[] {
   const root: Frame = { tag: "#root", attrs: {}, children: [] };
@@ -328,7 +316,7 @@ function element(frame: Frame, key: number): React.ReactNode {
 /** Splits a text node around the anatomical structures it mentions. */
 function linkify(
   text: string,
-  onSelectTerm: (englishName: string, label: string) => void,
+  onSelectTerm: ((englishName: string, label: string) => void) | undefined,
   nextKey: () => number,
   seenEntities: Set<string>,
   options: ParseChapterHtmlOptions,
@@ -356,7 +344,7 @@ function linkify(
         type="button"
         data-anatomy-link="true"
         data-entity-id={entityKey}
-        onClick={() => onSelectTerm(m.englishName, displayLabel)}
+        onClick={() => onSelectTerm?.(m.englishName, displayLabel)}
         onMouseEnter={(e) =>
           options.onHoverMatch?.(m, e.currentTarget.getBoundingClientRect())
         }
@@ -365,11 +353,11 @@ function linkify(
           options.onHoverMatch?.(m, e.currentTarget.getBoundingClientRect())
         }
         onBlur={() => options.onLeaveMatch?.()}
-        title={`${displayLabel} — Zbadaj w Atlasie 3D`}
+        title={displayLabel}
         className={
-          "anatomy-term border-b border-dashed border-emerald-500/70 dark:border-emerald-400/60 " +
-          "text-emerald-800 dark:text-emerald-200 hover:bg-emerald-950/50 cursor-pointer " +
-          "transition-colors border-t-0 border-l-0 border-r-0 bg-transparent p-0 font-inherit focus-ring rounded-xs"
+          "anatomy-term text-zinc-100 underline decoration-zinc-600 decoration-dotted " +
+          "underline-offset-4 hover:decoration-zinc-300 transition-colors cursor-help " +
+          "border-0 bg-transparent p-0 font-inherit focus-ring rounded-xs"
         }
       >
         {m.surface}

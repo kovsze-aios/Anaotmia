@@ -1,43 +1,14 @@
 "use client";
 
-import {
-  useCallback,
-  useEffect,
-  useId,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
-import {
-  Box,
-  ChevronLeft,
-  ChevronRight,
-  Eye,
-  EyeOff,
-  Maximize2,
-  Moon,
-  Pause,
-  Play,
-  RotateCcw,
-  Sparkles,
-  Sun,
-  X,
-} from "lucide-react";
-import type {
-  FigureHotspot,
-  SvgSchematicTheme,
-  TextbookFigure,
-} from "@/types/textbook-figures";
+import { useEffect, useId, useRef, useState } from "react";
+import { X } from "lucide-react";
+import type { SvgSchematicTheme, TextbookFigure } from "@/types/textbook-figures";
 
 function SchematicArtwork({
   theme,
-  activeIds,
-  flowArrow,
   markerId,
 }: {
   theme: SvgSchematicTheme;
-  activeIds: Set<string>;
-  flowArrow?: [number, number, number, number];
   markerId: string;
 }) {
   return (
@@ -45,21 +16,10 @@ function SchematicArtwork({
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label={`Interaktywny schemat (${theme})`}
+      aria-label={`Schemat (${theme})`}
       className="h-full w-full select-none"
     >
       <defs>
-        <marker
-          id={markerId}
-          viewBox="0 0 10 10"
-          refX="7"
-          refY="5"
-          markerWidth="4.5"
-          markerHeight="4.5"
-          orient="auto-start-reverse"
-        >
-          <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
-        </marker>
         <linearGradient id={`${markerId}-grad`} x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#09090b" />
           <stop offset="100%" stopColor="#18181b" />
@@ -114,7 +74,7 @@ function SchematicArtwork({
               cy="46"
               r={r}
               fill="none"
-              stroke={activeIds.has("hs-concentric-lamellae") ? "#34d399" : "#a1a1aa"}
+              stroke="#a1a1aa"
               strokeWidth={i === 0 ? "0.7" : "0.5"}
               strokeDasharray={i === 1 ? "2 1" : undefined}
               opacity={0.75}
@@ -453,7 +413,7 @@ function SchematicArtwork({
           <path
             d="M 12 76 L 26 76 C 30 76, 32 62, 36 46 C 40 30, 43 18, 46 18 C 49 18, 54 34, 60 50 C 65 65, 69 86, 73 86 C 78 86, 82 76, 90 76"
             fill="none"
-            stroke={activeIds.has("hs-ap-szczyt") || activeIds.has("hs-ap-depolaryzacja") ? "#34d399" : "#38bdf8"}
+            stroke="#38bdf8"
             strokeWidth="1.4"
             strokeLinecap="round"
           />
@@ -498,12 +458,12 @@ function SchematicArtwork({
           <path
             d="M 14 78 L 19 78 Q 22 71 25 78 L 36 78 L 38 81 L 41 63 L 44 82 L 46 78 L 63 78 Q 68 69 73 78 L 90 78"
             fill="none"
-            stroke={activeIds.has("hs-wiggers-qrs") ? "#34d399" : "#38bdf8"}
+            stroke="#38bdf8"
             strokeWidth="1.25"
             strokeLinejoin="round"
           />
           <text x="20.5" y="84" fill="#a1a1aa" fontSize="2.8">P</text>
-          <text x="38.5" y="87" fill="#34d399" fontSize="2.8">QRS</text>
+          <text x="38.5" y="87" fill="#d4d4d8" fontSize="2.8">QRS</text>
           <text x="67" y="84" fill="#a1a1aa" fontSize="2.8">T</text>
         </g>
       )}
@@ -517,7 +477,7 @@ function SchematicArtwork({
             r="13"
             fill="#1f2937"
             fillOpacity="0.6"
-            stroke={activeIds.has("hs-bohr-pecherzyk") ? "#34d399" : "#38bdf8"}
+            stroke="#38bdf8"
             strokeWidth="1"
           />
           <text x="15.5" y="22" fill="#e4e4e7" fontSize="2.8">O2</text>
@@ -553,7 +513,7 @@ function SchematicArtwork({
           <path
             d="M 53 82 C 62 79, 68 68, 74 58 C 79 45, 84 30, 93 26"
             fill="none"
-            stroke={activeIds.has("hs-bohr-efekt") ? "#fbbf24" : "#f59e0b"}
+            stroke="#f59e0b"
             strokeWidth="1.15"
             strokeDasharray="2.2 1.4"
           />
@@ -576,7 +536,7 @@ function SchematicArtwork({
             height="18"
             rx="2"
             fill="#14532d"
-            stroke={activeIds.has("hs-foto-ps2") ? "#34d399" : "#22c55e"}
+            stroke="#22c55e"
             strokeWidth="0.9"
           />
           <text x="12.7" y="48.2" fill="#dcfce7" fontSize="2.7">PSII</text>
@@ -600,12 +560,12 @@ function SchematicArtwork({
             cy="24"
             r="11"
             fill="none"
-            stroke={activeIds.has("hs-foto-calvin") ? "#34d399" : "#a1a1aa"}
+            stroke="#a1a1aa"
             strokeWidth="1"
             strokeDasharray="3 1.5"
           />
           <text x="73.5" y="23.5" fill="#e4e4e7" fontSize="2.7">Cykl</text>
-          <text x="73" y="27" fill="#34d399" fontSize="2.7">Calvina</text>
+          <text x="73" y="27" fill="#d4d4d8" fontSize="2.7">Calvina</text>
         </g>
       )}
 
@@ -623,7 +583,7 @@ function SchematicArtwork({
             points="29,50 38,44 38,56"
             fill="#f59e0b"
             fillOpacity="0.45"
-            stroke={activeIds.has("hs-dna-helikaza") ? "#34d399" : "#fbbf24"}
+            stroke="#fbbf24"
             strokeWidth="0.9"
           />
 
@@ -659,7 +619,7 @@ function SchematicArtwork({
             rx="1.2"
             fill="#f59e0b"
             fillOpacity="0.45"
-            stroke={activeIds.has("hs-syn-ca") ? "#34d399" : "#fbbf24"}
+            stroke="#fbbf24"
             strokeWidth="0.8"
           />
           <text x="11" y="37" fill="#fbbf24" fontSize="2.7">Ca2+ →</text>
@@ -712,12 +672,12 @@ function SchematicArtwork({
           <path
             d="M 24 46 C 34 46, 40 38, 48 38 C 56 38, 63 74, 72 74"
             fill="none"
-            stroke={activeIds.has("hs-chem-katalizator") ? "#34d399" : "#10b981"}
+            stroke="#a1a1aa"
             strokeWidth="1.15"
             strokeDasharray="2.5 1.4"
           />
           <text x="39" y="16" fill="#fca5a5" fontSize="2.6">Ea</text>
-          <text x="51" y="37" fill="#34d399" fontSize="2.5">Ea,kat</text>
+          <text x="51" y="37" fill="#d4d4d8" fontSize="2.5">Ea,kat</text>
 
           {/* Endothermic inset top-right around (76, 22) */}
           <rect x="59" y="9" width="33" height="23" rx="2" fill="#18181b" stroke="#3f3f46" strokeWidth="0.6" />
@@ -735,7 +695,7 @@ function SchematicArtwork({
             cy="16"
             r="6"
             fill="#18181b"
-            stroke={activeIds.has("hs-ogn-woltomierz") ? "#34d399" : "#fbbf24"}
+            stroke="#fbbf24"
             strokeWidth="0.95"
           />
           <text x="45.8" y="17.2" fill="#fef08a" fontSize="2.5">1.10V</text>
@@ -797,30 +757,16 @@ function SchematicArtwork({
         </g>
       )}
 
+      {/* Generic fallback geometric circle */}
       {theme === "generic" && (
         <circle
           cx="50"
           cy="50"
           r="28"
           fill="#18181b"
-          stroke="#34d399"
+          stroke="#a1a1aa"
           strokeWidth="1"
           strokeDasharray="3 2"
-        />
-      )}
-
-      {/* Animated flowArrow vector for lemo-opuscar animation step */}
-      {flowArrow && (
-        <line
-          x1={flowArrow[0]}
-          y1={flowArrow[1]}
-          x2={flowArrow[2]}
-          y2={flowArrow[3]}
-          stroke="#34d399"
-          strokeWidth="1.6"
-          strokeDasharray="3 1.5"
-          markerEnd={`url(#${markerId})`}
-          className="animate-pulse"
         />
       )}
     </svg>
@@ -832,66 +778,16 @@ export interface TextbookFigureCardProps {
   onOpenAtlas?: (entityId: string, label: string) => void;
 }
 
-export function TextbookFigureCard({
-  figure,
-  onOpenAtlas,
-}: TextbookFigureCardProps) {
+export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
   const reactId = useId();
-  const markerId = `flow-arrow-${reactId.replace(/:/g, "")}`;
+  const markerId = `fig-${reactId.replace(/:/g, "")}`;
   const dialogRef = useRef<HTMLDialogElement>(null);
-
-  const hasSchematic = Boolean(figure.svgSchematicSpec);
-  const hasImage = Boolean(figure.imageUrl);
-  const [surface, setSurface] = useState<"schematic" | "image">(() =>
-    figure.renderMode === "extracted-asset" && hasImage
-      ? "image"
-      : hasSchematic
-        ? "schematic"
-        : "image",
-  );
-  const [occlusionMode, setOcclusionMode] = useState(false);
-  const [revealedIds, setRevealedIds] = useState<Set<string>>(() => new Set());
-  const [selectedHotspotId, setSelectedHotspotId] = useState<string | null>(
-    figure.hotspots[0]?.id ?? null,
-  );
-  const [walkthroughOpen, setWalkthroughOpen] = useState(false);
-  const [stepIdx, setStepIdx] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [noirFilter, setNoirFilter] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
-  const steps = figure.animationSteps;
-  const activeStep = walkthroughOpen ? steps[stepIdx] : undefined;
-
-  const activeHotspotIds = useMemo(() => {
-    const ids = new Set<string>();
-    if (selectedHotspotId) ids.add(selectedHotspotId);
-    if (activeStep) {
-      for (const hid of activeStep.activeHotspotIds) ids.add(hid);
-    }
-    return ids;
-  }, [selectedHotspotId, activeStep]);
-
-  const selectedHotspot: FigureHotspot | undefined = useMemo(
-    () =>
-      figure.hotspots.find((h) => h.id === selectedHotspotId) ??
-      figure.hotspots[0],
-    [figure.hotspots, selectedHotspotId],
-  );
-
-  useEffect(() => {
-    if (!isPlaying || !walkthroughOpen || steps.length === 0) return;
-    const id = window.setInterval(() => {
-      setStepIdx((prev) => {
-        if (prev + 1 >= steps.length) {
-          setIsPlaying(false);
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, 3200);
-    return () => window.clearInterval(id);
-  }, [isPlaying, walkthroughOpen, steps.length]);
+  const showImage =
+    figure.renderMode === "extracted-asset" && Boolean(figure.imageUrl)
+      ? true
+      : !figure.svgSchematicSpec && Boolean(figure.imageUrl);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -903,482 +799,102 @@ export function TextbookFigureCard({
     }
   }, [lightboxOpen]);
 
-  const handleSelectHotspot = useCallback(
-    (hotspot: FigureHotspot) => {
-      setSelectedHotspotId(hotspot.id);
-      if (occlusionMode) {
-        setRevealedIds((prev) => {
-          const next = new Set(prev);
-          next.add(hotspot.id);
-          return next;
-        });
-      }
-    },
-    [occlusionMode],
-  );
-
-  const toggleOcclusionMode = useCallback(() => {
-    setOcclusionMode((prev) => {
-      const next = !prev;
-      if (next) {
-        setRevealedIds(new Set());
-      }
-      return next;
-    });
-  }, []);
-
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === "ArrowRight" && walkthroughOpen && steps.length > 0) {
-        e.preventDefault();
-        setIsPlaying(false);
-        setStepIdx((prev) => Math.min(steps.length - 1, prev + 1));
-      } else if (e.key === "ArrowLeft" && walkthroughOpen && steps.length > 0) {
-        e.preventDefault();
-        setIsPlaying(false);
-        setStepIdx((prev) => Math.max(0, prev - 1));
-      }
-    },
-    [walkthroughOpen, steps.length],
-  );
-
-  const revealCount = figure.hotspots.filter((h) =>
-    revealedIds.has(h.id),
-  ).length;
-  const primaryAtlasHotspot =
-    selectedHotspot?.linkedEntityId
-      ? selectedHotspot
-      : figure.hotspots.find((h) => Boolean(h.linkedEntityId));
-
   return (
     <figure
-      onKeyDown={handleKeyDown}
-      tabIndex={-1}
       aria-label={figure.titlePl}
-      className="my-6 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 text-zinc-100 shadow-lg focus:outline-none"
+      className="my-6 overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950 text-zinc-100 shadow-lg"
     >
-      {/* Header & Controls Bar */}
-      <div className="flex flex-wrap items-start justify-between gap-3 border-b border-zinc-800 bg-zinc-900/80 px-4 py-3.5">
-        <div className="min-w-0">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded border border-emerald-800/70 bg-emerald-950/60 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
-              {surface === "image"
-                ? "OER CC BY 4.0"
-                : "Clean-Room Wektor SVG"}
-            </span>
-            <h3 className="text-sm font-bold text-zinc-100">
-              {figure.titlePl}
-            </h3>
-          </div>
-          {figure.titleLat && (
-            <p className="mt-0.5 text-xs italic text-zinc-400">
-              {figure.titleLat}
-            </p>
-          )}
-        </div>
-
-        <div className="flex flex-wrap items-center gap-1.5">
-          {hasSchematic && hasImage && (
-            <div className="inline-flex rounded-lg border border-zinc-800 bg-zinc-950 p-0.5 text-[11px]">
-              <button
-                type="button"
-                onClick={() => setSurface("schematic")}
-                aria-pressed={surface === "schematic"}
-                className={`rounded-md px-2 py-1 font-medium transition-colors ${
-                  surface === "schematic"
-                    ? "bg-zinc-800 text-emerald-300"
-                    : "text-zinc-400 hover:text-zinc-200"
-                }`}
-              >
-                📐 Schemat SVG
-              </button>
-              <button
-                type="button"
-                onClick={() => setSurface("image")}
-                aria-pressed={surface === "image"}
-                className={`rounded-md px-2 py-1 font-medium transition-colors ${
-                  surface === "image"
-                    ? "bg-zinc-800 text-sky-300"
-                    : "text-zinc-400 hover:text-zinc-200"
-                }`}
-              >
-                🖼️ OpenStax CC BY
-              </button>
-            </div>
-          )}
-
-          <button
-            type="button"
-            onClick={toggleOcclusionMode}
-            aria-pressed={occlusionMode}
-            className={`focus-ring inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-[11px] font-semibold transition-colors ${
-              occlusionMode
-                ? "border-amber-600/80 bg-amber-950/70 text-amber-200"
-                : "border-zinc-700 bg-zinc-900 text-zinc-200 hover:border-zinc-600"
-            }`}
-          >
-            {occlusionMode ? (
-              <Eye className="size-3.5 text-amber-300" aria-hidden="true" />
-            ) : (
-              <EyeOff className="size-3.5 text-amber-300" aria-hidden="true" />
-            )}
-            {occlusionMode
-              ? `Tryb Szpilek AKTYWNY (${revealCount}/${figure.hotspots.length})`
-              : "🙈 Tryb Szpilek na Rycinie (Ukryj podpisy)"}
-          </button>
-
-          {steps.length > 0 && (
-            <button
-              type="button"
-              onClick={() => {
-                setWalkthroughOpen((prev) => !prev);
-                if (walkthroughOpen) setIsPlaying(false);
-              }}
-              aria-expanded={walkthroughOpen}
-              className={`focus-ring inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-[11px] font-semibold transition-colors ${
-                walkthroughOpen
-                  ? "border-emerald-600/80 bg-emerald-950/70 text-emerald-200"
-                  : "border-zinc-700 bg-zinc-900 text-emerald-300 hover:border-emerald-700"
-              }`}
-            >
-              <Sparkles className="size-3.5" aria-hidden="true" />
-              {walkthroughOpen
-                ? "Ukryj lemo-opuscar"
-                : "▶ Odtwórz działanie krok po kroku"}
-            </button>
-          )}
-
-          {surface === "image" && (
-            <button
-              type="button"
-              onClick={() => setNoirFilter((d) => !d)}
-              className="focus-ring inline-flex items-center gap-1 rounded-lg border border-zinc-700 bg-zinc-900 px-2 py-1 text-[11px] text-zinc-300 hover:text-white"
-            >
-              {noirFilter ? (
-                <Sun className="size-3 text-amber-300" aria-hidden="true" />
-              ) : (
-                <Moon className="size-3 text-indigo-300" aria-hidden="true" />
-              )}
-              {noirFilter ? "Oryginał" : "Filtr NOIR"}
-            </button>
-          )}
-
-          <button
-            type="button"
-            onClick={() => setLightboxOpen(true)}
-            aria-label="Powiększ rycinę w oknie pełnoekranowym"
-            className="focus-ring inline-flex items-center gap-1 rounded-lg border border-zinc-700 bg-zinc-900 px-2 py-1 text-[11px] text-zinc-300 hover:text-white"
-          >
-            <Maximize2 className="size-3" aria-hidden="true" />
-            Powiększ
-          </button>
-        </div>
+      {/* Clean Header */}
+      <div className="border-b border-zinc-800/80 bg-zinc-950 px-4 py-3">
+        <h3 className="text-sm font-bold text-zinc-100">{figure.titlePl}</h3>
+        {figure.titleLat && (
+          <p className="mt-0.5 text-xs italic text-zinc-400">
+            {figure.titleLat}
+          </p>
+        )}
       </div>
 
-      {/* Main Canvas + Interactive Details Split */}
-      <div className="grid gap-0 lg:grid-cols-12">
-        {/* Interactive Canvas (CLS = 0 fixed aspect ratio container) */}
-        <div className="relative border-b border-zinc-800 bg-zinc-950 p-3 lg:col-span-7 lg:border-r lg:border-b-0">
-          <div className="relative aspect-[16/11] min-h-[260px] w-full overflow-hidden rounded-xl border border-zinc-800/90 bg-zinc-950">
-            {surface === "image" && figure.imageUrl ? (
-              <div className="flex h-full w-full items-center justify-center bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={figure.imageUrl}
-                  alt={figure.titlePl}
-                  width={figure.width ?? 900}
-                  height={figure.height ?? 700}
-                  loading="lazy"
-                  decoding="async"
-                  className={`h-full w-full object-contain transition-all ${
-                    noirFilter ? "invert contrast-125 brightness-95" : ""
-                  }`}
-                />
-              </div>
-            ) : (
-              <SchematicArtwork
-                theme={figure.svgSchematicSpec?.theme ?? "generic"}
-                activeIds={activeHotspotIds}
-                flowArrow={activeStep?.flowArrow}
-                markerId={markerId}
+      {/* Minimalist Illustration Area */}
+      <div className="bg-zinc-950 p-3">
+        <div
+          onClick={() => setLightboxOpen(true)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setLightboxOpen(true);
+            }
+          }}
+          aria-label={`Powiększ rycinę: ${figure.titlePl}`}
+          className="relative aspect-[16/10] min-h-[260px] w-full cursor-zoom-in overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950"
+        >
+          {showImage && figure.imageUrl ? (
+            <div className="flex h-full w-full items-center justify-center bg-white">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={figure.imageUrl}
+                alt={figure.titlePl}
+                width={figure.width ?? 900}
+                height={figure.height ?? 700}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-contain"
               />
-            )}
-
-            {/* Numbered 2D Interactive Hotspots overlaid only on calibrated SVG surface */}
-            {surface === "schematic" &&
-              figure.hotspots.map((hotspot, idx) => {
-                const isSelected = selectedHotspotId === hotspot.id;
-                const isStepActive = activeStep?.activeHotspotIds.includes(
-                  hotspot.id,
-                );
-                const isRevealed = !occlusionMode || revealedIds.has(hotspot.id);
-                return (
-                  <button
-                    key={hotspot.id}
-                    type="button"
-                    onClick={() => handleSelectHotspot(hotspot)}
-                    style={{
-                      left: `${hotspot.x}%`,
-                      top: `${hotspot.y}%`,
-                    }}
-                    aria-label={
-                      isRevealed
-                        ? `Szpilka ${idx + 1}: ${hotspot.labelPl}`
-                        : `Szpilka ${idx + 1}: ukryta nazwa — kliknij, aby odsłonić`
-                    }
-                    className={`focus-ring absolute -translate-x-1/2 -translate-y-1/2 flex size-6 items-center justify-center rounded-full border text-[11px] font-bold shadow-md transition-transform ${
-                      isSelected
-                        ? "z-20 scale-125 border-emerald-300 bg-emerald-500 text-zinc-950 ring-4 ring-emerald-500/30"
-                        : isStepActive
-                          ? "z-10 scale-110 animate-pulse border-amber-300 bg-amber-400 text-zinc-950 ring-4 ring-amber-400/25"
-                          : isRevealed
-                            ? "border-zinc-200 bg-zinc-900/90 text-zinc-100 hover:scale-110 hover:border-emerald-400"
-                            : "border-amber-400 bg-amber-950/95 text-amber-200 hover:scale-110"
-                    }`}
-                  >
-                    {idx + 1}
-                  </button>
-                );
-              })}
-          </div>
-
-          {/* Selected Hotspot Inspector Pill + 2D-to-3D Atlas Bridge */}
-          {selectedHotspot && (
-            <div className="mt-3 rounded-xl border border-zinc-800 bg-zinc-900/75 p-3">
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <div className="min-w-0">
-                  {occlusionMode && !revealedIds.has(selectedHotspot.id) ? (
-                    <button
-                      type="button"
-                      onClick={() => handleSelectHotspot(selectedHotspot)}
-                      className="rounded-lg border border-amber-600/70 bg-amber-950/60 px-3 py-1.5 text-xs font-semibold text-amber-200 hover:bg-amber-900/60"
-                    >
-                      ? — Szpilka #{figure.hotspots.indexOf(selectedHotspot) + 1}: Kliknij, aby odsłonić nazwę
-                    </button>
-                  ) : (
-                    <>
-                      <p className="text-xs font-bold text-emerald-300">
-                        Szpilka #{figure.hotspots.indexOf(selectedHotspot) + 1}:{" "}
-                        {selectedHotspot.labelPl}
-                        {selectedHotspot.labelLat && (
-                          <span className="ml-1.5 font-normal italic text-zinc-400">
-                            ({selectedHotspot.labelLat})
-                          </span>
-                        )}
-                      </p>
-                      <p className="mt-1 text-xs leading-relaxed text-zinc-200">
-                        {selectedHotspot.description}
-                      </p>
-                      {selectedHotspot.clinicalNote && (
-                        <p className="mt-1.5 rounded border border-rose-900/50 bg-rose-950/30 px-2.5 py-1.5 text-[11px] text-rose-200">
-                          <strong>Klinika / Matura:</strong>{" "}
-                          {selectedHotspot.clinicalNote}
-                        </p>
-                      )}
-                    </>
-                  )}
-                </div>
-
-                {onOpenAtlas && selectedHotspot.linkedEntityId && (
-                  <button
-                    type="button"
-                    onClick={() =>
-                      onOpenAtlas(
-                        selectedHotspot.linkedEntityId!,
-                        `${selectedHotspot.labelPl}${
-                          selectedHotspot.labelLat
-                            ? ` (${selectedHotspot.labelLat})`
-                            : ""
-                        }`,
-                      )
-                    }
-                    className="focus-ring inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-emerald-600/80 bg-emerald-950/80 px-3 py-1.5 text-xs font-semibold text-emerald-200 transition-colors hover:bg-emerald-900/80"
-                  >
-                    <Box className="size-3.5 text-emerald-400" aria-hidden="true" />
-                    🫀 Pokaż tę strukturę w 3D
-                  </button>
-                )}
-              </div>
             </div>
+          ) : (
+            <SchematicArtwork
+              theme={figure.svgSchematicSpec?.theme ?? "generic"}
+              markerId={markerId}
+            />
           )}
-        </div>
 
-        {/* Right Panel: Interactive Hotspot List / Image Occlusion + 3D Bridge */}
-        <div className="flex flex-col justify-between p-4 lg:col-span-5">
-          <div>
-            <div className="mb-2.5 flex items-center justify-between gap-2">
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
-                Struktury na rycinie ({figure.hotspots.length})
+          {!showImage &&
+            figure.hotspots.map((hotspot, idx) => (
+              <span
+                key={hotspot.id}
+                style={{
+                  left: `${hotspot.x}%`,
+                  top: `${hotspot.y}%`,
+                }}
+                className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 flex size-6 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900/90 text-[11px] font-bold text-zinc-100 shadow-md"
+              >
+                {idx + 1}
               </span>
-              {occlusionMode && (
-                <div className="flex gap-1">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setRevealedIds(new Set(figure.hotspots.map((h) => h.id)))
-                    }
-                    className="rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 text-[10px] text-zinc-300 hover:text-white"
-                  >
-                    Odsłoń wszystkie
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setRevealedIds(new Set())}
-                    className="rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 text-[10px] text-zinc-300 hover:text-white"
-                  >
-                    Zakryj
-                  </button>
-                </div>
-              )}
-            </div>
-
-            <div className="space-y-2">
-              {figure.hotspots.map((hotspot, idx) => {
-                const isSelected = selectedHotspotId === hotspot.id;
-                const isMasked = occlusionMode && !revealedIds.has(hotspot.id);
-                return (
-                  <button
-                    key={hotspot.id}
-                    type="button"
-                    onClick={() => handleSelectHotspot(hotspot)}
-                    className={`focus-ring flex w-full items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left text-xs transition-colors ${
-                      isSelected
-                        ? "border-emerald-600/80 bg-emerald-950/40 text-emerald-100"
-                        : "border-zinc-800/90 bg-zinc-900/50 text-zinc-300 hover:border-zinc-700 hover:text-white"
-                    }`}
-                  >
-                    <span className="flex min-w-0 items-center gap-2">
-                      <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] font-bold text-zinc-200">
-                        {idx + 1}
-                      </span>
-                      <span className="truncate font-medium">
-                        {isMasked
-                          ? "[ ? — Kliknij, aby odsłonić ]"
-                          : hotspot.labelPl}
-                      </span>
-                    </span>
-                    {!isMasked && hotspot.labelLat && (
-                      <span className="hidden shrink-0 truncate text-[10px] italic text-zinc-500 sm:inline">
-                        {hotspot.labelLat}
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {onOpenAtlas && primaryAtlasHotspot?.linkedEntityId && (
-            <button
-              type="button"
-              onClick={() =>
-                onOpenAtlas(
-                  primaryAtlasHotspot.linkedEntityId!,
-                  figure.titlePl,
-                )
-              }
-              className="focus-ring mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-700/70 bg-emerald-950/60 px-3 py-2 text-xs font-semibold text-emerald-200 transition-colors hover:bg-emerald-900/70"
-            >
-              <Box className="size-4 text-emerald-400" aria-hidden="true" />
-              Otwórz pełny model 3D w AtlasPeekDrawer
-            </button>
-          )}
+            ))}
         </div>
       </div>
 
-      {/* lemo-opuscar Animated Walkthrough Player */}
-      {walkthroughOpen && activeStep && (
-        <div className="border-t border-emerald-900/60 bg-zinc-900/90 p-4">
-          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-            <div className="flex flex-wrap items-center gap-1.5">
-              <button
-                type="button"
-                onClick={() => {
-                  if (!isPlaying && stepIdx === steps.length - 1) setStepIdx(0);
-                  setIsPlaying((p) => !p);
-                }}
-                className="inline-flex items-center gap-1.5 rounded-md border border-emerald-700 bg-emerald-950/80 px-2.5 py-1 text-[11px] font-semibold text-emerald-200 hover:bg-emerald-900/80"
-              >
-                {isPlaying ? (
-                  <Pause className="size-3" />
-                ) : (
-                  <Play className="size-3" />
-                )}
-                {isPlaying ? "Pauza" : "Auto-Play"}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setStepIdx((i) => Math.max(0, i - 1));
-                }}
-                disabled={stepIdx === 0}
-                aria-label="Poprzedni krok"
-                className="rounded-md border border-zinc-700 bg-zinc-950 p-1 text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-              >
-                <ChevronLeft className="size-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setStepIdx((i) => Math.min(steps.length - 1, i + 1));
-                }}
-                disabled={stepIdx >= steps.length - 1}
-                aria-label="Następny krok"
-                className="rounded-md border border-zinc-700 bg-zinc-950 p-1 text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-              >
-                <ChevronRight className="size-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setStepIdx(0);
-                }}
-                aria-label="Od początku"
-                className="rounded-md border border-zinc-700 bg-zinc-950 p-1 text-zinc-400 hover:text-white"
-              >
-                <RotateCcw className="size-3" />
-              </button>
+      {/* Clean Static 2-Column Numbered Legend */}
+      {figure.hotspots.length > 0 && (
+        <div className="grid gap-x-6 gap-y-2 border-t border-zinc-800/80 bg-zinc-950 px-4 py-3.5 sm:grid-cols-2">
+          {figure.hotspots.map((hotspot, idx) => (
+            <div
+              key={hotspot.id}
+              className="text-xs leading-relaxed text-zinc-300"
+            >
+              <span className="font-semibold text-zinc-100">
+                {idx + 1}. {hotspot.labelPl}
+              </span>
+              {hotspot.labelLat && (
+                <span className="italic text-zinc-400">
+                  {" "}
+                  ({hotspot.labelLat})
+                </span>
+              )}
+              {hotspot.description && (
+                <span className="text-zinc-500"> — {hotspot.description}</span>
+              )}
             </div>
-
-            <div className="flex flex-wrap gap-1">
-              {steps.map((s, i) => (
-                <button
-                  key={s.stepNumber}
-                  type="button"
-                  onClick={() => {
-                    setIsPlaying(false);
-                    setStepIdx(i);
-                  }}
-                  className={`rounded-md border px-2 py-0.5 text-[10px] font-semibold ${
-                    i === stepIdx
-                      ? "border-emerald-500 bg-emerald-950 text-emerald-200"
-                      : "border-zinc-800 bg-zinc-950 text-zinc-400 hover:text-zinc-200"
-                  }`}
-                >
-                  Krok {s.stepNumber}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <h4 className="text-xs font-bold text-emerald-300">
-            {activeStep.title}
-          </h4>
-          <div
-            className="prose prose-xs prose-invert mt-1.5 max-w-none leading-relaxed text-zinc-200"
-            dangerouslySetInnerHTML={{ __html: activeStep.explanationHtml }}
-          />
+          ))}
         </div>
       )}
 
-      {/* Caption & Mandatory Attribution Footer */}
-      <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800 bg-zinc-950 px-4 py-2.5 text-[11px] text-zinc-400">
+      {/* Caption & Attribution Footer */}
+      <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800/80 bg-zinc-950 px-4 py-2.5 text-[11px] text-zinc-400">
         <span>{figure.caption}</span>
         {figure.licenseAttribution && (
-          <span className="rounded bg-zinc-900 px-2 py-0.5 font-mono text-[10px] text-zinc-400">
+          <span className="rounded bg-zinc-900 px-2 py-0.5 font-mono text-[10px] text-zinc-500">
             {figure.licenseAttribution}
           </span>
         )}
@@ -1392,7 +908,7 @@ export function TextbookFigureCard({
         onClick={(e) => {
           if (e.target === dialogRef.current) setLightboxOpen(false);
         }}
-        className="m-auto max-h-[92vh] w-[min(92vw,1000px)] overflow-auto rounded-2xl border border-zinc-700 bg-zinc-950 p-4 text-zinc-100 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[92vh] w-[min(92vw,1000px)] overflow-auto rounded-2xl border border-zinc-800 bg-zinc-950 p-4 text-zinc-100 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm"
       >
         <div className="mb-3 flex items-center justify-between gap-2 border-b border-zinc-800 pb-2">
           <span className="text-sm font-bold text-zinc-100">
@@ -1409,7 +925,7 @@ export function TextbookFigureCard({
         </div>
 
         <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
-          {surface === "image" && figure.imageUrl ? (
+          {showImage && figure.imageUrl ? (
             <div className="flex h-full w-full items-center justify-center bg-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -1418,16 +934,12 @@ export function TextbookFigureCard({
                 width={figure.width ?? 1000}
                 height={figure.height ?? 750}
                 decoding="async"
-                className={`h-full w-full object-contain ${
-                  noirFilter ? "invert contrast-125 brightness-95" : ""
-                }`}
+                className="h-full w-full object-contain"
               />
             </div>
           ) : (
             <SchematicArtwork
               theme={figure.svgSchematicSpec?.theme ?? "generic"}
-              activeIds={activeHotspotIds}
-              flowArrow={activeStep?.flowArrow}
               markerId={`${markerId}-dialog`}
             />
           )}
