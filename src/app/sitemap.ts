@@ -15,7 +15,18 @@ import { absoluteUrl } from "@/lib/seo";
  * what appear here.
  */
 
-const SUBJECTS: TheorySubject[] = ["anatomia", "fizjologia", "biologia", "chemia"];
+const SUBJECTS: TheorySubject[] = [
+  "anatomia",
+  "fizjologia",
+  "biologia",
+  "chemia",
+  "fizyka",
+  "matematyka",
+  "biochemia",
+  "neurobiologia",
+  "farmakologia",
+  "informatyka",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

@@ -56,15 +56,61 @@ export interface ChapterQuizItem {
   answer: string;
 }
 
-export type CkeFormula = "2015" | "2023";
-export type CkeTopicStatus = "core" | "2015-only" | "2023-only";
+import type {
+  CurriculumTier,
+  CurriculumViewMode,
+  CkeRequirementMapping,
+  CkeExamTask,
+  CkeTaskMedia,
+  CkeAnimatedStep,
+  CkeSubTask,
+  CkeTaskType,
+  CkeExamSheet,
+} from "@/types/curriculum";
+
+import type {
+  FigureHotspot,
+  FigureAnimationStep,
+  SvgSchematicTheme,
+  TextbookFigure,
+} from "@/types/textbook-figures";
+
+export type {
+  CurriculumTier,
+  CurriculumViewMode,
+  CkeRequirementMapping,
+  CkeExamTask,
+  CkeTaskMedia,
+  CkeAnimatedStep,
+  CkeSubTask,
+  CkeTaskType,
+  CkeExamSheet,
+  FigureHotspot,
+  FigureAnimationStep,
+  SvgSchematicTheme,
+  TextbookFigure,
+};
+
+export type CkeFormula = "2015" | "2023" | "academic";
+export type CkeTopicStatus =
+  | "core"
+  | "2015-only"
+  | "2023-only"
+  | CurriculumTier;
 
 export interface CkeMetadata {
+  tier?: CurriculumTier;
   formulas: CkeFormula[];
   sectionCode: string; // e.g., "Dział III"
+  ckeSectionCode?: string; // e.g., "Dział III: Energia i metabolizm"
   requirementCodes: string[]; // e.g., ["III.2.a", "III.2.b"]
+  ckeRequirementIds?: string[];
   status: CkeTopicStatus;
+  diffs2015vs2023?: string;
+  examTraps?: string[];
   examTips?: string[]; // CKE traps & operational verbs tips
+  licenseAttribution?: string;
+  processingMode?: "DIRECT_ADAPTATION" | "CONCEPT_SYNTHESIS";
 }
 
 export interface StructuredChapter {
@@ -73,6 +119,8 @@ export interface StructuredChapter {
   pages: TextbookPage[];
   chapterQuiz: ChapterQuizItem[];
   ckeMetadata?: CkeMetadata;
+  licenseAttribution?: string;
+  processingMode?: "DIRECT_ADAPTATION" | "CONCEPT_SYNTHESIS";
 }
 
 export interface AcademicSource {
@@ -93,6 +141,8 @@ export interface TextbookSection {
   toc?: TableOfContentsItem[];
   chapterQuiz?: ChapterQuizItem[];
   ckeMetadata?: CkeMetadata;
+  licenseAttribution?: string;
+  processingMode?: "DIRECT_ADAPTATION" | "CONCEPT_SYNTHESIS";
 }
 
 export interface TextbookDomain {

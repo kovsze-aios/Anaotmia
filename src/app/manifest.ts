@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Medycyna — Inteligentny podręcznik do anatomii",
-    short_name: "Medycyna",
+    name: "SportNotes — Inteligentny podręcznik i baza wiedzy",
+    short_name: "SportNotes",
     description:
       "Darmowy, otwarto-źródłowy podręcznik do anatomii z Active Recall i pytaniami egzaminacyjnymi.",
     start_url: "/",

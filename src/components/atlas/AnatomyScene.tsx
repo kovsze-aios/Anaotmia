@@ -7,6 +7,7 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
 import type { Atlas, SystemId } from "@/server/models";
+import type { AnatomicalSubPin } from "@/data/anatomy-entities";
 import { resolveChunkUrls } from "@/services/atlasService";
 import { createExplosionLayout } from "./explosion-layout";
 import { decodeModelResponse } from "./model-download";
@@ -191,8 +192,10 @@ interface Props {
   state: SceneState;
   dark: boolean;
   labels: SceneLabels;
+  pins?: AnatomicalSubPin[];
   onSelect: (id: string) => void;
   onPeelPart?: (id: string) => void;
+  onSelectPin?: (pin: AnatomicalSubPin) => void;
   onProgress: (n: number) => void;
   onError: (s: string) => void;
 }
@@ -213,25 +216,32 @@ export default function AnatomyScene({
   state,
   dark,
   labels,
+  pins = [],
   onSelect,
   onPeelPart,
+  onSelectPin,
   onProgress,
   onError,
 }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const latest = useRef(state);
+  const pinsRef = useRef<AnatomicalSubPin[]>(pins);
   const select = useRef(onSelect);
   const peel = useRef(onPeelPart);
+  const selectPin = useRef(onSelectPin);
   const theme = useRef<ThemeTargets | null>(null);
   const darkRef = useRef(dark);
   const labelsRef = useRef(labels);
 
   useEffect(() => {
     latest.current = state;
+    pinsRef.current = pins;
     select.current = onSelect;
     peel.current = onPeelPart;
+    selectPin.current = onSelectPin;
     darkRef.current = dark;
     labelsRef.current = labels;
+    theme.current?.markDirty();
   });
 
   useEffect(() => {
@@ -244,15 +254,23 @@ export default function AnatomyScene({
     let lastRegion = "whole";
     let lastReset = -1;
     let lastFocusTrigger = 0;
+    let lastPinFocusTrigger = 0;
     let lastZoomTrigger = 0;
     let lastOrbitTrigger = 0;
     let lastIsolate = "";
+    let lastPinsKey = "";
     let layoutKey = "";
     let amount = 0;
     let lastState: SceneState | null = null;
     let hoveredIndex = -1;
     let lastHoverRayTime = 0;
     const abort = new AbortController();
+
+    // Real-time anatomical cross-section planes (Sagittal X, Coronal Y, Transverse Z)
+    const clipPlaneX = new T.Plane(new T.Vector3(-1, 0, 0), 10);
+    const clipPlaneY = new T.Plane(new T.Vector3(0, -1, 0), 10);
+    const clipPlaneZ = new T.Plane(new T.Vector3(0, 0, -1), 10);
+    const activeClipPlanes = [clipPlaneX, clipPlaneY, clipPlaneZ];
 
     // Smooth camera interpolation state
     let cameraAnimating = false;
@@ -275,6 +293,7 @@ export default function AnatomyScene({
 
     renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 768 ? 1.75 : 2));
     renderer.setClearColor(palette.clear);
+    renderer.localClippingEnabled = true;
     renderer.outputColorSpace = T.SRGBColorSpace;
     renderer.toneMapping = T.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.16;
@@ -505,6 +524,69 @@ export default function AnatomyScene({
     hover.hidden = true;
     el.appendChild(hover);
 
+    const pinsOverlay = document.createElement("div");
+    pinsOverlay.className = "atlas-pins-overlay";
+    pinsOverlay.style.position = "absolute";
+    pinsOverlay.style.inset = "0";
+    pinsOverlay.style.pointerEvents = "none";
+    pinsOverlay.style.overflow = "hidden";
+    pinsOverlay.style.zIndex = "18";
+    el.appendChild(pinsOverlay);
+    const pinButtons = new Map<string, HTMLButtonElement>();
+
+    const bodyBox = new T.Box3(
+      new T.Vector3(-0.35, 0.0, -0.2),
+      new T.Vector3(0.35, 1.72, 0.2),
+    );
+    const computeSelectionBox = (selectedIds: string[]) => {
+      const box = new T.Box3();
+      atlas.parts.forEach((p, i) => {
+        if (selectedIds.includes(p.id)) {
+          box.union(
+            bounds[i]
+              .clone()
+              .translate(
+                new T.Vector3(data[i * 4], data[i * 4 + 1], data[i * 4 + 2]),
+              ),
+          );
+        }
+      });
+      return box.isEmpty() ? bodyBox.clone() : box;
+    };
+
+    const resolvePinWorldPosition = (
+      pin: AnatomicalSubPin,
+      selectionBox: T.Box3,
+      selectedIds: string[],
+    ) => {
+      // First check if `meshNodeName` matches an actual part within the active selection
+      if (pin.meshNodeName && selectedIds.length > 1) {
+        const needle = pin.meshNodeName.toLowerCase();
+        const subBox = new T.Box3();
+        atlas.parts.forEach((p, i) => {
+          if (selectedIds.includes(p.id) && p.name.toLowerCase().includes(needle)) {
+            subBox.union(
+              bounds[i]
+                .clone()
+                .translate(
+                  new T.Vector3(data[i * 4], data[i * 4 + 1], data[i * 4 + 2]),
+                ),
+            );
+          }
+        });
+        if (!subBox.isEmpty()) {
+          return subBox.getCenter(new T.Vector3());
+        }
+      }
+      const c = selectionBox.getCenter(new T.Vector3());
+      const sz = selectionBox.getSize(new T.Vector3());
+      return new T.Vector3(
+        c.x + pin.position[0] * Math.max(sz.x, 0.04),
+        c.y + pin.position[1] * Math.max(sz.y, 0.04),
+        c.z + pin.position[2] * Math.max(sz.z, 0.04),
+      );
+    };
+
     type Target = {
       index: number;
       x: number;
@@ -546,6 +628,7 @@ export default function AnatomyScene({
         sheen: props.sheen,
         sheenColor: new T.Color(baseColor).lerp(new T.Color("#ffffff"), 0.35),
         side: T.DoubleSide,
+        clippingPlanes: [],
       });
       m.onBeforeCompile = (shader) => {
         shader.uniforms.partState = { value: partTexture };
@@ -1003,7 +1086,11 @@ export default function AnatomyScene({
         lastState?.isolate !== s.isolate ||
         lastState?.peeled !== s.peeled ||
         lastState?.peelDepth !== s.peelDepth ||
-        lastState?.xray !== s.xray;
+        lastState?.xray !== s.xray ||
+        lastState?.clipping !== s.clipping ||
+        lastState?.showPins !== s.showPins ||
+        lastState?.activePinId !== s.activePinId ||
+        lastState?.szpilkiMode !== s.szpilkiMode;
       const moving = Math.abs(amount - s.explode) > 0.0001;
       if (moving) {
         amount = T.MathUtils.damp(amount, s.explode, 8, dt);
@@ -1032,7 +1119,36 @@ export default function AnatomyScene({
         const selection = new Set(s.selected);
         const peeledSet = new Set(s.peeled ?? []);
         const peelThreshold = (s.peelDepth ?? 0) * 0.9;
-        const xrayActive = Boolean(s.xray && selection.size > 0 && !s.isolate);
+        const xraySelectionActive = Boolean(s.xray && selection.size > 0 && !s.isolate);
+        const xrayOverviewActive = Boolean(s.xray && selection.size === 0 && !s.isolate);
+
+        // Update real-time anatomical cross-section planes
+        const clip = s.clipping;
+        if (clip?.enabled) {
+          const refBox = computeSelectionBox(s.selected);
+          const min = refBox.min;
+          const max = refBox.max;
+          const pad = 0.02;
+          const xNorm = T.MathUtils.clamp((clip.x + 1) * 0.5, 0, 1);
+          const yNorm = T.MathUtils.clamp((clip.y + 1) * 0.5, 0, 1);
+          const zNorm = T.MathUtils.clamp((clip.z + 1) * 0.5, 0, 1);
+          clipPlaneX.constant = T.MathUtils.lerp(min.x - pad, max.x + pad, xNorm);
+          clipPlaneY.constant = T.MathUtils.lerp(min.y - pad, max.y + pad, yNorm);
+          clipPlaneZ.constant = T.MathUtils.lerp(min.z - pad, max.z + pad, zNorm);
+          materials.forEach((mat) => {
+            if (mat.clippingPlanes !== activeClipPlanes) {
+              mat.clippingPlanes = activeClipPlanes;
+              mat.needsUpdate = true;
+            }
+          });
+        } else {
+          materials.forEach((mat) => {
+            if (mat.clippingPlanes && mat.clippingPlanes.length > 0) {
+              mat.clippingPlanes = [];
+              mat.needsUpdate = true;
+            }
+          });
+        }
 
         const isPartShown = (p: Atlas["parts"][number], i: number) => {
           if (selection.has(p.id)) return true;
@@ -1090,8 +1206,15 @@ export default function AnatomyScene({
           if (shown) {
             if (selected) {
               alpha = 1;
-            } else if (xrayActive) {
-              alpha = 0.16;
+            } else if (xraySelectionActive) {
+              alpha = 0.2;
+            } else if (
+              xrayOverviewActive &&
+              (p.system === "integumentary" ||
+                p.system === "connective" ||
+                (p.system === "muscular" && partPeelOrder[i] < 0.48))
+            ) {
+              alpha = 0.2;
             } else if (p.system === "integumentary") {
               alpha = 0.18;
             } else {
@@ -1134,6 +1257,28 @@ export default function AnatomyScene({
       if ((s.focusTrigger ?? 0) !== lastFocusTrigger) {
         lastFocusTrigger = s.focusTrigger ?? 0;
         focusOnParts(s.selected);
+      }
+
+      if ((s.pinFocusTrigger ?? 0) !== lastPinFocusTrigger) {
+        lastPinFocusTrigger = s.pinFocusTrigger ?? 0;
+        const activePin =
+          pinsRef.current.find((pin) => pin.id === s.activePinId) ??
+          pinsRef.current[0];
+        if (activePin && s.selected.length > 0) {
+          const selBox = computeSelectionBox(s.selected);
+          const selSize = selBox.getSize(new T.Vector3());
+          const pinPos = resolvePinWorldPosition(activePin, selBox, s.selected);
+          const maxDim = Math.max(selSize.x, selSize.y, selSize.z, 0.08);
+          const dist = Math.max(0.14, maxDim * 1.45);
+          const currentDir = camera.position
+            .clone()
+            .sub(controls.target)
+            .normalize();
+          const dir = currentDir.lengthSq() > 0.1
+            ? currentDir
+            : new T.Vector3(0.25, 0.12, 0.96).normalize();
+          setCameraGoal(pinPos, pinPos.clone().addScaledVector(dir, dist), false);
+        }
       }
 
       if ((s.zoomTrigger ?? 0) !== lastZoomTrigger) {
@@ -1338,6 +1483,100 @@ export default function AnatomyScene({
             });
           });
         }
+
+        // Update 3D-to-2D projected Spatial Callout Pins overlay
+        const activePins = pinsRef.current;
+        const shouldShowPins =
+          s.showPins !== false &&
+          s.selected.length > 0 &&
+          activePins.length > 0 &&
+          amount < 0.45 &&
+          ready;
+
+        if (!shouldShowPins) {
+          pinsOverlay.hidden = true;
+        } else {
+          pinsOverlay.hidden = false;
+          const szpilkiMode = Boolean(s.szpilkiMode);
+          const targetPinId = s.activePinId ?? activePins[0]?.id ?? null;
+          const visiblePins = szpilkiMode
+            ? activePins.filter((pin) => pin.id === targetPinId)
+            : activePins;
+
+          const nextPinsKey =
+            `${s.selected.join(",")}|${szpilkiMode}|${targetPinId}|` +
+            visiblePins.map((p) => `${p.id}:${p.labelPl}`).join(";");
+
+          if (nextPinsKey !== lastPinsKey) {
+            pinsOverlay.replaceChildren();
+            pinButtons.clear();
+            for (const pin of visiblePins) {
+              const btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = [
+                "atlas-pin-badge",
+                pin.id === targetPinId ? "active" : "",
+                szpilkiMode ? "szpilki" : "",
+              ]
+                .filter(Boolean)
+                .join(" ");
+              btn.style.position = "absolute";
+              btn.style.pointerEvents = "auto";
+              btn.style.transform = "translate(-50%, -100%)";
+
+              const dot = document.createElement("span");
+              dot.className = "atlas-pin-dot";
+              btn.appendChild(dot);
+
+              const labelWrap = document.createElement("span");
+              labelWrap.className = "atlas-pin-text";
+              if (szpilkiMode) {
+                const q = document.createElement("strong");
+                q.textContent = "📍 [ ? ] Nazwij strukturę";
+                labelWrap.appendChild(q);
+              } else {
+                const plEl = document.createElement("strong");
+                plEl.textContent = pin.labelPl;
+                const latEl = document.createElement("em");
+                latEl.textContent = pin.labelLat;
+                labelWrap.appendChild(plEl);
+                labelWrap.appendChild(latEl);
+              }
+              btn.appendChild(labelWrap);
+              btn.addEventListener("click", (ev) => {
+                ev.stopPropagation();
+                selectPin.current?.(pin);
+              });
+              pinsOverlay.appendChild(btn);
+              pinButtons.set(pin.id, btn);
+            }
+            lastPinsKey = nextPinsKey;
+          }
+
+          const selBox = computeSelectionBox(s.selected);
+          const w = el.clientWidth;
+          const h = el.clientHeight;
+          for (const pin of visiblePins) {
+            const btn = pinButtons.get(pin.id);
+            if (!btn) continue;
+            const worldPos = resolvePinWorldPosition(pin, selBox, s.selected);
+            projected.copy(worldPos).project(camera);
+            if (projected.z < -1 || projected.z > 1) {
+              btn.style.display = "none";
+              continue;
+            }
+            const sx = ((projected.x + 1) * w) / 2;
+            const sy = ((1 - projected.y) * h) / 2;
+            if (sx < 16 || sx > w - 16 || sy < 24 || sy > h - 16) {
+              btn.style.display = "none";
+              continue;
+            }
+            btn.style.display = "inline-flex";
+            btn.style.left = `${sx.toFixed(1)}px`;
+            btn.style.top = `${sy.toFixed(1)}px`;
+          }
+        }
+
         dirty = false;
       }
     };
@@ -1371,6 +1610,7 @@ export default function AnatomyScene({
       markerGeometry.dispose();
       markerMaterial.dispose();
       hover.remove();
+      pinsOverlay.remove();
       renderer.dispose();
       renderer.domElement.remove();
     };

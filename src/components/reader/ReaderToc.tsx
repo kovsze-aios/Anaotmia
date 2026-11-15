@@ -9,11 +9,10 @@ import { useI18n } from "@/i18n";
 import { HIDE_SCROLLBAR, cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import {
-  CkeFormulaSwitcher,
+  CurriculumModeSwitcher,
   CkeStatusBadge,
-  defaultFormulaForPath,
-  matchesFormulaFilter,
-  type FormulaFilterMode,
+  isTierRequiredInMode,
+  useCurriculumViewMode,
 } from "@/components/matura/CkeFormulaControls";
 
 /**
@@ -44,18 +43,12 @@ export interface ReaderTocProps {
 export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
   const { t, n } = useI18n();
   const [open, setOpen] = useState(false);
-  const [formulaFilter, setFormulaFilter] = useState<FormulaFilterMode>(() =>
-    defaultFormulaForPath(basePath),
-  );
+  const [viewMode, setViewMode] = useCurriculumViewMode(basePath);
   const currentChapter = useRef<HTMLAnchorElement>(null);
 
   const hasCkeMetadata =
     Boolean(position.ckeMetadata) ||
-    position.volumeChapters.some((ch) => Boolean(ch.ckeStatus));
-
-  useEffect(() => {
-    setFormulaFilter(defaultFormulaForPath(basePath));
-  }, [basePath]);
+    position.volumeChapters.some((ch) => Boolean(ch.ckeStatus || ch.tier));
 
   /**
    * Brings the chapter being read into view when the drawer opens.
@@ -82,11 +75,7 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
     return () => cancelAnimationFrame(frame);
   }, [open, position.chapterId]);
 
-  const filteredChapters = hasCkeMetadata
-    ? position.volumeChapters.filter((ch) =>
-        matchesFormulaFilter(formulaFilter, ch.formulas, ch.ckeStatus),
-      )
-    : position.volumeChapters;
+  const volumeChapters = position.volumeChapters;
 
   return (
     <>
@@ -133,9 +122,9 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
 
             {hasCkeMetadata && (
               <div className="pt-1">
-                <CkeFormulaSwitcher
-                  value={formulaFilter}
-                  onChange={setFormulaFilter}
+                <CurriculumModeSwitcher
+                  value={viewMode}
+                  onChange={setViewMode}
                   compact
                 />
               </div>
@@ -187,15 +176,25 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                     {volume.icon && <span aria-hidden="true">{volume.icon}</span>}
                     <span className="flex-1 truncate">{volume.shortTitle}</span>
                     <span className="shrink-0 text-xs font-normal tabular-nums text-zinc-400 dark:text-zinc-500">
-                      {n(filteredChapters.length)}
+                      {n(volumeChapters.length)}
                     </span>
                   </summary>
 
                   <ul className="mb-2 ml-4 border-l border-zinc-200 pl-2 dark:border-zinc-800">
-                    {filteredChapters.map((chapter) => {
+                    {volumeChapters.map((chapter) => {
                       const isCurrent = chapter.id === position.chapterId;
+                      const isRequired =
+                        !hasCkeMetadata ||
+                        isTierRequiredInMode(
+                          viewMode,
+                          chapter.tier ?? chapter.ckeStatus,
+                          chapter.formulas,
+                        );
                       return (
-                        <li key={chapter.id}>
+                        <li
+                          key={chapter.id}
+                          className={cn(!isRequired && "opacity-40 transition-opacity")}
+                        >
                           <Link
                             ref={isCurrent ? currentChapter : undefined}
                             href={`${basePath}/${chapter.id}`}
@@ -215,8 +214,13 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                               </span>
                               {chapter.title}
                             </span>
-                            {chapter.ckeStatus && (
-                              <CkeStatusBadge status={chapter.ckeStatus} className="mt-0.5" />
+                            {(chapter.tier || chapter.ckeStatus) && (
+                              <CkeStatusBadge
+                                tier={chapter.tier}
+                                status={chapter.ckeStatus}
+                                compact
+                                className="mt-0.5"
+                              />
                             )}
                           </Link>
 

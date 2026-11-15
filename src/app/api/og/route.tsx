@@ -110,7 +110,7 @@ export async function GET(req: NextRequest) {
                 color: "#a1a1aa", // zinc-400 equivalent
               }}
             >
-              Anatomia<span style={{ fontWeight: 600, color: "white" }}>2026</span>
+              Sport<span style={{ fontWeight: 600, color: "white" }}>Notes</span>
             </div>
           </div>
         </div>

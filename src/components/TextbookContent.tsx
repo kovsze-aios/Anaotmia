@@ -6,12 +6,24 @@ import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
 import type { TextbookSection, ContentBlock } from "@/server/models";
 import { formatOcrText, getSectionWordCount, uniqueId } from "@/lib/textbookFormatting";
-import { AnatomyRichText } from "./textbook/AnatomyRichText";
+import { AnatomicalTextLinker, AnatomyRichText } from "./textbook/AnatomyRichText";
 import { AtlasPeekDrawer } from "./textbook/AtlasPeekDrawer";
-import { CkeStatusBadge } from "./matura/CkeFormulaControls";
+import { TextbookFigureCard } from "./textbook/TextbookFigureCard";
+import { getFiguresForChapter } from "@/data/textbook-figures";
+import {
+  CkeStatusBadge,
+  CurriculumModeSwitcher,
+  isTierRequiredInMode,
+  useCurriculumViewMode,
+} from "./matura/CkeFormulaControls";
+import {
+  CkeChapterCallout,
+  CkeExamSheetsRepositoryView,
+  CkeExamTasksSection,
+} from "./matura/CkeExamTasksSection";
 
 
-function parseMarkdownContent(text: string) {
+function parseMarkdownContent(text: string = "") {
 
   const parts = text.split(/^(#{1,6})\s+(.+)$/gm);
   const nodes: React.ReactNode[] = [];
@@ -45,6 +57,7 @@ function parseMarkdownContent(text: string) {
 
 interface TextbookContentProps {
   section: TextbookSection;
+  subject?: string;
   /**
    * Turns chapter words that name an anatomical structure into links into the
    * 3D atlas. Off by default: the atlas models human anatomy, so the terms
@@ -54,10 +67,26 @@ interface TextbookContentProps {
   linkAnatomy?: boolean;
 }
 
-function ContentBlockRenderer({ block }: { block: ContentBlock }) {
+function ContentBlockRenderer({
+  block,
+  linkAnatomy = false,
+  onSelectTerm,
+}: {
+  block: ContentBlock;
+  linkAnatomy?: boolean;
+  onSelectTerm?: (name: string, label: string) => void;
+}) {
   switch (block.type) {
     case "paragraph":
-      return <p className="textbook-paragraph">{block.text}</p>;
+      return linkAnatomy && onSelectTerm ? (
+        <AnatomicalTextLinker
+          html={`<p>${block.text}</p>`}
+          onSelectTerm={onSelectTerm}
+          className="textbook-paragraph"
+        />
+      ) : (
+        <p className="textbook-paragraph">{block.text}</p>
+      );
     case "heading": {
       const Tag = `h${block.level}` as keyof React.JSX.IntrinsicElements;
       return <Tag className={`textbook-heading h${block.level}`}>{block.text}</Tag>;
@@ -65,7 +94,19 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
     case "list":
       return (
         <ul className="textbook-list">
-          {block.items.map((item, i) => <li key={i}>{item}</li>)}
+          {block.items.map((item, i) => (
+            <li key={i}>
+              {linkAnatomy && onSelectTerm ? (
+                <AnatomicalTextLinker
+                  html={item}
+                  onSelectTerm={onSelectTerm}
+                  className="inline"
+                />
+              ) : (
+                item
+              )}
+            </li>
+          ))}
         </ul>
       );
     case "table":
@@ -128,7 +169,11 @@ function ScrollProgressBar() {
   );
 }
 
-export function TextbookContent({ section, linkAnatomy = false }: TextbookContentProps) {
+export function TextbookContent({
+  section,
+  subject,
+  linkAnatomy = false,
+}: TextbookContentProps) {
   // Which structure the 3D drawer is showing, if any. Null keeps the viewer
   // unmounted, so its chunk is never even fetched until a reader asks.
   const [atlasFocus, setAtlasFocus] = useState<{ name: string; label: string } | null>(
@@ -139,38 +184,92 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
     [],
   );
   const closeAtlas = useCallback(() => setAtlasFocus(null), []);
+  const [viewMode, setViewMode] = useCurriculumViewMode(subject);
 
   // The corpus is static per route, so the count is stable — memoising it
   // stops a full text rescan on every re-render (theme toggle, etc.).
   const wordCount = useMemo(() => getSectionWordCount(section), [section]);
   const readingTime = Math.ceil(wordCount / 200) || 1;
+  const chapterFigures = useMemo(
+    () =>
+      getFiguresForChapter({
+        subject,
+        chapterId: section.id,
+        chapterTitle: section.title,
+      }),
+    [subject, section.id, section.title],
+  );
+  const hasCke = Boolean(section.ckeMetadata);
+  const isChapterRequiredInMode =
+    !section.ckeMetadata ||
+    isTierRequiredInMode(
+      viewMode,
+      section.ckeMetadata.tier ?? section.ckeMetadata.status,
+      section.ckeMetadata.formulas,
+    );
 
   return (
     <article className="textbook-article relative pt-4">
       <ScrollProgressBar />
 
-      <div className="flex flex-wrap items-center gap-3 mb-6">
-        <h1 className="textbook-article__title !mb-0">{section.title}</h1>
-        {section.ckeMetadata && (
-          <div className="flex flex-wrap items-center gap-2">
-            <CkeStatusBadge status={section.ckeMetadata.status} />
-            <span className="rounded border border-zinc-700/80 bg-zinc-900/90 px-2 py-0.5 text-[11px] font-semibold text-zinc-300">
-              {section.ckeMetadata.sectionCode}
+      {hasCke && (
+        <div className="mb-5 rounded-xl border border-zinc-800 bg-zinc-950/90 p-3">
+          <CurriculumModeSwitcher
+            value={viewMode}
+            onChange={setViewMode}
+            compact
+          />
+        </div>
+      )}
+
+      {hasCke && viewMode === "cke-exams" ? (
+        <CkeExamSheetsRepositoryView
+          subject={subject}
+          onExitExamMode={() => setViewMode("full")}
+        />
+      ) : (
+        <>
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <h1 className="textbook-article__title !mb-0">{section.title}</h1>
+            {section.ckeMetadata && (
+              <div className="flex flex-wrap items-center gap-2">
+                <CkeStatusBadge
+                  tier={section.ckeMetadata.tier}
+                  status={section.ckeMetadata.status}
+                />
+                <span className="rounded border border-zinc-700/80 bg-zinc-900/90 px-2 py-0.5 text-[11px] font-semibold text-zinc-300">
+                  {section.ckeMetadata.sectionCode}
+                </span>
+                {section.ckeMetadata.requirementCodes.slice(0, 4).map((code) => (
+                  <span
+                    key={code}
+                    className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400"
+                  >
+                    {code}
+                  </span>
+                ))}
+              </div>
+            )}
+            <span className="text-xs text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-full whitespace-nowrap border border-zinc-200 dark:border-zinc-700 font-medium">
+              ⏱ Czas czytania: ~{readingTime} min
             </span>
-            {section.ckeMetadata.requirementCodes.slice(0, 4).map((code) => (
-              <span
-                key={code}
-                className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400"
-              >
-                {code}
-              </span>
-            ))}
           </div>
-        )}
-        <span className="text-xs text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-full whitespace-nowrap border border-zinc-200 dark:border-zinc-700 font-medium">
-          ⏱ Czas czytania: ~{readingTime} min
-        </span>
-      </div>
+
+          {section.ckeMetadata && !isChapterRequiredInMode && (
+            <div className="mb-6 rounded-lg border border-amber-800/60 bg-amber-950/30 px-4 py-2.5 text-xs text-amber-200">
+              Ten temat ma oznaczenie{" "}
+              <strong>
+                {section.ckeMetadata.tier === "academic-extra"
+                  ? "EXTRA / STUDIA"
+                  : section.ckeMetadata.tier === "cke-2015-only"
+                    ? "FORMUŁA 2015"
+                    : "NOWA 2023+"}
+              </strong>{" "}
+              i wykracza poza wybrany filtr egzaminacyjny (czytany jako materiał poszerzający).
+            </div>
+          )}
+
+          <CkeChapterCallout metadata={section.ckeMetadata} />
 
       <div className="high-yield-section mb-8">
         <h3 className="text-sm font-semibold tracking-wider text-zinc-400 uppercase mb-3">
@@ -201,6 +300,30 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
           </div>
         )}
       </div>
+
+      {chapterFigures.length > 0 && (
+        <section
+          aria-label="Interaktywne ryciny i schematy anatomiczne"
+          className="mb-8"
+        >
+          <div className="mb-2 flex items-center justify-between gap-2">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-400">
+              🫀 Interaktywne ryciny (2D→3D + Tryb Szpilek + lemo-opuscar)
+            </h2>
+            <span className="rounded border border-zinc-800 bg-zinc-950 px-2 py-0.5 text-[10px] font-mono text-zinc-400">
+              {chapterFigures.length}{" "}
+              {chapterFigures.length === 1 ? "rycina" : "ryciny"}
+            </span>
+          </div>
+          {chapterFigures.map((fig) => (
+            <TextbookFigureCard
+              key={fig.id}
+              figure={fig}
+              onOpenAtlas={openAtlas}
+            />
+          ))}
+        </section>
+      )}
 
       {section.pages && section.pages.length > 0 && (
         <div className="structured-pages-section flex flex-col gap-8 mb-8">
@@ -298,7 +421,12 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
             {hasContentBlocks && (
               <div className="mt-4 prose prose-sm md:prose-base prose-zinc dark:prose-invert max-w-none text-justify leading-relaxed textbook-article__content">
                 {section.content.map((block, index) => (
-                  <ContentBlockRenderer key={index} block={block} />
+                  <ContentBlockRenderer
+                    key={index}
+                    block={block}
+                    linkAnatomy={linkAnatomy}
+                    onSelectTerm={openAtlas}
+                  />
                 ))}
               </div>
             )}
@@ -306,7 +434,25 @@ export function TextbookContent({ section, linkAnatomy = false }: TextbookConten
         );
       })()}
 
-      {linkAnatomy && (
+      <CkeExamTasksSection
+        subject={subject}
+        chapterId={section.id}
+        chapterTitle={section.title}
+        sectionCode={section.ckeMetadata?.sectionCode}
+      />
+
+      {(section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution) && (
+        <footer
+          data-testid="license-attribution-footer"
+          className="mt-8 rounded-lg border border-zinc-800/80 bg-zinc-950/60 px-4 py-2.5 text-xs text-zinc-400"
+        >
+          📜 {section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution}
+        </footer>
+      )}
+        </>
+      )}
+
+      {(linkAnatomy || atlasFocus !== null) && (
         <AtlasPeekDrawer
           focusName={atlasFocus?.name ?? null}
           label={atlasFocus?.label ?? ""}

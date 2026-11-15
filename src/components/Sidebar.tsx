@@ -66,8 +66,12 @@ export function SidebarDrawer({
     physiology: physiologyLinks,
     biology: biologyLinks,
     chemistry: chemistryLinks,
-    maturaBiology: maturaBiologyLinks = [],
-    maturaChemistry: maturaChemistryLinks = [],
+    physics: physicsLinks = [],
+    mathematics: mathematicsLinks = [],
+    biochemistry: biochemistryLinks = [],
+    neurobiology: neurobiologyLinks = [],
+    pharmacology: pharmacologyLinks = [],
+    informatics: informaticsLinks = [],
   } = navigation;
 
   const { t } = useI18n();
@@ -205,33 +209,83 @@ export function SidebarDrawer({
 
           <div className="mobile-drawer__divider" />
           <div className="px-4 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-zinc-400 dark:text-zinc-500">
-            PODRĘCZNIKI MATURALNE CKE
+            DZIAŁY AKADEMICKIE OER (STUDIA &amp; EXTRA)
           </div>
 
-          {/* ─── 🎓 MATURA — BIOLOGIA (2023+ / 2015) ─── */}
-          <AccordionGroup label="🎓 MATURA — BIOLOGIA (2023+ / 2015)" defaultExpanded={false}>
-            {maturaBiologyLinks.map((l) => (
+          <AccordionGroup label={`⚡ ${t.sidebar.physics}`} defaultExpanded={false}>
+            <Link href="/theory/fizyka" className="drawer-link focus-ring" onClick={onClose}>
+              📘 Przegląd działu Fizyka
+            </Link>
+            {physicsLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-            <Link href="/matura/biologia" className="drawer-link focus-ring" onClick={onClose}>
-              📝 {t.sidebar.examSheetsBiology}
-            </Link>
           </AccordionGroup>
 
           <div className="mobile-drawer__divider" />
 
-          {/* ─── 🎓 MATURA — CHEMIA (2023+ / 2015) ─── */}
-          <AccordionGroup label="🎓 MATURA — CHEMIA (2023+ / 2015)" defaultExpanded={false}>
-            {maturaChemistryLinks.map((l) => (
+          <AccordionGroup label={`📐 ${t.sidebar.mathematics}`} defaultExpanded={false}>
+            <Link href="/theory/matematyka" className="drawer-link focus-ring" onClick={onClose}>
+              📘 Przegląd działu Matematyka i Statystyka
+            </Link>
+            {mathematicsLinks.map((l) => (
               <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
                 {l.label}
               </Link>
             ))}
-            <Link href="/matura/chemia" className="drawer-link focus-ring" onClick={onClose}>
-              📝 {t.sidebar.examSheetsChemistry}
+          </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+
+          <AccordionGroup label={`🧬 ${t.sidebar.biochemistry}`} defaultExpanded={false}>
+            <Link href="/theory/biochemia" className="drawer-link focus-ring" onClick={onClose}>
+              📘 Przegląd działu Biochemia
             </Link>
+            {biochemistryLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+          </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+
+          <AccordionGroup label={`🧠 ${t.sidebar.neurobiology}`} defaultExpanded={false}>
+            <Link href="/theory/neurobiologia" className="drawer-link focus-ring" onClick={onClose}>
+              📘 Przegląd działu Neurobiologia
+            </Link>
+            {neurobiologyLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+          </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+
+          <AccordionGroup label={`💊 ${t.sidebar.pharmacology}`} defaultExpanded={false}>
+            <Link href="/theory/farmakologia" className="drawer-link focus-ring" onClick={onClose}>
+              📘 Przegląd działu Farmakologia
+            </Link>
+            {pharmacologyLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
+          </AccordionGroup>
+
+          <div className="mobile-drawer__divider" />
+
+          <AccordionGroup label={`💻 ${t.sidebar.informatics}`} defaultExpanded={false}>
+            <Link href="/theory/informatyka" className="drawer-link focus-ring" onClick={onClose}>
+              📘 Przegląd działu Informatyka
+            </Link>
+            {informaticsLinks.map((l) => (
+              <Link key={l.label} href={l.href} className="drawer-link focus-ring" onClick={onClose}>
+                {l.label}
+              </Link>
+            ))}
           </AccordionGroup>
         </nav>
       </aside>

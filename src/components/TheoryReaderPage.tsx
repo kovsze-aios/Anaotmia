@@ -47,6 +47,12 @@ const LINKS_ANATOMY: Record<TheorySubject, boolean> = {
   "biologia-matura-2023": true,
   "chemia-matura-2015": false,
   "chemia-matura-2023": false,
+  fizyka: false,
+  matematyka: false,
+  biochemia: true,
+  neurobiologia: true,
+  farmakologia: true,
+  informatyka: false,
 };
 
 const MATURA_PAIR: Partial<
@@ -109,8 +115,8 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
     description: chapterDescription(section),
     articleSection: domain.title,
     inLanguage: "pl",
-    author: { "@type": "Organization", name: "Medycyna" },
-    publisher: { "@type": "Organization", name: "Medycyna" },
+    author: { "@type": "Organization", name: "SportNotes" },
+    publisher: { "@type": "Organization", name: "SportNotes" },
     mainEntityOfPage: sectionUrl,
   };
 
@@ -199,7 +205,11 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
 
       {/* Centred reading column — comfortable measure for long-form prose. */}
       <div className="mx-auto w-full max-w-3xl px-4">
-        <TextbookContent section={section} linkAnatomy={LINKS_ANATOMY[subject]} />
+        <TextbookContent
+          section={section}
+          subject={subject}
+          linkAnatomy={LINKS_ANATOMY[subject]}
+        />
       </div>
 
       {position && <ReaderPagination position={position} basePath={basePath} />}

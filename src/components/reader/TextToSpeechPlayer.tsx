@@ -1,300 +1,511 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Pause, Play, Square } from "lucide-react";
-
+import { Loader2, Pause, Play, Square, Volume2 } from "lucide-react";
 import { useI18n } from "@/i18n";
-import { cn } from "@/lib/utils";
-import { chunkForSpeech, htmlToSpeechText } from "@/lib/speechText";
+import {
+  NEURAL_VOICES,
+  SPEED_OPTIONS,
+  chunkForSpeech,
+  htmlToSpeechText,
+  pickBestPolishVoice,
+  type NeuralVoiceId,
+  type SpeechPlaybackRate,
+} from "@/lib/speechText";
 
-/**
- * Flag that carries "keep reading" across an auto-turned page.
- *
- * Paging forward is a `router.push`, so the player unmounts with the chapter
- * it was reading. The intent to continue has to survive in the one place that
- * outlives the component — the URL.
- */
 export const AUTOPLAY_PARAM = "autoplay";
 
-/** The corpus is Polish; the engine needs telling, or it reads it as English. */
-const SPEECH_LANG = "pl-PL";
+const VOICE_STORAGE_KEY = "sportnotes_tts_voice";
+const RATE_STORAGE_KEY = "sportnotes_tts_rate";
 
-type Status = "idle" | "playing" | "paused";
+type PlayerStatus = "idle" | "loading" | "playing" | "paused";
+type TtsEngine = "neural" | "browser";
 
 export interface TextToSpeechPlayerProps {
-  /** Chapter on screen. A change resets the player, mount or soft navigation. */
   chapterId: string;
-  /** Read first, so a listener hears which chapter has started. */
   title: string;
-  /** Chapter body as rendered; stripped to plain text before it is spoken. */
   html: string;
-  /** Turned to when the chapter finishes. Absent on the last chapter. */
-  nextChapterId?: string;
-  /** Subject route the chapters live under, e.g. `/theory/chemia`. */
-  basePath: string;
+  nextChapterId?: string | null;
+  basePath?: string;
 }
 
-/** 44px floor, the same touch target the rest of the reader chrome uses. */
-const BUTTON =
-  "flex min-h-11 min-w-11 items-center justify-center transition-colors focus-ring " +
-  "text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900";
+function readStoredVoice(): NeuralVoiceId {
+  try {
+    const raw = window.localStorage.getItem(VOICE_STORAGE_KEY);
+    if (raw === "pl-PL-MarekNeural" || raw === "pl-PL-ZofiaNeural") {
+      return raw;
+    }
+  } catch {
+    // Ignore storage access errors
+  }
+  return "pl-PL-ZofiaNeural";
+}
 
-/**
- * Read-aloud control for the reading view.
- *
- * Floating rather than docked. The obvious home is beside the prev/next
- * controls, but those sit past the end of a chapter that takes minutes to read
- * — by the time speech is running they are far off-screen, and a pause button
- * you have to scroll to find is not a pause button. Fixed positioning also
- * satisfies the harder constraint: the reading column is never reflowed,
- * because the player is not in its flow at all.
- *
- * Collapsed to a single circle at rest, so the immersive view carries one
- * 44px control; it expands to pause and stop only while something is playing.
- */
+function readStoredRate(): SpeechPlaybackRate {
+  try {
+    const raw = Number(window.localStorage.getItem(RATE_STORAGE_KEY));
+    if (raw === 1 || raw === 1.25 || raw === 1.5) {
+      return raw;
+    }
+  } catch {
+    // Ignore storage access errors
+  }
+  return 1;
+}
+
 export function TextToSpeechPlayer({
   chapterId,
   title,
   html,
   nextChapterId,
-  basePath,
+  basePath = "/theory/anatomia",
 }: TextToSpeechPlayerProps) {
   const router = useRouter();
   const { t } = useI18n();
 
-  const [supported, setSupported] = useState(false);
-  const [status, setStatus] = useState<Status>("idle");
-  const [progress, setProgress] = useState(0);
+  const [mounted, setMounted] = useState(false);
+  const [status, setStatus] = useState<PlayerStatus>("idle");
+  const [engine, setEngine] = useState<TtsEngine>("neural");
+  const [voice, setVoice] = useState<NeuralVoiceId>("pl-PL-ZofiaNeural");
+  const [rate, setRate] = useState<SpeechPlaybackRate>(1);
+  const [chunkIndex, setChunkIndex] = useState(0);
 
-  /**
-   * Invalidates the handlers of speech that has been torn down.
-   *
-   * `cancel()` makes Chrome fire `onend` on every queued utterance, exactly as
-   * a natural finish does. Without a generation stamp captured at queue time,
-   * pressing stop would look like "the chapter finished" and turn the page.
-   */
-  const generation = useRef(0);
-  const spoken = useRef(0);
-  const total = useRef(0);
-  const voice = useRef<SpeechSynthesisVoice | null>(null);
+  const chunks = useMemo(() => {
+    const bodyText = htmlToSpeechText(html);
+    const combined = title ? `${title}\n${bodyText}` : bodyText;
+    return chunkForSpeech(combined);
+  }, [title, html]);
 
-  const teardown = useCallback(() => {
-    generation.current += 1;
-    spoken.current = 0;
-    total.current = 0;
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const abortRef = useRef<AbortController | null>(null);
+  const blobCacheRef = useRef<Map<string, string>>(new Map());
+  const sessionIdRef = useRef(0);
+  const voiceRef = useRef<NeuralVoiceId>(voice);
+  const rateRef = useRef<SpeechPlaybackRate>(rate);
+  const currentRenderedRateRef = useRef<number>(1);
+  const autoPlayedChapterRef = useRef<string | null>(null);
+
+  voiceRef.current = voice;
+  rateRef.current = rate;
+
+  const clearAudioCache = useCallback(() => {
+    for (const url of blobCacheRef.current.values()) {
+      URL.revokeObjectURL(url);
     }
+    blobCacheRef.current.clear();
   }, []);
 
-  const stop = useCallback(() => {
-    teardown();
-    setStatus("idle");
-    setProgress(0);
-  }, [teardown]);
+  const stopPlayback = useCallback(
+    (resetIndex = true) => {
+      sessionIdRef.current += 1;
 
-  const start = useCallback(() => {
-    const synth = window.speechSynthesis;
+      if (abortRef.current) {
+        abortRef.current.abort();
+        abortRef.current = null;
+      }
 
-    // Anything still queued belongs to a previous press; drop it first so two
-    // readings can never overlap.
-    teardown();
-    const mine = generation.current;
+      if (audioRef.current) {
+        audioRef.current.onended = null;
+        audioRef.current.onerror = null;
+        audioRef.current.pause();
+        audioRef.current.removeAttribute("src");
+        audioRef.current.load();
+      }
 
-    const chunks = chunkForSpeech(
-      [title, htmlToSpeechText(html)].filter(Boolean).join("\n"),
-    );
-    if (chunks.length === 0) return;
-
-    total.current = chunks.length;
-    setProgress(0);
-    setStatus("playing");
-
-    // One utterance per chunk, queued in order. The engine drains the queue
-    // itself, which keeps sequencing out of React and off the event loop.
-    const advance = () => {
-      if (generation.current !== mine) return;
-      spoken.current += 1;
-      setProgress(spoken.current / total.current);
-      if (spoken.current < total.current) return;
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
 
       setStatus("idle");
-      setProgress(0);
-      if (nextChapterId) {
-        router.push(`${basePath}/${nextChapterId}?${AUTOPLAY_PARAM}=1`);
+      if (resetIndex) {
+        setChunkIndex(0);
       }
-    };
+    },
+    [],
+  );
 
-    for (const chunk of chunks) {
-      const utterance = new SpeechSynthesisUtterance(chunk);
-      utterance.lang = SPEECH_LANG;
-      if (voice.current) utterance.voice = voice.current;
-      utterance.onend = advance;
-      // A chunk the engine refuses must not strand the rest of the chapter, so
-      // an error advances exactly as a finish does. Cancellation also arrives
-      // here in some browsers, and the generation check absorbs it.
-      utterance.onerror = advance;
-      synth.speak(utterance);
+  // Hydrate persisted voice/rate and tear down audio resources on unmount
+  useEffect(() => {
+    setVoice(readStoredVoice());
+    setRate(readStoredRate());
+    setMounted(true);
+
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.getVoices();
     }
-  }, [basePath, html, nextChapterId, router, teardown, title]);
 
-  // Held in a ref so the reset effect below can call the current version
-  // without listing every prop `start` closes over among its dependencies —
-  // which would tear down playback whenever one of them changed identity.
-  const startRef = useRef(start);
-  useEffect(() => {
-    startRef.current = start;
-  });
-
-  const toggle = useCallback(() => {
-    const synth = window.speechSynthesis;
-    if (status === "playing") {
-      synth.pause();
-      setStatus("paused");
-    } else if (status === "paused") {
-      synth.resume();
-      setStatus("playing");
-    } else {
-      startRef.current();
-    }
-  }, [status]);
-
-  /**
-   * Feature detection and voice resolution.
-   *
-   * `supported` starts false so the server render and the first client render
-   * agree on rendering nothing; the effect then reveals the control. Voices
-   * populate asynchronously, and `voiceschanged` is the only reliable signal —
-   * without it the first utterance can be spoken by the browser's default
-   * (usually English) voice even with `lang` set.
-   */
-  useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
-    setSupported(true);
-
-    const synth = window.speechSynthesis;
-    const resolve = () => {
-      const voices = synth.getVoices();
-      voice.current =
-        voices.find((v) => v.lang === SPEECH_LANG) ??
-        voices.find((v) => v.lang?.toLowerCase().replace("_", "-").startsWith("pl")) ??
-        null;
+    return () => {
+      stopPlayback(false);
+      clearAudioCache();
     };
+  }, [stopPlayback, clearAudioCache]);
 
-    resolve();
-    synth.addEventListener("voiceschanged", resolve);
-    return () => synth.removeEventListener("voiceschanged", resolve);
-  }, []);
-
-  /**
-   * Reset on chapter change, then honour an auto-turned page.
-   *
-   * Keyed on `chapterId` rather than on mount: a soft navigation between two
-   * chapters reuses this component with new props, so mount-only cleanup would
-   * leave the previous chapter reading over the new one.
-   *
-   * The flag is read from `window.location` instead of `useSearchParams`
-   * deliberately. All 687 chapter routes are prerendered, and a prerendered
-   * page that calls `useSearchParams` outside a Suspense boundary fails the
-   * production build — while appearing to work in dev, where routes render on
-   * demand. Reading it in an effect is honest about being client-only and
-   * leaves the static HTML untouched.
-   */
+  // Reset playback when navigating between chapters
   useEffect(() => {
-    if (!supported) return;
+    stopPlayback(true);
+    clearAudioCache();
+    setEngine("neural");
+  }, [chapterId, stopPlayback, clearAudioCache]);
 
-    teardown();
+  const handleFinishedChapter = useCallback(() => {
     setStatus("idle");
-    setProgress(0);
+    setChunkIndex(0);
+    if (nextChapterId) {
+      router.push(`${basePath}/${nextChapterId}?${AUTOPLAY_PARAM}=1`);
+    }
+  }, [basePath, nextChapterId, router]);
+
+  const fetchNeuralChunkUrl = useCallback(
+    async (
+      idx: number,
+      targetVoice: NeuralVoiceId,
+      targetRate: SpeechPlaybackRate,
+      signal?: AbortSignal,
+    ): Promise<string> => {
+      const cacheKey = `${idx}:${targetVoice}:${targetRate}`;
+      const cached = blobCacheRef.current.get(cacheKey);
+      if (cached) return cached;
+
+      const response = await fetch("/api/tts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: chunks[idx],
+          voice: targetVoice,
+          rate: targetRate,
+        }),
+        signal,
+      });
+
+      if (!response.ok) {
+        throw new Error(`TTS HTTP ${response.status}`);
+      }
+
+      const blob = await response.blob();
+      if (blob.size === 0) {
+        throw new Error("Empty TTS audio blob");
+      }
+
+      const objectUrl = URL.createObjectURL(blob);
+      blobCacheRef.current.set(cacheKey, objectUrl);
+      return objectUrl;
+    },
+    [chunks],
+  );
+
+  const speakBrowserFrom = useCallback(
+    (idx: number, sessionId: number) => {
+      if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+        if (sessionId === sessionIdRef.current) {
+          setStatus("idle");
+        }
+        return;
+      }
+
+      if (sessionId !== sessionIdRef.current) return;
+      if (idx >= chunks.length) {
+        handleFinishedChapter();
+        return;
+      }
+
+      setEngine("browser");
+      setChunkIndex(idx);
+      setStatus("playing");
+
+      const utterance = new SpeechSynthesisUtterance(chunks[idx]);
+      utterance.lang = "pl-PL";
+      utterance.rate = rateRef.current;
+
+      const availableVoices = window.speechSynthesis.getVoices();
+      const chosen = pickBestPolishVoice(availableVoices, voiceRef.current);
+      if (chosen) {
+        utterance.voice = chosen;
+        utterance.lang = chosen.lang || "pl-PL";
+      }
+
+      utterance.onend = () => {
+        if (sessionId !== sessionIdRef.current) return;
+        speakBrowserFrom(idx + 1, sessionId);
+      };
+
+      utterance.onerror = () => {
+        if (sessionId !== sessionIdRef.current) return;
+        setStatus("idle");
+      };
+
+      window.speechSynthesis.speak(utterance);
+    },
+    [chunks, handleFinishedChapter],
+  );
+
+  const speakNeuralFrom = useCallback(
+    async (idx: number, sessionId: number) => {
+      if (sessionId !== sessionIdRef.current) return;
+      if (idx >= chunks.length) {
+        handleFinishedChapter();
+        return;
+      }
+
+      const activeVoice = voiceRef.current;
+      const activeRate = rateRef.current;
+
+      setChunkIndex(idx);
+      setStatus("loading");
+
+      const controller = new AbortController();
+      abortRef.current = controller;
+
+      try {
+        const audioUrl = await fetchNeuralChunkUrl(
+          idx,
+          activeVoice,
+          activeRate,
+          controller.signal,
+        );
+        if (sessionId !== sessionIdRef.current) return;
+
+        // Prefetch next chunk in parallel so transitions are gapless
+        if (idx + 1 < chunks.length) {
+          void fetchNeuralChunkUrl(idx + 1, activeVoice, activeRate).catch(
+            () => undefined,
+          );
+        }
+
+        const audio = audioRef.current ?? new Audio();
+        audioRef.current = audio;
+        audio.src = audioUrl;
+        currentRenderedRateRef.current = activeRate;
+        audio.playbackRate = 1;
+
+        audio.onended = () => {
+          if (sessionId !== sessionIdRef.current) return;
+          void speakNeuralFrom(idx + 1, sessionId);
+        };
+
+        audio.onerror = () => {
+          if (sessionId !== sessionIdRef.current) return;
+          speakBrowserFrom(idx, sessionId);
+        };
+
+        await audio.play();
+        if (sessionId === sessionIdRef.current) {
+          setEngine("neural");
+          setStatus("playing");
+        }
+      } catch (err) {
+        if (controller.signal.aborted || sessionId !== sessionIdRef.current) {
+          return;
+        }
+        // Seamless zero-config fallback when Edge Neural is offline / unreachable
+        void err;
+        speakBrowserFrom(idx, sessionId);
+      }
+    },
+    [chunks.length, fetchNeuralChunkUrl, handleFinishedChapter, speakBrowserFrom],
+  );
+
+  const startFrom = useCallback(
+    (startIdx: number) => {
+      if (chunks.length === 0) return;
+      stopPlayback(false);
+      const nextSession = sessionIdRef.current + 1;
+      sessionIdRef.current = nextSession;
+      if (engine === "browser" && typeof navigator !== "undefined" && !navigator.onLine) {
+        speakBrowserFrom(startIdx, nextSession);
+      } else {
+        void speakNeuralFrom(startIdx, nextSession);
+      }
+    },
+    [chunks.length, engine, speakBrowserFrom, speakNeuralFrom, stopPlayback],
+  );
+
+  // Resume playback across chapter navigation (?autoplay=1) without calling useSearchParams
+  useEffect(() => {
+    if (!mounted || chunks.length === 0) return;
+    if (autoPlayedChapterRef.current === chapterId) return;
 
     const params = new URLSearchParams(window.location.search);
-    if (params.has(AUTOPLAY_PARAM)) {
-      // Consume the flag before speaking. It has done its job, and leaving it
-      // on the URL would restart playback on any later reload or shared link.
-      params.delete(AUTOPLAY_PARAM);
-      const query = params.toString();
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname + (query ? `?${query}` : ""),
-      );
-      startRef.current();
+    if (params.get(AUTOPLAY_PARAM) === "1") {
+      autoPlayedChapterRef.current = chapterId;
+      startFrom(0);
+    }
+  }, [mounted, chapterId, chunks.length, startFrom]);
+
+  const handleTogglePlay = () => {
+    if (status === "idle") {
+      startFrom(0);
+      return;
     }
 
-    // Unmount or chapter change: kill the queue *and* invalidate the handlers
-    // holding it, so nothing can navigate from a page that is already gone.
-    return teardown;
-  }, [chapterId, supported, teardown]);
+    if (status === "playing" || status === "loading") {
+      if (engine === "neural" && audioRef.current) {
+        audioRef.current.pause();
+        setStatus("paused");
+      } else if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.pause();
+        setStatus("paused");
+      }
+      return;
+    }
 
-  // A full page unload normally stops the engine, but a bfcache restore can
-  // bring speech back with it. `pagehide` closes that gap.
-  useEffect(() => {
-    const kill = () => {
-      generation.current += 1;
-      window.speechSynthesis?.cancel();
-    };
-    window.addEventListener("pagehide", kill);
-    return () => window.removeEventListener("pagehide", kill);
-  }, []);
+    // Resume from pause
+    if (engine === "neural" && audioRef.current && audioRef.current.src) {
+      void audioRef.current
+        .play()
+        .then(() => setStatus("playing"))
+        .catch(() => startFrom(chunkIndex));
+    } else if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.resume();
+      setStatus("playing");
+    } else {
+      startFrom(chunkIndex);
+    }
+  };
 
-  if (!supported) return null;
+  const handleVoiceChange = (nextVoice: NeuralVoiceId) => {
+    if (nextVoice === voice) return;
+    setVoice(nextVoice);
+    voiceRef.current = nextVoice;
+    try {
+      window.localStorage.setItem(VOICE_STORAGE_KEY, nextVoice);
+    } catch {
+      // Ignore storage errors
+    }
+    clearAudioCache();
 
-  const active = status !== "idle";
-  const playing = status === "playing";
+    if (status !== "idle") {
+      startFrom(chunkIndex);
+    }
+  };
+
+  const handleRateChange = (nextRate: SpeechPlaybackRate) => {
+    if (nextRate === rate) return;
+    setRate(nextRate);
+    rateRef.current = nextRate;
+    try {
+      window.localStorage.setItem(RATE_STORAGE_KEY, String(nextRate));
+    } catch {
+      // Ignore storage errors
+    }
+    clearAudioCache();
+
+    if (status === "playing" && engine === "neural" && audioRef.current) {
+      audioRef.current.playbackRate = nextRate / currentRenderedRateRef.current;
+    } else if (status !== "idle" && engine === "browser") {
+      startFrom(chunkIndex);
+    }
+  };
+
+  if (!mounted || chunks.length === 0) {
+    return null;
+  }
+
+  const isActive = status !== "idle";
+  const primaryLabel =
+    status === "playing" || status === "loading"
+      ? t.reader.pauseListening
+      : status === "paused"
+        ? t.reader.resumeListening
+        : t.reader.listen;
 
   return (
-    <div className="fixed bottom-4 right-3 z-40 sm:bottom-6 sm:right-4 print:hidden">
+    <div
+      className="fixed bottom-4 right-3 z-40 flex flex-wrap items-center gap-1.5 rounded-full border border-zinc-200 bg-white/95 px-2.5 py-1.5 shadow-lg backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/95 sm:bottom-6 sm:right-4 print:hidden"
+      role="region"
+      aria-label={t.reader.listen}
+    >
+      {/* Voice switcher: Zofia / Marek (Edge Neural + smart local fallback) */}
       <div
-        className={cn(
-          "relative flex items-center overflow-hidden rounded-full border shadow-lg backdrop-blur",
-          "border-zinc-200 bg-white/90 dark:border-zinc-800 dark:bg-zinc-950/90",
-        )}
+        className="flex items-center rounded-full border border-zinc-200 bg-zinc-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-900/90"
+        role="group"
+        aria-label="Wybór głosu lektora"
       >
-        <button
-          type="button"
-          onClick={toggle}
-          aria-label={
-            playing
-              ? t.reader.pauseListening
-              : status === "paused"
-                ? t.reader.resumeListening
-                : t.reader.listen
-          }
-          className={cn(BUTTON, "rounded-full")}
-        >
-          {playing ? (
-            <Pause className="size-5" aria-hidden="true" />
-          ) : (
-            <Play className="size-5" aria-hidden="true" />
-          )}
-        </button>
+        {NEURAL_VOICES.map((option) => {
+          const selected = voice === option.id;
+          return (
+            <button
+              key={option.id}
+              type="button"
+              onClick={() => handleVoiceChange(option.id)}
+              aria-pressed={selected}
+              title={`Głos: ${option.label} (Polski Neural)`}
+              className={`rounded-full px-2 py-0.5 text-[11px] font-medium transition-colors ${
+                selected
+                  ? "bg-zinc-900 text-white dark:bg-emerald-500 dark:text-zinc-950"
+                  : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              }`}
+            >
+              {option.label}
+            </button>
+          );
+        })}
+      </div>
 
-        {active && (
+      {/* Speed switcher: 1x / 1.25x / 1.5x */}
+      <div
+        className="flex items-center rounded-full border border-zinc-200 bg-zinc-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-900/90"
+        role="group"
+        aria-label="Prędkość odtwarzania"
+      >
+        {SPEED_OPTIONS.map((opt) => {
+          const selected = rate === opt;
+          return (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => handleRateChange(opt)}
+              aria-pressed={selected}
+              className={`rounded-full px-1.5 py-0.5 font-mono text-[11px] transition-colors ${
+                selected
+                  ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950"
+                  : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              }`}
+            >
+              {opt}x
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Play / Pause main pill button */}
+      <button
+        type="button"
+        onClick={handleTogglePlay}
+        className="inline-flex items-center gap-1.5 rounded-full bg-zinc-900 px-3 py-1 text-xs font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200"
+      >
+        {status === "loading" ? (
+          <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" />
+        ) : status === "playing" ? (
+          <Pause className="h-3.5 w-3.5" aria-hidden="true" />
+        ) : isActive ? (
+          <Play className="h-3.5 w-3.5" aria-hidden="true" />
+        ) : (
+          <Volume2 className="h-3.5 w-3.5" aria-hidden="true" />
+        )}
+        <span>{primaryLabel}</span>
+      </button>
+
+      {/* Progress & Stop button while active */}
+      {isActive && (
+        <>
+          <span
+            className="hidden font-mono text-[11px] text-zinc-500 dark:text-zinc-400 sm:inline"
+            title={engine === "neural" ? "Głos neuronowy (Edge Neural)" : "Głos przeglądarki"}
+          >
+            {chunkIndex + 1}/{chunks.length}
+          </span>
           <button
             type="button"
-            onClick={stop}
+            onClick={() => stopPlayback(true)}
             aria-label={t.reader.stopListening}
-            className={cn(BUTTON, "rounded-full")}
+            title={t.reader.stopListening}
+            className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-zinc-200 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
           >
-            <Square className="size-4" aria-hidden="true" />
+            <Square className="h-3 w-3" aria-hidden="true" />
           </button>
-        )}
-
-        {/* Chapter progress. Decorative — the buttons already carry the state
-            for assistive tech, and a live percentage would be noise. */}
-        {active && (
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 bottom-0 h-0.5 bg-zinc-200 dark:bg-zinc-800"
-          >
-            <span
-              className="block h-full bg-zinc-900 transition-[width] duration-300 dark:bg-zinc-100"
-              style={{ width: `${Math.round(progress * 100)}%` }}
-            />
-          </span>
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 }

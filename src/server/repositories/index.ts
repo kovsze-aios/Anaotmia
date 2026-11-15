@@ -17,6 +17,14 @@ export {
   chemiaMatura2023Theory,
   chemiaMatura2015Theory,
 } from "./matura-cke";
+export {
+  fizykaTheory,
+  matematykaTheory,
+  biochemiaTheory,
+  neurobiologiaTheory,
+  farmakologiaTheory,
+  informatykaTheory,
+} from "./oer-departments";
 
 export { biologia, getBiologiaRecords, getBiologiaRecord } from "./biologia";
 export { chemia, getChemiaRecords, getChemiaRecord } from "./chemia";

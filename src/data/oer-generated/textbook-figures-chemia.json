@@ -1,0 +1,299 @@
+[
+  {
+    "id": "fig-chem-profil-energetyczny",
+    "subject": "chemia",
+    "chapterIds": [
+      "chem1-czesc-157-wprowadzenie-do-termodynamiki-chemicznej",
+      "chem1-czesc-158-cieplo-reakcji-chemicznej-entalpia-i-prawo-hessa",
+      "chem1-czesc-159-rownania-termochemiczne-i-prawo-hessa",
+      "cke-chem-seed-prawo-hessa-2023",
+      "biochem-rownanie-michaelisa-mentena"
+    ],
+    "titlePl": "Profil energetyczny reakcji egzotermicznej i endotermicznej (wpływ katalizatora na Ea i ΔH)",
+    "titleLat": "Energia activationis (Ea) et enthalpia reactionis (ΔH)",
+    "caption": "Porównanie drogi reakcji bez katalizatora i z katalizatorem: katalizator tworzy nową drogę o niższej energii aktywacji (Ea), nie zmieniając entalpii reakcji ΔH ani stanu równowagi.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "reaction-energy-profile",
+      "elementsSummary": "Wykres energii potencjalnej względem postępu reakcji egzotermicznej (ΔH < 0) z barierą Ea bez katalizatora, obniżoną krzywą katalizowaną Ea,kat oraz wstawką reakcji endotermicznej (ΔH > 0)."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax Chemistry / Open AGH / CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-chem-substraty",
+        "labelPl": "Poziom energetyczny substratów (H_substratów)",
+        "labelLat": "Stan początkowy",
+        "x": 16,
+        "y": 46,
+        "description": "Wartość średniej energii wewnętrznej / entalpii cząsteczek substratów przed zderzeniem aktywnym. Stan początkowy jest niezależny od zastosowanego katalizatora.",
+        "clinicalNote": "Aby zaszła reakcja, zderzenie substratów musi być odpowiednio zorientowane przestrzennie i mieć energię ≥ Ea."
+      },
+      {
+        "id": "hs-chem-kompleks",
+        "labelPl": "Kompleks aktywny i energia aktywacji bez katalizatora (Ea)",
+        "labelLat": "Stan przejściowy",
+        "x": 48,
+        "y": 20,
+        "description": "Maksimum energetyczne odpowiada nietrwałemu kompleksowi aktywnemu. Energia aktywacji (Ea = E_szczytu − E_substratów > 0) to bariera, którą muszą pokonać substraty.",
+        "clinicalNote": "Wzrost temperatury nie zmienia samej wartości Ea, lecz zwiększa ułamek cząsteczek o energii ≥ Ea (przyspiesza każdą reakcję)."
+      },
+      {
+        "id": "hs-chem-katalizator",
+        "labelPl": "Działanie katalizatora (Ea,kat < Ea)",
+        "labelLat": "Alternatywna droga reakcji",
+        "x": 48,
+        "y": 38,
+        "description": "Katalizator wchodzi w przejściowe oddziaływanie z substratami, prowadząc reakcję inną ścieżką o niższej energii aktywacji (Ea,kat < Ea). Przyspiesza jednakowo reakcję w prawo i w lewo.",
+        "clinicalNote": "PUŁAPKA MATURALNA CKE: Katalizator NIE ZMIENIA entalpii reakcji ΔH ani stałej równowagi K — skraca jedynie czas dojścia do stanu równowagi!"
+      },
+      {
+        "id": "hs-chem-produkty",
+        "labelPl": "Produkty reakcji egzotermicznej i ΔH < 0",
+        "labelLat": "ΔH = H_prod − H_sub < 0",
+        "x": 82,
+        "y": 74,
+        "description": "W reakcji egzotermicznej produkty mają niższą energię niż substraty (ΔH < 0), więc nadmiar ciepła jest oddawany do otoczenia. Zgodnie z prawem Hessa ΔH zależy wyłącznie od stanów początkowego i końcowego.",
+        "clinicalNote": "W zapisie reakcji odwracalnej: Ea(odwrotnej) = Ea(wprost) + |ΔH|."
+      },
+      {
+        "id": "hs-chem-endo",
+        "labelPl": "Porównanie: reakcja endotermiczna (ΔH > 0)",
+        "labelLat": "H_prod > H_sub",
+        "x": 76,
+        "y": 22,
+        "description": "W reakcjach endotermicznych produkty leżą energetycznie wyżej od substratów (ΔH > 0) — układ pobiera ciepło z otoczenia, a energia aktywacji wprost jest zawsze większa niż ΔH (Ea ≥ ΔH).",
+        "clinicalNote": "Podniesienie temperatury w układzie w równowadze przesuwa ją zgodnie z regułą przekory w stronę reakcji endotermicznej."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Wyjście z poziomu substratów w kierunku kompleksu aktywnego",
+        "explanationHtml": "<p>Substraty muszą zgromadzić podczas zderzeń energię równą co najmniej <strong>energii aktywacji E<sub>a</sub></strong>, aby osiągnąć stan kompleksu aktywnego.</p>",
+        "activeHotspotIds": ["hs-chem-substraty", "hs-chem-kompleks"],
+        "flowArrow": [16, 46, 48, 20]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Wpływ katalizatora — obniżenie progu (Ea,kat < Ea)",
+        "explanationHtml": "<p>Dodatek <strong>katalizatora</strong> otwiera alternatywny mechanizm reakcji o niższym szczycie (<strong>E<sub>a,kat</sub></strong>), dzięki czemu w tej samej temperaturze znacznie więcej zderzeń jest efektywnych.</p>",
+        "activeHotspotIds": ["hs-chem-substraty", "hs-chem-katalizator"],
+        "flowArrow": [48, 20, 48, 38]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Zejście do produktów i efekt cieplny ΔH < 0",
+        "explanationHtml": "<p>Układ oddaje energię, osiągając trwały poziom produktów. Różnica <code>ΔH = H<sub>prod</sub> − H<sub>sub</sub></code> pozostaje identyczna niezależnie od obecności katalizatora.</p>",
+        "activeHotspotIds": ["hs-chem-katalizator", "hs-chem-produkty"],
+        "flowArrow": [48, 38, 82, 74]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Zestawienie z profilem endotermicznym (ΔH > 0)",
+        "explanationHtml": "<p>Gdy produkty mają wyższą entalpię niż substraty (<strong>ΔH &gt; 0</strong>), reakcja jest endotermiczna i wymaga ciągłego pobierania energii z otoczenia.</p>",
+        "activeHotspotIds": ["hs-chem-endo"],
+        "flowArrow": [60, 26, 76, 22]
+      }
+    ]
+  },
+  {
+    "id": "fig-chem-ogniwo-daniella",
+    "subject": "chemia",
+    "chapterIds": [
+      "cke-chem-seed-redoks-ogniwa-core",
+      "chem1-czesc-165-entalpia-swobodna-ukladu-i-prawo-dzialan-mas",
+      "chem1-czesc-165-entalpia-swobodna-ukladu-i-prawo-dzialania-mas",
+      "chem1-czesc-166-entalpia-swobodna-i-prawo-dzialania-mas"
+    ],
+    "titlePl": "Budowa ogniwa galwanicznego Daniella (Zn | Zn2+ || Cu2+ | Cu)",
+    "titleLat": "Pila galvanica Danielli",
+    "caption": "Przepływ elektronów, kierunek migracji jonów przez klucz elektrolityczny, równania reakcji półogniwowych na anodzie (⊖) i katodzie (⊕) oraz obliczanie SEM = +1,10 V.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "daniell-cell",
+      "elementsSummary": "Dwie zlewki z półogniwem cynkowym (anoda −) i miedzianym (katoda +), klucz elektrolityczny KNO3 oraz obwód zewnętrzny z woltomierzem (1,10 V)."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax Chemistry / Open AGH / CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-ogn-anoda",
+        "labelPl": "Anoda (⊖) cynkowa: Zn(s) → Zn2+(aq) + 2e−",
+        "labelLat": "E°(Zn2+/Zn) = −0,76 V",
+        "x": 22,
+        "y": 54,
+        "description": "Półogniwo o niższym potencjale standardowym (−0,76 V < +0,34 V) zawsze stanowi anodę w ogniwie galwanicznym. Zachodzi tu utlenianie metalu — masa blaszki cynkowej stopniowo maleje.",
+        "clinicalNote": "PUŁAPKA CKE: W ogniwie galwanicznym ANODA ma znak ujemny (⊖), w elektrolizerze zaś anoda jest podłączona do bieguna dodatniego (+)!"
+      },
+      {
+        "id": "hs-ogn-elektrony",
+        "labelPl": "Kierunek przepływu elektronów (e−): Anoda → Katoda",
+        "labelLat": "Obwód zewnętrzny",
+        "x": 36,
+        "y": 16,
+        "description": "Elektrony uwolnione podczas utleniania cynku płyną drutem (obwodem zewnętrznym) od anody (⊖) do katody (⊕). Nigdy nie przechodzą przez roztwór elektrolitu!",
+        "clinicalNote": "Umowny kierunek prądu elektrycznego rysuje się odwrotnie niż ruch elektronów, lecz na chemii pytamy zawsze o kierunek elektronów e−."
+      },
+      {
+        "id": "hs-ogn-woltomierz",
+        "labelPl": "Woltomierz i SEM ogniwa = +1,10 V",
+        "labelLat": "SEM = E°kat − E°an > 0",
+        "x": 50,
+        "y": 16,
+        "description": "Siła elektromotoryczna ogniwa standardowego wynosi: SEM = E°(Cu2+/Cu) − E°(Zn2+/Zn) = +0,34 V − (−0,76 V) = +1,10 V. Zapis schematu ogniwa: ⊖ Zn(s) | Zn2+(aq) || Cu2+(aq) | Cu(s) ⊕.",
+        "clinicalNote": "Dodatnia wartość SEM oznacza ujemną entalpię swobodną ΔG° = −nF·SEM < 0, czyli reakcja zachodzi samorzutnie."
+      },
+      {
+        "id": "hs-ogn-klucz",
+        "labelPl": "Klucz elektrolityczny (KNO3 / KCl)",
+        "labelLat": "Mostek jonowy (||)",
+        "x": 50,
+        "y": 42,
+        "description": "Rurka z żelem elektrolitu zamyka obwód prądowy wewnątrz roztworu i utrzymuje elektroobojętność obu półogniw: aniony (NO3−) wędrują w stronę anody (kompensują nadmiar Zn2+), a kationy (K+) w stronę katody.",
+        "clinicalNote": "Bez klucza elektrolitycznego obwód jest otwarty i SEM spada do zera; symbole podwójnej kreski || oznaczają właśnie klucz."
+      },
+      {
+        "id": "hs-ogn-katoda",
+        "labelPl": "Katoda (⊕) miedziana: Cu2+(aq) + 2e− → Cu(s)",
+        "labelLat": "E°(Cu2+/Cu) = +0,34 V",
+        "x": 78,
+        "y": 54,
+        "description": "Półogniwo o wyższym potencjale standardowym (+0,34 V) jest katodą. Zachodzi tu redukcja kationów Cu2+, na blaszce osadza się metaliczna miedź (masa katody rośnie), a błękitny roztwór jaśnieje.",
+        "clinicalNote": "Zapamiętaj mnemotechnikę: Anoda = Utlenianie (A-U samogłoski), Katoda = Redukcja (K-R spółgłoski)."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Utlenianie cynku na anodzie (⊖)",
+        "explanationHtml": "<p>Na elektrodzie o niższym potencjale (<strong>Zn, E° = −0,76 V</strong>) atomy cynku oddają elektrony i przechodzą do roztworu jako jony <code>Zn<sup>2+</sup></code>.</p>",
+        "activeHotspotIds": ["hs-ogn-anoda"],
+        "flowArrow": [22, 62, 22, 24]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Wędrówka elektronów e− obwodem zewnętrznym (SEM = 1,10 V)",
+        "explanationHtml": "<p>Elektrony płyną przewodem zewnętrznym przez woltomierz (wskazujący <strong>1,10 V</strong> w warunkach standardowych) w kierunku katody miedzianej.</p>",
+        "activeHotspotIds": ["hs-ogn-elektrony", "hs-ogn-woltomierz"],
+        "flowArrow": [24, 16, 76, 16]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Redukcja jonów Cu2+ na katodzie (⊕)",
+        "explanationHtml": "<p>Na elektrodzie <strong>Cu (E° = +0,34 V)</strong> jony <code>Cu<sup>2+</sup></code> przyjmują dopływające elektrony i redukują się do metalicznej miedzi osadzającej się na płytce.</p>",
+        "activeHotspotIds": ["hs-ogn-katoda"],
+        "flowArrow": [78, 24, 78, 62]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Ruch jonów przez klucz elektrolityczny zamyka obwód",
+        "explanationHtml": "<p>Aby zrównoważyć ładunki w obu zlewkach, aniony z klucza płyną do półogniwa anodowego, a kationy do katodowego.</p>",
+        "activeHotspotIds": ["hs-ogn-klucz"],
+        "flowArrow": [60, 42, 40, 42]
+      }
+    ]
+  },
+  {
+    "id": "fig-chem-hybrydyzacja-vsepr",
+    "subject": "chemia",
+    "chapterIds": [
+      "chem1-czesc-75-hybrydyzacja-orbitali-na-przykladzie-metanu",
+      "chem1-czesc-76-czasteczki-wieloatomowe-hybrydyzacja-orbitali",
+      "chem1-czesc-77-hybrydyzacja-orbitali-w-czasteczkach-wieloatomowych",
+      "chem1-czesc-78-hybrydyzacja-orbitali-w-czasteczkach-wieloatomowych",
+      "chem1-czesc-79-hybrydyzacja-orbitali-atomowych-a-geometria-czasteczek",
+      "chem1-czesc-80-hybrydyzacja-orbitali-w-czasteczkach-wieloatomowych",
+      "chem1-czesc-81-czasteczki-wieloatomowe-z-wiazaniami-podwojnymi-i-potrojnymi-etylen-i-acetylen",
+      "chem1-czesc-100-hybrydyzacja-orbitali-a-symetria-czasteczek",
+      "cke-chem-seed-weglowodory-core"
+    ],
+    "titlePl": "Hybrydyzacja orbitali (sp3, sp2, sp) i geometria cząsteczek VSEPR",
+    "titleLat": "Hybridisatio orbitalium et geometria VSEPR",
+    "caption": "Związek między liczbą steryczną atomu centralnego, typem hybrydyzacji (sp3 109,5°, sp2 120°, sp 180°), obecnością wiązań σ i π oraz odpychaniem niewiążących par elektronowych (NH3, H2O).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "orbital-hybridization",
+      "elementsSummary": "Trzy panele geometrii: tetraedr sp3 (CH4, 109,5°), trygonalna płaska sp2 z wiązaniem pi (C2H4, 120°), liniowa sp z dwoma wiązaniami pi (C2H2, 180°) oraz porównanie sp3 w NH3 i H2O."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax Chemistry / Open AGH / CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-hyb-sp3",
+        "labelPl": "Hybrydyzacja sp3 (Tetraedr, 109,5° — np. CH4)",
+        "labelLat": "Liczba steryczna LS = 4",
+        "x": 20,
+        "y": 42,
+        "description": "Zmieszanie 1 orbitalu s i 3 orbitali p daje 4 równocenne orbitale sp3 skierowane ku narożom czworościanu foremnego (kąty 109,5°). Tworzy 4 wiązania σ, brak wiązań π (np. w alkanach).",
+        "clinicalNote": "Atomy węgla sp3 z czterema różnymi podstawnikami tworzą centra chiralności (izomeria optyczna)."
+      },
+      {
+        "id": "hs-hyb-sp2",
+        "labelPl": "Hybrydyzacja sp2 (Trójkąt płaski, 120° — np. C2H4)",
+        "labelLat": "Liczba steryczna LS = 3",
+        "x": 52,
+        "y": 42,
+        "description": "3 zhybrydyzowane orbitale sp2 leżą w jednej płaszczyźnie co 120°, tworząc wiązania σ. Pozostały 1 niezhybrydyzowany orbital p ustawia się prostopadle do tej płaszczyzny i tworzy wiązanie π.",
+        "clinicalNote": "Podwójne wiązanie C=C w alkenach (1×σ + 1×π) blokuje swobodny obrót i umożliwia występowanie izomerii cis–trans (E/Z)."
+      },
+      {
+        "id": "hs-hyb-sp",
+        "labelPl": "Hybrydyzacja sp (Liniowa, 180° — np. C2H2, CO2)",
+        "labelLat": "Liczba steryczna LS = 2",
+        "x": 84,
+        "y": 42,
+        "description": "2 zhybrydyzowane orbitale sp ustawiają się wzdłuż jednej prostej (kąt 180°), tworząc po 2 wiązania σ. Dwa niezhybrydyzowane orbitale p tworzą dwa prostopadłe do siebie wiązania π (np. etyn H−C≡C−H lub CO2).",
+        "clinicalNote": "Ze wzrostem udziału orbitalu s (sp 50% > sp2 33% > sp3 25%) rośnie elektroujemność atomu C i skraca się długość wiązania (C−C > C=C > C≡C)."
+      },
+      {
+        "id": "hs-hyb-pi",
+        "labelPl": "Wiązanie σ (osiowe) vs wiązanie π (boczne)",
+        "labelLat": "Nakładanie orbitali",
+        "x": 52,
+        "y": 24,
+        "description": "Wiązanie σ powstaje przez czołowe (osiowe) nałożenie orbitali i jest mocniejsze niż wiązanie π tworzone przez boczne nakładanie niezhybrydyzowanych orbitali p nad i pod osią wiązania.",
+        "clinicalNote": "W reakcjach addycji (np. alkenów z Br2) pęka zawsze słabsze wiązanie π, a szkielet wiązań σ pozostaje nienaruszony."
+      },
+      {
+        "id": "hs-hyb-vsepr",
+        "labelPl": "Teoria VSEPR: odpychanie wolnych par (NH3 107°, H2O 104,5°)",
+        "labelLat": "Liczba steryczna LS = σ + wolne pary",
+        "x": 50,
+        "y": 78,
+        "description": "Zarówno w NH3 (3σ + 1 para), jak i w H2O (2σ + 2 pary) liczba steryczna LS = 4 i hybrydyzacja wynosi sp3! Wolna para zajmuje więcej przestrzeni i ściska kąty między wiązaniami: CH4 (109,5°) > NH3 (107°, piramida trygonalna) > H2O (104,5°, kątowa).",
+        "clinicalNote": "Matura CKE: Zawsze rozróżniaj geometrię elektronową (sp3 — tetraedr) od kształtu samej cząsteczki H2O (kształt kątowy / V) i NH3 (piramida trygonalna)!"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Hybrydyzacja sp3 (LS = 4, tetraedr 109,5°)",
+        "explanationHtml": "<p>Cztery równocenne orbitale <strong>sp<sup>3</sup></strong> rozmieszczają się możliwie najdalej od siebie pod kątem <strong>109,5°</strong> (np. metan CH<sub>4</sub> — same wiązania σ).</p>",
+        "activeHotspotIds": ["hs-hyb-sp3"],
+        "flowArrow": [12, 42, 28, 42]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Hybrydyzacja sp2 i powstanie wiązania π (120°)",
+        "explanationHtml": "<p>Trzy orbitale <strong>sp<sup>2</sup></strong> tworzą płaski trójkąt (<strong>120°</strong>), a wolny orbital <em>p</em> nakłada się bocznie z sąsiednim atomem, dając <strong>wiązanie π</strong> (np. C<sub>2</sub>H<sub>4</sub>).</p>",
+        "activeHotspotIds": ["hs-hyb-sp2", "hs-hyb-pi"],
+        "flowArrow": [28, 42, 52, 42]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Hybrydyzacja sp — układ liniowy 180° (2×σ + 2×π)",
+        "explanationHtml": "<p>Dwa orbitale <strong>sp</strong> tworzą układ liniowy (<strong>180°</strong>), podczas gdy dwie pary orbitali <em>p</em> budują wiązanie potrójne w etynie (C≡C) lub dwa podwójne w CO<sub>2</sub>.</p>",
+        "activeHotspotIds": ["hs-hyb-sp"],
+        "flowArrow": [58, 42, 84, 42]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Reguła VSEPR — zmniejszanie kąta przez wolne pary",
+        "explanationHtml": "<p>Mimo hybrydyzacji <strong>sp<sup>3</sup></strong> wolne pary elektronowe odpychają mocniej niż pary wiążące, zmniejszając kąt w <strong>NH<sub>3</sub> (107°)</strong> i <strong>H<sub>2</sub>O (104,5°)</strong>.</p>",
+        "activeHotspotIds": ["hs-hyb-vsepr"],
+        "flowArrow": [20, 52, 50, 78]
+      }
+    ]
+  }
+]

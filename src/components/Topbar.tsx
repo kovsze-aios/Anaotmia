@@ -17,8 +17,8 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
   const { t } = useI18n();
   const pathname = usePathname();
 
-  // The atlas lives at the root; everything textbook-shaped lives under /theory.
-  const onAtlas = pathname === "/";
+  // The atlas lives at the root (and is mirrored at /atlas); everything textbook-shaped lives under /theory.
+  const onAtlas = pathname === "/" || pathname.startsWith("/atlas");
   const onTheory = pathname.startsWith("/theory") || pathname.startsWith("/matura");
 
   return (

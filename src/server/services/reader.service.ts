@@ -65,6 +65,7 @@ function build(subject: TheorySubject): BuiltSpine {
             title: section.title,
             order: ++order,
             ckeStatus: section.ckeMetadata.status,
+            tier: section.ckeMetadata.tier,
             formulas: section.ckeMetadata.formulas,
             requirementCodes: section.ckeMetadata.requirementCodes,
           }

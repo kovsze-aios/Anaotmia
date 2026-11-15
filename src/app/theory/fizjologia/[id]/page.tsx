@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const { section, domain } = found;
-  // The root layout's template appends "| Medycyna", so the title carries the
+  // The root layout's template appends "| SportNotes", so the title carries the
   // topic and nothing else.
   const title = section.title;
   const description = chapterDescription(section);
@@ -41,17 +41,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: url },
     openGraph: {
       // Social cards carry no title template, so the brand is spelled out.
-      title: `${section.title} | Medycyna`,
+      title: `${section.title} | SportNotes`,
       description,
       type: "article",
       url,
-      siteName: "Medycyna",
+      siteName: "SportNotes",
       locale: "pl_PL",
       images: [{ url: ogImage, width: 1200, height: 630, alt: section.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${section.title} | Medycyna`,
+      title: `${section.title} | SportNotes`,
       description,
       images: [ogImage],
     },

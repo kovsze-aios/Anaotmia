@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { I18nProvider } from "@/i18n";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anatomia2026.pl";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://sportnotes.pl";
 
 const plutoSansLight = localFont({
   src: "../../public/fonts/PlutoSansLight.woff2",
@@ -44,9 +44,10 @@ export const metadata: Metadata = {
   // subject and the brand is appended once, here. Pages that set no title of
   // their own fall back to `default`.
   title: {
-    default: "Medycyna",
-    template: "%s | Medycyna",
+    default: "SportNotes",
+    template: "%s | SportNotes",
   },
+  applicationName: "SportNotes",
   description:
     "Inteligentny podręcznik i baza wiedzy medycznej. Anatomia, interaktywny atlas 3D i system Active Recall.",
   metadataBase: new URL(SITE_URL),
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    siteName: "Medycyna",
+    siteName: "SportNotes",
     url: SITE_URL,
     type: "website",
     images: "/seo/og-image",

@@ -1,4 +1,9 @@
 import { ANATOMY_TERMS_PL } from "@/i18n";
+import {
+  ALL_ANATOMICAL_ENTITIES,
+  getAnatomicalEntity,
+  type AnatomicalEntity,
+} from "@/data/anatomy-entities";
 
 /**
  * Finding anatomical structures inside Polish textbook prose.
@@ -65,6 +70,8 @@ export interface AnatomyTermMatch {
   latin: string;
   /** BodyParts3D name — the atlas's identity for this structure. */
   englishName: string;
+  /** Optional rich 3D entity metadata when registered in anatomy-entities. */
+  entity?: AnatomicalEntity;
 }
 
 interface Entry {
@@ -171,8 +178,62 @@ export function findAnatomyTerms(text: string): AnatomyTermMatch[] {
       pl: entry.pl,
       latin: entry.latin,
       englishName: entry.englishName,
+      entity: getAnatomicalEntity(entry.englishName),
     });
   }
 
   return matches;
+}
+
+/**
+ * Extended matcher used by textbook readers (`<AnatomicalTextLinker />`):
+ * combines the full BodyParts3D stem matcher with explicit unambiguous forms
+ * from `ANATOMICAL_ENTITIES` (including short 5-letter core organs like
+ * "serce", "nerka", "płuco" that `MIN_TERM_LENGTH` omits from stem heuristics).
+ */
+const ENTITY_FORM_ENTRIES = Object.values(ALL_ANATOMICAL_ENTITIES).flatMap((entity) =>
+  entity.forms
+    .filter((f) => f.trim().length >= 3 && !AMBIGUOUS.has(f.trim().toLowerCase()))
+    .map((form) => ({
+      form: form.trim().toLowerCase(),
+      entity,
+    })),
+).sort((a, b) => b.form.length - a.form.length);
+
+const ENTITY_FORM_REGEX =
+  ENTITY_FORM_ENTRIES.length > 0
+    ? new RegExp(
+        `(?<![${LETTER}])(?:${ENTITY_FORM_ENTRIES.map((e) =>
+          e.form.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+        ).join("|")})(?![${LETTER}])`,
+        "giu",
+      )
+    : null;
+
+export function findTextbookAnatomyTerms(text: string): AnatomyTermMatch[] {
+  const baseMatches = findAnatomyTerms(text);
+  if (!text || !ENTITY_FORM_REGEX) return baseMatches;
+
+  const extraMatches: AnatomyTermMatch[] = [];
+  const re = new RegExp(ENTITY_FORM_REGEX.source, ENTITY_FORM_REGEX.flags);
+  for (const m of text.matchAll(re)) {
+    const start = m.index;
+    const surface = m[0];
+    const end = start + surface.length;
+    const overlaps = baseMatches.some((b) => start < b.end && end > b.start);
+    if (overlaps) continue;
+    const hit = ENTITY_FORM_ENTRIES.find((e) => e.form === surface.toLowerCase());
+    if (!hit) continue;
+    extraMatches.push({
+      start,
+      end,
+      surface,
+      pl: hit.entity.namePl,
+      latin: hit.entity.nameLat,
+      englishName: hit.entity.meshId,
+      entity: hit.entity,
+    });
+  }
+
+  return [...baseMatches, ...extraMatches].sort((a, b) => a.start - b.start);
 }

@@ -10,6 +10,12 @@ import {
   getDomains,
   biologiaMatura2023Theory,
   chemiaMatura2023Theory,
+  fizykaTheory,
+  matematykaTheory,
+  biochemiaTheory,
+  neurobiologiaTheory,
+  farmakologiaTheory,
+  informatykaTheory,
 } from "../repositories";
 import { getTheoryDomains, type TheorySubject } from "./textbook.service";
 
@@ -31,6 +37,7 @@ export function toNavDomain(domain: TextbookDomain): NavDomain {
             id: section.id,
             title: section.title,
             ckeStatus: section.ckeMetadata.status,
+            tier: section.ckeMetadata.tier,
             formulas: section.ckeMetadata.formulas,
             requirementCodes: section.ckeMetadata.requirementCodes,
           }
@@ -133,6 +140,15 @@ export function getSidebarNavigation(): SidebarNavigation {
     }),
   ];
 
+  const toDepartmentLinks = (subject: string, domains: TextbookDomain[]) =>
+    domains.map((domain) => {
+      const first = domain.sections[0];
+      return {
+        href: first ? `/theory/${subject}/${first.id}` : `/theory/${subject}`,
+        label: `${domain.icon ?? "📚"} ${domain.shortTitle}`,
+      };
+    });
+
   return {
     anatomy,
     physiology,
@@ -140,6 +156,12 @@ export function getSidebarNavigation(): SidebarNavigation {
     chemistry,
     maturaBiology,
     maturaChemistry,
+    physics: toDepartmentLinks("fizyka", fizykaTheory),
+    mathematics: toDepartmentLinks("matematyka", matematykaTheory),
+    biochemistry: toDepartmentLinks("biochemia", biochemiaTheory),
+    neurobiology: toDepartmentLinks("neurobiologia", neurobiologiaTheory),
+    pharmacology: toDepartmentLinks("farmakologia", farmakologiaTheory),
+    informatics: toDepartmentLinks("informatyka", informatykaTheory),
   };
 }
 

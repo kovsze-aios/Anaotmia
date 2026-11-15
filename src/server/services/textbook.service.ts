@@ -9,6 +9,12 @@ import {
   biologiaMatura2023Theory,
   chemiaMatura2015Theory,
   chemiaMatura2023Theory,
+  fizykaTheory,
+  matematykaTheory,
+  biochemiaTheory,
+  neurobiologiaTheory,
+  farmakologiaTheory,
+  informatykaTheory,
 } from "../repositories";
 
 /** The subjects that have a theory textbook. */
@@ -20,7 +26,13 @@ export type TheorySubject =
   | "biologia-matura-2015"
   | "biologia-matura-2023"
   | "chemia-matura-2015"
-  | "chemia-matura-2023";
+  | "chemia-matura-2023"
+  | "fizyka"
+  | "matematyka"
+  | "biochemia"
+  | "neurobiologia"
+  | "farmakologia"
+  | "informatyka";
 
 /**
  * Reads every subject's domains through one entry point so callers never have
@@ -44,6 +56,18 @@ export function getTheoryDomains(subject: TheorySubject): TextbookDomain[] {
       return chemiaMatura2015Theory;
     case "chemia-matura-2023":
       return chemiaMatura2023Theory;
+    case "fizyka":
+      return fizykaTheory;
+    case "matematyka":
+      return matematykaTheory;
+    case "biochemia":
+      return biochemiaTheory;
+    case "neurobiologia":
+      return neurobiologiaTheory;
+    case "farmakologia":
+      return farmakologiaTheory;
+    case "informatyka":
+      return informatykaTheory;
   }
 }
 

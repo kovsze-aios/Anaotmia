@@ -7,7 +7,7 @@ import type { TextbookSection } from "@/server/models";
  * is silently dropped by most crawlers rather than reported — so this is the
  * single place the origin is decided.
  */
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anatomia2026.pl";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://sportnotes.pl";
 
 /** Joins a route onto the canonical origin. */
 export function absoluteUrl(path: string): string {

@@ -122,6 +122,50 @@ describe("parseChapterHtml", () => {
       expect(tags(parse(html, true))).toEqual(tags(parse(html, true)));
       expect(text(parse(html, true))).toEqual(text(parse(html, true)));
     });
+
+    it("applies the First-Occurrence Anti-Clutter Rule per chapter/section", () => {
+      const onSelect = vi.fn();
+      const collectTargets = (nodes: React.ReactNode[]) => {
+        const targets: string[] = [];
+        const walk = (node: unknown) => {
+          if (Array.isArray(node)) {
+            node.forEach(walk);
+            return;
+          }
+          if (node && typeof node === "object" && "type" in node && "props" in node) {
+            const el = node as { type: unknown; props: { children?: unknown; onClick?: () => void } };
+            if (el.type === "button") {
+              const before = onSelect.mock.calls.length;
+              el.props.onClick?.();
+              if (onSelect.mock.calls.length > before) {
+                targets.push(onSelect.mock.calls[before][0] as string);
+              }
+            }
+            if (el.props?.children) walk(el.props.children);
+          }
+        };
+        walk(nodes);
+        return targets;
+      };
+
+      const defaultTargets = collectTargets(
+        parseChapterHtml("<p>Wątroba współpracuje z wątrobą i trzustką.</p>", true, onSelect),
+      );
+      expect(defaultTargets.filter((x) => x === "liver")).toHaveLength(1);
+      expect(defaultTargets.filter((x) => x === "pancreas")).toHaveLength(1);
+
+      const extendedTargets = collectTargets(
+        parseChapterHtml(
+          "<p>Serce pompuje krew przez nerki, a serce odżywia wątrobę.</p>",
+          true,
+          onSelect,
+          { useExtendedEntities: true },
+        ),
+      );
+      expect(extendedTargets.filter((x) => x === "heart")).toHaveLength(1);
+      expect(extendedTargets.filter((x) => x === "kidney")).toHaveLength(1);
+      expect(extendedTargets.filter((x) => x === "liver")).toHaveLength(1);
+    });
   });
 });
 

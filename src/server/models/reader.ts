@@ -17,7 +17,12 @@
  * and crosses volume boundaries seamlessly; topics are anchors within the page.
  */
 
-import type { CkeFormula, CkeMetadata, CkeTopicStatus } from "./textbook";
+import type {
+  CkeFormula,
+  CkeMetadata,
+  CkeTopicStatus,
+  CurriculumTier,
+} from "./textbook";
 
 /** A heading inside a chapter — an in-page anchor target. */
 export interface ReaderTopic {
@@ -33,6 +38,7 @@ export interface ReaderChapter {
   /** 1-based position in the whole reading sequence, across all volumes. */
   order: number;
   ckeStatus?: CkeTopicStatus;
+  tier?: CurriculumTier;
   formulas?: CkeFormula[];
   requirementCodes?: string[];
 }

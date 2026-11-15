@@ -9,10 +9,14 @@ import { disambiguateSectionTitles } from "../sectionTitles";
 import type { StructuredChapter, TextbookPage, TableOfContentsItem } from "@/types/theory";
 import {
   BIOLOGY_CKE_CURRICULUM,
+  BIOLOGY_FORMULA_OVERRIDES,
   CHEMISTRY_CKE_CURRICULUM,
+  CHEMISTRY_FORMULA_OVERRIDES,
   CKE_OPERATIONAL_VERBS_GUIDE,
+  toCkeRequirementMapping,
   type CkeSectionCurriculum,
 } from "@/data/cke-curricula";
+import { normalizeCurriculumTier, type CurriculumTier } from "@/types/curriculum";
 import * as bioGenerated from "@/data/biologia/dzialy";
 import * as chemGenerated from "@/data/chemia/dzialy";
 
@@ -810,7 +814,196 @@ const CHEMISTRY_SEED_CHAPTERS: Array<{
   },
 ];
 
+function buildEnrichedCkeMetadata(
+  kind: "biologia" | "chemia",
+  rawId: string,
+  title: string,
+  matchedCurr: CkeSectionCurriculum,
+  existingMeta?: CkeMetadata,
+): CkeMetadata {
+  const overrides =
+    kind === "biologia" ? BIOLOGY_FORMULA_OVERRIDES : CHEMISTRY_FORMULA_OVERRIDES;
+  const override = overrides.find(
+    (entry) => entry.sectionCode === matchedCurr.sectionCode,
+  );
+  const mapping = toCkeRequirementMapping(matchedCurr);
+  const status: CkeTopicStatus = existingMeta?.status ?? matchedCurr.status;
+  const tier: CurriculumTier =
+    existingMeta?.tier ?? normalizeCurriculumTier(status);
+
+  // Guard unused params cleanly in case heuristics need them later
+  void rawId;
+  void title;
+
+  return {
+    formulas: existingMeta?.formulas ?? matchedCurr.formulas,
+    sectionCode: existingMeta?.sectionCode ?? matchedCurr.sectionCode,
+    requirementCodes:
+      existingMeta?.requirementCodes ?? matchedCurr.requirements.map((r) => r.code),
+    status,
+    tier,
+    ckeSectionCode:
+      existingMeta?.ckeSectionCode ??
+      `${matchedCurr.sectionCode}: ${matchedCurr.title}`,
+    ckeRequirementIds:
+      existingMeta?.ckeRequirementIds ??
+      existingMeta?.requirementCodes ??
+      mapping.ckeRequirementIds,
+    diffs2015vs2023:
+      existingMeta?.diffs2015vs2023 ??
+      override?.diffsSummary ??
+      mapping.diffs2015vs2023,
+    examTraps: existingMeta?.examTraps ?? matchedCurr.examTraps,
+    examTips: existingMeta?.examTips ?? matchedCurr.examTraps,
+  };
+}
+
+function inferAcademicOrFormulaTier(
+  kind: "biologia" | "chemia",
+  id: string,
+  title: string,
+  fallbackStatus: CkeTopicStatus,
+): {
+  tier: CurriculumTier;
+  status: CkeTopicStatus;
+  formulas: CkeMetadata["formulas"];
+} {
+  const haystack = `${id} ${title}`.toLowerCase();
+
+  if (kind === "chemia") {
+    const academicChemKeywords = [
+      "wskaznik",
+      "millera",
+      "krysztal",
+      "siec-przestrzenna",
+      "plaszczyzn-sieciowych",
+      "rentgenograf",
+      "van-der-waalsa",
+      "anizotrop",
+      "energia-sieciowa",
+      "komorka-elementarna",
+      "uklady-krystalograficzne",
+      "symetria-krysztalow",
+      "teoria-gazow",
+    ];
+    if (academicChemKeywords.some((kw) => haystack.includes(kw))) {
+      return {
+        tier: "academic-extra",
+        status: fallbackStatus,
+        formulas: ["2015", "2023", "academic"],
+      };
+    }
+    if (
+      haystack.includes("sp3d") ||
+      haystack.includes("nomenklatura-zwyczajowa")
+    ) {
+      return {
+        tier: "cke-2015-only",
+        status: "2015-only",
+        formulas: ["2015"],
+      };
+    }
+    if (
+      haystack.includes("crispr") ||
+      haystack.includes("elektroforez") ||
+      haystack.includes("iloczyn-rozpuszczalnosci") ||
+      haystack.includes("kso")
+    ) {
+      return {
+        tier: "cke-2023-only",
+        status: "2023-only",
+        formulas: ["2023"],
+      };
+    }
+  } else {
+    const academicBioKeywords = [
+      "teoria-endosymbiozy-szczegolowa",
+      "biochemia-akademicka",
+      "michaelis",
+      "szlak-sygnalowy",
+    ];
+    if (academicBioKeywords.some((kw) => haystack.includes(kw))) {
+      return {
+        tier: "academic-extra",
+        status: fallbackStatus,
+        formulas: ["2015", "2023", "academic"],
+      };
+    }
+    if (
+      haystack.includes("pcr") ||
+      haystack.includes("crispr") ||
+      haystack.includes("hardy") ||
+      haystack.includes("epigenet") ||
+      haystack.includes("endosymbioz")
+    ) {
+      return {
+        tier: "cke-2023-only",
+        status: "2023-only",
+        formulas: ["2023"],
+      };
+    }
+  }
+
+  return {
+    tier: normalizeCurriculumTier(fallbackStatus),
+    status: fallbackStatus,
+    formulas: fallbackStatus === "2015-only"
+      ? ["2015"]
+      : fallbackStatus === "2023-only"
+        ? ["2023"]
+        : ["2015", "2023"],
+  };
+}
+
+/**
+ * Enriches unified Biology/Chemistry sections with CKE tier metadata,
+ * requirement IDs, 2015 vs 2023 differences, and exam traps while preserving
+ * the original section IDs and titles.
+ */
+export function enrichSectionWithCkeMetadata(
+  kind: "biologia" | "chemia",
+  section: TextbookSection,
+): TextbookSection {
+  const curriculumList =
+    kind === "biologia" ? BIOLOGY_CKE_CURRICULUM : CHEMISTRY_CKE_CURRICULUM;
+  const classifier =
+    kind === "biologia" ? classifyBiologyChapter : classifyChemistryChapter;
+  const existingMeta = section.ckeMetadata;
+  const matchedCurr =
+    (existingMeta &&
+      curriculumList.find((c) => c.sectionCode === existingMeta.sectionCode)) ||
+    classifier(section.id, section.title);
+
+  const enriched = buildEnrichedCkeMetadata(
+    kind,
+    section.id,
+    section.title,
+    matchedCurr,
+    existingMeta,
+  );
+
+  if (!existingMeta?.tier) {
+    const inferred = inferAcademicOrFormulaTier(
+      kind,
+      section.id,
+      section.title,
+      matchedCurr.status,
+    );
+    enriched.tier = inferred.tier;
+    enriched.status = existingMeta?.status ?? inferred.status;
+    if (!existingMeta?.formulas) {
+      enriched.formulas = inferred.formulas;
+    }
+  }
+
+  return {
+    ...section,
+    ckeMetadata: enriched,
+  };
+}
+
 function ensureEnrichedSection(
+  kind: "biologia" | "chemia",
   rawId: string,
   prefixedId: string,
   chapter: StructuredChapter,
@@ -823,13 +1016,13 @@ function ensureEnrichedSection(
       curriculumList.find((c) => c.sectionCode === existingMeta.sectionCode)) ||
     fallbackClassifier(rawId, chapter.chapterTitle);
 
-  const meta: CkeMetadata = existingMeta ?? {
-    formulas: matchedCurr.formulas,
-    sectionCode: matchedCurr.sectionCode,
-    requirementCodes: matchedCurr.requirements.map((r) => r.code),
-    status: matchedCurr.status,
-    examTips: matchedCurr.examTraps,
-  };
+  const meta = buildEnrichedCkeMetadata(
+    kind,
+    rawId,
+    chapter.chapterTitle,
+    matchedCurr,
+    existingMeta,
+  );
 
   const pages: TextbookPage[] = [...(chapter.pages ?? [])];
   const toc: TableOfContentsItem[] = [...(chapter.toc ?? [])];
@@ -906,6 +1099,7 @@ function buildMaturaDomains(
   for (const entry of rawEntries) {
     seenRawIds.add(entry.id);
     const { sectionCode, section } = ensureEnrichedSection(
+      kind,
       entry.id,
       `${idPrefix}-${entry.id}`,
       entry.data,
@@ -943,6 +1137,7 @@ function buildMaturaDomains(
       },
     };
     const { sectionCode, section } = ensureEnrichedSection(
+      kind,
       seed.id,
       `${idPrefix}-${seed.id}`,
       structured,

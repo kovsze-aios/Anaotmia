@@ -1,0 +1,42 @@
+========================================
+1. Gray's Anatomy for Students (Richard L. Drake)
+========================================
+0 działających legalnych źródeł — podręcznik komercyjny chroniony prawem autorskim (Elsevier). Wyszukiwanie i udostępnianie nieautoryzowanych kopii PDF z naruszeniem praw autorskich zostało pominięte.
+
+========================================
+2. Clinically Oriented Anatomy (Keith L. Moore)
+========================================
+0 działających legalnych źródeł — podręcznik komercyjny chroniony prawem autorskim (Wolters Kluwer / LWW). Wyszukiwanie i udostępnianie nieautoryzowanych kopii PDF z naruszeniem praw autorskich zostało pominięte.
+
+========================================
+3. Principles of Anatomy and Physiology (Gerard J. Tortora)
+========================================
+0 działających legalnych źródeł — podręcznik komercyjny chroniony prawem autorskim (Wiley). Wyszukiwanie i udostępnianie nieautoryzowanych kopii PDF z naruszeniem praw autorskich zostało pominięte.
+
+========================================
+4. Ross & Wilson Anatomy and Physiology in Health and Illness
+========================================
+0 działających legalnych źródeł — podręcznik komercyjny chroniony prawem autorskim (Elsevier). Wyszukiwanie i udostępnianie nieautoryzowanych kopii PDF z naruszeniem praw autorskich zostało pominięte.
+
+========================================
+5. BRS Gross Anatomy
+========================================
+0 działających legalnych źródeł — podręcznik komercyjny chroniony prawem autorskim (Wolters Kluwer / LWW). Wyszukiwanie i udostępnianie nieautoryzowanych kopii PDF z naruszeniem praw autorskich zostało pominięte.
+
+========================================
+6. Sobotta Atlas of Anatomy
+========================================
+0 działających legalnych źródeł — podręcznik komercyjny chroniony prawem autorskim (Elsevier). Wyszukiwanie i udostępnianie nieautoryzowanych kopii PDF z naruszeniem praw autorskich zostało pominięte.
+
+========================================
+7. OpenStax Anatomy and Physiology 2e
+========================================
+1. https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf - bezpośredni plik .pdf / oficjalne darmowe wydanie OER OpenStax (Rice University), ok. 454 MB (476 335 014 B), zweryfikowany status HTTP 200
+2. https://downloads.libretexts.org/api/v1/download/med-68748/pdf - bezpośredni link do pobrania pliku .pdf / repozytorium LibreTexts (med-68748, licencja CC BY, 1571 stron), ok. 74 MB (77 754 103 B), zweryfikowany status HTTP 200
+3. https://batch.libretexts.org/print/Letter/Finished/med-68748/Full.pdf - bezpośredni plik .pdf / serwer eksportu LibreTexts (med-68748, format Letter), ok. 64 MB (67 314 673 B), zweryfikowany status HTTP 200
+4. https://archive.org/download/anatomy-and-physiology-2e/Anatomy%20and%20Physiology%202e.pdf - bezpośredni plik .pdf / archiwum cyfrowe Internet Archive (wydanie OpenStax 2022 na licencji CC BY 4.0), ok. 208 MB (217 965 469 B), zweryfikowany status HTTP 200 po przekierowaniu CDN
+5. https://commons.libretexts.org/book/med-68748 - strona katalogowa z pobieraniem (pełny PDF, EPUB, pakiety offline i czytnik online) w otwartym repozytorium LibreCommons, zweryfikowany status HTTP 200
+6. https://med.libretexts.org/Bookshelves/Anatomy_and_Physiology/Anatomy_and_Physiology_2e_(OpenStax) - otwarte repozytorium LibreTexts Medicine (pełny tekst online oraz opcje pobrania PDF), zweryfikowany status HTTP 200
+7. https://archive.org/details/anatomy-and-physiology-2e - rekord pozycji w archiwum cyfrowym Internet Archive z podglądem online i pobieraniem pliku PDF, zweryfikowany status HTTP 200
+8. https://open.umn.edu/opentextbooks/textbooks/anatomy-and-physiology - katalog Open Textbook Library (University of Minnesota) z opisem wydania 2e i linkiem do darmowego PDF, zweryfikowany status HTTP 200
+9. https://openstax.org/details/books/anatomy-and-physiology-2e - oficjalna strona darmowego zasobu OER OpenStax (non-profit, Rice University) z pobieraniem pełnego PDF i wersją przeglądarkową bez paywalla, zweryfikowany status HTTP 200

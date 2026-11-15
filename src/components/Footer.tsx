@@ -51,7 +51,7 @@ export function Footer() {
               here rather than in the topbar, where a monetisation control
               competes with navigation on every page. */}
           <div className="footer-minimal__bar">
-            <p className="footer-minimal__attribution">Projekt Medycyna © 2026</p>
+            <p className="footer-minimal__attribution">SportNotes © 2026</p>
             <DonateButton />
           </div>
         </div>

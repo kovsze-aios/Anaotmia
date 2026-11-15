@@ -1,5 +1,6 @@
 import type { TextbookDomain, TextbookSection } from "../../models";
 import { disambiguateSectionTitles } from "../sectionTitles";
+import { enrichSectionWithCkeMetadata } from "../matura-cke";
 import type { StructuredChapter } from "@/types/theory";
 import * as generated from "@/data/chemia/dzialy";
 
@@ -49,7 +50,7 @@ function excerpt(html: string, limit = 300): string {
 
 function mapToSection(item: ChapterEntry): TextbookSection {
   const d = item.data;
-  return {
+  return enrichSectionWithCkeMetadata("chemia", {
     id: item.id,
     title: d.chapterTitle,
     pages: d.pages,
@@ -65,7 +66,7 @@ function mapToSection(item: ChapterEntry): TextbookSection {
     // Krótki wyciąg do bloku "Szybka Powtórka" — ucinany na granicy słowa.
     summary: excerpt(d.pages?.[0]?.htmlContent ?? ""),
     // `academic_detail` celowo pominięte, tak jak w pozostałych modułach.
-  };
+  });
 }
 
 /** Sources the pipeline has actually produced. */

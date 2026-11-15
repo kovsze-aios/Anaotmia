@@ -1440,3 +1440,380 @@
 body.atlas-open div:has(> [data-slot="combobox-content"]) {
   z-index: 95 !important;
 }
+
+/* ─── Pro 3D Atlas: Spatial Pins, Clipping Planes, X-Ray, Szpilki & Karta ─── */
+
+.atlas-pins-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 16;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.atlas-pin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 10px 5px 7px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, #10b981 45%, var(--border));
+  background: color-mix(in oklab, #09090b 84%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f4f4f5;
+  font-size: 11px;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.45);
+  transition: transform 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.atlas-pin-badge:hover {
+  transform: translate(-50%, -104%) scale(1.04) !important;
+  border-color: #34d399;
+}
+
+.atlas-pin-badge.active {
+  border-color: #34d399;
+  background: color-mix(in oklab, #064e3b 88%, #09090b);
+  box-shadow: 0 0 0 2px rgb(52 211 153 / 0.28), 0 8px 24px rgb(0 0 0 / 0.55);
+}
+
+.atlas-pin-badge.szpilki {
+  border-color: #f59e0b;
+  background: color-mix(in oklab, #451a03 86%, #09090b);
+}
+
+.atlas-pin-badge.szpilki.active {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 2px rgb(251 191 36 / 0.35), 0 8px 24px rgb(0 0 0 / 0.55);
+}
+
+.atlas-pin-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+  flex-shrink: 0;
+}
+
+.atlas-pin-badge.szpilki .atlas-pin-dot {
+  background: #fbbf24;
+  box-shadow: 0 0 8px #fbbf24;
+}
+
+.atlas-pin-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.atlas-pin-text strong {
+  font-size: 11px;
+  font-weight: 600;
+  color: #f4f4f5;
+}
+
+.atlas-pin-text em {
+  font-size: 9.5px;
+  font-style: italic;
+  color: #a1a1aa;
+}
+
+.atlas-mode-xray-btn.active {
+  color: #38bdf8 !important;
+  border-color: color-mix(in oklab, #38bdf8 55%, var(--border)) !important;
+  background: color-mix(in oklab, #0c4a6e 55%, transparent) !important;
+}
+
+.atlas-mode-szpilki-btn.active {
+  color: #fbbf24 !important;
+  border-color: color-mix(in oklab, #f59e0b 55%, var(--border)) !important;
+  background: color-mix(in oklab, #78350f 55%, transparent) !important;
+}
+
+.atlas-clipping-panel {
+  position: absolute;
+  top: 76px;
+  right: 24px;
+  z-index: 26;
+  width: 280px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.atlas-clipping-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11.5px;
+  color: var(--foreground);
+}
+
+.atlas-clipping-reset {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted-foreground);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.atlas-clipping-reset:hover {
+  color: var(--foreground);
+  border-color: color-mix(in oklab, var(--foreground) 30%, var(--border));
+}
+
+.atlas-clipping-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.atlas-clipping-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+
+.atlas-clipping-row input[type="range"] {
+  width: 100%;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.atlas-szpilki-card {
+  position: absolute;
+  top: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 27;
+  width: min(460px, calc(100% - 32px));
+  padding: 14px 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-color: color-mix(in oklab, #f59e0b 45%, var(--border)) !important;
+}
+
+.atlas-szpilki-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.atlas-szpilki-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fbbf24;
+}
+
+.atlas-szpilki-score {
+  font-size: 11.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #34d399;
+}
+
+.atlas-szpilki-prompt {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--foreground);
+}
+
+.atlas-szpilki-input {
+  width: 100%;
+  padding: 8px 11px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--background) 85%, transparent);
+  color: var(--foreground);
+  font-size: 12.5px;
+  outline: none;
+}
+
+.atlas-szpilki-input:focus {
+  border-color: #f59e0b;
+}
+
+.atlas-szpilki-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.atlas-szpilki-reveal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in oklab, #f59e0b 45%, var(--border));
+  background: color-mix(in oklab, #f59e0b 16%, transparent);
+  color: #fde68a;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.atlas-szpilki-reveal-btn:hover {
+  background: color-mix(in oklab, #f59e0b 26%, transparent);
+}
+
+.atlas-szpilki-answer {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid color-mix(in oklab, #10b981 35%, var(--border));
+  background: color-mix(in oklab, #064e3b 28%, var(--background));
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--foreground);
+}
+
+.atlas-szpilki-answer-title {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.atlas-szpilki-answer p {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+/* ─── Karta Anatomiczna Podręcznika inside Detail Sheet ───────────────────── */
+
+.atlas-textbook-card {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 12px 13px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in oklab, #10b981 30%, var(--border));
+  background: color-mix(in oklab, #064e3b 14%, var(--card));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.atlas-textbook-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.atlas-textbook-card__eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #34d399;
+}
+
+.atlas-textbook-card__pins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.atlas-pin-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--background) 70%, transparent);
+  color: var(--muted-foreground);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.atlas-pin-chip:hover {
+  color: var(--foreground);
+  border-color: color-mix(in oklab, #34d399 45%, var(--border));
+}
+
+.atlas-pin-chip.active {
+  color: #ecfdf5;
+  border-color: #34d399;
+  background: color-mix(in oklab, #10b981 24%, transparent);
+}
+
+.atlas-textbook-card__body h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.atlas-textbook-card__body h4 em {
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.atlas-textbook-card__body dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.atlas-textbook-card__body dt {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #34d399;
+}
+
+.atlas-textbook-card__body dd {
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 767px) {
+  .atlas-clipping-panel {
+    top: auto;
+    bottom: calc(118px + env(safe-area-inset-bottom));
+    right: 12px;
+    left: 12px;
+    width: auto;
+  }
+
+  .atlas-szpilki-card {
+    top: calc(max(14px, env(safe-area-inset-top)) + 114px);
+    width: calc(100% - 24px);
+    padding: 12px;
+  }
+
+  .atlas-pin-badge {
+    padding: 4px 8px 4px 6px;
+    font-size: 10px;
+  }
+
+  .atlas-pin-text em {
+    display: none;
+  }
+}

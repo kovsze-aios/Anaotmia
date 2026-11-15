@@ -1,28 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
-import { findAnatomyTerms } from "@/lib/anatomyLinks";
+import {
+  findAnatomyTerms,
+  findTextbookAnatomyTerms,
+  type AnatomyTermMatch,
+} from "@/lib/anatomyLinks";
+import { getAnatomicalEntity } from "@/data/anatomy-entities";
 
 /**
- * Renders chapter HTML as React, linking the anatomy it mentions.
- *
- * This replaces `dangerouslySetInnerHTML` for the anatomy corpus. Not because
- * that was unsafe — the ingestion pipeline validates every chapter against an
- * allow-list before it is written — but because a raw HTML string cannot carry
- * an `onClick`, and the terms have to become interactive.
- *
- * The parser accepts exactly the tags the pipeline emits and drops anything
- * else, so the allow-list is enforced twice: once when the corpus is written
- * and once when it is read. A tag that somehow reached the data would render
- * as its text, never as an element.
- *
- * It is a pure function of the HTML string, which is what keeps hydration
- * quiet: the server and the client walk the same input and build the same
- * tree, with no DOM measurement or randomness anywhere in it.
+ * Renders chapter HTML as React, linking the anatomy it mentions with a
+ * Two-Tier UX:
+ *   - First-Occurrence Anti-Clutter Rule: links only the 1st occurrence of
+ *     each unique anatomical entity per page/section.
+ *   - Tier 1 (Zero WebGL): lightweight NOIR hover preview card (250ms debounce)
+ *     showing Polish/Latin name, system badge, 1-sentence summary, and CTA.
+ *   - Tier 2 (Click): opens the Contextual 3D Inspector Drawer focused on the
+ *     corresponding organ mesh + sub-pins.
  */
 
-/** Exactly the tags `fabryka_*.py` is allowed to produce. */
+/** Safe structural tags the ingestion pipelines may produce. */
 const ALLOWED = new Set([
   "p",
   "br",
@@ -33,9 +31,20 @@ const ALLOWED = new Set([
   "ul",
   "ol",
   "li",
+  "h2",
   "h3",
   "h4",
   "span",
+  "code",
+  "sub",
+  "sup",
+  "table",
+  "thead",
+  "tbody",
+  "tr",
+  "th",
+  "td",
+  "blockquote",
 ]);
 
 /** Void elements never have a closing tag. */
@@ -44,7 +53,7 @@ const VOID = new Set(["br"]);
 const TAG = /<(\/?)([a-zA-Z][a-zA-Z0-9]*)\b([^>]*)>/g;
 
 const ENTITIES: Record<string, string> = {
-  "&nbsp;": " ",
+  "&nbsp;": " ",
   "&amp;": "&",
   "&lt;": "<",
   "&gt;": ">",
@@ -54,7 +63,10 @@ const ENTITIES: Record<string, string> = {
 };
 
 function decode(text: string): string {
-  return text.replace(/&(?:nbsp|amp|lt|gt|quot|apos|#39);/g, (m) => ENTITIES[m] ?? m);
+  return text.replace(
+    /&(?:nbsp|amp|lt|gt|quot|apos|#39);/g,
+    (m) => ENTITIES[m] ?? m,
+  );
 }
 
 /** `id` and `start` are the only attributes the pipeline may emit. */
@@ -69,11 +81,20 @@ function readAttrs(raw: string): { id?: string; start?: number } {
 
 export interface AnatomyRichTextProps {
   html: string;
-  /** Called with the BodyParts3D name when a linked structure is clicked. */
+  /** Called with the BodyParts3D name / meshId when a linked structure is clicked. */
   onSelectTerm: (englishName: string, label: string) => void;
   /** Off for subjects the 3D atlas does not cover. */
   linkTerms?: boolean;
   className?: string;
+}
+
+export interface ParseChapterHtmlOptions {
+  /** Only link the first occurrence of each entity per parsed block/page. Default: true. */
+  firstOccurrenceOnly?: boolean;
+  /** Match explicit short entity forms (e.g. "serce", "nerka", "płuco") in addition to stem matcher. */
+  useExtendedEntities?: boolean;
+  onHoverMatch?: (match: AnatomyTermMatch, rect: DOMRect | null) => void;
+  onLeaveMatch?: () => void;
 }
 
 interface Frame {
@@ -82,26 +103,155 @@ interface Frame {
   children: React.ReactNode[];
 }
 
+interface ActivePreview {
+  match: AnatomyTermMatch;
+  top: number;
+  left: number;
+}
+
 export function AnatomyRichText({
   html,
   onSelectTerm,
   linkTerms = true,
   className,
 }: AnatomyRichTextProps) {
-  const nodes = React.useMemo(
-    () => parseChapterHtml(html, linkTerms, onSelectTerm),
-    [html, linkTerms, onSelectTerm],
+  const containerRef = useRef<HTMLDivElement>(null);
+  const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [preview, setPreview] = useState<ActivePreview | null>(null);
+
+  const clearTimers = useCallback(() => {
+    if (openTimerRef.current) {
+      clearTimeout(openTimerRef.current);
+      openTimerRef.current = null;
+    }
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => clearTimers, [clearTimers]);
+
+  const handleHoverMatch = useCallback(
+    (match: AnatomyTermMatch, rect: DOMRect | null) => {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+        closeTimerRef.current = null;
+      }
+      if (openTimerRef.current) {
+        clearTimeout(openTimerRef.current);
+      }
+      openTimerRef.current = setTimeout(() => {
+        const containerRect = containerRef.current?.getBoundingClientRect();
+        let top = 8;
+        let left = 8;
+        if (rect && containerRect) {
+          top = Math.max(0, rect.bottom - containerRect.top + 8);
+          left = Math.max(
+            0,
+            Math.min(
+              rect.left - containerRect.left,
+              Math.max(0, containerRect.width - 330),
+            ),
+          );
+        }
+        setPreview({ match, top, left });
+      }, 250);
+    },
+    [],
   );
-  return <div className={className}>{nodes}</div>;
+
+  const handleLeaveMatch = useCallback(() => {
+    if (openTimerRef.current) {
+      clearTimeout(openTimerRef.current);
+      openTimerRef.current = null;
+    }
+    closeTimerRef.current = setTimeout(() => {
+      setPreview(null);
+    }, 140);
+  }, []);
+
+  const nodes = React.useMemo(
+    () =>
+      parseChapterHtml(html, linkTerms, onSelectTerm, {
+        firstOccurrenceOnly: true,
+        useExtendedEntities: true,
+        onHoverMatch: handleHoverMatch,
+        onLeaveMatch: handleLeaveMatch,
+      }),
+    [html, linkTerms, onSelectTerm, handleHoverMatch, handleLeaveMatch],
+  );
+
+  const entity = preview
+    ? (preview.match.entity ?? getAnatomicalEntity(preview.match.englishName))
+    : undefined;
+
+  return (
+    <div ref={containerRef} className={`relative ${className ?? ""}`}>
+      {nodes}
+      {preview && (
+        <div
+          role="tooltip"
+          data-testid="anatomy-hover-card"
+          onMouseEnter={() => {
+            if (closeTimerRef.current) {
+              clearTimeout(closeTimerRef.current);
+              closeTimerRef.current = null;
+            }
+          }}
+          onMouseLeave={handleLeaveMatch}
+          style={{ top: preview.top, left: preview.left }}
+          className="absolute z-50 w-80 max-w-[90vw] rounded-xl border border-emerald-700/60 bg-zinc-950/98 p-3.5 text-left text-zinc-100 shadow-2xl backdrop-blur-md"
+        >
+          <div className="mb-1.5 flex items-start justify-between gap-2">
+            <div>
+              <div className="text-sm font-bold text-emerald-200">
+                {entity?.namePl ?? preview.match.pl}
+              </div>
+              <div className="text-xs italic text-zinc-400">
+                {entity?.nameLat ?? preview.match.latin}
+              </div>
+            </div>
+            <span className="shrink-0 rounded-md border border-emerald-800/70 bg-emerald-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
+              {entity?.system ?? "Anatomia 3D"}
+            </span>
+          </div>
+          <p className="mb-3 text-xs leading-relaxed text-zinc-300">
+            {entity?.summary ??
+              "Kliknij, aby otworzyć model 3D, przekroje anatomiczne oraz interaktywne podpisy struktur."}
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              clearTimers();
+              const label = `${entity?.namePl ?? preview.match.pl} (${entity?.nameLat ?? preview.match.latin})`;
+              onSelectTerm(preview.match.englishName, label);
+              setPreview(null);
+            }}
+            className="w-full cursor-pointer rounded-lg border border-emerald-600/70 bg-emerald-900/60 px-3 py-1.5 text-xs font-semibold text-emerald-100 transition-colors hover:bg-emerald-800/80"
+          >
+            🫀 Zbadaj w 3D z opisem struktur
+          </button>
+        </div>
+      )}
+    </div>
+  );
 }
+
+/** Semantic alias requested by the Contextual 3D Atlas Pro architecture. */
+export const AnatomicalTextLinker = AnatomyRichText;
 
 export function parseChapterHtml(
   html: string,
   linkTerms: boolean,
   onSelectTerm: (englishName: string, label: string) => void,
+  options: ParseChapterHtmlOptions = {},
 ): React.ReactNode[] {
   const root: Frame = { tag: "#root", attrs: {}, children: [] };
   const stack: Frame[] = [root];
+  const seenEntities = new Set<string>();
+  const firstOccurrenceOnly = options.firstOccurrenceOnly ?? true;
   let cursor = 0;
   let key = 0;
 
@@ -112,7 +262,12 @@ export function parseChapterHtml(
     const text = decode(raw);
     if (!text) return;
     top().children.push(
-      ...(linkTerms ? linkify(text, onSelectTerm, () => key++) : [text]),
+      ...(linkTerms
+        ? linkify(text, onSelectTerm, () => key++, seenEntities, {
+            ...options,
+            firstOccurrenceOnly,
+          })
+        : [text]),
     );
   };
 
@@ -160,7 +315,11 @@ export function parseChapterHtml(
 function element(frame: Frame, key: number): React.ReactNode {
   const Tag = frame.tag as keyof React.JSX.IntrinsicElements;
   return (
-    <Tag key={`${frame.tag}-${key}`} id={frame.attrs.id} start={frame.attrs.start}>
+    <Tag
+      key={`${frame.tag}-${key}`}
+      id={frame.attrs.id}
+      start={frame.attrs.start}
+    >
       {frame.children}
     </Tag>
   );
@@ -171,26 +330,46 @@ function linkify(
   text: string,
   onSelectTerm: (englishName: string, label: string) => void,
   nextKey: () => number,
+  seenEntities: Set<string>,
+  options: ParseChapterHtmlOptions,
 ): React.ReactNode[] {
-  const matches = findAnatomyTerms(text);
+  const matches = options.useExtendedEntities
+    ? findTextbookAnatomyTerms(text)
+    : findAnatomyTerms(text);
   if (matches.length === 0) return [text];
 
   const out: React.ReactNode[] = [];
   let at = 0;
 
   for (const m of matches) {
+    const entityKey = (m.entity?.id ?? m.englishName).toLowerCase();
+    if (options.firstOccurrenceOnly && seenEntities.has(entityKey)) {
+      continue;
+    }
+    seenEntities.add(entityKey);
+
     if (m.start > at) out.push(text.slice(at, m.start));
+    const displayLabel = `${m.pl} (${m.latin})`;
     out.push(
       <button
         key={`term-${nextKey()}`}
         type="button"
-        onClick={() => onSelectTerm(m.englishName, `${m.pl} (${m.latin})`)}
-        title={`${m.pl} (${m.latin}) — pokaż w Atlasie 3D`}
+        data-anatomy-link="true"
+        data-entity-id={entityKey}
+        onClick={() => onSelectTerm(m.englishName, displayLabel)}
+        onMouseEnter={(e) =>
+          options.onHoverMatch?.(m, e.currentTarget.getBoundingClientRect())
+        }
+        onMouseLeave={() => options.onLeaveMatch?.()}
+        onFocus={(e) =>
+          options.onHoverMatch?.(m, e.currentTarget.getBoundingClientRect())
+        }
+        onBlur={() => options.onLeaveMatch?.()}
+        title={`${displayLabel} — Zbadaj w Atlasie 3D`}
         className={
-          "anatomy-term cursor-pointer border-0 bg-transparent p-0 font-inherit " +
-          "text-inherit underline decoration-dotted underline-offset-4 " +
-          "decoration-zinc-400 transition-colors hover:decoration-solid " +
-          "hover:text-zinc-950 dark:decoration-zinc-600 dark:hover:text-white focus-ring"
+          "anatomy-term border-b border-dashed border-emerald-500/70 dark:border-emerald-400/60 " +
+          "text-emerald-800 dark:text-emerald-200 hover:bg-emerald-950/50 cursor-pointer " +
+          "transition-colors border-t-0 border-l-0 border-r-0 bg-transparent p-0 font-inherit focus-ring rounded-xs"
         }
       >
         {m.surface}
@@ -200,5 +379,5 @@ function linkify(
   }
 
   if (at < text.length) out.push(text.slice(at));
-  return out;
+  return out.length > 0 ? out : [text];
 }

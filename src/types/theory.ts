@@ -13,9 +13,35 @@ export interface ChapterQuizItem {
   answer: string;
 }
 
-import type { CkeMetadata, CkeFormula, CkeTopicStatus } from "@/server/models/textbook";
+import type {
+  CkeMetadata,
+  CkeFormula,
+  CkeTopicStatus,
+  CurriculumTier,
+  CurriculumViewMode,
+  CkeRequirementMapping,
+  CkeExamTask,
+  CkeTaskMedia,
+  CkeAnimatedStep,
+  CkeSubTask,
+  CkeTaskType,
+  CkeExamSheet,
+} from "@/server/models/textbook";
 
-export type { CkeMetadata, CkeFormula, CkeTopicStatus };
+export type {
+  CkeMetadata,
+  CkeFormula,
+  CkeTopicStatus,
+  CurriculumTier,
+  CurriculumViewMode,
+  CkeRequirementMapping,
+  CkeExamTask,
+  CkeTaskMedia,
+  CkeAnimatedStep,
+  CkeSubTask,
+  CkeTaskType,
+  CkeExamSheet,
+};
 
 export interface StructuredChapter {
   chapterTitle: string;
@@ -23,6 +49,8 @@ export interface StructuredChapter {
   pages: TextbookPage[];
   chapterQuiz: ChapterQuizItem[];
   ckeMetadata?: CkeMetadata;
+  licenseAttribution?: string;
+  processingMode?: "DIRECT_ADAPTATION" | "CONCEPT_SYNTHESIS";
 }
 
 export type {

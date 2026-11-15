@@ -159,6 +159,14 @@ export const REGION_PRESETS: RegionPreset[] = [
 ];
 
 /** Everything the WebGL scene needs to know about what to draw. */
+export interface ClippingState {
+  enabled: boolean;
+  /** Normalized plane offsets in [-1, 1] along anatomical X, Y, Z axes (1 = full, no cut). */
+  x: number;
+  y: number;
+  z: number;
+}
+
 export interface SceneState {
   inspectorOpen?: boolean;
   explode: number;
@@ -166,8 +174,18 @@ export interface SceneState {
   peelDepth?: number;
   /** IDs of individual structures peeled/hidden by user dissection. */
   peeled?: string[];
-  /** Translucent X-Ray ghosting of unselected structures when a part is selected. */
+  /** Translucent X-Ray ghosting of unselected/outer structures. */
   xray?: boolean;
+  /** Show 3D Spatial Callout Pins for the active organ. */
+  showPins?: boolean;
+  /** Currently inspected 3D sub-structure pin ID. */
+  activePinId?: string | null;
+  /** Real-time 3-axis anatomical clipping planes. */
+  clipping?: ClippingState;
+  /** Practical exam mode: hides 3D pin names and challenges student recall. */
+  szpilkiMode?: boolean;
+  /** Incremented to smoothly focus camera on the active sub-pin. */
+  pinFocusTrigger?: number;
   /** Click behavior: inspect structure vs. peel layer on click. */
   mode?: InteractionMode;
   /** Active regional camera preset. */

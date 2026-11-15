@@ -5,12 +5,78 @@ import { CkeStatusBadge } from "@/components/matura/CkeFormulaControls";
 export const metadata: Metadata = {
   title: "Matura CKE — Podręczniki (Formuła 2023+ i 2015) oraz Arkusze",
   description:
-    "Dedykowane centrum maturalne CKE: 4 kompletne podręczniki cyfrowe (Biologia i Chemia w Formule 2023+ oraz Formule 2015) z wytycznymi CKE, pułapkami egzaminacyjnymi i autentycznymi arkuszami.",
+    "Dedykowane centrum maturalne CKE: 4 kompletne podręczniki cyfrowe (Biologia i Chemia w Formule 2023+ oraz Formule 2015) oraz pełne arkusze CKE 1:1 (2015–2024) z wyciętymi rycinami i animowanym kluczem odpowiedzi.",
+  openGraph: {
+    siteName: "SportNotes",
+  },
 };
 
 export default function MaturaPage() {
   return (
-    <div className="l-container py-12">
+    <div className="l-container py-10">
+      {/* Top Global Navigation Strip */}
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 pb-3 dark:border-zinc-800">
+        <div className="flex flex-wrap items-center gap-2 text-xs font-medium">
+          <Link
+            href="/"
+            className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
+          >
+            <span aria-hidden="true">⌂</span>
+            Strona główna
+          </Link>
+          <Link
+            href="/theory"
+            className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
+          >
+            <span aria-hidden="true">📖</span>
+            Podręcznik (Teoria)
+          </Link>
+          <Link
+            href="/atlas"
+            className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
+          >
+            <span aria-hidden="true">🫀</span>
+            Atlas 3D Pro
+          </Link>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <Link
+            href="/matura/biologia"
+            className="focus-ring rounded-lg border border-emerald-800/50 bg-emerald-950/30 px-2.5 py-1 text-emerald-700 transition-colors hover:bg-emerald-950/50 dark:text-emerald-300"
+          >
+            📝 Arkusze Biologia (1:1)
+          </Link>
+          <Link
+            href="/matura/chemia"
+            className="focus-ring rounded-lg border border-sky-800/50 bg-sky-950/30 px-2.5 py-1 text-sky-700 transition-colors hover:bg-sky-950/50 dark:text-sky-300"
+          >
+            🧪 Arkusze Chemia (1:1)
+          </Link>
+        </div>
+      </div>
+
+      {/* Unified Top Breadcrumb Bar matching TheoryReaderPage */}
+      <nav aria-label="Okruszki" className="pb-4 text-sm">
+        <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
+          <li>
+            <Link
+              href="/"
+              className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100"
+            >
+              Strona główna
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li
+            aria-current="page"
+            className="truncate font-medium text-zinc-800 dark:text-zinc-200"
+          >
+            Trening Maturalny
+          </li>
+        </ol>
+      </nav>
+
       <div className="mb-8">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <CkeStatusBadge status="core" />
@@ -21,7 +87,7 @@ export default function MaturaPage() {
           🎓 Centrum Maturalne CKE — Podręczniki i Arkusze
         </h1>
         <p className="mt-2 max-w-3xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-          Wybierz dedykowany podręcznik dopasowany do Twojej formuły egzaminacyjnej (Nowa Matura 2023+ lub Formuła 2015). Każdy rozdział zawiera wymagania szczegółowe CKE, strategie czasowników operacyjnych (<em>wykaż, wyjaśnij, uzasadnij</em>) oraz pułapki klucza CKE.
+          Wybierz dedykowany podręcznik dopasowany do Twojej formuły egzaminacyjnej (Nowa Matura 2023+ lub Formuła 2015) lub rozwiąż pełne 60-punktowe arkusze CKE 1:1 z wyciętymi rycinami, interaktywnymi tabelami P/F i animowanym kluczem <em>lemo-opuscar</em>.
         </p>
       </div>
 
@@ -79,28 +145,27 @@ export default function MaturaPage() {
       </div>
 
       <h2 className="mb-4 text-sm font-semibold tracking-wider uppercase text-zinc-500 dark:text-zinc-400">
-        2. Autentyczne Arkusze Egzaminacyjne CKE (2015–2024)
+        2. Autentyczne Arkusze Egzaminacyjne CKE 1:1 (2015–2024)
       </h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <Link href="/matura/biologia" className="matura-card">
           <span className="matura-card__icon">📝</span>
           <h3 className="matura-card__title">Arkusze CKE — Biologia</h3>
           <p className="matura-card__desc">
-            Zadania z autentycznych arkuszy CKE (2015–2024) z oficjalnym kluczem odpowiedzi. Filtruj według roku i działu.
+            Kompletne 60-punktowe arkusze CKE (2023–2024) oraz roczniki 2015–2022: oryginalne ryciny PNG, interaktywne tabele P/F, widok Split-View 1:1 oraz 4-etapowy player klucza CKE.
           </p>
-          <span className="matura-card__cta">Przejdź do zadań →</span>
+          <span className="matura-card__cta">Przejdź do arkuszy 1:1 →</span>
         </Link>
 
         <Link href="/matura/chemia" className="matura-card">
           <span className="matura-card__icon">🧪</span>
           <h3 className="matura-card__title">Arkusze CKE — Chemia</h3>
           <p className="matura-card__desc">
-            Zadania z autentycznych arkuszy CKE (2015–2024) z oficjalnym kluczem odpowiedzi. Filtruj według roku i działu.
+            Kompletne 60-punktowe arkusze CKE (2023–2024) oraz roczniki 2015–2022: wykresy, wzory strukturalne, brudnopis stechiometryczny, widok Split-View 1:1 i animowany klucz CKE.
           </p>
-          <span className="matura-card__cta">Przejdź do zadań →</span>
+          <span className="matura-card__cta">Przejdź do arkuszy 1:1 →</span>
         </Link>
       </div>
     </div>
   );
 }
-

@@ -2,8 +2,11 @@ import { describe, expect, it } from "vitest";
 
 import {
   MAX_SPEECH_CHUNK,
+  NEURAL_VOICES,
+  SPEED_OPTIONS,
   chunkForSpeech,
   htmlToSpeechText,
+  pickBestPolishVoice,
   stripLatinTerms,
 } from "./speechText";
 
@@ -168,5 +171,44 @@ describe("chunkForSpeech", () => {
   it("returns nothing for empty input", () => {
     expect(chunkForSpeech("")).toEqual([]);
     expect(chunkForSpeech("   \n  ")).toEqual([]);
+  });
+});
+
+describe("pickBestPolishVoice", () => {
+  const sampleVoices = [
+    { name: "Microsoft David - English (United States)", lang: "en-US", localService: true },
+    { name: "Microsoft Paulina - Polish (Poland)", lang: "pl-PL", localService: true, default: true },
+    { name: "Google polski", lang: "pl-PL", localService: false },
+    { name: "Microsoft Zofia Online (Natural) - Polish (Poland)", lang: "pl-PL", localService: false },
+    { name: "Microsoft Marek Online (Natural) - Polish (Poland)", lang: "pl-PL", localService: false },
+  ];
+
+  it("exposes Marek/Zofia neural voice IDs and speed options", () => {
+    expect(NEURAL_VOICES.map((v) => v.id)).toContain("pl-PL-MarekNeural");
+    expect(NEURAL_VOICES.map((v) => v.id)).toContain("pl-PL-ZofiaNeural");
+    expect(SPEED_OPTIONS).toEqual([1, 1.25, 1.5]);
+  });
+
+  it("prefers Natural/Online Polish voices over local legacy voices and matches Zofia vs Marek", () => {
+    const zofia = pickBestPolishVoice(sampleVoices, "pl-PL-ZofiaNeural");
+    expect(zofia?.name).toContain("Zofia");
+
+    const marek = pickBestPolishVoice(sampleVoices, "pl-PL-MarekNeural");
+    expect(marek?.name).toContain("Marek");
+  });
+
+  it("falls back to Google polski when Microsoft Natural voices are absent", () => {
+    const chromeVoices = [
+      { name: "eSpeak Polish", lang: "pl", localService: true },
+      { name: "Microsoft Paulina - Polish (Poland)", lang: "pl-PL", localService: true },
+      { name: "Google polski", lang: "pl-PL", localService: false },
+    ];
+    const picked = pickBestPolishVoice(chromeVoices, "pl-PL-MarekNeural");
+    expect(picked?.name).toBe("Google polski");
+  });
+
+  it("returns null when no Polish voice is installed", () => {
+    const enOnly = [{ name: "Samantha", lang: "en-US", localService: true }];
+    expect(pickBestPolishVoice(enOnly)).toBeNull();
   });
 });

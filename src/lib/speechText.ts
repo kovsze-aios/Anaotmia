@@ -222,3 +222,83 @@ export function chunkForSpeech(text: string, max = MAX_SPEECH_CHUNK): string[] {
     chunk.length <= max ? [chunk] : splitOnWords(chunk, max),
   );
 }
+
+export type NeuralVoiceId = "pl-PL-MarekNeural" | "pl-PL-ZofiaNeural";
+export type SpeechPlaybackRate = 1 | 1.25 | 1.5;
+
+export interface NeuralVoiceOption {
+  id: NeuralVoiceId;
+  label: string;
+  gender: "male" | "female";
+}
+
+export const NEURAL_VOICES: readonly NeuralVoiceOption[] = [
+  { id: "pl-PL-ZofiaNeural", label: "Zofia", gender: "female" },
+  { id: "pl-PL-MarekNeural", label: "Marek", gender: "male" },
+] as const;
+
+export const SPEED_OPTIONS: readonly SpeechPlaybackRate[] = [1, 1.25, 1.5] as const;
+
+export interface SpeechVoiceLike {
+  name: string;
+  lang: string;
+  default?: boolean;
+  localService?: boolean;
+}
+
+const POLISH_LANG_RE = /^pl(?:[-_]|$)/i;
+const MALE_VOICE_RE = /\b(marek|adam|krzysztof|piotr|jan|male)\b/i;
+const FEMALE_VOICE_RE = /\b(zofia|paulina|agnieszka|ewa|maria|zuzanna|female)\b/i;
+
+/**
+ * Ranks available browser `speechSynthesis` voices for natural Polish fallback.
+ * Prefers `Natural` / `Online` / `Google` voices and aligns with Marek/Zofia selection.
+ */
+export function pickBestPolishVoice<T extends SpeechVoiceLike>(
+  voices: readonly T[],
+  preferredVoiceId: NeuralVoiceId = "pl-PL-ZofiaNeural",
+): T | null {
+  const polishVoices = voices.filter(
+    (v) =>
+      POLISH_LANG_RE.test(v.lang.trim()) ||
+      /\b(polish|polski|polska)\b/i.test(v.name),
+  );
+  if (polishVoices.length === 0) return null;
+
+  const preferMale = preferredVoiceId === "pl-PL-MarekNeural";
+
+  let bestVoice = polishVoices[0];
+  let bestScore = -Infinity;
+
+  for (const voice of polishVoices) {
+    const name = voice.name;
+    const lang = voice.lang.trim().toLowerCase().replace("_", "-");
+    let score = 0;
+
+    if (lang === "pl-pl") score += 100;
+    else if (lang.startsWith("pl")) score += 70;
+
+    if (/\b(natural|neural)\b/i.test(name)) score += 80;
+    if (/\bonline\b/i.test(name)) score += 50;
+    if (/\bgoogle\b/i.test(name)) score += 45;
+    if (voice.localService === false) score += 25;
+    if (voice.default) score += 5;
+
+    if (preferMale) {
+      if (MALE_VOICE_RE.test(name)) score += 40;
+      else if (FEMALE_VOICE_RE.test(name)) score -= 10;
+    } else {
+      if (FEMALE_VOICE_RE.test(name)) score += 40;
+      else if (MALE_VOICE_RE.test(name)) score -= 10;
+    }
+
+    if (/\b(espeak|festival)\b/i.test(name)) score -= 30;
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestVoice = voice;
+    }
+  }
+
+  return bestVoice;
+}

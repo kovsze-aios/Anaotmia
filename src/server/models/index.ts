@@ -20,6 +20,14 @@ export type {
   CkeFormula,
   CkeTopicStatus,
   CkeMetadata,
+  CurriculumTier,
+  CurriculumViewMode,
+  CkeRequirementMapping,
+  CkeExamTask,
+  FigureHotspot,
+  FigureAnimationStep,
+  SvgSchematicTheme,
+  TextbookFigure,
 } from "./textbook";
 
 export type {

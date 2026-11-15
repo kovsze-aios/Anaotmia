@@ -1,0 +1,321 @@
+[
+  {
+    "id": "fig-fizjo-potencjal-czynnosciowy",
+    "subject": "fizjologia",
+    "chapterIds": [
+      "dzial8-czesc-21-przekaz-i-obrobka-informacji-neuron-jako-komorka-pobudliwa",
+      "dzial8-czesc-22-pobudliwosc-neuronu-od-depolaryzacji-do-hiperpolaryzacji",
+      "dzial8-czesc-23-koordynacja-funkcji-zyciowych-przewodnictwo-nerwowe",
+      "dzial8-czesc-24-przewodnictwo-nerwowe-fala-depolaryzacji-i-jej-wlasciwosci",
+      "bio3-czesc-106-fizjologia-neuronu-od-potencjalu-spoczynkowego-do-czynnosciowego",
+      "bio3-czesc-107-przewodzenie-impulsow-nerwowych-wlokna-mielinowe-i-bezmielinowe",
+      "neuro-rownanie-nernsta-i-hodgkina"
+    ],
+    "titlePl": "Potencjał czynnościowy neuronu i przewodnictwo skokowe",
+    "titleLat": "Potentialis actionis neuroni",
+    "caption": "Fazy potencjału czynnościowego błony aksonu (od −70 mV przez próg −55 mV do iglicy +35 mV i hiperpolaryzacji następczej) wraz z bilansem kanałów Na+/K+ i okresem refrakcji.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "action-potential",
+      "elementsSummary": "Potencjał spoczynkowy (−70 mV), depolaryzacja (Na+), szczyt (+35 mV), repolaryzacja (K+), hiperpolaryzacja (−85 mV) i przewężenie Ranviera."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax A&P / podstawy CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-ap-spoczynkowy",
+        "labelPl": "Potencjał spoczynkowy (−70 mV)",
+        "labelLat": "Polaryzacja błony",
+        "x": 16,
+        "y": 76,
+        "description": "Wnętrze aksonu jest ujemne (−70 mV) dzięki aktywnej pompie sodowo-potasowej (3 Na+ na zewnątrz za 2 K+ do wnętrza z rozkładem ATP) oraz kanałom ucieczki K+.",
+        "clinicalNote": "Matura CKE: Błędem jest pisanie, że spoczynek utrzymuje wyłącznie dyfuzja — bez pompy Na+/K+ (ATP) gradient jonowy uległby wyrównaniu."
+      },
+      {
+        "id": "hs-ap-depolaryzacja",
+        "labelPl": "Próg (−55 mV) i Depolaryzacja (Na+)",
+        "labelLat": "Influxus Na+",
+        "x": 36,
+        "y": 46,
+        "description": "Po przekroczeniu potencjału progowego (−55 mV) gwałtownie otwierają się napięciowozależne kanały Na+. Jony Na+ napływają biernie do wnętrza komórki zgodnie z gradientem stężeń.",
+        "clinicalNote": "Zasada „wszystko albo nic”: każdy bodziec nadprogowy wywołuje potencjał o tej samej maksymalnej amplitudzie.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "frontal-lobe"
+      },
+      {
+        "id": "hs-ap-szczyt",
+        "labelPl": "Szczyt potencjału (+35 mV / Inwersja)",
+        "labelLat": "Overshoot",
+        "x": 46,
+        "y": 18,
+        "description": "Błona na ułamek milisekundy odwraca znak ładunku (wewnątrz +30/+35 mV). W tym momencie kanały Na+ ulegają inaktywacji (blokada bramki h) — rozpoczyna się okres refrakcji bezwzględnej.",
+        "clinicalNote": "Lidokaina (środek miejscowo znieczulający) oraz tetrodotoksyna blokują napięciowozależne kanały Na+, uniemożliwiając powstanie iglicy."
+      },
+      {
+        "id": "hs-ap-repolaryzacja",
+        "labelPl": "Repolaryzacja (wypływ K+)",
+        "labelLat": "Effluxus K+",
+        "x": 60,
+        "y": 50,
+        "description": "Kanały Na+ pozostają zamknięte/inaktywne, a otwierają się wolniejsze napięciowozależne kanały K+. Masowy wypływ jonów K+ na zewnątrz przywraca ujemny ładunek wnętrza.",
+        "clinicalNote": "W trakcie większości repolaryzacji trwa refrakcja bezwzględna — impuls może biec tylko jednokierunkowo (ku zakończeniom aksonu)."
+      },
+      {
+        "id": "hs-ap-hiperpolaryzacja",
+        "labelPl": "Hiperpolaryzacja następcza (−85 mV)",
+        "labelLat": "Refrakcja względna",
+        "x": 73,
+        "y": 86,
+        "description": "Kanały K+ zamykają się z opóźnieniem, więc potencjał chwilowo spada poniżej −70 mV (do ok. −80/−85 mV). W tym czasie tylko bardzo silny bodziec może wzbudzić nowy impuls (refrakcja względna).",
+        "clinicalNote": "We włóknach mielinowych osłonka mielinowa izoluje akson, a kanały Na+/K+ skupiają się w przewężeniach Ranviera — stąd szybkie przewodnictwo skokowe.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "brainstem"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Polaryzacja spoczynkowa i osiągnięcie progu (−70 → −55 mV)",
+        "explanationHtml": "<p>Pompa <strong>Na<sup>+</sup>/K<sup>+</sup></strong> utrzymuje przewagę Na<sup>+</sup> na zewnątrz i K<sup>+</sup> wewnątrz (<strong>−70 mV</strong>). Gdy bodziec podniesie potencjał do progu <strong>−55 mV</strong>, otwierają się kanały sodowe.</p>",
+        "activeHotspotIds": ["hs-ap-spoczynkowy", "hs-ap-depolaryzacja"],
+        "flowArrow": [16, 76, 36, 46]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Szybka depolaryzacja i odwrócenie potencjału (+35 mV)",
+        "explanationHtml": "<p>Napływ <strong>Na<sup>+</sup> do wnętrza aksonu</strong> gwałtownie odpolaryzowuje błonę aż do <strong>+35 mV</strong>. Natychmiast potem kanały Na<sup>+</sup> przechodzą w stan inaktywacji (refrakcja bezwzględna).</p>",
+        "activeHotspotIds": ["hs-ap-depolaryzacja", "hs-ap-szczyt"],
+        "flowArrow": [36, 46, 46, 18]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Repolaryzacja przez wypływ K+",
+        "explanationHtml": "<p>Otwierają się napięciowozależne kanały potasowe — <strong>jony K<sup>+</sup> wypływają na zewnątrz</strong>, przywracając ujemny ładunek wewnętrznej powierzchni aksolemmy.</p>",
+        "activeHotspotIds": ["hs-ap-szczyt", "hs-ap-repolaryzacja"],
+        "flowArrow": [46, 18, 60, 50]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Hiperpolaryzacja (−85 mV) i przewodnictwo skokowe",
+        "explanationHtml": "<p>Powolne zamykanie kanałów K<sup>+</sup> daje chwilową <strong>hiperpolaryzację</strong> (refrakcja względna), po czym pompa Na<sup>+</sup>/K<sup>+</sup> przywraca −70 mV. Fala depolaryzacji przeskakuje kolejno między przewężeniami Ranviera.</p>",
+        "activeHotspotIds": ["hs-ap-repolaryzacja", "hs-ap-hiperpolaryzacja"],
+        "flowArrow": [60, 50, 73, 86]
+      }
+    ]
+  },
+  {
+    "id": "fig-fizjo-cykl-serca-ekg",
+    "subject": "fizjologia",
+    "chapterIds": [
+      "dzial4-czesc-16-analiza-ekg-i-tony-serca",
+      "dzial4-czesc-7-budowa-serca-i-uklad-krazenia",
+      "dzial4-czesc-8-fizjologia-krazenia-krwi-u-czlowieka",
+      "dzial4-czesc-18-regulacja-pracy-serca-ssaka-na-drodze-nerwowej",
+      "bio3-czesc-74-fizjologia-serca-i-krazenia-krwi"
+    ],
+    "titlePl": "Cykl pracy serca (Wykres Wiggersa i załamki EKG P-QRS-T)",
+    "titleLat": "Cyclus cardiacus et electrocardiogramma",
+    "caption": "Zależność czasowa między krzywą EKG (załamek P, zespół QRS, załamek T), ciśnieniem w lewej komorze i aorcie, zamknięciem/otwarciem zastawek oraz I i II tonem serca (~0,8 s przy 75 ud./min).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "wiggers-ecg",
+      "elementsSummary": "Krzywe ciśnień w aorcie (80-120 mmHg) i lewej komorze (0-120 mmHg) zsynchronizowane z zapisem EKG P-QRS-T oraz tonami serca S1 i S2."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax A&P / podstawy CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-wiggers-p",
+        "labelPl": "Załamek P i skurcz przedsionków",
+        "labelLat": "Depolarisatio atriorum",
+        "x": 22,
+        "y": 74,
+        "description": "Załamek P odpowiada depolaryzacji obu przedsionków inicjowanej przez węzeł zatokowo-przedsionkowy (SA). Po nim następuje skurcz przedsionków dopompowujący ok. 20% końcowej objętości krwi do komór.",
+        "clinicalNote": "Brak wyraźnych załamków P i nieregularny rytm komór wskazują na migotanie przedsionków.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-atrium"
+      },
+      {
+        "id": "hs-wiggers-qrs",
+        "labelPl": "Zespół QRS (depolaryzacja komór)",
+        "labelLat": "Depolarisatio ventriculorum",
+        "x": 41,
+        "y": 66,
+        "description": "Szybkie rozniesienie impulsu przez pęczek Hisa i włókna Purkinjego na mięśniówkę obu komór wywołuje wysoki zespół QRS (i maskuje repolaryzację przedsionków).",
+        "clinicalNote": "Wysoki woltaż QRS i grubsza ściana dotyczą komory lewej pompującej do wysokociśnieniowego krążenia dużego.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "left-ventricle"
+      },
+      {
+        "id": "hs-wiggers-skurcz-izo",
+        "labelPl": "Skurcz izowolumetryczny i I ton serca (S1)",
+        "labelLat": "Closure of AV valves",
+        "x": 45,
+        "y": 48,
+        "description": "Ciśnienie w komorze gwałtownie przekracza ciśnienie w przedsionku → zamykają się zastawki dwudzielna (mitralna) i trójdzielna, co generuje I ton serca („lub”). Objętość komory nie zmienia się, dopóki nie otworzą się zastawki półksiężycowate.",
+        "clinicalNote": "Częste pytanie maturalne: co wywołuje I ton? Zamknięcie zastawek przedsionkowo-komorowych (NIE uderzenie krwi o zastawki półksiężycowate).",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "left-atrium"
+      },
+      {
+        "id": "hs-wiggers-wyrzut",
+        "labelPl": "Faza wyrzutu krwi do aorty (ok. 120 mmHg)",
+        "labelLat": "Ejectio ventricularis",
+        "x": 56,
+        "y": 20,
+        "description": "Gdy ciśnienie w lewej komorze przekroczy ciśnienie rozkurczowe w aorcie (~80 mmHg), otwiera się zastawka aortalna i krew (objętość wyrzutowa SV ≈ 70 ml) zostaje wtłoczona do aorty (szczyt ~120 mmHg).",
+        "clinicalNote": "Frakcja wyrzutowa (EF = SV / EDV) zdrowego serca spoczynkowego wynosi ok. 55–70%.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "aortic-arch"
+      },
+      {
+        "id": "hs-wiggers-t",
+        "labelPl": "Załamek T i II ton serca (S2)",
+        "labelLat": "Repolarisatio et closure SL",
+        "x": 68,
+        "y": 72,
+        "description": "Załamek T odzwierciedla repolaryzację komór. Spadek ciśnienia w komorach poniżej ciśnienia w aorcie/pniu płucnym zatrzaskuje zastawki półksiężycowate (II ton serca „dub” — wcięcie dykrotyczne na krzywej aortalnej), rozpoczynając rozkurcz izowolumetryczny.",
+        "clinicalNote": "Uniesienie odcinka ST (między QRS a T) może świadczyć o świeżym niedokrwieniu lub zawale mięśnia sercowego.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-ventricle"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Załamek P — depolaryzacja i skurcz przedsionków",
+        "explanationHtml": "<p>Węzeł SA pobudza przedsionki (<strong>załamek P</strong> w EKG), a ich skurcz kończy napełnianie komór przed zamknięciem zastawek AV.</p>",
+        "activeHotspotIds": ["hs-wiggers-p"],
+        "flowArrow": [22, 74, 41, 66]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Zespół QRS → Skurcz izowolumetryczny (I ton S1)",
+        "explanationHtml": "<p>Zespół <strong>QRS</strong> uruchamia skurcz komór. Ciśnienie błyskawicznie rośnie i zatrzaskuje zastawki mitralną oraz trójdzielną (<strong>I ton serca</strong>).</p>",
+        "activeHotspotIds": ["hs-wiggers-qrs", "hs-wiggers-skurcz-izo"],
+        "flowArrow": [41, 66, 45, 48]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Przekroczenie 80 mmHg i wyrzut do aorty (~120 mmHg)",
+        "explanationHtml": "<p>Zastawka półksiężycowata aorty otwiera się przy ~80 mmHg. Krzywe ciśnienia lewej komory i aorty idą równolegle aż do szczytu skurczu (<strong>120 mmHg</strong>).</p>",
+        "activeHotspotIds": ["hs-wiggers-skurcz-izo", "hs-wiggers-wyrzut"],
+        "flowArrow": [45, 48, 56, 20]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Załamek T, rozkurcz i II ton serca (S2)",
+        "explanationHtml": "<p><strong>Załamek T</strong> sygnalizuje repolaryzację komór; krew w aorcie cofa się i zamyka zastawki półksiężycowate (<strong>II ton serca</strong> i wcięcie dykrotyczne), rozpoczynając pauzę rozkurczową.</p>",
+        "activeHotspotIds": ["hs-wiggers-wyrzut", "hs-wiggers-t"],
+        "flowArrow": [56, 20, 68, 72]
+      }
+    ]
+  },
+  {
+    "id": "fig-fizjo-wymiana-gazowa-bohr",
+    "subject": "fizjologia",
+    "chapterIds": [
+      "dzial3-czesc-9-dyfuzja-gazow-w-pecherzykach-plucnych",
+      "dzial3-czesc-10-transport-gazow-oddechowych-we-krwi",
+      "dzial4-czesc-22-biochemia-transportu-gazow-oddechowych",
+      "dzial4-czesc-24-transport-gazow-oddechowych-we-krwi",
+      "dzial4-czesc-25-wymiana-gazowa-w-kapilarach-plucnych",
+      "dzial4-czesc-26-wymiana-gazowa-w-tkankach",
+      "bio3-czesc-60-hemoglobina-i-transport-gazow-oddechowych",
+      "bio3-czesc-66-czynniki-wplywajace-na-wiazanie-i-oddawanie-tlenu-przez-hemoglobine"
+    ],
+    "titlePl": "Wymiana gazowa w pęcherzyku płucnym i krzywa dysocjacji oksyhemoglobiny (Efekt Bohra)",
+    "titleLat": "Haematosis et effectus Bohri",
+    "caption": "Zestawienie dyfuzji O2 i CO2 przez barierę krew–powietrze w pęcherzyku płucnym z esowatą krzywą dysocjacji HbO2 oraz wpływem CO2 i pH (Efekt Bohra).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "bohr-oxygen-curve",
+      "elementsSummary": "Po lewej: pęcherzyk płucny i kapilara z erytrocytem (Hb + O2 / HCO3−). Po prawej: wykres %HbO2 względem pO2 z krzywą prawidłową (pH 7,4) i przesuniętą w prawo (Efekt Bohra: pH 7,2, ↑CO2)."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax A&P / podstawy CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-bohr-pecherzyk",
+        "labelPl": "Pęcherzyk płucny i bariera pęcherzykowo-włośniczkowa",
+        "labelLat": "Alveolus pulmonis (pO2 ≈ 100 mmHg)",
+        "x": 24,
+        "y": 28,
+        "description": "Powietrze pęcherzykowe ma wysokie ciśnienie cząstkowe tlenu (pO2 ≈ 100–104 mmHg) i niskie CO2 (~40 mmHg). Różnica ciśnień napędza bierną dyfuzję O2 do osocza i CO2 z krwi do pęcherzyka.",
+        "clinicalNote": "Surfaktant (lipoproteina pneumocytów II typu) obniża napięcie powierzchniowe, zapobiegając zapadaniu się pęcherzyków przy wydechu.",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "pulmonary-hilum"
+      },
+      {
+        "id": "hs-bohr-kapilara",
+        "labelPl": "Erytrocyt i wiązanie O2 przez hemoglobinę (Hb)",
+        "labelLat": "Oxyhaemoglobinum",
+        "x": 28,
+        "y": 66,
+        "description": "Ok. 98,5% tlenu transportowane jest w postaci oksyhemoglobiny (HbO2 — kooperacyjne wiązanie do 4 cząsteczek O2 z jonami Fe2+ grup hemowych). CO2 transportowany jest głównie jako jony HCO3− (~70%) dzięki anhydrazie węglanowej.",
+        "clinicalNote": "Tlenek węgla (CO) tworzy karboksyhemoglobinę z ok. 210–250 razy większym powinowactwem niż O2, blokując przenoszenie tlenu.",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "right-superior-lobe"
+      },
+      {
+        "id": "hs-bohr-plateau",
+        "labelPl": "Plateau krzywej w płucach (pO2 ≈ 100 mmHg → 97% HbO2)",
+        "labelLat": "Saturatio pulmonalis",
+        "x": 84,
+        "y": 24,
+        "description": "Górny płaski odcinek esowatej krzywej sprawia, że nawet przy niewielkim spadku ciśnienia tlenu (np. w górach przy pO2 = 75 mmHg) wysycenie krwi tlenem utrzymuje się powyżej 90%.",
+        "clinicalNote": "Esowaty kształt wynika ze zjawiska kooperatywności: związanie pierwszej cząsteczki O2 ułatwia przyłączenie kolejnych do pozostałych podjednostek globiny.",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "pulmonary-hilum"
+      },
+      {
+        "id": "hs-bohr-strome",
+        "labelPl": "Stromy odcinek tkankowy (pO2 ≈ 20–40 mmHg)",
+        "labelLat": "Dissociatio in textis",
+        "x": 65,
+        "y": 52,
+        "description": "W kapilarach tkankowych spadek pO2 z 40 mmHg (spoczynek) do 20 mmHg (pracujący mięsień) powoduje gwałtowne uwalnianie tlenu z oksyhemoglobiny prosto do mitochondriów.",
+        "clinicalNote": "Mioglobina w mięśniach ma krzywą hiperboliczną leżącą na lewo od Hb — odbiera O2 od hemoglobiny i magazynuje go na skurcz."
+      },
+      {
+        "id": "hs-bohr-efekt",
+        "labelPl": "Efekt Bohra (↑pCO2, ↓pH, ↑temp. → w prawo)",
+        "labelLat": "Effectus Bohri",
+        "x": 74,
+        "y": 58,
+        "description": "Wzrost stężenia CO2 i jonów H+ (spadek pH np. z kwasu mlekowego) oraz wzrost temperatury zmniejszają powinowactwo hemoglobiny do O2 — krzywa przesuwa się w prawo i w dół, oddając jeszcze więcej tlenu pracującym mięśniom.",
+        "clinicalNote": "CKE: Hemoglobina płodowa (HbF) ma krzywą przesuniętą W LEWO względem HbA dorosłej matki, dzięki czemu płód efektywnie odbiera O2 w łożysku."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Dyfuzja w pęcherzyku płucnym (pO2 = 100 mmHg)",
+        "explanationHtml": "<p>Tlen dyfunduje biernie zgodnie z gradientem ciśnienia cząstkowego ze światła pęcherzyka do osocza i erytrocytu, wysycając hemoglobinę (<strong>~97–98%</strong> na plateau krzywej).</p>",
+        "activeHotspotIds": ["hs-bohr-pecherzyk", "hs-bohr-kapilara", "hs-bohr-plateau"],
+        "flowArrow": [24, 28, 28, 66]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Obciążenie tlenem i efekt kooperatywności (Plateau)",
+        "explanationHtml": "<p>Przyłączenie pierwszej cząsteczki O<sub>2</sub> zmienia konformację tetrameru Hb, zwiększając powinowactwo kolejnych hemu — stąd płaski rezerwuar bezpieczeństwa na górze esowatej krzywej.</p>",
+        "activeHotspotIds": ["hs-bohr-plateau"],
+        "flowArrow": [28, 66, 84, 24]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Strome uwalnianie O2 w tkankach (pO2 spada do 20–40 mmHg)",
+        "explanationHtml": "<p>W kapilarach narządów o niskim pO<sub>2</sub> krzywa gwałtownie opada, umożliwiając oddanie dużej porcji O<sub>2</sub> przy niewielkiej zmianie prężności tlenu.</p>",
+        "activeHotspotIds": ["hs-bohr-plateau", "hs-bohr-strome"],
+        "flowArrow": [84, 24, 65, 52]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Efekt Bohra w pracującym mięśniu",
+        "explanationHtml": "<p><strong>Wzrost pCO<sub>2</sub>, spadek pH oraz wyższa temperatura</strong> obniżają powinowactwo Hb do tlenu (przesunięcie krzywej w prawo), maksymalizując dostawę O<sub>2</sub> do pracujących tkanek.</p>",
+        "activeHotspotIds": ["hs-bohr-strome", "hs-bohr-efekt"],
+        "flowArrow": [65, 52, 74, 58]
+      }
+    ]
+  }
+]

@@ -1,0 +1,660 @@
+[
+  {
+    "id": "fig-anat-osteon-szpik",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom1-czesc-8-budowa-wewnetrzna-kosci-i-szpik-kostny",
+      "tom1-czesc-7-budowa-zewnetrzna-kosci",
+      "tom1-czesc-9-okostna-unaczynienie-i-unerwienie-kosci",
+      "tom1-czesc-10-struktura-fizykochemiczna-kosci"
+    ],
+    "titlePl": "Budowa wewnętrzna kości: Osteon (system Haversa), blaszki kostne i szpik czerwony",
+    "titleLat": "Osteonum (Systema Haversi) et Medulla Ossium Rubra",
+    "caption": "Przekrój przez istotę zbitą i gąbczastą kości długiej z zaznaczeniem unaczynienia kanałów Haversa i Volkmanna oraz beleczek kostnych otaczających jamy szpikowe.",
+    "renderMode": "cleanroom-svg-schematic",
+    "imageUrl": "/textbook-assets/anatomia/openstax-osteon-bone.png",
+    "width": 912,
+    "height": 961,
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "osteon",
+      "elementsSummary": "Koncentryczne blaszki osteonu wokół kanału Haversa, poprzeczny kanał Volkmanna z okostnej oraz przejście w beleczki istoty gąbczastej i szpik kostny czerwony."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG + Rycina źródłowa: OpenStax Anatomy & Physiology (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-haversian-canal",
+        "labelPl": "Kanał środkowy Haversa",
+        "labelLat": "Canalis centralis (Haversi)",
+        "x": 28,
+        "y": 46,
+        "description": "Centralny kanał osteonu biegnący równolegle do osi długiej trzonu kości. Zawiera naczynia krwionośne (tętniczkę i żyłkę śródkostną), naczynia chłonne oraz bezmielinowe włókna nerwowe otoczone luźną tkanką łączną.",
+        "clinicalNote": "Krwawienie śródkostne i podokostnowe po złamaniu trzonu tworzy krwiak inicjujący kostninę (callus).",
+        "linkedEntityId": "femur",
+        "linkedSubPinId": "femoral-head-neck"
+      },
+      {
+        "id": "hs-concentric-lamellae",
+        "labelPl": "Blaszki kostne koncentryczne (systemowe)",
+        "labelLat": "Lamellae osseae concenticae",
+        "x": 28,
+        "y": 24,
+        "description": "4–20 współśrodkowych warstw zmineralizowanej istoty międzykomórkowej z włóknami kolagenu typu I ułożonymi helikalnie w naprzemiennych kierunkach dla maksymalnej wytrzymałości na skręcanie i ściskanie.",
+        "clinicalNote": "W kości długiej taki układ osteonów zapewnia znacznie wyższą odporność na obciążenia osiowe niż w kościach płaskich (częste pytanie CKE).",
+        "linkedEntityId": "femur",
+        "linkedSubPinId": "femoral-head-neck"
+      },
+      {
+        "id": "hs-osteocyte-lacunae",
+        "labelPl": "Jamki kostne z osteocytami",
+        "labelLat": "Lacunae osseae et osteocyti",
+        "x": 42,
+        "y": 35,
+        "description": "Małe przestrzenie między blaszkami zasiedlone przez dojrzałe osteocyty — mechanoreceptory tkanki kostnej regulujące przebudowę kości przez osteoblasty i osteoklasty.",
+        "linkedEntityId": "femur",
+        "linkedSubPinId": "femoral-condyles"
+      },
+      {
+        "id": "hs-volkmann-canal",
+        "labelPl": "Kanał przeszywający Volkmanna",
+        "labelLat": "Canalis perforans (Volkmanni)",
+        "x": 38,
+        "y": 68,
+        "description": "Poprzeczny lub skośny kanał przebijający blaszki systemowe. Łączy naczynia okostnej z kanałami Haversa oraz z jamą szpikową bez własnych blaszek koncentrycznych wokół kanału.",
+        "linkedEntityId": "femur",
+        "linkedSubPinId": "femoral-head-neck"
+      },
+      {
+        "id": "hs-periosteum",
+        "labelPl": "Okostna i włókna Sharpeya",
+        "labelLat": "Periosteum et fibrae perforantes",
+        "x": 11,
+        "y": 54,
+        "description": "Dwulistna błona łącznotkankowa pokrywająca kość z zewnątrz (z wyjątkiem powierzchni stawowych). Warstwa rozrodcza (kambialna) zawiera osteoprogenitorowe komórki macierzyste niezbędne do zrostu złamań i wzrostu kości na grubość.",
+        "clinicalNote": "Silnie unerwiona bólowo — odwarstwienie lub rozerwanie okostnej odpowiada za ostry ból przy urazach kości.",
+        "linkedEntityId": "femur",
+        "linkedSubPinId": "femoral-head-neck"
+      },
+      {
+        "id": "hs-spongy-marrow",
+        "labelPl": "Istota gąbczasta i szpik kostny czerwony",
+        "labelLat": "Substantia spongiosa et medulla ossium rubra",
+        "x": 78,
+        "y": 50,
+        "description": "Trójwymiarowa sieć beleczek kostnych (trabeculae) ułożona wzdłuż linii największych naprężeń mechanicznych (prawa Wolffa). Pomiędzy beleczkami w nasadach, mostku, żebrach i miednicy leży czynny krwiotwórczo szpik czerwony.",
+        "clinicalNote": "U dorosłych szpik czerwony przetrwa m.in. w talerzu kości biodrowej i mostku — stąd pobiera się trepanobiopsję i aspirat szpiku.",
+        "linkedEntityId": "femur",
+        "linkedSubPinId": "femoral-head-neck"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Unaczynienie od okostnej przez kanały Volkmanna do kanału Haversa",
+        "explanationHtml": "<p>Naczynia tętnicze przebijają <strong>okostną</strong> i przez poprzeczne <strong>kanały Volkmanna</strong> wnikają do osiowych <strong>kanałów Haversa</strong> poszczególnych osteonów, zaopatrując istotę zbitą w tlen i jony Ca<sup>2+</sup> / PO<sub>4</sub><sup>3-</sup>.</p>",
+        "activeHotspotIds": ["hs-periosteum", "hs-volkmann-canal", "hs-haversian-canal"],
+        "flowArrow": [11, 56, 28, 46]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Dyfuzja kanalikowa (Canaliculi ossei) do osteocytów w jamkach",
+        "explanationHtml": "<p>Ponieważ zmineralizowana macierz kości jest nieprzepuszczalna dla dyfuzji, odżywianie odbywa się promieniście przez sieć mikroskopijnych <strong>kanalików kostnych</strong> łączących kanał Haversa z wypustkami <strong>osteocytów</strong> w kolejnych kręgach blaszek.</p>",
+        "activeHotspotIds": ["hs-haversian-canal", "hs-osteocyte-lacunae", "hs-concentric-lamellae"],
+        "flowArrow": [28, 46, 42, 35]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Architektura blaszek koncentrycznych i beleczek (Trajektorie naprężeń)",
+        "explanationHtml": "<p>Naprzemienny przebieg włókien kolagenu typu I w sąsiednich <strong>blaszkach koncentrycznych</strong> nadaje istocie zbitej trzonu wysoką odporność na ścinanie i zginanie, przenosząc siły dalej na architekturę beleczek <strong>istoty gąbczastej</strong> w nasadzie.</p>",
+        "activeHotspotIds": ["hs-concentric-lamellae", "hs-spongy-marrow"],
+        "flowArrow": [34, 26, 75, 48]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Szpik kostny czerwony w oczkach istoty gąbczastej — Hematopoeza",
+        "explanationHtml": "<p>W zatokach naczyniowych między beleczkami istoty gąbczastej <strong>szpik kostny czerwony</strong> wytwarza wszystkie elementy morfotyczne krwi (erytrocyty, granulocyty, limfocyty i megakariocyty), ulegając u dorosłych stopniowej przemianie w trzonach długich w szpik żółty.</p>",
+        "activeHotspotIds": ["hs-spongy-marrow", "hs-volkmann-canal"],
+        "flowArrow": [78, 50, 78, 22]
+      }
+    ]
+  },
+  {
+    "id": "fig-anat-serce-zastawki",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom1-czesc-20-uklad-sercowo-naczyniowy-serce-i-krazenie-krwi",
+      "tom3-czesc-12-serce-i-osierdzie",
+      "tom3-czesc-16-zastawki-serca",
+      "tom3-czesc-17-zastawki-tetnicze-serca",
+      "tom3-czesc-19-budowa-wewnetrzna-przedsionkow-i-komor-serca",
+      "tom3-czesc-21-budowa-wewnetrzna-komor-serca",
+      "tom3-czesc-22-uklad-przewodzacy-serca"
+    ],
+    "titlePl": "Przekrój czołowy serca, aparat zastawkowy i hemodynamika dwóch obiegów",
+    "titleLat": "Cor — Atria, Ventriculi et Valvae Cordis",
+    "caption": "Jamy serca, kierunek przepływu krwi odtlenowanej (krążenie małe) i utlenowanej (krążenie duże) oraz cztery zastawki zapewniające jednokierunkowość strumienia.",
+    "renderMode": "cleanroom-svg-schematic",
+    "imageUrl": "/textbook-assets/anatomia/openstax-heart-section.png",
+    "width": 822,
+    "height": 615,
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "heart-valves",
+      "elementsSummary": "Prawy i lewy przedsionek, grubościenna komora lewa vs cienkościenna komora prawa, zastawka trójdzielna, mitralna, pień płucny i łuk aorty."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG + Rycina źródłowa: OpenStax Anatomy & Physiology (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-right-atrium",
+        "labelPl": "Przedsionek prawy i węzeł SA",
+        "labelLat": "Atrium dextrum et nodus sinuatrialis",
+        "x": 27,
+        "y": 35,
+        "description": "Odbiera krew żylną z żyły głównej górnej, dolnej oraz zatoki wieńcowej. W jego górnej ścianie przy ujściu SVC leży naturalny rozrusznik serca — węzeł zatokowo-przedsionkowy (SA).",
+        "clinicalNote": "Podczas tonów serca zamknięcie zastawek AV (trójdzielnej i mitralnej) daje I ton skurczowy ('lub').",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-atrium"
+      },
+      {
+        "id": "hs-right-ventricle",
+        "labelPl": "Komora prawa i zastawka trójdzielna",
+        "labelLat": "Ventriculus dexter et valva tricuspidalis",
+        "x": 31,
+        "y": 64,
+        "description": "Cienkościenna jama (ok. 3–5 mm) tłocząca krew odtlenowaną pod niskim ciśnieniem (~25/10 mmHg) przez pień płucny do krążenia płucnego. Oddzielona od prawego przedsionka zastawką trójdzielną umocowaną strunami ścięgnistymi do mięśni brodawkowatych.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-ventricle"
+      },
+      {
+        "id": "hs-left-atrium",
+        "labelPl": "Przedsionek lewy (żyły płucne)",
+        "labelLat": "Atrium sinistrum",
+        "x": 72,
+        "y": 35,
+        "description": "Odbiera krew dobrze utlenowaną z czterech żył płucnych. Przylega bezpośrednio do przełyku (tylna powierzchnia serca) i oddaje krew do komory lewej przez zastawkę dwudzielną (mitralną).",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "left-atrium"
+      },
+      {
+        "id": "hs-left-ventricle",
+        "labelPl": "Komora lewa i zastawka dwudzielna (mitralna)",
+        "labelLat": "Ventriculus sinister et valva mitralis",
+        "x": 67,
+        "y": 66,
+        "description": "Buduje koniuszek serca (apex cordis). Jej mięśniówka jest ok. 3× grubsza (12–15 mm) niż w komorze prawej, ponieważ tłoczy krew do całego krążenia dużego przy ciśnieniu skurczowym ok. 120 mmHg.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "left-ventricle"
+      },
+      {
+        "id": "hs-aorta-arch",
+        "labelPl": "Łuk aorty i zastawka półksiężycowata aorty",
+        "labelLat": "Arcus aortae et valva aortae",
+        "x": 54,
+        "y": 17,
+        "description": "Główny pień tętniczy ustroju. Tuż powyżej płatków półksiężycowatych zastawki aortalnej (w zatokach Valsalvy) odchodzą tętnice wieńcowe lewa i prawa odżywiające myocardium w fazie rozkurczu.",
+        "clinicalNote": "Zamknięcie zastawek półksiężycowatych aorty i pnia płucnego na początku rozkurczu generuje II ton serca ('dup').",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "aortic-arch"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Powrót żylny do prawego przedsionka i przejście przez zastawkę trójdzielną",
+        "explanationHtml": "<p>Krew odtlenowana z żył głównych wypełnia <strong>prawy przedsionek</strong>, gdzie węzeł SA inicjuje falę depolaryzacji. Przez otwartą <strong>zastawkę trójdzielną</strong> krew wpływa do prawej komory.</p>",
+        "activeHotspotIds": ["hs-right-atrium", "hs-right-ventricle"],
+        "flowArrow": [27, 36, 31, 62]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Wyrzut krwi z prawej komory do pnia płucnego (Krążenie małe)",
+        "explanationHtml": "<p>Podczas skurczu komory zamyka się zastawka trójdzielna (I ton serca), otwiera zastawka pnia płucnego i krew trafia do płuc w celu natlenowania i oddania CO<sub>2</sub>.</p>",
+        "activeHotspotIds": ["hs-right-ventricle"],
+        "flowArrow": [34, 60, 44, 20]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Napływ krwi utlenowanej z płuc do lewego przedsionka",
+        "explanationHtml": "<p>Cztery żyły płucne dostarczają utlenowaną krew do <strong>lewego przedsionka</strong>; w fazie rozkurczu przez otwartą <strong>zastawkę mitralną (dwudzielną)</strong> krew napełnia komorę lewą.</p>",
+        "activeHotspotIds": ["hs-left-atrium", "hs-left-ventricle"],
+        "flowArrow": [72, 36, 67, 64]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Wysokociśnieniowy wyrzut do łuku aorty (Krążenie systemowe)",
+        "explanationHtml": "<p>Gruba mięśniówka <strong>lewej komory</strong> pokonuje ciśnienie rozkurczowe w aorcie (80 mmHg), otwierając zastawkę aortalną i wyrzucając ok. 70 ml krwi (SV) do <strong>łuku aorty</strong>.</p>",
+        "activeHotspotIds": ["hs-left-ventricle", "hs-aorta-arch"],
+        "flowArrow": [62, 60, 54, 20]
+      }
+    ]
+  },
+  {
+    "id": "fig-anat-splot-ramienny",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom2-czesc-53-nerwy-konczyny-gornej-splot-ramienny",
+      "tom2-czesc-54-krotkie-nerwy-splotu-ramiennego"
+    ],
+    "titlePl": "Splot ramienny (Plexus brachialis): Korzenie C5–Th1 → Pnie → Części → Pęczki → Nerwy długie",
+    "titleLat": "Plexus Brachialis — Radices, Trunci, Fasciculi et Nervi",
+    "caption": "Schemat topograficzny pięciu poziomów organizacji splotu ramiennego (RTDCB) oraz kluczowych nerwów kończyny górnej w stosunku do tętnicy pachowej.",
+    "renderMode": "cleanroom-svg-schematic",
+    "imageUrl": "/textbook-assets/anatomia/openstax-brachial-plexus.png",
+    "width": 852,
+    "height": 1221,
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "brachial-plexus",
+      "elementsSummary": "Korzenie C5, C6, C7, C8, Th1; trzy pnie (górny, środkowy, dolny); części przednie i tylne; trzy pęczki oraz nerwy końcowe (mięśniowo-skórny, pachowy, promieniowy, pośrodkowy, łokciowy)."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG + Rycina źródłowa: OpenStax Anatomy & Physiology (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-bp-roots",
+        "labelPl": "Korzenie splotu (gałęzie brzuszne C5–Th1)",
+        "labelLat": "Radices plexus brachialis (C5–Th1)",
+        "x": 14,
+        "y": 48,
+        "description": "Gałęzie brzuszne nerwów rdzeniowych C5, C6, C7, C8 i Th1 wychodzące między mięśniem pochyłym przednim a środkowym (szczelina mięśni pochyłych).",
+        "clinicalNote": "Od korzeni odchodzą m.in. nerw piersiowy długi (C5–C7 — jego porażenie daje 'łopatkę skrzydlatą').",
+        "linkedEntityId": "vertebral column",
+        "linkedSubPinId": "cervical-spine"
+      },
+      {
+        "id": "hs-bp-trunks",
+        "labelPl": "Pnie: Górny (C5–C6), Środkowy (C7), Dolny (C8–Th1)",
+        "labelLat": "Trunci superior, medius et inferior",
+        "x": 35,
+        "y": 42,
+        "description": "Leżą w trójkącie bocznym szyi powyżej obojczyka (pars supraclavicularis). Pień dolny krzyżuje I żebro bezpośrednio za tętnicą podobojczykową.",
+        "clinicalNote": "Uraz pnia górnego (Erba-Duchenne'a C5–C6) daje ramię 'kelnera proszącego o napiwek'; uraz pnia dolnego (Klumpkego C8–Th1) — 'rękę szponiastą'.",
+        "linkedEntityId": "vertebral column",
+        "linkedSubPinId": "cervical-spine"
+      },
+      {
+        "id": "hs-bp-lateral-cord",
+        "labelPl": "Pęczek boczny → n. mięśniowo-skórny + korzeń boczny n. pośrodkowego",
+        "labelLat": "Fasciculus lateralis",
+        "x": 64,
+        "y": 24,
+        "description": "Powstaje z połączenia części przednich pnia górnego i środkowego. Oddaje nerw piersiowy boczny, nerw mięśniowo-skórny (unerwia mięśnie grupy przedniej ramienia: dwugłowy, kruczo-ramienny, ramienny) oraz wkład do nerwu pośrodkowego.",
+        "linkedEntityId": "vertebral column",
+        "linkedSubPinId": "cervical-spine"
+      },
+      {
+        "id": "hs-bp-posterior-cord",
+        "labelPl": "Pęczek tylny → n. pachowy i n. promieniowy",
+        "labelLat": "Fasciculus posterior",
+        "x": 64,
+        "y": 50,
+        "description": "Powstaje ze wszystkich trzech części tylnych pni. Dzieli się na nerw pachowy (m. naramienny i obły mniejszy) oraz najgrubszy nerw promieniowy unerwiający wszystkie prostowniki ramienia i przedramienia.",
+        "clinicalNote": "Złamanie trzonu kości ramiennej w bruździe n. promieniowego powoduje charakterystyczną 'rękę opadającą' (porażenie prostowników nadgarstka).",
+        "linkedEntityId": "vertebral column",
+        "linkedSubPinId": "cervical-spine"
+      },
+      {
+        "id": "hs-bp-medial-cord",
+        "labelPl": "Pęczek przyśrodkowy → n. łokciowy + korzeń przyśrodkowy n. pośrodkowego",
+        "labelLat": "Fasciculus medialis",
+        "x": 64,
+        "y": 76,
+        "description": "Przedłużenie części przedniej pnia dolnego (C8–Th1). Oddaje nerw łokciowy (unerwia m.in. większość krótkich mięśni ręki oraz zginacz łokciowy nadgarstka) oraz tworzy z pęczkiem bocznym literę 'M' dającą nerw pośrodkowy.",
+        "clinicalNote": "Ucisk nerwu pośrodkowego w kanale nadgarstka wywołuje osłabienie kłębu kciuka i parestezje I–III i połowy IV palca.",
+        "linkedEntityId": "vertebral column",
+        "linkedSubPinId": "cervical-spine"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Wyjście korzeni C5–Th1 w szczelinie mięśni pochyłych",
+        "explanationHtml": "<p>Pięć gałęzi brzusznych (<strong>C5, C6, C7, C8, Th1</strong>) opuszcza kanał kręgowy i układa się w trójkącie tylnym szyi pomiędzy mięśniem pochyłym przednim a środkowym.</p>",
+        "activeHotspotIds": ["hs-bp-roots"],
+        "flowArrow": [12, 48, 33, 42]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Zespolenie w trzy pnie nadobojczykowe i podział A/P",
+        "explanationHtml": "<p>C5+C6 tworzą <strong>pień górny</strong>, C7 biegnie jako <strong>pień środkowy</strong>, a C8+Th1 jako <strong>pień dolny</strong>. Każdy pień dzieli się za obojczykiem na część przednią (zginacze) i tylną (prostowniki).</p>",
+        "activeHotspotIds": ["hs-bp-trunks", "hs-bp-posterior-cord"],
+        "flowArrow": [35, 42, 62, 50]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Ułożenie pęczków względem tętnicy pachowej (Litera 'M')",
+        "explanationHtml": "<p>W jamie pachowej pęczek <strong>boczny</strong>, <strong>tylny</strong> i <strong>przyśrodkowy</strong> otaczają tętnicę pachową z trzech stron. Dwa korzenie pęczka bocznego i przyśrodkowego łączą się przed tętnicą w <strong>nerw pośrodkowy</strong>.</p>",
+        "activeHotspotIds": ["hs-bp-lateral-cord", "hs-bp-medial-cord"],
+        "flowArrow": [64, 24, 86, 48]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Zróżnicowanie kliniczne pni terminalnych (Prostowniki vs Zginacze)",
+        "explanationHtml": "<p>Wszystkie prostowniki zaopatruje <strong>pęczek tylny</strong> (n. promieniowy), zginacz przedni ramienia — <strong>n. mięśniowo-skórny</strong>, zginacze przedramienia/kłąb — <strong>n. pośrodkowy</strong>, a mięśnie wewnętrzne dłoni — <strong>n. łokciowy</strong>.</p>",
+        "activeHotspotIds": ["hs-bp-posterior-cord", "hs-bp-medial-cord", "hs-bp-lateral-cord"],
+        "flowArrow": [66, 76, 88, 76]
+      }
+    ]
+  },
+  {
+    "id": "fig-anat-kolo-willisa",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom4-czesc-138-ogolna-budowa-mozgowia",
+      "tom4-czesc-141-powierzchnia-przysrodkowa-i-dolna-polkuli-mozgu",
+      "tom4-czesc-143-miedzymozgowie-powierzchnia-podstawna-i-podwzgorze",
+      "tom1-czesc-102-wybrane-hasla-anatomiczne-mozgowie-naczynia-uklad-pokarmowy-i-inne"
+    ],
+    "titlePl": "Koło tętnicze mózgu Willisa (Circulus arteriosus cerebri) — krążenie oboczne podstawy mózgu",
+    "titleLat": "Circulus Arteriosus Cerebri (Willisi)",
+    "caption": "Zespolenie przedniego układu krążenia szyjnego (ICA) z tylnym układem kręgowo-podstawnym u podstawy mózgowia wokół skrzyżowania wzrokowego i przysadki.",
+    "renderMode": "cleanroom-svg-schematic",
+    "imageUrl": "/textbook-assets/anatomia/openstax-willis-circle.png",
+    "width": 672,
+    "height": 922,
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "willis-circle",
+      "elementsSummary": "Tętnice kręgowe → tętnica podstawna → tętnice tylne mózgu (PCA); tętnice łączące tylne (PComA); tętnice szyjne wewnętrzne (ICA) → MCA i ACA połączone przez AComA."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG + Rycina źródłowa: OpenStax Anatomy & Physiology (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-aca-acoma",
+        "labelPl": "Tętnica przednia mózgu (ACA) i łącząca przednia (AComA)",
+        "labelLat": "A. cerebri anterior et a. communicans anterior",
+        "x": 50,
+        "y": 17,
+        "description": "ACA unaczyniają powierzchnię przyśrodkową płatów czołowych i ciemieniowych (ośrodki ruchowo-czuciowe kończyny dolnej). AComA zamyka koło od przodu i jest najczęstszym miejscem tętniaków wewnątrzczaszkowych (~30–35%).",
+        "clinicalNote": "Pęknięcie tętniaka AComA powoduje gwałtowny krwotok podpajęczynówkowy ('piorunujący ból głowy').",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "frontal-lobe"
+      },
+      {
+        "id": "hs-ica-mca",
+        "labelPl": "Tętnica szyjna wewnętrzna (ICA) i środkowa mózgu (MCA)",
+        "labelLat": "A. carotis interna et a. cerebri media",
+        "x": 27,
+        "y": 42,
+        "description": "Główne przednie źródło krwi dla półkul. MCA biegnie w bruździe bocznej Sylwiusza i unaczynienia niemal całą powierzchnię wypukłą kory — korę ruchową twarzy/ręki oraz ośrodki mowy Broki i Wernickego w półkuli dominującej.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "frontal-lobe"
+      },
+      {
+        "id": "hs-pcoma",
+        "labelPl": "Tętnica łącząca tylna (PComA)",
+        "labelLat": "A. communicans posterior",
+        "x": 35,
+        "y": 54,
+        "description": "Łączy układ szyjny przedni (ICA) z układem kręgowo-podstawnym tylnym (PCA). Biegnie równolegle do nerwu okoruchowego (III).",
+        "clinicalNote": "Tętniak PComA często uciska nerw III (okoruchowy), powodując opadnięcie powieki, rozszerzenie źrenicy i ustawienie oka na zewnątrz i ku dołowi.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "parietal-occipital"
+      },
+      {
+        "id": "hs-pca",
+        "labelPl": "Tętnica tylna mózgu (PCA)",
+        "labelLat": "A. cerebri posterior",
+        "x": 66,
+        "y": 62,
+        "description": "Końcowa gałąź rozwidlenia tętnicy podstawnej. Zaopatruje płat potyliczny (pierwszorzędowa kora wzrokowa wokół bruzdy ostrogowej V1) oraz podstawną powierzchnię płata skroniowego.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "parietal-occipital"
+      },
+      {
+        "id": "hs-basilar",
+        "labelPl": "Tętnica podstawna i tętnice kręgowe",
+        "labelLat": "A. basilaris et aa. vertebrales",
+        "x": 50,
+        "y": 82,
+        "description": "Obustronne tętnice kręgowe łączą się na dolnym brzegu mostu w nieparzystą tętnicę podstawną, która oddaje tętnice móżdżkowe oraz gałęzie przeszywające dla pnia mózgu.",
+        "clinicalNote": "Niedrożność tętnicy podstawnej grozi zespołem zamknięcia (locked-in syndrome) lub zgonem z uszkodzenia ośrodków pnia.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "brainstem"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Dopływ tylny — tętnice kręgowe łączą się w tętnicę podstawną",
+        "explanationHtml": "<p>Z kręgosłupa szyjnego (otwory wyrostków poprzecznych C6–C1) wkraczają przez otwór wielki <strong>tętnice kręgowe</strong>, łącząc się u podstawy mostu w <strong>tętnicę podstawną</strong> i oddając parzyste PCA.</p>",
+        "activeHotspotIds": ["hs-basilar", "hs-pca"],
+        "flowArrow": [50, 92, 50, 66]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Dopływ przedni — tętnice szyjne wewnętrzne (ICA → MCA i ACA)",
+        "explanationHtml": "<p>Po obu stronach skrzyżowania wzrokowego <strong>tętnica szyjna wewnętrzna</strong> dzieli się na potężną <strong>tętnicę środkową mózgu (MCA)</strong> idącą na bok oraz <strong>tętnicę przednią mózgu (ACA)</strong> biegnącą ku przodowi.</p>",
+        "activeHotspotIds": ["hs-ica-mca", "hs-aca-acoma"],
+        "flowArrow": [27, 42, 48, 17]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Zamknięcie pierścienia przez tętnice łączące (AComA i PComA)",
+        "explanationHtml": "<p><strong>Tętnica łącząca przednia (AComA)</strong> łączy obie ACA (lewo↔prawo), a parzyste <strong>tętnice łączące tylne (PComA)</strong> spinają układ szyjny z kręgowo-podstawnym (przód↔tył).</p>",
+        "activeHotspotIds": ["hs-aca-acoma", "hs-pcoma"],
+        "flowArrow": [31, 44, 39, 60]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Znaczenie kliniczne — Rezerwa krążenia obocznego w udarach",
+        "explanationHtml": "<p>Zamknięty wielobok naczyniowy stanowi naturalny by-pass: w przypadku powolnego zwężenia jednej z tętnic szyjnych krew z drugiej strony lub z układu podstawnego może zasilać zagrożoną półkulę.</p>",
+        "activeHotspotIds": ["hs-aca-acoma", "hs-ica-mca", "hs-pcoma", "hs-pca", "hs-basilar"],
+        "flowArrow": [58, 17, 42, 17]
+      }
+    ]
+  },
+  {
+    "id": "fig-anat-nefron-nerka",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom3-czesc-100-narzady-przestrzeni-zaotrzewnowej-nerka",
+      "tom3-czesc-101-budowa-wewnetrzna-nerki",
+      "tom3-czesc-102-platy-i-segmenty-nerkowe",
+      "tom3-czesc-105-miedniczka-nerkowa-i-kielichy-nerkowe"
+    ],
+    "titlePl": "Nefron i dziwna sieć tętniczo-tętnicza (Rete mirabile): Filtracja, pętla Henlego i zagęszczanie moczu",
+    "titleLat": "Nephronum — Corpusculum Renale et Ansa Nephroni",
+    "caption": "Organizacja anatomiczno-czynnościowa nefronu w korze i rdzeniu nerki z podwójną siecią naczyń włosowatych (kłębuszek nerkowy jako sieć dziwna + naczynia okołocewkowe).",
+    "renderMode": "cleanroom-svg-schematic",
+    "imageUrl": "/textbook-assets/anatomia/openstax-nephron.png",
+    "width": 1056,
+    "height": 658,
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "nephron",
+      "elementsSummary": "Ciałko nerkowe Malpighiego w korze (tętniczka doprowadzająca szersza od odprowadzającej), kanalik kręty I rzędu, pętla Henlego schodząca do rdzenia, kanalik II rzędu i cewka zbiorcza."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG + Rycina źródłowa: OpenStax Anatomy & Physiology (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-nephron-glomerulus",
+        "labelPl": "Ciałko nerkowe (Kłębuszek + Torebka Bowmana)",
+        "labelLat": "Corpusculum renale (Glomerulus et capsula)",
+        "x": 21,
+        "y": 26,
+        "description": "Leży wyłącznie w korze nerki. Kłębuszek to jedyna u ssaków sieć dziwna tętniczo-tętnicza (rete mirabile): szersza tętniczka doprowadzająca utrzymuje wysokie ciśnienie hydrostatyczne (ok. 55 mmHg), umożliwiając ultrafiltrację osocza do światła torebki Bowmana.",
+        "clinicalNote": "Podocyty tworzą szczeliny filtracyjne zatrzymujące białka (>65 kDa) — białkomocz świadczy o uszkodzeniu błony filtracyjnej.",
+        "linkedEntityId": "kidney",
+        "linkedSubPinId": "renal-cortex"
+      },
+      {
+        "id": "hs-nephron-pct",
+        "labelPl": "Kanalik kręty I rzędu (proksymalny)",
+        "labelLat": "Tubulus contortus proximalis",
+        "x": 44,
+        "y": 24,
+        "description": "Nabłonek jednowarstwowy sześcienny z gęstym rąbkiem szczoteczkowym (mikrokosmkami) i licznymi mitochondriami. Wchłania zwrotnie ~100% glukozy i aminokwasów oraz ~65–70% wody i jonów Na+.",
+        "linkedEntityId": "kidney",
+        "linkedSubPinId": "renal-cortex"
+      },
+      {
+        "id": "hs-nephron-henle",
+        "labelPl": "Pętla nefronu (Henlego) w rdzeniu nerki",
+        "labelLat": "Ansa nephroni (Henle)",
+        "x": 52,
+        "y": 76,
+        "description": "Wnika w głąb piramidy rdzenia. Ramię zstępujące jest przepuszczalne wyłącznie dla wody; ramię wstępujące grube jest nieprzepuszczalne dla wody i aktywnie wypompowuje NaCl do śródmiąższu (wzmacniacz przeciwprądowy).",
+        "linkedEntityId": "kidney",
+        "linkedSubPinId": "renal-medulla"
+      },
+      {
+        "id": "hs-nephron-dct",
+        "labelPl": "Kanalik kręty II rzędu (dystalny) i aparat przykłębuszkowy",
+        "labelLat": "Tubulus contortus distalis",
+        "x": 67,
+        "y": 26,
+        "description": "Plamka gęsta (macula densa) na styku z tętniczką doprowadzającą monitoruje stężenie NaCl i steruje wydzielaniem reniny (układ RAA). Aldosteron zwiększa tu wchłanianie Na+ i wydzielanie K+.",
+        "linkedEntityId": "kidney",
+        "linkedSubPinId": "renal-cortex"
+      },
+      {
+        "id": "hs-nephron-collecting",
+        "labelPl": "Cewka zbiorcza i brodawka → miedniczka nerkowa",
+        "labelLat": "Tubulus renalis colligens et pelvis renalis",
+        "x": 83,
+        "y": 54,
+        "description": "Ostatni etap zagęszczania moczu regulowany przez hormon antydiuretyczny (wazopresynę, ADH), który wbudowuje w błony kanały wodne (akwaporyny-2). Mocz ostateczny spływa przez kielichy do miedniczki nerkowej.",
+        "clinicalNote": "Niedobór ADH wywołuje moczówkę prostą (wielomocz niskiego ciężaru właściwego).",
+        "linkedEntityId": "kidney",
+        "linkedSubPinId": "renal-pelvis"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Ultrafiltracja kłębuszkowa w sieci dziwnej tętniczo-tętniczej",
+        "explanationHtml": "<p>Węższa tętniczka odprowadzająca spiętrza krew w <strong>kłębuszku nerkowym</strong>, wytwarzając wysokie ciśnienie hydrostatyczne. Bezkomórkowy i bezbiałkowy mocz pierwotny (~180 l/dobę) trafia do <strong>torebki Bowmana</strong>.</p>",
+        "activeHotspotIds": ["hs-nephron-glomerulus"],
+        "flowArrow": [12, 26, 30, 26]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Masowa resorpcja obowiązkowa w kanaliku I rzędu",
+        "explanationHtml": "<p>Mikrokosmki <strong>kanalika proksymalnego</strong> odzyskują całą przefiltrowaną glukozę (transport wtórnie aktywny SGLT), aminokwasy i większość jonów sodu oraz wody z powrotem do naczyń okołocewkowych.</p>",
+        "activeHotspotIds": ["hs-nephron-pct"],
+        "flowArrow": [32, 25, 48, 36]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Wzmacniacz przeciwprądowy w pętli Henlego (Rdzeń nerki)",
+        "explanationHtml": "<p>Woda ucieka osmotycznie z ramienia zstępującego, a ramię wstępujące aktywnie pompuje Na<sup>+</sup> i Cl<sup>-</sup> w śródmiąższ rdzenia, tworząc pionowy gradient osmolarności (do 1200 mOsm/l w pobliżu brodawki).</p>",
+        "activeHotspotIds": ["hs-nephron-henle", "hs-nephron-dct"],
+        "flowArrow": [46, 52, 62, 52]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Regulacja hormonalna (Aldosteron + ADH) i odpływ do miedniczki",
+        "explanationHtml": "<p><strong>Aldosteron</strong> w kanaliku dystalnym oraz <strong>wazopresyna (ADH)</strong> w <strong>cewce zbiorczej</strong> decydują o ostatecznej objętości i gęstości moczu ostatecznego (~1,5 l/dobę) odprowadzanego przez kielichy do miedniczki nerkowej.</p>",
+        "activeHotspotIds": ["hs-nephron-dct", "hs-nephron-collecting"],
+        "flowArrow": [83, 28, 83, 86]
+      }
+    ]
+  },
+  {
+    "id": "fig-anat-pluca-pecherzyk",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom3-czesc-45-ogolna-budowa-pluc-i-oplucnej",
+      "tom3-czesc-46-budowa-zewnetrzna-pluc",
+      "tom3-czesc-48-szczeliny-i-platy-pluc",
+      "tom3-czesc-49-wneka-pluca-i-korzen-pluca",
+      "tom3-czesc-50-drogi-oddechowe-wewnatrzplucne-i-segmenty-oskrzelowo-plucne"
+    ],
+    "titlePl": "Drzewo oskrzelowe, asymetria płatowa płuc i pęcherzyk płucny (Bariera krew–powietrze)",
+    "titleLat": "Arbor Bronchialis, Pulmones et Alveoli Pulmonis",
+    "caption": "Podział tchawicy (Th4/Th5), trzy płaty płuca prawego vs dwa płaty i wcięcie sercowe płuca lewego oraz powiększenie pęcherzyka z surfaktantem i siecią włośniczek.",
+    "renderMode": "cleanroom-svg-schematic",
+    "imageUrl": "/textbook-assets/anatomia/openstax-lungs-alveoli.png",
+    "width": 1032,
+    "height": 728,
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "lungs-alveoli",
+      "elementsSummary": "Tchawica z rozwidleniem (carina), płuco prawe (3 płaty, szczelina pozioma i skośna), płuco lewe (2 płaty i wcięcie sercowe) oraz zbliżenie na grono pęcherzyków płucnych z oplatającą siecią naczyń."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG + Rycina źródłowa: OpenStax Anatomy & Physiology (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-lung-carina",
+        "labelPl": "Tchawica i ostroga rozdwojenia (Th4/Th5)",
+        "labelLat": "Trachea et carina tracheae",
+        "x": 38,
+        "y": 24,
+        "description": "Na wysokości kąta mostka tchawica dzieli się na dwa oskrzela główne. Oskrzele główne prawe jest szersze, krótsze i bardziej pionowe (dlatego aspiracja ciał obcych częściej trafia do prawego płuca).",
+        "linkedEntityId": "trachea",
+        "linkedSubPinId": "tracheal-carina"
+      },
+      {
+        "id": "hs-lung-right-lobes",
+        "labelPl": "Płuco prawe — 3 płaty i 2 szczeliny",
+        "labelLat": "Pulmo dexter (3 lobi)",
+        "x": 21,
+        "y": 48,
+        "description": "Szersze i krótsze (uniesione od dołu przez wątrobę). Szczelina skośna i szczelina pozioma dzielą je na płat górny, środkowy i dolny oraz 10 segmentów oskrzelowo-płucnych.",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "right-superior-lobe"
+      },
+      {
+        "id": "hs-lung-hilum",
+        "labelPl": "Wnęka i korzeń płuca",
+        "labelLat": "Hilum et radix pulmonis",
+        "x": 45,
+        "y": 50,
+        "description": "Zagłębienie na powierzchni śródpiersiowej: wchodzą tu oskrzele główne, tętnica płucna (krew odtlenowana z prawej komory!), dwie żyły płucne (krew utlenowana do lewego przedsionka) oraz naczynia oskrzelowe i nerwy.",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "pulmonary-hilum"
+      },
+      {
+        "id": "hs-lung-left-notch",
+        "labelPl": "Płuco lewe — 2 płaty, języczek i wcięcie sercowe",
+        "labelLat": "Pulmo sinister (Incisura cardiaca et lingula)",
+        "x": 54,
+        "y": 64,
+        "description": "Posiada wyłącznie szczelinę skośną (płat górny i dolny). Na przednim brzegu mieści głębokie wcięcie sercowe dla koniuszka serca poniżej języczka (lingula).",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "left-cardiac-notch"
+      },
+      {
+        "id": "hs-lung-alveolus",
+        "labelPl": "Pęcherzyk płucny (Pneumocyty I/II, surfaktant i włośniczki)",
+        "labelLat": "Alveolus pulmonis",
+        "x": 82,
+        "y": 52,
+        "description": "Jednostka wymiany gazowej o łącznej powierzchni ~70–100 m². Płaskie pneumocyty typu I tworzą barierę oddechową (~0,5 µm) ze śródbłonkiem naczynia; pneumocyty typu II wydzielają surfaktant zmniejszający napięcie powierzchniowe i zapobiegający zapadaniu pęcherzyków.",
+        "clinicalNote": "Niedobór surfaktantu u wcześniaków powoduje zespół zaburzeń oddychania (RDS) z niedodmą pęcherzyków.",
+        "linkedEntityId": "lung",
+        "linkedSubPinId": "right-superior-lobe"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Wdech — przepływ przez tchawicę i oskrzela główne",
+        "explanationHtml": "<p>Skurcz <strong>przepony</strong> (unerwionej przez C3–C5) i mięśni międzyżebrowych zewnętrznych obniża ciśnienie w jamie opłucnej. Powietrze przepływa przez <strong>ostrogę tchawicy</strong> do segmentów płucnych prawego i lewego płuca.</p>",
+        "activeHotspotIds": ["hs-lung-carina", "hs-lung-right-lobes", "hs-lung-left-notch"],
+        "flowArrow": [38, 10, 26, 44]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Stabilizacja pęcherzyka przez surfaktant pneumocytów II",
+        "explanationHtml": "<p>Lipoproteinowy <strong>surfaktant</strong> wytwarzany przez pneumocyty typu II wbudowuje się w warstwę płynu wyścielającego pęcherzyk, radykalnie obniżając napięcie powierzchniowe przy wydechu.</p>",
+        "activeHotspotIds": ["hs-lung-alveolus"],
+        "flowArrow": [68, 30, 82, 48]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Dyfuzja bierna O₂ i CO₂ przez barierę pęcherzykowo-włośniczkową",
+        "explanationHtml": "<p>Zgodnie z gradientem ciśnień parcjalnych tlen (pO<sub>2</sub> ≈ 104 mmHg) dyfunduje przez 0,5 µm barierę oddechową do hemoglobiny w erytrocytach, natomiast CO<sub>2</sub> przechodzi do światła pęcherzyka.</p>",
+        "activeHotspotIds": ["hs-lung-alveolus", "hs-lung-hilum"],
+        "flowArrow": [86, 58, 72, 68]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Powrót krwi utlenowanej żyłami płucnymi przez wnękę do serca",
+        "explanationHtml": "<p>Krew utlenowana opuszcza miąższ przez <strong>wnękę płuca</strong> dwoma żyłami płucnymi na każdą stronę prosto do lewego przedsionka serca (stamtąd do aorty).</p>",
+        "activeHotspotIds": ["hs-lung-hilum", "hs-lung-left-notch"],
+        "flowArrow": [45, 50, 56, 62]
+      }
+    ]
+  }
+]

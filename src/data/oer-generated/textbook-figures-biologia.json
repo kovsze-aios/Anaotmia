@@ -1,0 +1,303 @@
+[
+  {
+    "id": "fig-bio-fotosynteza-tylakoid",
+    "subject": "biologia",
+    "chapterIds": [
+      "bio1-czesc-60-fotosynteza-autotroficzne-odzywianie-sie-organizmow",
+      "bio1-czesc-61-fotosynteza-budowa-i-funkcja-fotosystemow-oraz-przebieg-fazy-zaleznej-od-swiatla",
+      "bio1-czesc-62-fotosynteza-fazy-i-mechanizmy",
+      "bio1-czesc-63-autotroficzne-odzywianie-sie-organizmow-fotosynteza",
+      "bio1-czesc-79-fotosynteza-i-metabolizm-analiza-procesow",
+      "bio2-czesc-67-fotosynteza-fazy-i-typy-roslin",
+      "bio2-czesc-69-odzywianie-sie-roslin-fotosynteza"
+    ],
+    "titlePl": "Faza jasna fotosyntezy (fosforylacja niecykliczna w tylakoidzie) i cykl Calvina",
+    "titleLat": "Phosphorylatio non-cyclica et cyclus Calvini",
+    "caption": "Przepływ elektronów przez PSII (P680), łańcuch przenośników (PQ, Cyt b6f, PC) i PSI (P700), budowanie gradientu protonowego H+ napędzającego syntazę ATP oraz zużycie ATP i NADPH w cyklu Calvina.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "photosynthesis-thylakoid",
+      "elementsSummary": "Błona tylakoidu z PSII, kompleksem cytochromów b6f, PSI, reduktazą NADP+ i syntazą ATP (lumen ↔ stroma) oraz pętlą cyklu Calvina w stromie."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax Biology / podstawy CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-foto-ps2",
+        "labelPl": "Fotosystem II (P680) i fotoliza wody",
+        "labelLat": "Photolysis aquae (H2O → ½O2 + 2H+ + 2e−)",
+        "x": 16,
+        "y": 47,
+        "description": "Światło wybija elektrony z chlorofilu a w centrum reakcji P680. Lukę elektronową uzupełnia fotoliza wody po wewnętrznej stronie błony (w lumenie tylakoidu), uwalniając tlen cząsteczkowy (O2) jako produkt uboczny oraz protony H+.",
+        "clinicalNote": "Matura CKE: Tlen wydzielany podczas fotosyntezy pochodzi WYŁĄCZNIE z cząsteczek wody (H2O), a nie z CO2 (udowodniono izotopem 18O)."
+      },
+      {
+        "id": "hs-foto-lancuch",
+        "labelPl": "Łańcuch przenośników (PQ → Cyt b6f → PC)",
+        "labelLat": "Gradus protonicus H+",
+        "x": 32,
+        "y": 47,
+        "description": "Plastochinon (PQ) i kompleks cytochromów b6f transportują elektrony ku plastocyjaninie (PC), jednocześnie przepompowując protony H+ ze stromy do wnętrza tylakoidu (lumenu). Obniża to pH wnętrza tylakoidu (do ok. 5) i tworzy siłę protonomotoryczną.",
+        "clinicalNote": "W lumienie kumulują się H+ zarówno z fotolizy wody, jak i z transportu przez układ PQ/Cyt b6f."
+      },
+      {
+        "id": "hs-foto-ps1",
+        "labelPl": "Fotosystem I (P700) i redukcja NADP+ → NADPH + H+",
+        "labelLat": "Ferredoxinum → NADP+",
+        "x": 47,
+        "y": 47,
+        "description": "Ponownie wzbudzone światłem elektrony przechodzą przez ferredoksynę (Fd) na reduktazę NADP+ po stronie stromy, redukując przenośnik NADP+ do NADPH + H+ (siła redukcyjna dla fazy ciemnej).",
+        "clinicalNote": "W fosforylacji cyklicznej bierze udział sam PSI (elektrony wracają z Fd na PQ/Cyt b6f) — powstaje wyłącznie ATP, bez NADPH i bez O2."
+      },
+      {
+        "id": "hs-foto-atp",
+        "labelPl": "Syntaza ATP (fosforylacja chemiosmotyczna)",
+        "labelLat": "ADP + Pi → ATP",
+        "x": 62,
+        "y": 47,
+        "description": "Protony H+ zgromadzone w lumenie wracają zgodnie z gradientem elektrochemicznym przez kanał syntazy ATP z powrotem do stromy, napędzając mechanicznie fosforylację ADP + Pi → ATP.",
+        "clinicalNote": "Rozprzęganie gradientu H+ (np. uszkodzenie błony tylakoidu) zatrzymuje syntezę ATP, mimo że transport elektronów może trwać dalej."
+      },
+      {
+        "id": "hs-foto-calvin",
+        "labelPl": "Cykl Calvina w stromie (RuBisCO → PGAL)",
+        "labelLat": "Fixatio CO2",
+        "x": 80,
+        "y": 24,
+        "description": "W stromie chloroplastu enzym RuBisCO przyłącza CO2 do 5-węglowego akceptora RuBP (karboksylacja). Redukcja powstałego 3-PGA do aldehydu 3-fosfoglicerynowego (PGAL) oraz regeneracja RuBP zużywają ATP i NADPH z fazy jasnej.",
+        "clinicalNote": "Na syntezę 1 cząsteczki glukozy (z 6 CO2) potrzeba 6 obrotów cyklu: 18 ATP oraz 12 NADPH + H+."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Wzbudzenie PSII (P680) i fotoliza wody w lumenie",
+        "explanationHtml": "<p>Kwanty światła wzbudzają elektrony w <strong>PSII</strong>. Rozpad wody (<code>2 H<sub>2</sub>O → 4 H<sup>+</sup> + 4 e<sup>−</sup> + O<sub>2</sub></code>) dostarcza elektronów i uwalnia tlen.</p>",
+        "activeHotspotIds": ["hs-foto-ps2"],
+        "flowArrow": [16, 62, 16, 47]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Transport elektronów (PQ → Cyt b6f → PC) i PSI → NADPH",
+        "explanationHtml": "<p>Elektrony wędrują przez łańcuch przenośników (pompując <strong>H<sup>+</sup></strong> do lumenu), trafiają do <strong>PSI</strong> i redukują NADP<sup>+</sup> po stronie stromy do <strong>NADPH + H<sup>+</sup></strong>.</p>",
+        "activeHotspotIds": ["hs-foto-lancuch", "hs-foto-ps1"],
+        "flowArrow": [16, 47, 47, 47]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Chemiosmoza — gradient H+ napędza syntazę ATP",
+        "explanationHtml": "<p>Wypływ protonów H<sup>+</sup> przez <strong>syntazę ATP</strong> z lumenu do stromy dostarcza energii do wytworzenia <strong>ATP</strong>.</p>",
+        "activeHotspotIds": ["hs-foto-atp"],
+        "flowArrow": [62, 65, 62, 34]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Zasilenie Cyklu Calvina w stromie chloroplastu",
+        "explanationHtml": "<p>Produkty fazy jasnej (<strong>ATP i NADPH</strong>) trafiają do stromy, gdzie umożliwiają redukcję CO<sub>2</sub> związanego przez <strong>RuBisCO</strong> do cukrów (PGAL / glukoza).</p>",
+        "activeHotspotIds": ["hs-foto-ps1", "hs-foto-atp", "hs-foto-calvin"],
+        "flowArrow": [62, 34, 80, 24]
+      }
+    ]
+  },
+  {
+    "id": "fig-bio-widelki-replikacyjne",
+    "subject": "biologia",
+    "chapterIds": [
+      "bio4-czesc-5-kwasy-nukleinowe-budowa-lokalizacja-i-replikacja-dna",
+      "bio4-czesc-6-replikacja-dna-u-prokariotow-i-eukariotow",
+      "bio4-czesc-7-mechanizm-replikacji-dna-replisom-telomeraza-i-naprawa-dna",
+      "bio4-czesc-8-replikacja-dna-regulacja-modele-i-doswiadczenie-meselsona-i-stahla",
+      "bio4-czesc-9-replikacja-dna-oraz-geny-i-genomy"
+    ],
+    "titlePl": "Widełki replikacyjne DNA i udział enzymów (helikaza, polimerazy, ligaza)",
+    "titleLat": "Furca replicationis DNA",
+    "caption": "Semikonserwatywna replikacja antyrównoległych nici DNA: kierunek syntezy wyłącznie 5'→3', synteza ciągła na nici wiodącej oraz nieciągła na nici opóźnionej w postaci fragmentów Okazaki.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "dna-replication-fork",
+      "elementsSummary": "Widełki replikacyjne DNA: rozplatana podwójna helisa po lewej, nić wiodąca u góry (5'→3' do widełek), nić opóźniona u dołu z fragmentami Okazaki, starterami RNA i ligazą."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax Biology / podstawy CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-dna-helikaza",
+        "labelPl": "Helikaza i białka SSB (rozplatanie helisy)",
+        "labelLat": "Helicase + Topoisomerase",
+        "x": 34,
+        "y": 50,
+        "description": "Helikaza rozrywa wiązania wodorowe między komplementarnymi zasadami (A=T, G≡C) z udziałem ATP, przesuwając widełki replikacyjne. Białka SSB stabilizują pojedyncze nici, a topoizomeraza rozładowuje naprężenia skrętne przed widełkami.",
+        "clinicalNote": "Doświadczenie Meselsona i Stahla (izotop azotu 15N/14N) wykazało, że replikacja DNA jest semikonserwatywna."
+      },
+      {
+        "id": "hs-dna-prymaza",
+        "labelPl": "Prymaza (synteza startera RNA)",
+        "labelLat": "Primase (RNA primer)",
+        "x": 44,
+        "y": 65,
+        "description": "Polimeraza DNA nie potrafi rozpocząć syntezy nowej nici od zera — wymaga wolnej grupy 3'-OH. Prymaza syntetyzuje krótki odcinek RNA (starter) komplementarny do matrycy.",
+        "clinicalNote": "Na nici wiodącej wystarczy jeden starter RNA na początku replikacji, natomiast na nici opóźnionej prymaza musi zakładać nowy starter przed każdym fragmentem Okazaki."
+      },
+      {
+        "id": "hs-dna-wiodaca",
+        "labelPl": "Nić wiodąca — synteza ciągła (Polimeraza DNA III)",
+        "labelLat": "Leading strand (5'→3')",
+        "x": 58,
+        "y": 30,
+        "description": "Na matrycy biegnącej 3'→5' w stronę otwierających się widełek Polimeraza DNA dobudowuje nukleotydy (deoksyrybonukleozydotrifosforany dNTP) w kierunku 5'→3' w sposób ciągły, goniąc helikazę.",
+        "clinicalNote": "Kluczowe na maturze: POLIMERAZA DNA zawsze dobudowuje nową nić wyłącznie w kierunku 5'→3' (czyta matrycę w kierunku 3'→5')."
+      },
+      {
+        "id": "hs-dna-okazaki",
+        "labelPl": "Nić opóźniona i fragmenty Okazaki",
+        "labelLat": "Lagging strand (5'→3' nieciągle)",
+        "x": 58,
+        "y": 74,
+        "description": "Ponieważ druga matryca ma orientację 5'→3' względem ruchu widełek, synteza zachodzi tutaj w kierunku przeciwnym (od widełek) krótkimi odcinkami zwanymi fragmentami Okazaki.",
+        "clinicalNote": "Każdy fragment Okazaki rozpoczyna się od własnego startera RNA, po czym jest przedłużany w kierunku 5'→3'."
+      },
+      {
+        "id": "hs-dna-ligaza",
+        "labelPl": "Polimeraza DNA I i Ligaza DNA (scalanie nici)",
+        "labelLat": "DNA Ligase",
+        "x": 78,
+        "y": 70,
+        "description": "Polimeraza usuwa startery RNA i zastępuje je nukleotydami DNA, po czym Ligaza DNA tworzy ostatnie wiązanie fosfodiestrowe między sąsiednimi fragmentami Okazaki, zamykając ciągłą nić.",
+        "clinicalNote": "U eukariontów niecałkowite zastąpienie ostatniego startera na końcach chromosomów powoduje skracanie telomerów (rozwiązywane przez telomerazę w komórkach dzielących się intensywnie)."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Helikaza otwiera widełki replikacyjne",
+        "explanationHtml": "<p><strong>Helikaza</strong> rozrywa wiązania wodorowe między nićmi DNA, przesuwając widełki w lewo i eksponując dwie antyrównoległe nici matrycowe.</p>",
+        "activeHotspotIds": ["hs-dna-helikaza"],
+        "flowArrow": [46, 50, 34, 50]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Prymaza zakłada startery RNA (wolne 3'-OH)",
+        "explanationHtml": "<p><strong>Prymaza</strong> syntetyzuje krótkie startery RNA, dając polimerazie DNA punkt zaczepienia z wolną grupą <code>3'-OH</code>.</p>",
+        "activeHotspotIds": ["hs-dna-prymaza"],
+        "flowArrow": [34, 50, 44, 65]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Synteza ciągła nici wiodącej vs fragmenty Okazaki (5'→3')",
+        "explanationHtml": "<p><strong>Polimeraza DNA</strong> wydłuża nić wiodącą ciągle w stronę widełek (<code>5'→3'</code>), natomiast na nici opóźnionej syntetyzuje kolejne <strong>fragmenty Okazaki</strong> w kierunku od widełek.</p>",
+        "activeHotspotIds": ["hs-dna-wiodaca", "hs-dna-okazaki"],
+        "flowArrow": [72, 30, 46, 30]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Usunięcie starterów RNA i scalenie nici przez Ligazę DNA",
+        "explanationHtml": "<p>Po zastąpieniu starterów RNA fragmentami DNA <strong>ligaza DNA</strong> łączy końce 3'-OH i 5'-fosforan fragmentów Okazaki wiązaniem fosfodiestrowym.</p>",
+        "activeHotspotIds": ["hs-dna-okazaki", "hs-dna-ligaza"],
+        "flowArrow": [58, 74, 78, 70]
+      }
+    ]
+  },
+  {
+    "id": "fig-bio-synapsa-chemiczna",
+    "subject": "biologia",
+    "chapterIds": [
+      "bio2-czesc-97-funkcjonowanie-neuronow-i-synapsy-chemiczne",
+      "bio3-czesc-108-budowa-i-dzialanie-ukladu-nerwowego-synapsy",
+      "bio3-czesc-120-fizjologia-ukladu-nerwowego-przewodnictwo-i-odruchy",
+      "dzial8-czesc-25-przekazywanie-pobudzenia-w-ukladzie-nerwowym-synapsy",
+      "dzial8-czesc-26-koordynacja-funkcji-zyciowych-synapsy-chemiczne",
+      "neuro-plastycznosc-ltp-i-receptory"
+    ],
+    "titlePl": "Budowa synapsy chemicznej i transmisja synaptyczna",
+    "titleLat": "Synapsis chemica",
+    "caption": "Sekwencja przekazywania impulsu w synapsie chemicznej: napływ Ca2+ do kolbki synaptycznej, egzocytoza neuroprzekaźnika, otwarcie kanałów jonowych w błonie postsynaptycznej i jego usunięcie.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "chemical-synapse",
+      "elementsSummary": "Kolbka synaptyczna z kanałami Ca2+ i pęcherzykami neuroprzekaźnika, szczelina synaptyczna (20-40 nm) oraz błona postsynaptyczna z receptorami jonotropowymi i enzymem rozkładającym."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room OER na podstawie OpenStax Biology / podstawy CKE — CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-syn-ca",
+        "labelPl": "Napięciowozależne kanały Ca2+ (napływ wapnia)",
+        "labelLat": "Canales calcii",
+        "x": 26,
+        "y": 36,
+        "description": "Dotarcie fali depolaryzacji do kolbki presynaptycznej otwiera kanały wapniowe (Ca2+). Jony wapnia napływają do wnętrza zakończenia aksonu i uruchamiają fuzję pęcherzyków z błoną.",
+        "clinicalNote": "Jony Ca2+ są bezpośrednim sygnałem łączącym pobudzenie elektryczne z chemicznym wydzielaniem neuroprzekaźnika.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "frontal-lobe"
+      },
+      {
+        "id": "hs-syn-pecherzyki",
+        "labelPl": "Pęcherzyki synaptyczne i egzocytoza neuroprzekaźnika",
+        "labelLat": "Vesiculae synapticae",
+        "x": 50,
+        "y": 30,
+        "description": "Pęcherzyki wypełnione neuroprzekaźnikiem (np. acetylocholiną ACh, glutaminianem, GABA lub dopaminą) łączą się z błoną presynaptyczną (białka SNARE) i na drodze egzocytozy uwalniają mediator do szczeliny.",
+        "clinicalNote": "Obecność pęcherzyków wyłącznie po stronie presynaptycznej i receptorów po postsynaptycznej wymusza jednokierunkowość przewodzenia w synapsie."
+      },
+      {
+        "id": "hs-syn-szczelina",
+        "labelPl": "Szczelina synaptyczna (dyfuzja neuroprzekaźnika)",
+        "labelLat": "Fissura synaptica",
+        "x": 50,
+        "y": 52,
+        "description": "Przestrzeń pozakomórkowa szerokości ok. 20–40 nm oddzielająca oba neurony. Cząsteczki neuroprzekaźnika pokonują ją przez szybką dyfuzję, powodując ok. 0,5–1 ms opóźnienia synaptycznego.",
+        "clinicalNote": "Opóźnienie synaptyczne pozwala oszacować liczbę synaps w łuku odruchowym (odruchy monosynaptyczne vs polisynaptyczne)."
+      },
+      {
+        "id": "hs-syn-receptory",
+        "labelPl": "Receptory błony postsynaptycznej (EPSP / IPSP)",
+        "labelLat": "Receptores postsynaptici",
+        "x": 46,
+        "y": 63,
+        "description": "Związanie neuroprzekaźnika z receptorem otwiera kanały zależne od ligandów: napływ Na+ daje potencjał pobudzający (EPSP — depolaryzacja, np. ACh/glutaminian), a napływ Cl− lub wypływ K+ daje potencjał hamujący (IPSP — hiperpolaryzacja, np. GABA).",
+        "clinicalNote": "Kurara i α-bungarotoksyna blokują receptory nikotynowe dla ACh na mięśniach, prowadząc do wiotkiego porażenia.",
+        "linkedEntityId": "brain",
+        "linkedSubPinId": "parietal-occipital"
+      },
+      {
+        "id": "hs-syn-usuwanie",
+        "labelPl": "Inaktywacja i usunięcie neuroprzekaźnika",
+        "labelLat": "Acetylocholinoesteraza / Wychwyt zwrotny",
+        "x": 78,
+        "y": 52,
+        "description": "Aby błona postsynaptyczna mogła przyjmować kolejne sygnały, neuroprzekaźnik musi zniknąć ze szczeliny — poprzez rozkład enzymatyczny (np. AChE rozkładająca acetylocholinę) lub wychwyt zwrotny do neuronu presynaptycznego.",
+        "clinicalNote": "Leki SSRI blokują wychwyt zwrotny serotoniny w szczelinie synaptycznej, wydłużając jej działanie."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Depolaryzacja kolbki i otwarcie kanałów Ca2+",
+        "explanationHtml": "<p>Impuls nerwowy otwiera kanały wapniowe w błonie presynaptycznej — <strong>jony Ca<sup>2+</sup></strong> wpływają do kolbki zgodnie z gradientem stężeń.</p>",
+        "activeHotspotIds": ["hs-syn-ca"],
+        "flowArrow": [14, 36, 26, 36]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Egzocytoza pęcherzyków do szczeliny synaptycznej",
+        "explanationHtml": "<p>Pod wpływem Ca<sup>2+</sup> pęcherzyki synaptyczne zlewają się z błoną presynaptyczną (egzocytoza), uwalniając neuroprzekaźnik do <strong>szczeliny synaptycznej</strong>.</p>",
+        "activeHotspotIds": ["hs-syn-pecherzyki", "hs-syn-szczelina"],
+        "flowArrow": [50, 30, 50, 52]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Związanie z receptorami i powstanie EPSP/IPSP",
+        "explanationHtml": "<p>Neuroprzekaźnik dyfunduje do <strong>receptorów błony postsynaptycznej</strong>, otwierając kanały jonowe (np. Na<sup>+</sup> → depolaryzacja EPSP lub Cl<sup>−</sup> → hiperpolaryzacja IPSP).</p>",
+        "activeHotspotIds": ["hs-syn-szczelina", "hs-syn-receptory"],
+        "flowArrow": [50, 52, 46, 63]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Krok 4: Zakończenie sygnału (enzym lub wychwyt zwrotny)",
+        "explanationHtml": "<p><strong>Acetylocholinoesteraza (AChE)</strong> rozkłada ACh (albo transportery wciągają neuroprzekaźnik z powrotem), przywracając gotowość synapsy na kolejny impuls.</p>",
+        "activeHotspotIds": ["hs-syn-usuwanie"],
+        "flowArrow": [56, 52, 78, 52]
+      }
+    ]
+  }
+]

@@ -3,10 +3,10 @@
 import { useState } from "react";
 import type { NavDomain } from "@/server/models";
 import {
-  CkeFormulaSwitcher,
+  CurriculumModeSwitcher,
   CkeStatusBadge,
-  matchesFormulaFilter,
-  type FormulaFilterMode,
+  isTierRequiredInMode,
+  useCurriculumViewMode,
 } from "./matura/CkeFormulaControls";
 
 interface ChapterNavProps {
@@ -23,10 +23,10 @@ export function ChapterNav({
   const [expandedDomains, setExpandedDomains] = useState<Set<string>>(
     new Set(domains.length > 0 ? [domains[0].id] : []),
   );
-  const [formulaFilter, setFormulaFilter] = useState<FormulaFilterMode>("all");
+  const [viewMode, setViewMode] = useCurriculumViewMode();
 
   const hasCkeMetadata = domains.some((d) =>
-    d.sections.some((s) => Boolean(s.ckeStatus)),
+    d.sections.some((s) => Boolean(s.ckeStatus || s.tier)),
   );
 
   const toggleDomain = (id: string) => {
@@ -56,24 +56,25 @@ export function ChapterNav({
     <nav className="chapter-nav">
       {hasCkeMetadata && (
         <div className="px-3 pb-3 pt-1">
-          <CkeFormulaSwitcher
-            value={formulaFilter}
-            onChange={setFormulaFilter}
+          <CurriculumModeSwitcher
+            value={viewMode}
+            onChange={setViewMode}
             compact
           />
         </div>
       )}
       {domains.map((domain) => {
-        const filteredSections = hasCkeMetadata
-          ? domain.sections.filter((s) =>
-              matchesFormulaFilter(formulaFilter, s.formulas, s.ckeStatus),
-            )
-          : domain.sections;
-
-        if (filteredSections.length === 0) return null;
+        const domainHasMatch =
+          !hasCkeMetadata ||
+          domain.sections.some((s) =>
+            isTierRequiredInMode(viewMode, s.tier ?? s.ckeStatus, s.formulas),
+          );
 
         return (
-          <div key={domain.id} className="chapter-nav__domain">
+          <div
+            key={domain.id}
+            className={`chapter-nav__domain transition-opacity ${domainHasMatch ? "" : "opacity-40"}`}
+          >
             <button
               className={`chapter-nav__domain-title focus-ring ${
                 expandedDomains.has(domain.id)
@@ -96,22 +97,35 @@ export function ChapterNav({
 
             {expandedDomains.has(domain.id) && (
               <div className="chapter-nav__sections">
-                {filteredSections.map((section) => (
-                  <button
-                    key={section.id}
-                    className={`chapter-nav__section flex items-center justify-between gap-2 focus-ring ${
-                      activeSection === section.id
-                        ? "chapter-nav__section--active"
-                        : ""
-                    }`}
-                    onClick={() => onSectionSelect(domain.id, section.id)}
-                  >
-                    <span className="truncate text-left">{section.title}</span>
-                    {section.ckeStatus && (
-                      <CkeStatusBadge status={section.ckeStatus} />
-                    )}
-                  </button>
-                ))}
+                {domain.sections.map((section) => {
+                  const isRequired =
+                    !hasCkeMetadata ||
+                    isTierRequiredInMode(
+                      viewMode,
+                      section.tier ?? section.ckeStatus,
+                      section.formulas,
+                    );
+                  return (
+                    <button
+                      key={section.id}
+                      className={`chapter-nav__section flex items-center justify-between gap-2 transition-opacity focus-ring ${
+                        activeSection === section.id
+                          ? "chapter-nav__section--active"
+                          : ""
+                      } ${isRequired ? "" : "opacity-40"}`}
+                      onClick={() => onSectionSelect(domain.id, section.id)}
+                    >
+                      <span className="truncate text-left">{section.title}</span>
+                      {(section.tier || section.ckeStatus) && (
+                        <CkeStatusBadge
+                          tier={section.tier}
+                          status={section.ckeStatus}
+                          compact
+                        />
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>

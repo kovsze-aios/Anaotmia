@@ -6,6 +6,7 @@ import {
   Activity,
   ArrowUpRight,
   BookOpen,
+  CheckCircle2,
   ChevronLeft,
   ChevronRight,
   Crosshair,
@@ -15,12 +16,16 @@ import {
   Info,
   Layers,
   Layers3,
+  MapPin,
   Pause,
   RotateCcw,
   RotateCw,
   Scissors,
   Search,
+  Shuffle,
+  SlidersHorizontal,
   Sparkles,
+  Tag,
   Undo2,
   X,
   ZoomIn,
@@ -29,6 +34,11 @@ import {
 
 import type { Atlas, AtlasConcept, SystemId } from "@/server/models";
 import { getAtlas } from "@/services/atlasService";
+import {
+  ALL_ANATOMICAL_ENTITIES,
+  getAnatomicalEntity,
+  type AnatomicalSubPin,
+} from "@/data/anatomy-entities";
 import { useTheme } from "@/hooks/useTheme";
 import { useI18n, translateAnatomyName, anatomySearchHaystack } from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -66,6 +76,11 @@ const initial: SceneState = {
   peelDepth: 0,
   peeled: [],
   xray: false,
+  showPins: true,
+  activePinId: null,
+  clipping: { enabled: false, x: 1, y: 1, z: 1 },
+  szpilkiMode: false,
+  pinFocusTrigger: 0,
   mode: "inspect",
   region: "whole",
   focusTrigger: 0,
@@ -152,6 +167,10 @@ export default function AtlasExplorer({
   const [about, setAbout] = useState(false);
   const [query, setQuery] = useState("");
   const [chosen, setChosen] = useState<AtlasConcept | null>(null);
+  const [clippingOpen, setClippingOpen] = useState(false);
+  const [szpilkiRevealed, setSzpilkiRevealed] = useState(false);
+  const [szpilkiAnswer, setSzpilkiAnswer] = useState("");
+  const [szpilkiStats, setSzpilkiStats] = useState({ correct: 0, total: 0 });
 
   const catalogueError = t.atlas.errorCatalogue;
   useEffect(() => {
@@ -220,6 +239,19 @@ export default function AtlasExplorer({
   const selected = selectedParts[0];
   const system = SYSTEMS.find((s) => s.id === selected?.system);
   const peeledList = state.peeled ?? [];
+
+  const activeEntity = useMemo(
+    () => getAnatomicalEntity(chosen?.name ?? selected?.name ?? focusName),
+    [chosen?.name, selected?.name, focusName],
+  );
+  const activePins = activeEntity?.pins ?? [];
+  const activePin: AnatomicalSubPin | null = useMemo(
+    () =>
+      activePins.find((p) => p.id === state.activePinId) ??
+      activePins[0] ??
+      null,
+    [activePins, state.activePinId],
+  );
   const visibleCount =
     atlas?.parts.filter((p) =>
       state.isolate
@@ -261,10 +293,14 @@ export default function AtlasExplorer({
   );
 
   const choose = (c: AtlasConcept) => {
+    const ent = getAnatomicalEntity(c.name);
     setChosen(c);
+    setSzpilkiRevealed(false);
+    setSzpilkiAnswer("");
     setState((s) => ({
       ...s,
       selected: c.elements,
+      activePinId: ent?.pins[0]?.id ?? null,
       isolate: false,
       rotate: false,
       focusTrigger: (s.focusTrigger ?? 0) + 1,
@@ -281,11 +317,14 @@ export default function AtlasExplorer({
       atlas.parts.find((p) => p.name.toLowerCase() === wanted);
     if (!concept) return;
 
+    const ent = getAnatomicalEntity(concept.name);
     const elements = "elements" in concept ? concept.elements : [concept.id];
     setChosen({ id: concept.id, name: concept.name, elements });
     setState((s) => ({
       ...s,
       selected: elements,
+      activePinId: ent?.pins[0]?.id ?? null,
+      showPins: true,
       isolate: true,
       rotate: false,
     }));
@@ -295,10 +334,109 @@ export default function AtlasExplorer({
   const choosePart = (id: string) => {
     const p = parts.get(id);
     if (!p) return;
+    const ent = getAnatomicalEntity(p.name);
     setChosen({ id: p.conceptId, name: p.name, elements: [id] });
-    setState((s) => ({ ...s, selected: [id], isolate: false, rotate: false }));
+    setSzpilkiRevealed(false);
+    setState((s) => ({
+      ...s,
+      selected: [id],
+      activePinId: ent?.pins[0]?.id ?? null,
+      isolate: false,
+      rotate: false,
+    }));
     if (!embedded) setDetails(true);
     setPanel(null);
+  };
+
+  const selectPin = (pin: AnatomicalSubPin) => {
+    setSzpilkiRevealed(false);
+    setState((s) => ({
+      ...s,
+      activePinId: pin.id,
+      showPins: true,
+      pinFocusTrigger: (s.pinFocusTrigger ?? 0) + 1,
+    }));
+    if (!state.szpilkiMode) {
+      setDetails(true);
+    }
+  };
+
+  const pickNextSzpilkiPin = () => {
+    if (!atlas) return;
+    setSzpilkiRevealed(false);
+    setSzpilkiAnswer("");
+
+    // Use currently selected entity if it has pins; otherwise pick a rich entity in atlas
+    if (activeEntity && activeEntity.pins.length > 0 && state.selected.length > 0) {
+      const otherPins = activeEntity.pins.filter((p) => p.id !== state.activePinId);
+      const nextPin =
+        otherPins[Math.floor(Math.random() * otherPins.length)] ??
+        activeEntity.pins[0];
+      setState((s) => ({
+        ...s,
+        szpilkiMode: true,
+        showPins: true,
+        activePinId: nextPin.id,
+        pinFocusTrigger: (s.pinFocusTrigger ?? 0) + 1,
+      }));
+      return;
+    }
+
+    const candidates = Object.values(ALL_ANATOMICAL_ENTITIES).filter((ent) =>
+      ent.pins.length > 0 &&
+      atlas.concepts.some((c) => c.name.toLowerCase() === ent.meshId.toLowerCase()),
+    );
+    const chosenEntity =
+      candidates[Math.floor(Math.random() * candidates.length)] ??
+      ALL_ANATOMICAL_ENTITIES.heart;
+    const concept = atlas.concepts.find(
+      (c) => c.name.toLowerCase() === chosenEntity.meshId.toLowerCase(),
+    );
+    if (!concept) return;
+    const randomPin =
+      chosenEntity.pins[Math.floor(Math.random() * chosenEntity.pins.length)];
+    setChosen(concept);
+    setState((s) => ({
+      ...s,
+      selected: concept.elements,
+      isolate: true,
+      explode: 0,
+      rotate: false,
+      szpilkiMode: true,
+      showPins: true,
+      activePinId: randomPin.id,
+      pinFocusTrigger: (s.pinFocusTrigger ?? 0) + 1,
+    }));
+    setDetails(false);
+  };
+
+  const toggleSzpilkiMode = () => {
+    if (state.szpilkiMode) {
+      setState((s) => ({ ...s, szpilkiMode: false }));
+      setSzpilkiRevealed(false);
+    } else {
+      pickNextSzpilkiPin();
+    }
+  };
+
+  const updateClippingAxis = (axis: "x" | "y" | "z", pct: number) => {
+    const val = Math.max(-1, Math.min(1, pct / 100));
+    setState((s) => ({
+      ...s,
+      clipping: {
+        enabled: true,
+        x: axis === "x" ? val : (s.clipping?.x ?? 1),
+        y: axis === "y" ? val : (s.clipping?.y ?? 1),
+        z: axis === "z" ? val : (s.clipping?.z ?? 1),
+      },
+    }));
+  };
+
+  const resetClipping = () => {
+    setState((s) => ({
+      ...s,
+      clipping: { enabled: false, x: 1, y: 1, z: 1 },
+    }));
   };
 
   /**
@@ -523,9 +661,11 @@ export default function AtlasExplorer({
           atlas={atlas}
           dark={dark}
           labels={sceneLabels}
+          pins={activePins}
           state={{ ...state, inspectorOpen: details && selectedParts.length > 0 }}
           onSelect={choosePart}
           onPeelPart={peelPart}
+          onSelectPin={selectPin}
           onProgress={(p) => {
             setProgress(p);
             if (p === 100) setError("");
@@ -582,6 +722,21 @@ export default function AtlasExplorer({
       <nav className="atlas-top-actions" aria-label={t.atlas.panelsLabel}>
         <Button
           variant="ghost"
+          className={state.showPins !== false ? "active" : ""}
+          onClick={() =>
+            setState((s) => ({ ...s, showPins: s.showPins === false }))
+          }
+          title={isPl ? "Pokaż/ukryj podpisy 3D struktur" : "Toggle 3D callout pins"}
+        >
+          <Tag size={15} />
+          <span>
+            {isPl
+              ? `Podpisy 3D: ${state.showPins !== false ? "WŁ" : "WYŁ"}`
+              : `Pins 3D: ${state.showPins !== false ? "ON" : "OFF"}`}
+          </span>
+        </Button>
+        <Button
+          variant="ghost"
           className={state.mode === "peel" ? "active atlas-mode-peel-btn" : ""}
           onClick={() =>
             setState((s) => ({
@@ -605,13 +760,42 @@ export default function AtlasExplorer({
           onClick={() => setState((s) => ({ ...s, xray: !s.xray }))}
           title={
             isPl
-              ? "Prześwietlenie X-Ray: Otaczające warstwy stają się półprzezroczyste po wybraniu struktury [X]"
-              : "X-Ray Ghosting: Surrounding layers become translucent when a structure is selected [X]"
+              ? "Prześwietlenie X-Ray: Otaczające warstwy stają się półprzezroczyste [X]"
+              : "X-Ray Ghosting: Surrounding layers become translucent [X]"
           }
         >
           <Eye size={16} />
-          <span>X-Ray</span>
+          <span>{isPl ? "Tryb X-Ray" : "X-Ray"}</span>
           <kbd>X</kbd>
+        </Button>
+        <Button
+          variant="ghost"
+          className={clippingOpen || state.clipping?.enabled ? "active" : ""}
+          onClick={() => {
+            setClippingOpen((o) => !o);
+            setState((s) => ({
+              ...s,
+              clipping: {
+                enabled: !clippingOpen || Boolean(s.clipping?.enabled),
+                x: s.clipping?.x ?? 1,
+                y: s.clipping?.y ?? 1,
+                z: s.clipping?.z ?? 1,
+              },
+            }));
+          }}
+          title={isPl ? "Przekroje anatomiczne X/Y/Z w czasie rzeczywistym" : "Real-time X/Y/Z Clipping Planes"}
+        >
+          <SlidersHorizontal size={15} />
+          <span>{isPl ? "Przekroje X/Y/Z" : "Slice X/Y/Z"}</span>
+        </Button>
+        <Button
+          variant="ghost"
+          className={state.szpilkiMode ? "active atlas-mode-szpilki-btn" : ""}
+          onClick={toggleSzpilkiMode}
+          title={isPl ? "Egzamin Praktyczny: Tryb Szpilek (nazwij strukturę po łacinie i polsku)" : "Practical Pin Exam Mode"}
+        >
+          <MapPin size={15} />
+          <span>{isPl ? "Tryb Szpilek (Egzamin)" : "Pin Exam"}</span>
         </Button>
         <Button
           variant="ghost"
@@ -652,6 +836,136 @@ export default function AtlasExplorer({
           </Button>
         )}
       </nav>
+
+      {/* Collapsible 3-Axis Anatomical Clipping Planes Bar */}
+      {clippingOpen && (
+        <section
+          className="atlas-clipping-panel atlas-glass"
+          aria-label={isPl ? "Przekroje anatomiczne 3D" : "3D Clipping Planes"}
+        >
+          <div className="atlas-clipping-head">
+            <strong>{isPl ? "🔪 Przekroje anatomiczne X / Y / Z" : "Anatomical Slices"}</strong>
+            <button type="button" onClick={resetClipping} className="atlas-clipping-reset">
+              {isPl ? "Reset przekrojów" : "Reset"}
+            </button>
+          </div>
+          <div className="atlas-clipping-sliders">
+            <label className="atlas-clipping-row">
+              <span>{isPl ? "Przekrój strzałkowy X" : "Sagittal X"} ({Math.round((state.clipping?.x ?? 1) * 100)}%)</span>
+              <Slider
+                aria-label="Przekrój strzałkowy X"
+                min={-100}
+                max={100}
+                step={2}
+                value={[Math.round((state.clipping?.x ?? 1) * 100)]}
+                onValueChange={(v) => updateClippingAxis("x", Array.isArray(v) ? v[0] : v)}
+              />
+            </label>
+            <label className="atlas-clipping-row">
+              <span>{isPl ? "Przekrój czołowy Y" : "Coronal Y"} ({Math.round((state.clipping?.y ?? 1) * 100)}%)</span>
+              <Slider
+                aria-label="Przekrój czołowy Y"
+                min={-100}
+                max={100}
+                step={2}
+                value={[Math.round((state.clipping?.y ?? 1) * 100)]}
+                onValueChange={(v) => updateClippingAxis("y", Array.isArray(v) ? v[0] : v)}
+              />
+            </label>
+            <label className="atlas-clipping-row">
+              <span>{isPl ? "Przekrój poprzeczny Z" : "Transverse Z"} ({Math.round((state.clipping?.z ?? 1) * 100)}%)</span>
+              <Slider
+                aria-label="Przekrój poprzeczny Z"
+                min={-100}
+                max={100}
+                step={2}
+                value={[Math.round((state.clipping?.z ?? 1) * 100)]}
+                onValueChange={(v) => updateClippingAxis("z", Array.isArray(v) ? v[0] : v)}
+              />
+            </label>
+          </div>
+        </section>
+      )}
+
+      {/* Practical Exam Mode ("Tryb Szpilek") Overlay Card */}
+      {state.szpilkiMode && activePin && (
+        <section
+          className="atlas-szpilki-card atlas-glass"
+          aria-label="Egzamin Praktyczny — Szpilki Anatomiczne"
+        >
+          <div className="atlas-szpilki-header">
+            <span className="atlas-szpilki-badge">📍 Egzamin Praktyczny — Szpilka</span>
+            {szpilkiStats.total > 0 && (
+              <span className="atlas-szpilki-score">
+                Wynik: {szpilkiStats.correct}/{szpilkiStats.total}
+              </span>
+            )}
+          </div>
+          <p className="atlas-szpilki-prompt">
+            Narząd: <strong>{activeEntity?.namePl ?? chosen?.name}</strong>. Podaj polską i łacińską nazwę zaznaczonej szpilki oraz jej funkcję:
+          </p>
+          <input
+            type="text"
+            value={szpilkiAnswer}
+            onChange={(e) => setSzpilkiAnswer(e.target.value)}
+            placeholder="Wpisz odpowiedź (opcjonalnie)…"
+            className="atlas-szpilki-input"
+          />
+          <div className="atlas-szpilki-actions">
+            {!szpilkiRevealed ? (
+              <Button
+                variant="outline"
+                onClick={() => setSzpilkiRevealed(true)}
+                className="atlas-szpilki-reveal-btn"
+              >
+                <Eye size={14} />
+                <span>👁️ Sprawdź odpowiedź</span>
+              </Button>
+            ) : (
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setSzpilkiStats((st) => ({ correct: st.correct + 1, total: st.total + 1 }));
+                  pickNextSzpilkiPin();
+                }}
+                className="atlas-szpilki-reveal-btn"
+              >
+                <CheckCircle2 size={14} />
+                <span>Umiem ✅ — Następna</span>
+              </Button>
+            )}
+            <Button variant="ghost" onClick={pickNextSzpilkiPin}>
+              <Shuffle size={14} />
+              <span>🎲 Następna szpilka</span>
+            </Button>
+          </div>
+          {szpilkiRevealed && (
+            <div className="atlas-szpilki-answer">
+              <div className="atlas-szpilki-answer-title">
+                <strong>{activePin.labelPl}</strong>{" "}
+                <em>({activePin.labelLat})</em>
+              </div>
+              <p>
+                <strong>Topografia:</strong> {activePin.topographyAndStructure}
+              </p>
+              {activePin.vascularizationAndInnervation && (
+                <p>
+                  <strong>Unaczynienie i unerwienie:</strong>{" "}
+                  {activePin.vascularizationAndInnervation}
+                </p>
+              )}
+              <p>
+                <strong>Fizjologia:</strong> {activePin.physiologyAndFunction}
+              </p>
+              {activePin.clinicalNotes && (
+                <p>
+                  <strong>Klinika / CKE:</strong> {activePin.clinicalNotes}
+                </p>
+              )}
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Active Dissection / Peeled Layers Floating Banner */}
       {(peeledList.length > 0 || state.mode === "peel") && (
@@ -1295,6 +1609,53 @@ export default function AtlasExplorer({
             </SheetDescription>
             {chosen && !hasOrganExplanation(chosen.name, locale) && (
               <span className="atlas-context-note">{t.atlas.systemOverviewNote}</span>
+            )}
+            {activeEntity && activeEntity.pins.length > 0 && (!state.szpilkiMode || szpilkiRevealed) && (
+              <div className="atlas-textbook-card">
+                <div className="atlas-textbook-card__head">
+                  <span className="atlas-textbook-card__eyebrow">
+                    KARTA ANATOMICZNA PODRĘCZNIKA · {activeEntity.namePl} (<em>{activeEntity.nameLat}</em>)
+                  </span>
+                </div>
+                <div className="atlas-textbook-card__pins">
+                  {activeEntity.pins.map((pin) => (
+                    <button
+                      key={pin.id}
+                      type="button"
+                      className={`atlas-pin-chip ${activePin?.id === pin.id ? "active" : ""}`}
+                      onClick={() => selectPin(pin)}
+                    >
+                      <MapPin size={12} />
+                      <span>{pin.labelPl}</span>
+                    </button>
+                  ))}
+                </div>
+                {activePin && (
+                  <div className="atlas-textbook-card__body">
+                    <h4>
+                      {activePin.labelPl} <em>({activePin.labelLat})</em>
+                    </h4>
+                    <dl>
+                      <dt>Topografia i budowa</dt>
+                      <dd>{activePin.topographyAndStructure}</dd>
+                      {activePin.vascularizationAndInnervation && (
+                        <>
+                          <dt>Unaczynienie i unerwienie</dt>
+                          <dd>{activePin.vascularizationAndInnervation}</dd>
+                        </>
+                      )}
+                      <dt>Fizjologia i funkcja</dt>
+                      <dd>{activePin.physiologyAndFunction}</dd>
+                      {activePin.clinicalNotes && (
+                        <>
+                          <dt>Korelacje kliniczne i maturalne</dt>
+                          <dd>{activePin.clinicalNotes}</dd>
+                        </>
+                      )}
+                    </dl>
+                  </div>
+                )}
+              </div>
             )}
             <div className="atlas-structure-meta">
               <span>

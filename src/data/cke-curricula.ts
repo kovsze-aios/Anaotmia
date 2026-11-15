@@ -8,6 +8,12 @@
  * and exam traps (Pułapki CKE).
  */
 
+import type {
+  CkeRequirementMapping,
+  CurriculumTier,
+} from "@/types/curriculum";
+import { normalizeCurriculumTier } from "@/types/curriculum";
+
 export type CkeFormula = "2015" | "2023";
 export type CkeTopicStatus = "core" | "2015-only" | "2023-only";
 
@@ -26,6 +32,7 @@ export interface CkeSectionCurriculum {
   title: string;
   subtitle: string;
   status: CkeTopicStatus;
+  tier?: CurriculumTier;
   formulas: CkeFormula[];
   requirements: CkeRequirement[];
   formulaDifferences: {
@@ -1327,3 +1334,249 @@ export const CHEMISTRY_CKE_CURRICULUM: CkeSectionCurriculum[] = [
     keywords: ["aminy", "anilina", "amidy", "aminokwasy", "punkt izoelektryczny", "białka", "reakcja biuretowa", "sacharydy", "glukoza", "fruktoza", "sacharoza", "Haworth", "mutarotacja"],
   },
 ];
+
+export interface FormulaOverrideEntry {
+  sectionCode: string;
+  tier: CurriculumTier;
+  formulas: ("2015" | "2023" | "academic")[];
+  added2023: string[];
+  removed2015: string[];
+  academicExtra: string[];
+  diffsSummary: string;
+}
+
+export const BIOLOGY_FORMULA_OVERRIDES: FormulaOverrideEntry[] = [
+  {
+    sectionCode: "Dział I",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Kinetyka enzymatyczna (inhibicja kompetycyjna vs niekompetycyjna)", "Rola wiązań wodorowych w strukturze II- i III-rzędowej białek"],
+    removed2015: ["Szczegółowe wzory chemiczne rzadszych disacharydów i lipidów złożonych"],
+    academicExtra: ["Równanie Michaelisa–Mentena i wykresy Lineweavera–Burka", "Termodynamika fałdowania białek (ΔG = ΔH - TΔS)"],
+    diffsSummary: "Formuła 2023+ mocniej akcentuje mechanizmy inhibicji enzymów oraz projektowanie prób wykrywających makrocząsteczki biologiczne.",
+  },
+  {
+    sectionCode: "Dział II",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Potencjał wody i osmoza w kontekście projektowania doświadczeń", "Szlak sekrecyjny RER → aparat Golgiego → egzocytoza", "Teoria endosymbiozy (dowody molekularne i ultrastrukturalne)"],
+    removed2015: ["Rozbudowana terminologia historycznych modeli błony biologicznej"],
+    academicExtra: ["Białka SNARE, klatryna i sortowanie pęcherzykowe COP I / COP II", "Mechanika cytoszkieletu (polimeryzacja aktyny i mikrotubul z udziałem GTP/ATP)"],
+    diffsSummary: "Nowa matura 2023+ premiuje analizę doświadczeń z osmozy/plazmolizy i powiązanie ultrastruktury organelli z ich funkcją.",
+  },
+  {
+    sectionCode: "Dział III",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Porównanie fotosyntezy C3, C4 i CAM w kontekście adaptacji klimatycznych", "Znaczenie łańcucha oddechowego jako głównego źródła ATP"],
+    removed2015: ["Pamięciowa znajomość wszystkich związków pośrednich glikolizy i cyklu Krebsa z nazw i wzorów"],
+    academicExtra: ["Stechiometria transportu elektronów w kompleksach I–IV łańcucha oddechowego i syntaza F0F1", "Mechanizm fotosyntezy cyklicznej i fotooddychanie (RuBisCO jako oksygenaza)"],
+    diffsSummary: "W F2023+ zrezygnowano z wymogu zapamiętywania wszystkich etapów pośrednich glikolizy i cyklu Krebsa na rzecz bilansu energetycznego, substratów, produktów i lokalizacji.",
+  },
+  {
+    sectionCode: "Dział IV",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Wirusy RNA vs retrowirusy (odwrotna transkryptaza) oraz cykl lityczny i lizogeniczny bakteriofagów"],
+    removed2015: ["Szczegółowa systematyka protistów roślinopodobnych i grzybopodobnych"],
+    academicExtra: ["Molekularne mechanizmy oporności bakterii na antybiotyki i horyzontalny transfer genów (koniugacja, transdukcja, transformacja)"],
+    diffsSummary: "F2023+ ogranicza szczegółową klasyfikację protistów i glonów na rzecz znaczenia ekologicznego oraz cykli replikacyjnych wirusów.",
+  },
+  {
+    sectionCode: "Dział V",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Ewolucyjne znaczenie nasienia, łagiewki pyłkowej i uniezależnienia od wody u nasiennych"],
+    removed2015: ["Szczegółowa taksonomia oraz drobiazgowe cykle rozwojowe krasnorostów i wybranych mszaków"],
+    academicExtra: ["Transport w ksylemie (teoria kohezyjno-transpiracyjna ilościowo) i floemie (model Müncha)", "Fitohormony i szlaki transdukcji sygnału u roślin"],
+    diffsSummary: "F2015 częściej sprawdzała szczegółową anatomię organów wegetatywnych i cykle wszystkich gromad glonów; F2023+ skupia się na przystosowaniach ewolucyjnych i fizjologii.",
+  },
+  {
+    sectionCode: "Dział VI",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Porównanie bezkręgowców i kręgowców pod kątem wymiany gazowej, wydalania i krążenia"],
+    removed2015: ["Drobiazgowe nazewnictwo typów larw wszystkich bezkręgowców morskich"],
+    academicExtra: ["Filogeneza molekularna Bilateria i geny Hox w planie budowy ciała zwierząt"],
+    diffsSummary: "Nowa podstawa ogranicza czysto pamięciową anatomię rzadkich bezkręgowców na rzecz porównań funkcjonalnych (układy krwionośny, oddechowy, wydalniczy).",
+  },
+  {
+    sectionCode: "Dział VII",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Homeostaza i sprzężenia zwrotne (regulacja glikemii, termoregulacja, osmoregulacja)", "Mechanizm potencjału czynnościowego oraz rola jonów Ca2+ w skurczu mięśnia"],
+    removed2015: ["Szczegółowa anatomia wszystkich nerwów czaszkowych z numeracją i dokładnym przebiegiem"],
+    academicExtra: ["Równanie Nernsta i Goldmana–Hodgkina–Katza w neurofizjologii", "Kaskady krzepnięcia krwi i fizjologia kłębuszka nerkowego (GFR)"],
+    diffsSummary: "F2023+ stawia na zrozumienie regulacji hormonalnej, neurofizjologii (synapsa, potencjał czynnościowy) i mechanizmów odporności swoistej.",
+  },
+  {
+    sectionCode: "Dział VIII",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Regulacja ekspresji genów u eukariontów (epigenetyka, acetylacja histonów, alternatywny splicing)", "Operon laktozowy i tryptofanowy u bakterii"],
+    removed2015: ["Rzadkie wyjątki dziedziczenia wieloczynnikowego wykraczające poza epistasis/kodominację"],
+    academicExtra: ["Interferencja RNA (siRNA, miRNA) i kinetyka replikacji telomerów"],
+    diffsSummary: "W Formule 2023+ znacznie wzrósł udział epigenetyki, regulacji transkrypcji i zadań na sprzężenia genów oraz rekombinację.",
+  },
+  {
+    sectionCode: "Dział IX",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Technologia CRISPR-Cas9 (koncepcja edycji genomu)", "PCR, sekwencjonowanie DNA i elektroforeza żelowa w zadaniach doświadczalnych"],
+    removed2015: ["Historyczne metody klonowania bez kontekstu zastosowań współczesnych"],
+    academicExtra: ["Sekwencjonowanie NGS (Illumina) i biblioteki cDNA w bioinformatyce"],
+    diffsSummary: "Biotechnologia w F2023+ obejmuje edycję genów CRISPR-Cas9 oraz interpretację elektroforegramów i wyników PCR.",
+  },
+  {
+    sectionCode: "Dział X",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Obliczenia częstości alleli i genotypów z prawa Hardy'ego–Weinberga", "Analiza drzew filogenetycznych i zegara molekularnego"],
+    removed2015: ["Rozbudowane opisy historycznych koncepcji przeddarwinowskich poza Lamarckiem i Darwinem"],
+    academicExtra: ["Genetyka populacyjna z doborem i migracją oraz modele specjacji sympatrycznej"],
+    diffsSummary: "W F2023+ zadania obliczeniowe z prawa Hardy'ego–Weinberga oraz odczytywanie kladogramów należą do standardu arkusza.",
+  },
+  {
+    sectionCode: "Dział XI",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Obieg pierwiastków (węgiel, azot) w kontekście zmian klimatu i eutrofizacji", "Zależności międzygatunkowe i strategie życiowe r oraz K"],
+    removed2015: ["Szczegółowe wykazy wszystkich konwencji międzynarodowych z datami"],
+    academicExtra: ["Modele dynamiki populacji Lotki–Volterry i bioróżnorodność mierzona wskaźnikiem Shannona"],
+    diffsSummary: "Ekologia F2023+ koncentruje się na funkcjonowaniu ekosystemów, krążeniu materii, przepływie energii i ochronie bioróżnorodności.",
+  },
+];
+
+export const CHEMISTRY_FORMULA_OVERRIDES: FormulaOverrideEntry[] = [
+  {
+    sectionCode: "Dział I",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Liczby kwantowe i zasada zakazu Pauliego/reguła Hunda w zapisie klatkowym", "Promocja elektronowa (Cu, Cr) i konfiguracje jonów metali bloku d"],
+    removed2015: ["Historyczne modele atomu Thomsona i Rutherforda w ujęciu opisowym"],
+    academicExtra: ["Równanie Schrödingera i radialne funkcje rozkładu gęstości elektronowej"],
+    diffsSummary: "F2023+ wymaga precyzyjnego zapisu klatkowego, liczb kwantowych oraz kolejności usuwania elektronów (najpierw z podpowłoki 4s, potem 3d).",
+  },
+  {
+    sectionCode: "Dział II",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Hybrydyzacja wyłącznie sp, sp2, sp3 i geometria VSEPR w powiązaniu z polarnością cząsteczek", "Oddziaływania międzycząsteczkowe (mostki wodorowe, siły dyspersyjne) a właściwości fizyczne"],
+    removed2015: ["Hybrydyzacja sp3d oraz sp3d2 (np. PCl5, SF6) wycofana z wymagań F2023+"],
+    academicExtra: ["Teoria orbitali molekularnych (MO), rząd wiązania oraz diagramy dla O2 i N2"],
+    diffsSummary: "Ważna zmiana w F2023+: brak hybrydyzacji z udziałem orbitali d (sp3d, sp3d2), natomiast duży nacisk na wiązania wodorowe i polarność.",
+  },
+  {
+    sectionCode: "Dział III",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Zaawansowane obliczenia stechiometryczne z wydajnością, domieszkami i hydratami", "Prawo zachowania masy i objętości gazów w warunkach innych niż normalne (pV = nRT)"],
+    removed2015: ["Zadania oparte wyłącznie na prostym molowaniu z jednym równaniem bez nadmiaru/niedomiaru"],
+    academicExtra: ["Równanie van der Waalsa dla gazów rzeczywistych i aktywność stężeniowa"],
+    diffsSummary: "F2023+ standardowo łączy równanie Clapeyrona pV = nRT z reakcjami na wydajność oraz niedomiar/nadmiar substratu.",
+  },
+  {
+    sectionCode: "Dział IV",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Entalpia reakcji, prawo Hessa oraz obliczenia efektów energetycznych z energii wiązań"],
+    removed2015: ["Brak wymogu obliczeń entropii ΔS i energii swobodnej Gibbsa ΔG w zakresie maturalnym"],
+    academicExtra: ["Pierwsza i druga zasada termodynamiki chemicznej, ΔG° = -RT ln K"],
+    diffsSummary: "W obu formułach obowiązuje prawo Hessa i pojęcie entalpii; pojęcie ΔG pozostaje treściami akademickimi (extra).",
+  },
+  {
+    sectionCode: "Dział V",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Równowaga dynamiczna, obliczenia stałej Kc i zmiana Kc wyłącznie wraz z temperaturą", "Zależność szybkości reakcji od stężeń (równanie kinetyczne i rzędowość)"],
+    removed2015: ["Złożone równania kinetyczne II i III rzędu w ujęciu całkowym"],
+    academicExtra: ["Równanie Arrheniusa i teoria zderzeń/stanu przejściowego (Eyringa)"],
+    diffsSummary: "F2023+ kładzie duży nacisk na obliczenia Kc przy użyciu tabeli zmian stężeń oraz interpretację reguły przekory.",
+  },
+  {
+    sectionCode: "Dział VI",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Roztwory buforowe (jakościowo i pH), iloczyn rozpuszczalności Kso i efekt wspólnego jonu", "Hydroliza soli wg teorii Brønsteda–Lowry'ego oraz prawo rozcieńczeń Ostwalda"],
+    removed2015: ["Niektóre szczegółowe zastosowania stężenia normalnego (N)"],
+    academicExtra: ["Krzywe miareczkowania kwasów wieloprotonowych i równanie Hendersona–Hasselbalcha"],
+    diffsSummary: "Nowa matura 2023+ silnie eksponuje iloczyn rozpuszczalności Kso (współstrącanie) i dokładne obliczenia pH słabych elektrolitów.",
+  },
+  {
+    sectionCode: "Dział VII",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Ogniwa galwaniczne, zapis schematu ogniwa, obliczenia SEM (E°kat - E°an) i kolejność rozładowywania jonów w elektrolizie"],
+    removed2015: ["Pamięciowe obliczenia ilościowe z równania Nernsta poza warunkami standardowymi (w F2023 wystarczy jakościowy wpływ stężeń lub SEM standardowe)"],
+    academicExtra: ["Ilościowe zastosowania równania Nernsta i polarografia"],
+    diffsSummary: "W F2023+ kluczowe jest poprawne bilansowanie reakcji redoks (metodą jonowo-elektronową) w środowisku kwasowym i zasadowym oraz analiza ogniw.",
+  },
+  {
+    sectionCode: "Dział VIII",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Właściwości amfoteryczne związków Al, Zn, Cr(III) i reakcje związków manganu oraz chromu na różnych stopniach utlenienia"],
+    removed2015: ["Rozbudowana technologia przemysłowa wszystkich wielkotonażowych procesów nieorganicznych"],
+    academicExtra: ["Teoria pola krystalicznego i kompleksy metali przejściowych (barwa i magnetyzm)"],
+    diffsSummary: "F2023+ koncentruje się na redoksach pierwiastków bloku d (MnO4-/Mn2+/MnO2, Cr2O7^2-/CrO4^2-/Cr3+) i amfoteryczności.",
+  },
+  {
+    sectionCode: "Dział IX",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Mechanizmy reakcji (substytucja rodnikowa, elektrofilowa, nukleofilowa; addycja elektrofilowa zgodnie z regułą Markownikowa poprzez trwałość karbokationu)", "Izomeria cis-trans oraz rozpoznawanie centrów stereogenicznych (chiralności)"],
+    removed2015: ["Szczegółowa nomenklatura rzadkich układów bicyklicznych i spiro"],
+    academicExtra: ["Kinetyka i stereochemia SN1 vs SN2 oraz E1 vs E2 z uwzględnieniem rozpuszczalników protycznych/aprotycznych"],
+    diffsSummary: "F2023+ kładzie większy nacisk na uzasadnianie kierunku reakcji (trwałość karbokationów, efekt indukcyjny i mezomeryczny podstawników w benzenie).",
+  },
+  {
+    sectionCode: "Dział X",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Porównanie mocy kwasów karboksylowych (wpływ podstawników -I) i rzędowości alkoholi/amin", "Reakcje hydroksykwasów i odróżnianie aldehydów od ketonów"],
+    removed2015: ["Część historycznych nazw zwyczajowych nieużywanych przez IUPAC"],
+    academicExtra: ["Reakcja Grignarda, kondensacja aldolowa i mechanizmy addycji nukleofilowej do grupy karbonylowej"],
+    diffsSummary: "W F2023+ należy dokładnie wyjaśniać wpływ podstawników elektroujemnych na kwasowość kwasów karboksylowych i fenoli.",
+  },
+  {
+    sectionCode: "Dział XI",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Analiza porównawcza hydrolizy estrów w środowisku kwasowym vs zasadowym (zmydlanie nieodwracalne)", "Polimery kondensacyjne (poliamidy, poliestry) i addycyjne"],
+    removed2015: ["Szczegółowa klasyfikacja przemysłowa wszystkich kauczuków syntetycznych"],
+    academicExtra: ["Mechanizm estryfikacji Fischera (znaczenie izotopowe 18O) i kopolimery blokowe"],
+    diffsSummary: "F2023+ bardzo często sprawdza odróżnienie odwracalnej hydrolizy kwasowej estrów od nieodwracalnego zmydlania zasadą.",
+  },
+  {
+    sectionCode: "Dział XII",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Elektroforeza aminokwasów i zależność formy jonowej od pH względem punktu izoelektrycznego pI", "Izomeria α/β, mutarotacja i redukcyjność sacharydów (odróżnianie glukozy od fruktozy wodą bromową vs próbą Tollensa)"],
+    removed2015: ["Wzory wszystkich rzadkich heksoz poza glukozą, fruktozą, galaktozą i mannozą"],
+    academicExtra: ["Analiza sekwencji peptydów metodą Edmana i szczegółowe mechanizmy katalityczne proteaz serynowych"],
+    diffsSummary: "W F2023+ pułapką klasyczną jest dodatnia próba Tollensa dla fruktozy (izomeryzacja w zasadowym środowisku) vs woda bromowa.",
+  },
+  {
+    sectionCode: "Dział XIII",
+    tier: "cke-core",
+    formulas: ["2015", "2023"],
+    added2023: ["Planowanie wieloetapowych ciągów doświadczeń (probówka I, II, III — identyfikacja bezbarwnych roztworów i gazów)"],
+    removed2015: ["Rzadkie próby analityczne spoza standardowego zestawu jonów CKE"],
+    academicExtra: ["Spektroskopia IR, 1H NMR i spektrometria mas w identyfikacji związków organicznych"],
+    diffsSummary: "Nowa matura premiuje uzasadnienie obserwacji w formacie: obserwacja (wytrącenie osadu / odbarwienie) + jonowe równanie reakcji.",
+  },
+];
+
+export function toCkeRequirementMapping(
+  section: CkeSectionCurriculum,
+): CkeRequirementMapping {
+  const tier = section.tier ?? normalizeCurriculumTier(section.status);
+  return {
+    tier,
+    formulas: section.formulas,
+    ckeSectionCode: section.sectionCode,
+    ckeRequirementIds: section.requirements.map((r) => r.code),
+    diffs2015vs2023: `F2015: ${section.formulaDifferences.formula2015} | F2023+: ${section.formulaDifferences.formula2023}`,
+    examTraps: section.examTraps,
+  };
+}

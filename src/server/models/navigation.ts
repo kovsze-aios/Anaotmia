@@ -8,13 +8,14 @@
  * repositories into the browser bundle.
  */
 
-import type { CkeFormula, CkeTopicStatus } from "./textbook";
+import type { CkeFormula, CkeTopicStatus, CurriculumTier } from "./textbook";
 
 /** A single selectable section inside a domain. */
 export interface NavSection {
   id: string;
   title: string;
   ckeStatus?: CkeTopicStatus;
+  tier?: CurriculumTier;
   formulas?: CkeFormula[];
   requirementCodes?: string[];
 }
@@ -42,6 +43,12 @@ export interface SidebarNavigation {
   physiology: NavLink[];
   biology: NavLink[];
   chemistry: NavLink[];
+  physics?: NavLink[];
+  mathematics?: NavLink[];
+  biochemistry?: NavLink[];
+  neurobiology?: NavLink[];
+  pharmacology?: NavLink[];
+  informatics?: NavLink[];
   maturaBiology: NavLink[];
   maturaChemistry: NavLink[];
 }
