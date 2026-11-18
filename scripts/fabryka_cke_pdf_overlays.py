@@ -6,8 +6,12 @@ Deterministic 100% offline PyMuPDF (`fitz`) extractor generating exact PDF
 overlay coordinate mappings & 1:1 CKE key annotations for CKE Matura exam pages
 (`public/cke-assets/<subject>/<year>_maj/page_*.png`).
 
-Zero external LLM API calls: all layout coordinates come from local PyMuPDF geometry
-and all solutions come from the official CKE keys & agent moderation.
+Zero external LLM API calls:
+- Uses `page.find_tables()` to map EVERY individual empty table cell & P/F box
+  in exam sheets directly to clean student answers from official CKE scoring keys
+  (`*-zasady*.pdf` / `*-model*.pdf` / `*-N.pdf`).
+- Detects dotted answer lines and empty workspace regions strictly below
+  printed prompt text so handwritten overlays never cover printed text.
 
 Usage:
   python scripts/fabryka_cke_pdf_overlays.py
@@ -44,9 +48,35 @@ TASK_FILES: dict[str, Path] = {
     "chemia": CKE_EXAMS_DIR / "chemia-cke-tasks.json",
 }
 
-DOTTED_LINE_RE = re.compile(r"^[.\u2026_\-\s]{8,}$")
+DOTTED_LINE_RE = re.compile(r"^[.\u2026_\-\s]{6,}$")
 TASK_HEADER_RE = re.compile(r"\bZadanie\s+(\d+(?:\.\d+)?)\b", re.IGNORECASE)
+SUBTASK_INLINE_RE = re.compile(r"^(?:Zadanie\s+)?(\d+\.\d+)\.(?:\s|$)")
 MC_OPTION_RE = re.compile(r"^\s*([A-F1-4])[.)]\s+")
+
+RUBRIC_LINE_RE = re.compile(
+    r"^\s*(?:\.\s*(?:\(\d+[–-]\d+\)\s*)?)?(?:"
+    r"(?:I|II|III|IV|V|VI|VII|VIII|IX|X|XI)\.\s*(?:Poznanie|Poszukiwanie|Rozumowanie|Korzystanie|Wykonywanie|Budowa|Metabolizm|Przegląd|Fizjologia|Genetyka|Ekologia|Ewolucja|Różnorodność|Ogólne|Wstęp|Wykorzystanie|Pogłębienie|Opanowanie|Rozwiązywanie)"
+    r"|(?:\d+\.\d+\.?\s*(?:\(\d+[–-]\d+\)\s*)?)?(?:I|II|III|IV|V)\.\s+(?:Poznanie|Wykorzystanie|Pogłębienie|Opanowanie|Rozumowanie)"
+    r"|Zdający\b"
+    r"|Wymagani[ae]\s+(?:ogóln|szczegółow|egzaminacyjn)"
+    r"|Zasady\s+oceniania\b"
+    r"|Schemat\s+punktowania\b"
+    r"|Rozporządzenie\s+Ministra\b"
+    r"|Załącznik\s+nr\b"
+    r"|\d+\s+Rozporządzenie\s+Ministra"
+    r"|\d+\s+Załącznik\s+nr"
+    r"|Dz\.?\s*U\.?"
+    r"|wiedzy\s+do\s+rozwiązywania\s+problemów\b"
+    r"|(?:III|IV)\s+etap\s+edukacyjny\b"
+    r"|-skutkowe\b"
+    r")",
+    re.IGNORECASE,
+)
+
+RUBRIC_FRAGMENT_RE = re.compile(
+    r"(?:poziomach\s+organizacji\s+życia|różnorodnych\s+źródeł|zależności\s+przyczynowo-skutkowe|strukturą\s+a\s+funkcją|informacje\s+pozyskane\s+z\s+różnorodnych|Zdający\s+\[…\]|wymaganiach\s+egzaminacyjnych|wiedzy\s+do\s+rozwiązywania\s+problemów|etap\s+edukacyjny|Wykorzystanie\s+i\s+tworzenie\s+informacji|Opanowanie\s+czynności\s+praktycznych|Pogłębienie\s+wiadomości)",
+    re.IGNORECASE,
+)
 
 
 def load_env_files() -> None:
@@ -100,31 +130,93 @@ def find_exam_pdf(subject: str, year: int, month: str) -> Path | None:
     return None
 
 
+def find_scoring_pdf(subject: str, year: int, month: str) -> Path | None:
+    oer_root = locate_oer_root()
+    folder_name = "Biologia" if subject == "biologia" else "Chemia"
+    year_dir = oer_root / subject / folder_name / str(year)
+    if not year_dir.is_dir():
+        return None
+    pdfs = sorted(year_dir.glob("*.pdf"))
+    for pdf in pdfs:
+        low = pdf.name.lower()
+        if any(tag in low for tag in ("zasady", "model", "-n.pdf", "_n.pdf")):
+            return pdf
+    return None
+
+
+def strip_rubric_noise(text: str) -> str:
+    """Removes interleaved CKE curriculum requirement blocks & rubric boilerplate lines."""
+    clean_lines: list[str] = []
+    for raw_ln in text.splitlines():
+        ln = re.sub(r"\s+", " ", raw_ln).strip()
+        if not ln:
+            continue
+        if RUBRIC_LINE_RE.match(ln) or RUBRIC_FRAGMENT_RE.search(ln):
+            continue
+        if re.match(r"^(?:0|1|2|3|4)\s*p(?:kt)?\.?\s*[–-]", ln, re.IGNORECASE):
+            continue
+        clean_lines.append(ln)
+    return "\n".join(clean_lines)
+
+
+def clean_cell_answer(raw: str | None) -> str:
+    """
+    Distills a scoring-key table cell into the single clean student answer
+    suitable for writing inside an empty exam table cell.
+    """
+    if not raw:
+        return ""
+    txt = re.sub(r"\s+", " ", raw.replace("\n", " ")).strip()
+    if not txt:
+        return ""
+
+    # Join broken chemical/enzyme subscripts like "E 2" -> "E2", "CO 2" -> "CO2"
+    txt = re.sub(r"\b([A-Za-z])\s+(\d)\b", r"\1\2", txt)
+    # Remove bracketed optional hint like "N (T)" -> "N"
+    txt = re.sub(r"^([NT])\s*\([NT]\)$", r"\1", txt)
+
+    # Trim inline "LUB" / "ALBO" synonym alternatives (e.g. "P LUB fosfor" -> "P", "V ALBO 5" -> "V")
+    alt_split = re.split(r"\s+(?:LUB|ALBO)\s+", txt, maxsplit=1)
+    if len(alt_split) == 2 and alt_split[0].strip():
+        txt = alt_split[0].strip()
+
+    if " / " in txt:
+        parts = [p.strip() for p in txt.split(" / ") if p.strip()]
+        # Specific CKE Biologia 2022 1.1 canonical mitochondrial membrane phrase
+        for p in parts:
+            low_p = p.lower()
+            if "wewnętrzn" in low_p and "błona mitochondrium" in low_p:
+                return "wewnętrzna błona mitochondrium"
+        if parts:
+            txt = parts[0]
+
+    # Fix unmatched trailing ')' from multiline slash split (e.g. "deaminacja)" -> "deaminacja")
+    if txt.endswith(")") and "(" not in txt:
+        txt = txt[:-1].strip()
+    if txt.startswith("(") and ")" not in txt:
+        txt = txt[1:].strip()
+
+    return txt.strip()
+
+
 def extract_concise_answer(official_key: str) -> tuple[str, list[str]]:
     """
     Distills an official CKE scoring criterion into:
-      1) concise inline fill text suitable for writing into PDF answer lines,
+      1) concise inline fill text suitable for handwriting onto PDF answer lines,
       2) optional single-letter multiple-choice marks (e.g. ['B'] or ['A', 'D']).
     """
     cleaned = official_key.strip()
     if not cleaned:
-        return "Brak klucza tekstowego CKE.", []
+        return "", []
 
-    # Locate the actual solution block across both F2015 and F2023 CKE key layouts
     solution_part = ""
     sol_match = re.search(
-        r"\b(?:Rozwiązanie|Przykładowe\s+poprawne\s+odpowiedzi|Przykładowa\s+odpowiedź|Poprawna\s+odpowiedź)\s*:?\s*([\s\S]+)",
+        r"\b(?:Przykładowe\s+poprawne\s+odpowiedzi|Przykładowe\s+rozwiązania|Przykładowe\s+rozwiązanie|Przykładowa\s+odpowiedź|Poprawna\s+odpowiedź|Rozwiązanie)\s*:?\s*([\s\S]+)",
         cleaned,
         flags=re.IGNORECASE,
     )
     if sol_match:
         solution_part = sol_match.group(1)
-        solution_part = re.split(
-            r"\n\s*(?:Schemat\s+punktowania|Zasady\s+oceniania|Uwag[ai]\s*:|0\s*p(?:kt)?\.?\s*[–-])",
-            solution_part,
-            maxsplit=1,
-            flags=re.IGNORECASE,
-        )[0]
     else:
         solution_part = re.split(
             r"\b(?:Schemat\s+punktowania|Zasady\s+oceniania)\b",
@@ -139,30 +231,87 @@ def extract_concise_answer(official_key: str) -> tuple[str, list[str]]:
             flags=re.IGNORECASE,
         )
 
-    solution_part = solution_part.strip()
+    solution_part = re.split(
+        r"\n\s*(?:Schemat\s+punktowania|Zasady\s+oceniania|Uwag[ai]\s*:|Nie\s+uznaje\s+się|Dopuszcza\s+się|Załącznik\s+nr)",
+        solution_part,
+        maxsplit=1,
+        flags=re.IGNORECASE,
+    )[0]
 
-    if len(solution_part) < 1:
-        m = re.search(r"1\s*p(?:kt)?\.?\s*[–-]\s*([^\n]+)", cleaned)
-        solution_part = m.group(1).strip() if m else cleaned
+    stripped = strip_rubric_noise(solution_part)
+    if len(stripped) < 1:
+        fallback_clean = strip_rubric_noise(cleaned)
+        m = re.search(r"1\s*p(?:kt)?\.?\s*[–-]\s*([^\n]+)", fallback_clean)
+        stripped = m.group(1).strip() if m else fallback_clean
 
-    # Strip repeated "1.3." or single trailing rubric noise and join cleanly
-    lines = [
-        re.sub(r"\s+", " ", ln).strip()
-        for ln in solution_part.splitlines()
-        if ln.strip() and not re.match(r"^(?:0\s*pkt|1\s*pkt)", ln.strip(), re.IGNORECASE)
-    ]
-    concise = " | ".join(lines[:8])
-    if len(concise) > 420:
-        concise = concise[:417].rsplit(" ", 1)[0] + "..."
+    # Take first clean example answer when multiple bullet paraphrases or "Sposób 2." exist
+    first_solution = re.split(
+        r"(?:\n\s*Sposób\s+2\.|\n\s*ALBO\b)",
+        stripped,
+        maxsplit=1,
+        flags=re.IGNORECASE,
+    )[0].strip()
 
-    # Detect multiple choice tokens (e.g. "B", "D", "A, C")
+    if "•" in first_solution:
+        bullets = [b.strip() for b in first_solution.split("•") if b.strip()]
+        if bullets:
+            first_solution = bullets[0]
+
+    first_solution = re.sub(
+        r"^\s*(?:Sposób\s+1\.|Rozstrzygnięcie\s*:?|Przykładowe\s+wyjaśnienia\s*:?)\s*",
+        "",
+        first_solution,
+        flags=re.IGNORECASE,
+    )
+    first_solution = re.sub(
+        r"\s*(?:Przykładowe\s+wyjaśnienia|Przykładowe\s+rozwiązania)\s*:?\s*$",
+        "",
+        first_solution,
+        flags=re.IGNORECASE,
+    )
+    # Remove inline curriculum sentence fragments accidentally glued before/after answer
+    lines = []
+    for ln in first_solution.splitlines():
+        ln_clean = re.sub(r"\s+", " ", ln).strip()
+        ln_clean = re.sub(r"\s*wiedzy\s+do\s+rozwiązywania\s+problemów\.?", "", ln_clean, flags=re.IGNORECASE).strip()
+        ln_clean = re.sub(r"\s*(?:Przykładowe\s+wyjaśnienia|Przykładowe\s+uzasadnienia)\s*:?", "", ln_clean, flags=re.IGNORECASE).strip()
+        if ln_clean:
+            lines.append(ln_clean)
+    concise = " ".join(lines).strip()
+    if len(concise) > 360:
+        concise = concise[:357].rsplit(" ", 1)[0] + "..."
+
     marked: list[str] = []
     if len(concise) <= 24:
         mc_hits = re.findall(r"\b([A-F])\b", concise)
         if mc_hits:
             marked = mc_hits[:3]
 
-    return concise or cleaned[:280], marked
+    return concise or strip_rubric_noise(cleaned)[:240], marked
+
+
+def extract_truth_choices(sub: dict[str, Any], official_key: str, concise_answer: str) -> list[str]:
+    choices: list[str] = []
+    tbl = sub.get("interactiveTableData")
+    if tbl and isinstance(tbl, dict):
+        for row in tbl.get("rows", []):
+            ans = str(row.get("correctAnswer", "")).strip().upper()
+            if ans in ("P", "F"):
+                choices.append(ans)
+    if choices:
+        return choices
+
+    # Fallback: parse patterns like "1. – F; 2. – P" or "1. F, 2. P" from solution text
+    sol_match = re.search(r"\bRozwiązanie\s*:?\s*([^\n]+)", official_key, flags=re.IGNORECASE)
+    probe = sol_match.group(1) if sol_match else concise_answer
+    paired = re.findall(r"(?:^|\b)[1-5][.)]?\s*(?:[–-]\s*)?([PF])\b", probe)
+    if paired:
+        return paired
+
+    if re.fullmatch(r"[PF](?:\s*[,;/]\s*[PF]){1,4}", probe.strip()):
+        return re.findall(r"[PF]", probe)
+
+    return []
 
 
 def extract_margin_note(subtask: dict[str, Any]) -> str:
@@ -173,26 +322,126 @@ def extract_margin_note(subtask: dict[str, Any]) -> str:
             plain = re.sub(r"<[^>]+>", " ", st["explanationHtml"])
             plain = re.sub(r"\s+", " ", plain).strip()
             plain = re.sub(r"^Przyczyna\s*→\s*Mechanizm\s*→\s*Skutek\s*\([^)]*\)\s*:?\s*", "", plain)
+            plain = strip_rubric_noise(plain).replace("\n", " ").strip()
             if plain:
                 return (f"[{verb}] " if verb else "") + (plain[:210] + ("..." if len(plain) > 210 else ""))
-    key = re.sub(r"\s+", " ", (subtask.get("officialAnswerKey") or "")).strip()
+    key = strip_rubric_noise(subtask.get("officialAnswerKey") or "").replace("\n", " ").strip()
+    key = re.sub(r"\s+", " ", key)
     return (f"[{verb}] " if verb else "") + (key[:180] + ("..." if len(key) > 180 else ""))
 
 
-def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
+def is_rubric_table(extracted: list[list[str | None]]) -> bool:
+    flat = " ".join((c or "") for r in extracted for c in r).lower()
+    return any(
+        k in flat
+        for k in (
+            "wymagania ogólne",
+            "wymaganie ogólne",
+            "wymagania szczegółowe",
+            "wymaganie szczegółowe",
+            "rodzaj dokumentu:",
+            "zdający",
+            "wypełnia egzaminator",
+            "kod pesel",
+            "wypełnia zdający",
+            "egzamin maturalny",
+        )
+    )
+
+
+def extract_scoring_tables(scoring_pdf: Path | None) -> list[dict[str, Any]]:
+    if not scoring_pdf or not scoring_pdf.is_file():
+        return []
+    tables: list[dict[str, Any]] = []
+    doc = fitz.open(scoring_pdf)
+    try:
+        for pno in range(len(doc)):
+            for tb in doc[pno].find_tables().tables:
+                ext = tb.extract()
+                if not ext or is_rubric_table(ext):
+                    continue
+                row_tokens: set[str] = set()
+                for r in ext:
+                    for c in r:
+                        val = clean_cell_answer(c).lower()
+                        if val:
+                            for tok in re.findall(r"[a-ząćęłńóśźż0-9]{2,}", val):
+                                row_tokens.add(tok)
+                tables.append(
+                    {
+                        "page": pno + 1,
+                        "rows": len(ext),
+                        "cols": len(ext[0]) if ext else 0,
+                        "extract": ext,
+                        "tokens": row_tokens,
+                    }
+                )
+    finally:
+        doc.close()
+    return tables
+
+
+def is_pf_table(ext: list[list[str | None]]) -> bool:
+    if not ext or len(ext[0]) < 2:
+        return False
+    pf_rows = 0
+    for r in ext:
+        tail = [re.sub(r"\s+", " ", (c or "")).strip().upper() for c in r[-2:]]
+        if tail == ["P", "F"] or (tail and tail[-1] in ("P F", "P / F")):
+            pf_rows += 1
+    return pf_rows >= 2
+
+
+def match_solved_table(
+    exam_ext: list[list[str | None]],
+    scoring_tables: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    if not exam_ext or not scoring_tables:
+        return None
+    erows = len(exam_ext)
+    ecols = len(exam_ext[0])
+
+    exam_tokens: set[str] = set()
+    for r in exam_ext:
+        for c in r:
+            val = clean_cell_answer(c).lower()
+            if val:
+                for tok in re.findall(r"[a-ząćęłńóśźż0-9]{2,}", val):
+                    exam_tokens.add(tok)
+
+    best_score = 0
+    best_cand: dict[str, Any] | None = None
+    for cand in scoring_tables:
+        if cand["rows"] != erows or cand["cols"] != ecols:
+            continue
+        overlap = len(exam_tokens & cand["tokens"])
+        if overlap > best_score:
+            best_score = overlap
+            best_cand = cand
+    return best_cand if best_score >= 2 else None
+
+
+def scan_pdf_exam_geometry(
+    exam_pdf: Path | None,
+    scoring_pdf: Path | None,
+) -> dict[str, Any]:
     """
-    Uses PyMuPDF (`fitz`) to find exact page + normalized bounding boxes (%) for
-    every `Zadanie X` / `Zadanie X.Y` header and its corresponding answer region
-    (dotted lines, P/F table, MC options, or empty workspace gap before next header).
+    Extracts per-task coordinates AND cell-level table mappings via PyMuPDF (`fitz`).
+    Returns:
+      {
+        "anchors": { task_num -> fallback box dict },
+        "tables": { task_num -> list of matched table cell payloads },
+      }
     """
     anchors: dict[str, dict[str, Any]] = {}
-    if not pdf_path or not pdf_path.is_file():
-        return anchors
+    tables_by_task: dict[str, list[dict[str, Any]]] = {}
+    if not exam_pdf or not exam_pdf.is_file():
+        return {"anchors": anchors, "tables": tables_by_task}
 
-    doc = fitz.open(pdf_path)
+    scoring_tables = extract_scoring_tables(scoring_pdf)
+    doc = fitz.open(exam_pdf)
     try:
-        # Collect ordered events across pages
-        for pno in range(len(doc)):
+        for pno in range(1, len(doc)):  # skip cover page (index 0)
             page = doc[pno]
             w = max(1.0, float(page.rect.width))
             h = max(1.0, float(page.rect.height))
@@ -203,7 +452,7 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
                 txt = (b[4] or "").strip()
                 if not txt:
                     continue
-                if re.match(r"^(?:Strona\s+\d+|EBIP|ECHP|MBI|MCH)", txt):
+                if re.match(r"^(?:Strona\s+\d+|EBIP|ECHP|MBI|MCH|Więcej\s+arkuszy)", txt):
                     continue
                 x0 = (b[0] / w) * 100.0
                 y0 = (b[1] / h) * 100.0
@@ -211,6 +460,9 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
                 y1 = (b[3] / h) * 100.0
 
                 task_m = TASK_HEADER_RE.search(txt)
+                sub_inline = SUBTASK_INLINE_RE.match(txt) if not task_m else None
+                tnum = task_m.group(1) if task_m else (sub_inline.group(1) if sub_inline else None)
+
                 is_dots = bool(DOTTED_LINE_RE.match(txt)) or txt.count("....") >= 2 or txt.count("……") >= 2
                 is_pf = bool(re.search(r"\bP\s+F\b|\nP\nF\b", txt) or txt.strip() == "P\nF")
                 is_mc = bool(MC_OPTION_RE.match(txt))
@@ -222,15 +474,16 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
                         "y0": y0,
                         "x1": x1,
                         "y1": y1,
-                        "task_num": task_m.group(1) if task_m else None,
+                        "task_num": tnum,
                         "is_dots": is_dots,
                         "is_pf": is_pf,
                         "is_mc": is_mc,
                     }
                 )
 
-            # Associate each subtask header on this page with its answer area below it
             header_indices = [i for i, ev in enumerate(page_events) if ev["task_num"]]
+
+            # 1. Non-table anchors strictly below printed prompt text / on dotted lines
             for h_idx_pos, ev_idx in enumerate(header_indices):
                 ev = page_events[ev_idx]
                 tnum = ev["task_num"]
@@ -244,6 +497,10 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
                 dot_blocks = [f for f in following if f["is_dots"]]
                 pf_blocks = [f for f in following if f["is_pf"]]
                 mc_blocks = [f for f in following if f["is_mc"]]
+                prompt_blocks = [
+                    f for f in following
+                    if not f["is_dots"] and not f["is_pf"] and "Wypełnia" not in f["txt"]
+                ]
 
                 if dot_blocks:
                     bx0 = min(f["x0"] for f in dot_blocks)
@@ -252,10 +509,10 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
                     by1 = max(f["y1"] for f in dot_blocks)
                     box_type = "open-answer"
                 elif pf_blocks:
-                    bx0 = 12.0
+                    bx0 = 76.0
                     by0 = min(f["y0"] for f in pf_blocks)
-                    bx1 = 88.0
-                    by1 = min(88.0, max(f["y1"] for f in pf_blocks) + 9.0)
+                    bx1 = 89.0
+                    by1 = min(88.0, max(f["y1"] for f in pf_blocks) + 4.0)
                     box_type = "true-false"
                 elif mc_blocks:
                     bx0 = min(f["x0"] for f in mc_blocks)
@@ -265,30 +522,208 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
                     box_type = "multiple-choice"
                 else:
                     bx0 = 12.0
-                    by0 = min(84.0, ev["y1"] + 1.2)
+                    last_prompt_y1 = max([ev["y1"], *(f["y1"] for f in prompt_blocks)])
+                    by0 = min(83.0, last_prompt_y1 + 0.8)
                     bx1 = 88.0
-                    next_y0 = page_events[next_ev_idx]["y0"] if next_ev_idx < len(page_events) else 90.0
-                    by1 = max(by0 + 6.0, min(90.0, next_y0 - 1.5))
+                    next_y0 = page_events[next_ev_idx]["y0"] if next_ev_idx < len(page_events) else 89.0
+                    by1 = max(by0 + 6.5, min(89.0, next_y0 - 1.5))
                     box_type = "calculation-grid" if (by1 - by0) >= 12.0 else "table-fill"
 
-                # Prefer subtask-level coordinate entry (`1.1`, `2.3`) over bundle header (`1`)
                 anchors[tnum] = {
                     "pageNumber": pno + 1,
                     "boxType": box_type,
                     "xPct": round(max(6.0, bx0), 1),
                     "yPct": round(max(6.0, min(86.0, by0)), 1),
-                    "widthPct": round(min(88.0, max(36.0, bx1 - bx0)), 1),
-                    "heightPct": round(min(45.0, max(5.5, by1 - by0)), 1),
+                    "widthPct": round(min(88.0, max(12.0 if box_type == "true-false" else 36.0, bx1 - bx0)), 1),
+                    "heightPct": round(min(45.0, max(4.8, by1 - by0)), 1),
                 }
+
+            # 2. Sub-cell table detection & mapping via PyMuPDF find_tables()
+            for tb in page.find_tables().tables:
+                ext = tb.extract()
+                if not ext or is_rubric_table(ext):
+                    continue
+                # Skip tiny 1-row visual orbital boxes without empty cells or P/F columns
+                has_empty = any(
+                    (cell is not None and cell.strip() == "")
+                    for r in ext
+                    for cell in r
+                )
+                pf_flag = is_pf_table(ext)
+                if not has_empty and not pf_flag:
+                    continue
+
+                tb_top_pct = (tb.bbox[1] / h) * 100.0
+                # Associate table with closest header above table top on this page
+                preceding_headers = [
+                    page_events[idx]
+                    for idx in header_indices
+                    if page_events[idx]["y0"] <= tb_top_pct + 2.0
+                ]
+                owner_tnum = preceding_headers[-1]["task_num"] if preceding_headers else None
+                if not owner_tnum:
+                    continue
+
+                cell_boxes: list[list[dict[str, float] | None]] = []
+                for row in tb.rows:
+                    row_boxes: list[dict[str, float] | None] = []
+                    for c in row.cells:
+                        if c is None:
+                            row_boxes.append(None)
+                        else:
+                            row_boxes.append(
+                                {
+                                    "xPct": round((c[0] / w) * 100.0, 2),
+                                    "yPct": round((c[1] / h) * 100.0, 2),
+                                    "widthPct": round(((c[2] - c[0]) / w) * 100.0, 2),
+                                    "heightPct": round(((c[3] - c[1]) / h) * 100.0, 2),
+                                }
+                            )
+                    cell_boxes.append(row_boxes)
+
+                matched_z = None if pf_flag else match_solved_table(ext, scoring_tables)
+                tables_by_task.setdefault(owner_tnum, []).append(
+                    {
+                        "pageNumber": pno + 1,
+                        "isPf": pf_flag,
+                        "examExtract": ext,
+                        "cellBoxes": cell_boxes,
+                        "solvedExtract": matched_z["extract"] if matched_z else None,
+                    }
+                )
     finally:
         doc.close()
 
-    return anchors
+    return {"anchors": anchors, "tables": tables_by_task}
+
+
+def build_cell_annotations_from_tables(
+    sheet_id: str,
+    page_no: int,
+    task_number: str,
+    clean_num: str,
+    points_label: str,
+    operational_verb: str,
+    margin_note: str,
+    truth_choices: list[str],
+    tables: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    annotations: list[dict[str, Any]] = []
+
+    for t_idx, tb in enumerate(tables):
+        if int(tb["pageNumber"]) != page_no:
+            continue
+        ext = tb["examExtract"]
+        cell_boxes = tb["cellBoxes"]
+        suffix_prefix = f"t{t_idx}_" if len(tables) > 1 else ""
+
+        if tb["isPf"] and truth_choices:
+            pf_row_idx = 0
+            for r_idx, row in enumerate(ext):
+                if r_idx >= len(cell_boxes):
+                    break
+                tail = [re.sub(r"\s+", " ", (c or "")).strip().upper() for c in row[-2:]]
+                if tail == ["P", "F"]:
+                    if pf_row_idx >= len(truth_choices):
+                        break
+                    choice = truth_choices[pf_row_idx]
+                    pf_row_idx += 1
+                    col_offset = len(row) - (2 if choice == "P" else 1)
+                    bbox = cell_boxes[r_idx][col_offset] if col_offset < len(cell_boxes[r_idx]) else None
+                    if not bbox:
+                        continue
+                    annotations.append(
+                        {
+                            "id": f"{sheet_id}-p{page_no}-z{clean_num}-{suffix_prefix}pf{pf_row_idx}",
+                            "taskNumber": task_number,
+                            "subTaskNumber": clean_num,
+                            "pageNumber": page_no,
+                            "boxType": "table-fill",
+                            "xPct": bbox["xPct"],
+                            "yPct": bbox["yPct"],
+                            "widthPct": bbox["widthPct"],
+                            "heightPct": bbox["heightPct"],
+                            "pointsLabel": points_label,
+                            "operationalVerb": operational_verb,
+                            "answerText": choice,
+                            "marginNote": margin_note,
+                            "truthChoices": [choice],
+                        }
+                    )
+                elif tail and tail[-1] in ("P F", "P / F"):
+                    if pf_row_idx >= len(truth_choices):
+                        break
+                    choice = truth_choices[pf_row_idx]
+                    pf_row_idx += 1
+                    bbox = cell_boxes[r_idx][-1]
+                    if not bbox:
+                        continue
+                    half_h = round(bbox["heightPct"] / 2.0, 2)
+                    y_adj = bbox["yPct"] if choice == "P" else round(bbox["yPct"] + half_h, 2)
+                    annotations.append(
+                        {
+                            "id": f"{sheet_id}-p{page_no}-z{clean_num}-{suffix_prefix}pf{pf_row_idx}",
+                            "taskNumber": task_number,
+                            "subTaskNumber": clean_num,
+                            "pageNumber": page_no,
+                            "boxType": "table-fill",
+                            "xPct": bbox["xPct"],
+                            "yPct": y_adj,
+                            "widthPct": bbox["widthPct"],
+                            "heightPct": half_h,
+                            "pointsLabel": points_label,
+                            "operationalVerb": operational_verb,
+                            "answerText": choice,
+                            "marginNote": margin_note,
+                            "truthChoices": [choice],
+                        }
+                    )
+            continue
+
+        solved_ext = tb.get("solvedExtract")
+        if not solved_ext:
+            continue
+
+        for r_idx, row in enumerate(ext):
+            if r_idx >= len(solved_ext) or r_idx >= len(cell_boxes):
+                break
+            for c_idx, cell_val in enumerate(row):
+                if c_idx >= len(solved_ext[r_idx]) or c_idx >= len(cell_boxes[r_idx]):
+                    break
+                exam_txt = (cell_val or "").strip()
+                if exam_txt and not DOTTED_LINE_RE.match(exam_txt):
+                    continue
+                bbox = cell_boxes[r_idx][c_idx]
+                if not bbox:
+                    continue
+                ans = clean_cell_answer(solved_ext[r_idx][c_idx])
+                if not ans:
+                    continue
+                annotations.append(
+                    {
+                        "id": f"{sheet_id}-p{page_no}-z{clean_num}-{suffix_prefix}r{r_idx}c{c_idx}",
+                        "taskNumber": task_number,
+                        "subTaskNumber": clean_num,
+                        "pageNumber": page_no,
+                        "boxType": "table-fill",
+                        "xPct": bbox["xPct"],
+                        "yPct": bbox["yPct"],
+                        "widthPct": bbox["widthPct"],
+                        "heightPct": bbox["heightPct"],
+                        "pointsLabel": points_label,
+                        "operationalVerb": operational_verb,
+                        "answerText": ans,
+                        "marginNote": margin_note,
+                    }
+                )
+
+    return annotations
 
 
 def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[str, Any]]]]:
     overlays: dict[str, dict[str, list[dict[str, Any]]]] = {}
-    pdf_cache: dict[tuple[str, int, str], dict[str, dict[str, Any]]] = {}
+    pdf_cache: dict[tuple[str, int, str], dict[str, Any]] = {}
+    generated_sheet_ids: set[str] = set()
 
     for subject, task_path in TASK_FILES.items():
         if not task_path.is_file():
@@ -301,16 +736,20 @@ def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[st
                 break
             processed += 1
             sheet_id = task.get("sheetId") or f"{subject}-{task['year']}-{task['month']}-f{task['formula']}"
+            generated_sheet_ids.add(sheet_id)
             year = int(task["year"])
             month = task["month"]
             default_page = int(task.get("pdfPageNumber") or 4)
 
             cache_key = (subject, year, month)
             if cache_key not in pdf_cache:
-                pdf_path = find_exam_pdf(subject, year, month)
-                pdf_cache[cache_key] = scan_pdf_task_anchors(pdf_path) if pdf_path else {}
+                exam_pdf = find_exam_pdf(subject, year, month)
+                scoring_pdf = find_scoring_pdf(subject, year, month)
+                pdf_cache[cache_key] = scan_pdf_exam_geometry(exam_pdf, scoring_pdf)
 
-            anchors = pdf_cache[cache_key]
+            geom = pdf_cache[cache_key]
+            anchors = geom["anchors"]
+            tables_map = geom["tables"]
             sheet_pages = overlays.setdefault(sheet_id, {})
 
             subtasks = task.get("subTasks") or []
@@ -335,16 +774,46 @@ def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[st
                 bundle_num = clean_num.split(".")[0] if "." in clean_num else clean_num
 
                 anchor = anchors.get(clean_num) or anchors.get(bundle_num)
-                page_no = int(anchor["pageNumber"]) if anchor else default_page
+                matched_tables = tables_map.get(clean_num) or (
+                    tables_map.get(bundle_num) if len(subtasks) == 1 else []
+                )
+
+                page_no = int(anchor["pageNumber"]) if anchor else (
+                    int(matched_tables[0]["pageNumber"]) if matched_tables else default_page
+                )
+
+                official_key = sub.get("officialAnswerKey") or task.get("officialAnswerKey") or ""
+                concise_answer, marked_options = extract_concise_answer(official_key)
+                margin_note = extract_margin_note(sub)
+                points_label = f"0–{sub.get('points', task.get('points', 1))} pkt"
+                operational_verb = sub.get("operationalVerb") or task.get("operationalVerb") or ""
+                truth_choices = extract_truth_choices(sub, official_key, concise_answer)
+
+                cell_anns: list[dict[str, Any]] = []
+                if matched_tables:
+                    cell_anns = build_cell_annotations_from_tables(
+                        sheet_id=sheet_id,
+                        page_no=page_no,
+                        task_number=task.get("taskNumber", f"Zadanie {clean_num}"),
+                        clean_num=clean_num,
+                        points_label=points_label,
+                        operational_verb=operational_verb,
+                        margin_note=margin_note,
+                        truth_choices=truth_choices,
+                        tables=matched_tables,
+                    )
+
+                if cell_anns:
+                    sheet_pages.setdefault(str(page_no), []).extend(cell_anns)
+                    continue
 
                 if not anchor:
-                    # Stagger fallback vertical slots cleanly if anchor wasn't found in PDF
                     y_pct = min(76.0, 20.0 + (fallback_slot % 3) * 24.0)
                     fallback_slot += 1
                     st_type = sub.get("taskType", "open-text")
                     btype = (
                         "true-false"
-                        if st_type == "true-false-table"
+                        if (st_type == "true-false-table" or truth_choices)
                         else "multiple-choice"
                         if st_type == "multiple-choice"
                         else "calculation-grid"
@@ -360,24 +829,8 @@ def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[st
                         "heightPct": 11.5,
                     }
 
-                official_key = sub.get("officialAnswerKey") or task.get("officialAnswerKey") or ""
-                concise_answer, marked_options = extract_concise_answer(official_key)
-                margin_note = extract_margin_note(sub)
-
-                if re.match(r"^(?:za\s|1\s*p)", concise_answer, re.IGNORECASE) and "•" in margin_note:
-                    bullet_text = re.sub(r"^\[[^\]]+\]\s*", "", margin_note).strip()
-                    if bullet_text:
-                        concise_answer = bullet_text
-
-                truth_choices: list[str] = []
-                tbl = sub.get("interactiveTableData")
-                if tbl and isinstance(tbl, dict):
-                    for row in tbl.get("rows", []):
-                        ans = str(row.get("correctAnswer", "")).strip().upper()
-                        if ans in ("P", "F"):
-                            truth_choices.append(ans)
-                    if truth_choices and anchor["boxType"] == "open-answer":
-                        anchor["boxType"] = "true-false"
+                if truth_choices and anchor["boxType"] == "open-answer":
+                    anchor["boxType"] = "true-false"
 
                 page_key = str(page_no)
                 ann = {
@@ -390,8 +843,8 @@ def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[st
                     "yPct": anchor["yPct"],
                     "widthPct": anchor["widthPct"],
                     "heightPct": anchor["heightPct"],
-                    "pointsLabel": f"0–{sub.get('points', task.get('points', 1))} pkt",
-                    "operationalVerb": sub.get("operationalVerb") or task.get("operationalVerb") or "",
+                    "pointsLabel": points_label,
+                    "operationalVerb": operational_verb,
                     "answerText": concise_answer,
                     "marginNote": margin_note,
                 }
@@ -401,6 +854,16 @@ def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[st
                     ann["truthChoices"] = truth_choices
 
                 sheet_pages.setdefault(page_key, []).append(ann)
+
+    # Preserve supplemental sheet overlays (Trial / Fizyka / Matematyka) already curated
+    if OUTPUT_OVERLAYS_FILE.is_file():
+        try:
+            existing = json.loads(OUTPUT_OVERLAYS_FILE.read_text(encoding="utf-8"))
+            for sid, pages in existing.items():
+                if sid not in generated_sheet_ids and sid not in overlays:
+                    overlays[sid] = pages
+        except Exception:
+            pass
 
     return overlays
 

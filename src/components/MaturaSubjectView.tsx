@@ -220,7 +220,7 @@ function MaturaSubjectViewInner({
     <div className="matura-layout">
       {/* Sidebar */}
       <aside className={`matura-sidebar ${HIDE_SCROLLBAR} overscroll-contain`}>
-        <div className="matura-sidebar__header flex-col items-stretch gap-3">
+        <div className="matura-sidebar__header flex-col items-stretch gap-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <Link
               href="/"

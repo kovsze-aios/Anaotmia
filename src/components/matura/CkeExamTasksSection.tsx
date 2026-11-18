@@ -3,13 +3,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   AlertTriangle,
-  Check,
   CheckCircle2,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   FileText,
   Maximize2,
+  PenLine,
   X,
 } from "lucide-react";
 import type { CkeMetadata } from "@/server/models";
@@ -658,12 +658,35 @@ export function CkeSolvedPdfPageOverlay({
     }
   }, [zoomOpen]);
 
+  const deduplicatedAnnotations = useMemo(() => {
+    const seen = new Set<string>();
+    const grouped: Array<CkePdfOverlayAnnotation & { combinedAnswers: string[] }> = [];
+    for (const ann of annotations) {
+      const key = (ann.subTaskNumber ?? ann.taskNumber).trim();
+      if (!seen.has(key)) {
+        seen.add(key);
+        grouped.push({
+          ...ann,
+          combinedAnswers: ann.answerText ? [ann.answerText] : [],
+        });
+      } else {
+        const existing = grouped.find(
+          (g) => (g.subTaskNumber ?? g.taskNumber).trim() === key,
+        );
+        if (existing && ann.answerText && !existing.combinedAnswers.includes(ann.answerText)) {
+          existing.combinedAnswers.push(ann.answerText);
+        }
+      }
+    }
+    return grouped;
+  }, [annotations]);
+
   const renderPaperCanvas = (isZoom = false) => {
     if (pageImageUrl) {
       return (
         <div
-          className={`relative w-full overflow-hidden rounded-lg border border-zinc-800 bg-white ${
-            isZoom ? "min-w-[680px]" : ""
+          className={`@container relative w-full overflow-hidden rounded-lg border border-zinc-800 bg-white ${
+            isZoom ? "min-w-[720px] sm:min-w-[920px]" : ""
           }`}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -679,14 +702,13 @@ export function CkeSolvedPdfPageOverlay({
 
           {solvedMode &&
             annotations.map((ann) => {
-              const boxTypeLabel =
-                ann.boxType === "true-false"
-                  ? "P/F"
-                  : ann.boxType === "multiple-choice"
-                    ? "ABCD"
-                    : ann.boxType === "calculation-grid"
-                      ? "OBLICZENIA"
-                      : "OPIS";
+              const trimmed = ann.answerText.trim();
+              const isShortToken =
+                trimmed.length <= 4 ||
+                (ann.boxType === "table-fill" && trimmed.length <= 6);
+              const isMultiRowTf =
+                Boolean(ann.truthChoices && ann.truthChoices.length > 1) &&
+                ann.boxType === "true-false";
 
               return (
                 <div
@@ -695,57 +717,33 @@ export function CkeSolvedPdfPageOverlay({
                     left: `${ann.xPct}%`,
                     top: `${ann.yPct}%`,
                     width: `${ann.widthPct}%`,
-                    minHeight: `${Math.min(18, Math.max(5.5, ann.heightPct))}%`,
-                    maxHeight: `${Math.min(26, Math.max(8, ann.heightPct + 3))}%`,
+                    height: `${Math.max(2.2, ann.heightPct)}%`,
                   }}
-                  className="pointer-events-auto absolute z-10 flex flex-col justify-start overflow-y-auto rounded border border-zinc-700 bg-zinc-950/95 px-2 py-1.5 text-zinc-100 shadow-xl ring-1 ring-zinc-800/80 backdrop-blur-[1px]"
+                  aria-label={`Odpowiedź do zadania ${ann.subTaskNumber ?? ann.taskNumber}: ${ann.answerText}`}
+                  className={`pointer-events-none absolute z-10 flex select-none overflow-hidden bg-transparent font-[family-name:var(--font-handwriting)] text-[#1b365d] mix-blend-multiply ${
+                    isShortToken
+                      ? "items-center justify-center text-center text-[clamp(11px,2.2cqw,24px)] font-bold leading-none"
+                      : ann.boxType === "table-fill"
+                        ? "-rotate-[0.35deg] items-center justify-start px-[0.8%] text-left text-[clamp(8.5px,1.5cqw,16px)] font-semibold leading-[1.05]"
+                        : isMultiRowTf
+                          ? "flex-col items-end justify-around pr-[3%] text-[clamp(10px,1.9cqw,20px)] font-bold leading-none"
+                          : "-rotate-[0.25deg] items-start justify-start px-[0.5%] pt-[0.2%] text-left text-[clamp(9px,1.55cqw,17px)] font-semibold leading-[1.28]"
+                  }`}
                 >
-                  <div className="mb-0.5 flex flex-wrap items-center justify-between gap-1 border-b border-zinc-800 pb-0.5 text-[9px] font-semibold uppercase tracking-wider text-zinc-300 sm:text-[10px]">
-                    <span className="flex items-center gap-1 text-zinc-100">
-                      <Check className="size-2.5 text-zinc-200" aria-hidden="true" />
-                      Zad. {ann.subTaskNumber ?? ann.taskNumber}
-                      <span className="rounded border border-zinc-700 bg-zinc-900 px-1 py-0 text-[8px] font-mono text-zinc-300">
-                        {boxTypeLabel}
+                  {isMultiRowTf && ann.truthChoices ? (
+                    ann.truthChoices.map((choice, idx) => (
+                      <span key={idx} className="inline-block tracking-wide">
+                        {choice}
                       </span>
-                    </span>
-                    {ann.pointsLabel && (
-                      <span className="font-mono text-zinc-400">{ann.pointsLabel}</span>
-                    )}
-                  </div>
-
-                  {ann.truthChoices && ann.truthChoices.length > 0 && (
-                    <div className="mb-1 flex flex-wrap gap-1">
-                      {ann.truthChoices.map((choice, idx) => (
-                        <span
-                          key={idx}
-                          className="rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 font-mono text-[9px] font-bold text-zinc-100 sm:text-[10px]"
-                        >
-                          {idx + 1}: ✓ {choice}
-                        </span>
-                      ))}
-                    </div>
+                    ))
+                  ) : ann.boxType === "multiple-choice" &&
+                    ann.markedOptions &&
+                    ann.markedOptions.length > 0 &&
+                    trimmed.length <= 8 ? (
+                    <span>{ann.markedOptions.join(", ")}</span>
+                  ) : (
+                    <span className="w-full break-words">{trimmed}</span>
                   )}
-
-                  {ann.markedOptions && ann.markedOptions.length > 0 && (
-                    <div className="mb-1 flex flex-wrap gap-1">
-                      {ann.markedOptions.map((opt) => (
-                        <span
-                          key={opt}
-                          className="rounded border border-zinc-600 bg-zinc-800 px-1.5 py-0.5 font-mono text-[10px] font-bold text-zinc-100"
-                        >
-                          ✓ {opt}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  <p
-                    className={`font-sans text-[10px] leading-snug text-zinc-100 sm:text-[11px] ${
-                      isZoom ? "" : "line-clamp-3"
-                    }`}
-                  >
-                    {ann.answerText}
-                  </p>
                 </div>
               );
             })}
@@ -758,8 +756,15 @@ export function CkeSolvedPdfPageOverlay({
       <div className="w-full rounded-lg border border-zinc-800 bg-white p-5 text-zinc-900 shadow-inner sm:p-7">
         <div className="mb-4 flex items-center justify-between border-b border-zinc-300 pb-2 text-[11px] font-mono text-zinc-600">
           <span>CKE • Strona {pageNumber} z {totalPages}</span>
-          <span>
-            {solvedMode ? "✅ Rozwiązanie CKE 1:1" : "📄 Arkusz do rozwiązania"}
+          <span className="inline-flex items-center gap-1">
+            {solvedMode ? (
+              <>
+                <PenLine className="size-3 text-[#1b365d]" aria-hidden="true" />
+                <span className="font-medium text-[#1b365d]">Wypełnienie długopisem</span>
+              </>
+            ) : (
+              "Arkusz do rozwiązania"
+            )}
           </span>
         </div>
 
@@ -824,8 +829,14 @@ export function CkeSolvedPdfPageOverlay({
                                 <td className="border border-zinc-400 px-2.5 py-1.5">
                                   {row.statement}
                                 </td>
-                                <td className="border border-zinc-400 px-2.5 py-1.5 text-center font-mono font-bold">
-                                  {solvedMode ? `✓ ${row.correctAnswer}` : "P / F"}
+                                <td className="border border-zinc-400 px-2.5 py-1.5 text-center">
+                                  {solvedMode ? (
+                                    <span className="font-[family-name:var(--font-handwriting)] text-xl font-bold text-[#1b365d]">
+                                      {row.correctAnswer}
+                                    </span>
+                                  ) : (
+                                    <span className="font-mono font-bold text-zinc-500">P / F</span>
+                                  )}
                                 </td>
                               </tr>
                             ))}
@@ -834,25 +845,13 @@ export function CkeSolvedPdfPageOverlay({
                       )}
 
                       {!sub.interactiveTableData && (
-                        <div
-                          className={`rounded border px-3 py-2.5 text-xs ${
-                            solvedMode
-                              ? "border-zinc-900 bg-zinc-950 font-sans text-zinc-100"
-                              : "border-dashed border-zinc-400 bg-zinc-50 font-mono text-zinc-400"
-                          }`}
-                        >
+                        <div className="border-b border-dashed border-zinc-400 px-2 py-1.5 text-xs">
                           {solvedMode ? (
-                            <div className="space-y-1">
-                              <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
-                                <span>✓ Wpis wzorcowy CKE</span>
-                                <span>{sub.operationalVerb}</span>
-                              </div>
-                              <p className="whitespace-pre-line leading-relaxed text-zinc-100">
-                                {ann?.answerText ?? sub.officialAnswerKey}
-                              </p>
-                            </div>
+                            <p className="whitespace-pre-line font-[family-name:var(--font-handwriting)] text-lg font-semibold leading-snug text-[#1b365d]">
+                              {ann?.answerText ?? sub.officialAnswerKey}
+                            </p>
                           ) : (
-                            <div className="space-y-2 py-1 tracking-widest opacity-60">
+                            <div className="space-y-2 py-1 font-mono tracking-widest text-zinc-400 opacity-60">
                               <div>............................................................................</div>
                               <div>............................................................................</div>
                             </div>
@@ -878,10 +877,10 @@ export function CkeSolvedPdfPageOverlay({
           <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-mono text-xs font-semibold text-zinc-200">
             Strona {pageNumber} / {totalPages}
           </span>
-          {annotations.length > 0 && (
+          {deduplicatedAnnotations.length > 0 && (
             <span className="text-[11px] text-zinc-400">
-              {annotations.length}{" "}
-              {annotations.length === 1 ? "pole odpowiedzi" : "pól odpowiedzi"}
+              {deduplicatedAnnotations.length}{" "}
+              {deduplicatedAnnotations.length === 1 ? "zadanie" : "zadań"}
             </span>
           )}
         </div>
@@ -898,18 +897,19 @@ export function CkeSolvedPdfPageOverlay({
                     : "text-zinc-400 hover:text-zinc-200"
                 }`}
               >
-                📄 Pusty
+                Pusty
               </button>
               <button
                 type="button"
                 onClick={() => onToggleSolved(true)}
-                className={`rounded-md px-2 py-1 font-medium transition-colors ${
+                className={`inline-flex items-center gap-1 rounded-md px-2 py-1 font-medium transition-colors ${
                   solvedMode
                     ? "bg-zinc-800 text-zinc-100"
                     : "text-zinc-400 hover:text-zinc-200"
                 }`}
               >
-                ✅ Rozwiązany
+                <PenLine className="size-3 text-zinc-300" aria-hidden="true" />
+                Rozwiązany
               </button>
             </div>
           )}
@@ -925,24 +925,26 @@ export function CkeSolvedPdfPageOverlay({
         </div>
       </div>
 
-      {/* Main Layout: Page Canvas (Left/Top) + Margin Mechanism Callouts (Right/Bottom when Solved) */}
-      <div className="grid gap-4 xl:grid-cols-12">
-        <div className={solvedMode && annotations.length > 0 ? "xl:col-span-8" : "xl:col-span-12"}>
-          {renderPaperCanvas(false)}
-        </div>
+      {/* Main Layout: Full-Width Authentic Paper + Collapsible Key Drawer Below */}
+      <div className="w-full">{renderPaperCanvas(false)}</div>
 
-        {solvedMode && annotations.length > 0 && (
-          <aside
-            aria-label={`Komentarz egzaminacyjny CKE — strona ${pageNumber}`}
-            className="space-y-2.5 xl:col-span-4"
-          >
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
-              Margines CKE (Przyczyna → Mechanizm → Skutek)
-            </p>
-            {annotations.map((ann) => (
+      {solvedMode && deduplicatedAnnotations.length > 0 && (
+        <details className="group mt-3 rounded-lg border border-zinc-800/90 bg-zinc-900/50">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-2 text-xs font-medium uppercase tracking-wider text-zinc-400 hover:text-zinc-200">
+            <span className="inline-flex items-center gap-1.5">
+              <PenLine className="size-3.5 text-zinc-400" aria-hidden="true" />
+              Uzasadnienie i Klucz CKE ({deduplicatedAnnotations.length})
+            </span>
+            <ChevronDown
+              className="size-3.5 text-zinc-500 transition-transform group-open:rotate-180"
+              aria-hidden="true"
+            />
+          </summary>
+          <div className="space-y-2.5 border-t border-zinc-800/80 p-3">
+            {deduplicatedAnnotations.map((ann) => (
               <div
                 key={`margin-${ann.id}`}
-                className="rounded-lg border border-zinc-800 bg-zinc-900/70 p-3 text-xs"
+                className="rounded-lg border border-zinc-800 bg-zinc-950/70 p-3 text-xs"
               >
                 <div className="mb-1.5 flex flex-wrap items-center justify-between gap-1.5">
                   <span className="font-bold text-zinc-100">
@@ -950,7 +952,7 @@ export function CkeSolvedPdfPageOverlay({
                   </span>
                   <div className="flex items-center gap-1.5">
                     {ann.operationalVerb && (
-                      <span className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-zinc-300">
+                      <span className="rounded border border-zinc-800 bg-zinc-900 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-zinc-300">
                         {ann.operationalVerb}
                       </span>
                     )}
@@ -962,7 +964,7 @@ export function CkeSolvedPdfPageOverlay({
                   </div>
                 </div>
                 <p className="whitespace-pre-line font-medium leading-relaxed text-zinc-100">
-                  {ann.answerText}
+                  {ann.combinedAnswers.join(" • ")}
                 </p>
                 {ann.marginNote && (
                   <p className="mt-1.5 border-t border-zinc-800/80 pt-1.5 text-[11px] leading-relaxed text-zinc-400">
@@ -971,11 +973,11 @@ export function CkeSolvedPdfPageOverlay({
                 )}
               </div>
             ))}
-          </aside>
-        )}
-      </div>
+          </div>
+        </details>
+      )}
 
-      {/* Fullscreen Zoom Modal Preserving Overlay State */}
+      {/* Fullscreen Zoom Modal Preserving Handwritten Ink Coordinates & Native Pinch-Zoom */}
       <dialog
         ref={dialogRef}
         aria-label={`Podgląd 1:1 — Strona ${pageNumber}`}
@@ -983,11 +985,11 @@ export function CkeSolvedPdfPageOverlay({
         onClick={(e) => {
           if (e.target === dialogRef.current) setZoomOpen(false);
         }}
-        className="m-auto max-h-[94vh] w-[min(96vw,1100px)] overflow-auto rounded-2xl border border-zinc-700 bg-zinc-950 p-4 text-zinc-100 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[94dvh] w-[min(98vw,1120px)] overflow-auto rounded-2xl border border-zinc-700 bg-zinc-950 p-3 text-zinc-100 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm sm:p-4"
       >
         {zoomOpen && (
           <div className="space-y-3">
-            <div className="sticky top-0 z-20 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-zinc-950/95 px-3 py-2 backdrop-blur">
+            <div className="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-zinc-950/95 px-3 pb-2 pt-[max(0.5rem,env(safe-area-inset-top))] backdrop-blur-md">
               <span className="text-xs font-semibold text-zinc-200">
                 Strona {pageNumber} / {totalPages}
               </span>
@@ -1002,18 +1004,19 @@ export function CkeSolvedPdfPageOverlay({
                         : "text-zinc-400 hover:text-zinc-200"
                     }`}
                   >
-                    📄 Pusty arkusz
+                    Pusty arkusz
                   </button>
                   <button
                     type="button"
                     onClick={() => onToggleSolved(true)}
-                    className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                    className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-medium transition-colors ${
                       solvedMode
                         ? "bg-zinc-800 text-zinc-100"
                         : "text-zinc-400 hover:text-zinc-200"
                     }`}
                   >
-                    ✅ Arkusz rozwiązany
+                    <PenLine className="size-3.5 text-zinc-200" aria-hidden="true" />
+                    Arkusz rozwiązany
                   </button>
                 </div>
               )}
@@ -1026,7 +1029,9 @@ export function CkeSolvedPdfPageOverlay({
                 Zamknij (Esc)
               </button>
             </div>
-            <div className="overflow-x-auto">{renderPaperCanvas(true)}</div>
+            <div className="touch-pan-x touch-pan-y touch-pinch-zoom overscroll-contain overflow-auto">
+              {renderPaperCanvas(true)}
+            </div>
           </div>
         )}
       </dialog>
@@ -1037,7 +1042,7 @@ export function CkeSolvedPdfPageOverlay({
 /**
  * Displays the full sequence of CKE PDF pages for a selected sheet with
  * the global toggle:
- * `[ 📄 Pusty arkusz (Do rozwiązania) | ✅ Arkusz rozwiązany (Z naniesionymi odpowiedziami) ]`
+ * `[ Pusty arkusz | Arkusz rozwiązany ]`
  */
 export function CkeSolvedPdfSheetViewer({
   sheet,
@@ -1112,25 +1117,26 @@ export function CkeSolvedPdfSheetViewer({
                 : "border-transparent text-zinc-400 hover:text-zinc-100"
             }`}
           >
-            📄 Pusty arkusz (Do rozwiązania)
+            Pusty arkusz (Do rozwiązania)
           </button>
           <button
             type="button"
             onClick={() => setSolvedMode(true)}
             aria-pressed={solvedMode}
-            className={`rounded-md border px-3 py-1.5 font-semibold transition-colors ${
+            className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 font-semibold transition-colors ${
               solvedMode
                 ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
                 : "border-transparent text-zinc-400 hover:text-zinc-100"
             }`}
           >
-            ✅ Arkusz rozwiązany (Z naniesionymi odpowiedziami)
+            <PenLine className="size-3.5 text-zinc-200" aria-hidden="true" />
+            Arkusz rozwiązany (Długopisem CKE)
           </button>
         </div>
       </div>
 
-      {/* Page Navigation Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800/80 bg-zinc-900/60 px-3 py-2">
+      {/* Sticky Page Navigation Bar Respecting Mobile Safe-Area Notch */}
+      <div className="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-zinc-950/95 px-3 pb-2 pt-[max(0.5rem,env(safe-area-inset-top))] backdrop-blur-md">
         <div className="flex flex-wrap items-center gap-1.5">
           {!showAllPages && (
             <>

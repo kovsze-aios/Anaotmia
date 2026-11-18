@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import { Caveat } from "next/font/google";
 import localFont from "next/font/local";
 import { I18nProvider } from "@/i18n";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://sportnotes.pl";
+
+const caveatHandwriting = Caveat({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600", "700"],
+  variable: "--font-caveat",
+  display: "swap",
+});
 
 const plutoSansLight = localFont({
   src: "../../public/fonts/PlutoSansLight.woff2",
@@ -88,7 +96,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable}`}
+      className={`${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable} ${caveatHandwriting.variable}`}
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
