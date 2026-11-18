@@ -635,6 +635,12 @@ export function CkeSolvedPdfPageOverlay({
   pageTasks,
   solvedMode,
   onToggleSolved,
+  onPrevPage,
+  onNextPage,
+  canPrevPage = false,
+  canNextPage = false,
+  showAllPages = false,
+  onToggleAllPages,
 }: {
   sheetId?: string;
   pageNumber: number;
@@ -644,6 +650,12 @@ export function CkeSolvedPdfPageOverlay({
   pageTasks: CkeExamTask[];
   solvedMode: boolean;
   onToggleSolved?: (solved: boolean) => void;
+  onPrevPage?: () => void;
+  onNextPage?: () => void;
+  canPrevPage?: boolean;
+  canNextPage?: boolean;
+  showAllPages?: boolean;
+  onToggleAllPages?: () => void;
 }) {
   const [zoomOpen, setZoomOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -873,80 +885,105 @@ export function CkeSolvedPdfPageOverlay({
 
   return (
     <div className="rounded-xl border border-zinc-800 bg-zinc-950/90 p-3.5 text-zinc-100">
-      {/* Page Header Bar with Synced Toggle + Zoom */}
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800/80 pb-2.5">
-        <div className="flex items-center gap-2">
-          <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-mono text-xs font-semibold text-zinc-200">
-            Strona {pageNumber} / {totalPages}
-          </span>
-          {deduplicatedAnnotations.length > 0 && (
-            <span className="text-[11px] text-zinc-400">
-              {deduplicatedAnnotations.length}{" "}
-              {deduplicatedAnnotations.length === 1 ? "zadanie" : "zadań"}
-            </span>
-          )}
+      {/* Row 1: Strict 3-Column Single-Row Symmetrical Pagination */}
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-2">
+        <button
+          type="button"
+          onClick={onPrevPage}
+          disabled={!onPrevPage || !canPrevPage || showAllPages}
+          className="focus-ring inline-flex items-center gap-1 whitespace-nowrap rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:bg-zinc-800 disabled:pointer-events-none disabled:opacity-40 sm:text-sm"
+        >
+          <ChevronLeft className="size-3.5 shrink-0" aria-hidden="true" />
+          <span>Poprzednia</span>
+        </button>
+
+        <div className="truncate text-center text-xs font-medium tabular-nums text-zinc-300 sm:text-sm">
+          Strona {pageNumber} / {totalPages}
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
-          {onToggleSolved && (
-            <div className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-0.5 text-[11px]">
-              <button
-                type="button"
-                onClick={() => onToggleSolved(false)}
-                className={`rounded-md px-2 py-1 font-medium transition-colors ${
-                  !solvedMode
-                    ? "bg-zinc-800 text-zinc-100"
-                    : "text-zinc-400 hover:text-zinc-200"
-                }`}
-              >
-                Pusty
-              </button>
-              <button
-                type="button"
-                onClick={() => onToggleSolved(true)}
-                className={`inline-flex items-center gap-1 rounded-md px-2 py-1 font-medium transition-colors ${
-                  solvedMode
-                    ? "bg-zinc-800 text-zinc-100"
-                    : "text-zinc-400 hover:text-zinc-200"
-                }`}
-              >
-                <PenLine className="size-3 text-zinc-300" aria-hidden="true" />
-                Rozwiązany
-              </button>
-            </div>
-          )}
+        <button
+          type="button"
+          onClick={onNextPage}
+          disabled={!onNextPage || !canNextPage || showAllPages}
+          className="focus-ring inline-flex items-center gap-1 whitespace-nowrap rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:bg-zinc-800 disabled:pointer-events-none disabled:opacity-40 sm:text-sm"
+        >
+          <span>Następna</span>
+          <ChevronRight className="size-3.5 shrink-0" aria-hidden="true" />
+        </button>
+      </div>
 
+      {/* Row 2: Symmetrical 2-Column Secondary Action Row */}
+      <div className="mt-2.5 mb-3 flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800/80 pt-2.5">
+        {onToggleSolved ? (
+          <div className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-0.5 text-xs">
+            <button
+              type="button"
+              onClick={() => onToggleSolved(false)}
+              aria-pressed={!solvedMode}
+              className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                !solvedMode
+                  ? "bg-zinc-800 text-zinc-100"
+                  : "text-zinc-400 hover:text-zinc-200"
+              }`}
+            >
+              Pusty
+            </button>
+            <button
+              type="button"
+              onClick={() => onToggleSolved(true)}
+              aria-pressed={solvedMode}
+              className={`inline-flex items-center gap-1 rounded-md px-2.5 py-1 font-medium transition-colors ${
+                solvedMode
+                  ? "bg-zinc-800 text-zinc-100"
+                  : "text-zinc-400 hover:text-zinc-200"
+              }`}
+            >
+              <PenLine className="size-3.5 text-zinc-200" aria-hidden="true" />
+              Rozwiązany
+            </button>
+          </div>
+        ) : (
+          <div />
+        )}
+
+        <div className="flex items-center gap-1.5">
           <button
             type="button"
             onClick={() => setZoomOpen(true)}
-            className="inline-flex items-center gap-1 rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-[11px] font-medium text-zinc-300 hover:border-zinc-700 hover:text-zinc-100 focus-ring"
+            className="focus-ring inline-flex items-center gap-1 whitespace-nowrap rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
           >
-            <Maximize2 className="size-3" aria-hidden="true" />
-            Powiększ 1:1
+            <Maximize2 className="size-3.5" aria-hidden="true" />
+            <span>Powiększ 1:1</span>
           </button>
+          {onToggleAllPages && (
+            <button
+              type="button"
+              onClick={onToggleAllPages}
+              className="focus-ring inline-flex items-center whitespace-nowrap rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+            >
+              {showAllPages ? "Pojedyncza" : `Wszystkie (${totalPages})`}
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Main Layout: Full-Width Authentic Paper + Collapsible Key Drawer Below */}
+      {/* Main Layout: Full-Width Authentic Paper + Collapsible On-Demand CKE Key Below */}
       <div className="w-full">{renderPaperCanvas(false)}</div>
 
-      {solvedMode && deduplicatedAnnotations.length > 0 && (
-        <details className="group mt-3 rounded-lg border border-zinc-800/90 bg-zinc-900/50">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-2 text-xs font-medium uppercase tracking-wider text-zinc-400 hover:text-zinc-200">
-            <span className="inline-flex items-center gap-1.5">
-              <PenLine className="size-3.5 text-zinc-400" aria-hidden="true" />
-              Uzasadnienie i Klucz CKE ({deduplicatedAnnotations.length})
-            </span>
+      {deduplicatedAnnotations.length > 0 && (
+        <details className="group mt-3 rounded-xl border border-zinc-800/80 bg-zinc-950/80">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 text-xs font-medium text-zinc-300 transition-colors hover:text-zinc-100 sm:text-sm">
+            <span>Oficjalny klucz i zasady oceniania CKE (pokaż rozwiązanie)</span>
             <ChevronDown
-              className="size-3.5 text-zinc-500 transition-transform group-open:rotate-180"
+              className="size-4 shrink-0 text-zinc-400 transition-transform group-open:rotate-180"
               aria-hidden="true"
             />
           </summary>
-          <div className="space-y-2.5 border-t border-zinc-800/80 p-3">
+          <div className="space-y-2.5 border-t border-zinc-800/80 p-3.5">
             {deduplicatedAnnotations.map((ann) => (
               <div
                 key={`margin-${ann.id}`}
-                className="rounded-lg border border-zinc-800 bg-zinc-950/70 p-3 text-xs"
+                className="rounded-lg border border-zinc-800/90 bg-zinc-900/50 p-3 text-xs"
               >
                 <div className="mb-1.5 flex flex-wrap items-center justify-between gap-1.5">
                   <span className="font-bold text-zinc-100">
@@ -954,12 +991,12 @@ export function CkeSolvedPdfPageOverlay({
                   </span>
                   <div className="flex items-center gap-1.5">
                     {ann.operationalVerb && (
-                      <span className="rounded border border-zinc-800 bg-zinc-900 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-zinc-300">
+                      <span className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-zinc-300">
                         {ann.operationalVerb}
                       </span>
                     )}
                     {ann.pointsLabel && (
-                      <span className="font-mono text-[10px] text-zinc-400">
+                      <span className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 font-mono text-[10px] text-zinc-300">
                         {ann.pointsLabel}
                       </span>
                     )}
@@ -1042,9 +1079,8 @@ export function CkeSolvedPdfPageOverlay({
 }
 
 /**
- * Displays the full sequence of CKE PDF pages for a selected sheet with
- * the global toggle:
- * `[ Pusty arkusz | Arkusz rozwiązany ]`
+ * Displays the CKE PDF pages for a selected sheet with a single compact metadata
+ * card and unified symmetrical page controls directly above the exam sheet.
  */
 export function CkeSolvedPdfSheetViewer({
   sheet,
@@ -1087,104 +1123,29 @@ export function CkeSolvedPdfSheetViewer({
 
   return (
     <div className="space-y-4">
-      {/* Primary Sheet Header + Blank/Solved Toggle */}
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-950/95 p-4">
-        <div className="space-y-1">
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <span className="rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 font-semibold text-zinc-100">
-              {sheet.symbol ?? sheet.id}
-            </span>
-            <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-medium text-zinc-300">
-              Formuła {sheet.formula === "2023" ? "2023+ (2015+)" : "2015"}
-            </span>
-            <span className="font-mono text-zinc-400">
-              {sheet.totalTasks} zadań • {sheet.totalPoints} pkt • {totalPages} str.
-            </span>
-          </div>
-          <h3 className="text-sm font-bold text-zinc-100">{sheet.title}</h3>
+      {/* Compact Single-Card Exam Metadata Header */}
+      <div className="rounded-xl border border-zinc-800/90 bg-zinc-950 p-4">
+        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs text-zinc-300">
+          <span className="rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 font-mono font-semibold text-zinc-100">
+            {sheet.symbol ?? sheet.id}
+          </span>
+          <span aria-hidden="true" className="text-zinc-600">
+            •
+          </span>
+          <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-medium text-zinc-300">
+            Formuła {sheet.formula === "2023" ? "2023+" : "2015"}
+          </span>
+          <span aria-hidden="true" className="text-zinc-600">
+            •
+          </span>
+          <h3 className="font-bold text-zinc-100">{sheet.title}</h3>
+          <span aria-hidden="true" className="text-zinc-600">
+            •
+          </span>
+          <span className="font-mono tabular-nums text-zinc-400">
+            {sheet.totalTasks} zadań • {sheet.totalPoints} pkt • {totalPages} str.
+          </span>
         </div>
-
-        <div
-          role="group"
-          aria-label="Tryb prezentacji arkusza CKE"
-          className="inline-flex flex-wrap rounded-lg border border-zinc-800 bg-zinc-900 p-1 text-xs"
-        >
-          <button
-            type="button"
-            onClick={() => setSolvedMode(false)}
-            aria-pressed={!solvedMode}
-            className={`rounded-md border px-3 py-1.5 font-semibold transition-colors ${
-              !solvedMode
-                ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
-                : "border-transparent text-zinc-400 hover:text-zinc-100"
-            }`}
-          >
-            Pusty arkusz (Do rozwiązania)
-          </button>
-          <button
-            type="button"
-            onClick={() => setSolvedMode(true)}
-            aria-pressed={solvedMode}
-            className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 font-semibold transition-colors ${
-              solvedMode
-                ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
-                : "border-transparent text-zinc-400 hover:text-zinc-100"
-            }`}
-          >
-            <PenLine className="size-3.5 text-zinc-200" aria-hidden="true" />
-            Arkusz rozwiązany (Długopisem CKE)
-          </button>
-        </div>
-      </div>
-
-      {/* Sticky Page Navigation Bar Respecting Mobile Safe-Area Notch */}
-      <div className="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-zinc-950/95 px-3 pb-2 pt-[max(0.5rem,env(safe-area-inset-top))] backdrop-blur-md">
-        <div className="flex flex-wrap items-center gap-1.5">
-          {!showAllPages && (
-            <>
-              <button
-                type="button"
-                onClick={() => setActivePage((p) => Math.max(1, p - 1))}
-                disabled={clampedPage <= 1}
-                className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-              >
-                <ChevronLeft className="size-3.5" aria-hidden="true" />
-                Poprzednia
-              </button>
-              <select
-                value={clampedPage}
-                onChange={(e) => setActivePage(Number(e.target.value))}
-                aria-label="Wybierz stronę arkusza CKE"
-                className="rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 font-mono text-xs text-zinc-100"
-              >
-                {taskPages.map((pNo) => (
-                  <option key={pNo} value={pNo}>
-                    Strona {pNo} / {totalPages}
-                  </option>
-                ))}
-              </select>
-              <button
-                type="button"
-                onClick={() => setActivePage((p) => Math.min(totalPages, p + 1))}
-                disabled={clampedPage >= totalPages}
-                className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-              >
-                Następna
-                <ChevronRight className="size-3.5" aria-hidden="true" />
-              </button>
-            </>
-          )}
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setShowAllPages((prev) => !prev)}
-          className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-1 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-zinc-100"
-        >
-          {showAllPages
-            ? "Widok pojedynczej strony"
-            : `Rozwiń wszystkie strony (${totalPages})`}
-        </button>
       </div>
 
       {/* Rendered Sequence of Original Exam Pages */}
@@ -1206,6 +1167,12 @@ export function CkeSolvedPdfSheetViewer({
               pageTasks={tasksOnPage}
               solvedMode={solvedMode}
               onToggleSolved={setSolvedMode}
+              onPrevPage={() => setActivePage((p) => Math.max(1, p - 1))}
+              onNextPage={() => setActivePage((p) => Math.min(totalPages, p + 1))}
+              canPrevPage={clampedPage > 1}
+              canNextPage={clampedPage < totalPages}
+              showAllPages={showAllPages}
+              onToggleAllPages={() => setShowAllPages((prev) => !prev)}
             />
           );
         })}

@@ -3,17 +3,10 @@
 import Link from "next/link";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  FileText,
-  Home,
-  Search,
-} from "lucide-react";
+import { Home } from "lucide-react";
 import { ActiveRecall } from "@/components/ActiveRecall";
-import {
-  CkeSolvedPdfSheetViewer,
-  ExamTaskCard,
-} from "@/components/matura/CkeExamTasksSection";
-import { filterCkeTasks, getCkeExamSheets } from "@/data/cke-exams";
+import { CkeSolvedPdfSheetViewer } from "@/components/matura/CkeExamTasksSection";
+import { getCkeExamSheets } from "@/data/cke-exams";
 import type { CkeExamSheet } from "@/types/curriculum";
 import type { MaturaYearRecord } from "@/server/models";
 import { HIDE_SCROLLBAR } from "@/lib/utils";
@@ -115,10 +108,6 @@ function MaturaSubjectViewInner({
 
   const topicParam = searchParams.get("dzial");
   const [filterTopic, setFilterTopic] = useState<string | null>(topicParam);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [presentationMode, setPresentationMode] = useState<"pdf-overlay" | "cards">(
-    "pdf-overlay",
-  );
 
   // Keep topic filter in sync with browser back/forward
   useEffect(() => {
@@ -183,38 +172,24 @@ function MaturaSubjectViewInner({
 
   const filteredSheetTasks = useMemo(() => {
     if (!activeSheet) return [];
-    let list = filterCkeTasks(activeSheet.tasks, { search: searchQuery });
-    if (filterTopic) {
-      list = list.filter((t) =>
-        t.relatedTopicIds.some((id) => formatSectionLabel(id) === filterTopic),
-      );
-    }
-    return list;
-  }, [activeSheet, filterTopic, searchQuery]);
+    if (!filterTopic) return activeSheet.tasks;
+    return activeSheet.tasks.filter((t) =>
+      t.relatedTopicIds.some((id) => formatSectionLabel(id) === filterTopic),
+    );
+  }, [activeSheet, filterTopic]);
 
   const filteredLegacyQuestions = useMemo(() => {
     if (!activeLegacy) return [];
-    const byTopic = filterTopic
+    return filterTopic
       ? activeLegacy.questions.filter((q) => q.topicCategory === filterTopic)
       : activeLegacy.questions;
-    const q = searchQuery.trim().toLowerCase();
-    if (!q) return byTopic;
-    return byTopic.filter((item) =>
-      `${item.questionNumber} ${item.instruction} ${item.questionText} ${item.officialCkeAnswer} ${item.topicCategory}`
-        .toLowerCase()
-        .includes(q),
-    );
-  }, [activeLegacy, filterTopic, searchQuery]);
+  }, [activeLegacy, filterTopic]);
 
   const selectedExamLabel = selectedEntry
     ? selectedEntry.kind === "cke-sheet"
       ? `Matura ${selectedEntry.year} (${selectedEntry.month}, Formuła ${selectedEntry.sheet.formula})`
       : `Matura ${selectedEntry.year} (${selectedEntry.month})`
     : `Arkusze CKE`;
-
-  const handleOpenPdfPage = useCallback((_pageNo: number) => {
-    setPresentationMode("pdf-overlay");
-  }, []);
 
   return (
     <div className="matura-layout">
@@ -338,7 +313,7 @@ function MaturaSubjectViewInner({
       </aside>
 
       {/* Main content */}
-      <main className="matura-content !w-full !max-w-6xl">
+      <main className="matura-content !w-full !max-w-6xl pt-[max(1rem,env(safe-area-inset-top))]">
         <div className="matura-content__inner">
           {/* Unified Breadcrumb Navigation Bar matching TheoryReaderPage */}
           <nav aria-label="Okruszki" className="mb-3 w-full text-sm">
@@ -388,60 +363,6 @@ function MaturaSubjectViewInner({
               : "Kliknij zadanie, aby odsłonić oficjalną odpowiedź z klucza CKE."}
           </p>
 
-          {/* Controls: Search + Solved PDF vs Cards Mode */}
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-950/90 p-3">
-            <label className="relative flex min-w-[220px] flex-1 items-center">
-              <Search
-                className="pointer-events-none absolute left-3 size-3.5 text-zinc-500"
-                aria-hidden="true"
-              />
-              <input
-                type="search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Szukaj zadania po haśle (np. ATP, enzym, pH, P/F)..."
-                aria-label="Szukaj zadań w tym arkuszu"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-900 py-1.5 pl-8 pr-3 text-xs text-zinc-100 placeholder:text-zinc-500 focus-ring"
-              />
-            </label>
-
-            {activeSheet && (
-              <div
-                role="tablist"
-                aria-label="Tryb prezentacji arkusza CKE"
-                className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-1 text-xs"
-              >
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={presentationMode === "pdf-overlay"}
-                  onClick={() => setPresentationMode("pdf-overlay")}
-                  className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
-                    presentationMode === "pdf-overlay"
-                      ? "border-zinc-700 bg-zinc-800 text-zinc-100"
-                      : "border-transparent text-zinc-400 hover:text-zinc-100"
-                  }`}
-                >
-                  <FileText className="size-3.5" aria-hidden="true" />
-                  Rozwiązany Arkusz PDF 1:1
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={presentationMode === "cards"}
-                  onClick={() => setPresentationMode("cards")}
-                  className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
-                    presentationMode === "cards"
-                      ? "border-zinc-700 bg-zinc-800 text-zinc-100"
-                      : "border-transparent text-zinc-400 hover:text-zinc-100"
-                  }`}
-                >
-                  Lista zadań wg działów
-                </button>
-              </div>
-            )}
-          </div>
-
           {activeSheet ? (
             filteredSheetTasks.length === 0 ? (
               <div className="matura-empty">
@@ -449,21 +370,11 @@ function MaturaSubjectViewInner({
                   Brak zadań spełniających kryteria w tym arkuszu. Wyczyść filtr lub wybierz inny arkusz.
                 </p>
               </div>
-            ) : presentationMode === "pdf-overlay" ? (
+            ) : (
               <CkeSolvedPdfSheetViewer
                 sheet={activeSheet}
                 filterTasks={filteredSheetTasks}
               />
-            ) : (
-              <div className="flex flex-col gap-4">
-                {filteredSheetTasks.map((task) => (
-                  <ExamTaskCard
-                    key={task.id}
-                    task={task}
-                    onOpenPdfPage={handleOpenPdfPage}
-                  />
-                ))}
-              </div>
             )
           ) : filteredLegacyQuestions.length === 0 ? (
             <div className="matura-empty">
