@@ -3,31 +3,29 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   AlertTriangle,
+  Check,
   CheckCircle2,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  Columns2,
   FileText,
   Maximize2,
-  Search,
   X,
-  Zap,
 } from "lucide-react";
 import type { CkeMetadata } from "@/server/models";
 import type {
   CkeAnimatedStep,
   CkeExamSheet,
   CkeExamTask,
+  CkePdfOverlayAnnotation,
   CkeSubTask,
   CkeTaskMedia,
 } from "@/types/curriculum";
 import {
   buildDefaultAnimatedSteps,
-  filterCkeTasks,
   getCkeExamSheets,
   getCkeTasksForChapter,
-  getCkeTasksForSubject,
+  getPdfOverlaysForPage,
 } from "@/data/cke-exams";
 import { CkeStatusBadge } from "./CkeFormulaControls";
 
@@ -625,9 +623,581 @@ export function CkeExamTasksSection({
 }
 
 /**
- * Searchable & filterable 1:1 CKE Exam Sheets Repository shown when the user
- * switches to `mode: 'cke-exams'`. Includes full-sheet navigation, interactive
- * CKE task bundles + lemo-opuscar animated walkthroughs, and 1:1 PDF Split-View.
+ * Renders one CKE exam PDF page (either scanned PNG `/cke-assets/.../page_*.png`
+ * or authentic A4 CKE vector sheet layout for digital sheets) with toggleable
+ * `lemo-opuscar` solved overlays directly on the sheet.
+ */
+export function CkeSolvedPdfPageOverlay({
+  pageNumber,
+  totalPages,
+  pageImageUrl,
+  annotations,
+  pageTasks,
+  solvedMode,
+  onToggleSolved,
+}: {
+  sheetId?: string;
+  pageNumber: number;
+  totalPages: number;
+  pageImageUrl?: string;
+  annotations: CkePdfOverlayAnnotation[];
+  pageTasks: CkeExamTask[];
+  solvedMode: boolean;
+  onToggleSolved?: (solved: boolean) => void;
+}) {
+  const [zoomOpen, setZoomOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (zoomOpen) {
+      if (!dialog.open) dialog.showModal();
+    } else if (dialog.open) {
+      dialog.close();
+    }
+  }, [zoomOpen]);
+
+  const renderPaperCanvas = (isZoom = false) => {
+    if (pageImageUrl) {
+      return (
+        <div
+          className={`relative w-full overflow-hidden rounded-lg border border-zinc-800 bg-white ${
+            isZoom ? "min-w-[680px]" : ""
+          }`}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={pageImageUrl}
+            alt={`Strona ${pageNumber} oryginalnego arkusza CKE`}
+            width={960}
+            height={1358}
+            loading={isZoom ? "eager" : "lazy"}
+            decoding="async"
+            className="block h-auto w-full select-none object-contain"
+          />
+
+          {solvedMode &&
+            annotations.map((ann) => (
+              <div
+                key={ann.id}
+                style={{
+                  left: `${ann.xPct}%`,
+                  top: `${ann.yPct}%`,
+                  width: `${ann.widthPct}%`,
+                  minHeight: `${Math.min(18, Math.max(5.5, ann.heightPct))}%`,
+                }}
+                className="pointer-events-auto absolute z-10 flex flex-col justify-start rounded border border-zinc-900 bg-zinc-950/92 px-2 py-1.5 text-zinc-100 shadow-lg backdrop-blur-[1px]"
+              >
+                <div className="mb-0.5 flex flex-wrap items-center justify-between gap-1 border-b border-zinc-800 pb-0.5 text-[9px] font-semibold uppercase tracking-wider text-zinc-300 sm:text-[10px]">
+                  <span className="flex items-center gap-1 text-zinc-100">
+                    <Check className="size-2.5 text-zinc-200" aria-hidden="true" />
+                    Zad. {ann.subTaskNumber ?? ann.taskNumber}
+                  </span>
+                  {ann.pointsLabel && (
+                    <span className="font-mono text-zinc-400">{ann.pointsLabel}</span>
+                  )}
+                </div>
+
+                {ann.truthChoices && ann.truthChoices.length > 0 && (
+                  <div className="mb-1 flex flex-wrap gap-1">
+                    {ann.truthChoices.map((choice, idx) => (
+                      <span
+                        key={idx}
+                        className="rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 font-mono text-[9px] font-bold text-zinc-100 sm:text-[10px]"
+                      >
+                        {idx + 1}: ✓ {choice}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {ann.markedOptions && ann.markedOptions.length > 0 && (
+                  <div className="mb-1 flex flex-wrap gap-1">
+                    {ann.markedOptions.map((opt) => (
+                      <span
+                        key={opt}
+                        className="rounded border border-zinc-600 bg-zinc-800 px-1.5 py-0.5 font-mono text-[10px] font-bold text-zinc-100"
+                      >
+                        ✓ {opt}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <p
+                  className={`font-sans text-[10px] leading-snug text-zinc-100 sm:text-[11px] ${
+                    isZoom ? "" : "line-clamp-3"
+                  }`}
+                >
+                  {ann.answerText}
+                </p>
+              </div>
+            ))}
+        </div>
+      );
+    }
+
+    // Authentic A4 Vector Paper Fallback for sheets without PNG page scans (e.g. Trial / Fizyka / Matematyka)
+    return (
+      <div className="w-full rounded-lg border border-zinc-800 bg-white p-5 text-zinc-900 shadow-inner sm:p-7">
+        <div className="mb-4 flex items-center justify-between border-b border-zinc-300 pb-2 text-[11px] font-mono text-zinc-600">
+          <span>CKE • Strona {pageNumber} z {totalPages}</span>
+          <span>
+            {solvedMode ? "✅ Rozwiązanie CKE 1:1" : "📄 Arkusz do rozwiązania"}
+          </span>
+        </div>
+
+        <div className="space-y-6">
+          {pageTasks.map((task) => {
+            const subItems =
+              task.subTasks && task.subTasks.length > 0
+                ? task.subTasks
+                : [
+                    {
+                      subTaskNumber: task.taskNumber.replace(/^Zadanie\s+/i, ""),
+                      points: task.points,
+                      taskType: task.taskType ?? "open-text",
+                      promptHtml: task.promptHtml,
+                      operationalVerb: task.operationalVerb,
+                      officialAnswerKey: task.officialAnswerKey,
+                      interactiveTableData: task.interactiveTableData,
+                      animatedSteps: task.animatedSteps ?? [],
+                    },
+                  ];
+
+            return (
+              <div key={task.id} className="space-y-3 border-b border-zinc-200 pb-5 last:border-b-0">
+                {task.subTasks && task.subTasks.length > 0 && (
+                  <div
+                    className="prose prose-sm max-w-none font-serif text-zinc-900"
+                    dangerouslySetInnerHTML={{ __html: task.promptHtml }}
+                  />
+                )}
+
+                {subItems.map((sub) => {
+                  const ann = annotations.find(
+                    (a) => a.subTaskNumber === sub.subTaskNumber,
+                  );
+                  return (
+                    <div key={sub.subTaskNumber} className="space-y-2">
+                      <div className="flex items-baseline justify-between gap-2">
+                        <div
+                          className="prose prose-sm max-w-none font-serif text-zinc-900"
+                          dangerouslySetInnerHTML={{ __html: sub.promptHtml }}
+                        />
+                        <span className="shrink-0 font-mono text-[11px] font-semibold text-zinc-600">
+                          (0–{sub.points})
+                        </span>
+                      </div>
+
+                      {sub.interactiveTableData && (
+                        <table className="w-full border-collapse border border-zinc-400 text-xs">
+                          <thead>
+                            <tr className="bg-zinc-100">
+                              <th className="border border-zinc-400 px-2.5 py-1.5 text-left font-semibold">
+                                {sub.interactiveTableData.headers[0] ?? "Stwierdzenie"}
+                              </th>
+                              <th className="w-24 border border-zinc-400 px-2.5 py-1.5 text-center font-semibold">
+                                {sub.interactiveTableData.headers[1] ?? "P / F"}
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {sub.interactiveTableData.rows.map((row, idx) => (
+                              <tr key={idx}>
+                                <td className="border border-zinc-400 px-2.5 py-1.5">
+                                  {row.statement}
+                                </td>
+                                <td className="border border-zinc-400 px-2.5 py-1.5 text-center font-mono font-bold">
+                                  {solvedMode ? `✓ ${row.correctAnswer}` : "P / F"}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      )}
+
+                      {!sub.interactiveTableData && (
+                        <div
+                          className={`rounded border px-3 py-2.5 text-xs ${
+                            solvedMode
+                              ? "border-zinc-900 bg-zinc-950 font-sans text-zinc-100"
+                              : "border-dashed border-zinc-400 bg-zinc-50 font-mono text-zinc-400"
+                          }`}
+                        >
+                          {solvedMode ? (
+                            <div className="space-y-1">
+                              <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
+                                <span>✓ Wpis wzorcowy CKE</span>
+                                <span>{sub.operationalVerb}</span>
+                              </div>
+                              <p className="whitespace-pre-line leading-relaxed text-zinc-100">
+                                {ann?.answerText ?? sub.officialAnswerKey}
+                              </p>
+                            </div>
+                          ) : (
+                            <div className="space-y-2 py-1 tracking-widest opacity-60">
+                              <div>............................................................................</div>
+                              <div>............................................................................</div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="rounded-xl border border-zinc-800 bg-zinc-950/90 p-3.5 text-zinc-100">
+      {/* Page Header Bar with Synced Toggle + Zoom */}
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800/80 pb-2.5">
+        <div className="flex items-center gap-2">
+          <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-mono text-xs font-semibold text-zinc-200">
+            Strona {pageNumber} / {totalPages}
+          </span>
+          {annotations.length > 0 && (
+            <span className="text-[11px] text-zinc-400">
+              {annotations.length}{" "}
+              {annotations.length === 1 ? "pole odpowiedzi" : "pól odpowiedzi"}
+            </span>
+          )}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2">
+          {onToggleSolved && (
+            <div className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-0.5 text-[11px]">
+              <button
+                type="button"
+                onClick={() => onToggleSolved(false)}
+                className={`rounded-md px-2 py-1 font-medium transition-colors ${
+                  !solvedMode
+                    ? "bg-zinc-800 text-zinc-100"
+                    : "text-zinc-400 hover:text-zinc-200"
+                }`}
+              >
+                📄 Pusty
+              </button>
+              <button
+                type="button"
+                onClick={() => onToggleSolved(true)}
+                className={`rounded-md px-2 py-1 font-medium transition-colors ${
+                  solvedMode
+                    ? "bg-zinc-800 text-zinc-100"
+                    : "text-zinc-400 hover:text-zinc-200"
+                }`}
+              >
+                ✅ Rozwiązany
+              </button>
+            </div>
+          )}
+
+          <button
+            type="button"
+            onClick={() => setZoomOpen(true)}
+            className="inline-flex items-center gap-1 rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-[11px] font-medium text-zinc-300 hover:border-zinc-700 hover:text-zinc-100 focus-ring"
+          >
+            <Maximize2 className="size-3" aria-hidden="true" />
+            Powiększ 1:1
+          </button>
+        </div>
+      </div>
+
+      {/* Main Layout: Page Canvas (Left/Top) + Margin Mechanism Callouts (Right/Bottom when Solved) */}
+      <div className="grid gap-4 xl:grid-cols-12">
+        <div className={solvedMode && annotations.length > 0 ? "xl:col-span-8" : "xl:col-span-12"}>
+          {renderPaperCanvas(false)}
+        </div>
+
+        {solvedMode && annotations.length > 0 && (
+          <aside
+            aria-label={`Komentarz egzaminacyjny CKE — strona ${pageNumber}`}
+            className="space-y-2.5 xl:col-span-4"
+          >
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+              Margines CKE (Przyczyna → Mechanizm → Skutek)
+            </p>
+            {annotations.map((ann) => (
+              <div
+                key={`margin-${ann.id}`}
+                className="rounded-lg border border-zinc-800 bg-zinc-900/70 p-3 text-xs"
+              >
+                <div className="mb-1.5 flex flex-wrap items-center justify-between gap-1.5">
+                  <span className="font-bold text-zinc-100">
+                    Zadanie {ann.subTaskNumber ?? ann.taskNumber}
+                  </span>
+                  <div className="flex items-center gap-1.5">
+                    {ann.operationalVerb && (
+                      <span className="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-zinc-300">
+                        {ann.operationalVerb}
+                      </span>
+                    )}
+                    {ann.pointsLabel && (
+                      <span className="font-mono text-[10px] text-zinc-400">
+                        {ann.pointsLabel}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <p className="whitespace-pre-line font-medium leading-relaxed text-zinc-100">
+                  {ann.answerText}
+                </p>
+                {ann.marginNote && (
+                  <p className="mt-1.5 border-t border-zinc-800/80 pt-1.5 text-[11px] leading-relaxed text-zinc-400">
+                    {ann.marginNote}
+                  </p>
+                )}
+              </div>
+            ))}
+          </aside>
+        )}
+      </div>
+
+      {/* Fullscreen Zoom Modal Preserving Overlay State */}
+      <dialog
+        ref={dialogRef}
+        aria-label={`Podgląd 1:1 — Strona ${pageNumber}`}
+        onClose={() => setZoomOpen(false)}
+        onClick={(e) => {
+          if (e.target === dialogRef.current) setZoomOpen(false);
+        }}
+        className="m-auto max-h-[94vh] w-[min(96vw,1100px)] overflow-auto rounded-2xl border border-zinc-700 bg-zinc-950 p-4 text-zinc-100 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm"
+      >
+        {zoomOpen && (
+          <div className="space-y-3">
+            <div className="sticky top-0 z-20 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-zinc-950/95 px-3 py-2 backdrop-blur">
+              <span className="text-xs font-semibold text-zinc-200">
+                Strona {pageNumber} / {totalPages}
+              </span>
+              {onToggleSolved && (
+                <div className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-0.5 text-xs">
+                  <button
+                    type="button"
+                    onClick={() => onToggleSolved(false)}
+                    className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                      !solvedMode
+                        ? "bg-zinc-800 text-zinc-100"
+                        : "text-zinc-400 hover:text-zinc-200"
+                    }`}
+                  >
+                    📄 Pusty arkusz
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onToggleSolved(true)}
+                    className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                      solvedMode
+                        ? "bg-zinc-800 text-zinc-100"
+                        : "text-zinc-400 hover:text-zinc-200"
+                    }`}
+                  >
+                    ✅ Arkusz rozwiązany
+                  </button>
+                </div>
+              )}
+              <button
+                type="button"
+                onClick={() => setZoomOpen(false)}
+                className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-900 px-2.5 py-1 text-xs font-semibold text-zinc-200 hover:bg-zinc-800 focus-ring"
+              >
+                <X className="size-3.5" aria-hidden="true" />
+                Zamknij (Esc)
+              </button>
+            </div>
+            <div className="overflow-x-auto">{renderPaperCanvas(true)}</div>
+          </div>
+        )}
+      </dialog>
+    </div>
+  );
+}
+
+/**
+ * Displays the full sequence of CKE PDF pages for a selected sheet with
+ * the global toggle:
+ * `[ 📄 Pusty arkusz (Do rozwiązania) | ✅ Arkusz rozwiązany (Z naniesionymi odpowiedziami) ]`
+ */
+export function CkeSolvedPdfSheetViewer({
+  sheet,
+  initialSolved = true,
+  filterTasks,
+}: {
+  sheet: CkeExamSheet;
+  initialSolved?: boolean;
+  filterTasks?: CkeExamTask[];
+}) {
+  const [solvedMode, setSolvedMode] = useState<boolean>(initialSolved);
+  const [showAllPages, setShowAllPages] = useState<boolean>(false);
+  const [activePage, setActivePage] = useState<number>(1);
+
+  const pageUrls = sheet.pageImageUrls ?? [];
+  const activeTaskList = filterTasks ?? sheet.tasks;
+
+  const taskPages = useMemo(() => {
+    if (pageUrls.length > 0) {
+      return pageUrls.map((_, i) => i + 1);
+    }
+    const maxTaskPage = Math.max(
+      1,
+      ...sheet.tasks.map((t) => t.pdfPageNumber ?? 1),
+    );
+    return Array.from({ length: maxTaskPage }, (_, i) => i + 1);
+  }, [pageUrls, sheet.tasks]);
+
+  // Default to the first page that actually contains exam tasks (skip cover page when starting single-page mode)
+  useEffect(() => {
+    const firstContentPage =
+      activeTaskList.find((t) => typeof t.pdfPageNumber === "number")?.pdfPageNumber ??
+      (taskPages.length >= 2 ? 2 : 1);
+    setActivePage(Math.min(Math.max(1, firstContentPage), taskPages.length));
+  }, [sheet.id, taskPages.length, activeTaskList]);
+
+  const totalPages = taskPages.length;
+  const clampedPage = Math.min(Math.max(1, activePage), totalPages);
+  const visiblePageNumbers = showAllPages ? taskPages : [clampedPage];
+
+  return (
+    <div className="space-y-4">
+      {/* Primary Sheet Header + Blank/Solved Toggle */}
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-950/95 p-4">
+        <div className="space-y-1">
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <span className="rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 font-semibold text-zinc-100">
+              {sheet.symbol ?? sheet.id}
+            </span>
+            <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-medium text-zinc-300">
+              Formuła {sheet.formula === "2023" ? "2023+ (2015+)" : "2015"}
+            </span>
+            <span className="font-mono text-zinc-400">
+              {sheet.totalTasks} zadań • {sheet.totalPoints} pkt • {totalPages} str.
+            </span>
+          </div>
+          <h3 className="text-sm font-bold text-zinc-100">{sheet.title}</h3>
+        </div>
+
+        <div
+          role="group"
+          aria-label="Tryb prezentacji arkusza CKE"
+          className="inline-flex flex-wrap rounded-lg border border-zinc-800 bg-zinc-900 p-1 text-xs"
+        >
+          <button
+            type="button"
+            onClick={() => setSolvedMode(false)}
+            aria-pressed={!solvedMode}
+            className={`rounded-md border px-3 py-1.5 font-semibold transition-colors ${
+              !solvedMode
+                ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
+                : "border-transparent text-zinc-400 hover:text-zinc-100"
+            }`}
+          >
+            📄 Pusty arkusz (Do rozwiązania)
+          </button>
+          <button
+            type="button"
+            onClick={() => setSolvedMode(true)}
+            aria-pressed={solvedMode}
+            className={`rounded-md border px-3 py-1.5 font-semibold transition-colors ${
+              solvedMode
+                ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
+                : "border-transparent text-zinc-400 hover:text-zinc-100"
+            }`}
+          >
+            ✅ Arkusz rozwiązany (Z naniesionymi odpowiedziami)
+          </button>
+        </div>
+      </div>
+
+      {/* Page Navigation Bar */}
+      <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800/80 bg-zinc-900/60 px-3 py-2">
+        <div className="flex flex-wrap items-center gap-1.5">
+          {!showAllPages && (
+            <>
+              <button
+                type="button"
+                onClick={() => setActivePage((p) => Math.max(1, p - 1))}
+                disabled={clampedPage <= 1}
+                className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
+              >
+                <ChevronLeft className="size-3.5" aria-hidden="true" />
+                Poprzednia
+              </button>
+              <select
+                value={clampedPage}
+                onChange={(e) => setActivePage(Number(e.target.value))}
+                aria-label="Wybierz stronę arkusza CKE"
+                className="rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 font-mono text-xs text-zinc-100"
+              >
+                {taskPages.map((pNo) => (
+                  <option key={pNo} value={pNo}>
+                    Strona {pNo} / {totalPages}
+                  </option>
+                ))}
+              </select>
+              <button
+                type="button"
+                onClick={() => setActivePage((p) => Math.min(totalPages, p + 1))}
+                disabled={clampedPage >= totalPages}
+                className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
+              >
+                Następna
+                <ChevronRight className="size-3.5" aria-hidden="true" />
+              </button>
+            </>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setShowAllPages((prev) => !prev)}
+          className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-1 text-xs font-medium text-zinc-300 hover:bg-zinc-800 hover:text-zinc-100"
+        >
+          {showAllPages
+            ? "Widok pojedynczej strony"
+            : `Rozwiń wszystkie strony (${totalPages})`}
+        </button>
+      </div>
+
+      {/* Rendered Sequence of Original Exam Pages */}
+      <div className="space-y-6">
+        {visiblePageNumbers.map((pageNo) => {
+          const pageImg = pageUrls[pageNo - 1];
+          const annotations = getPdfOverlaysForPage(sheet.id, pageNo, activeTaskList);
+          const tasksOnPage = activeTaskList.filter(
+            (t) => (t.pdfPageNumber ?? 1) === pageNo,
+          );
+          return (
+            <CkeSolvedPdfPageOverlay
+              key={`${sheet.id}-p${pageNo}`}
+              sheetId={sheet.id}
+              pageNumber={pageNo}
+              totalPages={totalPages}
+              pageImageUrl={pageImg}
+              annotations={annotations}
+              pageTasks={tasksOnPage}
+              solvedMode={solvedMode}
+              onToggleSolved={setSolvedMode}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Divided Matura section repository rendered below theory chapters and in Matura views:
+ * - Selector between Formula 2023+ (2015+) and Formula 2015
+ * - Grouped into:
+ *   1) Arkusze CKE z poprzednich lat (2015–2024)
+ *   2) Arkusze Próbne (CKE / Diagnostyczne)
+ * - Displays authentic 1:1 CKE PDF pages with blank vs solved overlay toggle.
  */
 export function CkeExamSheetsRepositoryView({
   subject,
@@ -637,357 +1207,160 @@ export function CkeExamSheetsRepositoryView({
   onExitExamMode?: () => void;
 }) {
   const sheets = useMemo(() => getCkeExamSheets(subject), [subject]);
-  const allTasks = useMemo(() => getCkeTasksForSubject(subject), [subject]);
 
-  const [presentationMode, setPresentationMode] = useState<"interactive" | "pdf-split">(
-    "interactive",
+  const [formula, setFormula] = useState<"2023" | "2015">("2023");
+  const [selectedSheetId, setSelectedSheetId] = useState<string>("");
+
+  useEffect(() => {
+    const paramFormula = new URLSearchParams(window.location.search).get("formula");
+    if (paramFormula === "2015" || paramFormula === "2023") {
+      setFormula(paramFormula);
+    }
+  }, []);
+
+  const formulaSheets = useMemo(
+    () => sheets.filter((s) => s.formula === formula),
+    [sheets, formula],
   );
-  const [selectedSheetId, setSelectedSheetId] = useState<string>(() => sheets[0]?.id ?? "all");
-  const [formulaFilter, setFormulaFilter] = useState<"all" | "2015" | "2023">("all");
-  const [yearFilter, setYearFilter] = useState<number | "all">("all");
-  const [search, setSearch] = useState("");
-  const [activePdfPage, setActivePdfPage] = useState<number>(4);
-  const [onlyCurrentPageTasks, setOnlyCurrentPageTasks] = useState<boolean>(false);
+
+  const officialSheets = useMemo(
+    () => formulaSheets.filter((s) => (s.sheetCategory ?? "official") === "official"),
+    [formulaSheets],
+  );
+
+  const trialSheets = useMemo(
+    () => formulaSheets.filter((s) => s.sheetCategory === "trial"),
+    [formulaSheets],
+  );
 
   const activeSheet: CkeExamSheet | undefined = useMemo(
-    () => sheets.find((s) => s.id === selectedSheetId) ?? sheets[0],
-    [sheets, selectedSheetId],
-  );
-
-  const years = useMemo(
-    () => Array.from(new Set(allTasks.map((t) => t.year))).sort((a, b) => b - a),
-    [allTasks],
-  );
-
-  const taskPool = useMemo(() => {
-    if (selectedSheetId !== "all") {
-      const sheet = sheets.find((s) => s.id === selectedSheetId);
-      if (sheet) return sheet.tasks;
-    }
-    return allTasks;
-  }, [selectedSheetId, sheets, allTasks]);
-
-  const filtered = useMemo(
     () =>
-      filterCkeTasks(taskPool, {
-        formula: formulaFilter,
-        year: yearFilter,
-        search,
-      }),
-    [taskPool, formulaFilter, yearFilter, search],
+      formulaSheets.find((s) => s.id === selectedSheetId) ??
+      officialSheets[0] ??
+      trialSheets[0] ??
+      sheets[0],
+    [formulaSheets, selectedSheetId, officialSheets, trialSheets, sheets],
   );
-
-  const displayedTasks = useMemo(() => {
-    if (presentationMode === "pdf-split" && onlyCurrentPageTasks) {
-      const onPage = filtered.filter((t) => t.pdfPageNumber === activePdfPage);
-      if (onPage.length > 0) return onPage;
-    }
-    return filtered;
-  }, [presentationMode, onlyCurrentPageTasks, filtered, activePdfPage]);
-
-  const pageUrls = activeSheet?.pageImageUrls ?? [];
-  const totalPages = pageUrls.length;
-  const clampedPage = totalPages > 0 ? Math.min(Math.max(1, activePdfPage), totalPages) : 1;
-  const currentPageImageUrl = pageUrls[clampedPage - 1];
-
-  const handleOpenPdfPage = (pageNo: number) => {
-    setActivePdfPage(pageNo);
-    setPresentationMode("pdf-split");
-  };
-
-  const handleJumpToTask = (task: CkeExamTask) => {
-    if (task.pdfPageNumber) {
-      setActivePdfPage(task.pdfPageNumber);
-    }
-    const el = document.getElementById(`cke-task-${task.id}`);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
 
   return (
     <section
-      aria-label="Repozytorium Oficjalnych Arkuszy CKE 1:1"
-      className="my-6 space-y-5 rounded-xl border border-zinc-800 bg-zinc-950/95 p-5 text-zinc-100"
+      aria-label="Repozytorium Arkuszy Maturalnych CKE"
+      className="my-4 space-y-6 rounded-xl border border-zinc-800 bg-zinc-950/95 p-5 text-zinc-100"
     >
-      {/* Top Header & Dual Presentation Mode Toggle */}
-      <div className="flex flex-wrap items-start justify-between gap-3 border-b border-zinc-800 pb-4">
-        <div>
-          <h2 className="flex items-center gap-2 text-lg font-bold text-zinc-100">
-            <FileText className="size-5 text-zinc-400" aria-hidden="true" />
-            Pełne Arkusze Maturalne CKE 1:1
-          </h2>
-          <p className="mt-1 text-xs text-zinc-400">
-            Kompletne arkusze CKE od Zadania 1. do ostatniego, z wyciętymi rycinami, interaktywnymi tabelami P/F i oficjalnym kluczem odpowiedzi.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-2">
-          <div
-            role="tablist"
-            aria-label="Tryb prezentacji arkusza CKE"
-            className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-1 text-xs"
+      {/* Top Header & Formula 2023+ (2015+) / Formula 2015 Selector */}
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800 pb-4">
+        <div className="inline-flex rounded-lg border border-zinc-800 bg-zinc-900 p-1 text-xs">
+          <button
+            type="button"
+            onClick={() => setFormula("2023")}
+            aria-pressed={formula === "2023"}
+            className={`rounded-md border px-3 py-1.5 font-semibold transition-colors ${
+              formula === "2023"
+                ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
+                : "border-transparent text-zinc-400 hover:text-zinc-100"
+            }`}
           >
-            <button
-              type="button"
-              role="tab"
-              aria-selected={presentationMode === "interactive"}
-              onClick={() => setPresentationMode("interactive")}
-              className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
-                presentationMode === "interactive"
-                  ? "border-zinc-700 bg-zinc-800 text-zinc-100"
-                  : "border-transparent text-zinc-400 hover:text-zinc-100"
-              }`}
-            >
-              <Zap className="size-3.5" aria-hidden="true" />
-              Widok Interaktywny CKE
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={presentationMode === "pdf-split"}
-              onClick={() => {
-                if (selectedSheetId === "all" && sheets[0]) {
-                  setSelectedSheetId(sheets[0].id);
-                }
-                setPresentationMode("pdf-split");
-              }}
-              className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
-                presentationMode === "pdf-split"
-                  ? "border-zinc-700 bg-zinc-800 text-zinc-100"
-                  : "border-transparent text-zinc-400 hover:text-zinc-100"
-              }`}
-            >
-              <Columns2 className="size-3.5" aria-hidden="true" />
-              Widok Oryginalnego Arkusza 1:1 (PDF Split-View)
-            </button>
+            Formuła 2023+ (2015+)
+          </button>
+          <button
+            type="button"
+            onClick={() => setFormula("2015")}
+            aria-pressed={formula === "2015"}
+            className={`rounded-md border px-3 py-1.5 font-semibold transition-colors ${
+              formula === "2015"
+                ? "border-zinc-600 bg-zinc-800 text-zinc-100 shadow-sm"
+                : "border-transparent text-zinc-400 hover:text-zinc-100"
+            }`}
+          >
+            Formuła 2015
+          </button>
+        </div>
+
+        {onExitExamMode && (
+          <button
+            type="button"
+            onClick={onExitExamMode}
+            className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-200 hover:bg-zinc-800 focus-ring"
+          >
+            ← Wróć do podręcznika
+          </button>
+        )}
+      </div>
+
+      {/* Group 1: Official Past CKE Exams (2015–2024) */}
+      {officialSheets.length > 0 && (
+        <div className="space-y-2.5">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+            Arkusze CKE z poprzednich lat (2015–2024)
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {officialSheets.map((sheet) => {
+              const active = activeSheet?.id === sheet.id;
+              return (
+                <button
+                  key={sheet.id}
+                  type="button"
+                  onClick={() => setSelectedSheetId(sheet.id)}
+                  className={`rounded-lg border px-3 py-2 text-left text-xs transition-colors ${
+                    active
+                      ? "border-zinc-500 bg-zinc-800 font-semibold text-zinc-100"
+                      : "border-zinc-800 bg-zinc-900/70 text-zinc-300 hover:border-zinc-700 hover:text-zinc-100"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <FileText className="size-3.5 text-zinc-400" aria-hidden="true" />
+                    <span>{sheet.title}</span>
+                  </div>
+                  <span className="mt-1 block font-mono text-[10px] text-zinc-400">
+                    {sheet.totalTasks} zadań • {sheet.totalPoints} pkt
+                  </span>
+                </button>
+              );
+            })}
           </div>
-
-          {onExitExamMode && (
-            <button
-              type="button"
-              onClick={onExitExamMode}
-              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-200 hover:bg-zinc-800 focus-ring"
-            >
-              ← Wróć do podręcznika
-            </button>
-          )}
-        </div>
-      </div>
-
-      {/* Sheet selector pills */}
-      <div className="space-y-2">
-        <div className="flex flex-wrap items-center gap-1.5">
-          {sheets.map((sheet) => {
-            const active = selectedSheetId === sheet.id;
-            return (
-              <button
-                key={sheet.id}
-                type="button"
-                onClick={() => {
-                  setSelectedSheetId(sheet.id);
-                  setActivePdfPage(4);
-                }}
-                className={`rounded-lg border px-3 py-1.5 text-left text-xs transition-colors ${
-                  active
-                    ? "border-zinc-600 bg-zinc-800 font-semibold text-zinc-100"
-                    : "border-zinc-800 bg-zinc-900/70 text-zinc-300 hover:border-zinc-700 hover:text-zinc-100"
-                }`}
-              >
-                <span>{sheet.title}</span>
-                <span className="ml-2 rounded bg-zinc-950/80 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400">
-                  {sheet.tasks.length} wiązek / {sheet.totalTasks} zad. • {sheet.totalPoints} pkt
-                </span>
-              </button>
-            );
-          })}
-          {presentationMode === "interactive" && (
-            <button
-              type="button"
-              onClick={() => setSelectedSheetId("all")}
-              className={`rounded-lg border px-3 py-1.5 text-xs transition-colors ${
-                selectedSheetId === "all"
-                  ? "border-zinc-600 bg-zinc-800 font-semibold text-zinc-100"
-                  : "border-zinc-800 bg-zinc-900/70 text-zinc-400 hover:text-zinc-100"
-              }`}
-            >
-              Wszystkie roczniki ({allTasks.length} wiązek)
-            </button>
-          )}
-        </div>
-      </div>
-
-      {/* Filters bar */}
-      <div className="grid gap-3 sm:grid-cols-3">
-        <label className="relative flex items-center sm:col-span-1">
-          <Search className="pointer-events-none absolute left-3 size-3.5 text-zinc-500" aria-hidden="true" />
-          <input
-            type="search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Szukaj (np. fruktoza, PCR, pirogronian, P/F)..."
-            aria-label="Szukaj zadań maturalnych CKE"
-            className="w-full rounded-lg border border-zinc-800 bg-zinc-900 py-1.5 pl-8 pr-3 text-xs text-zinc-100 placeholder:text-zinc-500 focus-ring"
-          />
-        </label>
-
-        <div className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 p-1 text-xs">
-          {(["all", "2023", "2015"] as const).map((f) => (
-            <button
-              key={f}
-              type="button"
-              onClick={() => setFormulaFilter(f)}
-              className={`flex-1 rounded px-2 py-1 font-medium transition-colors ${
-                formulaFilter === f
-                  ? "bg-zinc-800 text-zinc-100"
-                  : "text-zinc-400 hover:text-zinc-200"
-              }`}
-            >
-              {f === "all" ? "Wszystkie formuły" : `Formuła ${f}`}
-            </button>
-          ))}
-        </div>
-
-        <select
-          value={yearFilter === "all" ? "all" : String(yearFilter)}
-          onChange={(e) =>
-            setYearFilter(e.target.value === "all" ? "all" : Number(e.target.value))
-          }
-          aria-label="Filtruj po roku matury CKE"
-          className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs text-zinc-100 focus-ring"
-        >
-          <option value="all">Wszystkie roczniki CKE</option>
-          {years.map((y) => (
-            <option key={y} value={y}>
-              Matura {y}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Horizontal Quick-Jump Pill Bar across ALL tasks 1..N */}
-      {filtered.length > 0 && (
-        <div
-          aria-label="Szybka nawigacja po zadaniach arkusza"
-          className="flex flex-wrap items-center gap-1 rounded-lg border border-zinc-800/80 bg-zinc-900/50 p-2"
-        >
-          <span className="mr-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
-            Zadania ({filtered.length}):
-          </span>
-          {filtered.map((t) => {
-            const num = t.taskNumber.replace(/^Zadanie\s+/i, "");
-            return (
-              <button
-                key={t.id}
-                type="button"
-                onClick={() => handleJumpToTask(t)}
-                className={`rounded border px-2 py-0.5 text-[11px] font-mono transition-colors ${
-                  presentationMode === "pdf-split" && t.pdfPageNumber === clampedPage
-                    ? "border-zinc-500 bg-zinc-800 text-zinc-100"
-                    : "border-zinc-800 bg-zinc-950 text-zinc-300 hover:border-zinc-600 hover:text-zinc-100"
-                }`}
-              >
-                {num}
-              </button>
-            );
-          })}
         </div>
       )}
 
-      {/* Main Content Area: Interactive vs 1:1 PDF Split-View */}
-      {filtered.length === 0 ? (
-        <div className="rounded-lg border border-zinc-800/80 bg-zinc-900/50 p-6 text-center text-xs text-zinc-400">
-          Brak zadań CKE spełniających wybrane kryteria wyszukiwania dla tego przedmiotu.
-        </div>
-      ) : presentationMode === "pdf-split" && totalPages > 0 ? (
-        <div className="grid gap-5 lg:grid-cols-12">
-          {/* Left sticky original PDF page 1:1 viewer */}
-          <div className="lg:col-span-6">
-            <div className="sticky top-4 space-y-2 rounded-xl border border-zinc-800 bg-zinc-900/90 p-3">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <div className="flex items-center gap-1.5">
-                  <button
-                    type="button"
-                    onClick={() => setActivePdfPage((p) => Math.max(1, p - 1))}
-                    disabled={clampedPage <= 1}
-                    className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-                  >
-                    <ChevronLeft className="size-3.5" />
-                    Poprzednia
-                  </button>
-                  <select
-                    value={clampedPage}
-                    onChange={(e) => setActivePdfPage(Number(e.target.value))}
-                    aria-label="Wybierz stronę oryginalnego arkusza CKE"
-                    className="rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs font-mono text-zinc-100"
-                  >
-                    {pageUrls.map((_, idx) => (
-                      <option key={idx + 1} value={idx + 1}>
-                        Strona {idx + 1} / {totalPages}
-                      </option>
-                    ))}
-                  </select>
-                  <button
-                    type="button"
-                    onClick={() => setActivePdfPage((p) => Math.min(totalPages, p + 1))}
-                    disabled={clampedPage >= totalPages}
-                    className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-                  >
-                    Następna
-                    <ChevronRight className="size-3.5" />
-                  </button>
-                </div>
-
-                <div className="flex items-center gap-1.5">
-                  <button
-                    type="button"
-                    onClick={() => setOnlyCurrentPageTasks((o) => !o)}
-                    className={`rounded-md border px-2 py-1 text-[11px] font-medium ${
-                      onlyCurrentPageTasks
-                        ? "border-zinc-600 bg-zinc-800 text-zinc-100"
-                        : "border-zinc-700 bg-zinc-950 text-zinc-300"
-                    }`}
-                  >
-                    {onlyCurrentPageTasks ? "Filtr: bieżąca strona" : "Wszystkie zadania"}
-                  </button>
-                </div>
-              </div>
-
-              <div className="max-h-[78vh] overflow-auto rounded-lg border border-zinc-800 bg-white p-1">
-                {currentPageImageUrl && (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    src={currentPageImageUrl}
-                    alt={`Oryginalna strona ${clampedPage} arkusza CKE`}
-                    width={960}
-                    height={1358}
-                    loading="lazy"
-                    decoding="async"
-                    className="mx-auto w-full object-contain"
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Right synchronized tasks + lemo-opuscar player column */}
-          <div className="flex flex-col gap-4 lg:col-span-6">
-            {displayedTasks.map((task) => (
-              <ExamTaskCard
-                key={task.id}
-                task={task}
-                onOpenPdfPage={handleOpenPdfPage}
-              />
-            ))}
+      {/* Group 2: Trial / Diagnostic CKE Sheets */}
+      {trialSheets.length > 0 && (
+        <div className="space-y-2.5">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+            Arkusze Próbne (CKE / Diagnostyczne)
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {trialSheets.map((sheet) => {
+              const active = activeSheet?.id === sheet.id;
+              return (
+                <button
+                  key={sheet.id}
+                  type="button"
+                  onClick={() => setSelectedSheetId(sheet.id)}
+                  className={`rounded-lg border px-3 py-2 text-left text-xs transition-colors ${
+                    active
+                      ? "border-zinc-500 bg-zinc-800 font-semibold text-zinc-100"
+                      : "border-zinc-800 bg-zinc-900/70 text-zinc-300 hover:border-zinc-700 hover:text-zinc-100"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <FileText className="size-3.5 text-zinc-400" aria-hidden="true" />
+                    <span>{sheet.title}</span>
+                  </div>
+                  <span className="mt-1 block font-mono text-[10px] text-zinc-400">
+                    {sheet.totalTasks} zadań • {sheet.totalPoints} pkt
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
+      )}
+
+      {/* Selected Sheet Solved PDF Page Viewer */}
+      {activeSheet ? (
+        <CkeSolvedPdfSheetViewer sheet={activeSheet} />
       ) : (
-        <div className="flex flex-col gap-4">
-          {filtered.map((task) => (
-            <ExamTaskCard
-              key={task.id}
-              task={task}
-              onOpenPdfPage={totalPages > 0 ? handleOpenPdfPage : undefined}
-            />
-          ))}
+        <div className="rounded-lg border border-zinc-800 bg-zinc-900/50 p-6 text-center text-xs text-zinc-400">
+          Brak arkuszy maturalnych dla wybranego filtra.
         </div>
       )}
     </section>

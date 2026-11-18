@@ -84,6 +84,7 @@ function build(subject: TheorySubject): BuiltSpine {
       icon: domain.icon,
       chapterCount: chapters.length,
       firstChapterId: chapters[0]?.id,
+      chapters,
     });
 
     domain.sections.forEach((section, idx) => {

@@ -1,14 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import type { NavDomain } from "@/server/models";
-import {
-  CurriculumModeSwitcher,
-  CkeStatusBadge,
-  isTierRequiredInMode,
-  useCurriculumViewMode,
-} from "./matura/CkeFormulaControls";
 import { CkeExamSheetsRepositoryView } from "./matura/CkeExamTasksSection";
 
 export interface TheorySubjectLandingProps {
@@ -24,6 +19,8 @@ export interface TheorySubjectLandingProps {
   domains: NavDomain[];
 }
 
+const MATURA_SUBJECTS = new Set(["biologia", "chemia", "fizyka", "matematyka"]);
+
 export function TheorySubjectLanding({
   basePath,
   heading,
@@ -32,122 +29,121 @@ export function TheorySubjectLanding({
   scopeHeading = "Zakres Materiału",
   domains,
 }: TheorySubjectLandingProps) {
-  const hasCkeMetadata = domains.some((d) =>
-    d.sections.some((s) => Boolean(s.ckeStatus || s.tier)),
+  const [expandedDomainIds, setExpandedDomainIds] = useState<Set<string>>(
+    () => new Set(),
   );
-  const [viewMode, setViewMode] = useCurriculumViewMode(basePath);
-  const subjectSlug = basePath.split("/").filter(Boolean).pop();
+
+  const visibleDomains = domains.filter((d) => d.sections.length > 0);
+  const rawSlug = basePath.split("/").filter(Boolean).pop() ?? "";
+  const subjectSlug = rawSlug.replace(/-matura-(?:2015|2023)$/, "");
+  const isMaturaSubject = MATURA_SUBJECTS.has(subjectSlug);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const domainParam = params.get("domain");
+    if (domainParam && domains.some((d) => d.id === domainParam)) {
+      setExpandedDomainIds((prev) => {
+        if (prev.has(domainParam)) return prev;
+        const next = new Set(prev);
+        next.add(domainParam);
+        return next;
+      });
+    }
+  }, [domains]);
+
+  const toggleDomain = (domainId: string) => {
+    setExpandedDomainIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(domainId)) {
+        next.delete(domainId);
+      } else {
+        next.add(domainId);
+      }
+      return next;
+    });
+  };
 
   return (
     <div className="textbook-welcome">
       <h1>{heading}</h1>
       <p>{intro}</p>
 
-      {hasCkeMetadata && (
-        <div className="my-5 flex flex-col gap-3 rounded-xl border border-zinc-800 bg-zinc-950/90 p-4">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-xs font-semibold tracking-wider uppercase text-zinc-300">
-              🎓 Tryb programu nauczania i wymagań CKE:
-            </span>
-            <div className="flex flex-wrap items-center gap-1.5">
-              <CkeStatusBadge status="core" compact />
-              <CkeStatusBadge status="2023-only" compact />
-              <CkeStatusBadge status="2015-only" compact />
-              <CkeStatusBadge tier="academic-extra" compact />
-            </div>
-          </div>
-          <CurriculumModeSwitcher value={viewMode} onChange={setViewMode} />
+      <div className="textbook-welcome__exam">
+        <h2 className="w-fit rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+          {scopeHeading}
+        </h2>
+        <p>{domainsLabel}</p>
+        <div className="textbook-welcome__domain-grid">
+          {visibleDomains.map((domain) => {
+            const isExpanded = expandedDomainIds.has(domain.id);
+            return (
+              <div
+                key={domain.id}
+                className={isExpanded ? "sm:col-span-2" : undefined}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleDomain(domain.id)}
+                  aria-expanded={isExpanded}
+                  className="textbook-welcome__domain-btn flex items-center justify-between gap-2 focus-ring"
+                >
+                  <span className="truncate font-medium">
+                    {domain.icon} {domain.title}
+                  </span>
+                  <span className="flex shrink-0 items-center gap-2 text-xs text-zinc-500">
+                    <span className="tabular-nums">{domain.sections.length}</span>
+                    <span aria-hidden="true">{isExpanded ? "▾" : "▸"}</span>
+                  </span>
+                </button>
+
+                {isExpanded && (
+                  <ul className="mt-2 space-y-1 rounded-lg border border-zinc-800 bg-zinc-950/90 p-2.5">
+                    {domain.sections.map((section, idx) => (
+                      <li key={section.id}>
+                        <Link
+                          href={`${basePath}/${section.id}`}
+                          className="flex items-start gap-2 rounded-md px-2.5 py-2 text-xs leading-relaxed text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+                        >
+                          <span className="shrink-0 font-mono text-zinc-500">
+                            {idx + 1}.
+                          </span>
+                          <span>{section.title}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            );
+          })}
         </div>
-      )}
-
-      {hasCkeMetadata && viewMode === "cke-exams" ? (
-        <CkeExamSheetsRepositoryView
-          subject={subjectSlug}
-          onExitExamMode={() => setViewMode("full")}
-        />
-      ) : (
-        <div className="textbook-welcome__exam">
-          <h2 className="w-fit rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
-            {scopeHeading}
-          </h2>
-          <p>{domainsLabel}</p>
-          <div className="textbook-welcome__domain-grid">
-            {domains
-              .filter((d) => d.sections.length > 0)
-              .map((domain) => {
-                const matchingSections = hasCkeMetadata
-                  ? domain.sections.filter((s) =>
-                      isTierRequiredInMode(
-                        viewMode,
-                        s.tier ?? s.ckeStatus,
-                        s.formulas,
-                      ),
-                    )
-                  : domain.sections;
-
-                const isRequiredDomain = matchingSections.length > 0;
-                const targetSection =
-                  matchingSections[0] ?? domain.sections[0];
-
-                const hasExtra = domain.sections.some(
-                  (s) => s.tier === "academic-extra",
-                );
-                const has2023Only = domain.sections.some(
-                  (s) =>
-                    s.tier === "cke-2023-only" || s.ckeStatus === "2023-only",
-                );
-                const has2015Only = domain.sections.some(
-                  (s) =>
-                    s.tier === "cke-2015-only" || s.ckeStatus === "2015-only",
-                );
-                const allExtraOnly =
-                  hasExtra &&
-                  domain.sections.every((s) => s.tier === "academic-extra");
-
-                return (
-                  <Link
-                    key={domain.id}
-                    href={`${basePath}/${targetSection.id}`}
-                    className={`textbook-welcome__domain-btn flex items-center justify-between gap-2 transition-opacity focus-ring ${
-                      isRequiredDomain ? "" : "opacity-40"
-                    }`}
-                  >
-                    <span>
-                      {domain.icon} {domain.title}
-                    </span>
-                    {hasCkeMetadata && (
-                      <span className="flex shrink-0 flex-wrap items-center gap-1">
-                        {allExtraOnly ? (
-                          <CkeStatusBadge tier="academic-extra" compact />
-                        ) : (
-                          <>
-                            {!has2023Only && !has2015Only && (
-                              <CkeStatusBadge status="core" compact />
-                            )}
-                            {has2023Only && (
-                              <CkeStatusBadge status="2023-only" compact />
-                            )}
-                            {has2015Only && (
-                              <CkeStatusBadge status="2015-only" compact />
-                            )}
-                            {hasExtra && (
-                              <CkeStatusBadge tier="academic-extra" compact />
-                            )}
-                          </>
-                        )}
-                      </span>
-                    )}
-                  </Link>
-                );
-              })}
-          </div>
-        </div>
-      )}
+      </div>
 
       <p className="text-sm text-muted-foreground">
         System oparty na metodzie aktywnego przypominania (<em>Active Recall</em>) — kliknij na
         pytanie w tekście, aby odsłonić oficjalny klucz odpowiedzi.
       </p>
+
+      {isMaturaSubject && (
+        <>
+          <hr className="my-10 border-t border-zinc-800" />
+          <section id="sekcja-matura" aria-labelledby="matura-section-heading">
+            <div className="mb-4">
+              <h2
+                id="matura-section-heading"
+                className="text-xl font-bold tracking-tight text-zinc-100"
+              >
+                Matura
+              </h2>
+              <p className="mt-1 text-sm text-zinc-400">
+                Arkusze CKE z poprzednich lat (2015–2024) oraz arkusze próbne i diagnostyczne z
+                oryginalnymi stronami PDF i naniesionymi rozwiązaniami.
+              </p>
+            </div>
+            <CkeExamSheetsRepositoryView subject={subjectSlug} />
+          </section>
+        </>
+      )}
     </div>
   );
 }

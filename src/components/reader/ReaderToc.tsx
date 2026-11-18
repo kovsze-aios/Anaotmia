@@ -8,12 +8,6 @@ import type { ReaderPosition, ReaderSpine } from "@/server/models";
 import { useI18n } from "@/i18n";
 import { HIDE_SCROLLBAR, cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
-import {
-  CurriculumModeSwitcher,
-  CkeStatusBadge,
-  isTierRequiredInMode,
-  useCurriculumViewMode,
-} from "@/components/matura/CkeFormulaControls";
 
 /**
  * Frames the drawer gets to lay itself out before the auto-scroll gives up.
@@ -43,12 +37,17 @@ export interface ReaderTocProps {
 export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
   const { t, n } = useI18n();
   const [open, setOpen] = useState(false);
-  const [viewMode, setViewMode] = useCurriculumViewMode(basePath);
   const currentChapter = useRef<HTMLAnchorElement>(null);
 
-  const hasCkeMetadata =
-    Boolean(position.ckeMetadata) ||
-    position.volumeChapters.some((ch) => Boolean(ch.ckeStatus || ch.tier));
+  const normalizedSlug = basePath
+    .replace(/^\/theory\//, "")
+    .replace(/-matura-(?:2015|2023)$/, "");
+  const isMaturaSubject =
+    normalizedSlug === "biologia" ||
+    normalizedSlug === "chemia" ||
+    normalizedSlug === "fizyka" ||
+    normalizedSlug === "matematyka";
+  const maturaLandingPath = `/theory/${normalizedSlug}`;
 
   /**
    * Brings the chapter being read into view when the drawer opens.
@@ -119,16 +118,6 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                 <X className="size-4" aria-hidden="true" />
               </button>
             </div>
-
-            {hasCkeMetadata && (
-              <div className="pt-1">
-                <CurriculumModeSwitcher
-                  value={viewMode}
-                  onChange={setViewMode}
-                  compact
-                />
-              </div>
-            )}
           </div>
 
           <nav
@@ -138,35 +127,16 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
           >
             {spine.volumes.map((volume) => {
               const isCurrentVolume = volume.id === position.volumeId;
-
-              if (!isCurrentVolume) {
-                return (
-                  <Link
-                    key={volume.id}
-                    href={
-                      volume.firstChapterId
-                        ? `${basePath}/${volume.firstChapterId}`
-                        : basePath
-                    }
-                    onClick={() => setOpen(false)}
-                    className="mb-1 flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-ring dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
-                  >
-                    <ChevronRight className="size-4 shrink-0" aria-hidden="true" />
-                    {volume.icon && <span aria-hidden="true">{volume.icon}</span>}
-                    <span className="flex-1 truncate">{volume.shortTitle}</span>
-                    <span className="shrink-0 text-xs font-normal tabular-nums text-zinc-400 dark:text-zinc-500">
-                      {n(volume.chapterCount)}
-                    </span>
-                  </Link>
-                );
-              }
+              const chapters = volume.chapters ?? (isCurrentVolume ? volumeChapters : []);
 
               return (
-                <details key={volume.id} open className="group mb-1 rounded-lg">
+                <details key={volume.id} open={isCurrentVolume} className="group mb-1 rounded-lg">
                   <summary
                     className={cn(
                       "flex cursor-pointer list-none items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors focus-ring [&::-webkit-details-marker]:hidden",
-                      "text-zinc-900 hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-900",
+                      isCurrentVolume
+                        ? "text-zinc-900 hover:bg-zinc-100 dark:text-zinc-100 dark:hover:bg-zinc-900"
+                        : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100",
                     )}
                   >
                     <ChevronRight
@@ -176,25 +146,15 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                     {volume.icon && <span aria-hidden="true">{volume.icon}</span>}
                     <span className="flex-1 truncate">{volume.shortTitle}</span>
                     <span className="shrink-0 text-xs font-normal tabular-nums text-zinc-400 dark:text-zinc-500">
-                      {n(volumeChapters.length)}
+                      {n(chapters.length || volume.chapterCount)}
                     </span>
                   </summary>
 
                   <ul className="mb-2 ml-4 border-l border-zinc-200 pl-2 dark:border-zinc-800">
-                    {volumeChapters.map((chapter) => {
+                    {chapters.map((chapter) => {
                       const isCurrent = chapter.id === position.chapterId;
-                      const isRequired =
-                        !hasCkeMetadata ||
-                        isTierRequiredInMode(
-                          viewMode,
-                          chapter.tier ?? chapter.ckeStatus,
-                          chapter.formulas,
-                        );
                       return (
-                        <li
-                          key={chapter.id}
-                          className={cn(!isRequired && "opacity-40 transition-opacity")}
-                        >
+                        <li key={chapter.id}>
                           <Link
                             ref={isCurrent ? currentChapter : undefined}
                             href={`${basePath}/${chapter.id}`}
@@ -214,14 +174,6 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                               </span>
                               {chapter.title}
                             </span>
-                            {(chapter.tier || chapter.ckeStatus) && (
-                              <CkeStatusBadge
-                                tier={chapter.tier}
-                                status={chapter.ckeStatus}
-                                compact
-                                className="mt-0.5"
-                              />
-                            )}
                           </Link>
 
                           {isCurrent && position.topics.length > 0 && (
@@ -246,6 +198,30 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
                 </details>
               );
             })}
+
+            {isMaturaSubject && (
+              <div className="my-4 border-t border-zinc-800 px-2 pt-4">
+                <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-widest text-zinc-400">
+                  Matura
+                </p>
+                <div className="space-y-1">
+                  <Link
+                    href={`${maturaLandingPath}?formula=2023#sekcja-matura`}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+                  >
+                    Formuła 2023+ (2015+)
+                  </Link>
+                  <Link
+                    href={`${maturaLandingPath}?formula=2015#sekcja-matura`}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+                  >
+                    Formuła 2015
+                  </Link>
+                </div>
+              </div>
+            )}
           </nav>
         </SheetContent>
       </Sheet>

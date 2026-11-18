@@ -4,16 +4,15 @@ import Link from "next/link";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
-  ChevronLeft,
-  ChevronRight,
-  Columns2,
   FileText,
   Home,
   Search,
-  Zap,
 } from "lucide-react";
 import { ActiveRecall } from "@/components/ActiveRecall";
-import { ExamTaskCard } from "@/components/matura/CkeExamTasksSection";
+import {
+  CkeSolvedPdfSheetViewer,
+  ExamTaskCard,
+} from "@/components/matura/CkeExamTasksSection";
 import { filterCkeTasks, getCkeExamSheets } from "@/data/cke-exams";
 import type { CkeExamSheet } from "@/types/curriculum";
 import type { MaturaYearRecord } from "@/server/models";
@@ -117,11 +116,9 @@ function MaturaSubjectViewInner({
   const topicParam = searchParams.get("dzial");
   const [filterTopic, setFilterTopic] = useState<string | null>(topicParam);
   const [searchQuery, setSearchQuery] = useState("");
-  const [presentationMode, setPresentationMode] = useState<"interactive" | "pdf-split">(
-    "interactive",
+  const [presentationMode, setPresentationMode] = useState<"pdf-overlay" | "cards">(
+    "pdf-overlay",
   );
-  const [activePdfPage, setActivePdfPage] = useState<number>(4);
-  const [onlyCurrentPageTasks, setOnlyCurrentPageTasks] = useState<boolean>(false);
 
   // Keep topic filter in sync with browser back/forward
   useEffect(() => {
@@ -147,8 +144,6 @@ function MaturaSubjectViewInner({
       params.set("arkusz", entry.id);
       params.set("rok", String(entry.year));
       params.delete("dzial");
-      setActivePdfPage(4);
-      setOnlyCurrentPageTasks(false);
       router.replace(`?${params.toString()}`, { scroll: false });
     },
     [router, searchParams],
@@ -197,32 +192,6 @@ function MaturaSubjectViewInner({
     return list;
   }, [activeSheet, filterTopic, searchQuery]);
 
-  const pageUrls = activeSheet?.pageImageUrls ?? [];
-  const totalPages = pageUrls.length;
-  const clampedPage =
-    totalPages > 0 ? Math.min(Math.max(1, activePdfPage), totalPages) : 1;
-  const currentPageImageUrl = pageUrls[clampedPage - 1];
-
-  const displayedSheetTasks = useMemo(() => {
-    if (
-      activeSheet &&
-      presentationMode === "pdf-split" &&
-      onlyCurrentPageTasks
-    ) {
-      const onPage = filteredSheetTasks.filter(
-        (t) => t.pdfPageNumber === clampedPage,
-      );
-      if (onPage.length > 0) return onPage;
-    }
-    return filteredSheetTasks;
-  }, [
-    activeSheet,
-    presentationMode,
-    onlyCurrentPageTasks,
-    filteredSheetTasks,
-    clampedPage,
-  ]);
-
   const filteredLegacyQuestions = useMemo(() => {
     if (!activeLegacy) return [];
     const byTopic = filterTopic
@@ -243,19 +212,8 @@ function MaturaSubjectViewInner({
       : `Matura ${selectedEntry.year} (${selectedEntry.month})`
     : `Arkusze CKE`;
 
-  const isSplitView = Boolean(
-    activeSheet && presentationMode === "pdf-split" && totalPages > 0,
-  );
-
-  const handleOpenPdfPage = useCallback((pageNo: number) => {
-    setActivePdfPage(pageNo);
-    setPresentationMode("pdf-split");
-  }, []);
-
-  const handleJumpToTask = useCallback((taskId: string, pageNo?: number) => {
-    if (pageNo) setActivePdfPage(pageNo);
-    const el = document.getElementById(`cke-task-${taskId}`);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const handleOpenPdfPage = useCallback((_pageNo: number) => {
+    setPresentationMode("pdf-overlay");
   }, []);
 
   return (
@@ -347,7 +305,7 @@ function MaturaSubjectViewInner({
                 Arkusz: {activeSheet.symbol ?? activeSheet.id}
               </p>
               <p className="matura-sidebar__question-count">
-                Wiązek: {displayedSheetTasks.length} • Zadania:{" "}
+                Wiązek: {filteredSheetTasks.length} • Zadania:{" "}
                 {activeSheet.totalTasks} • Suma: {activeSheet.totalPoints} pkt
               </p>
             </div>
@@ -380,11 +338,7 @@ function MaturaSubjectViewInner({
       </aside>
 
       {/* Main content */}
-      <main
-        className={`matura-content !w-full ${
-          isSplitView ? "!max-w-7xl" : "!max-w-4xl"
-        }`}
-      >
+      <main className="matura-content !w-full !max-w-6xl">
         <div className="matura-content__inner">
           {/* Unified Breadcrumb Navigation Bar matching TheoryReaderPage */}
           <nav aria-label="Okruszki" className="mb-3 w-full text-sm">
@@ -430,11 +384,11 @@ function MaturaSubjectViewInner({
           </h1>
           <p className="matura-content__subtitle">
             {activeSheet
-              ? `Kompletny arkusz CKE 1:1 (${activeSheet.totalPoints} pkt, ${activeSheet.totalTasks} zadań) z oryginalnymi rycinami PNG, tabelami P/F i oficjalnym kluczem CKE.`
+              ? `Kompletny arkusz CKE 1:1 (${activeSheet.totalPoints} pkt, ${activeSheet.totalTasks} zadań) z oryginalnymi stronami PDF i naniesionymi rozwiązaniami.`
               : "Kliknij zadanie, aby odsłonić oficjalną odpowiedź z klucza CKE."}
           </p>
 
-          {/* Controls: Search + 1:1 PDF Split-View Toggle */}
+          {/* Controls: Search + Solved PDF vs Cards Mode */}
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-950/90 p-3">
             <label className="relative flex min-w-[220px] flex-1 items-center">
               <Search
@@ -451,7 +405,7 @@ function MaturaSubjectViewInner({
               />
             </label>
 
-            {activeSheet && totalPages > 0 && (
+            {activeSheet && (
               <div
                 role="tablist"
                 aria-label="Tryb prezentacji arkusza CKE"
@@ -460,198 +414,57 @@ function MaturaSubjectViewInner({
                 <button
                   type="button"
                   role="tab"
-                  aria-selected={presentationMode === "interactive"}
-                  onClick={() => setPresentationMode("interactive")}
+                  aria-selected={presentationMode === "pdf-overlay"}
+                  onClick={() => setPresentationMode("pdf-overlay")}
                   className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
-                    presentationMode === "interactive"
+                    presentationMode === "pdf-overlay"
                       ? "border-zinc-700 bg-zinc-800 text-zinc-100"
                       : "border-transparent text-zinc-400 hover:text-zinc-100"
                   }`}
                 >
-                  <Zap className="size-3.5" aria-hidden="true" />
-                  Widok Interaktywny 1:1
+                  <FileText className="size-3.5" aria-hidden="true" />
+                  Rozwiązany Arkusz PDF 1:1
                 </button>
                 <button
                   type="button"
                   role="tab"
-                  aria-selected={presentationMode === "pdf-split"}
-                  onClick={() => setPresentationMode("pdf-split")}
+                  aria-selected={presentationMode === "cards"}
+                  onClick={() => setPresentationMode("cards")}
                   className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-semibold transition-colors ${
-                    presentationMode === "pdf-split"
+                    presentationMode === "cards"
                       ? "border-zinc-700 bg-zinc-800 text-zinc-100"
                       : "border-transparent text-zinc-400 hover:text-zinc-100"
                   }`}
                 >
-                  <Columns2 className="size-3.5" aria-hidden="true" />
-                  Widok Oryginalnego Arkusza 1:1 (PDF Split-View)
+                  Lista zadań wg działów
                 </button>
               </div>
             )}
           </div>
 
           {activeSheet ? (
-            <>
-              {/* Sheet metadata & quick-jump task pills */}
-              <div className="mb-5 space-y-2.5 rounded-xl border border-zinc-800 bg-zinc-950/90 p-3.5">
-                <div className="flex flex-wrap items-center gap-2 text-xs">
-                  <span className="inline-flex items-center gap-1 rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-semibold text-zinc-200">
-                    <FileText className="size-3.5 text-zinc-400" aria-hidden="true" />
-                    {activeSheet.symbol ?? activeSheet.id}
-                  </span>
-                  <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-semibold text-zinc-200">
-                    Formuła {activeSheet.formula}
-                  </span>
-                  <span className="rounded border border-zinc-800 bg-zinc-900 px-2 py-0.5 font-mono text-zinc-300">
-                    {activeSheet.tasks.length} wiązek • {activeSheet.totalTasks}{" "}
-                    zadań • {activeSheet.totalPoints} pkt
-                  </span>
-                </div>
-
-                {filteredSheetTasks.length > 0 && (
-                  <div
-                    aria-label="Szybka nawigacja po zadaniach arkusza"
-                    className="flex flex-wrap items-center gap-1 border-t border-zinc-800/70 pt-2.5"
-                  >
-                    <span className="mr-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
-                      Zadania ({filteredSheetTasks.length}):
-                    </span>
-                    {filteredSheetTasks.map((t) => {
-                      const num = t.taskNumber.replace(/^Zadanie\s+/i, "");
-                      return (
-                        <button
-                          key={t.id}
-                          type="button"
-                          onClick={() =>
-                            handleJumpToTask(t.id, t.pdfPageNumber)
-                          }
-                          className={`rounded border px-2 py-0.5 text-[11px] font-mono transition-colors ${
-                            isSplitView && t.pdfPageNumber === clampedPage
-                              ? "border-zinc-500 bg-zinc-800 text-zinc-100"
-                              : "border-zinc-800 bg-zinc-950 text-zinc-300 hover:border-zinc-600 hover:text-zinc-100"
-                          }`}
-                        >
-                          {num}
-                        </button>
-                      );
-                    })}
-                  </div>
-                )}
+            filteredSheetTasks.length === 0 ? (
+              <div className="matura-empty">
+                <p>
+                  Brak zadań spełniających kryteria w tym arkuszu. Wyczyść filtr lub wybierz inny arkusz.
+                </p>
               </div>
-
-              {filteredSheetTasks.length === 0 ? (
-                <div className="matura-empty">
-                  <p>
-                    Brak zadań spełniających kryteria w tym arkuszu. Wyczyść filtr lub wybierz inny arkusz.
-                  </p>
-                </div>
-              ) : isSplitView ? (
-                <div className="grid gap-5 lg:grid-cols-12">
-                  {/* Left sticky 1:1 original CKE page scan */}
-                  <div className="lg:col-span-6">
-                    <div className="sticky top-4 space-y-2 rounded-xl border border-zinc-800 bg-zinc-900/90 p-3">
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-1.5">
-                          <button
-                            type="button"
-                            onClick={() =>
-                              setActivePdfPage((p) => Math.max(1, p - 1))
-                            }
-                            disabled={clampedPage <= 1}
-                            className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-                          >
-                            <ChevronLeft className="size-3.5" />
-                            Poprzednia
-                          </button>
-                          <select
-                            value={clampedPage}
-                            onChange={(e) =>
-                              setActivePdfPage(Number(e.target.value))
-                            }
-                            aria-label="Wybierz stronę oryginalnego arkusza CKE"
-                            className="rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs font-mono text-zinc-100"
-                          >
-                            {pageUrls.map((_, idx) => (
-                              <option key={idx + 1} value={idx + 1}>
-                                Strona {idx + 1} / {totalPages}
-                              </option>
-                            ))}
-                          </select>
-                          <button
-                            type="button"
-                            onClick={() =>
-                              setActivePdfPage((p) =>
-                                Math.min(totalPages, p + 1),
-                              )
-                            }
-                            disabled={clampedPage >= totalPages}
-                            className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs font-medium text-zinc-200 hover:bg-zinc-800 disabled:opacity-40"
-                          >
-                            Następna
-                            <ChevronRight className="size-3.5" />
-                          </button>
-                        </div>
-
-                        <div className="flex items-center gap-1.5">
-                          <button
-                            type="button"
-                            onClick={() =>
-                              setOnlyCurrentPageTasks((o) => !o)
-                            }
-                            className={`rounded-md border px-2 py-1 text-[11px] font-medium ${
-                              onlyCurrentPageTasks
-                                ? "border-zinc-600 bg-zinc-800 text-zinc-100"
-                                : "border-zinc-700 bg-zinc-950 text-zinc-300"
-                            }`}
-                          >
-                            {onlyCurrentPageTasks
-                              ? "Filtr: bieżąca strona"
-                              : "Wszystkie zadania"}
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="max-h-[78vh] overflow-auto rounded-lg border border-zinc-800 bg-white p-1">
-                        {currentPageImageUrl && (
-                          /* eslint-disable-next-line @next/next/no-img-element */
-                          <img
-                            src={currentPageImageUrl}
-                            alt={`Oryginalna strona ${clampedPage} arkusza CKE`}
-                            width={960}
-                            height={1358}
-                            loading="lazy"
-                            decoding="async"
-                            className="mx-auto w-full object-contain"
-                          />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right synchronized 1:1 tasks */}
-                  <div className="flex flex-col gap-4 lg:col-span-6">
-                    {displayedSheetTasks.map((task) => (
-                      <ExamTaskCard
-                        key={task.id}
-                        task={task}
-                        onOpenPdfPage={handleOpenPdfPage}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <div className="flex flex-col gap-4">
-                  {filteredSheetTasks.map((task) => (
-                    <ExamTaskCard
-                      key={task.id}
-                      task={task}
-                      onOpenPdfPage={
-                        totalPages > 0 ? handleOpenPdfPage : undefined
-                      }
-                    />
-                  ))}
-                </div>
-              )}
-            </>
+            ) : presentationMode === "pdf-overlay" ? (
+              <CkeSolvedPdfSheetViewer
+                sheet={activeSheet}
+                filterTasks={filteredSheetTasks}
+              />
+            ) : (
+              <div className="flex flex-col gap-4">
+                {filteredSheetTasks.map((task) => (
+                  <ExamTaskCard
+                    key={task.id}
+                    task={task}
+                    onOpenPdfPage={handleOpenPdfPage}
+                  />
+                ))}
+              </div>
+            )
           ) : filteredLegacyQuestions.length === 0 ? (
             <div className="matura-empty">
               <p>

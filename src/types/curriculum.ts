@@ -88,12 +88,31 @@ export interface CkeExamTask {
   animatedSteps?: CkeAnimatedStep[];
 }
 
+export interface CkePdfOverlayAnnotation {
+  id: string;
+  taskNumber: string;
+  subTaskNumber?: string;
+  pageNumber: number;
+  boxType: "open-answer" | "true-false" | "multiple-choice" | "calculation-grid" | "table-fill" | "margin-callout";
+  xPct: number;
+  yPct: number;
+  widthPct: number;
+  heightPct: number;
+  pointsLabel?: string;
+  operationalVerb?: string;
+  answerText: string;
+  marginNote?: string;
+  markedOptions?: string[];
+  truthChoices?: ("P" | "F")[];
+}
+
 export interface CkeExamSheet {
   id: string;
   subject: "biologia" | "chemia" | "fizyka" | "matematyka";
   year: number;
   month: "maj" | "czerwiec" | "sierpien" | "pokazowy" | "probny";
   formula: "2015" | "2023";
+  sheetCategory?: "official" | "trial";
   symbol?: string;
   title: string;
   totalPoints: number;

@@ -59,6 +59,8 @@ export interface ReaderVolumeSummary {
   chapterCount: number;
   /** Entry point used when the reader opens a volume they are not in. */
   firstChapterId?: string;
+  /** Chapter titles and IDs for expanding any volume directly inside the TOC drawer. */
+  chapters?: ReaderChapter[];
 }
 
 /** The book's volume list. Chapters for the open volume come with the position. */

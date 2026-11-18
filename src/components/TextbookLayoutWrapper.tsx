@@ -45,6 +45,7 @@ export function TextbookLayoutWrapper({
       domains={domains}
       activeSection={activeSectionId}
       onSectionSelect={handleSectionSelect}
+      basePath={basePath}
     >
       {children}
     </TextbookLayout>

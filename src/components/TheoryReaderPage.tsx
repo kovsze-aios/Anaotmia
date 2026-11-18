@@ -55,50 +55,12 @@ const LINKS_ANATOMY: Record<TheorySubject, boolean> = {
   informatyka: false,
 };
 
-const MATURA_PAIR: Partial<
-  Record<
-    TheorySubject,
-    {
-      formula2023Path: string;
-      formula2015Path: string;
-      activeFormula: "2023" | "2015";
-      companionChapterId: (id: string) => string;
-    }
-  >
-> = {
-  "biologia-matura-2023": {
-    formula2023Path: "/theory/biologia-matura-2023",
-    formula2015Path: "/theory/biologia-matura-2015",
-    activeFormula: "2023",
-    companionChapterId: (id) => id.replace(/^bm23-/, "bm15-"),
-  },
-  "biologia-matura-2015": {
-    formula2023Path: "/theory/biologia-matura-2023",
-    formula2015Path: "/theory/biologia-matura-2015",
-    activeFormula: "2015",
-    companionChapterId: (id) => id.replace(/^bm15-/, "bm23-"),
-  },
-  "chemia-matura-2023": {
-    formula2023Path: "/theory/chemia-matura-2023",
-    formula2015Path: "/theory/chemia-matura-2015",
-    activeFormula: "2023",
-    companionChapterId: (id) => id.replace(/^cm23-/, "cm15-"),
-  },
-  "chemia-matura-2015": {
-    formula2023Path: "/theory/chemia-matura-2023",
-    formula2015Path: "/theory/chemia-matura-2015",
-    activeFormula: "2015",
-    companionChapterId: (id) => id.replace(/^cm15-/, "cm23-"),
-  },
-};
-
 export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPageProps) {
   const found = getTheorySectionWithDomain(subject, id);
   if (!found) notFound();
 
   const { section, domain } = found;
   const basePath = `/theory/${subject}`;
-  const maturaPair = MATURA_PAIR[subject];
 
   // Resolved server-side; only the light projections cross to the client,
   // never the chapter corpus.
@@ -162,46 +124,6 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
           </li>
         </ol>
       </nav>
-
-      {maturaPair && (
-        <div className="mx-auto mb-4 w-full max-w-3xl px-4">
-          <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-zinc-950/90 px-3 py-2 text-xs">
-            <span className="font-semibold tracking-wider uppercase text-zinc-400">
-              🎓 Tryb podstawy CKE:
-            </span>
-            <div className="inline-flex items-center gap-1.5">
-              <Link
-                href={
-                  maturaPair.activeFormula === "2023"
-                    ? `${maturaPair.formula2023Path}/${section.id}`
-                    : `${maturaPair.formula2023Path}/${maturaPair.companionChapterId(section.id)}`
-                }
-                className={
-                  maturaPair.activeFormula === "2023"
-                    ? "rounded-md border border-zinc-700 bg-zinc-800 px-2.5 py-1 font-semibold text-zinc-100"
-                    : "rounded-md px-2.5 py-1 text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
-                }
-              >
-                Formuła 2023+ (Nowa)
-              </Link>
-              <Link
-                href={
-                  maturaPair.activeFormula === "2015"
-                    ? `${maturaPair.formula2015Path}/${section.id}`
-                    : `${maturaPair.formula2015Path}/${maturaPair.companionChapterId(section.id)}`
-                }
-                className={
-                  maturaPair.activeFormula === "2015"
-                    ? "rounded-md border border-zinc-700 bg-zinc-800 px-2.5 py-1 font-semibold text-zinc-100"
-                    : "rounded-md px-2.5 py-1 text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
-                }
-              >
-                Formuła 2015
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Centred reading column — comfortable measure for long-form prose. */}
       <div className="mx-auto w-full max-w-3xl px-4">

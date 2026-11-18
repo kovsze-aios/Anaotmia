@@ -10,6 +10,7 @@ interface TextbookLayoutProps {
   domains: NavDomain[];
   activeSection: string | null;
   onSectionSelect: (domainId: string, sectionId: string) => void;
+  basePath?: string;
   children: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ export function TextbookLayout({
   domains,
   activeSection,
   onSectionSelect,
+  basePath,
   children,
 }: TextbookLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -70,6 +72,7 @@ export function TextbookLayout({
         <ChapterNav
           domains={domains}
           activeSection={activeSection}
+          basePath={basePath}
           onSectionSelect={(domainId, sectionId) => {
             onSectionSelect(domainId, sectionId);
             setSidebarOpen(false);
