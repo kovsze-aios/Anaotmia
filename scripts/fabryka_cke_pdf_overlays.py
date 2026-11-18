@@ -145,15 +145,65 @@ def find_scoring_pdf(subject: str, year: int, month: str) -> Path | None:
 
 
 def strip_rubric_noise(text: str) -> str:
-    """Removes interleaved CKE curriculum requirement blocks & rubric boilerplate lines."""
+    """Removes interleaved CKE curriculum requirement blocks & rubric boilerplate lines (both 2015 and 2023 formulas)."""
+    if not text:
+        return ""
+
+    # 1. Multi-line scrubs for narrow vertical curriculum columns interleaved across PDF lines
+    cleaned = text
+    cleaned = re.sub(
+        r"Wymagania\s+ogólne\s+Wymagania\s+szczegółowe[\s\S]{0,1200}?(?=Schemat\s+punktowania|Zasady\s+oceniania|Przykładow|Rozwiązani|\n\s*cholera\b|$)",
+        "\n",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    cleaned = re.sub(
+        r"(?:^|\s)(?:I|II|III|IV|V|VI|VII|VIII|IX|X|XI)\.\s*(?:Wykorzystanie|Rozumowanie|Opanowanie|Poznanie|Pogłębienie|Poszukiwanie|Korzystanie)[\s\S]{0,360}?(?:problemów\.?|informacji\.?|praktycznych\.?|życia\.?|\[\…\]\.?)",
+        "\n",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    cleaned = re.sub(
+        r"(?:III|IV)\s+etap\s+edukacyjny[\s\S]{0,480}?(?=Przykładow|Rozwiązani|Schemat\s+punktowania|Zasady\s+oceniania|\uf0a7|•|$)",
+        "\n",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    cleaned = re.sub(
+        r"Zdający\s*:?[\s\S]{0,380}?(?:\[\…\]\.?|\.\s*(?=\n|$))",
+        "\n",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    # 2. Inline fragments across spaces/newlines
+    inline_patterns = (
+        r"(?:I+\.?\s*)?(?:Rozumowanie\s+)?i\s+zastosowanie\s+nabytej\s+wiedzy\s+do\s+rozwiązywania\s+problemów\.?",
+        r"(?:I+\.?\s*)?Wykorzystanie\s+i\s+tworzenie\s+informacji\.?",
+        r"(?:I+\.?\s*)?i\s+tworzenie\s+informacji\.?",
+        r"(?:III\.?\s*)?Opanowanie\s+czynności\s+praktycznych\.?",
+        r"czynności\s+praktycznych\.?",
+        r"przedstawia\s+związki\s+między\s+strukturą[\s\S]{0,100}?życia\s*(?:\[\…\])?\.?",
+        r"opisuje,\s*porządkuje\s+i\s+rozpoznaje\s+organizmy\s*(?:\[\…\])?\.?",
+        r"objaśnia\s+funkcjonowanie\s+organizmu\s+ludzkiego[\s\S]{0,100}?złożoności\s*(?:\[\…\])?\.?",
+        r"budowy\s+i\s+funkcjonowania\s+organizmu\s+ludzkiego\.?",
+        r"stosuje\s+regułę\s+przekory[\s\S]{0,120}?(?:\[\…\]\.?|dynamicznej\.?)",
+        r"wymienia\s+najważniejsze\s+(?:choroby|protisty)[\s\S]{0,180}?(?:\)\s*\[\…\]\.?|\)\.)",
+        r"\.\s*\(\d+[–-]\d+\)\s*",
+    )
+    for pat in inline_patterns:
+        cleaned = re.sub(pat, " ", cleaned, flags=re.IGNORECASE)
+
+    # 3. Line-by-line filter
     clean_lines: list[str] = []
-    for raw_ln in text.splitlines():
+    for raw_ln in cleaned.splitlines():
         ln = re.sub(r"\s+", " ", raw_ln).strip()
         if not ln:
             continue
         if RUBRIC_LINE_RE.match(ln) or RUBRIC_FRAGMENT_RE.search(ln):
             continue
         if re.match(r"^(?:0|1|2|3|4)\s*p(?:kt)?\.?\s*[–-]", ln, re.IGNORECASE):
+            continue
+        if re.match(r"^\d+(?:\.\d+)?\.\s*\(\d+[–-]\d+\)\s*$", ln):
             continue
         clean_lines.append(ln)
     return "\n".join(clean_lines)
@@ -211,25 +261,34 @@ def extract_concise_answer(official_key: str) -> tuple[str, list[str]]:
 
     solution_part = ""
     sol_match = re.search(
-        r"\b(?:Przykładowe\s+poprawne\s+odpowiedzi|Przykładowe\s+rozwiązania|Przykładowe\s+rozwiązanie|Przykładowa\s+odpowiedź|Poprawna\s+odpowiedź|Rozwiązanie)\s*:?\s*([\s\S]+)",
+        r"\b(?:Przykładowe\s+poprawne\s+odpowiedzi|Przykładowe\s+rozwiązania|Przykładowe\s+odpowiedzi|Poprawne\s+odpowiedzi|Przykładowe\s+rozwiązanie|Przykładowa\s+odpowiedź|Poprawna\s+odpowiedź|Rozwiązanie)\s*:?\s*([\s\S]+)",
         cleaned,
         flags=re.IGNORECASE,
     )
     if sol_match:
         solution_part = sol_match.group(1)
     else:
-        solution_part = re.split(
-            r"\b(?:Schemat\s+punktowania|Zasady\s+oceniania)\b",
+        # Check if answers sit AFTER the Schemat punktowania / 0 p. block (common in 2018-2019 keys)
+        post_rubric = re.search(
+            r"0\s*p(?:kt)?\.?\s*[–-][^\n]*(?:\n[^\n]*?)?\n\s*\n\s*([^\n][\s\S]+)$",
             cleaned,
-            maxsplit=1,
-            flags=re.IGNORECASE,
-        )[0]
-        solution_part = re.sub(
-            r"^(?:Zadanie\s+\d+(?:\.\d+)?(?:\s*\([^)]*\))?\s*:?\s*)?",
-            "",
-            solution_part.strip(),
             flags=re.IGNORECASE,
         )
+        if post_rubric and strip_rubric_noise(post_rubric.group(1)).strip():
+            solution_part = post_rubric.group(1)
+        else:
+            solution_part = re.split(
+                r"\b(?:Schemat\s+punktowania|Zasady\s+oceniania)\b",
+                cleaned,
+                maxsplit=1,
+                flags=re.IGNORECASE,
+            )[0]
+            solution_part = re.sub(
+                r"^(?:Zadanie\s+)?\d+(?:\.\d+)?\.?(?:\s*\([^)]*\))?\s*:?\s*",
+                "",
+                solution_part.strip(),
+                flags=re.IGNORECASE,
+            )
 
     solution_part = re.split(
         r"\n\s*(?:Schemat\s+punktowania|Zasady\s+oceniania|Uwag[ai]\s*:|Nie\s+uznaje\s+się|Dopuszcza\s+się|Załącznik\s+nr)",
@@ -244,21 +303,46 @@ def extract_concise_answer(official_key: str) -> tuple[str, list[str]]:
         m = re.search(r"1\s*p(?:kt)?\.?\s*[–-]\s*([^\n]+)", fallback_clean)
         stripped = m.group(1).strip() if m else fallback_clean
 
-    # Take first clean example answer when multiple bullet paraphrases or "Sposób 2." exist
+    # Take first clean example answer when multiple paraphrases or "Sposób 2." / "Rozwiązanie II" exist
     first_solution = re.split(
-        r"(?:\n\s*Sposób\s+2\.|\n\s*ALBO\b)",
+        r"(?:\n\s*Sposób\s+2\.|\n\s*Rozwiązanie\s+II\b|\n\s*ALBO\b)",
         stripped,
         maxsplit=1,
         flags=re.IGNORECASE,
     )[0].strip()
 
-    if "•" in first_solution:
-        bullets = [b.strip() for b in first_solution.split("•") if b.strip()]
-        if bullets:
-            first_solution = bullets[0]
+    compound_mc_prefix = ""
+    if "•" in first_solution or "\uf0a7" in first_solution:
+        parts = [p.strip() for p in re.split(r"[•\uf0a7]", first_solution) if p.strip()]
+        if parts:
+            preamble = parts[0]
+            is_preamble_label = (
+                preamble.endswith(":")
+                or bool(
+                    re.match(
+                        r"^(?:(?:[1-4]\.\s*)?[A-F]\b[\s\S]{0,60}:?|[A-F]\s*\n|\s*(?:Przykładowe|Nazwa|Uzasadnienie|Wyjaśnienie))",
+                        preamble,
+                        flags=re.IGNORECASE,
+                    )
+                )
+            )
+            if len(parts) >= 2 and is_preamble_label:
+                mc_lead = re.search(r"(?:^|\b)([A-F])\b", preamble)
+                if mc_lead:
+                    compound_mc_prefix = mc_lead.group(1)
+                first_solution = parts[1]
+            else:
+                first_solution = parts[0]
 
     first_solution = re.sub(
-        r"^\s*(?:Sposób\s+1\.|Rozstrzygnięcie\s*:?|Przykładowe\s+wyjaśnienia\s*:?)\s*",
+        r"^\s*(?:Sposób\s+1\.|Rozwiązanie\s+I\b|Rozstrzygnięcie\s*:?|Przykładowe\s+wyjaśnienia\s*:?|Przykładowe\s+uzasadnienie\s*:?|Przykładowa\s+odpowiedź\s*:?|Obserwacje\s*:?)\s*",
+        "",
+        first_solution,
+        flags=re.IGNORECASE,
+    )
+    # Strip redundant printed prompt labels ("Nazwa wiązania:", "Uzasadnienie:") before fill answer
+    first_solution = re.sub(
+        r"^\s*(?:Nazwa\s+wiązania|Nazwa\s+(?:procesu|związku|etapu|tkanki|choroby|struktury)|Nazwa|Uzasadnienie|Wyjaśnienie|Przykład|Wniosek)\s*:\s*",
         "",
         first_solution,
         flags=re.IGNORECASE,
@@ -269,25 +353,35 @@ def extract_concise_answer(official_key: str) -> tuple[str, list[str]]:
         first_solution,
         flags=re.IGNORECASE,
     )
-    # Remove inline curriculum sentence fragments accidentally glued before/after answer
+
     lines = []
     for ln in first_solution.splitlines():
         ln_clean = re.sub(r"\s+", " ", ln).strip()
-        ln_clean = re.sub(r"\s*wiedzy\s+do\s+rozwiązywania\s+problemów\.?", "", ln_clean, flags=re.IGNORECASE).strip()
+        ln_clean = strip_rubric_noise(ln_clean).replace("\n", " ").strip()
         ln_clean = re.sub(r"\s*(?:Przykładowe\s+wyjaśnienia|Przykładowe\s+uzasadnienia)\s*:?", "", ln_clean, flags=re.IGNORECASE).strip()
         if ln_clean:
             lines.append(ln_clean)
+
     concise = " ".join(lines).strip()
     if len(concise) > 360:
         concise = concise[:357].rsplit(" ", 1)[0] + "..."
 
     marked: list[str] = []
-    if len(concise) <= 24:
+    if compound_mc_prefix:
+        marked = [compound_mc_prefix]
+    elif len(concise) <= 24:
         mc_hits = re.findall(r"\b([A-F])\b", concise)
         if mc_hits:
             marked = mc_hits[:3]
+    else:
+        # Also detect standalone choice letter line before prose in compound answers
+        lead_choice = re.match(r"^(?:Odpowiedź\s*)?([A-F])(?:\s*[–-]\s*|\s+(?=[a-ząćęłńóśźż]))", concise)
+        if lead_choice:
+            marked = [lead_choice.group(1)]
 
-    return concise or strip_rubric_noise(cleaned)[:240], marked
+    fallback_str = strip_rubric_noise(cleaned).replace("\n", " ")
+    fallback_str = re.sub(r"\s+", " ", fallback_str).strip()
+    return concise or fallback_str[:240], marked
 
 
 def extract_truth_choices(sub: dict[str, Any], official_key: str, concise_answer: str) -> list[str]:
@@ -446,6 +540,18 @@ def scan_pdf_exam_geometry(
             w = max(1.0, float(page.rect.width))
             h = max(1.0, float(page.rect.height))
             blocks = sorted(page.get_text("blocks"), key=lambda b: (round(b[1], 1), b[0]))
+            raw_words = page.get_text("words")
+            page_words = [
+                {
+                    "x0": (wd[0] / w) * 100.0,
+                    "y0": (wd[1] / h) * 100.0,
+                    "x1": (wd[2] / w) * 100.0,
+                    "y1": (wd[3] / h) * 100.0,
+                    "txt": str(wd[4]).strip(),
+                }
+                for wd in raw_words
+                if str(wd[4]).strip()
+            ]
 
             page_events: list[dict[str, Any]] = []
             for b in blocks:
@@ -493,6 +599,54 @@ def scan_pdf_exam_geometry(
                     else len(page_events)
                 )
                 following = page_events[ev_idx + 1 : next_ev_idx]
+                next_y0 = page_events[next_ev_idx]["y0"] if next_ev_idx < len(page_events) else 91.0
+
+                # Word-level MC options ('A.', 'B.', ...) and exact dotted line positions
+                region_words = [
+                    wd for wd in page_words
+                    if wd["y0"] >= ev["y0"] - 0.5 and wd["y1"] <= next_y0 + 0.5
+                ]
+                mc_boxes: dict[str, dict[str, float]] = {}
+                for wi, wd in enumerate(region_words):
+                    m_opt = re.match(r"^([A-F])\.$", wd["txt"])
+                    if not m_opt:
+                        continue
+                    letter = m_opt.group(1)
+                    bx0_w = wd["x0"]
+                    by0_w = wd["y0"]
+                    bx1_w = wd["x1"]
+                    by1_w = wd["y1"]
+                    if wi + 1 < len(region_words):
+                        nxt = region_words[wi + 1]
+                        if (
+                            abs(nxt["y0"] - by0_w) < 1.2
+                            and 0 <= (nxt["x0"] - bx1_w) < 4.0
+                            and not re.match(r"^[A-F]\.$", nxt["txt"])
+                        ):
+                            bx1_w = min(bx0_w + 10.0, nxt["x1"])
+                    mc_boxes[letter] = {
+                        "xPct": round(max(4.0, bx0_w - 2.2), 2),
+                        "yPct": round(max(4.0, by0_w - 0.5), 2),
+                        "widthPct": round(min(18.0, max(7.5, bx1_w - bx0_w + 3.2)), 2),
+                        "heightPct": round(max(2.4, by1_w - by0_w + 0.9), 2),
+                    }
+
+                dot_words = [
+                    wd for wd in region_words
+                    if DOTTED_LINE_RE.match(wd["txt"])
+                ]
+                dot_box: dict[str, float] | None = None
+                if dot_words:
+                    dx0 = min(dw["x0"] for dw in dot_words)
+                    dy0 = min(dw["y0"] for dw in dot_words)
+                    dx1 = max(dw["x1"] for dw in dot_words)
+                    dy1 = max(dw["y1"] for dw in dot_words)
+                    dot_box = {
+                        "xPct": round(max(6.0, dx0), 2),
+                        "yPct": round(max(6.0, dy0 - 0.4), 2),
+                        "widthPct": round(min(84.0, max(16.0, dx1 - dx0)), 2),
+                        "heightPct": round(min(38.0, max(3.2, dy1 - dy0 + 1.0)), 2),
+                    }
 
                 dot_blocks = [f for f in following if f["is_dots"]]
                 pf_blocks = [f for f in following if f["is_pf"]]
@@ -502,7 +656,13 @@ def scan_pdf_exam_geometry(
                     if not f["is_dots"] and not f["is_pf"] and "Wypełnia" not in f["txt"]
                 ]
 
-                if dot_blocks:
+                if dot_box:
+                    bx0 = dot_box["xPct"]
+                    by0 = dot_box["yPct"]
+                    bx1 = dot_box["xPct"] + dot_box["widthPct"]
+                    by1 = dot_box["yPct"] + dot_box["heightPct"]
+                    box_type = "open-answer"
+                elif dot_blocks:
                     bx0 = min(f["x0"] for f in dot_blocks)
                     by0 = min(f["y0"] for f in dot_blocks)
                     bx1 = max(f["x1"] for f in dot_blocks)
@@ -525,18 +685,22 @@ def scan_pdf_exam_geometry(
                     last_prompt_y1 = max([ev["y1"], *(f["y1"] for f in prompt_blocks)])
                     by0 = min(83.0, last_prompt_y1 + 0.8)
                     bx1 = 88.0
-                    next_y0 = page_events[next_ev_idx]["y0"] if next_ev_idx < len(page_events) else 89.0
                     by1 = max(by0 + 6.5, min(89.0, next_y0 - 1.5))
                     box_type = "calculation-grid" if (by1 - by0) >= 12.0 else "table-fill"
 
-                anchors[tnum] = {
+                anchor_entry: dict[str, Any] = {
                     "pageNumber": pno + 1,
                     "boxType": box_type,
                     "xPct": round(max(6.0, bx0), 1),
                     "yPct": round(max(6.0, min(86.0, by0)), 1),
-                    "widthPct": round(min(88.0, max(12.0 if box_type == "true-false" else 36.0, bx1 - bx0)), 1),
-                    "heightPct": round(min(45.0, max(4.8, by1 - by0)), 1),
+                    "widthPct": round(min(88.0, max(12.0 if box_type == "true-false" else 16.0, bx1 - bx0)), 1),
+                    "heightPct": round(min(45.0, max(3.2, by1 - by0)), 1),
                 }
+                if mc_boxes:
+                    anchor_entry["mcBoxes"] = mc_boxes
+                if dot_box:
+                    anchor_entry["dotBox"] = dot_box
+                anchors[tnum] = anchor_entry
 
             # 2. Sub-cell table detection & mapping via PyMuPDF find_tables()
             for tb in page.find_tables().tables:
@@ -833,19 +997,78 @@ def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[st
                     anchor["boxType"] = "true-false"
 
                 page_key = str(page_no)
+                mc_boxes_map = anchor.get("mcBoxes") or {}
+                dot_box_coords = anchor.get("dotBox")
+                if (
+                    marked_options
+                    and marked_options[0] in mc_boxes_map
+                    and dot_box_coords
+                    and concise_answer
+                    and len(concise_answer) > 3
+                ):
+                    mc_letter = marked_options[0]
+                    mc_coords = mc_boxes_map[mc_letter]
+                    sheet_pages.setdefault(page_key, []).append(
+                        {
+                            "id": f"{sheet_id}-p{page_no}-z{clean_num}-mc",
+                            "taskNumber": task.get("taskNumber", f"Zadanie {clean_num}"),
+                            "subTaskNumber": clean_num,
+                            "pageNumber": page_no,
+                            "boxType": "multiple-choice",
+                            "xPct": mc_coords["xPct"],
+                            "yPct": mc_coords["yPct"],
+                            "widthPct": mc_coords["widthPct"],
+                            "heightPct": mc_coords["heightPct"],
+                            "pointsLabel": points_label,
+                            "operationalVerb": operational_verb,
+                            "answerText": f"✓ {mc_letter}",
+                            "marginNote": margin_note,
+                            "markedOptions": [mc_letter],
+                        }
+                    )
+                    sheet_pages.setdefault(page_key, []).append(
+                        {
+                            "id": f"{sheet_id}-p{page_no}-z{clean_num}-fill",
+                            "taskNumber": task.get("taskNumber", f"Zadanie {clean_num}"),
+                            "subTaskNumber": clean_num,
+                            "pageNumber": page_no,
+                            "boxType": "open-answer",
+                            "xPct": dot_box_coords["xPct"],
+                            "yPct": dot_box_coords["yPct"],
+                            "widthPct": dot_box_coords["widthPct"],
+                            "heightPct": dot_box_coords["heightPct"],
+                            "pointsLabel": points_label,
+                            "operationalVerb": operational_verb,
+                            "answerText": concise_answer,
+                            "marginNote": margin_note,
+                        }
+                    )
+                    continue
+
+                if marked_options and marked_options[0] in mc_boxes_map and len(concise_answer) <= 6:
+                    mc_letter = marked_options[0]
+                    mc_coords = mc_boxes_map[mc_letter]
+                    ann_coords = mc_coords
+                    anchor_box_type = "multiple-choice"
+                    final_ans = f"✓ {mc_letter}"
+                else:
+                    ann_coords = anchor
+                    anchor_box_type = anchor["boxType"]
+                    final_ans = concise_answer
+
                 ann = {
                     "id": f"{sheet_id}-p{page_no}-z{clean_num}",
                     "taskNumber": task.get("taskNumber", f"Zadanie {clean_num}"),
                     "subTaskNumber": clean_num,
                     "pageNumber": page_no,
-                    "boxType": anchor["boxType"],
-                    "xPct": anchor["xPct"],
-                    "yPct": anchor["yPct"],
-                    "widthPct": anchor["widthPct"],
-                    "heightPct": anchor["heightPct"],
+                    "boxType": anchor_box_type,
+                    "xPct": ann_coords["xPct"],
+                    "yPct": ann_coords["yPct"],
+                    "widthPct": ann_coords["widthPct"],
+                    "heightPct": ann_coords["heightPct"],
                     "pointsLabel": points_label,
                     "operationalVerb": operational_verb,
-                    "answerText": concise_answer,
+                    "answerText": final_ans,
                     "marginNote": margin_note,
                 }
                 if marked_options:

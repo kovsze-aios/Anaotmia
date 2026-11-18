@@ -14,6 +14,7 @@ const fr: Dictionary = {
     brand: "SportNotes",
     atlas: "Atlas 3D",
     textbook: "Manuel",
+    courses: "Cours",
     home: "Accueil",
   },
 

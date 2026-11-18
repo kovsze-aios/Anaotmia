@@ -740,7 +740,9 @@ export function CkeSolvedPdfPageOverlay({
                     ann.markedOptions &&
                     ann.markedOptions.length > 0 &&
                     trimmed.length <= 8 ? (
-                    <span>{ann.markedOptions.join(", ")}</span>
+                    <span className="inline-flex items-center gap-[0.25cqw] rounded-full border-[1.5px] border-[#1b365d]/80 px-[0.45cqw] py-[0.05cqw] leading-none">
+                      ✓ {ann.markedOptions.join(", ")}
+                    </span>
                   ) : (
                     <span className="w-full break-words">{trimmed}</span>
                   )}

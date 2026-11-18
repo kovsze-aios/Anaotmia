@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getTheoryDomains, type TheorySubject } from "@/server";
+import { SPORTNOTES_COURSES } from "@/data/courses";
 import { absoluteUrl } from "@/lib/seo";
 
 /**
@@ -34,10 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), lastModified, changeFrequency: "weekly", priority: 1 },
     { url: absoluteUrl("/theory"), lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: absoluteUrl("/kursy"), lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: absoluteUrl("/matura"), lastModified, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/matura/biologia"), lastModified, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/matura/chemia"), lastModified, changeFrequency: "weekly", priority: 0.8 },
   ];
+
+  const courseRoutes: MetadataRoute.Sitemap = SPORTNOTES_COURSES.map((course) => ({
+    url: absoluteUrl(`/kursy/${course.slug}`),
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
 
   // Subject landing pages rank for the broad query ("anatomia podręcznik") and
   // are the entry point a chapter's breadcrumb points back to.
@@ -59,5 +68,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   );
 
-  return [...staticRoutes, ...subjectRoutes, ...chapterRoutes];
+  return [...staticRoutes, ...courseRoutes, ...subjectRoutes, ...chapterRoutes];
 }

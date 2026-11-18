@@ -29,6 +29,7 @@ const en = {
     brand: "SportNotes",
     atlas: "3D Atlas",
     textbook: "Textbook",
+    courses: "Courses",
     home: "Home",
   },
 

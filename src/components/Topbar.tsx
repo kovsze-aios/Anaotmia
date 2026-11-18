@@ -6,7 +6,7 @@ import { useState } from "react";
 import { SidebarDrawer } from "./Sidebar";
 import { useTheme } from "@/hooks/useTheme";
 import { GlobalSearch } from "./GlobalSearch";
-import { Sun, Moon, Box, BookOpen } from "lucide-react";
+import { Sun, Moon, Box, BookOpen, GraduationCap } from "lucide-react";
 import type { SidebarNavigation } from "@/server/models";
 import { useI18n } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -20,6 +20,7 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
   // The atlas lives at the root (and is mirrored at /atlas); everything textbook-shaped lives under /theory.
   const onAtlas = pathname === "/" || pathname.startsWith("/atlas");
   const onTheory = pathname.startsWith("/theory") || pathname.startsWith("/matura");
+  const onCourses = pathname.startsWith("/kursy");
 
   return (
     <>
@@ -59,6 +60,14 @@ export function Topbar({ navigation }: { navigation: SidebarNavigation }) {
             >
               <BookOpen className="w-4 h-4" aria-hidden="true" />
               <span>{t.nav.textbook}</span>
+            </Link>
+            <Link
+              href="/kursy"
+              className={`topbar-nav__link focus-ring ${onCourses ? "is-active" : ""}`}
+              aria-current={onCourses ? "page" : undefined}
+            >
+              <GraduationCap className="w-4 h-4" aria-hidden="true" />
+              <span>{t.nav.courses}</span>
             </Link>
           </nav>
 

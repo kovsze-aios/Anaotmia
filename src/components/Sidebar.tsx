@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { Box, BookOpen } from "lucide-react";
+import { Box, BookOpen, GraduationCap } from "lucide-react";
 
 import type { SidebarNavigation } from "@/server/models";
 import { useI18n } from "@/i18n";
@@ -155,6 +155,13 @@ export function SidebarDrawer({
             onClick={onClose}
           >
             <BookOpen className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> {t.nav.textbook.toUpperCase()}
+          </Link>
+          <Link
+            href="/kursy"
+            className="drawer-link drawer-link--section focus-ring"
+            onClick={onClose}
+          >
+            <GraduationCap className="inline-block w-4 h-4 mr-2" aria-hidden="true" /> {t.nav.courses.toUpperCase()}
           </Link>
 
           <div className="mobile-drawer__divider" />
