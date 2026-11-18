@@ -1,1 +1,235 @@
-[]
+[
+  {
+    "id": "oer-inf-zlozonosc-obliczeniowa-listy-stosy-i-tablice-mieszajace",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, bazy danych i obliczenia w bioinformatyce",
+    "sourcePdf": "Open_Data_Structures_Morin_CC-BY.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie: Pat Morin, Open Data Structures (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Złożoność asymptotyczna Big-O, tablice dynamiczne, listy oraz tablice mieszające (Hash Tables)",
+      "toc": [
+        { "title": "Notacja Big-O i analiza zamortyzowana", "anchorId": "notacja-big-o" },
+        { "title": "Tablice dynamiczne (ArrayStack) vs listy wiązane", "anchorId": "tablice-vs-listy" },
+        { "title": "Tablice mieszające i obsługa kolizji", "anchorId": "tablice-mieszajace" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"notacja-big-o\">Asymptotyczna złożoność czasowa i pamięciowa</h2><p>Do oceny skalowalności algorytmów względem rozmiaru danych wejściowych <em>n</em> stosuje się <strong>notację Big-O</strong> opisującą górne ograniczenie tempa wzrostu czasu wykonania lub zużycia pamięci przy <em>n &rarr; &infin;</em>. Stałe czynniki i wyrazy niższego rzędu pomija się (<code>O(3n² + 12n + 5) = O(n²)</code>).</p><p>W praktyce rozróżniamy złożoność pesymistyczną (najgorszy przypadek), oczekiwaną (dla algorytmów randomizowanych) oraz <strong>zamortyzowaną</strong> — uśredniającą sporadycznie kosztowne operacje (np. podwajanie tablicy dynamicznej) na ciąg <em>m</em> operacji, co daje zamortyzowany czas <code>O(1)</code> dla operacji <code>append</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"tablice-vs-listy\">Dostęp swobodny w tablicach a struktury wskaźnikowe</h2><p><strong>Tablica ciągła</strong> przechowuje elementy w sąsiednich komórkach pamięci, dzięki czemu indeksowanie <code>A[i]</code> działa w czasie <code>O(1)</code> i doskonale wykorzystuje pamięć podręczną procesora (CPU cache locality). Wstawianie elementu w środku wymaga jednak przesunięcia kolejnych pozycji w czasie <code>O(n)</code>.</p><p><strong>Lista dwukierunkowa (DLList)</strong> składa się z węzłów połączonych referencjami do poprzednika i następnika; usunięcie lub dopięcie znanego węzła zajmuje <code>O(1)</code> bez przesuwania pamięci, jednak dotarcie do <em>i</em>-tego elementu wymaga przejścia łańcucha w czasie <code>O(n)</code>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"tablice-mieszajace\">Haszowanie i oczekiwany czas O(1) dla słowników</h2><p><strong>Tablica mieszająca (Hash Table)</strong> mapuje klucz ze zbioru o dowolnym rozmiarze na indeks małej tablicy kubełków za pomocą funkcji skrótu <code>h(k)</code>. Aby uniknąć degeneracji w przypadku kolizji, stosuje się <strong>łańcuchowanie (chaining)</strong> lub adresowanie otwarte (np. próbkowanie liniowe).</p><p>Przy utrzymaniu współczynnika wypełnienia <code>&lambda; = n / m &le; O(1)</code> (poprzez automatyczne przehaszowanie przy powiększeniu tablicy) oczekiwany czas wyszukania, wstawienia i usunięcia klucza wynosi <code>O(1)</code>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaka jest zamortyzowana złożoność dodania n elementów na koniec dynamicznej tablicy, która podwaja swoją pojemność po każdym przepełnieniu?",
+          "answer": "Koszt zamortyzowany jednej operacji wynosi O(1), ponieważ sumaryczna liczba kopiowań przy podwajaniu tworzy szereg geometryczny ≤ 2n dla n operacji."
+        },
+        {
+          "question": "Dlaczego lista wiązana przegrywa z tablicą dynamiczną przy sekwencyjnym przeglądaniu dużych zbiorów danych?",
+          "answer": "Węzły listy wiązanej są rozrzucone w pamięci sterty (brak spójności przestrzennej w liniach pamięci cache procesora) oraz wymagają dodatkowego narzutu pamięciowego na wskaźniki."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Informatyka — Struktury danych (Open Data Structures CC BY)",
+        "requirementCodes": ["INF-ALG-1", "INF-HASH-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-inf-drzewa-binarne-grafy-i-algorytmy-sciezek",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, bazy danych i obliczenia w bioinformatyce",
+    "sourcePdf": "Open_Data_Structures_Morin_CC-BY.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie: Pat Morin, Open Data Structures (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Drzewa BST i kopce (Heaps), grafy skierowane oraz przeszukiwanie BFS, DFS i Dijkstra",
+      "toc": [
+        { "title": "Drzewa BST i zbalansowanie AVL / Red-Black", "anchorId": "drzewa-bst" },
+        { "title": "Kopce binarne i kolejka priorytetowa", "anchorId": "kopce-binarne" },
+        { "title": "Grafy, BFS, DFS oraz algorytm Dijkstry", "anchorId": "grafy-dijkstra" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"drzewa-bst\">Binarne drzewa poszukiwań (BST) i równoważenie wysokości</h2><p>W <strong>binarnym drzewie poszukiwań (BST)</strong> klucze w lewym poddrzewie są mniejsze, a w prawym większe od klucza korzenia. Przeglądanie <em>in-order</em> zwraca elementy w porządku rosnącym w czasie <code>O(n)</code>.</p><p>Wstawianie posortowanych danych bez równoważenia degeneruje BST do listy jednokierunkowej o wysokości <em>n</em>. Drzewa zrównoważone (AVL, czerwono-czarne) utrzymują za pomocą rotacji wysokość <code>h = O(log n)</code>, gwarantując pesymistyczny czas wyszukiwania <code>O(log n)</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"kopce-binarne\">Kopce binarne i implementacja kolejki priorytetowej</h2><p><strong>Kopiec typu min-heap</strong> to kompletne drzewo binarne zapisane bezpośrednio w zwykłej tablicy (dzieci elementu pod indeksem <em>i</em> znajdują się pod <code>2i + 1</code> i <code>2i + 2</code>), gdzie klucz rodzica jest zawsze nie większy od kluczy jego potomków.</p><p>Odczyt minimum trwa <code>O(1)</code>, a dodanie elementu lub zdjęcie korzenia połączone z przesiewaniem w górę/dół zajmuje dokładnie <code>O(log n)</code>. Na kopcu opiera się algorytm sortowania Heapsort (<code>O(n log n)</code> w miejscu) oraz kolejka priorytetowa w algorytmie Dijkstry.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"grafy-dijkstra\">Przeszukiwanie grafów (BFS / DFS) i najkrótsze ścieżki</h2><p>Graf <code>G = (V, E)</code> reprezentuje się macierzą sąsiedztwa (pamięć <code>O(|V|²)</code>) lub listami sąsiedztwa (<code>O(|V| + |E|)</code> — preferowane w rzadkich sieciach biologicznych i metabolicznych).</p><p><strong>BFS</strong> (kolejka FIFO) odwiedza graf warstwowo i znajduje najkrótsze ścieżki w grafach nieważonych, podczas gdy <strong>DFS</strong> (stos / rekurencja) wykrywa cykle i realizuje sortowanie topologiczne DAG. W grafach ważonych o <em>nieujemnych wagach krawędzi</em> najkrótszą ścieżkę z pojedynczego źródła wyznacza algorytm <strong>Dijkstry</strong> w czasie <code>O((|V| + |E|) log |V|)</code>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaki warunek dotyczący wag krawędzi musi być spełniony, aby algorytm Dijkstry zawsze wyznaczył poprawną najkrótszą ścieżkę?",
+          "answer": "Wszystkie wagi krawędzi w grafie muszą być nieujemne (dla krawędzi ujemnych należy użyć algorytmu Bellmana–Forda)."
+        },
+        {
+          "question": "Dlaczego przeglądanie drzewa BST metodą in-order daje posortowany ciąg kluczy?",
+          "answer": "Kolejność in-order odwiedza najpierw całe lewe poddrzewo (mniejsze wartości), następnie korzeń, a na końcu prawe poddrzewo (większe wartości)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Informatyka — Drzewa i grafy (Open Data Structures CC BY)",
+        "requirementCodes": ["INF-BST-1", "INF-GRAF-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-inf-relacyjne-bazy-danych-sql-normalizacja-1nf-3nf",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, bazy danych i obliczenia w bioinformatyce",
+    "sourcePdf": "Database_Design_2e_Watt_CC-BY.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie: Adrienne Watt & Nelson Eng, Database Design 2nd Edition (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Model relacyjny SQL, więzy integralności, normalizacja (1NF–3NF) oraz indeksy B-tree",
+      "toc": [
+        { "title": "Klucze główne, obce i złączenia JOIN w SQL", "anchorId": "klucze-join" },
+        { "title": "Postacie normalne 1NF, 2NF oraz 3NF", "anchorId": "normalizacja-nf" },
+        { "title": "Transakcje ACID i indeksowanie B-drzewami", "anchorId": "acid-indeksy" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"klucze-join\">Klucze, integralność referencyjna i zapytania JOIN</h2><p>W relacyjnej bazie danych wiersze (krotki) tabeli jednoznacznie identyfikuje <strong>klucz główny (PRIMARY KEY)</strong>, a powiązania między tabelami zapewnia <strong>klucz obcy (FOREIGN KEY)</strong> pilnujący integralności referencyjnej (brak osieroconych rekordów).</p><p>Łączenie danych między encjami (np. pacjent &rarr; wyniki badań laboratoryjnych) realizują złączenia <code>INNER JOIN</code> (tylko pasujące pary), <code>LEFT JOIN</code> (wszystkie rekordy z tabeli lewej mimo braku dopasowania) oraz grupowanie z agregacjami <code>GROUP BY</code> i filtrowaniem grup <code>HAVING</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"normalizacja-nf\">Eliminacja redundancji — postacie normalne 1NF–3NF</h2><p>Normalizacja redukuje anomalie modyfikacji, wstawiania i usuwania:</p><ul><li><strong>1NF:</strong> wartości atrybutów w komórkach muszą być niepodzielne (atomowe), brak powtarzających się grup kolumn.</li><li><strong>2NF:</strong> relacja w 1NF i każdy atrybut niekluczowy jest w pełni funkcyjnie zależny od <em>całego</em> klucza złożonego (brak zależności częściowych).</li><li><strong>3NF:</strong> relacja w 2NF i brak zależności przechodnich między atrybutami niekluczowymi („klucz, cały klucz i nic oprócz klucza”).</li></ul>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"acid-indeksy\">Gwarancje transakcyjne ACID oraz indeksy B+drzewa</h2><p>Transakcje bazodanowe gwarantują właściwości <strong>ACID</strong>: atomowość (wszystko albo nic), spójność (zachowanie reguł i więzów), izolację (współbieżność bez odczytów brudnych danych) oraz trwałość po zatwierdzeniu <code>COMMIT</code>.</p><p>Założenie indeksu (najczęściej w strukturze zbalansowanego <strong>B+drzewa</strong>) przyspiesza zapytania z warunkiem <code>WHERE</code> i operacje <code>JOIN</code> ze skanowania pełnej tabeli <code>O(n)</code> do przeszukania logarytmicznego <code>O(log n)</code> kosztem niewielkiego spowolnienia zapisów <code>INSERT/UPDATE</code>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaka zależność funkcyjna narusza 3. postać normalną (3NF), nawet jeśli tabela spełnia 2NF?",
+          "answer": "Zależność przechodnia, w której kolumna niekluczowa zależy od innej kolumny niekluczowej (np. ID_Pacjenta -> Kod_Pocztowy -> Miasto)."
+        },
+        {
+          "question": "Czym różni się klauzula WHERE od klauzuli HAVING w zapytaniu SQL?",
+          "answer": "WHERE filtruje pojedyncze wiersze przed grupowaniem (GROUP BY), natomiast HAVING filtruje całe utworzone grupy na podstawie wyników funkcji agregujących (np. COUNT, AVG)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Informatyka — Bazy danych SQL (Database Design CC BY)",
+        "requirementCodes": ["INF-SQL-1", "INF-NF-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-inf-python-i-algorytmy-bioinformatyczne-sekwencji-dna",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, bazy danych i obliczenia w bioinformatyce",
+    "sourcePdf": "OpenStax_Intro_Python_Programming_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Algorytmy na tekstach i sekwencjach DNA: zawartość GC, tłumaczenie ORF oraz programowanie dynamiczne",
+      "toc": [
+        { "title": "Przetwarzanie sekwencji FASTA i zawartość GC", "anchorId": "przetwarzanie-fasta" },
+        { "title": "Wyszukiwanie ramek odczytu (ORF) i translacja kodonów", "anchorId": "ramki-odczytu" },
+        { "title": "Dopasowanie sekwencji (Needleman–Wunsch)", "anchorId": "programowanie-dynamiczne" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"przetwarzanie-fasta\">Reprezentacja sekwencji biologicznych i statystyka k-merów</h2><p>Sekwencje nukleotydowe w bioinformatyce reprezentowane są jako niezmienne łańcuchy znaków z alfabetu <code>{A, C, G, T, N}</code> w plikach tekstowych <strong>FASTA</strong> (nagłówek <code>&gt;</code> i ciąg zasad). Obliczanie zawartości par <strong>G+C</strong> (wyznaczającej temperaturę topnienia T<sub>m</sub> starterów PCR) czy transkrypcja do nici komplementarnej przebiega liniowo w czasie <code>O(n)</code> z użyciem map słownikowych parowania zasad.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"ramki-odczytu\">Skanowanie 6 ramek odczytu i słownik kodu genetycznego</h2><p>Wyszukiwanie potencjalnych genów wymaga skanowania sekwencji trójkami nukleotydów (kodonami) w 3 przesunięciach na nici wiodącej oraz 3 na nici odwrotnie komplementarnej. Kodon startowy <code>ATG</code> rozpoczyna otwartą ramkę odczytu (<strong>ORF</strong>), która trwa aż do napotkania kodonu stop (<code>TAA</code>, <code>TAG</code> lub <code>TGA</code>).</p><p>W Pythonie translację każdej trójki na aminokwas realizuje się w stałym czasie <code>O(1)</code> za pomocą struktury typu <code>dict</code> mapującej 64 kodony na jednoliterowe symbole aminokwasów.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"programowanie-dynamiczne\">Programowanie dynamiczne — dopasowanie globalne i dystans edycyjny</h2><p>Porównywanie homologicznych genów uwzględniające mutacje punktowe (substytucje) oraz insercje/delecje (<em>indels</em>) nie może polegać na prostym porównaniu znak-po-znaku. Zamiast wykładniczego sprawdzania wszystkich kombinacji stosuje się <strong>programowanie dynamiczne</strong>.</p><p>Algorytm <strong>Needlemana–Wunscha</strong> (dopasowanie globalne) oraz <strong>Smitha–Watermana</strong> (dopasowanie lokalne) wypełnia macierz punktacji o wymiarach <code>(n+1) &times; (m+1)</code> w czasie <code>O(n&middot;m)</code>, wyznaczając optymalne wyrównanie sekwencji metodą wstecznego śledzenia (traceback).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Ile wynosi złożoność czasowa i pamięciowa wypełnienia pełnej macierzy w klasycznym algorytmie Needlemana–Wunscha dla dwóch sekwencji o długości n i m?",
+          "answer": "Zarówno złożoność czasowa, jak i pamięciowa (dla odtworzenia dopasowania) wynoszą O(n · m)."
+        },
+        {
+          "question": "Dlaczego wyszukując białka w nieoznaczonym fragmencie genomowego DNA sprawdzamy aż 6 ramek odczytu?",
+          "answer": "Kod genetyczny jest trójkowy (3 możliwe przesunięcia fazy odczytu), a gen może znajdować się na dowolnej z dwóch antyrównoległych nici helisy DNA (3 + 3 = 6)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Informatyka — Bioinformatyka i algorytmy tekstowe",
+        "requirementCodes": ["INF-DNA-1", "INF-DP-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-inf-statystyka-obliczeniowa-regresja-i-uczenie-maszynowe",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, bazy danych i obliczenia w bioinformatyce",
+    "sourcePdf": "OpenStax_Principles_of_Data_Science_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Eksploracja danych i uczenie maszynowe: regresja, walidacja krzyżowa oraz metryki ROC/F1",
+      "toc": [
+        { "title": "Podział train/test, overfitting i walidacja krzyżowa", "anchorId": "walidacja-modeli" },
+        { "title": "Regresja liniowa, logistyczna i drzewa decyzyjne", "anchorId": "algorytmy-ml" },
+        { "title": "Macierz pomyłek, precyzja, czułość i AUC-ROC", "anchorId": "metryki-oceny" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"walidacja-modeli\">Przeuczenie (Overfitting) i k-krotna walidacja krzyżowa</h2><p>Głównym celem modelu predykcyjnego jest generalizacja na nowych danych, nie zaś bezbłędne zapamiętanie zbioru uczącego. Zbyt złożony model dopasowuje się do szumu losowego (<strong>overfitting</strong> — niski błąd treningowy, wysoki testowy).</p><p>Aby rzetelnie oszacować zdolność generalizacji i uniknąć wycieku danych (<em>data leakage</em>), standaryzację cech wykonuje się wyłącznie wewnątrz zbioru treningowego, a hiperparametry dobiera się metodą <strong>k-krotnej walidacji krzyżowej (k-fold CV)</strong> na odizolowanym zbiorze walidacyjnym.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"algorytmy-ml\">Nadzorowane uczenie: regresja liniowa, logistyczna i lasy losowe</h2><p>W zadaniach ciągłych (np. przewidywanie stężenia leku lub wydatku energetycznego) stosuje się regresję liniową minimalizującą błąd średniokwadratowy (MSE) oraz regularyzację Ridge (L2) lub Lasso (L1).</p><p>W klasyfikacji binarnej <strong>regresja logistyczna</strong> przekształca kombinację liniową cech funkcją sigmoidalną na prawdopodobieństwo z przedziału <code>(0, 1)</code>, natomiast zespoły drzew (<strong>Random Forest, Gradient Boosting</strong>) wychwytują nieliniowe interakcje między zmiennymi bez konieczności ręcznego skalowania cech.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"metryki-oceny\">Dlaczego Accuracy zawodzi w medycynie — Czułość, Precyzja i F1</h2><p>Gdy choroba występuje u 1% badanej populacji, naiwny klasyfikator zwracający zawsze wynik „zdrowy” osiąga 99% dokładności (Accuracy), lecz jego <strong>czułość (Recall = TP / (TP + FN))</strong> wynosi 0%.</p><p>Dlatego w diagnostyce medycznej i danych niezbalansowanych kluczowe są: <strong>precyzja (Precision)</strong>, średnia harmoniczna <strong>F1-score</strong> oraz pole pod krzywą charakterystyki odbiorczej <strong>AUC-ROC</strong> mierzące zdolność modelu do rozróżniania klas niezależnie od przyjętego progu odcięcia.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego w teście przesiewowym ciężkiej, ale rzadkiej choroby priorytetem jest maksymalizacja czułości (Recall), a nie samej dokładności ogólnej (Accuracy)?",
+          "answer": "Przy rzadkich chorobach wysoka dokładność ogólna jest łatwa do uzyskania przy pominięciu chorych; wysoka czułość minimalizuje liczbę wyników fałszywie ujemnych (FN), chroniąc pacjentów przed brakiem diagnozy."
+        },
+        {
+          "question": "Na czym polega błąd wycieku danych (data leakage) podczas normalizacji cech?",
+          "answer": "Na wyliczeniu średniej i odchylenia standardowego na całym zbiorze (łącznie z zbiorem testowym) przed podziałem danych, co nielegalnie przekazuje informacje o rozkładzie próby testowej do modelu."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Informatyka — Data Science i ML",
+        "requirementCodes": ["INF-ML-1", "INF-ROC-2"],
+        "status": "core"
+      }
+    }
+  }
+]

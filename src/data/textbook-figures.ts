@@ -23,7 +23,11 @@ export const ALL_TEXTBOOK_FIGURES: TextbookFigure[] = [
   ...CHEMIA_TEXTBOOK_FIGURES,
 ];
 
-type FigureSubjectScope = "bioAnatPhysio" | "chemBiochem";
+type FigureSubjectScope =
+  | "bioAnatPhysio"
+  | "chemBiochem"
+  | "bioChemBoth"
+  | "physics";
 
 const FIGURE_KEYWORD_RULES: Array<{
   figureId: string;
@@ -235,6 +239,153 @@ const FIGURE_KEYWORD_RULES: Array<{
       "weglowodor",
     ],
   },
+  {
+    figureId: "fig-anat-uklad-bodzcowy",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "przewodzacy-serca",
+      "bodzcoprzewodz",
+      "bodźcoprzewodz",
+      "wezel-sa",
+      "węzeł zatokowo",
+      "purkinje",
+    ],
+  },
+  {
+    figureId: "fig-anat-rdzen-odruch",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "rdzen-kregowy",
+      "rdzeń kręgowy",
+      "luk-odruchow",
+      "luki-odruchow",
+      "łuk odruchowy",
+      "odruch",
+    ],
+  },
+  {
+    figureId: "fig-fizjo-sarkomer-skurcz",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "sarkomer",
+      "skurcz-miesnia",
+      "skurcz mięśnia",
+      "miozyn",
+      "aktyn",
+      "miesni-szkielet",
+      "mięśnie szkielet",
+    ],
+  },
+  {
+    figureId: "fig-fizjo-os-hpa-stres",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "os-hpa",
+      "oś hpa",
+      "kortyzol",
+      "nadnercz",
+      "stres",
+      "neuroendokryn",
+    ],
+  },
+  {
+    figureId: "fig-bio-lancuch-oddechowy",
+    scope: "bioChemBoth",
+    keywords: [
+      "lancuch-oddechow",
+      "łańcuch oddechowy",
+      "fosforylacja-oksydacyjn",
+      "fosforylacja oksydacyjna",
+      "syntaza-atp",
+      "mitochondri",
+      "oddychanie-komork",
+    ],
+  },
+  {
+    figureId: "fig-bio-cykl-krebsa",
+    scope: "bioChemBoth",
+    keywords: [
+      "cykl-krebs",
+      "cykl krebsa",
+      "kwasu cytrynowego",
+      "acetylo-coa",
+      "dekarboksylacja",
+    ],
+  },
+  {
+    figureId: "fig-bio-mitoza-mejoza",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "mitoz",
+      "mejoz",
+      "podzial-komork",
+      "podział komórk",
+      "crossing-over",
+      "gametogenez",
+    ],
+  },
+  {
+    figureId: "fig-bio-przeciwcialo-igg",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "przeciwcial",
+      "przeciwciał",
+      "immunoglobulin",
+      "uklad-odpornosciow",
+      "układ odporności",
+      "odpornosc",
+      "antygen",
+    ],
+  },
+  {
+    figureId: "fig-chem-rownowaga-le-chatelier",
+    scope: "chemBiochem",
+    keywords: [
+      "rownowag",
+      "równowag",
+      "le chatelier",
+      "przekor",
+      "stala-rownowagi",
+      "kinetyka-chemicz",
+    ],
+  },
+  {
+    figureId: "fig-chem-miareczkowanie-bufory",
+    scope: "chemBiochem",
+    keywords: [
+      "miareczkow",
+      "bufor",
+      "pka",
+      "henderson",
+      "alkacymetr",
+      "punkt-rownowaznik",
+    ],
+  },
+  {
+    figureId: "fig-fiz-rownia-rzut",
+    scope: "physics",
+    keywords: [
+      "rzut-ukosny",
+      "rzut ukośny",
+      "rownia-pochyla",
+      "równia pochyła",
+      "rowni-pochylej",
+      "kinematyka-rzut",
+    ],
+  },
+  {
+    figureId: "fig-fiz-indukcja-rlc",
+    scope: "physics",
+    keywords: [
+      "indukcja-elektromagnet",
+      "indukcja elektromagnet",
+      "obwody-rlc",
+      "obwód rlc",
+      "rezonans",
+      "faraday",
+      "lenz",
+    ],
+  },
 ];
 
 export function getFigureById(id: string): TextbookFigure | undefined {
@@ -260,11 +411,13 @@ export function getFiguresForChapter(options: {
     subj.startsWith("anatomia") ||
     subj.startsWith("fizjologia") ||
     subj.startsWith("biologia") ||
-    subj.startsWith("neurobiologia");
+    subj.startsWith("neurobiologia") ||
+    subj.startsWith("farmakologia");
   const isChemBiochem =
     !subj || subj.startsWith("chemia") || subj.startsWith("biochemia");
+  const isPhysics = !subj || subj.startsWith("fizyka");
 
-  if (!isBioAnatPhysio && !isChemBiochem) {
+  if (!isBioAnatPhysio && !isChemBiochem && !isPhysics) {
     return [];
   }
 
@@ -291,6 +444,8 @@ export function getFiguresForChapter(options: {
     if (matchedIds.has(rule.figureId)) continue;
     if (rule.scope === "bioAnatPhysio" && !isBioAnatPhysio) continue;
     if (rule.scope === "chemBiochem" && !isChemBiochem) continue;
+    if (rule.scope === "bioChemBoth" && !isBioAnatPhysio && !isChemBiochem) continue;
+    if (rule.scope === "physics" && !isPhysics) continue;
     if (rule.keywords.some((kw) => haystack.includes(kw))) {
       const fig = getFigureById(rule.figureId);
       if (fig) {

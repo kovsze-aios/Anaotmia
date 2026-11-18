@@ -6,92 +6,280 @@
     "sourcePdf": "Calculus_Based_Physics_Schnick_CC-BY-SA.pdf",
     "pageRange": "6-13",
     "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / Calculus-Based Physics (Licencja CC BY-SA 4.0)",
     "data": {
       "chapterTitle": "Wprowadzenie do fizyki opartej na rachunku różniczkowym i całkowym – adaptacja OER",
       "toc": [
-        {
-          "title": "Dlaczego napisano tę książkę i udostępniono ją bezpłatnie?",
-          "anchorId": "dlaczego-napisano-ksiazke"
-        },
-        {
-          "title": "Wymagania wobec zadań czytelniczych – perspektywa studenta",
-          "anchorId": "wymagania-czytelnicze"
-        },
-        {
-          "title": "Konflikt między maksymalizacją czytelnictwa a maksymalizacją uczenia się",
-          "anchorId": "konflikt-czytelnictwo-uczenie"
-        },
-        {
-          "title": "Koncepcja „Starting Point Physics” i elastyczność podręcznika",
-          "anchorId": "starting-point-physics"
-        },
-        {
-          "title": "Wolna licencja i poprawianie błędów",
-          "anchorId": "wolna-licencja-poprawianie-bledow"
-        }
+        { "title": "Metoda aktywnego uczenia się w fizyce", "anchorId": "dlaczego-napisano-ksiazke" },
+        { "title": "Zasady analizy zadań czytelniczych", "anchorId": "wymagania-czytelnicze" },
+        { "title": "Zasady zachowania przed kinematyką", "anchorId": "konflikt-czytelnictwo-uczenie" }
       ],
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"dlaczego-napisano-ksiazke\">Dlaczego napisano tę książkę i udostępniono ją bezpłatnie?</h2><p>Podręcznik <em>Calculus-Based Physics</em> powstał z potrzeby stworzenia materiału dydaktycznego, który wspierałby aktywne uczenie się w klasie. Autor, poszukując najlepszych metod aktywizujących, zauważył, że kluczowym warunkiem ich skuteczności jest wcześniejsze przeczytanie przez studentów odpowiedniego fragmentu podręcznika. Wybrano metodę <strong>Peer Tutoring</strong> (tutoring rówieśniczy) Erica Mazura, ale pojawiło się pytanie: jak zmaksymalizować terminowe czytelnictwo podręcznika?</p><p>Idealnie byłoby, gdyby każdy student czytał zadany materiał przed zajęciami. Autor zadał więc pytanie: co zrobić (poza quizami na początku zajęć), aby zachęcić studentów do jak najbliższego zbliżenia się do tego ideału? Odpowiedź wymagała zaprojektowania podręcznika o określonych cechach, które autor – pamiętając własne doświadczenia studenckie – szczegółowo opisał.</p><p>W rezultacie powstał podręcznik, który jest krótki, zrozumiały i nie odsyła czytelnika do wcześniejszych fragmentów tekstu. Autor udostępnił go bezpłatnie, aby ułatwić innym nauczycielom adaptację i modyfikację treści.</p>"
+          "htmlContent": "<h2 id=\"dlaczego-napisano-ksiazke\">Dlaczego fizyka akademicka łączy analizę pojęciową z rachunkiem różniczkowym?</h2><p>Podręcznik <em>Calculus-Based Physics</em> został zaprojektowany z myślą o aktywnym uczeniu się (Peer Instruction). Kluczowe pojęcia fizyczne wymagają zrozumienia założeń przed podstawieniem liczb do wzorów.</p><p>W praktyce egzaminacyjnej największym zagrożeniem jest mechaniczne stosowanie wzorów kinematyki ruchu jednostajnie przyspieszonego w układach, w których siła zależy od położenia (np. siła sprężystości Hooke'a lub pole grawitacyjne i elektrostatyczne).</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"wymagania-czytelnicze\">Wymagania wobec zadań czytelniczych – perspektywa studenta</h2><p>Autor, wcielając się w rolę studenta, sformułował trzy główne postulaty dotyczące zadań czytelniczych:</p><ul><li><strong>Krótkość i zwięzłość</strong> – zadania muszą być jak najkrótsze, pozbawione zbędnych historii, obrazków niezwiązanych z tematem, powtórzeń i bananów. Należy podawać tylko niezbędne fakty i wyjaśnienia, a część zastosowań pozostawić na zajęcia.</li><li><strong>Zrozumiałość</strong> – unikać żargonu lub dokładnie go definiować przy pierwszym użyciu; powtarzać definicje, jeśli od ostatniego użycia minęło dużo czasu. Krótkość oznacza minimalizację czasu potrzebnego na zrozumienie, a nie liczby stron.</li><li><strong>Brak konieczności wyszukiwania wcześniejszych wzorów i rysunków</strong> – zamiast odsyłać do wcześniejszych fragmentów, należy powtórzyć wzór lub rysunek w miejscu, w którym jest potrzebny, aby nie przerywać czytania.</li></ul><p>Te postulaty mają na celu maksymalizację zrozumienia przy minimalnym nakładzie czasu.</p>"
+          "htmlContent": "<h2 id=\"wymagania-czytelnicze\">Trzy filary sprawnej pracy z tekstem fizycznym</h2><ul><li><strong>Precyzja definicji</strong> – odróżnianie wielkości skalarnych (praca, energia, potencjał) od wektorowych (siła, pęd, natężenie pola).</li><li><strong>Sprawdzanie założeń</strong> – równanie <code>s = v<sub>0</sub>t + &frac12;at<sup>2</sup></code> obowiązuje wyłącznie przy stałym wektorze przyspieszenia.</li><li><strong>Prym zasobów zachowania</strong> – zasada zachowania energii mechanicznej i pędu często prowadzi do rozwiązania bez całkowania równań ruchu.</li></ul>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"konflikt-czytelnictwo-uczenie\">Konflikt między maksymalizacją czytelnictwa a maksymalizacją uczenia się</h2><p>Autor zauważa, że tradycyjne podręczniki często stoją w sprzeczności z celem maksymalizacji terminowego czytelnictwa i maksymalizacji uczenia się. Przykładem jest kolejność tematów: tradycyjnie zaczyna się od kinematyki, a następnie przechodzi do drugiej zasady dynamiki Newtona. To prowadzi studentów do stosowania równań ruchu o stałym przyspieszeniu nawet w problemach, gdzie przyspieszenie nie jest stałe (np. sprężyny, grawitacja, prawo Coulomba).</p><p>Autor proponuje rozpoczęcie kursu od krótkiego wprowadzenia do zasad zachowania (pędu i energii), co skłania studentów do częstszego ich stosowania. Jednak podręczniki o tradycyjnym układzie tematów zakładają znajomość pojęć z wcześniejszych rozdziałów, co utrudnia takie podejście. Przenoszenie rozdziałów nie rozwiązuje problemu, ponieważ późniejszy materiał opiera się na wcześniejszym. Potrzebna jest elastyczność, której tradycyjne podręczniki nie oferują.</p>"
-        },
-        {
-          "pageNumber": 4,
-          "htmlContent": "<h2 id=\"starting-point-physics\">Koncepcja „Starting Point Physics” i elastyczność podręcznika</h2><p>Autor rozważał tytuł „Starting Point Physics” (Fizyka od punktu wyjścia), który miałby trzy interpretacje:</p><ol><li>Podręcznik dla studenta rozpoczynającego naukę fizyki na poziomie akademickim.</li><li>Punkt wyjścia dla doświadczonego nauczyciela, który może dostosować książkę do własnego kursu poprzez zmiany kolejności rozdziałów, dodawanie/usuwanie treści, modyfikację wzorów i wyjaśnień.</li><li>Podręcznik dla nowego nauczyciela, który uczy przedmiotu po raz pierwszy – może go użyć jako podstawy i z czasem dostosować do własnych mocnych stron i potrzeb studentów.</li></ol><p>Autor ma nadzieję, że inni fizycy będą edytować i udostępniać swoje wersje podręcznika, co stworzy ekosystem elastycznych materiałów dydaktycznych.</p>"
-        },
-        {
-          "pageNumber": 5,
-          "htmlContent": "<h2 id=\"wolna-licencja-poprawianie-bledow\">Wolna licencja i poprawianie błędów</h2><p>Bezpłatne udostępnienie podręcznika umożliwia szybkie poprawianie błędów. Autor zauważa, że tradycyjne podręczniki często zawierają błędy z powodu pośpiechu w wydawaniu nowych edycji. Dzięki wersji online może na bieżąco wprowadzać poprawki, dążąc do perfekcji.</p><p>Autor nie uważa rosnących kosztów podręczników za główny powód napisania książki, ale dostrzega korzyść w postaci niskiej ceny. Rozumie obawy o koszty, ale uważa, że mechanizmy rynkowe i grupy nacisku (np. „Make Textbooks Affordable”) mają wpływ na rynek. Podkreśla, że autorzy i wydawcy reagują na popyt, dodając kolorowe zdjęcia, nowe edycje i bogactwo zadań, co podnosi koszty, ale zwiększa sprzedaż.</p>"
+          "htmlContent": "<h2 id=\"konflikt-czytelnictwo-uczenie\">Od zasad zachowania do równań ruchu</h2><p>Zacząć analizę układu fizycznego warto od bilansu energii i pędu. W biofizyce podejście to pozwala bezpośrednio wyznaczać prędkość przepływu krwi (równanie Bernoulliego) czy pracę skurczu mięśnia.</p>"
         }
       ],
       "chapterQuiz": [
         {
-          "question": "Wyjaśnij, dlaczego autor podręcznika „Calculus-Based Physics” zdecydował się na jego bezpłatne udostępnienie. Podaj dwa główne powody.",
-          "answer": "Przyczyna: Potrzeba stworzenia elastycznego podręcznika wspierającego aktywne uczenie się i możliwość szybkiej poprawy błędów. Mechanizm: Udostępnienie na wolnej licencji pozwala nauczycielom na adaptację i modyfikację treści, a autorowi na natychmiastowe wprowadzanie poprawek. Skutek: Zwiększenie dostępności i jakości materiałów dydaktycznych oraz stworzenie ekosystemu edytowalnych podręczników."
+          "question": "Dlaczego nie wolno stosować wzoru s = ½at² dla drgającego ciężarka na sprężynie?",
+          "answer": "Ponieważ siła sprężystości F = −kx zależy od wychylenia x, więc przyspieszenie a = −(k/m)x nie jest stałe w czasie."
         },
         {
-          "question": "Jakie trzy cechy powinny mieć zadania czytelnicze, aby zmaksymalizować prawdopodobieństwo, że student je wykona? Uzasadnij każdą z nich.",
-          "answer": "1. Krótkość – minimalizuje czas potrzebny na czytanie, co jest istotne przy wielu obowiązkach. 2. Zrozumiałość – jasny język i definiowanie żargonu减少 czasu potrzebnego na zrozumienie. 3. Brak konieczności wyszukiwania wcześniejszych wzorów – powtarzanie wzorów i rysunków w miejscu użycia zapobiega przerwom w czytaniu i oszczędza czas."
-        },
-        {
-          "question": "Wykaż, w jaki sposób tradycyjny układ podręcznika (kinematyka, następnie dynamika Newtona) może prowadzić do błędów w rozwiązywaniu problemów przez studentów. Podaj przykład.",
-          "answer": "Przyczyna: Studenci uczą się najpierw kinematyki i równań ruchu o stałym przyspieszeniu, a następnie dynamiki Newtona. Mechanizm: W problemach, gdzie przyspieszenie nie jest stałe (np. sprężyny, grawitacja), studenci mogą niewłaściwie stosować równania dla stałego przyspieszenia, zamiast zasad zachowania energii lub pędu. Skutek: Błędne rozwiązania i niezrozumienie koncepcji."
-        },
-        {
-          "question": "Wyjaśnij koncepcję „Starting Point Physics” i jej trzy interpretacje. Dlaczego autor uważa, że elastyczność podręcznika jest istotna?",
-          "answer": "Koncepcja: Tytuł podręcznika odnoszący się do punktu wyjścia. Interpretacje: 1) podręcznik dla studenta rozpoczynającego naukę fizyki; 2) punkt wyjścia dla doświadczonego nauczyciela do dostosowania kursu; 3) podstawa dla nowego nauczyciela. Elastyczność jest istotna, ponieważ pozwala nauczycielom dopasować materiał do własnego stylu nauczania i potrzeb studentów, co poprawia skuteczność dydaktyki."
+          "question": "Jakie trzy cechy ułatwiają przyswajanie wywodów z fizyki matematycznej?",
+          "answer": "Krótka forma skoncentrowana na istocie zjawiska, jasne definiowanie pojęć (z odróżnieniem wektorów i skalarów) oraz powtarzanie potrzebnych zależności bez przerywania toku rozumowania skraca czas potrzebny do zrozumienia."
         }
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": [
-          "2015",
-          "2023",
-          "academic"
-        ],
-        "sectionCode": "Fizyka i Biofizyka (OER) – Mechanika klasyczna, płyny i termodynamika medyczna",
-        "requirementCodes": [
-          "OER-1"
-        ],
-        "status": "core",
-        "diffs2015vs2023": "Wymagania maturalne 2015 i 2023+ koncentrują się na treściach fizycznych, a nie na metadydaktyce. Ten materiał jest dodatkiem akademickim, który wyjaśnia filozofię tworzenia podręcznika i może być użyteczny dla przyszłych nauczycieli. Nie jest bezpośrednio egzaminowany, ale wspiera zrozumienie procesu uczenia się.",
-        "examTraps": [
-          "Studenci mogą błędnie sądzić, że podręcznik akademicki musi być obszerny i encyklopedyczny – wręcz przeciwnie, zwięzłość i klarowność są kluczowe dla skutecznego uczenia się.",
-          "Częstym błędem jest stosowanie równań kinematyki dla stałego przyspieszenia w sytuacjach, gdy przyspieszenie nie jest stałe – należy zawsze sprawdzić założenia."
-        ],
-        "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / LibreTexts (Licencja CC BY-SA 4.0 / CC BY 4.0)"
-      },
-      "processingMode": "DIRECT_ADAPTATION",
-      "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / LibreTexts (Licencja CC BY-SA 4.0 / CC BY 4.0)"
-    },
-    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / LibreTexts (Licencja CC BY-SA 4.0 / CC BY 4.0)"
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Fizyka i Biofizyka (OER) – Mechanika klasyczna",
+        "requirementCodes": ["OER-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-kinematyka-rzut-ukosny-i-dynamika-rowni",
+    "domainId": "fizyka-mechanika-i-termodynamika",
+    "domainTitle": "Mechanika klasyczna, płyny i termodynamika medyczna",
+    "sourcePdf": "OpenAGH_Mechanika_i_Termodynamika_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH / OpenStax Fizyka Tom 1 (Licencja CC BY-SA 4.0 / CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Kinematyka wektorowa, rzut ukośny oraz rozkład sił na równi pochyłej",
+      "toc": [
+        { "title": "Zasada niezależności ruchów w rzucie ukośnym", "anchorId": "rzut-ukosny" },
+        { "title": "Rozkład sił na równi pochyłej z tarciem", "anchorId": "rownia-pochyla" },
+        { "title": "Zastosowanie w biomechanice stawów i kręgosłupa", "anchorId": "biomechanika-sil" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"rzut-ukosny\">Zasada niezależności ruchów i rzut ukośny</h2><p>Ruch ciała wyrzuconego z prędkością początkową <em>v<sub>0</sub></em> pod kątem &alpha; do poziomu (przy pominięciu oporu powietrza) stanowi superpozycję dwóch niezależnych ruchów: jednostajnego w kierunku poziomym (<code>v<sub>x</sub> = v<sub>0</sub>&middot;cos&alpha;</code>) oraz jednostajnie zmiennego w pionie pod wpływem przyspieszenia ziemskiego <em>g</em> (<code>v<sub>y</sub>(t) = v<sub>0</sub>&middot;sin&alpha; &minus; g&middot;t</code>).</p><ul><li><strong>Czas wznoszenia:</strong> <code>t<sub>w</sub> = (v<sub>0</sub>&middot;sin&alpha;) / g</code> — w najwyższym punkcie toru składowa pionowa prędkości wynosi zero (v<sub>y</sub> = 0), lecz przyspieszenie nadal wynosi <em>g</em> w dół.</li><li><strong>Zasięg poziomy:</strong> <code>Z = (v<sub>0</sub><sup>2</sup>&middot;sin(2&alpha;)) / g</code> — maksimum osiągane jest dla kąta wyrzutu &alpha; = 45&deg;.</li></ul>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"rownia-pochyla\">Rozkład siły ciężkości na równi pochyłej</h2><p>W układzie współrzędnych związanym z równią pochyłą o kącie nachylenia &alpha; wektor ciężaru <code>Q = m&middot;g</code> rozkładamy na dwie składowe prostopadłe względem powierzchni równi:</p><ul><li><strong>Siła zsuwająca (równoległa do równi):</strong> <code>F<sub>z</sub> = m&middot;g&middot;sin&alpha;</code>.</li><li><strong>Siła dociskająca i reakcja normalna (prostopadła):</strong> <code>N = F<sub>n</sub> = m&middot;g&middot;cos&alpha;</code>.</li><li><strong>Siła tarcia kinetycznego:</strong> <code>T = &mu;&middot;N = &mu;&middot;m&middot;g&middot;cos&alpha;</code>, skierowana przeciwnie do kierunku ruchu.</li></ul><p>Z II zasady dynamiki Newtona przyspieszenie ciała zsuwającego się w dół wynosi <code>a = g&middot;(sin&alpha; &minus; &mu;&middot;cos&alpha;)</code> i w ruchu bez oporów nie zależy od masy ciała.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"biomechanika-sil\">Znaczenie rozkładu sił w biomechanice układu ruchu</h2><p>Ten sam model wektorowy opisuje składowe siły mięśni przyczepiających się pod kątem do trzonów kości długich (składowa obrotowa prostopadła do osi kości oraz składowa dociskająca powierzchnie stawowe) oraz siły ścinające działające na krążki międzykręgowe podczas pochylania tułowia.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaka jest wartość przyspieszenia i prędkości ciała w najwyższym punkcie toru rzutu ukośnego?",
+          "answer": "Prędkość pionowa v_y wynosi 0, więc całkowita prędkość równa się składowej poziomej v_0·cos(α), natomiast przyspieszenie nadal ma stałą wartość g i skierowane jest pionowo w dół."
+        },
+        {
+          "question": "Wyprowadź warunek granicznego kąta równi pochyłej, przy którym spoczywające ciało zaczyna się zsuwać przy współczynniku tarcia statycznego μ_s.",
+          "answer": "Ruch rozpoczyna się, gdy siła zsuwająca przewyższy maksymalne tarcie statyczne: m·g·sin(α) > μ_s·m·g·cos(α), co daje warunek tg(α) > μ_s."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Fizyka — Kinematyka i dynamika bryły (Open AGH / OpenStax Tom 1)",
+        "requirementCodes": ["FIZ-KIN-1", "FIZ-DYN-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-ruch-drgajacy-fale-i-akustyka-medyczna",
+    "domainId": "fizyka-mechanika-i-termodynamika",
+    "domainTitle": "Mechanika klasyczna, płyny i termodynamika medyczna",
+    "sourcePdf": "OpenStax_PL_Fizyka_dla_szkol_wyzszych_Tom_1.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów OpenStax Fizyka dla szkół wyższych Tom 1 (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Drgania harmoniczne, fale mechaniczne, efekt Dopplera i ultrasonografia (USG)",
+      "toc": [
+        { "title": "Oscylator harmoniczny prosty i rezonans", "anchorId": "oscylator-harmoniczny" },
+        { "title": "Fale akustyczne i natężenie dźwięku (decybele)", "anchorId": "akustyka-i-usg" },
+        { "title": "Efekt Dopplera w pomiarze przepływu krwi", "anchorId": "doppler-medyczny" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"oscylator-harmoniczny\">Ruch harmoniczny prosty i energia drgań</h2><p>W prostym ruchu harmonicznym siła zwracająca jest wprost proporcjonalna do wychylenia i skierowana ku położeniu równowagi: <code>F = &minus;k&middot;x</code>. Okres drgań układu masa–sprężyna wynosi <code>T = 2&pi;&middot;&radic;(m/k)</code>, a dla wahadła matematycznego o długości <em>l</em> w małych kątach <code>T = 2&pi;&middot;&radic;(l/g)</code>.</p><p>Całkowita energia mechaniczna oscylatora bez tłumienia jest stała (<code>E<sub>c</sub> = &frac12;&middot;k&middot;A<sup>2</sup></code>) i ulega cyklicznej przemianie między energią kinetyczną (maksimum w x = 0) a potencjalną sprężystości (maksimum w x = &plusmn;A).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"akustyka-i-usg\">Fale akustyczne, impedancja i ultrasonografia</h2><p>Prędkość rozchodzenia się fali harmonicznej spełnia równanie <code>v = &lambda;&middot;f</code>. W medycynie ultradźwięki (f = 2–18 MHz) generuje się za pomocą przetworników piezoelektrycznych. Odbicie fali na granicy dwóch tkanek o różnych <strong>impedancjach akustycznych</strong> (<code>Z = &rho;&middot;v</code>) umożliwia rekonstrukcję obrazu USG bez użycia promieniowania jonizującego.</p><p>W powietrzu i kości różnica impedancji względem tkanek miękkich jest bardzo duża (silne odbicie), dlatego stosuje się żel sprzęgający eliminujący pęcherzyki powietrza między głowicą a skórą.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"doppler-medyczny\">Zjawisko Dopplera w echokardiografii</h2><p>Gdy fala ultradźwiękowa odbija się od poruszających się erytrocytów o prędkości <em>v<sub>k</sub></em>, obserwowana częstotliwość fali odbitej ulega przesunięciu (przesunięcie dopplerowskie <code>&Delta;f &prop; 2&middot;f<sub>0</sub>&middot;(v<sub>k</sub>&middot;cos&theta;)/c</code>). Pozwala to nieinwazyjnie wyznaczyć kierunek oraz szybkość przepływu krwi przez zastawki serca i tętnice szyjne.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego podczas badania USG nakłada się żel na skórę pacjenta?",
+          "answer": "Żel usuwa cienką warstwę powietrza między głowicą a skórą; ze względu na ogromną różnicę impedancji akustycznej powietrza i tkanki niemal 99,9% wiązki uległoby odbiciu na powierzchni skóry bez żelu."
+        },
+        {
+          "question": "Jak zmienia się okres drgań wahadła matematycznego przy czterokrotnym wydłużeniu nici?",
+          "answer": "Ponieważ T ∝ √l, czterokrotne wydłużenie nici powoduje dwukrotny wzrost okresu drgań T."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Fizyka — Ruch drgający i akustyka (OpenStax Tom 1)",
+        "requirementCodes": ["FIZ-DRG-1", "FIZ-FAL-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-pole-elektryczne-kondensatory-i-blona-komorkowa",
+    "domainId": "fizyka-elektromagnetyzm-i-obrazowanie",
+    "domainTitle": "Elektromagnetyzm, optyka i fizyka obrazowania medycznego",
+    "sourcePdf": "OpenAGH_Elektromagnetyzm_i_Optyka_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH Elektromagnetyzm i Optyka (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Pole elektryczne, prawo Coulomba, kondensator i model elektryczny błony komórkowej",
+      "toc": [
+        { "title": "Prawo Coulomba, natężenie i potencjał pola", "anchorId": "pole-elektryczne" },
+        { "title": "Pojemność kondensatora i stała czasowa RC", "anchorId": "kondensator-rc" },
+        { "title": "Dwuwarstwa lipidowa jako kondensator biofizyczny", "anchorId": "blona-jako-kondensator" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"pole-elektryczne\">Prawo Coulomba, natężenie pola oraz napięcie</h2><p>Siła oddziaływania elektrostatycznego między dwoma ładunkami punktowymi <em>q<sub>1</sub></em> i <em>q<sub>2</sub></em> w ośrodku o względnej przenikalności elektrycznej &epsilon;<sub>r</sub> wynosi <code>F = (k&middot;|q<sub>1</sub>&middot;q<sub>2</sub>|) / (&epsilon;<sub>r</sub>&middot;r<sup>2</sup>)</code>. Przenosząc jednostkowy ładunek w jednorodnym polu o natężeniu <em>E</em> między punktami odległymi o <em>d</em> wzdłuż linii pola, wiążemy napięcie z natężeniem zależnościami <code>U = E&middot;d</code>.</p><p>W roztworach wodnych wysoka przenikalność dielektryczna wody (&epsilon;<sub>r</sub> &approx; 80) osłabia oddziaływania między jonami, ułatwiając dysocjację elektrolitów.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"kondensator-rc\">Kondensator płaski, energia pola oraz układ RC</h2><p>Pojemność kondensatora płaskiego o powierzchni okładek <em>S</em> oddalonych o <em>d</em> i wypełnionych dielektrykiem wynosi <code>C = (&epsilon;<sub>0</sub>&middot;&epsilon;<sub>r</sub>&middot;S) / d</code>, a zgromadzona w nim energia elektryczna <code>E<sub>el</sub> = &frac12;&middot;C&middot;U<sup>2</sup></code> (wykorzystywana m.in. w defibrylatorach klinicznych).</p><p>W obwodzie szeregowym RC rozładowanie kondensatora przebiega wykładniczo ze stałą czasową <code>&tau; = R&middot;C</code>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"blona-jako-kondensator\">Błona komórkowa i osłonka mielinowa w modelu RC</h2><p>Błona biologiczna (grubość ok. 7 nm, hydrofobowy rdzeń lipidowy jako izolator) rozdziela przewodzące roztwory elektrolitów cytozolu i płynu zewnątrzkomórkowego, tworząc naturalny kondensator o pojemności ok. <code>1 &mu;F/cm<sup>2</sup></code>. Natężenie pola w poprzek błony przy potencjale &minus;70 mV sięga aż 10<sup>7</sup> V/m. Osłonka mielinowa zwiększa efektywną grubość <em>d</em> izolatora, drastycznie obniżając pojemność C<sub>m</sub> i skracając stałą czasową &tau;, co przyspiesza skokowe przewodzenie impulsu nerwowego.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak osłonka mielinowa (zwiększenie grubości izolatora d) wpływa na pojemność elektryczną błony aksonu i szybkość rozprzestrzeniania impulsu?",
+          "answer": "Ponieważ C = (ε·S)/d, zwiększenie efektywnej grubości izolatora d zmniejsza pojemność błony C_m i zmniejsza stałą czasową τ = R_i·C_m, dzięki czemu potrzebny jest znacznie mniejszy ładunek do przeładowania kolejnego przewężenia Ranviera."
+        },
+        {
+          "question": "Jak zmienia się pojemność kondensatora płaskiego po dwukrotnym zbliżeniu okładek i wsunięciu dielektryka o ε_r = 4?",
+          "answer": "Pojemność wzrośnie 8-krotnie (2 razy dzięki zmniejszeniu d o połowę oraz 4 razy dzięki dielektrykowi)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Fizyka — Elektrostatyka i bioelektryczność (Open AGH)",
+        "requirementCodes": ["FIZ-EL-1", "FIZ-OBW-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-indukcja-elektromagnetyczna-i-obwody-rlc",
+    "domainId": "fizyka-elektromagnetyzm-i-obrazowanie",
+    "domainTitle": "Elektromagnetyzm, optyka i fizyka obrazowania medycznego",
+    "sourcePdf": "OpenAGH_Elektromagnetyzm_i_Optyka_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH Elektromagnetyzm i Optyka (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Indukcja elektromagnetyczna Faradaya, prawo Lenza oraz obwody prądu przemiennego RLC",
+      "toc": [
+        { "title": "Strumień magnetyczny i prawo indukcji Faradaya", "anchorId": "indukcja-faradaya" },
+        { "title": "Reguła Lenza i prądy wirowe", "anchorId": "regula-lenza" },
+        { "title": "Impedancja i rezonans w obwodzie RLC", "anchorId": "rezonans-rlc" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"indukcja-faradaya\">Strumień indukcji magnetycznej i prawo Faradaya</h2><p>Strumień pola magnetycznego przechodzący przez płaską powierzchnię o polu <em>S</em> wynosi <code>&Phi;<sub>B</sub> = B&middot;S&middot;cos&alpha;</code> (jednostka: weber, Wb). Zgodnie z <strong>prawem indukcji elektromagnetycznej Faradaya</strong> w obwodzie indukuje się siła elektromotoryczna proporcjonalna do szybkości zmian tego strumienia w czasie:</p><p><code>&epsilon; = &minus;N &middot; (d&Phi;<sub>B</sub> / dt)</code></p><p>Zmianę strumienia można uzyskać przez zmianę wartości indukcji <em>B(t)</em>, pola powierzchni <em>S(t)</em> lub obrót zwojnicy w polu magnetycznym (zmiana kąta &alpha; — zasada działania prądnicy).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"regula-lenza\">Reguła Lenza — konsekwencja zasady zachowania energii</h2><p>Znak minus w równaniu Faradaya wyraża <strong>regułę Lenza</strong>: prąd indukcyjny ma zawsze taki kierunek, że wytworzone przez niego pole magnetyczne przeciwdziała zmianie strumienia, która go wywołała. Zjawisko to wykorzystuje się m.in. w bezkontaktowych hamulcach elektromagnetycznych (prądy wirowe) oraz w cewkach odbiorczych skanera MRI rejestrujących precesujące spiny protonów.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"rezonans-rlc\">Obwód szeregowy RLC i częstotliwość rezonansowa</h2><p>W obwodzie prądu przemiennego zawierającym opornik <em>R</em>, cewkę o indukcyjności <em>L</em> i kondensator o pojemności <em>C</em> zawada (impedancja) wynosi <code>Z = &radic;(R<sup>2</sup> + (X<sub>L</sub> &minus; X<sub>C</sub>)<sup>2</sup>)</code>, gdzie <code>X<sub>L</sub> = &omega;L</code> oraz <code>X<sub>C</sub> = 1/(&omega;C)</code>.</p><p>Gdy <code>X<sub>L</sub> = X<sub>C</sub></code>, obwód osiąga <strong>rezonans napięć</strong> (częstotliwość Thomsona <code>f<sub>0</sub> = 1 / (2&pi;&radic;(LC))</code>): impedancja spada do minimum (Z = R), a natężenie prądu osiąga maksimum — zasada strojenia odbiorników radiowych i cewek RF w rezonansie magnetycznym.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak obliczyć częstotliwość rezonansową f₀ szeregowego obwodu RLC i jaka jest wówczas jego zawada Z?",
+          "answer": "f₀ = 1 / (2π√(LC)). W stanie rezonansu reaktancja indukcyjna równoważy pojemnościową (X_L = X_C), więc zawada obwodu osiąga wartość minimalną równą samemu oporowi omowemu Z = R."
+        },
+        {
+          "question": "Dlaczego prąd indukcyjny nie może wspomagać przyczyny zmian strumienia magnetycznego?",
+          "answer": "Zgodnie z regułą Lenza (zachowaniem energii), gdyby prąd wzmacniał zmianę strumienia, układ sam przyspieszałby w nieskończoność, tworząc energię z niczego."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Fizyka — Indukcja i prąd przemienny (Open AGH)",
+        "requirementCodes": ["FIZ-MAG-2", "FIZ-IND-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-optyka-geometryczna-falowa-i-fizyka-oka",
+    "domainId": "fizyka-elektromagnetyzm-i-obrazowanie",
+    "domainTitle": "Elektromagnetyzm, optyka i fizyka obrazowania medycznego",
+    "sourcePdf": "OpenStax_PL_Fizyka_dla_szkol_wyzszych_Tom_3.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów OpenStax Fizyka dla szkół wyższych Tom 3 (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Optyka geometryczna i falowa: równanie soczewki, zdolność skupiająca i fizyka oka ludzkiego",
+      "toc": [
+        { "title": "Prawo Snella, równanie soczewki i powiększenie", "anchorId": "rownanie-soczewki" },
+        { "title": "Optyka narządu wzroku — krótkowzroczność i nadwzroczność", "anchorId": "optyka-oka" },
+        { "title": "Dyfrakcja na szczelinie i granica rozdzielczości mikroskopu", "anchorId": "dyfrakcja-mikroskop" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"rownanie-soczewki\">Załamanie światła i równanie cienkiej soczewki</h2><p>Przy przejściu promienia między ośrodkami o współczynnikach załamania <em>n<sub>1</sub></em> i <em>n<sub>2</sub></em> obowiązuje <strong>prawo Snella</strong>: <code>n<sub>1</sub>&middot;sin&theta;<sub>1</sub> = n<sub>2</sub>&middot;sin&theta;<sub>2</sub></code>. Gdy światło biegnie do ośrodka optycznie rzadszego powyżej kąta granicznego (<code>sin&theta;<sub>gr</sub> = n<sub>2</sub>/n<sub>1</sub></code>), zachodzi <strong>całkowite wewnętrzne odbicie</strong> — podstawa działania światłowodów endoskopowych.</p><p>Równanie cienkiej soczewki wiąże ogniskową <em>f</em>, odległość przedmiotu <em>x</em> i obrazu <em>y</em>: <code>Z = 1/f = 1/x + 1/y</code> (zdolność skupiająca Z wyrażana jest w dioptriach, 1 D = 1 m<sup>&minus;1</sup>).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"optyka-oka\">Układ optyczny oka i korekcja wad refrakcji</h2><p>Rogówka (ok. 43 D) i soczewka (zmieniająca krzywiznę w procesie akomodacji, ok. 17–25 D) ogniskują obraz na siatkówce. W <strong>krótkowzroczności</strong> gałka oczna jest zbyt długa lub moc układu za duża — obraz powstaje przed siatkówką, co koryguje się soczewkami <strong>rozpraszającymi (wklęsłymi, Z &lt; 0)</strong>. W <strong>nadwzroczności</strong> obraz powstaje za siatkówką i wymaga korekcji soczewkami <strong>skupiającymi (wypukłymi, Z &gt; 0)</strong>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"dyfrakcja-mikroskop\">Dyfrakcja światła i zdolność rozdzielcza mikroskopu</h2><p>Maksima interferencyjne siatki dyfrakcyjnej o stałej <em>d</em> występują pod kątami spełniającymi równanie <code>d&middot;sin&theta; = n&middot;&lambda;</code>. Dyfrakcja na aperturze obiektywu nakłada fundamentalną granicę rozdzielczości (kryterium Abbego/Rayleigha): mikroskop świetlny nie rozróżni struktur mniejszych niż ok. połowa długości fali świetlnej (~200 nm), co wymusza użycie mikroskopu elektronowego (krótka fala de Broglie'a elektronów) do badania organelli komórkowych.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaką soczewką (i o jakim znaku zdolności skupiającej) koryguje się krótkowzroczność?",
+          "answer": "Soczewką rozpraszającą (dwuwklęsłą) o ujemnej zdolności skupiającej (Z < 0 dioptrii), która cofa ognisko na siatkówkę."
+        },
+        {
+          "question": "Dlaczego światłowód używany w endoskopii przewodzi światło mimo zgięć przewodu?",
+          "answer": "Wykorzystuje zjawisko całkowitego wewnętrznego odbicia na granicy szkła rdzenia o wyższym współczynniku załamania n₁ oraz płaszcza o niższym współczynniku n₂."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Fizyka — Optyka geometryczna i falowa (OpenStax Tom 3)",
+        "requirementCodes": ["FIZ-OPT-1", "FIZ-FAL-3"],
+        "status": "core"
+      }
+    }
   }
 ]

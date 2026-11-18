@@ -758,6 +758,320 @@ function SchematicArtwork({
         </g>
       )}
 
+      {/* 16. Układ bodźcoprzewodzący serca */}
+      {theme === "cardiac-conduction" && (
+        <g>
+          {/* Sylwetka serca i przegroda */}
+          <path
+            d="M 50 18 C 72 14, 86 30, 82 54 C 78 74, 62 86, 48 88 C 30 84, 18 66, 20 42 C 22 24, 34 18, 50 18 Z"
+            fill="#18181b"
+            stroke="#52525b"
+            strokeWidth="0.9"
+          />
+          <line x1="49" y1="42" x2="49" y2="85" stroke="#3f3f46" strokeWidth="1.2" />
+          {/* Szlaki przewodzenia */}
+          <path d="M 30 28 C 36 30, 44 36, 48 42" fill="none" stroke="#e4e4e7" strokeWidth="0.9" strokeDasharray="2 1" />
+          <path d="M 48 42 L 49 54" fill="none" stroke="#fafafa" strokeWidth="1.3" />
+          <path d="M 49 54 C 44 64, 32 74, 24 62 C 21 56, 21 48, 24 44" fill="none" stroke="#d4d4d8" strokeWidth="1.0" />
+          <path d="M 49 54 C 55 66, 68 78, 76 62 C 79 54, 78 46, 74 42" fill="none" stroke="#fafafa" strokeWidth="1.1" />
+          {/* Węzły i pęczki */}
+          <circle cx="30" cy="28" r="4.2" fill="#27272a" stroke="#fafafa" strokeWidth="1.1" />
+          <circle cx="48" cy="42" r="3.6" fill="#27272a" stroke="#e4e4e7" strokeWidth="1.0" />
+          <circle cx="49" cy="54" r="2.2" fill="#fafafa" />
+          <text x="16" y="21" fill="#fafafa" fontSize="2.9" fontWeight="700">SA (70/min)</text>
+          <text x="53" y="42" fill="#e4e4e7" fontSize="2.7">AV (opóźn. 0,1s)</text>
+          <text x="53" y="55" fill="#d4d4d8" fontSize="2.6">Pęczek Hisa</text>
+          <text x="56" y="79" fill="#d4d4d8" fontSize="2.6">Włókna Purkinjego</text>
+        </g>
+      )}
+
+      {/* 17. Rdzeń kręgowy i łuk odruchowy */}
+      {theme === "spinal-cord-reflex" && (
+        <g>
+          {/* Istota biała */}
+          <ellipse cx="42" cy="48" rx="28" ry="24" fill="#18181b" stroke="#71717a" strokeWidth="0.9" />
+          {/* Istota szara (motyl) */}
+          <path
+            d="M 28 32 C 33 34, 36 42, 42 44 C 48 42, 51 34, 56 32 C 58 36, 54 44, 50 48 C 55 54, 59 62, 54 66 C 48 64, 46 54, 42 52 C 38 54, 36 64, 30 66 C 25 62, 29 54, 34 48 C 30 44, 26 36, 28 32 Z"
+            fill="#27272a"
+            stroke="#a1a1aa"
+            strokeWidth="0.8"
+          />
+          <circle cx="42" cy="48" r="1.3" fill="#fafafa" />
+          {/* Korzeń czuciowy + zwój + akson ruchowy */}
+          <path d="M 86 42 C 74 22, 62 20, 52 34" fill="none" stroke="#e4e4e7" strokeWidth="1.0" />
+          <circle cx="70" cy="24" r="3.4" fill="#18181b" stroke="#fafafa" strokeWidth="1.0" />
+          {/* Interneuron */}
+          <path d="M 52 34 L 48 48 L 52 60" fill="none" stroke="#a1a1aa" strokeWidth="0.9" strokeDasharray="1.5 1" />
+          {/* Włókno eferentne do mięśnia */}
+          <path d="M 52 60 C 66 66, 76 62, 86 54" fill="none" stroke="#fafafa" strokeWidth="1.2" />
+          {/* Mięsień efektor */}
+          <rect x="81" y="38" width="14" height="22" rx="6" fill="#27272a" stroke="#d4d4d8" strokeWidth="0.9" />
+          <text x="58" y="18" fill="#e4e4e7" fontSize="2.7">Zwój grzbietowy</text>
+          <text x="15" y="49" fill="#d4d4d8" fontSize="2.6">Istota szara (H)</text>
+          <text x="64" y="70" fill="#fafafa" fontSize="2.7">Motoneuron α</text>
+          <text x="82" y="67" fill="#d4d4d8" fontSize="2.6">Efektor</text>
+        </g>
+      )}
+
+      {/* 18. Sarkomer i teoria ślizgowa */}
+      {theme === "sarcomere-contraction" && (
+        <g>
+          {/* Linie Z */}
+          <line x1="16" y1="26" x2="16" y2="70" stroke="#fafafa" strokeWidth="1.8" />
+          <line x1="84" y1="26" x2="84" y2="70" stroke="#fafafa" strokeWidth="1.8" />
+          {/* Linia M */}
+          <line x1="50" y1="30" x2="50" y2="66" stroke="#71717a" strokeWidth="0.9" strokeDasharray="2 1" />
+          {/* Cienkie filamenty aktynowe */}
+          {[32, 42, 54, 64].map((y) => (
+            <g key={y}>
+              <line x1="16" y1={y} x2="42" y2={y} stroke="#d4d4d8" strokeWidth="1.1" />
+              <line x1="58" y1={y} x2="84" y2={y} stroke="#d4d4d8" strokeWidth="1.1" />
+            </g>
+          ))}
+          {/* Grube filamenty miozynowe z główkami */}
+          {[37, 48, 59].map((y) => (
+            <g key={y}>
+              <line x1="30" y1={y} x2="70" y2={y} stroke="#fafafa" strokeWidth="2.4" strokeLinecap="round" />
+              <circle cx="36" cy={y - 2} r="1.0" fill="#a1a1aa" />
+              <circle cx="43" cy={y + 2} r="1.0" fill="#a1a1aa" />
+              <circle cx="57" cy={y - 2} r="1.0" fill="#a1a1aa" />
+              <circle cx="64" cy={y + 2} r="1.0" fill="#a1a1aa" />
+            </g>
+          ))}
+          {/* Znaczniki prążków */}
+          <line x1="30" y1="76" x2="70" y2="76" stroke="#e4e4e7" strokeWidth="0.9" />
+          <line x1="42" y1="21" x2="58" y2="21" stroke="#a1a1aa" strokeWidth="0.9" />
+          <text x="14" y="75" fill="#fafafa" fontSize="2.7" fontWeight="700">Z</text>
+          <text x="83" y="75" fill="#fafafa" fontSize="2.7" fontWeight="700">Z</text>
+          <text x="45" y="18" fill="#d4d4d8" fontSize="2.7">Strefa H</text>
+          <text x="45" y="81" fill="#fafafa" fontSize="2.7">Prążek A</text>
+          <text x="19" y="81" fill="#a1a1aa" fontSize="2.6">Prążek I</text>
+        </g>
+      )}
+
+      {/* 19. Oś HPA i neuroendokrynologia stresu */}
+      {theme === "hpa-axis" && (
+        <g>
+          {/* Podwzgórze */}
+          <rect x="34" y="12" width="38" height="15" rx="3" fill="#27272a" stroke="#e4e4e7" strokeWidth="0.9" />
+          <text x="53" y="21" textAnchor="middle" fill="#fafafa" fontSize="3.0" fontWeight="700">Podwzgórze (PVN)</text>
+          <line x1="53" y1="27" x2="53" y2="39" stroke="#e4e4e7" strokeWidth="1.0" />
+          <text x="56" y="34" fill="#d4d4d8" fontSize="2.7">CRH + AVP</text>
+          {/* Przysadka */}
+          <rect x="34" y="39" width="38" height="15" rx="3" fill="#18181b" stroke="#d4d4d8" strokeWidth="0.9" />
+          <text x="53" y="48" textAnchor="middle" fill="#fafafa" fontSize="3.0" fontWeight="700">Przysadka (przednia)</text>
+          <line x1="53" y1="54" x2="53" y2="66" stroke="#fafafa" strokeWidth="1.0" />
+          <text x="56" y="61" fill="#d4d4d8" fontSize="2.7">ACTH</text>
+          {/* Kora nadnerczy */}
+          <rect x="34" y="66" width="38" height="16" rx="3" fill="#27272a" stroke="#fafafa" strokeWidth="1.0" />
+          <text x="53" y="75" textAnchor="middle" fill="#fafafa" fontSize="3.0" fontWeight="700">Kora nadnerczy</text>
+          <text x="53" y="89" textAnchor="middle" fill="#fafafa" fontSize="2.8">Kortyzol (stres)</text>
+          {/* Pętla ujemnego sprzężenia */}
+          <path d="M 34 74 L 16 74 L 16 20 L 34 20" fill="none" stroke="#a1a1aa" strokeWidth="1.0" strokeDasharray="3 1.5" />
+          <path d="M 16 46 L 34 46" fill="none" stroke="#a1a1aa" strokeWidth="0.8" strokeDasharray="2 1.5" />
+          <circle cx="16" cy="46" r="4.5" fill="#18181b" stroke="#a1a1aa" strokeWidth="0.9" />
+          <text x="16" y="47.2" textAnchor="middle" fill="#fafafa" fontSize="4.2" fontWeight="700">−</text>
+          <text x="6" y="36" fill="#d4d4d8" fontSize="2.5">Sprzężenie</text>
+          <text x="6" y="40" fill="#d4d4d8" fontSize="2.5">ujemne</text>
+        </g>
+      )}
+
+      {/* 20. Łańcuch oddechowy i fosforylacja oksydacyjna */}
+      {theme === "electron-transport-chain" && (
+        <g>
+          {/* Wewnętrzna błona mitochondrialna */}
+          <rect x="6" y="42" width="88" height="14" rx="2" fill="#18181b" stroke="#52525b" strokeWidth="0.8" />
+          {/* Kompleksy I - IV oraz Syntaza ATP */}
+          <rect x="12" y="37" width="11" height="24" rx="3" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+          <text x="17.5" y="51" textAnchor="middle" fill="#fafafa" fontSize="3.1" fontWeight="700">I</text>
+          <rect x="26" y="45" width="9" height="14" rx="2" fill="#18181b" stroke="#d4d4d8" strokeWidth="0.8" />
+          <text x="30.5" y="54" textAnchor="middle" fill="#d4d4d8" fontSize="2.9">II</text>
+          <rect x="41" y="38" width="11" height="22" rx="3" fill="#27272a" stroke="#e4e4e7" strokeWidth="0.9" />
+          <text x="46.5" y="51" textAnchor="middle" fill="#fafafa" fontSize="3.1" fontWeight="700">III</text>
+          <rect x="59" y="38" width="11" height="22" rx="3" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+          <text x="64.5" y="51" textAnchor="middle" fill="#fafafa" fontSize="3.1" fontWeight="700">IV</text>
+          {/* Przepływ elektronów */}
+          <path d="M 17.5 49 L 36 47 L 46.5 49 L 55 37 L 64.5 49" fill="none" stroke="#d4d4d8" strokeWidth="0.9" strokeDasharray="2 1" />
+          {/* Syntaza ATP F0F1 */}
+          <rect x="78" y="39" width="11" height="19" rx="2" fill="#27272a" stroke="#fafafa" strokeWidth="1.0" />
+          <circle cx="83.5" cy="68" r="6" fill="#27272a" stroke="#fafafa" strokeWidth="1.0" />
+          <text x="83.5" y="69.5" textAnchor="middle" fill="#fafafa" fontSize="2.8" fontWeight="700">ATP</text>
+          {/* Strzałki protonów H+ */}
+          <line x1="17.5" y1="35" x2="17.5" y2="23" stroke="#e4e4e7" strokeWidth="0.9" />
+          <line x1="46.5" y1="36" x2="46.5" y2="23" stroke="#e4e4e7" strokeWidth="0.9" />
+          <line x1="64.5" y1="36" x2="64.5" y2="23" stroke="#e4e4e7" strokeWidth="0.9" />
+          <line x1="83.5" y1="24" x2="83.5" y2="39" stroke="#fafafa" strokeWidth="1.2" />
+          <text x="10" y="18" fill="#d4d4d8" fontSize="2.7">Przestrzeń międzybłonowa (↑ H⁺)</text>
+          <text x="10" y="76" fill="#a1a1aa" fontSize="2.7">Macierz: NADH → NAD⁺  |  O₂ → H₂O</text>
+        </g>
+      )}
+
+      {/* 21. Cykl Krebsa (cykl kwasu cytrynowego) */}
+      {theme === "krebs-cycle" && (
+        <g>
+          <path d="M 50 11 L 50 26" stroke="#fafafa" strokeWidth="1.1" />
+          <rect x="33" y="6" width="34" height="9" rx="2" fill="#27272a" stroke="#e4e4e7" strokeWidth="0.8" />
+          <text x="50" y="12" textAnchor="middle" fill="#fafafa" fontSize="2.8">Acetylo-CoA (2C)</text>
+          <circle cx="50" cy="54" r="25" fill="none" stroke="#d4d4d8" strokeWidth="1.1" />
+          {[
+            [50, 29, "Cytrynian (6C)"],
+            [73, 45, "α-Ketoglutaran (5C)"],
+            [68, 72, "Bursztynylo-CoA"],
+            [32, 72, "Fumaran / Jabłczan"],
+            [27, 45, "Szczawiooctan (4C)"],
+          ].map(([cx, cy, label]) => (
+            <g key={String(label)}>
+              <circle cx={Number(cx)} cy={Number(cy)} r="3.8" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+            </g>
+          ))}
+          <text x="50" y="23" textAnchor="middle" fill="#fafafa" fontSize="2.7">Cytrynian (6C)</text>
+          <text x="78" y="42" fill="#e4e4e7" fontSize="2.5">α-KG + CO₂</text>
+          <text x="72" y="76" fill="#fafafa" fontSize="2.6">GTP / ATP</text>
+          <text x="8" y="76" fill="#d4d4d8" fontSize="2.5">FADH₂</text>
+          <text x="6" y="44" fill="#fafafa" fontSize="2.6">Szczawiooctan</text>
+          <text x="50" y="55" textAnchor="middle" fill="#a1a1aa" fontSize="2.8" fontWeight="700">3 NADH · 1 FADH₂</text>
+        </g>
+      )}
+
+      {/* 22. Mitoza vs Mejoza (crossing-over) */}
+      {theme === "mitosis-meiosis" && (
+        <g>
+          <line x1="50" y1="12" x2="50" y2="88" stroke="#3f3f46" strokeWidth="0.8" strokeDasharray="3 2" />
+          {/* Lewa strona: Mitoza */}
+          <text x="26" y="15" textAnchor="middle" fill="#fafafa" fontSize="3.2" fontWeight="700">MITOZA (2n → 2n)</text>
+          <circle cx="26" cy="34" r="11" fill="#18181b" stroke="#a1a1aa" strokeWidth="0.8" />
+          <line x1="21" y1="27" x2="21" y2="41" stroke="#fafafa" strokeWidth="1.2" />
+          <line x1="31" y1="27" x2="31" y2="41" stroke="#d4d4d8" strokeWidth="1.2" />
+          <line x1="22" y1="47" x2="18" y2="64" stroke="#71717a" strokeWidth="0.8" />
+          <line x1="30" y1="47" x2="34" y2="64" stroke="#71717a" strokeWidth="0.8" />
+          <circle cx="16" cy="72" r="7" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+          <circle cx="36" cy="72" r="7" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+          <text x="16" y="73" textAnchor="middle" fill="#fafafa" fontSize="2.8">2n</text>
+          <text x="36" y="73" textAnchor="middle" fill="#fafafa" fontSize="2.8">2n</text>
+          {/* Prawa strona: Mejoza */}
+          <text x="74" y="15" textAnchor="middle" fill="#fafafa" fontSize="3.2" fontWeight="700">MEJOZA (2n → 4×1n)</text>
+          <circle cx="74" cy="34" r="11" fill="#18181b" stroke="#e4e4e7" strokeWidth="0.9" />
+          {/* Biwalent + chiazma */}
+          <path d="M 69 27 L 75 34 L 69 41" fill="none" stroke="#fafafa" strokeWidth="1.2" />
+          <path d="M 79 27 L 73 34 L 79 41" fill="none" stroke="#a1a1aa" strokeWidth="1.2" />
+          <circle cx="74" cy="34" r="1.4" fill="#fafafa" />
+          <text x="74" y="51" textAnchor="middle" fill="#d4d4d8" fontSize="2.5">Crossing-over</text>
+          {[58, 69, 79, 90].map((cx) => (
+            <g key={cx}>
+              <circle cx={cx} cy="74" r="4.5" fill="#27272a" stroke="#d4d4d8" strokeWidth="0.8" />
+              <text x={cx} y="75" textAnchor="middle" fill="#fafafa" fontSize="2.5">1n</text>
+            </g>
+          ))}
+        </g>
+      )}
+
+      {/* 23. Struktura przeciwciała IgG */}
+      {theme === "antibody-igg" && (
+        <g>
+          {/* Łańcuchy ciężkie H (kształt Y) */}
+          <path d="M 46 84 L 46 50 L 25 22" fill="none" stroke="#fafafa" strokeWidth="2.8" strokeLinecap="round" />
+          <path d="M 54 84 L 54 50 L 75 22" fill="none" stroke="#fafafa" strokeWidth="2.8" strokeLinecap="round" />
+          {/* Mostki dwusiarczkowe S-S w regionie zawiasowym */}
+          <line x1="46" y1="53" x2="54" y2="53" stroke="#d4d4d8" strokeWidth="0.9" strokeDasharray="1.5 1" />
+          <line x1="46" y1="57" x2="54" y2="57" stroke="#d4d4d8" strokeWidth="0.9" strokeDasharray="1.5 1" />
+          {/* Łańcuchy lekkie L */}
+          <line x1="34" y1="42" x2="18" y2="27" stroke="#a1a1aa" strokeWidth="2.0" strokeLinecap="round" />
+          <line x1="66" y1="42" x2="82" y2="27" stroke="#a1a1aa" strokeWidth="2.0" strokeLinecap="round" />
+          {/* Antygeny / epitopy */}
+          <polygon points="18,16 25,21 20,24" fill="#27272a" stroke="#fafafa" strokeWidth="0.8" />
+          <polygon points="82,16 75,21 80,24" fill="#27272a" stroke="#fafafa" strokeWidth="0.8" />
+          <text x="12" y="13" fill="#fafafa" fontSize="2.7" fontWeight="700">Paratop (Fab)</text>
+          <text x="72" y="13" fill="#fafafa" fontSize="2.7" fontWeight="700">Epitop</text>
+          <text x="58" y="56" fill="#d4d4d8" fontSize="2.6">Region zawiasowy (S–S)</text>
+          <text x="58" y="76" fill="#e4e4e7" fontSize="2.7">Fragment Fc</text>
+        </g>
+      )}
+
+      {/* 24. Równowaga chemiczna i reguła Le Chateliera */}
+      {theme === "chemical-equilibrium" && (
+        <g>
+          {/* Osie układu współrzędnych */}
+          <line x1="16" y1="18" x2="16" y2="76" stroke="#a1a1aa" strokeWidth="0.9" />
+          <line x1="16" y1="76" x2="90" y2="76" stroke="#a1a1aa" strokeWidth="0.9" />
+          <line x1="56" y1="20" x2="56" y2="76" stroke="#71717a" strokeWidth="0.8" strokeDasharray="2 2" />
+          {/* Szybkość reakcji wprost i odwrotnej */}
+          <path d="M 18 24 C 30 34, 42 44, 56 46 L 86 46" fill="none" stroke="#fafafa" strokeWidth="1.4" />
+          <path d="M 18 72 C 30 62, 42 48, 56 46 L 86 46" fill="none" stroke="#a1a1aa" strokeWidth="1.2" strokeDasharray="3 1.5" />
+          <circle cx="56" cy="46" r="2.2" fill="#fafafa" />
+          <text x="56" y="82" textAnchor="middle" fill="#e4e4e7" fontSize="2.8">t_równowagi (v₁ = v₂)</text>
+          <text x="20" y="23" fill="#fafafa" fontSize="2.7">v₁ (wprost)</text>
+          <text x="20" y="68" fill="#a1a1aa" fontSize="2.7">v₂ (odwrotna)</text>
+          <text x="64" y="42" fill="#fafafa" fontSize="2.8" fontWeight="700">Stan równowagi K_c</text>
+        </g>
+      )}
+
+      {/* 25. Miareczkowanie alkacymetryczne i bufory */}
+      {theme === "acid-base-titration" && (
+        <g>
+          <line x1="16" y1="14" x2="16" y2="78" stroke="#a1a1aa" strokeWidth="0.9" />
+          <line x1="16" y1="78" x2="88" y2="78" stroke="#a1a1aa" strokeWidth="0.9" />
+          <line x1="16" y1="46" x2="86" y2="46" stroke="#3f3f46" strokeWidth="0.7" strokeDasharray="2 2" />
+          {/* Krzywa sigmoidalna miareczkowania słabego kwasu */}
+          <path
+            d="M 18 68 C 28 60, 44 58, 54 52 C 58 48, 58 26, 62 22 C 68 18, 78 17, 86 17"
+            fill="none"
+            stroke="#fafafa"
+            strokeWidth="1.4"
+          />
+          <circle cx="38" cy="58" r="2.1" fill="#d4d4d8" />
+          <circle cx="58" cy="36" r="2.6" fill="#fafafa" />
+          <text x="11" y="47" fill="#71717a" fontSize="2.6">7</text>
+          <text x="28" y="66" fill="#d4d4d8" fontSize="2.6">pH = pKa (Bufor)</text>
+          <text x="62" y="36" fill="#fafafa" fontSize="2.8" fontWeight="700">PR (pH &gt; 7)</text>
+          <text x="72" y="84" fill="#a1a1aa" fontSize="2.7">V_zasady [cm³]</text>
+        </g>
+      )}
+
+      {/* 26. Równia pochyła i rzut ukośny */}
+      {theme === "inclined-plane-projectile" && (
+        <g>
+          {/* Równia pochyła */}
+          <polygon points="8,76 44,76 8,44" fill="#18181b" stroke="#71717a" strokeWidth="0.9" />
+          <rect x="18" y="45" width="9" height="7" transform="rotate(42 22 48)" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+          <line x1="22" y1="49" x2="22" y2="66" stroke="#d4d4d8" strokeWidth="0.9" />
+          <line x1="22" y1="49" x2="31" y2="39" stroke="#fafafa" strokeWidth="0.9" />
+          <text x="23" y="69" fill="#d4d4d8" fontSize="2.5">Q = mg</text>
+          <text x="32" y="39" fill="#fafafa" fontSize="2.5">N</text>
+          {/* Rzut ukośny */}
+          <line x1="50" y1="76" x2="94" y2="76" stroke="#a1a1aa" strokeWidth="0.8" />
+          <path d="M 52 76 Q 72 14, 92 76" fill="none" stroke="#fafafa" strokeWidth="1.2" strokeDasharray="2.5 1.5" />
+          <circle cx="72" cy="45" r="2.0" fill="#fafafa" />
+          <line x1="72" y1="45" x2="84" y2="45" stroke="#e4e4e7" strokeWidth="0.9" />
+          <text x="72" y="39" textAnchor="middle" fill="#fafafa" fontSize="2.7" fontWeight="700">H_max (vy = 0)</text>
+          <text x="86" y="83" fill="#d4d4d8" fontSize="2.6">Zasięg Z</text>
+        </g>
+      )}
+
+      {/* 27. Indukcja elektromagnetyczna (Faraday) i obwód RLC */}
+      {theme === "rlc-electromagnetic-induction" && (
+        <g>
+          {/* Zwojnica i strumień B */}
+          <rect x="12" y="28" width="22" height="14" rx="2" fill="#18181b" stroke="#e4e4e7" strokeWidth="0.9" />
+          {[16, 20, 24, 28, 32].map((x) => (
+            <ellipse key={x} cx={x} cy="35" rx="2" ry="9" fill="none" stroke="#a1a1aa" strokeWidth="0.8" />
+          ))}
+          <text x="23" y="19" textAnchor="middle" fill="#fafafa" fontSize="2.7">ε = −dΦ/dt (Lenz)</text>
+          {/* Szeregowy obwód RLC */}
+          <rect x="46" y="24" width="44" height="36" fill="none" stroke="#71717a" strokeWidth="0.9" />
+          <rect x="54" y="21" width="10" height="6" fill="#27272a" stroke="#fafafa" strokeWidth="0.8" />
+          <path d="M 72 24 C 74 20, 76 20, 78 24 C 80 20, 82 20, 84 24" fill="none" stroke="#fafafa" strokeWidth="1.1" />
+          <line x1="66" y1="56" x2="66" y2="64" stroke="#fafafa" strokeWidth="1.2" />
+          <line x1="70" y1="56" x2="70" y2="64" stroke="#fafafa" strokeWidth="1.2" />
+          <circle cx="46" cy="42" r="4" fill="#18181b" stroke="#d4d4d8" strokeWidth="0.9" />
+          <text x="46" y="43.5" textAnchor="middle" fill="#fafafa" fontSize="3.2">~</text>
+          <text x="59" y="18" fill="#d4d4d8" fontSize="2.7">R</text>
+          <text x="78" y="18" fill="#d4d4d8" fontSize="2.7">L</text>
+          <text x="68" y="70" fill="#d4d4d8" fontSize="2.7">C</text>
+          <text x="68" y="81" textAnchor="middle" fill="#fafafa" fontSize="2.7" fontWeight="700">Rezonans: X_L = X_C</text>
+        </g>
+      )}
+
       {/* Generic fallback geometric circle */}
       {theme === "generic" && (
         <circle

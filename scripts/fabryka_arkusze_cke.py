@@ -1289,8 +1289,7 @@ async def run_pipeline(args: argparse.Namespace) -> int:
         )
 
     if args.dry_run:
-        has_key = bool(os.getenv("DEEPSEEK_API_KEY"))
-        print(f"[DRY-RUN] Pipeline ready (PyMuPDF 1:1 crop + Zasady pairing). DEEPSEEK_API_KEY present: {has_key}")
+        print("[DRY-RUN] Offline PyMuPDF 1:1 crop + Zasady pairing pipeline ready (zero external LLM calls).")
         return 0
 
     existing_by_subj: dict[str, list[dict[str, Any]]] = {
@@ -1335,26 +1334,8 @@ async def run_pipeline(args: argparse.Namespace) -> int:
             f"{m_entry['totalPoints']} pkt | pages={len(m_entry['pageImageUrls'])}"
         )
 
-    if args.use_deepseek and os.getenv("DEEPSEEK_API_KEY"):
-        try:
-            from openai import AsyncOpenAI  # type: ignore
-
-            client = AsyncOpenAI(
-                api_key=os.getenv("DEEPSEEK_API_KEY"),
-                base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"),
-            )
-            sem = asyncio.Semaphore(args.concurrency)
-            coros = [
-                polish_subtask_steps_with_deepseek(
-                    client, os.getenv("DEEPSEEK_MODEL", "deepseek-chat"), sem, subj, task
-                )
-                for subj, tlist in extracted_by_subj.items()
-                for task in tlist
-            ]
-            if coros:
-                await asyncio.gather(*coros, return_exceptions=True)
-        except Exception as exc:
-            print(f"[WARN] DeepSeek enrichment skipped ({exc}); kept deterministic PyMuPDF + Zasady steps.", file=sys.stderr)
+    # External LLM API calls retired: CKE explanations are produced strictly from
+    # official CKE scoring PDFs + direct agent moderation.
 
     # Merge extracted full sheets cleanly with legacy non-overlapping tasks (2021-2022 etc.)
     for subj in ("biologia", "chemia"):

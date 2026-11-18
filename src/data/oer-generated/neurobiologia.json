@@ -1,1 +1,232 @@
-[]
+[
+  {
+    "id": "oer-neuro-potencjal-spoczynkowy-i-czynnosciowy-neuronu",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurobiologia komórkowa, synaptyczna i układy sensoryczno-motoryczne",
+    "sourcePdf": "Foundations_of_Neuroscience_Henley_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Potencjał spoczynkowy błony, równanie Nernsta i generacja potencjału czynnościowego",
+      "toc": [
+        { "title": "Gradienty jonowe i równanie Nernsta", "anchorId": "nernst-spoczynkowy" },
+        { "title": "Fazy potencjału czynnościowego (NaV i KV)", "anchorId": "fazy-ap" },
+        { "title": "Refrakcja oraz przewodnictwo skokowe", "anchorId": "refrakcja-mielina" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"nernst-spoczynkowy\">Potencjał równowagi jonowej i polaryzacja spoczynkowa</h2><p>W stanie spoczynku wnętrze neuronu wykazuje ujemny potencjał względem przestrzeni pozakomórkowej (około <strong>&minus;70 mV</strong>). Stan ten wynika ze współdziałania asymetrycznej pompy sodowo-potasowej (<strong>3 Na<sup>+</sup> na zewnątrz / 2 K<sup>+</sup> do wewnątrz</strong> kosztem hydrolizy ATP) oraz dużej przepuszczalności błony dla jonów potasu przez kanały wyciekowe.</p><p>Teoretyczny potencjał równowagi pojedynczego jonu opisuje <strong>równanie Nernsta</strong> (w 37 &deg;C dla jonu jednowartościowego: <code>E<sub>ion</sub> = 61,5 &middot; log<sub>10</sub>([ion]<sub>zewn</sub> / [ion]<sub>wewn</sub>)</code>), natomiast wypadkowy potencjał błonowy uwzględniający względne przepuszczalności wielu jonów wyraża równanie Goldmana–Hodgkina–Katza.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"fazy-ap\">Kaskada kanałów bramkowanych napięciem i prawo „wszystko albo nic”</h2><p>Po osiągnięciu potencjału progowego (ok. <strong>&minus;55 mV</strong>) na wzgórku aksonu dochodzi do gwałtownego otwarcia szybkich bramkowanych napięciem kanałów sodowych (<strong>Na<sub>V</sub></strong>) i masywnego napływu Na<sup>+</sup> (faza depolaryzacji do ok. +30…+40 mV).</p><p>W szczycie pobudzenia bramka inaktywacyjna kanału Na<sub>V</sub> zamyka światło kanału od strony cytoplazmy, a jednocześnie z opóźnieniem otwierają się kanały potasowe (<strong>K<sub>V</sub></strong>), prowadząc do repolaryzacji i przejściowej hiperpolaryzacji następczej.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"refrakcja-mielina\">Okres refrakcji i rola osłonki mielinowej</h2><p>Podczas <strong>refrakcji bezwzględnej</strong> kanały Na<sub>V</sub> pozostają w stanie inaktywacji, co wyklucza cofanie się fali depolaryzacji wzdłuż aksonu. W <strong>refrakcji względnej</strong> wywołanie kolejnego impulsu wymaga silniejszego bodźca z uwagi na hiperpolaryzację.</p><p>W aksonach zmielinizowanych (oligodendrocyty w OUN, komórki Schwanna w obwodowym UN) opór błony międzywęźli jest ogromny, dlatego prądy lokalne przeskakują bezpośrednio między <strong>przewężeniami Ranviera</strong> (przewodnictwo skokowe, nawet do 120 m/s).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego okres refrakcji bezwzględnej gwarantuje jednokierunkowe rozchodzenie się potencjału czynnościowego wzdłuż aksonu?",
+          "answer": "Segment błony tuż za czołem fali pobudzenia ma przejściowo zinaktywowane bramkowo kanały sodowe NaV, więc prąd wsteczny nie jest w stanie ponownie ich otworzyć."
+        },
+        {
+          "question": "Co się dzieje z prędkością przewodzenia w stwardnieniu rozsianym (SM) i dlaczego?",
+          "answer": "Demielinizacja aksonów OUN powoduje ucieczkę prądu jonowego przez pozbawioną izolacji błonę i drastyczne spowolnienie lub blok przewodzenia między kolejnymi przewężeniami Ranviera."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Neurobiologia — Pobudliwość błon",
+        "requirementCodes": ["NEUR-MEM-1", "NEUR-AP-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-neuro-synapsa-chemiczna-neuroprzekazniki-i-plastycznosc",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurobiologia komórkowa, synaptyczna i układy sensoryczno-motoryczne",
+    "sourcePdf": "Open_Neuroscience_Initiative_Lim_CC-BY-NC.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Transmisja synaptyczna, receptory jonotropowe i metabotropowe oraz plastyczność LTP",
+      "toc": [
+        { "title": "Egzocytoza pęcherzyków i kompleks SNARE", "anchorId": "egzocytoza-snare" },
+        { "title": "EPSP vs IPSP i sumowanie czasowo-przestrzenne", "anchorId": "epsp-ipsp" },
+        { "title": "Długotrwałe wzmocnienie synaptyczne (LTP)", "anchorId": "plastycznosc-ltp" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"egzocytoza-snare\">Wapniowo zależne uwalnianie neuroprzekaźników</h2><p>Dotarcie potencjału czynnościowego do kolbki synaptycznej otwiera kanały wapniowe bramkowane napięciem (<strong>Ca<sub>V</sub></strong>). Napływ Ca<sup>2+</sup> wiąże się z sensorem błonowym <strong>synaptotagminą</strong> i inicjuje splatanie białek kompleksu <strong>SNARE</strong> (synaptobrewina, syntaksyna, SNAP-25), prowadząc do fuzji pęcherzyka z błoną presynaptyczną.</p><p>Zakończenie sygnału w szczelinie synaptycznej następuje na drodze wychwytu zwrotnego przez transportery błonowe (np. SERT, DAT, EAAT w astrocytach) lub hydrolizy enzymatycznej (acetylocholinoesteraza rozkłada ACh na cholinę i octan).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"epsp-ipsp\">Potencjały postsynaptyczne pobudzające (EPSP) i hamujące (IPSP)</h2><p><strong>Receptory jonotropowe</strong> (kanały bramkowane ligandem, np. AMPA, NMDA, GABA<sub>A</sub>) wywołują szybką odpowiedź rzędu milisekund. Pobudzający glutaminian otwiera kanały kationowe, generując depolaryzujący <strong>EPSP</strong>, podczas gdy hamujący GABA otwiera kanały chlorkowe (GABA<sub>A</sub>), wywołując hiperpolaryzujący <strong>IPSP</strong>.</p><p><strong>Receptory metabotropowe (GPCR)</strong> sprzężone z białkami G uruchamiają kaskady przekaźników drugiego rzędu (cAMP/PKA, IP<sub>3</sub>/DAG), modulując pobudliwość neuronu w skali sekund lub minut. Neuron integruje tysiące wejść poprzez sumowanie przestrzenne i czasowe na wzgórku aksonu.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"plastycznosc-ltp\">Molekularny mechanizm pamięci — receptor NMDA i LTP</h2><p>W synapsach hipokampa receptor glutaminianergiczny <strong>NMDA</strong> działa jako molekularny detektor koincydencji: wymaga zarówno związania glutaminianu, jak i wstępnej depolaryzacji (przez receptory AMPA), która usuwa blokujący jon <strong>Mg<sup>2+</sup></strong> z wnętrza kanału.</p><p>Napływ Ca<sup>2+</sup> przez otwarte kanały NMDA aktywuje kinazę CaMKII, co prowadzi do wbudowania dodatkowych receptorów AMPA w błonę postsynaptyczną i długotrwałego wzmocnienia odpowiedzi synaptycznej (<strong>LTP</strong>).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego receptor NMDA nazywany jest molekularnym detektorem koincydencji?",
+          "answer": "Do otwarcia kanału NMDA nie wystarczy samo związanie glutaminianu — błona postsynaptyczna musi być wcześniej częściowo zdepolaryzowana (np. przez receptory AMPA), aby wypchnąć jon Mg2+ blokujący por kanału."
+        },
+        {
+          "question": "Jaki jest skutek działania toksyny botulinowej na poziomie białek presynaptycznych?",
+          "answer": "Toksyna botulinowa (proteaza cynkowa) rozcina białka kompleksu SNARE, blokując egzocytozę pęcherzyków z acetylocholiną w złączu nerwowo-mięśniowym i wywołując porażenie wiotkie."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Neurobiologia — Synapsy i plastyczność",
+        "requirementCodes": ["NEUR-SYN-1", "NEUR-LTP-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-neuro-rdzen-kregowy-luki-odruchowe-i-drogi",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurobiologia komórkowa, synaptyczna i układy sensoryczno-motoryczne",
+    "sourcePdf": "OpenStax_Intro_Behavioral_Neuroscience_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Rdzeń kręgowy, łuki odruchowe (miostatyczny i zginania) oraz główne szlaki nerwowe",
+      "toc": [
+        { "title": "Istota szara i prawo Bella–Magendiego", "anchorId": "anatomia-rdzenia" },
+        { "title": "Odruch na rozciąganie i hamowanie recyprokalne", "anchorId": "luk-odruchowy" },
+        { "title": "Drogi czuciowe i ruchowe (piramidowa)", "anchorId": "drogi-nerwowe" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"anatomia-rdzenia\">Segmentarna budowa rdzenia i korzenie rdzeniowe</h2><p>W przekroju poprzecznym rdzenia kręgowego centralnie położona <strong>istota szara</strong> tworzy kształt litery H: rogi tylne (grzbietowe) odbierają informację czuciową, natomiast rogi przednie (brzuszne) zawierają ciała motoneuronów &alpha; i &gamma; unerwiających mięśnie szkieletowe.</p><p>Zgodnie z <strong>prawem Bella–Magendiego</strong> korzenie grzbietowe prowadzą wyłącznie włókna aferentne (czuciowe, z ciałami w zwoju rdzeniowym), a korzenie brzuszne wyłącznie włókna eferentne (ruchowe).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"luk-odruchowy\">Łuki odruchowe — odruch kolanowy i odruch wycofania</h2><p><strong>Odruch na rozciąganie</strong> (np. kolanowy) jest łukiem <em>monosynaptycznym</em>: rozciągnięcie wrzeciona nerwowo-mięśniowego pobudza włókno Ia, które bezpośrednio pobudza motoneuron &alpha; mięśnia prostownika oraz przez interneuron hamujący (glicyna) hamuje mięsień zginacz (<strong>hamowanie recyprokalne</strong>).</p><p>Odruch bólowy wycofania kończyny jest natomiast łukiem <em>polisynaptycznym</em>, angażującym kilka interneuronów w celu szybkiego zgięcia kończyny po stronie bodźca oraz skrzyżowanego wyprostu kończyny przeciwstronnej dla zachowania równowagi.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"drogi-nerwowe\">Szlaki wstępujące (czuciowe) i zstępujące (ruchowe)</h2><p>Czucie epikrytyczne (dotyk precyzyjny, wibracja, propriocepcja) biegnie sznurami tylnymi (pęczki smukły i klinowaty) i krzyżuje się w rdzeniu przedłużonym, podczas gdy szlak rdzeniowo-wzgórzowy przewodzący ból i temperaturę krzyżuje się od razu na poziomie wejścia do rdzenia.</p><p>Główna droga ruchowa odpowiedzialna za precyzyjne ruchy dowolne — <strong>szlak korowo-rdzeniowy (piramidowy)</strong> — bierze początek w zakręcie przedśrodkowym (M1) i w większości krzyżuje się w piramidach opuszki (stąd lewa półkula steruje prawą stroną ciała).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego uszkodzenie połowy rdzenia kręgowego (zespół Brown-Séquarda) znosi czucie dotyku głębokiego po stronie uszkodzenia, a czucie bólu po stronie przeciwnej?",
+          "answer": "Włókna sznurów tylnych (czucie głębokie i wibracja) krzyżują się dopiero w pniu mózgu, więc biegną po stronie ipsilateralnej, natomiast włókna szlaku rdzeniowo-wzgórzowego (ból i temperatura) krzyżują się już w rdzeniu i biegną kontralateralnie."
+        },
+        {
+          "question": "Jaką funkcję pełni interneuron hamujący w monosynaptycznym odruchu na rozciąganie?",
+          "answer": "Realizuje hamowanie recyprokalne (obustronne wyłączenie antagonisty), relaksując mięsień przeciwstawny podczas skurczu mięśnia rozciągniętego."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Neurobiologia — Rdzeń i odruchy",
+        "requirementCodes": ["BIO-ODRUCH-1", "NEUR-RDZEN-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-neuro-uklady-sensoryczne-wzrok-sluch-i-somatosensoryka",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurobiologia komórkowa, synaptyczna i układy sensoryczno-motoryczne",
+    "sourcePdf": "Foundations_of_Neuroscience_Henley_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Transdukcja sensoryczna: fototransdukcja w siatkówce, mechanotransdukcja w ślimaku i kora czuciowa",
+      "toc": [
+        { "title": "Fototransdukcja — pręciki, czopki i prąd ciemny", "anchorId": "fototransdukcja" },
+        { "title": "Narząd Cortiego i tonotopowa analiza dźwięku", "anchorId": "mechanika-sluchu" },
+        { "title": "Receptory skórne i reprezentacja korowa S1", "anchorId": "somatosensoryka" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"fototransdukcja\">Paradox fotoreceptora — hiperpolaryzacja pod wpływem światła</h2><p>W przeciwieństwie do większości receptorów czuciowych, fotoreceptory siatkówki (<strong>pręciki i czopki</strong>) są w ciemności stale zdepolaryzowane przez napływ kationów przez kanały otwarte przez <strong>cGMP</strong>.</p><p>Pochłonięcie fotonu przez retinal w rodopsynie aktywuje białko G (<strong>transducynę</strong>) oraz fosfodiesterazę rozkładającą cGMP do 5&prime;-GMP. Kanały kationowe zamykają się, co wywołuje <strong>hiperpolaryzację</strong> komórki i zmniejszenie uwalniania glutaminianu do komórek dwubiegunowych.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"mechanika-sluchu\">Ucho wewnętrzne i tonotopia błony podstawnej</h2><p>Drgania strzemiączka w okienku owalnym wywołują falę wędrującą w perylimfie ślimaka. Błona podstawna ma zmienną sztywność — jej wąska, sztywna podstawa rezonuje z <strong>wysokimi częstotliwościami</strong>, a szeroki, wiotki wierzchołek z <strong>niskimi częstotliwościami</strong>.</p><p>Ugięcie stereocyliów komórek rzęsatych narządu Cortiego napina spinki białkowe i mechanicznie otwiera kanały potasowe (K<sup>+</sup> z endolimfy o wysokim stężeniu K<sup>+</sup>), wywołując depolaryzację i impulsację w nerwie ślimakowym (VIII).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"somatosensoryka\">Mechanoreceptory skóry i homunkulus czuciowy</h2><p>Skórne mechanoreceptory różnią się wielkością pola recepcyjnego oraz szybkością adaptacji: ciałka <strong>Meissnera</strong> (szybka adaptacja) i dyski <strong>Merkla</strong> (wolna adaptacja) w skórze płytkiej zapewniają wysoką rozdzielczość przestrzenną, natomiast głęboko położone ciałka <strong>Paciniego</strong> rejestrują wibracje wysokiej częstotliwości.</p><p>Informacja trafia przez wzgórze (jądro VPL/VPM) do pierwszorzędowej kory somatosensorycznej (<strong>S1</strong>, zakręt zaśrodkowy), gdzie gęsto unerwione obszary (dłonie, wargi, język) zajmują nieproporcjonalnie dużą powierzchnię kory (homunkulus Penfielda).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego komórki rzęsate narządu Cortiego ulegają depolaryzacji po otwarciu kanałów dla jonów potasu (K+), mimo że w większości komórek otwarcie kanałów K+ powoduje hiperpolaryzację?",
+          "answer": "Stereocylia obmywane są przez endolimfę o wyjątkowo wysokim stężeniu K+ (ok. 150 mM) i dodatnim potencjale ok. +80 mV, co odwraca gradient elektrochemiczny i powoduje napływ K+ do wnętrza komórki."
+        },
+        {
+          "question": "Która substancja wtórnego przekaźnictwa spada w pręciku siatkówki po pochłonięciu fotonu światła?",
+          "answer": "Cyklofosforan guanozyny (cGMP), rozkładany przez aktywowaną przez transducynę fosfodiesterazę."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Neurobiologia — Układy zmysłów",
+        "requirementCodes": ["BIO-ZMYS-1", "NEUR-SENS-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-neuro-os-hpa-neuroendokrynologia-stresu-i-rytm-dobowy",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurobiologia komórkowa, synaptyczna i układy sensoryczno-motoryczne",
+    "sourcePdf": "OpenStax_Intro_Behavioral_Neuroscience_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Oś podwzgórze–przysadka–nadnercza (HPA), reakcja stresowa oraz zegar biologiczny (SCN)",
+      "toc": [
+        { "title": "Kaskada CRH → ACTH → kortyzol", "anchorId": "kaskada-hpa" },
+        { "title": "Ujemne sprzężenie zwrotne w hipokampie", "anchorId": "sprzezenie-zwrotne" },
+        { "title": "Jądro nadskrzyżowaniowe (SCN) i melatonina", "anchorId": "rytm-dobowy" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"kaskada-hpa\">Oś podwzgórze–przysadka–nadnercza w odpowiedzi na stres</h2><p>W obliczu stresora jądro przykomorowe podwzgórza (PVN) wydziela do układu wrotnego przysadki <strong>kortykoliberynę (CRH)</strong> oraz wazopresynę (AVP). CRH pobudza komórki kortykotropowe płata przedniego przysadki do sekrecji <strong>kortykotropiny (ACTH)</strong> do krążenia ogólnego.</p><p>ACTH wiąże się z receptorami MC2R w warstwie pasmowatej kory nadnerczy, stymulując syntezę i wyrzut glikokortykosteroidów — u człowieka głównie <strong>kortyzolu</strong>, który mobilizuje glukozę (glukoneogeneza wątrobowa), podnosi ciśnienie krwi i czasowo hamuje kosztowną odpowiedź immunologiczną.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"sprzezenie-zwrotne\">Ujemne sprzężenie zwrotne i konsekwencje stresu przewlekłego</h2><p>Kortyzol łatwo przekracza barierę krew–mózg i wiąże się z wewnątrzkomórkowymi receptorami glikokortykoidowymi (GR) w <strong>hipokampie</strong>, przysadce i podwzgórzu, wygaszając dalszą sekrecję CRH i ACTH (długa pętla ujemnego sprzężenia zwrotnego).</p><p>Przewlekła hiperkortyzolemia (wysoki poziom kortyzolu przez tygodnie lub miesiące) prowadzi do atrofii dendrytów w zakręcie hipokampa CA3 i osłabia zdolność hamowania osi HPA, pogłębiając zaburzenia nastroju oraz pamięci deklaratywnej.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"rytm-dobowy\">Zegar biologiczny (SCN) i rytm okołodobowy snu</h2><p>Nadrzędnym rozrusznikiem rytmów okołodobowych ssaków jest <strong>jądro nadskrzyżowaniowe podwzgórza (SCN)</strong>, synchronizowane ze światłem niebieskim (ok. 480 nm) przez melanopsynowe komórki zwojowe siatkówki szlakiem siatkówkowo-podwzgórzowym.</p><p>W dzień SCN hamuje szlak współczulny biegnący do <strong>szyszynki</strong>; w ciemności zahamowanie ustaje i szyszynka uwalnia <strong>melatoninę</strong>, inicjującą senność i synchronizującą zegary obwodowe w narządach.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak zmienia się stężenie ACTH i CRH u pacjenta leczonego przewlekle dużymi dawkami syntetycznych glikokortykosteroidów?",
+          "answer": "Zarówno CRH z podwzgórza, jak i ACTH z przysadki ulegają głębokiej supresji na skutek ciągłego pobudzenia pętli ujemnego sprzężenia zwrotnego (nagłe odstawienie leku grozi niewydolnością nadnerczy)."
+        },
+        {
+          "question": "Jaka struktura mózgu synchronizuje wydzielanie melatoniny przez szyszynkę z cyklem światła i ciemności?",
+          "answer": "Jądro nadskrzyżowaniowe podwzgórza (SCN), otrzymujące sygnał bezpośrednio z fotowrażliwych komórek zwojowych siatkówki zawierających melanopsynę."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Neurobiologia — Neuroendokrynologia",
+        "requirementCodes": ["NEUR-HPA-1", "BIO-HORM-2"],
+        "status": "core"
+      }
+    }
+  }
+]

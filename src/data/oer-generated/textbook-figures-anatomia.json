@@ -656,5 +656,163 @@
         "flowArrow": [45, 50, 56, 62]
       }
     ]
+  },
+  {
+    "id": "fig-anat-uklad-bodzcowy",
+    "subject": "anatomia",
+    "chapterIds": [
+      "tom3-czesc-22-uklad-przewodzacy-serca",
+      "tom3-czesc-12-serce-i-osierdzie"
+    ],
+    "titlePl": "Układ bodźcoprzewodzący serca: węzeł SA, węzeł AV, pęczek Hisa i włókna Purkinjego",
+    "titleLat": "Systema conducente cordis",
+    "caption": "Autonomiczny układ wyspecjalizowanych kardiomiocytów przewodzących generujących i rozprowadzających falę depolaryzacji w sercu (od węzła zatokowego do miokardium komór).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "cardiac-conduction",
+      "elementsSummary": "Sylwetka serca z zaznaczonym węzłem zatokowo-przedsionkowym (SA), szlakami międzywęzłowymi, węzłem przedsionkowo-komorowym (AV), pęczkiem Hisa oraz odnogami i włóknami Purkinjego."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes na podstawie terminologii anatomicznej (OER CC BY)",
+    "hotspots": [
+      {
+        "id": "hs-cond-sa",
+        "labelPl": "Węzeł zatokowo-przedsionkowy (SA, Keitha-Flacka)",
+        "labelLat": "Nodus sinuatrialis",
+        "x": 30,
+        "y": 28,
+        "description": "Główny fizjologiczny rozrusznik serca położony podnasierdziowo w ścianie prawego przedsionka przy ujściu żyły głównej górnej. Narzuca rytm ok. 60–100 pobudzeń/min (fala P w EKG).",
+        "clinicalNote": "Spontaniczna powolna depolaryzacja spoczynkowa w węźle SA zachodzi dzięki prądowi rozrusznikowemu If ('funny').",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-atrium"
+      },
+      {
+        "id": "hs-cond-av",
+        "labelPl": "Węzeł przedsionkowo-komorowy (AV, Aschoffa-Tawary)",
+        "labelLat": "Nodus atrioventricularis",
+        "x": 48,
+        "y": 42,
+        "description": "Leży w przegrodzie międzyprzedsionkowej powyżej ujścia zatoki wieńcowej (trójkąt Kocha). Spowalnia przewodzenie impulsu o ok. 0,1 s (odcinek PQ w EKG), umożliwiając dokończenie skurczu przedsionków przed skurczem komór.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-atrium"
+      },
+      {
+        "id": "hs-cond-his",
+        "labelPl": "Pęczek przedsionkowo-komorowy (Hisa) i odnogi",
+        "labelLat": "Fasciculus atrioventricularis",
+        "x": 49,
+        "y": 54,
+        "description": "Jedyne fizjologiczne połączenie elektryczne przechodzące przez włóknisty pierścień serca do przegrody międzykomorowej, gdzie dzieli się na prawą i lewą odnogę.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "right-ventricle"
+      },
+      {
+        "id": "hs-cond-purkinje",
+        "labelPl": "Włókna Purkinjego (sieć podwsierdziowa)",
+        "labelLat": "Rami subendocardiales",
+        "x": 76,
+        "y": 62,
+        "description": "Najszybciej przewodzące włókna w sercu (~4 m/s); rozprowadzają depolaryzację od koniuszka serca ku podstawie komór (zespół QRS), zapewniając zsynchronizowany wyrzut krwi ku zastawkom tętniczym.",
+        "linkedEntityId": "heart",
+        "linkedSubPinId": "left-ventricle"
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Impuls pierwotny w węźle SA i skurcz przedsionków",
+        "explanationHtml": "<p><strong>Węzeł SA</strong> samoistnie generuje potencjał czynnościowy (załamki P), który rozchodzi się przez mięśniówkę przedsionków i szlaki międzywęzłowe.</p>",
+        "activeHotspotIds": ["hs-cond-sa"],
+        "flowArrow": [30, 28, 48, 42]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Fizjologiczna pauza w węźle AV (~0,1 s)",
+        "explanationHtml": "<p>W <strong>węźle AV</strong> przewodzenie zwalnia, aby krew zdążyła przepłynąć z przedsionków do komór przed zamknięciem zastawek AV.</p>",
+        "activeHotspotIds": ["hs-cond-av"],
+        "flowArrow": [48, 42, 49, 54]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Szybka transmisja pęczkiem Hisa i włóknami Purkinjego",
+        "explanationHtml": "<p>Impuls mknie przez <strong>pęczek Hisa</strong> i rozgałęzia się w <strong>włóknach Purkinjego</strong>, wywołując synchroniczny skurcz komór od koniuszka ku górze.</p>",
+        "activeHotspotIds": ["hs-cond-his", "hs-cond-purkinje"],
+        "flowArrow": [49, 54, 76, 62]
+      }
+    ]
+  },
+  {
+    "id": "fig-anat-rdzen-odruch",
+    "subject": "anatomia",
+    "chapterIds": [
+      "oer-neuro-rdzen-kregowy-luki-odruchowe-i-drogi"
+    ],
+    "titlePl": "Przekrój rdzenia kręgowego i pięcioelementowy łuk odruchowy",
+    "titleLat": "Medulla spinalis et arcus reflexus",
+    "caption": "Organizacja istoty szarej (rogi tylne i przednie) oraz istoty białej rdzenia kręgowego wraz z przebiegiem włókien czuciowych (grzbietowych) i ruchowych (brzusznych).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "spinal-cord-reflex",
+      "elementsSummary": "Przekrój poprzeczny rdzenia kręgowego w kształcie litery H, korzeń grzbietowy ze zwojem rdzeniowym, interneuron rdzeniowy oraz motoneuron alfa kierujący się do mięśnia efektora."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER Clean-Room)",
+    "hotspots": [
+      {
+        "id": "hs-reflex-drg",
+        "labelPl": "Zwój rdzeniowy i neuron czuciowy (aferentny)",
+        "labelLat": "Ganglion spinale",
+        "x": 70,
+        "y": 24,
+        "description": "Zawiera ciała pseudounipolarnych neuronów czuciowych przewodzących pobudzenie z receptora korzeniem grzbietowym do rogów tylnych rdzenia."
+      },
+      {
+        "id": "hs-reflex-gray",
+        "labelPl": "Istota szara rdzenia (rogi tylne i przednie)",
+        "labelLat": "Substantia grisea",
+        "x": 42,
+        "y": 48,
+        "description": "Centralne pasmo w kształcie litery H skupiające ciała neuronów: w rogach tylnych kończą się drogi czuciowe, a w rogach przednich leżą ciała motoneuronów α."
+      },
+      {
+        "id": "hs-reflex-motor",
+        "labelPl": "Korzeń brzuszny i motoneuron α (eferentny)",
+        "labelLat": "Radix anterior",
+        "x": 64,
+        "y": 64,
+        "description": "Zgodnie z prawem Bella–Magendiego przewodzi wyłącznie impulsy ruchowe z rogów przednich wprost do płytek nerwowo-mięśniowych efektora."
+      },
+      {
+        "id": "hs-reflex-effector",
+        "labelPl": "Efektor (mięsień szkieletowy)",
+        "labelLat": "Musculus effector",
+        "x": 88,
+        "y": 49,
+        "description": "Narząd wykonawczy odpowiadający skurczem (lub rozkurczem w hamowaniu recyprokalnym antagonisty) na wyładowanie motoneuronu."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Przewodzenie dośrodkowe przez zwój grzbietowy",
+        "explanationHtml": "<p>Impuls czuciowy dociera z receptora drogą aferentną przez <strong>zwój rdzeniowy</strong> do rogu tylnego istoty szarej.</p>",
+        "activeHotspotIds": ["hs-reflex-drg"],
+        "flowArrow": [86, 42, 52, 34]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Integracja w istocie szarej rdzenia",
+        "explanationHtml": "<p>W <strong>istocie szarej</strong> sygnał ulega przełączeniu bezpośrednio (odruch monosynaptyczny) lub przez interneuron (odruch polisynaptyczny).</p>",
+        "activeHotspotIds": ["hs-reflex-gray"],
+        "flowArrow": [52, 34, 52, 60]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Odpowiedź odśrodkowa do mięśnia efektora",
+        "explanationHtml": "<p>Akson <strong>motoneuronu &alpha;</strong> opuszcza rdzeń korzeniem brzusznym i pobudza skurcz mięśnia efektora.</p>",
+        "activeHotspotIds": ["hs-reflex-motor", "hs-reflex-effector"],
+        "flowArrow": [52, 60, 86, 54]
+      }
+    ]
   }
 ]

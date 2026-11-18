@@ -2,34 +2,25 @@
 """
 fabryka_cke_pdf_overlays.py
 ---------------------------
-Generates exact PDF overlay coordinate mappings & 1:1 solution annotations for
-official CKE Matura exam pages (`public/cke-assets/<subject>/<year>_maj/page_*.png`)
-so `CkeSolvedPdfPageOverlay` can toggle seamlessly between:
-  [ 📄 Pusty arkusz (Do rozwiązania) | ✅ Arkusz rozwiązany (Z naniesionymi odpowiedziami) ]
+Deterministic 100% offline PyMuPDF (`fitz`) extractor generating exact PDF
+overlay coordinate mappings & 1:1 CKE key annotations for CKE Matura exam pages
+(`public/cke-assets/<subject>/<year>_maj/page_*.png`).
 
-Strict Model & Workload Division:
-  1. Visual Layout & PDF Bounding-Box Mapping:
-     Handled by PyMuPDF (`fitz`) block geometry extraction + optional
-     Gemini Flash API (`GEMINI_API_KEY` -> `gemini-2.5-flash` / `gemini-2.0-flash`).
-  2. Solution Text Synthesis & `Przyczyna → Mechanizm → Skutek` Callouts:
-     Handled by official CKE scoring keys + optional DeepSeek API
-     (`DEEPSEEK_API_KEY` -> `deepseek-chat`, `max_tokens=8192`).
+Zero external LLM API calls: all layout coordinates come from local PyMuPDF geometry
+and all solutions come from the official CKE keys & agent moderation.
 
 Usage:
   python scripts/fabryka_cke_pdf_overlays.py
-  python scripts/fabryka_cke_pdf_overlays.py --use-gemini-vision --use-deepseek --limit 3
+  python scripts/fabryka_cke_pdf_overlays.py --limit 10
 """
 
 from __future__ import annotations
 
 import argparse
-import base64
 import json
 import os
 import re
 import sys
-import urllib.error
-import urllib.request
 from pathlib import Path
 from typing import Any
 
@@ -188,98 +179,6 @@ def extract_margin_note(subtask: dict[str, Any]) -> str:
     return (f"[{verb}] " if verb else "") + (key[:180] + ("..." if len(key) > 180 else ""))
 
 
-def synthesize_solution_with_deepseek(prompt_html: str, official_key: str) -> str | None:
-    """Uses DEEPSEEK_API_KEY (deepseek-chat, max_tokens=8192) for concise 1:1 solution wording."""
-    api_key = os.environ.get("DEEPSEEK_API_KEY")
-    if not api_key:
-        return None
-    prompt_text = re.sub(r"<[^>]+>", " ", prompt_html or "")
-    prompt_text = re.sub(r"\s+", " ", prompt_text).strip()[:700]
-    body = {
-        "model": "deepseek-chat",
-        "max_tokens": 8192,
-        "temperature": 0.1,
-        "messages": [
-            {
-                "role": "system",
-                "content": (
-                    "Jesteś egzaminatorem CKE. Na podstawie polecenia i oficjalnego klucza CKE "
-                    "napisz wyłącznie zwięzłą, gotową odpowiedź do wpisania na arkusz maturalny "
-                    "(maks. 2 krótkie zdania po polsku, dokładnie zgodne z kluczem CKE 1:1)."
-                ),
-            },
-            {
-                "role": "user",
-                "content": f"Polecenie: {prompt_text}\nOficjalny klucz CKE: {official_key[:1200]}",
-            },
-        ],
-    }
-    req = urllib.request.Request(
-        "https://api.deepseek.com/chat/completions",
-        data=json.dumps(body).encode("utf-8"),
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            payload = json.loads(resp.read().decode("utf-8"))
-            return payload["choices"][0]["message"]["content"].strip()
-    except Exception:
-        return None
-
-
-def map_layout_with_gemini_flash(image_path: Path, task_hints: list[str]) -> list[dict[str, Any]] | None:
-    """
-    Uses GEMINI_API_KEY (`gemini-2.5-flash` / fallback `gemini-2.0-flash`)
-    strictly for visual layout coordinates & PDF bounding-box mapping.
-    """
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key or not image_path.is_file():
-        return None
-
-    img_b64 = base64.b64encode(image_path.read_bytes()).decode("ascii")
-    hints_str = ", ".join(task_hints[:8]) or "Zadania CKE na stronie"
-    prompt = (
-        f"Return a compact JSON array mapping the answer entry regions on this Polish CKE exam page "
-        f"for tasks [{hints_str}]. Each element: "
-        '{"taskNumber":"1.1","boxType":"open-answer|true-false|multiple-choice|calculation-grid|table-fill",'
-        '"xPct":12,"yPct":35,"widthPct":76,"heightPct":11}. Percentages 0..100 relative to page width/height.'
-    )
-    payload = {
-        "contents": [
-            {
-                "parts": [
-                    {"text": prompt},
-                    {"inline_data": {"mime_type": "image/png", "data": img_b64}},
-                ]
-            }
-        ],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.1},
-    }
-
-    for model in ("gemini-2.5-flash", "gemini-2.0-flash"):
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers={"Content-Type": "application/json"},
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=25) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-                raw_text = data["candidates"][0]["content"]["parts"][0]["text"]
-                parsed = json.loads(raw_text)
-                if isinstance(parsed, list):
-                    return parsed
-        except (urllib.error.URLError, KeyError, ValueError):
-            continue
-    return None
-
-
 def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
     """
     Uses PyMuPDF (`fitz`) to find exact page + normalized bounding boxes (%) for
@@ -387,7 +286,7 @@ def scan_pdf_task_anchors(pdf_path: Path) -> dict[str, dict[str, Any]]:
     return anchors
 
 
-def build_overlays(use_gemini_vision: bool = False, use_deepseek: bool = False, limit: int | None = None) -> dict[str, dict[str, list[dict[str, Any]]]]:
+def build_overlays(limit: int | None = None) -> dict[str, dict[str, list[dict[str, Any]]]]:
     overlays: dict[str, dict[str, list[dict[str, Any]]]] = {}
     pdf_cache: dict[tuple[str, int, str], dict[str, dict[str, Any]]] = {}
 
@@ -438,21 +337,6 @@ def build_overlays(use_gemini_vision: bool = False, use_deepseek: bool = False, 
                 anchor = anchors.get(clean_num) or anchors.get(bundle_num)
                 page_no = int(anchor["pageNumber"]) if anchor else default_page
 
-                # Optional Gemini Flash visual verification hook (strictly coordinate layout)
-                if use_gemini_vision and anchor is None:
-                    img_path = ASSETS_DIR / subject / f"{year}_{month}" / f"page_{page_no:02d}.png"
-                    gemini_boxes = map_layout_with_gemini_flash(img_path, [clean_num])
-                    if gemini_boxes:
-                        first_box = gemini_boxes[0]
-                        anchor = {
-                            "pageNumber": page_no,
-                            "boxType": first_box.get("boxType", "open-answer"),
-                            "xPct": float(first_box.get("xPct", 12.0)),
-                            "yPct": float(first_box.get("yPct", 28.0)),
-                            "widthPct": float(first_box.get("widthPct", 76.0)),
-                            "heightPct": float(first_box.get("heightPct", 10.0)),
-                        }
-
                 if not anchor:
                     # Stagger fallback vertical slots cleanly if anchor wasn't found in PDF
                     y_pct = min(76.0, 20.0 + (fallback_slot % 3) * 24.0)
@@ -484,11 +368,6 @@ def build_overlays(use_gemini_vision: bool = False, use_deepseek: bool = False, 
                     bullet_text = re.sub(r"^\[[^\]]+\]\s*", "", margin_note).strip()
                     if bullet_text:
                         concise_answer = bullet_text
-
-                if use_deepseek:
-                    ds_answer = synthesize_solution_with_deepseek(sub.get("promptHtml", ""), official_key)
-                    if ds_answer:
-                        concise_answer = ds_answer
 
                 truth_choices: list[str] = []
                 tbl = sub.get("interactiveTableData")
@@ -527,18 +406,11 @@ def build_overlays(use_gemini_vision: bool = False, use_deepseek: bool = False, 
 
 
 def main() -> int:
-    load_env_files()
-    parser = argparse.ArgumentParser(description="Build CKE solved PDF page overlays (PyMuPDF + Gemini Flash + DeepSeek).")
-    parser.add_argument("--use-gemini-vision", action="store_true", help="Refine missing bounding boxes via GEMINI_API_KEY (gemini-2.5-flash).")
-    parser.add_argument("--use-deepseek", action="store_true", help="Refine solution fills via DEEPSEEK_API_KEY (deepseek-chat).")
+    parser = argparse.ArgumentParser(description="Build CKE solved PDF page overlays deterministically via offline PyMuPDF.")
     parser.add_argument("--limit", type=int, default=None, help="Optional cap on tasks processed.")
     args = parser.parse_args()
 
-    overlays = build_overlays(
-        use_gemini_vision=args.use_gemini_vision,
-        use_deepseek=args.use_deepseek,
-        limit=args.limit,
-    )
+    overlays = build_overlays(limit=args.limit)
     OUTPUT_OVERLAYS_FILE.write_text(
         json.dumps(overlays, ensure_ascii=False, indent=2),
         encoding="utf-8",

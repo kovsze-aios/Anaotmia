@@ -299,5 +299,295 @@
         "flowArrow": [56, 52, 78, 52]
       }
     ]
+  },
+  {
+    "id": "fig-bio-lancuch-oddechowy",
+    "subject": "biologia",
+    "chapterIds": [
+      "oer-biochem-lancuch-oddechowy-i-fosforylacja-oksydacyjna"
+    ],
+    "titlePl": "Łańcuch oddechowy (kompleksy I–IV) i fosforylacja oksydacyjna (syntaza ATP)",
+    "titleLat": "Catena respiratoria et phosphorylatio oxidativa",
+    "caption": "Transport elektronów z NADH i FADH₂ na tlen molekularny w wewnętrznej błonie mitochondrium sprzężony z pompowaniem protonów H⁺ i syntezą ATP według teorii chemiosmotycznej Mitchella.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "electron-transport-chain",
+      "elementsSummary": "Białkowe kompleksy I, II, III i IV osadzone w wewnętrznej błonie mitochondrialnej, gradient protonowy w przestrzeni międzybłonowej oraz wirnikowa syntaza ATP F0F1."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Biology CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-etc-c1",
+        "labelPl": "Kompleks I (dehydrogenaza NADH)",
+        "labelLat": "Complexus I",
+        "x": 18,
+        "y": 48,
+        "description": "Utlenia NADH z cyklu Krebsa, przekazuje elektrony na ubichinon (CoQ) i pompuje 4 protony H⁺ z macierzy do przestrzeni międzybłonowej."
+      },
+      {
+        "id": "hs-etc-c3",
+        "labelPl": "Kompleks III (cytochrom bc₁) i cytochrom c",
+        "labelLat": "Complexus III",
+        "x": 47,
+        "y": 48,
+        "description": "Przekazuje elektrony z ubichinolu na ruchomy nośnik międzybłonowy — cytochrom c, dodatkowo zasilając gradient H⁺."
+      },
+      {
+        "id": "hs-etc-c4",
+        "labelPl": "Kompleks IV (oksydaza cytochromowa → H₂O)",
+        "labelLat": "Complexus IV",
+        "x": 65,
+        "y": 48,
+        "description": "Redukuje ostateczny akceptor elektronów — cząsteczkowy tlen O₂ — przy udziale H⁺ do wody metabolicznej H₂O (hamowany przez cyjanki i CO)."
+      },
+      {
+        "id": "hs-etc-atps",
+        "labelPl": "Syntaza ATP (kompleks F₀F₁)",
+        "labelLat": "ATP-synthasis",
+        "x": 84,
+        "y": 66,
+        "description": "Kanał protonowy F₀ wykorzystuje siłę protonomotoryczną powracających do macierzy jonów H⁺ do napędu rotora F₁, katalizującego fosforylację ADP + Pi → ATP."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Utlenianie NADH / FADH₂ i pompowanie protonów",
+        "explanationHtml": "<p>Elektrony wędrują przez <strong>kompleksy I–IV</strong>, co napędza pompowanie jonów <strong>H<sup>+</sup></strong> w poprzek błony wewnętrznej.</p>",
+        "activeHotspotIds": ["hs-etc-c1", "hs-etc-c3"],
+        "flowArrow": [18, 48, 47, 48]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Redukcja O₂ do H₂O w kompleksie IV",
+        "explanationHtml": "<p><strong>Kompleks IV</strong> przekazuje elektrony na tlen cząsteczkowy, tworząc wodę. Bez tlenu cały łańcuch zostaje zablokowany.</p>",
+        "activeHotspotIds": ["hs-etc-c4"],
+        "flowArrow": [47, 48, 65, 48]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Chemiosmotyczna synteza ATP",
+        "explanationHtml": "<p>Powrót H<sup>+</sup> zgodnie z gradientem przez <strong>syntazę ATP</strong> dostarcza energii do wytworzenia ATP.</p>",
+        "activeHotspotIds": ["hs-etc-atps"],
+        "flowArrow": [84, 24, 84, 64]
+      }
+    ]
+  },
+  {
+    "id": "fig-bio-cykl-krebsa",
+    "subject": "biologia",
+    "chapterIds": [],
+    "titlePl": "Cykl Krebsa (cykl kwasu cytrynowego) w macierzy mitochondrialnej",
+    "titleLat": "Cyclus acidi citrici",
+    "caption": "Cykliczny szlak utleniania reszty acetylowej acetylo-CoA do 2 CO₂ z generowaniem zredukowanych przenośników elektronów (3 NADH, 1 FADH₂) oraz GTP/ATP.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "krebs-cycle",
+      "elementsSummary": "Kondensacja acetylo-CoA (2C) ze szczawiooctanem (4C) do cytrynianu (6C), dwie dekarboksylacje oksydacyjne z wytworzeniem NADH oraz regeneracja szczawiooctanu przez bursztynylo-CoA, fumaran i jabłczan."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Biology CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-krebs-acetyl",
+        "labelPl": "Wejście Acetylo-CoA (2C) i kondensacja z OAA",
+        "labelLat": "Acetyl-CoA",
+        "x": 50,
+        "y": 12,
+        "description": "Reakcja pomostowa dostarcza acetylo-CoA (2C), który łączy się ze szczawiooctanem (4C), rozpoczynając cykl od powstania sześciowęglowego cytrynianu."
+      },
+      {
+        "id": "hs-krebs-citrate",
+        "labelPl": "Cytrynian (6C) i dekarboksylacje oksydacyjne",
+        "labelLat": "Citras → α-Ketoglutaras",
+        "x": 73,
+        "y": 45,
+        "description": "Przekształcenia izocytrynianu i α-ketoglutaranu uwalniają dwie cząsteczki CO₂ oraz generują pierwsze dwie cząsteczki NADH."
+      },
+      {
+        "id": "hs-krebs-gtp",
+        "labelPl": "Bursztynylo-CoA → fosforylacja substratowa (GTP/ATP)",
+        "labelLat": "Succinyl-CoA",
+        "x": 68,
+        "y": 72,
+        "description": "Jedyny etap cyklu wytwarzający bezpośrednio wysokoenergetyczne wiązanie w postaci GTP (równoważne 1 ATP) bez udziału łańcucha oddechowego."
+      },
+      {
+        "id": "hs-krebs-oaa",
+        "labelPl": "FADH₂ oraz regeneracja szczawiooctanu (4C)",
+        "labelLat": "Oxaloacetas",
+        "x": 27,
+        "y": 45,
+        "description": "Utlenianie bursztynianu do fumaranu redukuje FAD do FADH₂, a dehydrogenacja jabłczanu odtwarza szczawiooctan (trzeci NADH na jeden obrót cyklu)."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Synteza cytrynianu (6C)",
+        "explanationHtml": "<p>Dwuwęglowa reszta <strong>acetylo-CoA</strong> kondensuje z 4-węglowym szczawiooctanem, dając <strong>cytrynian</strong>.</p>",
+        "activeHotspotIds": ["hs-krebs-acetyl"],
+        "flowArrow": [50, 14, 50, 29]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Dekarboksylacje i synteza GTP/NADH",
+        "explanationHtml": "<p>Uwalniane są <strong>2 CO<sub>2</sub></strong>, powstają reduktory <strong>NADH</strong> oraz w jednym etapie bezpośrednio <strong>GTP/ATP</strong>.</p>",
+        "activeHotspotIds": ["hs-krebs-citrate", "hs-krebs-gtp"],
+        "flowArrow": [73, 45, 68, 72]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Generacja FADH₂ i zamknięcie cyklu",
+        "explanationHtml": "<p>Powstaje <strong>FADH<sub>2</sub></strong> i odtwarzany jest <strong>szczawiooctan</strong> gotowy na przyjęcie kolejnej cząsteczki acetylo-CoA.</p>",
+        "activeHotspotIds": ["hs-krebs-oaa"],
+        "flowArrow": [32, 72, 27, 45]
+      }
+    ]
+  },
+  {
+    "id": "fig-bio-mitoza-mejoza",
+    "subject": "biologia",
+    "chapterIds": [],
+    "titlePl": "Porównanie podziałów komórkowych: Mitoza (2n→2n) vs Mejoza (2n→4×1n + crossing-over)",
+    "titleLat": "Mitosis vs Meiosis",
+    "caption": "Zestawienie podziału zachowawczego (mitoza — brak redukcji ploidalności, identyczne komórki) oraz podziału redukcyjnego (mejoza — koniugacja homologów, chiazmy i rekombinacja).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "mitosis-meiosis",
+      "elementsSummary": "Lewy panel przedstawiający pojedynczy podział mitotyczny z rozdziałem chromatyd siostrzanych do 2 komórek 2n; prawy panel z biwalentami w profazie I, crossing-over oraz powstaniem 4 zróżnicowanych komórek haploidalnych 1n."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Biology CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-mm-mitosis",
+        "labelPl": "Płaszczyzna równikowa mitozy i rozdział chromatyd",
+        "labelLat": "Metaphasis et anaphasis mitotica",
+        "x": 26,
+        "y": 34,
+        "description": "Chromosomy homologiczne nie łączą się w pary; w anafazie pękają centromery i do biegunów wędrują pojedyncze chromatydy siostrzane (2n / 2c)."
+      },
+      {
+        "id": "hs-mm-mitosis-res",
+        "labelPl": "2 komórki potomne identyczne genetycznie (2n)",
+        "labelLat": "Cellulae filiales diploideae",
+        "x": 26,
+        "y": 72,
+        "description": "Mitoza odpowiada za wzrost organizmu, regenerację tkanek i rozmnażanie bezpłciowe, zachowując stałą liczbę chromosomów."
+      },
+      {
+        "id": "hs-mm-bivalent",
+        "labelPl": "Biwalent (tetrada) i crossing-over w profazie I",
+        "labelLat": "Chiasmata et recombinatio",
+        "x": 74,
+        "y": 34,
+        "description": "Chromosomy homologiczne łączą się w pary (koniugacja), wymieniając odcinki chromatyd niesiostrzanych — kluczowe źródło zmienności rekombinacyjnej."
+      },
+      {
+        "id": "hs-mm-meiosis-res",
+        "labelPl": "4 zróżnicowane genetycznie gamety / zarodniki (1n)",
+        "labelLat": "Cellulae haploideae",
+        "x": 74,
+        "y": 74,
+        "description": "Po dwóch podziałach (anafaza I rozdziela całe chromosomy homologiczne, a anafaza II chromatydy) powstają 4 komórki o zredukowanej liczbie chromosomów 1n."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Mitoza — ustawienie niezależne i podział 2n → 2×2n",
+        "explanationHtml": "<p>W <strong>mitozie</strong> brak koniugacji homologów; po podziale powstają dwie komórki o niezmienionej ploidalności <strong>2n</strong>.</p>",
+        "activeHotspotIds": ["hs-mm-mitosis", "hs-mm-mitosis-res"],
+        "flowArrow": [26, 36, 26, 68]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Profaza I mejozy — koniugacja homologów i chiazmy",
+        "explanationHtml": "<p>W <strong>biwalentach</strong> dochodzi do <strong>crossing-over</strong>, tworzącego nowe kombinacje alleli na chromosomach.</p>",
+        "activeHotspotIds": ["hs-mm-bivalent"],
+        "flowArrow": [69, 34, 79, 34]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Redukcja liczby chromosomów (2n → 4×1n)",
+        "explanationHtml": "<p>Po I i II podziale mejotycznym powstają cztery haploidalne (<strong>1n</strong>) komórki rozrodcze lub zarodniki.</p>",
+        "activeHotspotIds": ["hs-mm-meiosis-res"],
+        "flowArrow": [74, 48, 74, 70]
+      }
+    ]
+  },
+  {
+    "id": "fig-bio-przeciwcialo-igg",
+    "subject": "biologia",
+    "chapterIds": [],
+    "titlePl": "Budowa immunoglobuliny IgG i mechanizm wiązania antygenu (Fab / Fc)",
+    "titleLat": "Immunoglobulinum G (Anticorpus)",
+    "caption": "Czteropolipeptydowa struktura przeciwciała w kształcie litery Y: dwa łańcuchy ciężkie H, dwa lekkie L spięte mostkami S–S, dwa miejsca wiążące antygen (paratopy) oraz fragment efektorowy Fc.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "antibody-igg",
+      "elementsSummary": "Dwa łańcuchy ciężkie w kształcie Y, dwa krótsze łańcuchy lekkie, mostki dwusiarczkowe w regionie zawiasowym, ramiona Fab wiążące epitopy antygenu oraz trzonek Fc."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Biology CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-igg-fab",
+        "labelPl": "Fragment Fab i część zmienna V (Paratop)",
+        "labelLat": "Fragmentum Fab (Paratopus)",
+        "x": 20,
+        "y": 19,
+        "description": "Końce aminowe łańcuchów ciężkiego i lekkiego tworzą wysoce swoistą kieszeń przestrzenną rozpoznającą dokładnie jeden epitop antygenu (klucz–zamek)."
+      },
+      {
+        "id": "hs-igg-light",
+        "labelPl": "Łańcuchy lekkie (L) i regiony stałe C",
+        "labelLat": "Catenae leves",
+        "x": 26,
+        "y": 35,
+        "description": "Połączone kowalencyjnym mostkiem dwusiarczkowym z ramieniem łańcucha ciężkiego; współtworzą oba ramiona wiążące antygen."
+      },
+      {
+        "id": "hs-igg-hinge",
+        "labelPl": "Region zawiasowy (mostki dwusiarczkowe S–S)",
+        "labelLat": "Regio cardinis",
+        "x": 50,
+        "y": 54,
+        "description": "Nadaje elastyczność ramionom Y, ułatwiając jednoczesne związanie dwóch epitopów (np. aglutynację bakterii lub wirusów)."
+      },
+      {
+        "id": "hs-igg-fc",
+        "labelPl": "Fragment stały Fc (funkcja efektorowa)",
+        "labelLat": "Fragmentum Fc",
+        "x": 54,
+        "y": 76,
+        "description": "Decyduje o klasie immunoglobuliny (IgG jako jedyna przechodzi przez łożysko!). Wiąże receptory Fc makrofagów (opsonizacja) oraz aktywuje układ dopełniacza."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Rozpoznanie swoistego epitopu przez paratop Fab",
+        "explanationHtml": "<p>Oba końce zmiennych domen (<strong>Fab</strong>) tworzą komplementarne wiązania niekowalencyjne z <strong>epitopem antygenu</strong>.</p>",
+        "activeHotspotIds": ["hs-igg-fab", "hs-igg-light"],
+        "flowArrow": [18, 16, 25, 22]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Elastyczne sieciowanie dzięki regionowi zawiasowemu",
+        "explanationHtml": "<p><strong>Region zawiasowy</strong> pozwala zmieniać rozstaw ramion Fab, umożliwiając agregację antygenów (aglutynację).</p>",
+        "activeHotspotIds": ["hs-igg-hinge"],
+        "flowArrow": [25, 22, 50, 54]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Opsonizacja i eliminacja przez fragment Fc",
+        "explanationHtml": "<p><strong>Fragment Fc</strong> znakuje kompleks dla fagocytów (makrofagów) i uruchamia kaskadę dopełniacza.</p>",
+        "activeHotspotIds": ["hs-igg-fc"],
+        "flowArrow": [50, 54, 54, 78]
+      }
+    ]
   }
 ]

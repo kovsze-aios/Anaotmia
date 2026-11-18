@@ -737,5 +737,113 @@
     "totalBundles": 34,
     "totalSubTasks": 50,
     "totalPoints": 60
+  },
+  "biologia-2023-pokazowy-f2023": {
+    "id": "biologia-2023-pokazowy-f2023",
+    "symbol": "MBIP-R0-100-2203",
+    "title": "Biologia PR • Arkusz Pokazowy / Próbny CKE (Formuła 2023+)",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 3,
+    "totalPoints": 6
+  },
+  "biologia-2022-probny-f2015": {
+    "id": "biologia-2022-probny-f2015",
+    "symbol": "EBIP-R0-PR-2212",
+    "title": "Biologia PR • Arkusz Próbny / Diagnostyczny (Formuła 2015)",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 4
+  },
+  "chemia-2023-pokazowy-f2023": {
+    "id": "chemia-2023-pokazowy-f2023",
+    "symbol": "MCHP-R0-100-2203",
+    "title": "Chemia PR • Arkusz Pokazowy / Próbny CKE (Formuła 2023+)",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 4
+  },
+  "chemia-2022-probny-f2015": {
+    "id": "chemia-2022-probny-f2015",
+    "symbol": "ECHP-R0-PR-2212",
+    "title": "Chemia PR • Arkusz Próbny / Diagnostyczny (Formuła 2015)",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 3
+  },
+  "fizyka-2024-maj-f2023": {
+    "id": "fizyka-2024-maj-f2023",
+    "symbol": "EFIP-R0-100-2405",
+    "title": "Fizyka PR • CKE 2024 (maj) • Formuła 2023+",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 4
+  },
+  "fizyka-2022-maj-f2015": {
+    "id": "fizyka-2022-maj-f2015",
+    "symbol": "MFI-R1_1P-222",
+    "title": "Fizyka PR • CKE 2022 (maj) • Formuła 2015",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 3
+  },
+  "fizyka-2023-pokazowy-f2023": {
+    "id": "fizyka-2023-pokazowy-f2023",
+    "symbol": "MFIP-R0-PR-2203",
+    "title": "Fizyka PR • Arkusz Próbny CKE (Formuła 2023+)",
+    "pageImageUrls": [],
+    "totalBundles": 1,
+    "totalSubTasks": 1,
+    "totalPoints": 2
+  },
+  "fizyka-2022-probny-f2015": {
+    "id": "fizyka-2022-probny-f2015",
+    "symbol": "EFIP-R0-PR-2212",
+    "title": "Fizyka PR • Arkusz Próbny / Diagnostyczny (Formuła 2015)",
+    "pageImageUrls": [],
+    "totalBundles": 1,
+    "totalSubTasks": 1,
+    "totalPoints": 2
+  },
+  "matematyka-2024-maj-f2023": {
+    "id": "matematyka-2024-maj-f2023",
+    "symbol": "EMAP-P0-100-2405",
+    "title": "Matematyka • CKE 2024 (maj) • Formuła 2023+",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 4
+  },
+  "matematyka-2022-maj-f2015": {
+    "id": "matematyka-2022-maj-f2015",
+    "symbol": "MMA-P1_1P-222",
+    "title": "Matematyka • CKE 2022 (maj) • Formuła 2015",
+    "pageImageUrls": [],
+    "totalBundles": 2,
+    "totalSubTasks": 2,
+    "totalPoints": 3
+  },
+  "matematyka-2023-pokazowy-f2023": {
+    "id": "matematyka-2023-pokazowy-f2023",
+    "symbol": "MMAP-P0-PR-2203",
+    "title": "Matematyka • Arkusz Pokazowy / Próbny CKE (Formuła 2023+)",
+    "pageImageUrls": [],
+    "totalBundles": 1,
+    "totalSubTasks": 1,
+    "totalPoints": 2
+  },
+  "matematyka-2022-probny-f2015": {
+    "id": "matematyka-2022-probny-f2015",
+    "symbol": "EMAP-P0-PR-2212",
+    "title": "Matematyka • Arkusz Próbny / Diagnostyczny (Formuła 2015)",
+    "pageImageUrls": [],
+    "totalBundles": 1,
+    "totalSubTasks": 1,
+    "totalPoints": 2
   }
 }

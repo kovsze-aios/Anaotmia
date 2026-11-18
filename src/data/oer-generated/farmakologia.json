@@ -1,1 +1,232 @@
-[]
+[
+  {
+    "id": "oer-farm-adme-wchlanianie-dystrybucja-metabolizm-wydalanie",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka ADME, receptory i farmakoterapia kliniczna",
+    "sourcePdf": "OpenStax_Pharmacology_for_Nurses_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Farmakokinetyka ADME: wchłanianie, jonizacja pKa, cytochrom CYP450 i objętość dystrybucji",
+      "toc": [
+        { "title": "Dyfuzja bierna i równanie Hendersona–Hasselbalcha", "anchorId": "jonizacja-pka" },
+        { "title": "Efekt pierwszego przejścia i objętość dystrybucji Vd", "anchorId": "dystrybucja-vd" },
+        { "title": "Faza I i II biotransformacji (CYP450) oraz wydalanie", "anchorId": "metabolizm-cyp" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"jonizacja-pka\">Przenikanie przez błony i zjawisko pułapki jonowej</h2><p>Większość leków to słabe kwasy lub słabe zasady, które przenikają przez błony lipidowe metodą dyfuzji biernej głównie w formie <strong>niezjonizowanej (lipofilnej)</strong>. Stosunek formy zjonizowanej do niezjonizowanej w danym pH określa równanie <strong>Hendersona–Hasselbalcha</strong>:</p><p><code>pH &minus; pK<sub>a</sub> = log<sub>10</sub>([A<sup>&minus;</sup>]/[HA])</code> (dla słabych kwasów) oraz <code>pH &minus; pK<sub>a</sub> = log<sub>10</sub>([B]/[BH<sup>+</sup>])</code> (dla słabych zasad).</p><p>Zjawisko <strong>pułapki jonowej</strong> wykorzystuje się klinicznie w toksykologii: alkalizacja moczu wodorowęglanem sodu zwiększa jonizację słabego kwasu (np. salicylanów w nerkach), zapobiegając jego resorpcji zwrotnej w kanalikach i przyspieszając wydalanie.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"dystrybucja-vd\">Biodostępność (F), efekt pierwszego przejścia i objętość dystrybucji</h2><p>Po podaniu doustnym lek wchłaniany w jelicie cienkim trafia żyłą wrotną do wątroby, gdzie część dawki może ulec unieczynnieniu jeszcze przed wejściem do krążenia systemowego (<strong>efekt pierwszego przejścia</strong>). Podanie dożylne daje 100% biodostępności (<em>F = 1</em>).</p><p><strong>Pozorna objętość dystrybucji (V<sub>d</sub>)</strong> wyraża stosunek ilości leku w ustroju do jego stężenia w osoczu (<code>V<sub>d</sub> = Dawka / C<sub>0</sub></code>). Leki silnie związane z albuminami osocza mają niskie V<sub>d</sub> (&approx; 4–5 l), natomiast związki bardzo lipofilne kumulujące się w tkance tłuszczowej lub mięśniach osiągają V<sub>d</sub> przekraczające objętość całego ciała (np. &gt; 200 l).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"metabolizm-cyp\">Biotransformacja wątrobowa i klirens nerkowy</h2><p>Wątrobowa przemiana leków przebiega dwufazowo: <strong>Faza I</strong> (utlenianie, redukcja, hydroliza, głównie przez izoenzymy <strong>cytochromu P450</strong>, takie jak CYP3A4 czy CYP2D6) wprowadza lub odsłania grupę polarną, natomiast <strong>Faza II</strong> sprzęga metabolit z resztą kwasu glukuronowego, siarczanem lub glicyną w celu wydalenia z moczem lub żółcią.</p><p>Induktory CYP450 (np. ryfampicyna, karbamazepina) obniżają stężenie współstosowanych leków, podczas gdy inhibitory (np. sok grejpfrutowy dla CYP3A4, erytromycyna, ketokonazol) zwiększają ryzyko toksyczności.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak zakwaszenie moczu chlorkiem amonu wpływa na nerkowe wydalanie słabej zasady (np. amfetaminy)?",
+          "answer": "W kwaśnym moczu słaba zasada ulega protonowaniu do formy kationowej BH+ (zjonizowanej), która nie przenika biernie przez nabłonek kanalików nerkowych — jej wydalanie z moczem ulega znacznemu przyspieszeniu."
+        },
+        {
+          "question": "Co oznacza bardzo wysoka objętość dystrybucji (np. Vd = 400 l u dorosłego pacjenta)?",
+          "answer": "Oznacza, że lek po opuszczeniu łożyska naczyniowego bardzo silnie wiąże się w tkankach pozanaczyniowych (tłuszczowej, mięśniowej), pozostawiając bardzo niskie stężenie w osoczu."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Farmakologia — Farmakokinetyka ADME",
+        "requirementCodes": ["FARM-ADME-1", "FARM-CYP-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-farm-kinetyka-pierwszego-i-zerowego-rzedu-auc",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka ADME, receptory i farmakoterapia kliniczna",
+    "sourcePdf": "Principles_of_Pharmacology_Rosow_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Kinetyka eliminacji I i 0 rzędu, okres półtrwania t₁/₂ oraz stan stacjonarny (Css)",
+      "toc": [
+        { "title": "Eliminacja I rzędu vs kinetyka nasycalna (0 rzędu)", "anchorId": "rzedowosc-kinetyki" },
+        { "title": "Okres półtrwania, dawka podtrzymująca i wysycająca", "anchorId": "dawkowanie-css" },
+        { "title": "Wskaźnik terapeutyczny (TI) i pole pod krzywą AUC", "anchorId": "indeks-terapeutyczny" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"rzedowosc-kinetyki\">Kinetyka I rzędu vs nasycalna eliminacja 0 rzędu</h2><p>W większości terapii eliminacja przebiega zgodnie z <strong>kinetyką I rzędu</strong>: w jednostce czasu usuwany jest stały <em>ułamek</em> aktualnej ilości leku w ustroju, a okres półtrwania <code>t<sub>1/2</sub> = (0,693 &middot; V<sub>d</sub>) / CL</code> nie zależy od dawki.</p><p>Wybrane substancje wysycające enzymy metabolizujące (klasycznie <strong>etanol, fenytoina w dawkach terapeutycznych, wysokie dawki salicylanów</strong>) przechodzą w <strong>kinetykę 0 rzędu</strong> (liniowy spadek stężenia — stała ilość na godzinę niezależnie od stężenia). Nawet niewielkie zwiększenie dawki w kinetyce nasycalnej powoduje nieproporcjonalnie gwałtowny skok stężenia we krwi.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"dawkowanie-css\">Osiąganie stanu stacjonarnego (Css) i dawki nasycające</h2><p>Przy regularnym dawkowaniu w kinetyce I rzędu organizm osiąga <strong>stan stacjonarny (C<sub>ss</sub>)</strong> po upływie około <strong>4–5 okresów półtrwania (t<sub>1/2</sub>)</strong> — niezależnie od wielkości pojedynczej dawki (dawka reguluje wysokość poziomu C<sub>ss</sub>, nie czas jego osiągnięcia).</p><p>Gdy potrzebny jest natychmiastowy efekt (np. lidokaina, amiodaron), stosuje się jednorazową <strong>dawkę nasycającą</strong> zależną wyłącznie od objętości dystrybucji: <code>D<sub>L</sub> = (C<sub>ss</sub> &middot; V<sub>d</sub>) / F</code>, natomiast dawkę podtrzymującą wyznacza klirens: <code>D<sub>M</sub> = (C<sub>ss</sub> &middot; CL &middot; &tau;) / F</code>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"indeks-terapeutyczny\">Okno terapeutyczne, TI i biodostępność AUC</h2><p><strong>Wskaźnik terapeutyczny (TI = TD<sub>50</sub> / ED<sub>50</sub>)</strong> określa margines bezpieczeństwa między dawką wywołującą efekt terapeutyczny u połowy badanych a dawką toksyczną. Leki o wąskim indeksie terapeutycznym (digoksyna, lit, warfaryna, teofilina) wymagają monitorowania stężenia we krwi (TDM).</p><p>Całkowitą ekspozycję organizmu na lek reprezentuje pole pod krzywą stężenia w czasie (<strong>AUC</strong>); porównanie <code>AUC<sub>p.o.</sub> / AUC<sub>i.v.</sub></code> dla równych dawek wyznacza bezwzględną biodostępność leku.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Od jakich parametrów farmakokinetycznych zależy wyłącznie wysokość dawki nasycającej (LD), a od jakich dawki podtrzymującej (MD)?",
+          "answer": "Dawka nasycająca zależy od docelowego stężenia i objętości dystrybucji (Vd), natomiast dawka podtrzymująca zależy od klirensu całkowitego (CL)."
+        },
+        {
+          "question": "Po jakim czasie od rozpoczęcia stałego wlewu dożylnego lub podawania stałej dawki co t1/2 stężenie leku osiąga ponad 90% stanu stacjonarnego?",
+          "answer": "Po 4 do 5 okresach półtrwania (po 4 t1/2 osiąga 93,75%, a po 5 t1/2 już 96,9% wartości stacjonarnej)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Farmakologia — Kinetyka eliminacji",
+        "requirementCodes": ["FARM-KIN-1", "FARM-CSS-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-farm-farmakodynamika-agonisci-antagonisci-i-ec50",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka ADME, receptory i farmakoterapia kliniczna",
+    "sourcePdf": "Principles_of_Pharmacology_Rosow_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Farmakodynamika: krzywe dawka–odpowiedź, siła (EC₅₀) vs skuteczność (Emax) oraz antagonizm",
+      "toc": [
+        { "title": "Siła działania EC₅₀ vs skuteczność maksymalna Eₘₐₓ", "anchorId": "ec50-emax" },
+        { "title": "Agonista pełny, częściowy oraz odwrotny", "anchorId": "rodzaje-agonistow" },
+        { "title": "Antagonizm kompetycyjny vs niekompetycyjny", "anchorId": "antagonizm" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"ec50-emax\">Siła (potencjał, EC₅₀) a maksymalna skuteczność (Eₘₐₓ)</h2><p>Na logarytmicznej krzywej zależności odpowiedzi od stężenia leku rozróżniamy dwie niezależne cechy: <strong>skuteczność maksymalną (E<sub>max</sub>)</strong> — najwyższy możliwy pułap odpowiedzi biologicznej — oraz <strong>siłę działania (EC<sub>50</sub>)</strong>, czyli stężenie dające 50% efektu E<sub>max</sub>.</p><p>Lek o niższym EC<sub>50</sub> ma większą siłę działania (krzywa przesunięta w lewo), ale o tym, jak silny efekt kliniczny maksymalnie uzyskamy (np. zniesienie bólu silnego vs umiarkowanego), decyduje wartość <strong>E<sub>max</sub></strong>, a nie EC<sub>50</sub>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"rodzaje-agonistow\">Spektrum aktywności wewnętrznej (&alpha;)</h2><p><strong>Agonista pełny</strong> (&alpha; = 1) stabilizuje aktywną konformację receptora i osiąga pełne E<sub>max</sub> tkanki. <strong>Agonista częściowy</strong> (0 &lt; &alpha; &lt; 1, np. buprenorfina, aripiprazol) wykazuje niższe E<sub>max</sub>, a w obecności wysokich stężeń agonisty pełnego może zachowywać się jak <em>antagonista kompetycyjny</em>.</p><p><strong>Agonista odwrotny</strong> stabilizuje nieaktywny stan receptora wykazującego konstytutywną aktywność podstawową, obniżając odpowiedź poniżej poziomu bazowego.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"antagonizm\">Antagonizm odwracalny (kompetycyjny) i nieodwracalny</h2><p><strong>Antagonista kompetycyjny odwracalny</strong> konkuruje o to samo miejsce ortosteryczne co agonista. Na wykresie przesuwa krzywą agonisty równolegle w prawo (zwiększa pozorne <strong>EC<sub>50</sub></strong>), lecz nie zmienia maksymalnego efektu <strong>E<sub>max</sub></strong>, który można odtworzyć zwiększeniem dawki agonisty.</p><p><strong>Antagonista niekompetycyjny</strong> (lub nieodwracalny, kowalencyjny np. fenoksybenzamina) trwale blokuje receptory lub wiąże się w miejscu allosterycznym, obniżając pułap <strong>E<sub>max</sub></strong> bez możliwości pokonania blokady nadmiarem agonisty (o ile brak rezerwy receptorowej).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak zmienia się krzywa dawka–efekt agonisty po dodaniu odwracalnego antagonisty kompetycyjnego?",
+          "answer": "Krzywa przesuwa się równolegle w prawo (pozorne EC50 rośnie — spada siła agonisty), natomiast Emax pozostaje bez zmian."
+        },
+        {
+          "question": "Dlaczego podanie agonisty częściowego (np. buprenorfiny) osobie z wysokim stężeniem agonisty pełnego (morfiny/fentanylu) może wywołać objawy odstawienne?",
+          "answer": "Agonista częściowy wypiera agonistę pełnego z części receptorów, lecz sam generuje niższą aktywność wewnętrzną Emax, powodując netto spadek całkowitej stymulacji receptorowej."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Farmakologia — Farmakodynamika",
+        "requirementCodes": ["FARM-DYN-1", "FARM-REC-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-farm-uklad-autonomiczny-leki-cholinergiczne-i-adrenergiczne",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka ADME, receptory i farmakoterapia kliniczna",
+    "sourcePdf": "OpenStax_Pharmacology_for_Nurses_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Farmakologia autonomicznego układu nerwowego: receptory M₁–M₃, α i β oraz sympatyko- i parasympatykolityki",
+      "toc": [
+        { "title": "Cholinomimetyki i antycholinergiki (atropina)", "anchorId": "uklad-cholinergiczny" },
+        { "title": "Katecholaminy i selektywność receptorów α₁, α₂, β₁, β₂", "anchorId": "uklad-adrenergiczny" },
+        { "title": "Kliniczne zastosowanie β-blokerów i α-blokerów", "anchorId": "blokery-autonomiczne" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"uklad-cholinergiczny\">Przekaźnictwo cholinergiczne i blokada muskarynowa</h2><p>Acetylocholina (ACh) działa przez receptory nikotynowe (<strong>N<sub>N</sub></strong> w zwojach autonomicznych oraz <strong>N<sub>M</sub></strong> w płytce nerwowo-mięśniowej) i metabotropowe muskarynowe (<strong>M<sub>1</sub>–M<sub>3</sub></strong>).</p><p>Pobudzenie M<sub>2</sub> (G<sub>i</sub>) w sercu zwalnia częstość akcji (bradykardia), a pobudzenie M<sub>3</sub> (G<sub>q</sub>) kurczy mięśnie gładkie oskrzeli, pęcherza i jelit oraz zwęża źrenice (mioza). <strong>Atropina</strong> — kompetycyjny antagonista receptorów muskarynowych — rozszerza źrenice (mydriaza), przyspiesza rytm serca, osusza wydzielanie i odwraca zatrucie pestycydami fosforoorganicznymi.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"uklad-adrenergiczny\">Podtypy receptorów adrenergicznych i efekty narządowe</h2><ul><li><strong>&alpha;<sub>1</sub> (G<sub>q</sub>):</strong> skurcz naczyń oporowych (wzrost ciśnienia tętniczego), skurcz zwieracza pęcherza i rozwieracza źrenicy.</li><li><strong>&alpha;<sub>2</sub> (G<sub>i</sub>):</strong> autoreceptor presynaptyczny hamujący uwalnianie noradrenaliny w OUN i na obwodzie (wykorzystywany przez klonidynę i metyldopę).</li><li><strong>&beta;<sub>1</sub> (G<sub>s</sub>):</strong> wzrost częstości (chronotropizm +), siły skurczu (inotropizm +) serca oraz uwalniania reniny w nerkach.</li><li><strong>&beta;<sub>2</sub> (G<sub>s</sub>):</strong> rozszerzenie oskrzeli (salbutamol w astmie) oraz naczyń mięśni szkieletowych, glikogenoliza.</li></ul>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"blokery-autonomiczne\">Kardioselektywne β₁-blokery i przeciwwskazania</h2><p>Antagoniści receptorów adrenergicznych dzielą się na nieselektywne (&beta;<sub>1</sub>/&beta;<sub>2</sub>, np. propranolol) oraz kardioselektywne (&beta;<sub>1</sub>, np. bisoprolol, metoprolol). Kardioselektywność minimalizuje ryzyko skurczu oskrzeli u chorych z POChP lub łagodną astmą.</p><p>Przykładowa interakcja diagnostyczna: podanie nieselektywnego &beta;-blokera może maskować tachykardię wywołaną przez hipoglikemię u pacjentów z cukrzycą, opóźniając rozpoznanie niedocukrzenia.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego salbutamol (selektywny agonista β2) jest lekiem z wyboru w przerywaniu napadu astmy oskrzelowej w porównaniu do adrenaliny?",
+          "answer": "Selektywne pobudzenie receptorów β2 rozkurcza mięśniówkę gładką oskrzeli przy znacznie mniejszej stymulacji sercowych receptorów β1 (mniejsze ryzyko tachykardii i arytmii)."
+        },
+        {
+          "question": "Jakiego efektu ze strony częstości akcji serca i źrenic należy się spodziewać u pacjenta po podaniu atropiny?",
+          "answer": "Tachykardii (blokada receptorów M2 w węźle zatokowym) oraz rozszerzenia źrenic (mydriaza na skutek blokady M3 zwieracza źrenicy)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Farmakologia — Układ autonomiczny",
+        "requirementCodes": ["FARM-AUN-1", "FARM-ADR-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-farm-leki-przeciwzapalne-nlpz-glikokortykosteroidy-i-opioidy",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka ADME, receptory i farmakoterapia kliniczna",
+    "sourcePdf": "Principles_of_Pharmacology_Rosow_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Leki przeciwzapalne i przeciwbólowe: szlak COX-1/COX-2 (NLPZ), glikokortykosteroidy oraz opioidy",
+      "toc": [
+        { "title": "Szlak kwasu arachidonowego i izoenzymy COX", "anchorId": "szlak-cox" },
+        { "title": "Aspiryna, paracetamol i blokada fosfolipazy A₂", "anchorId": "nlpz-gks" },
+        { "title": "Receptory opioidowe μ i antidotum nalokson", "anchorId": "opioidy-nalokson" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"szlak-cox\">Cyklooksygenaza COX-1 vs COX-2 i równowaga prostanoidów</h2><p>Fosfolipaza A<sub>2</sub> uwalnia z fosfolipidów błonowych kwas arachidonowy, przekształcany przez cyklooksygenazy do prostaglandyn i tromboksanów. Konstytutywna izoforma <strong>COX-1</strong> odpowiada za ochronę śluzówki żołądka (PGE<sub>2</sub>/PGI<sub>2</sub>), przepływ nerkowy oraz syntezę proagregacyjnego tromboksanu A<sub>2</sub> (TXA<sub>2</sub>) w płytkach krwi.</p><p>Indukowana w ognisku zapalnym izoforma <strong>COX-2</strong> nasila wytwarzanie mediatorów bólu, gorączki i obrzęku. Nieselektywne NLPZ (ibuprofen, naproksen, ketoprofen) hamują obie izoformy, dlatego ich najczęstszym działaniem niepożądanym jest uszkodzenie błony śluzowej żołądka oraz spadek filtracji kłębuszkowej.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"nlpz-gks\">Nieodwracalna aspiryna, paracetamol i glikokortykosteroidy</h2><p><strong>Kwas acetylosalicylowy (ASA)</strong> jako jedyny NLPZ nieodwracalnie acetyluje resztę seryny w centrum aktywnym COX. Ponieważ bezjądrzaste płytki krwi nie mogą syntetyzować nowego białka COX-1, pojedyncza mała dawka ASA hamuje agregację płytek (produkcję TXA<sub>2</sub>) przez cały okres ich życia (7–10 dni).</p><p><strong>Paracetamol</strong> działa głównie ośrodkowo (brak istotnego działania przeciwzapalnego w tkankach obwodowych), a jego przedawkowanie wytwarza toksyczny metabolit <strong>NAPQI</strong> neutralizowany przez glutation (odtrutka: N-acetylocysteina). <strong>Glikokortykosteroidy</strong> hamują ekspresję COX-2 oraz pośrednio (przez lipokortynę/aneksynę A1) aktywność fosfolipazy A<sub>2</sub>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"opioidy-nalokson\">Analgezja opioidowa i odwracanie depresji oddechowej</h2><p>Silne leki przeciwbólowe (morfina, oksykodon, fentanyl) są agonistami receptorów opioidowych <strong>&mu; (G<sub>i</sub>)</strong>: otwierają kanały potasowe K<sup>+</sup> na błonie postsynaptycznej i hamują presynaptyczne kanały Ca<sup>2+</sup>, wygaszając transmisję bodźców nocyceptywnych w rogu tylnym rdzenia i śródmózgowiu.</p><p>Najgroźniejszym skutkiem przedawkowania jest hamowanie wrażliwości ośrodka oddechowego w pniu mózgu na CO<sub>2</sub>. Szybko działającym kompetycyjnym antagonistą o krótkim okresie półtrwania (wymagającym powtarzania dawek przy opioidach długodziałających) jest <strong>nalokson</strong>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego pojedyncza dawka 75 mg kwasu acetylosalicylowego wywiera działanie przeciwpłytkowe utrzymujące się przez kilka dni, mimo krótkiego czasu półtrwania ASA we krwi?",
+          "answer": "Aspiryna nieodwracalnie acetyluje COX-1 w bezjądrzastych trombocytach, które nie mają aparatu syntezy białek, więc produkcja tromboksanu A2 wraca dopiero wraz z pojawieniem się nowych płytek ze szpiku."
+        },
+        {
+          "question": "Jaką rolę w zatruciu paracetamolem pełni dożylna N-acetylocysteina?",
+          "answer": "Dostarcza grup sulfhydrylowych i regeneruje zapasy wątrobowego glutationu, który sprzęga i detoksykuje hepatotoksyczny metabolit paracetamolu — NAPQI."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Farmakologia — Leki przeciwzapalne i opioidy",
+        "requirementCodes": ["FARM-NLPZ-1", "FARM-OPI-2"],
+        "status": "core"
+      }
+    }
+  }
+]

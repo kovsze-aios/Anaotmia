@@ -295,5 +295,297 @@
         "flowArrow": [20, 52, 50, 78]
       }
     ]
+  },
+  {
+    "id": "fig-chem-rownowaga-le-chatelier",
+    "subject": "chemia",
+    "chapterIds": [],
+    "titlePl": "Stan równowagi dynamicznej (v₁ = v₂) i reguła przekory Le Chateliera",
+    "titleLat": "Aequilibrium chemicum et principium Le Chateliera",
+    "caption": "Wyrównanie szybkości reakcji wprost (v₁) i reakcji odwrotnej (v₂) przy zachowaniu stałej równowagi stężeniowej Kc oraz odpowiedź układu na zaburzenia stężenia, ciśnienia i temperatury.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "chemical-equilibrium",
+      "elementsSummary": "Wykres szybkości reakcji v1 i v2 zbiegających się w czasie t_równowagi do wspólnego plateau oraz oznaczenie punktu równowagi Kc."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Chemistry CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-eq-v1",
+        "labelPl": "Szybkość reakcji wprost (v₁ — substraty → produkty)",
+        "labelLat": "Celeritas directa",
+        "x": 28,
+        "y": 31,
+        "description": "Początkowo wysoka szybkość reakcji spada w miarę zużywania substratów aż do ustalenia się stanu równowagi."
+      },
+      {
+        "id": "hs-eq-v2",
+        "labelPl": "Szybkość reakcji odwrotnej (v₂ — produkty → substraty)",
+        "labelLat": "Celeritas inversa",
+        "x": 28,
+        "y": 64,
+        "description": "Startuje od zera i rośnie wraz ze wzrostem stężenia produktów reakcji."
+      },
+      {
+        "id": "hs-eq-point",
+        "labelPl": "Punkt równowagi dynamicznej (v₁ = v₂ > 0)",
+        "labelLat": "Status aequilibrii",
+        "x": 56,
+        "y": 46,
+        "description": "Obie reakcje nadal zachodzą z identyczną szybkością makroskopową, dlatego stężenia substratów i produktów (niekoniecznie sobie równe!) pozostają stałe."
+      },
+      {
+        "id": "hs-eq-kc",
+        "labelPl": "Stała równowagi Kc i rola katalizatora",
+        "labelLat": "Constans Kc(T)",
+        "x": 76,
+        "y": 46,
+        "description": "Kc zależy WYŁĄCZNIE od temperatury (ΔH > 0 → wzrost T podnosi Kc). Dodatek katalizatora przyspiesza jednakowo v₁ i v₂, skracając czas dojścia do równowagi bez zmiany Kc."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Zbliżanie się szybkości v₁ i v₂",
+        "explanationHtml": "<p>Substratów ubywa (<strong>v<sub>1</sub></strong> maleje), a produktów przybywa (<strong>v<sub>2</sub></strong> rośnie) aż do zrównania się obu krzywych.</p>",
+        "activeHotspotIds": ["hs-eq-v1", "hs-eq-v2"],
+        "flowArrow": [24, 30, 54, 46]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Ustalenie równowagi dynamicznej",
+        "explanationHtml": "<p>Od chwili <strong>t<sub>równowagi</sub></strong> zachodzi <code>v<sub>1</sub> = v<sub>2</sub> &ne; 0</code> — stężenia makroskopowe są stałe.</p>",
+        "activeHotspotIds": ["hs-eq-point"],
+        "flowArrow": [56, 46, 76, 46]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Wpływ bodźców (Reguła Le Chateliera–Brauna)",
+        "explanationHtml": "<p>Układ przeciwdziała zmianie: wzrost ciśnienia faworyzuje stronę o mniejszej liczbie moli gazów, a wzrost T faworyzuje reakcję endotermiczną.</p>",
+        "activeHotspotIds": ["hs-eq-kc"],
+        "flowArrow": [66, 36, 78, 46]
+      }
+    ]
+  },
+  {
+    "id": "fig-chem-miareczkowanie-bufory",
+    "subject": "chemia",
+    "chapterIds": [],
+    "titlePl": "Krzywa miareczkowania słabego kwasu mocną zasadą (strefa buforowa i PR)",
+    "titleLat": "Curva titrationis acidi debilis",
+    "caption": "Zależność pH roztworu od objętości dodanego titranta (NaOH): płaski region buforowy wokół pH = pKa (połowa miareczkowania) oraz stromy skok w punkcie równoważnikowym przy pH > 7.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "acid-base-titration",
+      "elementsSummary": "Sigmoidalna krzywa pH = f(V_NaOH) z zaznaczoną strefą buforową przy połowie objętości równoważnikowej (pH = pKa) oraz punktem równoważnikowym PR leżącym w środowisku zasadowym (hydroliza anionu A-)."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Chemistry CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-tit-start",
+        "labelPl": "Początkowe pH roztworu słabego kwasu (HA)",
+        "labelLat": "Initium titrationis",
+        "x": 20,
+        "y": 66,
+        "description": "Wyznaczone przez stałą dysocjacji kwasowej Ka (wyższe pH niż dla mocnego kwasu o tym samym stężeniu)."
+      },
+      {
+        "id": "hs-tit-buffer",
+        "labelPl": "Strefa buforowa i punkt połowy miareczkowania (pH = pKa)",
+        "labelLat": "Zona tamponis",
+        "x": 38,
+        "y": 58,
+        "description": "Gdy [HA] = [A⁻] (dodano 0,5 V_PR zasady), roztwór wykazuje maksymalną pojemność buforową, a z równania Hendersona–Hasselbalcha pH = pKa."
+      },
+      {
+        "id": "hs-tit-pr",
+        "labelPl": "Punkt równoważnikowy PR (pH > 7 dla CH₃COONa)",
+        "labelLat": "Punctum aequivalentiae",
+        "x": 58,
+        "y": 36,
+        "description": "W PR cały kwas przeszedł w sprzężoną słabą zasadę A⁻ ulegającą hydrolizie anionowej (A⁻ + H₂O ⇌ HA + OH⁻), stąd pH > 7 — do detekcji dobieramy fenoloftaleinę (nie oranż metylowy!)."
+      },
+      {
+        "id": "hs-tit-excess",
+        "labelPl": "Nadmiar mocnej zasady NaOH (plateau wysokiego pH)",
+        "labelLat": "Excessus basis",
+        "x": 80,
+        "y": 17,
+        "description": "Po przekroczeniu PR o pH roztworu decyduje wyłącznie stechiometryczny nadmiar jonów OH⁻."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Bufor octanowy w połowie drogi (pH = pKa)",
+        "explanationHtml": "<p>Częściowe zobojętnienie tworzy <strong>roztwór buforowy (HA + A<sup>&minus;</sup>)</strong> stabilizujący pH podczas dodawania kolejnej objętości NaOH.</p>",
+        "activeHotspotIds": ["hs-tit-start", "hs-tit-buffer"],
+        "flowArrow": [20, 66, 38, 58]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Gwałtowny skok pH w punkcie równoważnikowym (PR > 7)",
+        "explanationHtml": "<p>Ze względu na hydrolizę anionową soli słabego kwasu i mocnej zasady, punkt równoważnikowy leży w środowisku <strong>zasadowym (pH &gt; 7)</strong>.</p>",
+        "activeHotspotIds": ["hs-tit-pr"],
+        "flowArrow": [54, 52, 58, 36]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Nadmiar titranta (NaOH)",
+        "explanationHtml": "<p>Kolejne porcje NaOH ustalają silnie alkaliczne pH na górnym plateau krzywej.</p>",
+        "activeHotspotIds": ["hs-tit-excess"],
+        "flowArrow": [62, 22, 82, 17]
+      }
+    ]
+  },
+  {
+    "id": "fig-fiz-rownia-rzut",
+    "subject": "fizyka",
+    "chapterIds": [
+      "oer-fizy-kinematyka-rzut-ukosny-i-dynamika-rowni"
+    ],
+    "titlePl": "Kinematyka rzutu ukośnego (parabola) oraz rozkład sił na równi pochyłej",
+    "titleLat": "Kinematika i dynamika bryły",
+    "caption": "Porównanie dwóch fundamentalnych zadań maturalnych z fizyki: składowych siły ciężkości mg (F_zsuw = mg sinα, N = mg cosα) oraz złożenia ruchu jednostajnego w poziomie z jednostajnie przyspieszonym w pionie.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "inclined-plane-projectile",
+      "elementsSummary": "Równia pochyła o kącie nachylenia alfa z wektorami mg i reakcji podłoża N oraz rzut ukośny z zaznaczoną wysokością maksymalną H_max i wektorem v_x."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Fizyka CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-fiz-mg",
+        "labelPl": "Ciężar ciała (Q = mg) i składowa zsuwająca",
+        "labelLat": "Vis gravitatis",
+        "x": 22,
+        "y": 62,
+        "description": "Siła ciężkości skierowana pionowo w dół rozkłada się na siłę zsuwającą równoległą do równi (mg·sinα) oraz dociskającą prostopadłą (mg·cosα)."
+      },
+      {
+        "id": "hs-fiz-normal",
+        "labelPl": "Siła reakcji podłoża N (= mg cosα)",
+        "labelLat": "Vis normalis",
+        "x": 31,
+        "y": 39,
+        "description": "Prostopadła do powierzchni równi równoważy składową nacisku; od jej wartości zależy maksymalna siła tarcia T = μ·N = μ·mg·cosα."
+      },
+      {
+        "id": "hs-fiz-hmax",
+        "labelPl": "Wierzchołek paraboli H_max (vy = 0, v = vx)",
+        "labelLat": "Altitudo maxima",
+        "x": 72,
+        "y": 45,
+        "description": "W najwyższym punkcie toru składowa pionowa prędkości zeruje się, lecz prędkość wypadkowa NIE jest zerowa (wynosi vx = v₀·cosα)!"
+      },
+      {
+        "id": "hs-fiz-range",
+        "labelPl": "Zasięg rzutu Z = (v₀² sin 2α) / g",
+        "labelLat": "Jactus parabolicus",
+        "x": 90,
+        "y": 76,
+        "description": "Maksymalny zasięg przy pominięciu oporu powietrza uzyskuje się dla kąta wyrzutu α = 45°; ten sam zasięg dają kąty dopełniające (np. 30° i 60°)."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Rozkład ciężaru na równi pochyłej",
+        "explanationHtml": "<p>Wektor <strong>mg</strong> rozkłada się na składową wzdłuż równi (<strong>mg&middot;sin&alpha;</strong>) oraz docisk równoległy do normalnej <strong>N</strong>.</p>",
+        "activeHotspotIds": ["hs-fiz-mg", "hs-fiz-normal"],
+        "flowArrow": [22, 49, 22, 66]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Szczyt trajektorii rzutu ukośnego (H_max)",
+        "explanationHtml": "<p>W punkcie <strong>H<sub>max</sub></strong> składowa pionowa prędkości <code>v<sub>y</sub> = 0</code>, natomiast składowa pozioma <code>v<sub>x</sub> = const</code>.</p>",
+        "activeHotspotIds": ["hs-fiz-hmax"],
+        "flowArrow": [54, 72, 72, 45]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Upadek końcowy i zasięg Z",
+        "explanationHtml": "<p>Symetria toru w próżni sprawia, że czas wznoszenia równa się czasowi spadania, dając zasięg maksymalny dla <strong>&alpha; = 45&deg;</strong>.</p>",
+        "activeHotspotIds": ["hs-fiz-range"],
+        "flowArrow": [72, 45, 92, 76]
+      }
+    ]
+  },
+  {
+    "id": "fig-fiz-indukcja-rlc",
+    "subject": "fizyka",
+    "chapterIds": [
+      "oer-fizy-indukcja-elektromagnetyczna-i-obwody-rlc"
+    ],
+    "titlePl": "Prawo indukcji Faradaya–Lenza oraz rezonans napięć w szeregowym obwodzie RLC",
+    "titleLat": "Inductio electromagnetica et circuitus RLC",
+    "caption": "Zjawisko powstawania siły elektromotorycznej indukcji proporcjonalnej do szybkości zmian strumienia magnetycznego (ε = −dΦ/dt) oraz szeregowy układ R, L, C w warunkach rezonansu (X_L = X_C).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "rlc-electromagnetic-induction",
+      "elementsSummary": "Zwojnica z zaznaczonym prawem Faradaya–Lenza oraz szeregowy obwód prądu przemiennego zawierający rezystor R, cewkę L i kondensator C."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax Fizyka CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-rlc-faraday",
+        "labelPl": "Zwojnica i prawo Faradaya–Lenza (ε = −N ΔΦ/Δt)",
+        "labelLat": "Lex Faradays–Lenz",
+        "x": 23,
+        "y": 35,
+        "description": "Zmiana strumienia pola magnetycznego (Φ = B·S·cosα) wzbudza prąd indukcyjny o takim kierunku, by własnym polem magnetycznym przeciwstawiać się przyczynie wywołującej (reguła Lenza)."
+      },
+      {
+        "id": "hs-rlc-r",
+        "labelPl": "Rezystor R (moc czynna — brak przesunięcia fazy)",
+        "labelLat": "Resistentia ohmica",
+        "x": 59,
+        "y": 24,
+        "description": "Spadek napięcia UR jest w fazie z natężeniem prądu I; wyłącznie na oporze omowym wydziela się ciepło Joule'a."
+      },
+      {
+        "id": "hs-rlc-l",
+        "labelPl": "Cewka indukcyjna L (reaktancja XL = ωL)",
+        "labelLat": "Inductantia L",
+        "x": 78,
+        "y": 24,
+        "description": "Napięcie UL wyprzedza prąd o +90° (π/2 rad); opór indukcyjny rośnie liniowo z częstotliwością prądu."
+      },
+      {
+        "id": "hs-rlc-c",
+        "labelPl": "Kondensator C (reaktancja XC = 1/ωC) i rezonans",
+        "labelLat": "Capacitas C",
+        "x": 68,
+        "y": 60,
+        "description": "Napięcie UC opóźnia się względem prądu o −90°. Gdy XL = XC (f₀ = 1 / 2π√(LC)), zawada spada do minimum Z = R, a natężenie prądu w obwodzie osiąga maksimum."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Zmiana strumienia magnetycznego indukuje SEM",
+        "explanationHtml": "<p>Szybkość zmiany strumienia <strong>&Delta;&Phi;/&Delta;t</strong> w zwojnicy generuje napięcie przemienne przeciwstawiające się zmianie pola.</p>",
+        "activeHotspotIds": ["hs-rlc-faraday"],
+        "flowArrow": [12, 35, 34, 35]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Przesunięcia fazowe na cewce L i kondensatorze C",
+        "explanationHtml": "<p>Wektor napięcia na cewce (<strong>+90&deg;</strong>) i kondensatorze (<strong>&minus;90&deg;</strong>) są skierowane dokładnie przeciwnie.</p>",
+        "activeHotspotIds": ["hs-rlc-r", "hs-rlc-l"],
+        "flowArrow": [59, 24, 78, 24]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Warunek rezonansu napięć (XL = XC)",
+        "explanationHtml": "<p>W częstości rezonansowej <code>&omega;<sub>0</sub> = 1/&radic;(LC)</code> składowe reaktancyjne znoszą się wzajemnie (<code>Z = R</code>).</p>",
+        "activeHotspotIds": ["hs-rlc-c"],
+        "flowArrow": [78, 24, 68, 60]
+      }
+    ]
   }
 ]

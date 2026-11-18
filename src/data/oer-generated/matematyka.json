@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "oer-mat-ciagi-szeregi-i-granica-funkcji",
+    "domainId": "matematyka-analiza-i-calculus",
+    "domainTitle": "Analiza matematyczna i równania w naukach przyrodniczych",
+    "sourcePdf": "OpenAGH_Ciagi_liczbowe_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Ciągi liczbowe i Granica funkcji (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Ciągi liczbowe, szeregi geometryczne oraz granica i ciągłość funkcji",
+      "toc": [
+        { "title": "Granica ciągu i liczba Eulera e", "anchorId": "granica-ciagu-e" },
+        { "title": "Szeregi geometryczne w kumulacji dawek leku", "anchorId": "szereg-geometryczny" },
+        { "title": "Ciągłość funkcji i twierdzenie Darboux", "anchorId": "ciaglosc-darboux" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"granica-ciagu-e\">Granice ciągów i liczba e w naukach przyrodniczych</h2><p>Ciąg liczbowy <em>(a<sub>n</sub>)</em> jest zbieżny do granicy <em>g</em>, gdy niemal wszystkie jego wyrazy leżą w dowolnie małym otoczeniu liczby <em>g</em>. Szczególną rolę w analizie procesów ciągłego wzrostu oraz kapitalizacji odgrywa granica definiująca liczbę Eulera:</p><p><code>lim<sub>n&rarr;&infin;</sub> (1 + 1/n)<sup>n</sup> = e &approx; 2,71828</code></p><p>Dla ilorazów wielomianów przy <code>n &rarr; &infin;</code> o granicy decydują współczynniki przy najwyższych potęgach zmiennej <em>n</em>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"szereg-geometryczny\">Szeregi zbieżne i model stacjonarny podawania leku</h2><p>Nieskończony szereg geometryczny <code>&Sigma;<sub>n=0..&infin;</sub> a<sub>1</sub>&middot;q<sup>n</sup></code> jest zbieżny wtedy i tylko wtedy, gdy <code>|q| &lt; 1</code>, a jego suma wynosi <code>S = a<sub>1</sub> / (1 &minus; q)</code>.</p><p>W farmakokinetyce wielokrotnych dawek, jeżeli po każdym odstępie dawkowania w organizmie pozostaje ułamek <em>f = e<sup>&minus;kT</sup></em> poprzedniej dawki D, to stężenie maksymalne po bardzo wielu dawkach dąży do granicy szeregu geometrycznego <code>D<sub>max</sub> = D / (1 &minus; f)</code> (stan stacjonarny, <em>steady state</em>).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"ciaglosc-darboux\">Ciągłość funkcji oraz własność Darboux</h2><p>Funkcja jest ciągła w punkcie <em>x<sub>0</sub></em>, gdy jej granice jednostronne są równe wartości funkcji w tym punkcie (<code>lim<sub>x&rarr;x0&minus;</sub> f(x) = lim<sub>x&rarr;x0+</sub> f(x) = f(x<sub>0</sub>)</code>). Twierdzenie Darboux (o wartości pośredniej) gwarantuje, że funkcja ciągła na przedziale domkniętym &langle;a, b&rangle; przyjmująca wartości różnych znaków na końcach przedziału (<code>f(a)&middot;f(b) &lt; 0</code>) ma co najmniej jedno miejsce zerowe wewnątrz tego przedziału.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaki jest warunek zbieżności nieskończonego szeregu geometrycznego o ilorazie q?",
+          "answer": "Szereg geometryczny jest zbieżny wyłącznie wtedy, gdy wartość bezwzględna ilorazu spełnia nierówność |q| < 1; wówczas jego suma wynosi S = a₁ / (1 − q)."
+        },
+        {
+          "question": "Kiedy pacjent przyjmujący stałą dawkę leku co okres półtrwania (f = 0,5) osiągnie dwukrotność dawki pojedynczej w organizmie?",
+          "answer": "W granicy nieskończonego szeregu geometrycznego: S = D / (1 − 0,5) = 2D (praktycznie ponad 97% stanu stacjonarnego osiąga się już po 5 okresach półtrwania)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Matematyka — Ciągi i szeregi (Open AGH CC BY-SA 4.0)",
+        "requirementCodes": ["MAT-CIAG-1", "MAT-GRAN-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-mat-rachunek-calkowy-i-pole-pod-krzywa-auc",
+    "domainId": "matematyka-analiza-i-calculus",
+    "domainTitle": "Analiza matematyczna i równania w naukach przyrodniczych",
+    "sourcePdf": "OpenAGH_Calka_oznaczona_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Całka nieoznaczona i oznaczona (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Całka nieoznaczona i oznaczona Riemanna oraz pole pod krzywą (AUC) w diagnostyce",
+      "toc": [
+        { "title": "Funkcja pierwotna i podstawowe metody całkowania", "anchorId": "calka-nieoznaczona" },
+        { "title": "Twierdzenie Newtona–Leibniza i całka oznaczona", "anchorId": "newton-leibniz" },
+        { "title": "Zastosowanie: pole pod krzywą AUC i krzywa ROC", "anchorId": "pole-auc" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"calka-nieoznaczona\">Funkcja pierwotna, całkowanie przez podstawianie i przez części</h2><p>Funkcję <em>F(x)</em> nazywamy funkcją pierwotną funkcji <em>f(x)</em>, jeśli <code>F'(x) = f(x)</code>. Zbiór wszystkich funkcji pierwotnych wyznacza całka nieoznaczona <code>&int; f(x) dx = F(x) + C</code>.</p><ul><li><strong>Podstawianie:</strong> odwrócenie reguły pochodnej funkcji złożonej (<code>t = g(x), dt = g'(x)dx</code>).</li><li><strong>Całkowanie przez części:</strong> <code>&int; u(x)&middot;v'(x) dx = u(x)&middot;v(x) &minus; &int; u'(x)&middot;v(x) dx</code>, szczególnie użyteczne dla iloczynów wielomianów i funkcji wykładniczych lub logarytmicznych.</li></ul>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"newton-leibniz\">Całka oznaczona Riemanna i twierdzenie Newtona–Leibniza</h2><p>Całka oznaczona na przedziale &langle;a, b&rangle; stanowi granicę sum Riemanna przy podziale przedziału na coraz węższe podprzedziały i dla funkcji nieujemnej opisuje pole powierzchni pod wykresem funkcji. Zgodnie ze wzorem Newtona–Leibniza:</p><p><code>&int;<sub>a</sub><sup>b</sup> f(x) dx = F(b) &minus; F(a)</code></p><p>Pozwala ona wyznaczyć m.in. całkowitą pracę zmiennej siły w fizyce lub całkowitą ilość wytworzonego produktu reakcji na podstawie chwilowej szybkości reakcji <em>v(t)</em>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"pole-auc\">Pole pod krzywą (AUC) w farmakologii i ocenie testów ROC</h2><p>Całka oznaczona ze stężenia leku w osoczu względem czasu <code>AUC = &int;<sub>0</sub><sup>&infin;</sup> C(t) dt</code> mierzy całkowitą ekspozycję organizmu na lek i służy do wyznaczania biodostępności względnej preparatu generycznego względem oryginalnego (metoda trapezów numerycznie przybliża wartość całki z pomiarów krwi).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaki jest związek między całką oznaczoną a krzywą szybkości reakcji chemicznej v(t)?",
+          "answer": "Całka oznaczona ∫_0^T v(t) dt równa się całkowitej ilości (liczbie moli) przereagowanego substratu lub utworzonego produktu w przedziale czasu [0, T]."
+        },
+        {
+          "question": "Co mierzy parametr AUC obliczany w farmakokinetyce jako całka oznaczona stężenia C(t)?",
+          "answer": "AUC (Area Under the Curve) mierzy całkowitą ekspozycję ustroju na lek w czasie i pozwala obliczyć jego biodostępność bezwzględną po podaniu pozanaczyniowym."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["academic"],
+        "sectionCode": "Matematyka — Rachunek całkowy (Open AGH CC BY-SA 4.0)",
+        "requirementCodes": ["MAT-CALK-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-mat-algebra-liniowa-macierze-i-uklady-rownan",
+    "domainId": "matematyka-analiza-i-calculus",
+    "domainTitle": "Analiza matematyczna i równania w naukach przyrodniczych",
+    "sourcePdf": "OpenAGH_Algebra_liniowa_i_geometria_analityczna_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Algebra liniowa i geometria analityczna (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Macierze, wyznaczniki, układy równań liniowych oraz wartości własne",
+      "toc": [
+        { "title": "Operacje macierzowe i wyznacznik", "anchorId": "macierze-wyznacznik" },
+        { "title": "Twierdzenie Kroneckera–Capellego i wzory Cramera", "anchorId": "uklady-rownan" },
+        { "title": "Wartości własne i macierz transformacji w grafice 3D i genetyce", "anchorId": "wartosci-wlasne" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"macierze-wyznacznik\">Rachunek macierzowy i macierz odwrotna</h2><p>Macierz o wymiarach <em>m &times; n</em> porządkuje dane liniowe w <em>m</em> wierszach i <em>n</em> kolumnach. Mnożenie macierzy <code>A&middot;B</code> wymaga zgodności liczby kolumn A z liczbą wierszy B i w ogólności <strong>nie jest przemienne</strong> (<code>A&middot;B &ne; B&middot;A</code>).</p><p>Macierz kwadratowa <em>A</em> posiada macierz odwrotną <em>A<sup>&minus;1</sup></em> wtedy i tylko wtedy, gdy jest nieosobliwa (<code>det(A) &ne; 0</code>).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"uklady-rownan\">Rozwiązywanie układów równań liniowych — Gauss i Capelli</h2><p>Układ równań liniowych <code>A&middot;x = b</code> ma rozwiązanie wtedy i tylko wtedy, gdy rząd macierzy głównej równy jest rzędowi macierzy rozszerzonej (<code>rz(A) = rz([A|b])</code> — <strong>twierdzenie Kroneckera–Capellego</strong>). Jeśli dodatkowo rząd równa się liczbie niewiadomych <em>n</em>, układ jest oznaczony (jedno rozwiązanie).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"wartosci-wlasne\">Wektory własne i PCA w analizie danych medycznych</h2><p>Wektor niezerowy <em>v</em> nazywamy wektorem własnym macierzy <em>A</em> odpowiadającym wartości własnej &lambda;, jeśli <code>A&middot;v = &lambda;&middot;v</code>. Rozkład macierzy kowariancji na wartości i wektory własne leży u podstaw <strong>analizy głównych składowych (PCA)</strong> stosowanej m.in. do redukcji wymiarowości ekspresji tysięcy genów w transkryptomice lub rotacji kamery i modeli siatek 3D.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Kiedy macierz kwadratowa A o wymiarach n×n posiada macierz odwrotną A⁻¹?",
+          "answer": "Wtedy i tylko wtedy, gdy jej wyznacznik jest różny od zera (det(A) ≠ 0), co jest równoważne liniowej niezależności jej kolumn/wierszy."
+        },
+        {
+          "question": "Co orzeka twierdzenie Kroneckera–Capellego o układzie równań Ax = b?",
+          "answer": "Układ równań liniowych ma co najmniej jedno rozwiązanie wtedy i tylko wtedy, gdy rząd macierzy współczynników A równa się rzędowi macierzy rozszerzonej [A|b]."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["academic"],
+        "sectionCode": "Matematyka — Algebra liniowa (Open AGH CC BY-SA 4.0)",
+        "requirementCodes": ["MAT-ALG-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-mat-rownania-rozniczkowe-w-dynamice-populacji",
+    "domainId": "matematyka-analiza-i-calculus",
+    "domainTitle": "Analiza matematyczna i równania w naukach przyrodniczych",
+    "sourcePdf": "OpenAGH_Rownania_rozniczkowe_zwyczajne_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Równania różniczkowe zwyczajne (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Równania różniczkowe zwyczajne: model Malthusa, równanie logistyczne Verhulsta i epidemia SIR",
+      "toc": [
+        { "title": "Metoda rozdzielania zmiennych", "anchorId": "rozdzielanie-zmiennych" },
+        { "title": "Wzrost wykładniczy vs krzywa logistyczna (pojemność K)", "anchorId": "krzywa-logistyczna" },
+        { "title": "Układ epidemiologiczny SIR", "anchorId": "model-sir" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"rozdzielanie-zmiennych\">Równania różniczkowe I rzędu o zmiennych rozdzielonych</h2><p>Równanie różniczkowe wiąże nieznaną funkcję <em>y(t)</em> z jej pochodną <em>dy/dt</em>. Postać <code>dy/dt = f(t)&middot;g(y)</code> rozwiązujemy przez rozdzielenie zmiennych i obustronne całkowanie: <code>&int; (1/g(y)) dy = &int; f(t) dt + C</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"krzywa-logistyczna\">Od modelu Malthusa do równania logistycznego Verhulsta</h2><p>Przy nieograniczonych zasobach tempo wzrostu populacji jest proporcjonalne do jej liczebności (<code>dN/dt = r&middot;N</code>), co daje wzrost wykładniczy. W rzeczywistości ograniczenia środowiska wprowadzają <strong>pojemność środowiska <em>K</em></strong> w równaniu logistycznym:</p><p><code>dN/dt = r&middot;N&middot;(1 &minus; N/K)</code></p><p>Krzywa logistyczna ma kształt litery S (sigmoida): największą szybkość wzrostu populacja osiąga dokładnie w połowie pojemności (<code>N = K/2</code>).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"model-sir\">Układ równań różniczkowych SIR w epidemiologii</h2><p>Dynamikę chorób zakaźnych opisuje układ trzech równań dzielący populację na podatnych (<em>S</em>), zakażonych (<em>I</em>) i ozdrowieńców/uodpornionych (<em>R</em>): <code>dS/dt = &minus;&beta;SI</code>, <code>dI/dt = &beta;SI &minus; &gamma;I</code>, <code>dR/dt = &gamma;I</code>. Epidemia narasta, gdy bazowy współczynnik reprodukcji <code>R<sub>0</sub> = (&beta;&middot;S<sub>0</sub>)/&gamma; &gt; 1</code>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Przy jakiej liczebności populacji N tempo przyrostu dN/dt w modelu logistycznym dN/dt = r·N·(1 − N/K) jest maksymalne?",
+          "answer": "Maksymalna szybkość wzrostu przypada w punkcie przegięcia krzywej sigmoidalnej, czyli przy N = K/2 (połowa pojemności środowiska)."
+        },
+        {
+          "question": "Jaki warunek musi spełnić współczynnik reprodukcji R₀ w modelu SIR, aby epidemia zaczęła wygasać?",
+          "answer": "Liczba zakażonych maleje (dI/dt < 0), gdy efektywny współczynnik reprodukcji spadnie poniżej 1 (R_eff < 1), czyli np. poprzez szczepienia redukujące pulę osób podatnych S."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["academic"],
+        "sectionCode": "Matematyka — Równania różniczkowe zwyczajne (Open AGH CC BY-SA 4.0)",
+        "requirementCodes": ["MAT-ODE-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-mat-rozklad-normalny-przedzialy-ufnosci-i-testy",
+    "domainId": "matematyka-biostatystyka",
+    "domainTitle": "Probabilistyka, rozkład normalny i biostatystyka kliniczna",
+    "sourcePdf": "OpenAGH_Rachunek_prawdopodobienstwa_i_statystyka_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Rachunek prawdopodobieństwa i statystyka / OpenIntro Statistics (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Rozkład normalny Gaussa, Centralne Twierdzenie Graniczne, przedziały ufności i moc testu",
+      "toc": [
+        { "title": "Rozkład normalny N(μ, σ) i standaryzacja Z", "anchorId": "rozklad-normalny" },
+        { "title": "Centralne Twierdzenie Graniczne i błąd standardowy", "anchorId": "ctg-i-przedzial-ufnosci" },
+        { "title": "Błędy I i II rodzaju oraz moc testu statystycznego", "anchorId": "bledy-i-moc-testu" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"rozklad-normalny\">Krzywa dzwonowa Gaussa i reguła trzech sigm</h2><p>Wiele cech biologicznych (wzrost, ciśnienie krwi, stężenia metabolitów) wykazuje rozkład normalny <code>N(&mu;, &sigma;)</code>. Reguła empiryczna mówi, że w przedziale <code>&mu; &plusmn; 1&sigma;</code> mieści się ok. <strong>68,3%</strong> obserwacji, w <code>&mu; &plusmn; 2&sigma;</code> ok. <strong>95,4%</strong>, a w <code>&mu; &plusmn; 3&sigma;</code> aż <strong>99,7%</strong>.</p><p>Standaryzacja <code>Z = (X &minus; &mu;) / &sigma;</code> sprowadza dowolny rozkład normalny do standardowego <code>N(0, 1)</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"ctg-i-przedzial-ufnosci\">Błąd standardowy średniej i przedział ufności (CI)</h2><p>Zgodnie z <strong>Centralnym Twierdzeniem Granicznym</strong> rozkład średnich z dużych prób (<em>n &ge; 30</em>) dąży do rozkładu normalnego niezależnie od kształtu rozkładu w populacji, a odchylenie standardowe średniej (błąd standardowy, SE) maleje jak <code>SE = &sigma; / &radic;n</code>.</p><p>95-procentowy przedział ufności dla średniej z próby określa zakres parametrów populacyjnych zgodnych z danymi: jeśli przedział ufności dla różnicy między lekiem a placebo nie zawiera zera (lub dla ilorazu szans OR nie zawiera 1), wynik jest istotny statystycznie na poziomie &alpha; = 0,05.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"bledy-i-moc-testu\">Błąd I rodzaju (α), błąd II rodzaju (β) i moc testu</h2><ul><li><strong>Błąd I rodzaju (&alpha;):</strong> fałszywe odrzucenie prawdziwej hipotezy zerowej (uznanie nieskutecznego leku za skuteczny).</li><li><strong>Błąd II rodzaju (&beta;):</strong> nieodrzucenie fałszywej hipotezy zerowej (przegapienie prawdziwego efektu z powodu zbyt małej próby).</li><li><strong>Moc testu (1 &minus; &beta;):</strong> prawdopodobieństwo wykrycia istniejącego efektu (w badaniach klinicznych standardowo wymaga się mocy &ge; 80%).</li></ul>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak zmienia się szerokość przedziału ufności, gdy liczebność próby wzrośnie 4-krotnie (z n = 100 do n = 400)?",
+          "answer": "Szerokość przedziału ufności maleje dwukrotnie, ponieważ błąd standardowy średniej (SE = s / √n) jest odwrotnie proporcjonalny do pierwiastka kwadratowego z liczebności próby."
+        },
+        {
+          "question": "Jak interpretować 95% przedział ufności dla ilorazu szans OR = 1,45 (95% CI: 0,92–2,28)?",
+          "answer": "Ponieważ przedział ufności dla OR obejmuje wartość neutralną 1,0 (oznaczającą brak różnicy między grupami), badana zależność nie jest istotna statystycznie na poziomie α = 0,05."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2023", "academic"],
+        "sectionCode": "Matematyka i Statystyka (Open AGH / OpenIntro CC BY-SA 4.0)",
+        "requirementCodes": ["STAT-NORM-1", "EBM-2"],
+        "status": "core"
+      }
+    }
+  }
+]

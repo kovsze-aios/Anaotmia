@@ -317,5 +317,151 @@
         "flowArrow": [65, 52, 74, 58]
       }
     ]
+  },
+  {
+    "id": "fig-fizjo-sarkomer-skurcz",
+    "subject": "fizjologia",
+    "chapterIds": [],
+    "titlePl": "Budowa sarkomeru i ślizgowa teoria skurczu mięśnia poprzecznie prążkowanego",
+    "titleLat": "Sarcomerum et contractio muscularis",
+    "caption": "Układ cienkich filamentów aktynowych zakotwiczonych w liniach Z oraz grubych filamentów miozynowych tworzących prążek A (mechanizm cyklicznych mostków z udziałem Ca²⁺ i ATP).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "sarcomere-contraction",
+      "elementsSummary": "Linie graniczne Z, strefa jasna prążka I (sama aktyna), prążek ciemny A z centralną strefą H i linią M oraz mostki poprzeczne miozyny."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER OpenStax CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-sarc-zline",
+        "labelPl": "Linia Z (granica sarkomeru)",
+        "labelLat": "Linea Z (telophragma)",
+        "x": 16,
+        "y": 48,
+        "description": "Białkowa tarcza zakotwiczająca cienkie filamenty aktynowe. Podczas skurczu mięśnia odległość między sąsiednimi liniami Z skraca się."
+      },
+      {
+        "id": "hs-sarc-actin",
+        "labelPl": "Filamenty cienkie (aktyna + troponina + tropomiozyna)",
+        "labelLat": "Myofilamenta tenuia",
+        "x": 26,
+        "y": 32,
+        "description": "Wsuwają się ku środkowi sarkomeru (linii M) podczas cyklu skurczowego. Jony Ca²⁺ wiążą się z troponiną C, odsuwając tropomiozynę z miejsc wiążących miozynę."
+      },
+      {
+        "id": "hs-sarc-myosin",
+        "labelPl": "Filamenty grube (miozyna — prążek A)",
+        "labelLat": "Myofilamenta crassa",
+        "x": 50,
+        "y": 48,
+        "description": "Szerokość prążka A odpowiada dokładnie długości filamentów miozynowych i pozostaje stała w trakcie skurczu (zwężają się wyłącznie prążki I oraz strefa H)."
+      },
+      {
+        "id": "hs-sarc-hzone",
+        "labelPl": "Strefa H i linia M",
+        "labelLat": "Zona H et linea M",
+        "x": 50,
+        "y": 24,
+        "description": "Centralny odcinek prążka A zawierający w stanie rozkurczu wyłącznie miozynę; podczas maksymalnego skurczu ulega niemal całkowitemu zatarciu."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Wyrzut Ca²⁺ z siateczki sarkoplazmatycznej",
+        "explanationHtml": "<p>Depolaryzacja kanalików T uwalnia <strong>Ca<sup>2+</sup></strong>, które wiążą się z troponiną C i odsłaniają miejsca aktywne na <strong>aktynie</strong>.</p>",
+        "activeHotspotIds": ["hs-sarc-actin"],
+        "flowArrow": [16, 32, 38, 32]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Udar roboczy główek miozyny (hydroliza ATP)",
+        "explanationHtml": "<p>Główki <strong>miozyny</strong> wiążą się z aktyną i pociągają cienkie filamenty ku <strong>linii M</strong>, zwężając strefę H oraz prążki I.</p>",
+        "activeHotspotIds": ["hs-sarc-myosin", "hs-sarc-hzone"],
+        "flowArrow": [36, 48, 50, 48]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Przyłączenie nowej cząsteczki ATP — relaksacja",
+        "explanationHtml": "<p>Dopiero przyłączenie kolejnej cząsteczki <strong>ATP</strong> odrywa główkę miozyny od aktyny (brak ATP po śmierci powoduje stężenie pośmiertne), przybliżając linie Z.</p>",
+        "activeHotspotIds": ["hs-sarc-zline", "hs-sarc-myosin"],
+        "flowArrow": [84, 54, 58, 54]
+      }
+    ]
+  },
+  {
+    "id": "fig-fizjo-os-hpa-stres",
+    "subject": "fizjologia",
+    "chapterIds": [
+      "oer-neuro-os-hpa-neuroendokrynologia-stresu-i-rytm-dobowy"
+    ],
+    "titlePl": "Neuroendokrynna oś stresu (HPA): kaskada CRH → ACTH → Kortyzol",
+    "titleLat": "Axis hypothalamo-pituitario-adrenalis",
+    "caption": "Hierarchiczna regulacja odpowiedzi stresowej przez podwzgórze, płat przedni przysadki i warstwę pasmowatą kory nadnerczy z długą pętlą ujemnego sprzężenia zwrotnego.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "hpa-axis",
+      "elementsSummary": "Trójstopniowa kaskada neurohormonalna Podwzgórze (CRH) -> Przysadka przednia (ACTH) -> Kora nadnerczy (Kortyzol) wraz z hamującym sprzężeniem zwrotnym do podwzgórza i przysadki."
+    },
+    "licenseAttribution": "Clean-Room Wektor SVG: opracowanie dydaktyczne SportNotes (OER Clean-Room)",
+    "hotspots": [
+      {
+        "id": "hs-hpa-hypothal",
+        "labelPl": "Podwzgórze (jądro przykomorowe PVN — CRH)",
+        "labelLat": "Hypothalamus — Corticoliberinum",
+        "x": 53,
+        "y": 20,
+        "description": "W odpowiedzi na bodziec stresowy wydziela kortykoliberynę (CRH) i wazopresynę do krążenia wrotnego przysadki."
+      },
+      {
+        "id": "hs-hpa-pituitary",
+        "labelPl": "Płat przedni przysadki (ACTH)",
+        "labelLat": "Adenohypophysis — Corticotropinum",
+        "x": 53,
+        "y": 46,
+        "description": "Pod wpływem CRH uwalnia do krwiobiegu hormon adrenokortykotropowy (ACTH), pobudzający nadnercza."
+      },
+      {
+        "id": "hs-hpa-adrenal",
+        "labelPl": "Kora nadnerczy (Kortyzol)",
+        "labelLat": "Cortex glandulae suprarenalis",
+        "x": 53,
+        "y": 74,
+        "description": "Warstwa pasmowata syntetyzuje kortyzol nasilający glukoneogenezę wątrobową, lipolizę oraz modulujący odpowiedź zapalną."
+      },
+      {
+        "id": "hs-hpa-feedback",
+        "labelPl": "Pętla ujemnego sprzężenia zwrotnego",
+        "labelLat": "Mechanismus retroactionis negativae",
+        "x": 16,
+        "y": 46,
+        "description": "Wysokie stężenie kortyzolu we krwi hamuje receptory GR w hipokampie, podwzgórzu i przysadce, wygaszając wydzielanie CRH oraz ACTH."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Sygnał stresowy i wyrzut CRH",
+        "explanationHtml": "<p><strong>Podwzgórze (PVN)</strong> uwalnia kortykoliberynę (<strong>CRH</strong>) wprost do naczyń wrotnych przysadki.</p>",
+        "activeHotspotIds": ["hs-hpa-hypothal"],
+        "flowArrow": [53, 26, 53, 39]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Stymulacja przysadki i nadnerczy (ACTH → Kortyzol)",
+        "explanationHtml": "<p>Przysadka wydziela <strong>ACTH</strong>, który pobudza warstwę pasmowatą kory nadnerczy do syntezy <strong>kortyzolu</strong>.</p>",
+        "activeHotspotIds": ["hs-hpa-pituitary", "hs-hpa-adrenal"],
+        "flowArrow": [53, 54, 53, 66]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Wygaszanie odpowiedzi na drodze ujemnego sprzężenia",
+        "explanationHtml": "<p>Wzrost stężenia <strong>kortyzolu</strong> hamuje zwrotnie uwalnianie CRH i ACTH, przywracając równowagę osi HPA.</p>",
+        "activeHotspotIds": ["hs-hpa-feedback", "hs-hpa-hypothal"],
+        "flowArrow": [16, 74, 16, 20]
+      }
+    ]
   }
 ]

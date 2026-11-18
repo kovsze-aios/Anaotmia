@@ -678,62 +678,77 @@ export function CkeSolvedPdfPageOverlay({
           />
 
           {solvedMode &&
-            annotations.map((ann) => (
-              <div
-                key={ann.id}
-                style={{
-                  left: `${ann.xPct}%`,
-                  top: `${ann.yPct}%`,
-                  width: `${ann.widthPct}%`,
-                  minHeight: `${Math.min(18, Math.max(5.5, ann.heightPct))}%`,
-                }}
-                className="pointer-events-auto absolute z-10 flex flex-col justify-start rounded border border-zinc-900 bg-zinc-950/92 px-2 py-1.5 text-zinc-100 shadow-lg backdrop-blur-[1px]"
-              >
-                <div className="mb-0.5 flex flex-wrap items-center justify-between gap-1 border-b border-zinc-800 pb-0.5 text-[9px] font-semibold uppercase tracking-wider text-zinc-300 sm:text-[10px]">
-                  <span className="flex items-center gap-1 text-zinc-100">
-                    <Check className="size-2.5 text-zinc-200" aria-hidden="true" />
-                    Zad. {ann.subTaskNumber ?? ann.taskNumber}
-                  </span>
-                  {ann.pointsLabel && (
-                    <span className="font-mono text-zinc-400">{ann.pointsLabel}</span>
-                  )}
-                </div>
+            annotations.map((ann) => {
+              const boxTypeLabel =
+                ann.boxType === "true-false"
+                  ? "P/F"
+                  : ann.boxType === "multiple-choice"
+                    ? "ABCD"
+                    : ann.boxType === "calculation-grid"
+                      ? "OBLICZENIA"
+                      : "OPIS";
 
-                {ann.truthChoices && ann.truthChoices.length > 0 && (
-                  <div className="mb-1 flex flex-wrap gap-1">
-                    {ann.truthChoices.map((choice, idx) => (
-                      <span
-                        key={idx}
-                        className="rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 font-mono text-[9px] font-bold text-zinc-100 sm:text-[10px]"
-                      >
-                        {idx + 1}: ✓ {choice}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {ann.markedOptions && ann.markedOptions.length > 0 && (
-                  <div className="mb-1 flex flex-wrap gap-1">
-                    {ann.markedOptions.map((opt) => (
-                      <span
-                        key={opt}
-                        className="rounded border border-zinc-600 bg-zinc-800 px-1.5 py-0.5 font-mono text-[10px] font-bold text-zinc-100"
-                      >
-                        ✓ {opt}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                <p
-                  className={`font-sans text-[10px] leading-snug text-zinc-100 sm:text-[11px] ${
-                    isZoom ? "" : "line-clamp-3"
-                  }`}
+              return (
+                <div
+                  key={ann.id}
+                  style={{
+                    left: `${ann.xPct}%`,
+                    top: `${ann.yPct}%`,
+                    width: `${ann.widthPct}%`,
+                    minHeight: `${Math.min(18, Math.max(5.5, ann.heightPct))}%`,
+                    maxHeight: `${Math.min(26, Math.max(8, ann.heightPct + 3))}%`,
+                  }}
+                  className="pointer-events-auto absolute z-10 flex flex-col justify-start overflow-y-auto rounded border border-zinc-700 bg-zinc-950/95 px-2 py-1.5 text-zinc-100 shadow-xl ring-1 ring-zinc-800/80 backdrop-blur-[1px]"
                 >
-                  {ann.answerText}
-                </p>
-              </div>
-            ))}
+                  <div className="mb-0.5 flex flex-wrap items-center justify-between gap-1 border-b border-zinc-800 pb-0.5 text-[9px] font-semibold uppercase tracking-wider text-zinc-300 sm:text-[10px]">
+                    <span className="flex items-center gap-1 text-zinc-100">
+                      <Check className="size-2.5 text-zinc-200" aria-hidden="true" />
+                      Zad. {ann.subTaskNumber ?? ann.taskNumber}
+                      <span className="rounded border border-zinc-700 bg-zinc-900 px-1 py-0 text-[8px] font-mono text-zinc-300">
+                        {boxTypeLabel}
+                      </span>
+                    </span>
+                    {ann.pointsLabel && (
+                      <span className="font-mono text-zinc-400">{ann.pointsLabel}</span>
+                    )}
+                  </div>
+
+                  {ann.truthChoices && ann.truthChoices.length > 0 && (
+                    <div className="mb-1 flex flex-wrap gap-1">
+                      {ann.truthChoices.map((choice, idx) => (
+                        <span
+                          key={idx}
+                          className="rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 font-mono text-[9px] font-bold text-zinc-100 sm:text-[10px]"
+                        >
+                          {idx + 1}: ✓ {choice}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {ann.markedOptions && ann.markedOptions.length > 0 && (
+                    <div className="mb-1 flex flex-wrap gap-1">
+                      {ann.markedOptions.map((opt) => (
+                        <span
+                          key={opt}
+                          className="rounded border border-zinc-600 bg-zinc-800 px-1.5 py-0.5 font-mono text-[10px] font-bold text-zinc-100"
+                        >
+                          ✓ {opt}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <p
+                    className={`font-sans text-[10px] leading-snug text-zinc-100 sm:text-[11px] ${
+                      isZoom ? "" : "line-clamp-3"
+                    }`}
+                  >
+                    {ann.answerText}
+                  </p>
+                </div>
+              );
+            })}
         </div>
       );
     }

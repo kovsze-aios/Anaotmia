@@ -1,1 +1,232 @@
-[]
+[
+  {
+    "id": "oer-biochem-struktura-bialek-kolagen-i-hemoglobina",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Biochemistry_Free_For_All_Ahern_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Rzędowość struktur białkowych, potrójna helisa kolagenu oraz kooperatywność hemoglobiny",
+      "toc": [
+        { "title": "Wiązanie peptydowe i struktury I–IV-rzędowe", "anchorId": "struktury-bialek" },
+        { "title": "Kolagen i rola hydroksylacji proliny (witamina C)", "anchorId": "kolagen-i-szkorbut" },
+        { "title": "Hemoglobina (forma T vs R) i efekt allosteryczny 2,3-BPG", "anchorId": "hemoglobina-allosteria" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"struktury-bialek\">Planarna natura wiązania peptydowego i fałdowanie białek</h2><p>Wiązanie peptydowe wykazuje częściowy charakter wiązania podwójnego na skutek rezonansu elektronowego, co wymusza płaską konfigurację (najczęściej <em>trans</em>) i ogranicza swobodną rotację wokół wiązania C–N. O kształcie <strong>struktury II-rzędowej</strong> (&alpha;-helisa, &beta;-kartka) decydują wiązania wodorowe między atomami szkieletu polipeptydowego.</p><p><strong>Strukturę III-rzędową</strong> stabilizują głównie oddziaływania łańcuchów bocznych R: efekt hydrofobowy, mostki dwusiarczkowe (cysteina–cysteina), wiązania jonowe oraz wodorowe.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"kolagen-i-szkorbut\">Kolagen — motywy Gly–X–Y i rola kwasu askorbinowego</h2><p>Białka włókienkowe kolagenu tworzą prawoskrętną potrójną superhelisę złożoną z lewoskrętnych łańcuchów o powtarzającej się sekwencji triadowej <strong>Gly–X–Y</strong> (glicyna co trzeci aminokwas mieści się w ciasnym wnętrzu superhelisy). Prolina i lizyna ulegają potranslacyjnej hydroksylacji z udziałem hydroksylaz wymagających <strong>witaminy C (askorbinianu)</strong> jako reduktora jonów Fe<sup>2+</sup>. Niedobór witaminy C (szkorbut) uniemożliwia tworzenie wiązań wodorowych stabilizujących hydroksyprolinę, prowadząc do kruchości naczyń i tkanki łącznej.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"hemoglobina-allosteria\">Kooperatywne wiązanie O₂ przez hemoglobinę (tetramer α₂β₂)</h2><p>W przeciwieństwie do monomerycznej mioglobiny o krzywej hiperbolicznej, tetrameryczna <strong>hemoglobina</strong> wykazuje esowatą (sigmoidalną) krzywą wysycenia tlenem. Związanie pierwszej cząsteczki O<sub>2</sub> przesuwa atom Fe<sup>2+</sup> w płaszczyznę pierścienia hemu i indukuje przejście ze stanu napiętego o niskim powinowactwie (<strong>T</strong>) do stanu rozluźnionego o wysokim powinowactwie (<strong>R</strong>).</p><p>Efektor allosteryczny <strong>2,3-bisfosfoglicerynian (2,3-BPG)</strong> wiąże się w centralnej jamie formy T (bogatej w reszty dodatnie), przesuwając krzywą w prawo i ułatwiając oddawanie tlenu tkankom (np. na dużych wysokościach). Hemoglobina płodowa (HbF, &alpha;<sub>2</sub>&gamma;<sub>2</sub>) słabiej wiąże 2,3-BPG, co zapewnia jej wyższe powinowactwo do tlenu i efektywny transport przez łożysko.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego hemoglobina płodowa (HbF) skutecznie pobiera tlen od hemoglobiny matki (HbA) na granicy łożyska?",
+          "answer": "Łańcuchy γ w HbF mają zmienioną resztę w miejscu wiążącym 2,3-BPG (seryna zamiast histydyny), co zmniejsza wiązanie tego efektora stabilizującego stan T i nadaje HbF wyższe powinowactwo do tlenu niż HbA."
+        },
+        {
+          "question": "Jaki mechanizm molekularny odpowiada za krwawienia z dziąseł i osłabienie naczyń w szkorbucie?",
+          "answer": "Brak witaminy C blokuje regenerację Fe2+ w hydroksylazach proliny i lizyny podczas syntezy kolagenu; bez grup –OH potrójna helisa kolagenu staje się niestabilna w temperaturze ciała."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Biochemia — Struktura i dynamika białek",
+        "requirementCodes": ["BIOC-PROT-1", "BIOC-HB-2"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-biochem-lancuch-oddechowy-i-fosforylacja-oksydacyjna",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Fundamentals_of_Biochemistry_Jakubowski_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Łańcuch transportu elektronów (kompleksy I–IV), teoria chemiosmotyczna Mitchella i syntaza ATP",
+      "toc": [
+        { "title": "Przepływ elektronów i pompowanie protonów H⁺", "anchorId": "lancuch-oddechowy" },
+        { "title": "Syntaza ATP (F₀F₁) i siła protonomotoryczna", "anchorId": "syntaza-atp" },
+        { "title": "Inhibitory łańcucha oraz rozprzęgacze (UCP1, DNP)", "anchorId": "rozprzegacze" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"lancuch-oddechowy\">Organizacja łańcucha oddechowego w grzebieniach mitochondrialnych</h2><p>Wewnętrzna błona mitochondrium jest niemal całkowicie nieprzepuszczalna dla jonów i zawiera cztery główne kompleksy białkowe oraz ruchome przenośniki (ubichinon Q i cytochrom c):</p><ul><li><strong>Kompleks I (dehydrogenaza NADH):</strong> odbiera 2e<sup>&minus;</sup> od NADH, przekazuje na ubichinon i pompuje 4 H<sup>+</sup> do przestrzeni międzybłonowej.</li><li><strong>Kompleks II (dehydrogenaza bursztynianowa):</strong> utlenia FADH<sub>2</sub> bez pompowania protonów (stąd z FADH<sub>2</sub> powstaje mniej ATP niż z NADH).</li><li><strong>Kompleks III (cytochrom bc<sub>1</sub>):</strong> przenosi elektrony na cytochrom c i pompuje 4 H<sup>+</sup>.</li><li><strong>Kompleks IV (oksydaza cytochromu c):</strong> przekazuje elektrony na ostateczny akceptor — tlen cząsteczkowy (<code>&frac12; O<sub>2</sub> + 2 H<sup>+</sup> + 2 e<sup>&minus;</sup> &rarr; H<sub>2</sub>O</code>).</li></ul>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"syntaza-atp\">Teoria chemiosmotyczna i rotacyjny mechanizm syntazy ATP</h2><p>Pompowanie protonów tworzy przez błonę wewnętrzną gradient elektrochemiczny zwany <strong>siłą protonomotoryczną (&Delta;p)</strong> (wewnątrz macierzy wyższe pH i potencjał ujemny). Powrót jonów H<sup>+</sup> przez podjednostkę błonową <strong>F<sub>0</sub> syntazy ATP</strong> wymusza obrót rotora c/γ, zmieniając konformację katalitycznej części <strong>F<sub>1</sub></strong> i napędzając fosforylację <code>ADP + P<sub>i</sub> &rarr; ATP</code>.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"rozprzegacze\">Rozprzęganie fosforylacji oksydacyjnej i termogeneza bezdrżeniowa</h2><p>Inhibitory takie jak <strong>cyjanki</strong> czy CO blokują kompleks IV, zatrzymując zarówno transport elektronów, jak i syntezę ATP. Natomiast <strong>rozprzęgacze</strong> (np. białko <strong>termogenina UCP1</strong> w brunatnej tkance tłuszczowej noworodków lub syntetyczny 2,4-dinitrofenol) tworzą kanały dla H<sup>+</sup> omijające syntazę ATP: szybkość oddychania i zużycie tlenu gwałtownie rosną, lecz zamiast ATP energia gradientu rozprasza się jako <strong>ciepło</strong>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego z utlenienia 1 cząsteczki NADH powstaje więcej ATP (~2,5) niż z 1 FADH₂ (~1,5)?",
+          "answer": "NADH oddaje elektrony na Kompleks I, który pompuje protony przez błonę wewnętrzną, natomiast FADH₂ wprowadza elektrony przez Kompleks II, który nie jest pompą protonową."
+        },
+        {
+          "question": "Jaki wpływ na zużycie tlenu oraz syntezę ATP ma aktywacja termogeniny (UCP1) w brunatnej tkance tłuszczowej?",
+          "answer": "UCP1 rozprzęga łańcuch oddechowy: umożliwia powrót protonów H⁺ do macierzy z pominięciem syntazy ATP, przez co synteza ATP maleje, zużycie tlenu wzrasta, a energia utleniania zamienia się w ciepło."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": ["2015", "2023", "academic"],
+        "sectionCode": "Biochemia — Bioenergetyka mitochondrialna",
+        "requirementCodes": ["BIOC-OXPHOS-1", "BIO-META-3"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-biochem-beta-oksydacja-kwasow-tluszczowych-i-ketogeneza",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Biochemistry_Free_For_All_Ahern_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Aktywacja kwasów tłuszczowych, mostek karnitynowy, β-oksydacja oraz ketogeneza wątrobowa",
+      "toc": [
+        { "title": "Mostek karnitynowy i enzym CPT-1", "anchorId": "mostek-karnitynowy" },
+        { "title": "Cztery etapy β-oksydacji w macierzy mitochondrium", "anchorId": "etapy-beta-oksydacji" },
+        { "title": "Ciała ketonowe w głodzeniu i cukrzycy", "anchorId": "ketogeneza" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"mostek-karnitynowy\">Aktywacja i transport długołańcuchowych kwasów tłuszczowych</h2><p>Kwasy tłuszczowe w cytozolu są aktywowane przez syntetazę acylo-CoA kosztem 2 równoważników wiązań wysokoenergetycznych ATP (ATP &rarr; AMP + PP<sub>i</sub>). Długołańcuchowe acylo-CoA nie przechodzą bezpośrednio przez błonę wewnętrzną mitochondrium: reszta acylowa przenoszona jest na <strong>karnitynę</strong> przez kluczowy enzym regulatorowy <strong>CPT-1</strong> (hamowany allosterycznie przez malonylo-CoA podczas lipogenezy).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"etapy-beta-oksydacji\">Spirala β-oksydacji (szlak Lynena)</h2><p>W każdym cyklu &beta;-oksydacji łańcuch acylo-CoA skraca się o dwuwęglowy fragment <strong>acetylo-CoA</strong> w czterech reakcjach (utlenianie z FAD, uwodnienie, utlenianie z NAD<sup>+</sup>, tioliza z CoA-SH), dostarczając po <strong>1 FADH<sub>2</sub></strong> oraz <strong>1 NADH</strong>. Z całkowitego spalenia 1 cząsteczki kwasu palmitynowego (C16) powstaje 8 acetylo-CoA, 7 FADH<sub>2</sub> i 7 NADH (~106 moli ATP netto).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"ketogeneza\">Ketogeneza jako adaptacja do głodzenia</h2><p>Podczas przedłużonego głodzenia lub niekontrolowanej cukrzycy typu 1 w hepatocytach gwałtowna glukoneogeneza zużywa szczawiooctan, blokując wejście nadmiaru acetylo-CoA z &beta;-oksydacji do cyklu Krebsa. Nadmiar acetylo-CoA ulega kondensacji do <strong>ciał ketonowych</strong> (acetooctanu i &beta;-hydroksymaślanu), które stanowią zastępcze paliwo dla mięśnia sercowego, mięśni szkieletowych i mózgu (sama wątroba ich nie utlenia, bo brakuje jej tioforazy). Nadmierna produkcja prowadzi jednak do groźnej <strong>kwasicy ketonowej</strong>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego malonylo-CoA (pierwszy metabolit syntezy kwasów tłuszczowych) hamuje enzym CPT-1?",
+          "answer": "Zapobiega to jałowemu cyklowi jednoczesnej syntezy i rozpadu kwasów tłuszczowych (tzw. futile cycle) w tej samej komórce w stanie nasycenia energetycznego."
+        },
+        {
+          "question": "Dlaczego hepatocyty eksportują ciała ketonowe zamiast zużywać je we własnych mitochondriach?",
+          "answer": "Wątroba nie posiada enzymu tioforazy (transferazy bursztynylo-CoA:acetooctan CoA), niezbędnego do aktywacji ciał ketonowych w pierwszym etapie ich katabolizmu."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["academic"],
+        "sectionCode": "Biochemia — Metabolizm lipidów",
+        "requirementCodes": ["BIOC-LIP-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-biochem-szlak-pentozofosforanowy-i-glikogenoliza",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Fundamentals_of_Biochemistry_Jakubowski_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Szlak pentozofosforanowy (NADPH, ryboza-5-P) oraz hormonalna regulacja metabolizmu glikogenu",
+      "toc": [
+        { "title": "Faza oksydacyjna szlaku pentozofosforanowego", "anchorId": "szlak-pentozofosforanowy" },
+        { "title": "Rola NADPH i niedobór G6PD (fawizm)", "anchorId": "niedobor-g6pd" },
+        { "title": "Fosforylaza glikogenu: insulina vs glukagon i adrenalina", "anchorId": "glikogenoliza-regulacja" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"szlak-pentozofosforanowy\">Alternatywna ścieżka utleniania glukozo-6-fosforanu</h2><p>Cytozolowy <strong>szlak pentozofosforanowy (HMP)</strong> nie produkuje ATP, lecz pełni dwie fundamentalne funkcje anaboliczno-ochronne: dostarcza równoważników redukcyjnych w postaci <strong>NADPH</strong> (niezbędnego do syntezy kwasów tłuszczowych, cholesterolu oraz regeneracji glutationu) oraz <strong>rybozo-5-fosforanu</strong> do syntezy nukleotydów DNA i RNA.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"niedobor-g6pd\">Kliniczne znaczenie G6PD w erytrocytach</h2><p>Kluczowy enzym fazy oksydacyjnej — <strong>dehydrogenaza glukozo-6-fosforanowa (G6PD)</strong> — jest jedynym źródłem NADPH w dojrzałych krwinkach czerwonych pozbawionych mitochondriów. NADPH utrzymuje zredukowany glutation (GSH), który neutralizuje nadtlenek wodoru i reaktywne formy tlenu. Niedobór G6PD (najczęstsza enzymopatia człowieka) skutkuje hemolizą erytrocytów pod wpływem stresu oksydacyjnego (m.in. po spożyciu bobu lub leków przeciwmalarycznych).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"glikogenoliza-regulacja\">Regulacja zapasów glikogenu w wątrobie i mięśniach</h2><p>Glikogen wątrobowy stabilizuje glikemię między posiłkami (wątroba posiada <strong>glukozo-6-fosfatazę</strong> pozwalającą uwalniać wolną glukozę do krwi), natomiast glikogen mięśniowy służy wyłącznie skurczowi danego mięśnia. Glukagon i adrenalina przez kaskadę cAMP/PKA fosforylują i <strong>aktywują fosforylazę glikogenu</strong> (rozpad), jednocześnie <strong>hamując syntazę glikogenu</strong>. Insulina poprzez fosfatazę białkową PP1 odwraca ten proces.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego mięsień szkieletowy nie może uwalniać glukozy ze swojego glikogenu do krwiobiegu?",
+          "answer": "Komórki mięśniowe nie wyrażają enzymu glukozo-6-fosfatazy, przez co ufosforylowany glukozo-6-fosforan pozostaje uwięziony w miocycie i wchodzi bezpośrednio do glikolizy."
+        },
+        {
+          "question": "Jak niedobór dehydrogenazy glukozo-6-fosforanowej (G6PD) osłabia ochronę antyoksydacyjną erytrocytów?",
+          "answer": "Brak G6PD zatrzymuje cytozolową produkcję NADPH, bez którego reduktaza glutationowa nie odtwarza zredukowanego glutationu (GSH), prowadząc do peroksydacji lipidów błony erytrocytu i ciałek Heinza."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["academic"],
+        "sectionCode": "Biochemia — Metabolizm węglowodanów",
+        "requirementCodes": ["BIOC-PPP-1", "BIOC-GLIK-1"],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-biochem-katabolizm-aminokwasow-i-cykl-mocznikowy",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Biochemistry_Free_For_All_Ahern_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Transaminacja (PLP), deaminacja oksydacyjna oraz cykl mocznikowy Krebsa–Henseleita",
+      "toc": [
+        { "title": "Transaminazy (ALT, AST) i koenzym fosforan pirydoksalu", "anchorId": "transaminacja" },
+        { "title": "Cykl glukozowo-alaninowy mięśnie–wątroba", "anchorId": "cykl-alaninowy" },
+        { "title": "Cykl mocznikowy i detoksykacja amoniaku", "anchorId": "cykl-mocznikowy" }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"transaminacja\">Przenoszenie grup aminowych na α-ketoglutaran</h2><p>W pierwszym etapie degradacji aminokwasów wątrobowe i mięśniowe <strong>aminotransferazy (ALT, AST)</strong> wykorzystują kofaktor pochodny witaminy B<sub>6</sub> (fosforan pirydoksalu, PLP) do przeniesienia grupy &alpha;-aminowej na <strong>&alpha;-ketoglutaran</strong>, tworząc <strong>glutaminian</strong> oraz odpowiedni &alpha;-ketokwas. Następnie w mitochondriach dehydrogenaza glutaminianowa uwalnia wolny jon amonowy (NH<sub>4</sub><sup>+</sup>).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"cykl-alaninowy\">Bezpieczny transport azotu z mięśni do wątroby</h2><p>Wolny amoniak jest silnie neurotoksyczny (wyczerpuje &alpha;-ketoglutaran w neuronach i zaburza cykl Krebsa). Dlatego w tkankach obwodowych azot pakowany jest jako nietoksyczna <strong>glutamina</strong> lub w mięśniach jako <strong>alanina</strong> (cykl Cahill'a — alaninowy), trafiając z krwią do wątroby w celu bezpiecznego przekształcenia w mocznik.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"cykl-mocznikowy\">Cykl mocznikowy (Krebsa–Henseleita) w hepatocytach</h2><p>Wytworzenie 1 cząsteczki nietoksycznego, rozpuszczalnego w wodzie mocznika <code>(NH<sub>2</sub>)<sub>2</sub>CO</code> przebiega częściowo w mitochondrium (synteza karbamoilofosforanu przez CPS-1 z udziałem N-acetyloglutaminianu, połączenie z ornityną do cytruliny) oraz w cytozolu (wbudowanie drugiego atomu azotu z asparaginianu i odszczepienie mocznika przez arginazę z regeneracją ornityny). Sumaryczny koszt energetyczny wynosi równoważnik <strong>4 wiązań wysokoenergetycznych (~3 ATP: 2 ATP &rarr; ADP + 1 ATP &rarr; AMP)</strong>.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jakie dwa związki dostarczają obu atomów azotu wchodzących w skład cząsteczki mocznika?",
+          "answer": "Pierwszy atom azotu pochodzi z wolnego jonu amonowego NH₄⁺ (poprzez karbamoilofosforan), a drugi bezpośrednio z grupy aminowej cząsteczki L-asparaginianu w cytozolu."
+        },
+        {
+          "question": "Dlaczego encefalopatia wątrobowa z hiperamonemią upośledza metabolizm energetyczny mózgu?",
+          "answer": "Nadmiar NH₄⁺ przesuwa równowagę dehydrogenazy glutaminianowej w stronę zużywania α-ketoglutaranu do syntezy glutaminianu i glutaminy, co odwadnia cykl Krebsa z metabolitów pośrednich i zmniejsza produkcję ATP oraz wywołuje obrzęk astrocytów."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": ["academic"],
+        "sectionCode": "Biochemia — Metabolizm azotu i cykl mocznikowy",
+        "requirementCodes": ["BIOC-UREA-1"],
+        "status": "core"
+      }
+    }
+  }
+]

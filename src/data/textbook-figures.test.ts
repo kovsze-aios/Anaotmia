@@ -12,12 +12,12 @@ import {
 } from "./textbook-figures";
 
 describe("Interactive Textbook Figures Engine", () => {
-  it("provides the 15 cross-subject figures across Anatomy, Physiology, Biology, and Chemistry", () => {
-    expect(ANATOMIA_TEXTBOOK_FIGURES).toHaveLength(6);
-    expect(FIZJOLOGIA_TEXTBOOK_FIGURES).toHaveLength(3);
-    expect(BIOLOGIA_TEXTBOOK_FIGURES).toHaveLength(3);
-    expect(CHEMIA_TEXTBOOK_FIGURES).toHaveLength(3);
-    expect(ALL_TEXTBOOK_FIGURES).toHaveLength(15);
+  it("provides the 27 cross-subject figures across Anatomy, Physiology, Biology, Chemistry, and Physics", () => {
+    expect(ANATOMIA_TEXTBOOK_FIGURES).toHaveLength(8);
+    expect(FIZJOLOGIA_TEXTBOOK_FIGURES).toHaveLength(5);
+    expect(BIOLOGIA_TEXTBOOK_FIGURES).toHaveLength(7);
+    expect(CHEMIA_TEXTBOOK_FIGURES).toHaveLength(7);
+    expect(ALL_TEXTBOOK_FIGURES).toHaveLength(27);
 
     const osteonFigs = getFiguresForChapter({
       subject: "anatomia",
@@ -122,6 +122,41 @@ describe("Interactive Textbook Figures Engine", () => {
       chapterTitle: "Dynamika i reakcja podłoża",
     });
     expect(physFigs).toHaveLength(0);
+
+    const oerBiochemFigs = getFiguresForChapter({
+      subject: "biochemia",
+      chapterId: "oer-biochem-lancuch-oddechowy-i-fosforylacja-oksydacyjna",
+      chapterTitle: "Łańcuch transportu elektronów i syntaza ATP",
+    });
+    expect(oerBiochemFigs.some((f) => f.id === "fig-bio-lancuch-oddechowy")).toBe(true);
+
+    const oerNeuroReflexFigs = getFiguresForChapter({
+      subject: "neurobiologia",
+      chapterId: "oer-neuro-rdzen-kregowy-luki-odruchowe-i-drogi",
+      chapterTitle: "Rdzeń kręgowy i łuki odruchowe",
+    });
+    expect(oerNeuroReflexFigs.some((f) => f.id === "fig-anat-rdzen-odruch")).toBe(true);
+
+    const oerNeuroHpaFigs = getFiguresForChapter({
+      subject: "neurobiologia",
+      chapterId: "oer-neuro-os-hpa-neuroendokrynologia-stresu-i-rytm-dobowy",
+      chapterTitle: "Oś HPA i rytm dobowy",
+    });
+    expect(oerNeuroHpaFigs.some((f) => f.id === "fig-fizjo-os-hpa-stres")).toBe(true);
+
+    const oerPhysicsProjFigs = getFiguresForChapter({
+      subject: "fizyka",
+      chapterId: "oer-fizy-kinematyka-rzut-ukosny-i-dynamika-rowni",
+      chapterTitle: "Rzut ukośny i równia pochyła",
+    });
+    expect(oerPhysicsProjFigs.some((f) => f.id === "fig-fiz-rownia-rzut")).toBe(true);
+
+    const oerPhysicsRlcFigs = getFiguresForChapter({
+      subject: "fizyka",
+      chapterId: "oer-fizy-indukcja-elektromagnetyczna-i-obwody-rlc",
+      chapterTitle: "Indukcja elektromagnetyczna i obwody RLC",
+    });
+    expect(oerPhysicsRlcFigs.some((f) => f.id === "fig-fiz-indukcja-rlc")).toBe(true);
   });
 
   it("has valid calibrated hotspots, 3D entity/pin bridges, animation steps, and CC-BY sample assets", () => {

@@ -37,16 +37,10 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
-import os
 import re
 import sys
-import time
 from pathlib import Path
 from typing import Any
-
-import httpx
-from dotenv import load_dotenv
-from openai import AsyncOpenAI
 
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     try:
@@ -55,13 +49,6 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
         pass
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(ROOT_DIR / ".env.local")
-load_dotenv(ROOT_DIR / ".env")
-load_dotenv(ROOT_DIR.parent / ".env")
-
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
-DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
 
 BIO_DIR = ROOT_DIR / "src" / "data" / "biologia" / "dzialy"
 CHEM_DIR = ROOT_DIR / "src" / "data" / "chemia" / "dzialy"
@@ -755,65 +742,16 @@ async def run_pipeline(args: argparse.Namespace) -> None:
 
     if args.dry_run:
         print(
-            f"\n[DRY RUN] Gotowość potoku potwierdzona. Plików w kolejce: {len(plan)}. "
-            f"Model docelowy: {DEEPSEEK_MODEL} ({DEEPSEEK_BASE_URL})."
+            f"\n[DRY RUN] Offline scan complete (zero external LLM calls). Pending files: {len(plan)}."
         )
         return
 
-    if not DEEPSEEK_API_KEY:
-        print(
-            "\n[BŁĄD] Brak zmiennej środowiskowej DEEPSEEK_API_KEY w .env.local lub .env!"
-        )
-        sys.exit(1)
-
-    http_client = httpx.AsyncClient(verify=False, timeout=180.0)
-    client = AsyncOpenAI(
-        api_key=DEEPSEEK_API_KEY,
-        base_url=DEEPSEEK_BASE_URL,
-        http_client=http_client,
+    print(
+        "[INFO] External LLM API enrichment has been retired. "
+        "Run `python scripts/extract_raw_chunks.py` for offline PyMuPDF extraction "
+        "and author clean-room chapters via direct agent moderation."
     )
-    semaphore = asyncio.Semaphore(args.concurrency)
-
-    t_start = time.time()
-    if plan:
-        print(
-            f"\nStart wzbogacania {len(plan)} rozdziałów "
-            f"(model: {DEEPSEEK_MODEL}, współbieżność: {args.concurrency})…"
-        )
-        tasks = [
-            enrich_single_file(client, semaphore, f, subj, matrix, force=args.force)
-            for subj, f, matrix in plan
-        ]
-        results = await asyncio.gather(*tasks)
-        for subj, _f, _matrix in plan:
-            for r in results:
-                if r.get("sectionCode"):
-                    covered_sections[subj].add(r["sectionCode"])
-
-    # 2. Generowanie brakujących działów CKE (gdy uruchomiono bez --limit lub z --generate-missing)
-    if args.generate_missing and args.limit is None:
-        for subj, directory, matrix, tag_prefix in subjects:
-            missing = [
-                m
-                for m in matrix
-                if m["sectionCode"] not in covered_sections.get(subj, set())
-            ]
-            if not missing:
-                continue
-            print(
-                f"\n[{subj.upper()}] Generowanie {len(missing)} brakujących działów CKE…"
-            )
-            gen_tasks = [
-                generate_missing_section_chapter(
-                    client, semaphore, subj, directory, tag_prefix, idx + 1, sec
-                )
-                for idx, sec in enumerate(missing)
-            ]
-            await asyncio.gather(*gen_tasks)
-            update_barrel_files(directory)
-
-    await http_client.aclose()
-    print(f"\n[ZAKOŃCZONO] Czas całkowity: {(time.time() - t_start):.1f}s.")
+    return
 
 
 def main() -> None:

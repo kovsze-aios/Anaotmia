@@ -328,8 +328,7 @@ async def run_pipeline(args: argparse.Namespace) -> int:
         )
 
     if args.dry_run:
-        has_key = bool(os.getenv("DEEPSEEK_API_KEY"))
-        print(f"\n[DRY-RUN] Pipeline ready. DEEPSEEK_API_KEY present: {has_key}")
+        print("\n[DRY-RUN] Offline OER discovery ready (zero external LLM calls).")
         for dept, pdfs in discovered.items():
             for p in pdfs[:3]:
                 cls = classify_source_file(p)
@@ -337,70 +336,11 @@ async def run_pipeline(args: argparse.Namespace) -> int:
         print("[DRY-RUN] Zakończono bez wywołań API i bez modyfikacji plików.")
         return 0
 
-    api_key = os.getenv("DEEPSEEK_API_KEY")
-    if not api_key:
-        print(
-            "[ERROR] Brak zmiennej DEEPSEEK_API_KEY w środowisku ani w .env.local/.env.",
-            file=sys.stderr,
-        )
-        return 1
-
-    try:
-        from openai import AsyncOpenAI  # type: ignore
-    except ImportError:
-        print("[ERROR] Zainstaluj pakiet openai: pip install openai", file=sys.stderr)
-        return 1
-
-    client = AsyncOpenAI(
-        api_key=api_key,
-        base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"),
+    print(
+        "[INFO] External LLM API calls have been retired from this script. "
+        "Run `python scripts/extract_raw_chunks.py` for offline PyMuPDF extraction "
+        "and author clean-room chapters directly into `src/data/oer-generated/*.json`."
     )
-    model = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
-    sem = asyncio.Semaphore(args.concurrency)
-    cache = load_cache()
-    completed_map: dict[str, str] = cache.setdefault("completed", {})
-
-    for dept, pdfs in discovered.items():
-        existing_items = load_output_list(dept)
-        existing_by_id = {item["id"]: item for item in existing_items if "id" in item}
-        tasks = []
-        target_pdfs = pdfs[: args.limit] if args.limit else pdfs
-
-        for pdf_path in target_pdfs:
-            chunks = extract_pdf_chunks(pdf_path, pages_per_chunk=8, max_chunks=args.chunks_per_pdf)
-            if not chunks:
-                print(f"[WARN] Nie udało się wyodrębnić tekstu z {pdf_path.name} (sprawdź pymupdf/pypdf).")
-                continue
-            for chunk in chunks:
-                cache_key = f"{dept}:{pdf_path.name}:{chunk['chunk_index']}"
-                if cache_key in completed_map and not args.force:
-                    continue
-                tasks.append((cache_key, pdf_path, chunk))
-
-        if not tasks:
-            print(f"[{dept}] Brak nowych fragmentów do przetworzenia.")
-            continue
-
-        print(f"[{dept}] Przetwarzanie {len(tasks)} fragmentów przy współbieżności {args.concurrency}...")
-        coros = [
-            process_chunk(client, model, sem, dept, pdf_path, chunk)
-            for (_, pdf_path, chunk) in tasks
-        ]
-        results = await asyncio.gather(*coros, return_exceptions=True)
-
-        added = 0
-        for (cache_key, pdf_path, _), res in zip(tasks, results):
-            if isinstance(res, Exception):
-                print(f"  [ERR] {pdf_path.name}: {res}", file=sys.stderr)
-                continue
-            existing_by_id[res["id"]] = res
-            completed_map[cache_key] = res["id"]
-            added += 1
-
-        save_output_list(dept, list(existing_by_id.values()))
-        save_cache(cache)
-        print(f"[{dept}] Zapisano {added} nowych rozdziałów (łącznie: {len(existing_by_id)}).")
-
     return 0
 
 

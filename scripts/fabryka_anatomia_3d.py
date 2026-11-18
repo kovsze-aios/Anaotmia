@@ -228,69 +228,16 @@ async def run_pipeline(args: argparse.Namespace) -> int:
         print(f"  - [{cls['mode']}] {pdf.name} -> {cls['license_tag']}")
 
     if args.dry_run:
-        has_key = bool(os.getenv("DEEPSEEK_API_KEY"))
-        print(f"\n[DRY-RUN] fabryka_anatomia_3d ready (Mode: CONCEPT_SYNTHESIS Clean-Room).")
-        print(f"[DRY-RUN] DEEPSEEK_API_KEY present: {has_key}")
+        print("\n[DRY-RUN] fabryka_anatomia_3d ready (Offline discovery — zero external LLM calls).")
         sample = ", ".join(m.get("name", "") for m in meshes[:8])
         print(f"[DRY-RUN] Przykładowe siatki 3D: {sample}")
         print(f"[DRY-RUN] Wyjście docelowe: {OUTPUT_FILE}")
         return 0
 
-    api_key = os.getenv("DEEPSEEK_API_KEY")
-    if not api_key:
-        print("[ERROR] Brak zmiennej DEEPSEEK_API_KEY w .env.local / .env.", file=sys.stderr)
-        return 1
-
-    try:
-        from openai import AsyncOpenAI  # type: ignore
-    except ImportError:
-        print("[ERROR] Zainstaluj pakiet openai: pip install openai", file=sys.stderr)
-        return 1
-
-    client = AsyncOpenAI(
-        api_key=api_key,
-        base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"),
+    print(
+        "[INFO] External LLM API calls have been retired from this script. "
+        "Anatomy 3D entities are moderated directly in `src/data/oer-generated/anatomia-3d-entities.json`."
     )
-    model = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
-    sem = asyncio.Semaphore(args.concurrency)
-    cache = load_cache()
-    completed = cache.setdefault("completed", {})
-
-    existing = load_output_entities()
-    by_id = {str(item.get("id", "")).lower(): item for item in existing if item.get("id")}
-
-    candidates = []
-    for m in meshes:
-        key = str(m.get("name", "")).lower()
-        if not key:
-            continue
-        if key in completed and not args.force:
-            continue
-        candidates.append(m)
-        if args.limit and len(candidates) >= args.limit:
-            break
-
-    if not candidates:
-        print("Brak nowych siatek 3D do przetworzenia.")
-        return 0
-
-    print(f"Syntetyzowanie kart 3D dla {len(candidates)} struktur w trybie CONCEPT_SYNTHESIS...")
-    coros = [synthesize_anatomy_entity(client, model, sem, m) for m in candidates]
-    results = await asyncio.gather(*coros, return_exceptions=True)
-
-    added = 0
-    for mesh, res in zip(candidates, results):
-        key = str(mesh.get("name", "")).lower()
-        if isinstance(res, Exception):
-            print(f"  [ERR] {key}: {res}", file=sys.stderr)
-            continue
-        by_id[key] = res
-        completed[key] = True
-        added += 1
-
-    save_output_entities(list(by_id.values()))
-    save_cache(cache)
-    print(f"Zapisano {added} nowych kart 3D (łącznie: {len(by_id)}) -> {OUTPUT_FILE}")
     return 0
 
 

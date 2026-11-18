@@ -16768,5 +16768,387 @@
         "marginNote": "[Zaproponuj / Podaj obserwacje] 1 pkt za poprawne użycie HCl(aq): tylko z Na2CO3 wydzieli się bezbarwny gaz (CO2), tylko z AgNO3 wytrąci się biały serowaty osad (AgCl), a z BaCl2 brak objawów reakcji. 1 pkt za prawidłowe powiązanie każdej obs..."
       }
     ]
+  },
+  "biologia-2023-pokazowy-f2023": {
+    "1": [
+      {
+        "id": "biologia-2023-pokazowy-f2023-p1-z1.1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1.1",
+        "pageNumber": 1,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 34.0,
+        "widthPct": 78.0,
+        "heightPct": 14.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Wyjaśnij",
+        "answerText": "Inhibitor kompetycyjny wiąże się odwracalnie z centrum aktywnym enzymu. Duży nadmiar substratu zwiększa prawdopodobieństwo zajęcia centrum aktywnego przez bursztynian, dzięki czemu szybkość reakcji dąży do Vmax.",
+        "marginNote": "[Wyjaśnij] Inhibitor kompetycyjny konkuruje z substratem o miejsce aktywne, podnosząc pozorne Km bez zmiany Vmax."
+      },
+      {
+        "id": "biologia-2023-pokazowy-f2023-p1-z1.2",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1.2",
+        "pageNumber": 1,
+        "boxType": "true-false",
+        "xPct": 10.0,
+        "yPct": 62.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–1 pkt",
+        "operationalVerb": "Oceń P/F",
+        "answerText": "1. F, 2. P",
+        "truthChoices": ["F", "P"],
+        "marginNote": "[Oceń P/F] Inhibitor kompetycyjny nie zmienia Vmax (1. F); dehydrogenaza bursztynianowa działa w cyklu Krebsa (2. P)."
+      }
+    ],
+    "2": [
+      {
+        "id": "biologia-2023-pokazowy-f2023-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 28.0,
+        "widthPct": 78.0,
+        "heightPct": 15.0,
+        "pointsLabel": "0–3 pkt",
+        "operationalVerb": "Wykaż / Określ",
+        "answerText": "Spadek pH krwi (wzrost stężenia H+ i CO2) stabilizuje formę T hemoglobiny i zmniejsza jej powinowactwo do O2, co zwiększa uwalnianie tlenu do pracujących mięśni.",
+        "marginNote": "[Wykaż / Określ] Efekt Bohra: zakwaszenie i wyższe pCO2 przesuwają krzywą dysocjacji oksyhemoglobiny w prawo."
+      }
+    ]
+  },
+  "biologia-2022-probny-f2015": {
+    "1": [
+      {
+        "id": "biologia-2022-probny-f2015-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 14.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Porównaj / Podaj",
+        "answerText": "U mszaków dominuje gametofit (1n), natomiast u paprotników pokoleniem dominującym, samodzielnym i większym jest sporofit (2n).",
+        "marginNote": "[Porównaj / Podaj] Redukcja gametofitu na rzecz sporofitu jest głównym trendem ewolucyjnym roślin lądowych."
+      }
+    ],
+    "2": [
+      {
+        "id": "biologia-2022-probny-f2015-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Zapisz",
+        "answerText": "mRNA: 5'-AUG CCU GGA UAA-3' → Polipeptyd: Met – Pro – Gly (kodon STOP przerywa translację).",
+        "marginNote": "[Zapisz] Transkrypcja zachodzi antyrównolegle (3'->5' matrycy na 5'->3' mRNA); UAA to kodon stop."
+      }
+    ]
+  },
+  "chemia-2023-pokazowy-f2023": {
+    "1": [
+      {
+        "id": "chemia-2023-pokazowy-f2023-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 16.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "n(HCl) = 0,02 mol; n(NaOH) = 0,01 mol → nadmiar H+ = 0,01 mol w V = 0,2 dm³ → [H+] = 0,05 mol/dm³ → pH = −log(0,05) ≈ 1,30.",
+        "marginNote": "[Oblicz] Po reakcji zobojętnienia 1:1 nadmiar kwasu ulega rozcieńczeniu w sumarycznej objętości 200 cm³."
+      }
+    ],
+    "2": [
+      {
+        "id": "chemia-2023-pokazowy-f2023-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 15.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Zapisz / Oblicz",
+        "answerText": "Anoda (−): Zn → Zn²⁺ + 2e⁻ | Katoda (+): Cu²⁺ + 2e⁻ → Cu | SEM = 0,34 V − (−0,76 V) = 1,10 V.",
+        "marginNote": "[Zapisz / Oblicz] Półogniwo o wyższym potencjale standardowym (Cu²⁺/Cu) pełni funkcję katody (redukcja)."
+      }
+    ]
+  },
+  "chemia-2022-probny-f2015": {
+    "1": [
+      {
+        "id": "chemia-2022-probny-f2015-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 13.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Określ / Podaj",
+        "answerText": "Hybrydyzacja sp²; 5 wiązań σ (cztery C–H oraz jedno C–C) i 1 wiązanie π (C=C).",
+        "marginNote": "[Określ / Podaj] Atom węgla w etenie tworzy 3 wiązania σ w płaszczyźnie (kąty 120°) oraz jedno wiązanie π z orbitali 2p."
+      }
+    ],
+    "2": [
+      {
+        "id": "chemia-2022-probny-f2015-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–1 pkt",
+        "operationalVerb": "Zaproponuj",
+        "answerText": "Woda bromowa (Br₂(aq)): odbarwia się tylko w próbce z glukozą (aldozą utlenianą do kwasu glukonowego).",
+        "marginNote": "[Zaproponuj] Próby Tollensa/Trommera zachodzą dla obu cukrów, zaś Br₂(aq) utlenia łagodnie tylko aldozę (glukozę)."
+      }
+    ]
+  },
+  "fizyka-2024-maj-f2023": {
+    "1": [
+      {
+        "id": "fizyka-2024-maj-f2023-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 15.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "a = g·sin(30°) = 4,905 m/s² ≈ 4,9 m/s²; N = m·g·cos(30°) ≈ 17,0 N.",
+        "marginNote": "[Oblicz] Składowa ciężaru wzdłuż równi (mg·sinα) nadaje przyspieszenie, a prostopadła (mg·cosα) równoważy nacisk N."
+      }
+    ],
+    "2": [
+      {
+        "id": "fizyka-2024-maj-f2023-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 15.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "W_zewn = p·ΔV = 10⁵ · 0,003 = 300 J; z I zasady termodynamiki: ΔU = Q − W_zewn = 750 − 300 = 450 J.",
+        "marginNote": "[Oblicz] W przemianie izobarycznej część ciepła idzie na pracę rozprężania p·ΔV, a reszta zwiększa energię wewnętrzną."
+      }
+    ]
+  },
+  "fizyka-2022-maj-f2015": {
+    "1": [
+      {
+        "id": "fizyka-2022-maj-f2015-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 13.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "E = h·c / λ = 1,989·10⁻¹⁵ J ≈ 12,4 keV.",
+        "marginNote": "[Oblicz] Energia kwantu E = hc/λ przeliczona na elektronowolty (podzielona przez e = 1,6·10⁻¹⁹ J)."
+      }
+    ],
+    "2": [
+      {
+        "id": "fizyka-2022-maj-f2015-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "true-false",
+        "xPct": 10.0,
+        "yPct": 30.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–1 pkt",
+        "operationalVerb": "Oceń P/F",
+        "answerText": "1. P, 2. F",
+        "truthChoices": ["P", "F"],
+        "marginNote": "[Oceń P/F] Z równania Einsteina Ek,max = hν − W; poniżej częstotliwości granicznej emisja nie zachodzi niezależnie od natężenia."
+      }
+    ]
+  },
+  "fizyka-2023-pokazowy-f2023": {
+    "1": [
+      {
+        "id": "fizyka-2023-pokazowy-f2023-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "open-answer",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 15.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Określ / Wyjaśnij",
+        "answerText": "Z równania ciągłości strugi A·v = const wynika dwukrotny wzrost prędkości v w zwężeniu, co zgodnie z prawem Bernoulliego powoduje spadek ciśnienia statycznego p.",
+        "marginNote": "[Określ / Wyjaśnij] Wzrost energii kinetycznej jednostki objętości cieczy odbywa się kosztem ciśnienia statycznego."
+      }
+    ]
+  },
+  "fizyka-2022-probny-f2015": {
+    "1": [
+      {
+        "id": "fizyka-2022-probny-f2015-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "n = 24 / 8 = 3 okresy; N / N₀ = (1/2)³ = 1/8 = 12,5%.",
+        "marginNote": "[Oblicz] Po upływie 3 okresów połowicznego rozpadu pozostaje (1/2)^3 = 1/8 początkowej liczby jąder."
+      }
+    ]
+  },
+  "matematyka-2024-maj-f2023": {
+    "1": [
+      {
+        "id": "matematyka-2024-maj-f2023-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 14.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz / Zapisz",
+        "answerText": "f(2) = 4; f'(x) = 3x² − 3 → f'(2) = 9 → y = 9(x − 2) + 4 = 9x − 14.",
+        "marginNote": "[Oblicz / Zapisz] Współczynnik kierunkowy stycznej równy jest pochodnej funkcji w punkcie styczności x₀ = 2."
+      }
+    ],
+    "2": [
+      {
+        "id": "matematyka-2024-maj-f2023-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 14.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "|Ω| = 36; pary (4,6),(5,5),(5,6),(6,4),(6,5),(6,6) dają |A| = 6 → P(A) = 6/36 = 1/6.",
+        "marginNote": "[Oblicz] Liczba zdarzeń elementarnych w dwóch rzutach kostką wynosi 6² = 36."
+      }
+    ]
+  },
+  "matematyka-2022-maj-f2015": {
+    "1": [
+      {
+        "id": "matematyka-2022-maj-f2015-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "Δ = 25 − 16 = 9; pierwiastki x₁ = 1, x₂ = 4 → x ∈ ⟨1, 4⟩.",
+        "marginNote": "[Oblicz] Ramiona paraboli skierowane do góry: wartości ≤ 0 leżą między miejscami zerowymi włącznie."
+      }
+    ],
+    "2": [
+      {
+        "id": "matematyka-2022-maj-f2015-p2-z2",
+        "taskNumber": "Zadanie 2",
+        "subTaskNumber": "2",
+        "pageNumber": 2,
+        "boxType": "true-false",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–1 pkt",
+        "operationalVerb": "Oceń P/F",
+        "answerText": "1. P, 2. F (2⁻³ = 1/8)",
+        "truthChoices": ["P", "F"],
+        "marginNote": "[Oceń P/F] log₂(32) = 5 (P), natomiast wykładnik ujemny daje odwrotność potęgi 2⁻³ = 1/8 (F)."
+      }
+    ]
+  },
+  "matematyka-2023-pokazowy-f2023": {
+    "1": [
+      {
+        "id": "matematyka-2023-pokazowy-f2023-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "100·2^(t/3) = 1600 → 2^(t/3) = 16 = 2⁴ → t/3 = 4 → t = 12.",
+        "marginNote": "[Oblicz] Sprowadzenie równania wykładniczego do wspólnej podstawy 2 daje t/3 = 4."
+      }
+    ]
+  },
+  "matematyka-2022-probny-f2015": {
+    "1": [
+      {
+        "id": "matematyka-2022-probny-f2015-p1-z1",
+        "taskNumber": "Zadanie 1",
+        "subTaskNumber": "1",
+        "pageNumber": 1,
+        "boxType": "calculation-grid",
+        "xPct": 10.0,
+        "yPct": 32.0,
+        "widthPct": 78.0,
+        "heightPct": 12.0,
+        "pointsLabel": "0–2 pkt",
+        "operationalVerb": "Oblicz",
+        "answerText": "a₁ = a₃ − 2r = 1; a₁₀ = 1 + 9·3 = 28; S₁₀ = ((1 + 28) / 2)·10 = 145.",
+        "marginNote": "[Oblicz] Z wyrazu a₃ = a₁ + 2r wyznaczamy a₁, następnie sumę 10 wyrazów ciągu arytmetycznego."
+      }
+    ]
   }
 }
