@@ -39,6 +39,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT_DIR / "scripts" / ".cache" / "raw_extracts"
 
 DEPARTMENT_FOLDERS: dict[str, list[str]] = {
+    "anatomia": ["anatomia"],
     "fizyka": ["fizyka"],
     "matematyka": ["matematyka_i_statystyka"],
     "biochemia": ["biochemia"],
@@ -132,12 +133,24 @@ def extract_department(
         target_dir = oer_root / folder
         if not target_dir.is_dir():
             continue
-        candidates = sorted(target_dir.glob("*.pdf"))
+        candidates = sorted(
+            p
+            for p in target_dir.rglob("*")
+            if p.is_file()
+            and p.suffix.lower() in (".pdf", ".epub")
+            and not re.search(r"[\\/](?:Biologia|Chemia)[\\/]20\d{2}[\\/]", str(p))
+        )
         if dept == "fizjologia" and folder == "anatomia":
             candidates = [
                 p
                 for p in candidates
                 if any(k in p.name.lower() for k in ("fizjolog", "physiology", "openstax"))
+            ]
+        elif dept == "anatomia":
+            candidates = [
+                p
+                for p in candidates
+                if "egzamin" not in p.name.lower()
             ]
         pdfs.extend(candidates)
 

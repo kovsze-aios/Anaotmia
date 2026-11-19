@@ -9,9 +9,18 @@
     "data": {
       "chapterTitle": "Ciągi liczbowe, szeregi geometryczne oraz granica i ciągłość funkcji",
       "toc": [
-        { "title": "Granica ciągu i liczba Eulera e", "anchorId": "granica-ciagu-e" },
-        { "title": "Szeregi geometryczne w kumulacji dawek leku", "anchorId": "szereg-geometryczny" },
-        { "title": "Ciągłość funkcji i twierdzenie Darboux", "anchorId": "ciaglosc-darboux" }
+        {
+          "title": "Granica ciągu i liczba Eulera e",
+          "anchorId": "granica-ciagu-e"
+        },
+        {
+          "title": "Szeregi geometryczne w kumulacji dawek leku",
+          "anchorId": "szereg-geometryczny"
+        },
+        {
+          "title": "Ciągłość funkcji i twierdzenie Darboux",
+          "anchorId": "ciaglosc-darboux"
+        }
       ],
       "pages": [
         {
@@ -39,9 +48,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Matematyka — Ciągi i szeregi (Open AGH CC BY-SA 4.0)",
-        "requirementCodes": ["MAT-CIAG-1", "MAT-GRAN-2"],
+        "requirementCodes": [
+          "MAT-CIAG-1",
+          "MAT-GRAN-2"
+        ],
         "status": "core"
       }
     }
@@ -56,9 +72,18 @@
     "data": {
       "chapterTitle": "Całka nieoznaczona i oznaczona Riemanna oraz pole pod krzywą (AUC) w diagnostyce",
       "toc": [
-        { "title": "Funkcja pierwotna i podstawowe metody całkowania", "anchorId": "calka-nieoznaczona" },
-        { "title": "Twierdzenie Newtona–Leibniza i całka oznaczona", "anchorId": "newton-leibniz" },
-        { "title": "Zastosowanie: pole pod krzywą AUC i krzywa ROC", "anchorId": "pole-auc" }
+        {
+          "title": "Funkcja pierwotna i podstawowe metody całkowania",
+          "anchorId": "calka-nieoznaczona"
+        },
+        {
+          "title": "Twierdzenie Newtona–Leibniza i całka oznaczona",
+          "anchorId": "newton-leibniz"
+        },
+        {
+          "title": "Zastosowanie: pole pod krzywą AUC i krzywa ROC",
+          "anchorId": "pole-auc"
+        }
       ],
       "pages": [
         {
@@ -86,9 +111,13 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["academic"],
+        "formulas": [
+          "academic"
+        ],
         "sectionCode": "Matematyka — Rachunek całkowy (Open AGH CC BY-SA 4.0)",
-        "requirementCodes": ["MAT-CALK-1"],
+        "requirementCodes": [
+          "MAT-CALK-1"
+        ],
         "status": "core"
       }
     }
@@ -103,9 +132,18 @@
     "data": {
       "chapterTitle": "Macierze, wyznaczniki, układy równań liniowych oraz wartości własne",
       "toc": [
-        { "title": "Operacje macierzowe i wyznacznik", "anchorId": "macierze-wyznacznik" },
-        { "title": "Twierdzenie Kroneckera–Capellego i wzory Cramera", "anchorId": "uklady-rownan" },
-        { "title": "Wartości własne i macierz transformacji w grafice 3D i genetyce", "anchorId": "wartosci-wlasne" }
+        {
+          "title": "Operacje macierzowe i wyznacznik",
+          "anchorId": "macierze-wyznacznik"
+        },
+        {
+          "title": "Twierdzenie Kroneckera–Capellego i wzory Cramera",
+          "anchorId": "uklady-rownan"
+        },
+        {
+          "title": "Wartości własne i macierz transformacji w grafice 3D i genetyce",
+          "anchorId": "wartosci-wlasne"
+        }
       ],
       "pages": [
         {
@@ -133,9 +171,13 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["academic"],
+        "formulas": [
+          "academic"
+        ],
         "sectionCode": "Matematyka — Algebra liniowa (Open AGH CC BY-SA 4.0)",
-        "requirementCodes": ["MAT-ALG-1"],
+        "requirementCodes": [
+          "MAT-ALG-1"
+        ],
         "status": "core"
       }
     }
@@ -150,9 +192,18 @@
     "data": {
       "chapterTitle": "Równania różniczkowe zwyczajne: model Malthusa, równanie logistyczne Verhulsta i epidemia SIR",
       "toc": [
-        { "title": "Metoda rozdzielania zmiennych", "anchorId": "rozdzielanie-zmiennych" },
-        { "title": "Wzrost wykładniczy vs krzywa logistyczna (pojemność K)", "anchorId": "krzywa-logistyczna" },
-        { "title": "Układ epidemiologiczny SIR", "anchorId": "model-sir" }
+        {
+          "title": "Metoda rozdzielania zmiennych",
+          "anchorId": "rozdzielanie-zmiennych"
+        },
+        {
+          "title": "Wzrost wykładniczy vs krzywa logistyczna (pojemność K)",
+          "anchorId": "krzywa-logistyczna"
+        },
+        {
+          "title": "Układ epidemiologiczny SIR",
+          "anchorId": "model-sir"
+        }
       ],
       "pages": [
         {
@@ -180,9 +231,13 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["academic"],
+        "formulas": [
+          "academic"
+        ],
         "sectionCode": "Matematyka — Równania różniczkowe zwyczajne (Open AGH CC BY-SA 4.0)",
-        "requirementCodes": ["MAT-ODE-1"],
+        "requirementCodes": [
+          "MAT-ODE-1"
+        ],
         "status": "core"
       }
     }
@@ -197,9 +252,18 @@
     "data": {
       "chapterTitle": "Rozkład normalny Gaussa, Centralne Twierdzenie Graniczne, przedziały ufności i moc testu",
       "toc": [
-        { "title": "Rozkład normalny N(μ, σ) i standaryzacja Z", "anchorId": "rozklad-normalny" },
-        { "title": "Centralne Twierdzenie Graniczne i błąd standardowy", "anchorId": "ctg-i-przedzial-ufnosci" },
-        { "title": "Błędy I i II rodzaju oraz moc testu statystycznego", "anchorId": "bledy-i-moc-testu" }
+        {
+          "title": "Rozkład normalny N(μ, σ) i standaryzacja Z",
+          "anchorId": "rozklad-normalny"
+        },
+        {
+          "title": "Centralne Twierdzenie Graniczne i błąd standardowy",
+          "anchorId": "ctg-i-przedzial-ufnosci"
+        },
+        {
+          "title": "Błędy I i II rodzaju oraz moc testu statystycznego",
+          "anchorId": "bledy-i-moc-testu"
+        }
       ],
       "pages": [
         {
@@ -227,9 +291,137 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2023", "academic"],
+        "formulas": [
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Matematyka i Statystyka (Open AGH / OpenIntro CC BY-SA 4.0)",
-        "requirementCodes": ["STAT-NORM-1", "EBM-2"],
+        "requirementCodes": [
+          "STAT-NORM-1",
+          "EBM-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-mat-wartosci-wlasne-wektory-wlasne-i-diagonalizacja",
+    "domainId": "matematyka-analiza-i-calculus",
+    "domainTitle": "Analiza matematyczna i równania w naukach przyrodniczych",
+    "sourcePdf": "OpenAGH_Algebra_liniowa_i_geometria_analityczna_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Algebra liniowa i geometria analityczna (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Wartości własne (λ), wektory własne macierzy, diagonalizacja oraz analiza głównych składowych (PCA)",
+      "toc": [
+        {
+          "title": "Równanie własne Av = λv i wielomian charakterystyczny",
+          "anchorId": "rownanie-wlasne"
+        },
+        {
+          "title": "Diagonalizacja macierzy P⁻¹AP i dynamika Markowa",
+          "anchorId": "diagonalizacja"
+        },
+        {
+          "title": "Zastosowanie w biomedycynie: PCA i redukcja wymiaru",
+          "anchorId": "pca-biomedycyna"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"rownanie-wlasne\">Wektory niezmieniające kierunku pod wpływem przekształcenia liniowego</h2><p>Niezerowy wektor <strong>v</strong> nazywamy wektorem własnym macierzy kwadratowej <em>A</em> odpowiadającym wartości własnej &lambda;, jeśli zachodzi relacja <code>A&middot;v = &lambda;&middot;v</code>. Wartości własne wyznacza się jako pierwiastki równania charakterystycznego: <code>det(A &minus; &lambda;I) = 0</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"diagonalizacja\">Diagonalizacja i szybkie potęgowanie układów dyskretnych</h2><p>Jeśli macierz rozmiaru <em>n &times; n</em> posiada <em>n</em> liniowo niezależnych wektorów własnych, daje się rozłożyć do postaci <code>A = P&middot;D&middot;P<sup>&minus;1</sup></code>, gdzie <em>D</em> jest macierzą diagonalną z wartościami &lambda;<sub>i</sub> na przekątnej. Pozwala to natychmiast obliczać ewolucję układów po wielu krokach czasu (np. macierze przejścia w populacjach komórkowych: <code>A<sup>k</sup> = P&middot;D<sup>k</sup>&middot;P<sup>&minus;1</sup></code>).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"pca-biomedycyna\">Redukcja wymiarowości danych w transkryptomice i EEG (PCA)</h2><p>W analizie ekspresji tysięcy genów macierz kowariancji danych jest macierzą symetryczną. Jej wektory własne wskazują ortogonalne kierunki maksymalnej wariancji (główne składowe PC1, PC2), a największe wartości własne &lambda; informują, jaką część zmienności biologicznej zachowuje dany wymiar.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jaki warunek musi spełniać układ liniowy Ax = λx, aby istniał niezerowy wektor własny x?",
+          "answer": "Macierz (A − λI) musi być osobliwa, tzn. jej wyznacznik musi być równy zero: det(A − λI) = 0."
+        },
+        {
+          "question": "Co geometrycznie reprezentuje pierwszy wektor własny macierzy kowariancji w metodzie PCA?",
+          "answer": "Wyznacza kierunek osi w wielowymiarowej przestrzeni cech, wzdłuż której rzutowane punkty danych mają największą wariancję (największą wartość własną λ₁)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Algebra liniowa — Diagonalizacja i PCA (Open AGH CC BY-SA 4.0)",
+        "requirementCodes": [
+          "MAT-ALG-EIG1",
+          "DATA-PCA-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-mat-testy-chi-kwadrat-anova-i-moc-statystyczna",
+    "domainId": "matematyka-biostatystyka",
+    "domainTitle": "Probabilistyka, rozkład normalny i biostatystyka kliniczna",
+    "sourcePdf": "OpenStax_Introductory_Statistics_1e_CC-BY.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów OpenStax Introductory Statistics (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Test niezależności χ², jednoczynnikowa analiza wariancji (ANOVA) oraz błędy I/II rodzaju i moc testu",
+      "toc": [
+        {
+          "title": "Test χ² (chi-kwadrat) dla tabel kontyngencji i zgodności Hardy–Weinberga",
+          "anchorId": "test-chi-kwadrat"
+        },
+        {
+          "title": "Jednoczynnikowa ANOVA i statystyka F (międzygrupowa vs wewnątrzgrupowa)",
+          "anchorId": "anova-statystyka-f"
+        },
+        {
+          "title": "Błąd I i II rodzaju (α, β) oraz moc badania klinicznego (1 − β)",
+          "anchorId": "moc-badania"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"test-chi-kwadrat\">Test χ² — analiza cech jakościowych i genetyka populacji</h2><p>Test <strong>&chi;<sup>2</sup></strong> porównuje obserwowane liczności (<em>O</em>) z oczekiwanymi pod hipotezą zerową (<em>E</em>): <code>&chi;<sup>2</sup> = &Sigma; (O &minus; E)<sup>2</sup> / E</code>. W genetyce i badaniach medycznych służy do weryfikacji, czy badana populacja pozostaje w równowadze Hardy'ego–Weinberga albo czy lek zmienia odsetek wyleczeń.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"anova-statystyka-f\">Analiza wariancji ANOVA — dlaczego nie wystarczy wielokrotny test t-Studenta?</h2><p>Porównywanie trzech lub więcej grup wielokrotnym testem <em>t</em> drastycznie zawyża ryzyko błędu fałszywie dodatniego. Jednoczynnikowa <strong>ANOVA</strong> testuje jednocześnie równość wszystkich średnich jednym wskaźnikiem <code>F = MS<sub>między</sub> / MS<sub>wewnątrz</sub></code> (iloraz zmienności między grupami do losowego szumu wewnątrz grup).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"moc-badania\">Planowanie wielkości próby: błąd α, β i moc statystyczna</h2><p><strong>Błąd I rodzaju (&alpha;)</strong> polega na odrzuceniu prawdziwej hipotezy zerowej (fałszywy alarm), zaś <strong>błąd II rodzaju (&beta;)</strong> — na przeoczeniu istniejącego efektu leku. <strong>Moc testu (1 &minus; &beta;)</strong> (zwykle planowana na &ge; 80%) rośnie wraz ze zwiększeniem liczebności próby <em>n</em> oraz wielkości efektu klinicznego.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego przed rozpoczęciem randomizowanego badania klinicznego wykonuje się kalkulację wielkości próby dla mocy 1 − β = 0,80?",
+          "answer": "Zbyt mała próba skutkuje wysokim ryzykiem błędu II rodzaju (β), czyli fałszywego uznania skutecznego leku za nieskuteczny tylko z powodu niewystarczającej liczby pacjentów."
+        },
+        {
+          "question": "Co mierzy licznik i mianownik statystyki F w jednoczynnikowej analizie wariancji ANOVA?",
+          "answer": "Licznik mierzy wariancję między średnimi badanych grup (efekt leczenia + szum), natomiast mianownik mierzy wariancję losową wewnątrz grup — wysoka wartość F powyżej wartości krytycznej wskazuje, że co najmniej jedna grupa różni się istotnie od pozostałych."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Biostatystyka — Wnioskowanie wielogrupowe (OpenStax Statistics CC BY 4.0)",
+        "requirementCodes": [
+          "STAT-CHI2-1",
+          "STAT-ANOVA-2"
+        ],
         "status": "core"
       }
     }

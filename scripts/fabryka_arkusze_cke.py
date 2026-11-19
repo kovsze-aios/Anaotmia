@@ -8,8 +8,8 @@ Pairs each official CKE exam PDF (arkusz) in `materiały-źródłowe/` with its
 corresponding official scoring key PDF (zasady oceniania) and uses PyMuPDF
 (`fitz`) + optional AsyncOpenAI (DeepSeek) to:
   1. Extract 100% of tasks and subtasks (Zadanie 1 .. Zadanie N, no cap).
-  2. Export full-page 1:1 PNG snapshots (`page_01.png` .. `page_NN.png`) and
-     cropped embedded diagrams, charts, micrographs, chemical schemes, and
+  2. Export full-page 1:1 WebP snapshots (`page_01.webp` .. `page_NN.webp`, quality 82)
+     and cropped embedded diagrams, charts, micrographs, chemical schemes, and
      official key tables/schemes (`fig_*.png`, `key_*.png`) into
      `public/cke-assets/<subject>/<year>_<month>/`.
   3. Match every subtask against the official CKE `zasady oceniania` PDF
@@ -737,14 +737,17 @@ def extract_exam_bundle_from_pair(pair: dict[str, Any]) -> tuple[list[dict[str, 
     sym_match = re.search(r"\b(?:EBIP|ECHP|MBIA|MCHA|MBI|MCH)-R[01]-[A-Z0-9-]+\b", p1_text)
     symbol = sym_match.group(0) if sym_match else exam_path.stem
 
-    # Export 100% of pages as 1:1 PNG snapshots
+    # Export 100% of pages as optimized 1:1 WebP snapshots (quality=82)
+    from PIL import Image  # type: ignore
+
     page_urls: list[str] = []
     for pno, page in enumerate(adoc):
-        page_fname = f"page_{pno + 1:02d}.png"
+        page_fname = f"page_{pno + 1:02d}.webp"
         page_out = asset_dir / page_fname
         if not page_out.exists() or page_out.stat().st_size < 1000:
-            pix = page.get_pixmap(dpi=96)
-            pix.save(str(page_out))
+            pix = page.get_pixmap(dpi=96, alpha=False)
+            img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+            img.save(str(page_out), format="WEBP", quality=82, method=4)
         page_urls.append(f"{public_prefix}/{page_fname}")
 
     # Build linear stream of blocks dynamically starting where Zadanie 1 appears
@@ -1139,7 +1142,7 @@ def extract_exam_bundle_from_pair(pair: dict[str, Any]) -> tuple[list[dict[str, 
                 else text_to_html(combined_key)
             ),
             "pdfPageNumber": bundle_page,
-            "pageImageUrl": f"{public_prefix}/page_{bundle_page:02d}.png",
+            "pageImageUrl": f"{public_prefix}/page_{bundle_page:02d}.webp",
             "media": media_list,
             "subTasks": subtasks_out,
             "taskType": subtasks_out[0]["taskType"] if subtasks_out else "open-text",

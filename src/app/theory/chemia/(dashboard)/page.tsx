@@ -3,17 +3,17 @@ import { TheorySubjectLanding } from "@/components/TheorySubjectLanding";
 import { getNavDomains } from "@/server";
 
 export const metadata: Metadata = {
-  title: "Chemia — Pełna Wiedza + Matura CKE (2015 & 2023+)",
+  title: "Chemia — Podręcznik i Arkusze CKE",
   description:
-    "Zintegrowany podręcznik z chemii ogólnej, fizycznej i organicznej z filtrami Formuła 2023+, Formuła 2015, treściami akademickimi OER i zadaniami CKE.",
+    "Zintegrowany podręcznik z chemii ogólnej, fizycznej i organicznej podzielony na działy oraz oficjalne arkusze maturalne CKE 1:1.",
 };
 
 export default function TeoriaChemiaPage() {
   return (
     <TheorySubjectLanding
       basePath="/theory/chemia"
-      heading="Chemia — Pełna Wiedza + Matura CKE"
-      intro="Jedno źródło prawdy: kompletny korpus chemiczny (Bielański + OER + CKE) z natychmiastowym filtrowaniem pod Maturę 2023+, Maturę 2015 i Oficjalne Arkusze CKE."
+      heading="Chemia — Podręcznik i Arkusze CKE"
+      intro="Jedno źródło prawdy: kompletny korpus chemiczny (chemia ogólna, nieorganiczna, organiczna i fizyczna) z działem Matura i oficjalnymi arkuszami CKE 1:1 (Formuła 2023+ oraz 2015)."
       domainsLabel="Materiał podzielony na główne działy chemii:"
       domains={getNavDomains("chemia")}
     />

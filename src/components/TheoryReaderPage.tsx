@@ -95,7 +95,7 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
   };
 
   return (
-    <div className="min-h-screen pb-8 pt-4">
+    <div className="min-h-screen pb-10 pt-[max(1rem,env(safe-area-inset-top))]">
       <nav aria-label="Okruszki" className="mx-auto w-full max-w-3xl px-4 pb-2 text-sm">
         <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
           <li>

@@ -97,14 +97,14 @@ export function TheorySubjectLanding({
                 </button>
 
                 {isExpanded && (
-                  <ul className="mt-2 space-y-1 rounded-lg border border-zinc-800 bg-zinc-950/90 p-2.5">
+                  <ul className="mt-2 space-y-1 rounded-lg border border-zinc-200 bg-zinc-50 p-2.5 dark:border-zinc-800 dark:bg-zinc-950/90">
                     {domain.sections.map((section, idx) => (
                       <li key={section.id}>
                         <Link
                           href={`${basePath}/${section.id}`}
-                          className="flex items-start gap-2 rounded-md px-2.5 py-2 text-xs leading-relaxed text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+                          className="flex items-start gap-2 rounded-md px-2.5 py-2 text-xs leading-relaxed text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-ring dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
                         >
-                          <span className="shrink-0 font-mono text-zinc-500">
+                          <span className="shrink-0 font-mono text-zinc-400 dark:text-zinc-500">
                             {idx + 1}.
                           </span>
                           <span>{section.title}</span>
@@ -126,16 +126,16 @@ export function TheorySubjectLanding({
 
       {isMaturaSubject && (
         <>
-          <hr className="my-10 border-t border-zinc-800" />
+          <hr className="my-10 border-t border-zinc-200 dark:border-zinc-800" />
           <section id="sekcja-matura" aria-labelledby="matura-section-heading">
             <div className="mb-4">
               <h2
                 id="matura-section-heading"
-                className="text-xl font-bold tracking-tight text-zinc-100"
+                className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
               >
                 Matura
               </h2>
-              <p className="mt-1 text-sm text-zinc-400">
+              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
                 Arkusze CKE z poprzednich lat (2015–2024) oraz arkusze próbne i diagnostyczne z
                 oryginalnymi stronami PDF i naniesionymi rozwiązaniami.
               </p>

@@ -9,9 +9,18 @@
     "data": {
       "chapterTitle": "Złożoność asymptotyczna Big-O, tablice dynamiczne, listy oraz tablice mieszające (Hash Tables)",
       "toc": [
-        { "title": "Notacja Big-O i analiza zamortyzowana", "anchorId": "notacja-big-o" },
-        { "title": "Tablice dynamiczne (ArrayStack) vs listy wiązane", "anchorId": "tablice-vs-listy" },
-        { "title": "Tablice mieszające i obsługa kolizji", "anchorId": "tablice-mieszajace" }
+        {
+          "title": "Notacja Big-O i analiza zamortyzowana",
+          "anchorId": "notacja-big-o"
+        },
+        {
+          "title": "Tablice dynamiczne (ArrayStack) vs listy wiązane",
+          "anchorId": "tablice-vs-listy"
+        },
+        {
+          "title": "Tablice mieszające i obsługa kolizji",
+          "anchorId": "tablice-mieszajace"
+        }
       ],
       "pages": [
         {
@@ -39,9 +48,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Informatyka — Struktury danych (Open Data Structures CC BY)",
-        "requirementCodes": ["INF-ALG-1", "INF-HASH-2"],
+        "requirementCodes": [
+          "INF-ALG-1",
+          "INF-HASH-2"
+        ],
         "status": "core"
       }
     }
@@ -56,9 +72,18 @@
     "data": {
       "chapterTitle": "Drzewa BST i kopce (Heaps), grafy skierowane oraz przeszukiwanie BFS, DFS i Dijkstra",
       "toc": [
-        { "title": "Drzewa BST i zbalansowanie AVL / Red-Black", "anchorId": "drzewa-bst" },
-        { "title": "Kopce binarne i kolejka priorytetowa", "anchorId": "kopce-binarne" },
-        { "title": "Grafy, BFS, DFS oraz algorytm Dijkstry", "anchorId": "grafy-dijkstra" }
+        {
+          "title": "Drzewa BST i zbalansowanie AVL / Red-Black",
+          "anchorId": "drzewa-bst"
+        },
+        {
+          "title": "Kopce binarne i kolejka priorytetowa",
+          "anchorId": "kopce-binarne"
+        },
+        {
+          "title": "Grafy, BFS, DFS oraz algorytm Dijkstry",
+          "anchorId": "grafy-dijkstra"
+        }
       ],
       "pages": [
         {
@@ -86,9 +111,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Informatyka — Drzewa i grafy (Open Data Structures CC BY)",
-        "requirementCodes": ["INF-BST-1", "INF-GRAF-2"],
+        "requirementCodes": [
+          "INF-BST-1",
+          "INF-GRAF-2"
+        ],
         "status": "core"
       }
     }
@@ -103,9 +135,18 @@
     "data": {
       "chapterTitle": "Model relacyjny SQL, więzy integralności, normalizacja (1NF–3NF) oraz indeksy B-tree",
       "toc": [
-        { "title": "Klucze główne, obce i złączenia JOIN w SQL", "anchorId": "klucze-join" },
-        { "title": "Postacie normalne 1NF, 2NF oraz 3NF", "anchorId": "normalizacja-nf" },
-        { "title": "Transakcje ACID i indeksowanie B-drzewami", "anchorId": "acid-indeksy" }
+        {
+          "title": "Klucze główne, obce i złączenia JOIN w SQL",
+          "anchorId": "klucze-join"
+        },
+        {
+          "title": "Postacie normalne 1NF, 2NF oraz 3NF",
+          "anchorId": "normalizacja-nf"
+        },
+        {
+          "title": "Transakcje ACID i indeksowanie B-drzewami",
+          "anchorId": "acid-indeksy"
+        }
       ],
       "pages": [
         {
@@ -133,9 +174,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Informatyka — Bazy danych SQL (Database Design CC BY)",
-        "requirementCodes": ["INF-SQL-1", "INF-NF-2"],
+        "requirementCodes": [
+          "INF-SQL-1",
+          "INF-NF-2"
+        ],
         "status": "core"
       }
     }
@@ -149,9 +197,18 @@
     "data": {
       "chapterTitle": "Algorytmy na tekstach i sekwencjach DNA: zawartość GC, tłumaczenie ORF oraz programowanie dynamiczne",
       "toc": [
-        { "title": "Przetwarzanie sekwencji FASTA i zawartość GC", "anchorId": "przetwarzanie-fasta" },
-        { "title": "Wyszukiwanie ramek odczytu (ORF) i translacja kodonów", "anchorId": "ramki-odczytu" },
-        { "title": "Dopasowanie sekwencji (Needleman–Wunsch)", "anchorId": "programowanie-dynamiczne" }
+        {
+          "title": "Przetwarzanie sekwencji FASTA i zawartość GC",
+          "anchorId": "przetwarzanie-fasta"
+        },
+        {
+          "title": "Wyszukiwanie ramek odczytu (ORF) i translacja kodonów",
+          "anchorId": "ramki-odczytu"
+        },
+        {
+          "title": "Dopasowanie sekwencji (Needleman–Wunsch)",
+          "anchorId": "programowanie-dynamiczne"
+        }
       ],
       "pages": [
         {
@@ -179,9 +236,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Informatyka — Bioinformatyka i algorytmy tekstowe",
-        "requirementCodes": ["INF-DNA-1", "INF-DP-2"],
+        "requirementCodes": [
+          "INF-DNA-1",
+          "INF-DP-2"
+        ],
         "status": "core"
       }
     }
@@ -195,9 +259,18 @@
     "data": {
       "chapterTitle": "Eksploracja danych i uczenie maszynowe: regresja, walidacja krzyżowa oraz metryki ROC/F1",
       "toc": [
-        { "title": "Podział train/test, overfitting i walidacja krzyżowa", "anchorId": "walidacja-modeli" },
-        { "title": "Regresja liniowa, logistyczna i drzewa decyzyjne", "anchorId": "algorytmy-ml" },
-        { "title": "Macierz pomyłek, precyzja, czułość i AUC-ROC", "anchorId": "metryki-oceny" }
+        {
+          "title": "Podział train/test, overfitting i walidacja krzyżowa",
+          "anchorId": "walidacja-modeli"
+        },
+        {
+          "title": "Regresja liniowa, logistyczna i drzewa decyzyjne",
+          "anchorId": "algorytmy-ml"
+        },
+        {
+          "title": "Macierz pomyłek, precyzja, czułość i AUC-ROC",
+          "anchorId": "metryki-oceny"
+        }
       ],
       "pages": [
         {
@@ -225,9 +298,142 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Informatyka — Data Science i ML",
-        "requirementCodes": ["INF-ML-1", "INF-ROC-2"],
+        "requirementCodes": [
+          "INF-ML-1",
+          "INF-ROC-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-inf-kopce-binarne-kolejki-priorytetowe-i-heapsort",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, programowanie w Pythonie i bioinformatyka obliczeniowa",
+    "sourcePdf": "Open_Data_Structures_Morin_CC-BY.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open Data Structures — Pat Morin (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Kopce binarne (Min-Heap/Max-Heap), kolejki priorytetowe w O(log n) oraz sortowanie Heapsort",
+      "toc": [
+        {
+          "title": "Własność kopca i indeksowanie w tablicy płaskiej",
+          "anchorId": "kopiec-tablica"
+        },
+        {
+          "title": "Operacje push / pop i przywracanie własności kopca",
+          "anchorId": "operacje-kopca"
+        },
+        {
+          "title": "Algorytm Floyda w O(n) i Heapsort w miejscu O(n log n)",
+          "anchorId": "heapsort-floyd"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"kopiec-tablica\">Kompletne drzewo binarne bez wskaźników</h2><p><strong>Kopiec binarny (Min-Heap)</strong> przechowuje elementy w kompletnej strukturze drzewiastej, gdzie klucz każdego rodzica jest &le; od kluczy jego dzieci. Dzięki kompletności całe drzewo mieści się w zwykłej ciągłej tablicy o indeksach od 0 bez narzutu pamięciowego na wskaźniki: dla węzła <code>i</code> rodzic leży pod indeksem <code>(i &minus; 1) // 2</code>, a dzieci pod <code>2i + 1</code> oraz <code>2i + 2</code>.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"operacje-kopca\">Kolejka priorytetowa w O(log n)</h2><p>Odczyt minimum zajmuje <code>O(1)</code> (zawsze indeks 0). Wstawienie nowego elementu (<code>heappush</code>) dokłada go na koniec tablicy i przesiewa w górę (<em>sift-up</em>) wzdłuż pojedynczej gałęzi o wysokości <code>O(log n)</code>. Usunięcie minimum (<code>heappop</code>) przenosi ostatni element do korzenia i przesiewa w dół (<em>sift-down</em>) w <code>O(log n)</code>, co stanowi serce algorytmu Dijkstry i kolejek zdarzeń medycznych.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"heapsort-floyd\">Budowa kopca algorytmem Floyda w O(n) i Heapsort</h2><p>Zbudowanie kopca z dowolnej tablicy od dołu w górę (od indeksu <code>n // 2 &minus; 1</code> do 0 metodą <em>sift-down</em>) ma złożoność liniową <strong>O(n)</strong>, bo większość węzłów znajduje się blisko liści. Następnie wielokrotne zdjęcie maksimum w Max-Heap daje sortowanie <strong>Heapsort</strong> gwarantujące <code>O(n log n)</code> w najgorszym przypadku przy stałej pamięci <code>O(1)</code> w miejscu.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak oblicza się w tablicy indeksowanej od 0 indeks rodzica oraz lewego dziecka dla elementu pod indeksem i = 5 w kopcu binarnym?",
+          "answer": "Rodzic znajduje się pod indeksem (5 − 1) // 2 = 2, natomiast lewe dziecko pod indeksem 2·5 + 1 = 11 (a prawe pod 12)."
+        },
+        {
+          "question": "Dlaczego budowanie kopca metodą bottom-up (Floyda) działa w czasie O(n), a nie O(n log n)?",
+          "answer": "Ponieważ ponad połowa węzłów leży na ostatnim poziomie (wysokość 0 i brak zejść), a jedynie sam korzeń ma pełną głębokość log₂n — geometryczna suma i / 2ⁱ jest ograniczona stałą (≤ 2n operacji)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
+        "sectionCode": "Algorytmy i struktury danych — Kopce (Open Data Structures CC BY 4.0)",
+        "requirementCodes": [
+          "INF-CKE-HEAP",
+          "ALG-PQ-1"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-inf-transakcje-acid-indeksy-b-drzewa-i-optymalizacja",
+    "domainId": "informatyka-algorytmy-i-bioinformatyka",
+    "domainTitle": "Algorytmy, programowanie w Pythonie i bioinformatyka obliczeniowa",
+    "sourcePdf": "Database_Design_2e_Watt_CC-BY.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Database Design 2nd Edition — Adrienne Watt (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Transakcje bazodanowe ACID, poziomy izolacji oraz indeksowanie B-drzewami w systemach medycznych",
+      "toc": [
+        {
+          "title": "Własności transakcji ACID (Atomowość, Spójność, Izolacja, Trwałość)",
+          "anchorId": "transakcje-acid"
+        },
+        {
+          "title": "Poziomy izolacji i anomalie współbieżności",
+          "anchorId": "izolevel-mvcc"
+        },
+        {
+          "title": "Indeksy B+ drzewa i kiedy pełny skan jest szybszy",
+          "anchorId": "indeksy-b-tree"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"transakcje-acid\">Gwarancje transakcyjne ACID</h2><p>W elektronicznej dokumentacji pacjenta i bankowości transakcja musi być niepodzielną jednostką pracy: <strong>Atomowość</strong> gwarantuje wykonanie wszystkiego albo wycofanie zmian (<em>rollback</em>), <strong>Spójność</strong> pilnuje więzów integralności kluczy, <strong>Izolacja</strong> ukrywa stany przejściowe przed równoległymi sesjami, a <strong>Trwałość (Durability)</strong> zapisuje potwierdzone zmiany do dziennika WAL nawet po awarii zasilania.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"izolevel-mvcc\">Anomalie współbieżności: brudne odczyty i wielowersyjność MVCC</h2><p>Standard SQL rozróżnia cztery poziomy izolacji (od <em>Read Uncommitted</em> do <em>Serializable</em>), chroniące kolejno przed brudnym odczytem (<em>dirty read</em>), niepowtarzalnym odczytem oraz odczytem fantomowym. Nowoczesne bazy (PostgreSQL) stosują <strong>MVCC</strong>, aby czytelnicy nie blokowali piszących.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"indeksy-b-tree\">Indeksy B+ drzewa w optymalizacji SQL</h2><p>Zrównoważone <strong>B+ drzewo</strong> skraca wyszukiwanie punktu lub zakresu (<code>WHERE id_pacjenta = ...</code>, <code>BETWEEN</code>) z liniowego <code>O(n)</code> do kilku skoków po stronach dyskowych <code>O(log<sub>B</sub> n)</code>. Indeksy przyspieszają zapytania <code>SELECT</code>, ale spowalniają masowe <code>INSERT/UPDATE</code> ze względu na utrzymanie struktury drzewa.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jakie cztery cechy kryje akronim ACID w relacyjnych bazach danych?",
+          "answer": "Atomicity (atomowość — wszystko albo nic), Consistency (spójność więzów i typów), Isolation (izolacja równoległych transakcji) oraz Durability (trwałość zapisanych zatwierdzeń)."
+        },
+        {
+          "question": "Dlaczego nie powinno się zakładać indeksów na każdej kolumnie dużej tabeli transakcyjnej?",
+          "answer": "Każdy dodatkowy indeks musi być aktualizowany przy operacjach INSERT, UPDATE i DELETE oraz zajmuje miejsce w buforze pamięci RAM i na dysku, obniżając przepustowość zapisu."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
+        "sectionCode": "Bazy danych — Transakcje i indeksy (Database Design CC BY 4.0)",
+        "requirementCodes": [
+          "INF-CKE-SQL",
+          "DB-ACID-2"
+        ],
         "status": "core"
       }
     }

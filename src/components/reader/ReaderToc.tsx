@@ -200,22 +200,22 @@ export function ReaderToc({ spine, position, basePath }: ReaderTocProps) {
             })}
 
             {isMaturaSubject && (
-              <div className="my-4 border-t border-zinc-800 px-2 pt-4">
-                <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-widest text-zinc-400">
+              <div className="my-4 border-t border-zinc-200 px-2 pt-4 dark:border-zinc-800">
+                <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
                   Matura
                 </p>
                 <div className="space-y-1">
                   <Link
                     href={`${maturaLandingPath}?formula=2023#sekcja-matura`}
                     onClick={() => setOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-ring dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
                   >
                     Formuła 2023+ (2015+)
                   </Link>
                   <Link
                     href={`${maturaLandingPath}?formula=2015#sekcja-matura`}
                     onClick={() => setOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-ring dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
                   >
                     Formuła 2015
                   </Link>

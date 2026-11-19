@@ -8,16 +8,18 @@ import {
   BIOLOGIA_TEXTBOOK_FIGURES,
   CHEMIA_TEXTBOOK_FIGURES,
   FIZJOLOGIA_TEXTBOOK_FIGURES,
+  OER_TEXTBOOK_FIGURES,
   getFiguresForChapter,
 } from "./textbook-figures";
 
 describe("Interactive Textbook Figures Engine", () => {
-  it("provides the 27 cross-subject figures across Anatomy, Physiology, Biology, Chemistry, and Physics", () => {
+  it("provides the 32 cross-subject figures across Anatomy, Physiology, Biology, Chemistry, Physics, and OER departments", () => {
     expect(ANATOMIA_TEXTBOOK_FIGURES).toHaveLength(8);
     expect(FIZJOLOGIA_TEXTBOOK_FIGURES).toHaveLength(5);
     expect(BIOLOGIA_TEXTBOOK_FIGURES).toHaveLength(7);
     expect(CHEMIA_TEXTBOOK_FIGURES).toHaveLength(7);
-    expect(ALL_TEXTBOOK_FIGURES).toHaveLength(27);
+    expect(OER_TEXTBOOK_FIGURES).toHaveLength(5);
+    expect(ALL_TEXTBOOK_FIGURES).toHaveLength(32);
 
     const osteonFigs = getFiguresForChapter({
       subject: "anatomia",
@@ -157,6 +159,27 @@ describe("Interactive Textbook Figures Engine", () => {
       chapterTitle: "Indukcja elektromagnetyczna i obwody RLC",
     });
     expect(oerPhysicsRlcFigs.some((f) => f.id === "fig-fiz-indukcja-rlc")).toBe(true);
+
+    const oerNeuroPyrFigs = getFiguresForChapter({
+      subject: "neurobiologia",
+      chapterId: "oer-neuro-drogi-piramidowe-i-uklad-pozapiramidowy",
+      chapterTitle: "Drogi piramidowe",
+    });
+    expect(oerNeuroPyrFigs.some((f) => f.id === "fig-neuro-droga-piramidowa")).toBe(true);
+
+    const oerPkFigs = getFiguresForChapter({
+      subject: "farmakologia",
+      chapterId: "oer-farm-interakcje-lekow-i-monitoring-terapeutyczny",
+      chapterTitle: "Stan stacjonarny C_ss",
+    });
+    expect(oerPkFigs.some((f) => f.id === "fig-farm-kinetyka-i-rzad")).toBe(true);
+
+    const oerHeapFigs = getFiguresForChapter({
+      subject: "informatyka",
+      chapterId: "oer-inf-kopce-binarne-kolejki-priorytetowe-i-heapsort",
+      chapterTitle: "Kopce binarne",
+    });
+    expect(oerHeapFigs.some((f) => f.id === "fig-inf-kopiec-binarny")).toBe(true);
   });
 
   it("has valid calibrated hotspots, 3D entity/pin bridges, animation steps, and CC-BY sample assets", () => {

@@ -289,7 +289,7 @@ export function TextToSpeechPlayer({
       aria-label={label}
       aria-pressed={isActive}
       title={label}
-      className="fixed bottom-5 right-5 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white/95 text-zinc-900 shadow-lg backdrop-blur-md transition-colors hover:bg-zinc-100 focus-ring dark:border-zinc-800 dark:bg-zinc-950/95 dark:text-zinc-100 dark:hover:bg-zinc-900 print:hidden"
+      className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-4 sm:right-5 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white/95 text-zinc-900 shadow-lg backdrop-blur-md transition-colors hover:bg-zinc-100 focus-ring dark:border-zinc-800 dark:bg-zinc-950/95 dark:text-zinc-100 dark:hover:bg-zinc-900 print:hidden"
     >
       {status === "loading" ? (
         <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />

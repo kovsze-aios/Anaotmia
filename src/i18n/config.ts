@@ -1,15 +1,15 @@
 /**
  * Locale configuration for the UI shell.
  *
- * English is the primary language: it is what the server renders, what search
- * engines index, and the fallback for any key a translation is missing.
+ * Polish is the primary language: it is what the server renders and the
+ * fallback when no explicit visitor preference is stored.
  */
 
 export const LOCALES = ["en", "pl", "de", "fr", "it", "es"] as const;
 
 export type Locale = (typeof LOCALES)[number];
 
-export const DEFAULT_LOCALE: Locale = "en";
+export const DEFAULT_LOCALE: Locale = "pl";
 
 /** Storage key for the visitor's choice. Mirrors how the theme is persisted. */
 export const LOCALE_STORAGE_KEY = "locale";

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
@@ -10,7 +11,6 @@ import { formatOcrText, getSectionWordCount, uniqueId } from "@/lib/textbookForm
 import { AnatomicalTextLinker, AnatomyRichText } from "./textbook/AnatomyRichText";
 import { TextbookFigureCard } from "./textbook/TextbookFigureCard";
 import { getFiguresForChapter } from "@/data/textbook-figures";
-import { CkeExamTasksSection } from "./matura/CkeExamTasksSection";
 
 
 function parseMarkdownContent(text: string = "") {
@@ -501,17 +501,43 @@ export function TextbookContent({
         );
       })()}
 
-      <CkeExamTasksSection
-        subject={subject}
-        chapterId={section.id}
-        chapterTitle={section.title}
-        sectionCode={section.ckeMetadata?.sectionCode}
-      />
+      {(() => {
+        const baseMaturaSubject = subject?.replace(/-matura-(?:2015|2023)$/, "");
+        const isMaturaSubject =
+          baseMaturaSubject === "biologia" ||
+          baseMaturaSubject === "chemia" ||
+          baseMaturaSubject === "fizyka" ||
+          baseMaturaSubject === "matematyka";
+
+        if (!isMaturaSubject || !baseMaturaSubject) return null;
+
+        const formulaSuffix = subject?.includes("2015") ? "?formula=2015" : "";
+        return (
+          <div className="mt-10 border-t border-zinc-200 pt-6 dark:border-zinc-800">
+            <Link
+              href={`/theory/${baseMaturaSubject}${formulaSuffix}#sekcja-matura`}
+              className="focus-ring group flex items-center justify-between gap-4 rounded-xl border border-zinc-200 bg-zinc-50 px-5 py-4 text-zinc-900 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-900"
+            >
+              <div>
+                <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  Zadania maturalne CKE z tego działu
+                </p>
+                <p className="mt-0.5 text-xs text-zinc-600 dark:text-zinc-400">
+                  Pełne arkusze CKE 1:1 z oryginalnymi stronami PDF i kluczem odpowiedzi
+                </p>
+              </div>
+              <span className="shrink-0 whitespace-nowrap text-xs font-semibold text-zinc-700 transition-transform group-hover:translate-x-0.5 dark:text-zinc-300">
+                Przejdź do arkuszy 1:1 →
+              </span>
+            </Link>
+          </div>
+        );
+      })()}
 
       {(section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution) && (
         <footer
           data-testid="license-attribution-footer"
-          className="mt-8 rounded-lg border border-zinc-800/80 bg-zinc-950/60 px-4 py-2.5 text-xs text-zinc-400"
+          className="mt-8 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-2.5 text-xs text-zinc-600 dark:border-zinc-800/80 dark:bg-zinc-950/60 dark:text-zinc-400"
         >
           📜 {section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution}
         </footer>

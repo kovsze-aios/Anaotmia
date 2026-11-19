@@ -8,9 +8,18 @@
     "data": {
       "chapterTitle": "Rzędowość struktur białkowych, potrójna helisa kolagenu oraz kooperatywność hemoglobiny",
       "toc": [
-        { "title": "Wiązanie peptydowe i struktury I–IV-rzędowe", "anchorId": "struktury-bialek" },
-        { "title": "Kolagen i rola hydroksylacji proliny (witamina C)", "anchorId": "kolagen-i-szkorbut" },
-        { "title": "Hemoglobina (forma T vs R) i efekt allosteryczny 2,3-BPG", "anchorId": "hemoglobina-allosteria" }
+        {
+          "title": "Wiązanie peptydowe i struktury I–IV-rzędowe",
+          "anchorId": "struktury-bialek"
+        },
+        {
+          "title": "Kolagen i rola hydroksylacji proliny (witamina C)",
+          "anchorId": "kolagen-i-szkorbut"
+        },
+        {
+          "title": "Hemoglobina (forma T vs R) i efekt allosteryczny 2,3-BPG",
+          "anchorId": "hemoglobina-allosteria"
+        }
       ],
       "pages": [
         {
@@ -38,9 +47,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Biochemia — Struktura i dynamika białek",
-        "requirementCodes": ["BIOC-PROT-1", "BIOC-HB-2"],
+        "requirementCodes": [
+          "BIOC-PROT-1",
+          "BIOC-HB-2"
+        ],
         "status": "core"
       }
     }
@@ -54,9 +70,18 @@
     "data": {
       "chapterTitle": "Łańcuch transportu elektronów (kompleksy I–IV), teoria chemiosmotyczna Mitchella i syntaza ATP",
       "toc": [
-        { "title": "Przepływ elektronów i pompowanie protonów H⁺", "anchorId": "lancuch-oddechowy" },
-        { "title": "Syntaza ATP (F₀F₁) i siła protonomotoryczna", "anchorId": "syntaza-atp" },
-        { "title": "Inhibitory łańcucha oraz rozprzęgacze (UCP1, DNP)", "anchorId": "rozprzegacze" }
+        {
+          "title": "Przepływ elektronów i pompowanie protonów H⁺",
+          "anchorId": "lancuch-oddechowy"
+        },
+        {
+          "title": "Syntaza ATP (F₀F₁) i siła protonomotoryczna",
+          "anchorId": "syntaza-atp"
+        },
+        {
+          "title": "Inhibitory łańcucha oraz rozprzęgacze (UCP1, DNP)",
+          "anchorId": "rozprzegacze"
+        }
       ],
       "pages": [
         {
@@ -84,9 +109,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Biochemia — Bioenergetyka mitochondrialna",
-        "requirementCodes": ["BIOC-OXPHOS-1", "BIO-META-3"],
+        "requirementCodes": [
+          "BIOC-OXPHOS-1",
+          "BIO-META-3"
+        ],
         "status": "core"
       }
     }
@@ -100,9 +132,18 @@
     "data": {
       "chapterTitle": "Aktywacja kwasów tłuszczowych, mostek karnitynowy, β-oksydacja oraz ketogeneza wątrobowa",
       "toc": [
-        { "title": "Mostek karnitynowy i enzym CPT-1", "anchorId": "mostek-karnitynowy" },
-        { "title": "Cztery etapy β-oksydacji w macierzy mitochondrium", "anchorId": "etapy-beta-oksydacji" },
-        { "title": "Ciała ketonowe w głodzeniu i cukrzycy", "anchorId": "ketogeneza" }
+        {
+          "title": "Mostek karnitynowy i enzym CPT-1",
+          "anchorId": "mostek-karnitynowy"
+        },
+        {
+          "title": "Cztery etapy β-oksydacji w macierzy mitochondrium",
+          "anchorId": "etapy-beta-oksydacji"
+        },
+        {
+          "title": "Ciała ketonowe w głodzeniu i cukrzycy",
+          "anchorId": "ketogeneza"
+        }
       ],
       "pages": [
         {
@@ -130,9 +171,13 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["academic"],
+        "formulas": [
+          "academic"
+        ],
         "sectionCode": "Biochemia — Metabolizm lipidów",
-        "requirementCodes": ["BIOC-LIP-1"],
+        "requirementCodes": [
+          "BIOC-LIP-1"
+        ],
         "status": "core"
       }
     }
@@ -146,9 +191,18 @@
     "data": {
       "chapterTitle": "Szlak pentozofosforanowy (NADPH, ryboza-5-P) oraz hormonalna regulacja metabolizmu glikogenu",
       "toc": [
-        { "title": "Faza oksydacyjna szlaku pentozofosforanowego", "anchorId": "szlak-pentozofosforanowy" },
-        { "title": "Rola NADPH i niedobór G6PD (fawizm)", "anchorId": "niedobor-g6pd" },
-        { "title": "Fosforylaza glikogenu: insulina vs glukagon i adrenalina", "anchorId": "glikogenoliza-regulacja" }
+        {
+          "title": "Faza oksydacyjna szlaku pentozofosforanowego",
+          "anchorId": "szlak-pentozofosforanowy"
+        },
+        {
+          "title": "Rola NADPH i niedobór G6PD (fawizm)",
+          "anchorId": "niedobor-g6pd"
+        },
+        {
+          "title": "Fosforylaza glikogenu: insulina vs glukagon i adrenalina",
+          "anchorId": "glikogenoliza-regulacja"
+        }
       ],
       "pages": [
         {
@@ -176,9 +230,14 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["academic"],
+        "formulas": [
+          "academic"
+        ],
         "sectionCode": "Biochemia — Metabolizm węglowodanów",
-        "requirementCodes": ["BIOC-PPP-1", "BIOC-GLIK-1"],
+        "requirementCodes": [
+          "BIOC-PPP-1",
+          "BIOC-GLIK-1"
+        ],
         "status": "core"
       }
     }
@@ -192,9 +251,18 @@
     "data": {
       "chapterTitle": "Transaminacja (PLP), deaminacja oksydacyjna oraz cykl mocznikowy Krebsa–Henseleita",
       "toc": [
-        { "title": "Transaminazy (ALT, AST) i koenzym fosforan pirydoksalu", "anchorId": "transaminacja" },
-        { "title": "Cykl glukozowo-alaninowy mięśnie–wątroba", "anchorId": "cykl-alaninowy" },
-        { "title": "Cykl mocznikowy i detoksykacja amoniaku", "anchorId": "cykl-mocznikowy" }
+        {
+          "title": "Transaminazy (ALT, AST) i koenzym fosforan pirydoksalu",
+          "anchorId": "transaminacja"
+        },
+        {
+          "title": "Cykl glukozowo-alaninowy mięśnie–wątroba",
+          "anchorId": "cykl-alaninowy"
+        },
+        {
+          "title": "Cykl mocznikowy i detoksykacja amoniaku",
+          "anchorId": "cykl-mocznikowy"
+        }
       ],
       "pages": [
         {
@@ -222,9 +290,133 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["academic"],
+        "formulas": [
+          "academic"
+        ],
         "sectionCode": "Biochemia — Metabolizm azotu i cykl mocznikowy",
-        "requirementCodes": ["BIOC-UREA-1"],
+        "requirementCodes": [
+          "BIOC-UREA-1"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-biochem-przekaznictwo-wewnatrzkomorkowe-gpcr-camp-ip3",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Fundamentals_of_Biochemistry_Jakubowski_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Sygnalizacja wewnątrzkomórkowa: receptory sprzężone z białkami G (GPCR), szlak cAMP/PKA oraz IP₃/DAG",
+      "toc": [
+        {
+          "title": "Receptory 7TM (GPCR) i cykl białek G",
+          "anchorId": "receptory-gpcr"
+        },
+        {
+          "title": "Cyklaza adenylanowa, cAMP i kinaza białkowa A",
+          "anchorId": "szlak-camp-pka"
+        },
+        {
+          "title": "Fosfolipaza C, IP₃, DAG i kaskada wapniowa",
+          "anchorId": "szlak-ip3-dag"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"receptory-gpcr\">Architektura receptorów GPCR i aktywacja białek G</h2><p>Większość hormonów hydrofilowych (np. adrenalina, glukagon) nie przechodzi przez dwuwarstwę lipidową, lecz wiąże się z błonowymi <strong>receptorami sprzężonymi z białkami G (GPCR)</strong> złożonymi z siedmiu helis transbłonowych. Związanie agonisty wywołuje zmianę konformacyjną umożliwiającą wymianę <strong>GDP na GTP</strong> na podjednostce G<sub>&alpha;</sub> heterotrimerycznego białka G.</p><p>Aktywna podjednostka G<sub>&alpha;</sub>-GTP dysocjuje od kompleksu G<sub>&beta;&gamma;</sub> i moduluje efektory błonowe aż do momentu, gdy wewnętrzna aktywność GTP-azy (wspomagana przez białka RGS) zhydrolizuje GTP z powrotem do GDP.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"szlak-camp-pka\">Wtórny przekaźnik cAMP i amplifikacja sygnału</h2><p>Podjednostka stymulująca <strong>G<sub>&alpha;s</sub></strong> pobudza <strong>cyklazę adenylanową</strong>, która przekształca ATP w cykliczny AMP (<code>cAMP</code>). Związek ten allosterycznie aktywuje tetrameryczną <strong>kinazę białkową A (PKA)</strong>, odłączając podjednostki regulatorowe i uwalniając katalityczne.</p><p>Z kolei białka <strong>G<sub>&alpha;i</sub></strong> hamują cyklazę adenylanową, a fosfodiesterazy (PDE) rozkładają cAMP do nieaktywnego 5'-AMP (kofeina i teofilina hamują PDE, podtrzymując efekt cAMP).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"szlak-ip3-dag\">Szlak fosfolipazy C (G<sub>q</sub>): IP₃, DAG i jony Ca²⁺</h2><p>Aktywacja białka <strong>G<sub>&alpha;q</sub></strong> uruchamia fosfolipazę C&beta; (PLC), która rozcina fosfatydyloinozytolo-4,5-bisfosforan (PIP<sub>2</sub>) na dwa wtórne przekaźniki: rozpuszczalny <strong>IP<sub>3</sub></strong> (trisfosforan inozytolu) oraz hydrofobowy <strong>diacyloglicerol (DAG)</strong>.</p><p>IP<sub>3</sub> otwiera kanały wapniowe siateczki śródplazmatycznej, gwałtownie podnosząc stężenie cytozolowe Ca<sup>2+</sup>, które wraz z DAG aktywuje <strong>kinazę białkową C (PKC)</strong> oraz białko wiążące wapń — kalmodulinę.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego toksyna cholery wywołuje masywną biegunkę wodnistą poprzez działanie na szlak cAMP w enterocytach?",
+          "answer": "Toksyna cholery katalizuje ADP-rybozylację podjednostki Gαs, blokując jej wewnętrzną aktywność GTP-azy. Białko Gs pozostaje trwale aktywne (związane z GTP), co nieprzerwanie stymuluje cyklazę adenylanową, gromadzi cAMP i otwiera kanały chlorkowe CFTR powodując ucieczkę jonów i wody do światła jelita."
+        },
+        {
+          "question": "Jaką rolę pełni IP₃ w porównaniu z DAG w szlaku sygnalizacyjnym fosfolipazy C?",
+          "answer": "Hydrofilowy IP₃ dyfunduje do siateczki śródplazmatycznej i uwalnia zmagazynowane jony Ca²⁺ do cytozolu, podczas gdy hydrofobowy DAG pozostaje w błonie komórkowej i wspólnie z Ca²⁺ aktywuje kinazę białkową C (PKC)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Biochemia — Transdukcja sygnałów komórkowych",
+        "requirementCodes": [
+          "BIOC-SIG-1",
+          "BIOC-GPCR-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-biochem-synteza-kwasow-tluszczowych-i-lipoproteiny",
+    "domainId": "biochemia-enzymologia-i-energetyka",
+    "domainTitle": "Kinetyka enzymatyczna i termodynamika biochemiczna",
+    "sourcePdf": "Biochemistry_Free_For_All_Ahern_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Lipogeneza cytozolowa, syntaza kwasów tłuszczowych oraz metabolizm lipoprotein osocza (VLDL, LDL, HDL)",
+      "toc": [
+        {
+          "title": "Karboksylaza acetylo-CoA (ACC) i rola malonylo-CoA",
+          "anchorId": "lipogeneza-acc"
+        },
+        {
+          "title": "Złożony kompleks syntazy kwasów tłuszczowych (FAS)",
+          "anchorId": "syntaza-fas"
+        },
+        {
+          "title": "Chylomikrony, VLDL, LDL oraz zwrotny transport HDL",
+          "anchorId": "lipoproteiny-osocza"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"lipogeneza-acc\">Etap regulatorowy lipogenezy i mostek cytrynianowy</h2><p>W odróżnieniu od &beta;-oksydacji zachodzącej w mitochondrium, synteza kwasów tłuszczowych zachodzi w <strong>cytozolu</strong>. Ponieważ acetylo-CoA nie przechodzi bezpośrednio przez błonę mitochondrialną, opuszcza ją jako cytrynian, odtwarzany w cytozolu przez liazę ATP-cytrynianową.</p><p>Etapem ograniczającym szybkość lipogenezy jest karboksylacja acetylo-CoA do <strong>malonylo-CoA</strong> przez enzym zależny od biotyny — <strong>ACC</strong> (aktywowany przez insulinę i cytrynian, hamowany przez glukagon i AMPK). Powstający malonylo-CoA jednocześnie blokuje transporter CPT-1, uniemożliwiając bezcelowe równoczesne spalanie nowo tworzonych kwasów.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"syntaza-fas\">Wydłużanie łańcucha węglowego z udziałem NADPH</h2><p>Dimeryczna <strong>syntaza kwasów tłuszczowych (FAS)</strong> wykorzystuje ramię nośnikowe ACP oraz <strong>NADPH</strong> (pochodzący głównie ze szlaku pentozofosforanowego i enzymu jabłczanowego), wydłużając łańcuch o dwie jednostki węglowe w każdym cyklu aż do kwasu palmitynowego (C16:0).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"lipoproteiny-osocza\">Klasy lipoprotein i transport lipidów we krwi</h2><ul><li><strong>Chylomikrony:</strong> transportują triglicerydy pokarmowe z enterocytów przez układ chłonny do tkanek obwodowych (lipaza lipoproteinowa).</li><li><strong>VLDL i LDL:</strong> VLDL eksportują endogenne lipidy z wątroby; po hydrolizie triglicerydów przekształcają się w bogate w estry cholesterolu cząstki <strong>LDL</strong> pobierane przez receptor apoB-100 (nadmiar sprzyja blaszce miażdżycowej).</li><li><strong>HDL:</strong> odbierają nadmiar wolnego cholesterolu z makrofagów i tkanek obwodowych i odprowadzają go do wątroby (tzw. zwrotny transport cholesterolu).</li></ul>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "W jaki sposób organizm zapobiega tzw. jałowemu cyklowi jednoczesnej syntezy i β-oksydacji kwasów tłuszczowych w hepatocycie?",
+          "answer": "Produkt karboksylazy acetylo-CoA — malonylo-CoA — jest allosterycznym inhibitorem transportera karnitynowego CPT-1 na zewnętrznej błonie mitochondrialnej, więc podczas aktywnej lipogenezy kwasy tłuszczowe nie mogą wnikać do mitochondriów."
+        },
+        {
+          "question": "Skąd w cytozolu adipocytów i hepatocytów pochodzi siła redukcyjna (NADPH) niezbędna do syntezy kwasu palmitynowego?",
+          "answer": "Głównie z fazy oksydacyjnej cytozolowego szlaku pentozofosforanowego (dehydrogenaza glukozo-6-fosforanowa) oraz reakcji katalizowanej przez cytozolowy enzym jabłczanowy."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Biochemia — Metabolizm lipidów",
+        "requirementCodes": [
+          "BIOC-LIP-2",
+          "BIOC-HDL-3"
+        ],
         "status": "core"
       }
     }

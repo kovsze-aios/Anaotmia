@@ -1072,6 +1072,123 @@ function SchematicArtwork({
         </g>
       )}
 
+      {/* 28. Droga piramidowa (korowo-rdzeniowa) i skrzyżowanie piramid */}
+      {theme === "corticospinal-tract" && (
+        <g>
+          {/* Kora ruchowa (M1) */}
+          <path d="M 22 14 Q 50 8, 78 14 Q 82 24, 68 28 Q 50 30, 32 28 Q 18 24, 22 14 Z" fill="#18181b" stroke="#e4e4e7" strokeWidth="0.9" />
+          <text x="50" y="18" textAnchor="middle" fill="#fafafa" fontSize="2.9" fontWeight="700">Kora ruchowa (M1)</text>
+          {/* Torebka wewnętrzna i śródmózgowie */}
+          <rect x="34" y="34" width="32" height="10" rx="3" fill="#27272a" stroke="#71717a" strokeWidth="0.6" />
+          <text x="72" y="40" fill="#a1a1aa" fontSize="2.4">Torebka wewn.</text>
+          {/* Rdzeń przedłużony — Skrzyżowanie piramid */}
+          <rect x="36" y="49" width="28" height="14" rx="3" fill="#18181b" stroke="#71717a" strokeWidth="0.7" />
+          <path d="M 38 24 C 38 38, 42 46, 56 60 L 62 78" fill="none" stroke="#fafafa" strokeWidth="1.3" />
+          <path d="M 62 24 C 62 38, 58 46, 44 60 L 38 78" fill="none" stroke="#a1a1aa" strokeWidth="0.9" strokeDasharray="2 1" />
+          <circle cx="50" cy="56" r="2.2" fill="#fafafa" />
+          <text x="50" y="51.5" textAnchor="middle" fill="#d4d4d8" fontSize="2.5">Skrzyżowanie piramid</text>
+          {/* Rdzeń kręgowy i motoneuron alfa */}
+          <ellipse cx="50" cy="79" rx="18" ry="8" fill="#18181b" stroke="#a1a1aa" strokeWidth="0.7" />
+          <line x1="62" y1="78" x2="80" y2="85" stroke="#fafafa" strokeWidth="1.2" />
+          <rect x="78" y="82" width="14" height="6.5" rx="2" fill="#27272a" stroke="#e4e4e7" strokeWidth="0.7" />
+          <text x="85" y="86.3" textAnchor="middle" fill="#fafafa" fontSize="2.3">Mięsień</text>
+        </g>
+      )}
+
+      {/* 29. Spiralna beta-oksydacja kwasów tłuszczowych (Lynen) */}
+      {theme === "beta-oxidation" && (
+        <g>
+          {/* Błona zewnętrzna i CPT-I */}
+          <rect x="8" y="16" width="84" height="70" rx="6" fill="#18181b" stroke="#52525b" strokeWidth="0.8" />
+          <text x="50" y="12" textAnchor="middle" fill="#d4d4d8" fontSize="2.7">Macierz mitochondrium (4 etapy)</text>
+          <rect x="14" y="22" width="22" height="10" rx="2" fill="#27272a" stroke="#e4e4e7" strokeWidth="0.8" />
+          <text x="25" y="28" textAnchor="middle" fill="#fafafa" fontSize="2.6" fontWeight="700">Acylo-CoA</text>
+          <path d="M 36 27 H 56" stroke="#fafafa" strokeWidth="1.1" />
+          <rect x="56" y="22" width="28" height="10" rx="2" fill="#27272a" stroke="#d4d4d8" strokeWidth="0.7" />
+          <text x="70" y="28" textAnchor="middle" fill="#fafafa" fontSize="2.5">Enoilo-CoA + FADH2</text>
+          <path d="M 70 32 V 46" stroke="#e4e4e7" strokeWidth="1.0" />
+          <rect x="54" y="46" width="30" height="10" rx="2" fill="#27272a" stroke="#d4d4d8" strokeWidth="0.7" />
+          <text x="69" y="52" textAnchor="middle" fill="#fafafa" fontSize="2.5">β-ketoacylo-CoA</text>
+          <path d="M 54 51 H 38" stroke="#fafafa" strokeWidth="1.1" />
+          <rect x="14" y="46" width="24" height="10" rx="2" fill="#27272a" stroke="#e4e4e7" strokeWidth="0.7" />
+          <text x="26" y="52" textAnchor="middle" fill="#fafafa" fontSize="2.5">+ NADH + H+</text>
+          {/* Tiolaza i skrót o C2 */}
+          <path d="M 26 56 V 71 H 50" fill="none" stroke="#fafafa" strokeWidth="1.2" />
+          <rect x="46" y="66" width="38" height="12" rx="2.5" fill="#09090b" stroke="#fafafa" strokeWidth="0.9" />
+          <text x="65" y="73" textAnchor="middle" fill="#fafafa" fontSize="2.6" fontWeight="700">Acetylo-CoA (C₂)</text>
+          <text x="65" y="82.5" textAnchor="middle" fill="#a1a1aa" fontSize="2.4">→ Cykl Krebsa</text>
+        </g>
+      )}
+
+      {/* 30. Optyka geometryczna: Prawo Snella i soczewka oka */}
+      {theme === "snell-optics" && (
+        <g>
+          {/* Oś optyczna */}
+          <line x1="8" y1="50" x2="92" y2="50" stroke="#71717a" strokeWidth="0.6" strokeDasharray="2 1.5" />
+          {/* Granica ośrodków n1 / n2 z lewej */}
+          <line x1="30" y1="15" x2="30" y2="85" stroke="#52525b" strokeWidth="0.8" />
+          <line x1="12" y1="30" x2="30" y2="50" stroke="#fafafa" strokeWidth="1.2" />
+          <line x1="30" y1="50" x2="46" y2="62" stroke="#d4d4d8" strokeWidth="1.1" />
+          <text x="14" y="25" fill="#e4e4e7" fontSize="2.6">n₁ sin α₁ = n₂ sin α₂</text>
+          {/* Soczewka skupiająca i ognisko na siatkówce */}
+          <path d="M 58 24 Q 65 50, 58 76 Q 51 50, 58 24 Z" fill="#27272a" stroke="#fafafa" strokeWidth="1.0" />
+          <line x1="42" y1="36" x2="58" y2="36" stroke="#a1a1aa" strokeWidth="0.8" />
+          <line x1="42" y1="64" x2="58" y2="64" stroke="#a1a1aa" strokeWidth="0.8" />
+          <line x1="58" y1="36" x2="84" y2="50" stroke="#fafafa" strokeWidth="1.1" />
+          <line x1="58" y1="64" x2="84" y2="50" stroke="#fafafa" strokeWidth="1.1" />
+          <circle cx="84" cy="50" r="2.2" fill="#fafafa" />
+          <path d="M 85 26 C 90 42, 90 58, 85 74" fill="none" stroke="#d4d4d8" strokeWidth="1.2" />
+          <text x="84" y="81" textAnchor="middle" fill="#d4d4d8" fontSize="2.5">Siatkówka (F)</text>
+        </g>
+      )}
+
+      {/* 31. Kinetyka I rzędu (ODE) i stan stacjonarny C_ss */}
+      {theme === "pharmacokinetics-first-order" && (
+        <g>
+          <line x1="16" y1="16" x2="16" y2="80" stroke="#a1a1aa" strokeWidth="0.9" />
+          <line x1="16" y1="80" x2="88" y2="80" stroke="#a1a1aa" strokeWidth="0.9" />
+          <text x="10" y="22" fill="#d4d4d8" fontSize="2.6">C(t)</text>
+          <text x="82" y="86" fill="#d4d4d8" fontSize="2.6">t</text>
+          {/* Krzywa zaniku C0*exp(-kt) */}
+          <path d="M 16 24 C 24 44, 38 66, 84 78" fill="none" stroke="#fafafa" strokeWidth="1.4" />
+          {/* Okres półtrwania t_1/2 */}
+          <line x1="16" y1="52" x2="36" y2="52" stroke="#71717a" strokeWidth="0.7" strokeDasharray="2 1.5" />
+          <line x1="36" y1="52" x2="36" y2="80" stroke="#71717a" strokeWidth="0.7" strokeDasharray="2 1.5" />
+          <circle cx="36" cy="52" r="2.0" fill="#fafafa" />
+          <text x="38" y="49" fill="#fafafa" fontSize="2.6" fontWeight="700">½ C₀ → t₁/₂ = ln2 / k</text>
+          {/* Asymptota plateau infuzji */}
+          <line x1="16" y1="34" x2="86" y2="34" stroke="#52525b" strokeWidth="0.7" strokeDasharray="2 2" />
+          <text x="68" y="31" fill="#a1a1aa" fontSize="2.5">C_ss (~4–5 t₁/₂)</text>
+        </g>
+      )}
+
+      {/* 32. Kopiec binarny (Min-Heap) i drzewo BST */}
+      {theme === "binary-heap-tree" && (
+        <g>
+          <line x1="50" y1="22" x2="30" y2="44" stroke="#71717a" strokeWidth="1.0" />
+          <line x1="50" y1="22" x2="70" y2="44" stroke="#71717a" strokeWidth="1.0" />
+          <line x1="30" y1="44" x2="20" y2="66" stroke="#52525b" strokeWidth="0.9" />
+          <line x1="30" y1="44" x2="40" y2="66" stroke="#52525b" strokeWidth="0.9" />
+          <line x1="70" y1="44" x2="60" y2="66" stroke="#52525b" strokeWidth="0.9" />
+          <line x1="70" y1="44" x2="80" y2="66" stroke="#52525b" strokeWidth="0.9" />
+          {[
+            [50, 22, "4"],
+            [30, 44, "9"],
+            [70, 44, "12"],
+            [20, 66, "15"],
+            [40, 66, "18"],
+            [60, 66, "21"],
+            [80, 66, "30"],
+          ].map(([nx, ny, val], idx) => (
+            <g key={idx}>
+              <circle cx={Number(nx)} cy={Number(ny)} r="6" fill="#27272a" stroke="#fafafa" strokeWidth="0.9" />
+              <text x={Number(nx)} y={Number(ny) + 1.2} textAnchor="middle" fill="#fafafa" fontSize="3.1" fontWeight="700">{val}</text>
+            </g>
+          ))}
+          <text x="50" y="84" textAnchor="middle" fill="#d4d4d8" fontSize="2.7">Indeksy tablicy: 2i+1, 2i+2 • O(log n)</text>
+        </g>
+      )}
+
       {/* Generic fallback geometric circle */}
       {theme === "generic" && (
         <circle
@@ -1114,20 +1231,20 @@ export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
   return (
     <figure
       aria-label={figure.titlePl}
-      className="my-6 overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950 text-zinc-100 shadow-lg"
+      className="my-6 overflow-hidden rounded-2xl border border-zinc-200 bg-white text-zinc-900 shadow-sm dark:border-zinc-800/80 dark:bg-zinc-950 dark:text-zinc-100 dark:shadow-lg"
     >
       {/* Clean Header */}
-      <div className="border-b border-zinc-800/80 bg-zinc-950 px-4 py-3">
-        <h3 className="text-sm font-bold text-zinc-100">{figure.titlePl}</h3>
+      <div className="border-b border-zinc-200 bg-zinc-50 px-4 py-3 dark:border-zinc-800/80 dark:bg-zinc-950">
+        <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">{figure.titlePl}</h3>
         {figure.titleLat && (
-          <p className="mt-0.5 text-xs italic text-zinc-400">
+          <p className="mt-0.5 text-xs italic text-zinc-500 dark:text-zinc-400">
             {figure.titleLat}
           </p>
         )}
       </div>
 
-      {/* Minimalist Illustration Area */}
-      <div className="bg-zinc-950 p-3">
+      {/* Minimalist Illustration Area — keeps dark vector paper frame so white/zinc strokes stay 100% legible */}
+      <div className="bg-zinc-100 p-3 dark:bg-zinc-950">
         <div
           onClick={() => setLightboxOpen(true)}
           role="button"
@@ -1139,7 +1256,7 @@ export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
             }
           }}
           aria-label={`Powiększ rycinę: ${figure.titlePl}`}
-          className="relative aspect-[16/10] min-h-[260px] w-full cursor-zoom-in overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950"
+          className="relative flex aspect-square sm:aspect-[16/10] min-h-[260px] w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-xl border border-zinc-300 bg-zinc-950 dark:border-zinc-800/80"
         >
           {showImage && figure.imageUrl ? (
             <div className="flex h-full w-full items-center justify-center bg-white">
@@ -1155,47 +1272,47 @@ export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
               />
             </div>
           ) : (
-            <SchematicArtwork
-              theme={figure.svgSchematicSpec?.theme ?? "generic"}
-              markerId={markerId}
-            />
+            <div className="relative mx-auto aspect-square h-full max-w-full">
+              <SchematicArtwork
+                theme={figure.svgSchematicSpec?.theme ?? "generic"}
+                markerId={markerId}
+              />
+              {figure.hotspots.map((hotspot, idx) => (
+                <span
+                  key={hotspot.id}
+                  style={{
+                    left: `${hotspot.x}%`,
+                    top: `${hotspot.y}%`,
+                  }}
+                  className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 flex size-5 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900/90 text-[10px] font-bold text-zinc-100 shadow-md sm:size-6 sm:text-[11px]"
+                >
+                  {idx + 1}
+                </span>
+              ))}
+            </div>
           )}
-
-          {!showImage &&
-            figure.hotspots.map((hotspot, idx) => (
-              <span
-                key={hotspot.id}
-                style={{
-                  left: `${hotspot.x}%`,
-                  top: `${hotspot.y}%`,
-                }}
-                className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 flex size-6 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900/90 text-[11px] font-bold text-zinc-100 shadow-md"
-              >
-                {idx + 1}
-              </span>
-            ))}
         </div>
       </div>
 
       {/* Clean Static 2-Column Numbered Legend */}
       {figure.hotspots.length > 0 && (
-        <div className="grid gap-x-6 gap-y-2 border-t border-zinc-800/80 bg-zinc-950 px-4 py-3.5 sm:grid-cols-2">
+        <div className="grid gap-x-6 gap-y-2 border-t border-zinc-200 bg-white px-4 py-3.5 dark:border-zinc-800/80 dark:bg-zinc-950 sm:grid-cols-2">
           {figure.hotspots.map((hotspot, idx) => (
             <div
               key={hotspot.id}
-              className="text-xs leading-relaxed text-zinc-300"
+              className="text-xs leading-relaxed text-zinc-700 dark:text-zinc-300"
             >
-              <span className="font-semibold text-zinc-100">
+              <span className="font-semibold text-zinc-900 dark:text-zinc-100">
                 {idx + 1}. {hotspot.labelPl}
               </span>
               {hotspot.labelLat && (
-                <span className="italic text-zinc-400">
+                <span className="italic text-zinc-500 dark:text-zinc-400">
                   {" "}
                   ({hotspot.labelLat})
                 </span>
               )}
               {hotspot.description && (
-                <span className="text-zinc-500"> — {hotspot.description}</span>
+                <span className="text-zinc-600 dark:text-zinc-500"> — {hotspot.description}</span>
               )}
             </div>
           ))}
@@ -1203,10 +1320,10 @@ export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
       )}
 
       {/* Caption & Attribution Footer */}
-      <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800/80 bg-zinc-950 px-4 py-2.5 text-[11px] text-zinc-400">
+      <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-200 bg-zinc-50 px-4 py-2.5 text-[11px] text-zinc-600 dark:border-zinc-800/80 dark:bg-zinc-950 dark:text-zinc-400">
         <span>{figure.caption}</span>
         {figure.licenseAttribution && (
-          <span className="rounded bg-zinc-900 px-2 py-0.5 font-mono text-[10px] text-zinc-500">
+          <span className="rounded border border-zinc-200 bg-white px-2 py-0.5 font-mono text-[10px] text-zinc-600 dark:border-transparent dark:bg-zinc-900 dark:text-zinc-500">
             {figure.licenseAttribution}
           </span>
         )}
@@ -1220,23 +1337,23 @@ export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
         onClick={(e) => {
           if (e.target === dialogRef.current) setLightboxOpen(false);
         }}
-        className="m-auto max-h-[92vh] w-[min(92vw,1000px)] overflow-auto rounded-2xl border border-zinc-800 bg-zinc-950 p-4 text-zinc-100 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[92vh] w-[min(92vw,1000px)] overflow-auto rounded-2xl border border-zinc-200 bg-white p-4 text-zinc-900 shadow-2xl backdrop:bg-black/85 backdrop:backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100"
       >
-        <div className="mb-3 flex items-center justify-between gap-2 border-b border-zinc-800 pb-2">
-          <span className="text-sm font-bold text-zinc-100">
+        <div className="mb-3 flex items-center justify-between gap-2 border-b border-zinc-200 pb-2 dark:border-zinc-800">
+          <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
             {figure.titlePl}
           </span>
           <button
             type="button"
             onClick={() => setLightboxOpen(false)}
-            className="focus-ring inline-flex items-center gap-1 rounded-lg border border-zinc-700 bg-zinc-900 px-2.5 py-1 text-xs font-semibold text-zinc-200 hover:bg-zinc-800"
+            className="focus-ring inline-flex items-center gap-1 rounded-lg border border-zinc-300 bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800"
           >
             <X className="size-3.5" aria-hidden="true" />
             Zamknij (Esc)
           </button>
         </div>
 
-        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
+        <div className="relative flex aspect-square sm:aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-xl border border-zinc-300 bg-zinc-950 dark:border-zinc-800">
           {showImage && figure.imageUrl ? (
             <div className="flex h-full w-full items-center justify-center bg-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1250,10 +1367,12 @@ export function TextbookFigureCard({ figure }: TextbookFigureCardProps) {
               />
             </div>
           ) : (
-            <SchematicArtwork
-              theme={figure.svgSchematicSpec?.theme ?? "generic"}
-              markerId={`${markerId}-dialog`}
-            />
+            <div className="relative mx-auto aspect-square h-full max-w-full">
+              <SchematicArtwork
+                theme={figure.svgSchematicSpec?.theme ?? "generic"}
+                markerId={`${markerId}-dialog`}
+              />
+            </div>
           )}
         </div>
       </dialog>

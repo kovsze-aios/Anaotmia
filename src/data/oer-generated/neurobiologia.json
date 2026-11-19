@@ -8,9 +8,18 @@
     "data": {
       "chapterTitle": "Potencjał spoczynkowy błony, równanie Nernsta i generacja potencjału czynnościowego",
       "toc": [
-        { "title": "Gradienty jonowe i równanie Nernsta", "anchorId": "nernst-spoczynkowy" },
-        { "title": "Fazy potencjału czynnościowego (NaV i KV)", "anchorId": "fazy-ap" },
-        { "title": "Refrakcja oraz przewodnictwo skokowe", "anchorId": "refrakcja-mielina" }
+        {
+          "title": "Gradienty jonowe i równanie Nernsta",
+          "anchorId": "nernst-spoczynkowy"
+        },
+        {
+          "title": "Fazy potencjału czynnościowego (NaV i KV)",
+          "anchorId": "fazy-ap"
+        },
+        {
+          "title": "Refrakcja oraz przewodnictwo skokowe",
+          "anchorId": "refrakcja-mielina"
+        }
       ],
       "pages": [
         {
@@ -38,9 +47,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Neurobiologia — Pobudliwość błon",
-        "requirementCodes": ["NEUR-MEM-1", "NEUR-AP-2"],
+        "requirementCodes": [
+          "NEUR-MEM-1",
+          "NEUR-AP-2"
+        ],
         "status": "core"
       }
     }
@@ -54,9 +70,18 @@
     "data": {
       "chapterTitle": "Transmisja synaptyczna, receptory jonotropowe i metabotropowe oraz plastyczność LTP",
       "toc": [
-        { "title": "Egzocytoza pęcherzyków i kompleks SNARE", "anchorId": "egzocytoza-snare" },
-        { "title": "EPSP vs IPSP i sumowanie czasowo-przestrzenne", "anchorId": "epsp-ipsp" },
-        { "title": "Długotrwałe wzmocnienie synaptyczne (LTP)", "anchorId": "plastycznosc-ltp" }
+        {
+          "title": "Egzocytoza pęcherzyków i kompleks SNARE",
+          "anchorId": "egzocytoza-snare"
+        },
+        {
+          "title": "EPSP vs IPSP i sumowanie czasowo-przestrzenne",
+          "anchorId": "epsp-ipsp"
+        },
+        {
+          "title": "Długotrwałe wzmocnienie synaptyczne (LTP)",
+          "anchorId": "plastycznosc-ltp"
+        }
       ],
       "pages": [
         {
@@ -84,9 +109,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Neurobiologia — Synapsy i plastyczność",
-        "requirementCodes": ["NEUR-SYN-1", "NEUR-LTP-2"],
+        "requirementCodes": [
+          "NEUR-SYN-1",
+          "NEUR-LTP-2"
+        ],
         "status": "core"
       }
     }
@@ -100,9 +132,18 @@
     "data": {
       "chapterTitle": "Rdzeń kręgowy, łuki odruchowe (miostatyczny i zginania) oraz główne szlaki nerwowe",
       "toc": [
-        { "title": "Istota szara i prawo Bella–Magendiego", "anchorId": "anatomia-rdzenia" },
-        { "title": "Odruch na rozciąganie i hamowanie recyprokalne", "anchorId": "luk-odruchowy" },
-        { "title": "Drogi czuciowe i ruchowe (piramidowa)", "anchorId": "drogi-nerwowe" }
+        {
+          "title": "Istota szara i prawo Bella–Magendiego",
+          "anchorId": "anatomia-rdzenia"
+        },
+        {
+          "title": "Odruch na rozciąganie i hamowanie recyprokalne",
+          "anchorId": "luk-odruchowy"
+        },
+        {
+          "title": "Drogi czuciowe i ruchowe (piramidowa)",
+          "anchorId": "drogi-nerwowe"
+        }
       ],
       "pages": [
         {
@@ -130,9 +171,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Neurobiologia — Rdzeń i odruchy",
-        "requirementCodes": ["BIO-ODRUCH-1", "NEUR-RDZEN-2"],
+        "requirementCodes": [
+          "BIO-ODRUCH-1",
+          "NEUR-RDZEN-2"
+        ],
         "status": "core"
       }
     }
@@ -146,9 +194,18 @@
     "data": {
       "chapterTitle": "Transdukcja sensoryczna: fototransdukcja w siatkówce, mechanotransdukcja w ślimaku i kora czuciowa",
       "toc": [
-        { "title": "Fototransdukcja — pręciki, czopki i prąd ciemny", "anchorId": "fototransdukcja" },
-        { "title": "Narząd Cortiego i tonotopowa analiza dźwięku", "anchorId": "mechanika-sluchu" },
-        { "title": "Receptory skórne i reprezentacja korowa S1", "anchorId": "somatosensoryka" }
+        {
+          "title": "Fototransdukcja — pręciki, czopki i prąd ciemny",
+          "anchorId": "fototransdukcja"
+        },
+        {
+          "title": "Narząd Cortiego i tonotopowa analiza dźwięku",
+          "anchorId": "mechanika-sluchu"
+        },
+        {
+          "title": "Receptory skórne i reprezentacja korowa S1",
+          "anchorId": "somatosensoryka"
+        }
       ],
       "pages": [
         {
@@ -176,9 +233,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Neurobiologia — Układy zmysłów",
-        "requirementCodes": ["BIO-ZMYS-1", "NEUR-SENS-2"],
+        "requirementCodes": [
+          "BIO-ZMYS-1",
+          "NEUR-SENS-2"
+        ],
         "status": "core"
       }
     }
@@ -192,9 +256,18 @@
     "data": {
       "chapterTitle": "Oś podwzgórze–przysadka–nadnercza (HPA), reakcja stresowa oraz zegar biologiczny (SCN)",
       "toc": [
-        { "title": "Kaskada CRH → ACTH → kortyzol", "anchorId": "kaskada-hpa" },
-        { "title": "Ujemne sprzężenie zwrotne w hipokampie", "anchorId": "sprzezenie-zwrotne" },
-        { "title": "Jądro nadskrzyżowaniowe (SCN) i melatonina", "anchorId": "rytm-dobowy" }
+        {
+          "title": "Kaskada CRH → ACTH → kortyzol",
+          "anchorId": "kaskada-hpa"
+        },
+        {
+          "title": "Ujemne sprzężenie zwrotne w hipokampie",
+          "anchorId": "sprzezenie-zwrotne"
+        },
+        {
+          "title": "Jądro nadskrzyżowaniowe (SCN) i melatonina",
+          "anchorId": "rytm-dobowy"
+        }
       ],
       "pages": [
         {
@@ -222,9 +295,136 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Neurobiologia — Neuroendokrynologia",
-        "requirementCodes": ["NEUR-HPA-1", "BIO-HORM-2"],
+        "requirementCodes": [
+          "NEUR-HPA-1",
+          "BIO-HORM-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-neuro-drogi-piramidowe-i-uklad-pozapiramidowy",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurofizjologia błonowa, potencjały i transmisja synaptyczna",
+    "sourcePdf": "Elementarz anatomiczny. UKŁAD NERWOWY - ryciny i pytania (na końcu) na ich podstawie.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Drogi piramidowe (szlak korowo-rdzeniowy), skrzyżowanie piramid oraz kontrola ruchu w jądrach podstawy i móżdżku",
+      "toc": [
+        {
+          "title": "Górny i dolny motoneuron — organizacja drogi piramidowej",
+          "anchorId": "droga-piramidowa"
+        },
+        {
+          "title": "Skrzyżowanie piramid w rdzeniu przedłużonym",
+          "anchorId": "skrzyzowanie-piramid"
+        },
+        {
+          "title": "Jądra podstawy, móżdżek i zespoły uszkodzenia",
+          "anchorId": "uklad-pozapiramidowy"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"droga-piramidowa\">Szlak korowo-rdzeniowy (droga piramidowa) — precyzja ruchu dowolnego</h2><p>Dowolny, precyzyjny ruch mięśni dłoni i kończyn inicjują olbrzymie komórki piramidowe Betza w pierwotnej korze ruchowej (<strong>zakręt przedśrodkowy płata czołowego</strong>, M1). Ich długie aksony tworzą <strong>górny neuron ruchowy</strong>, biegnący przez odnogę tylną torebki wewnętrznej oraz konary mózgu i most ku pniu mózgu.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"skrzyzowanie-piramid\">Skrzyżowanie piramid i szlak korowo-rdzeniowy boczny</h2><p>W dolnej części rdzenia przedłużonego około 80–90% włókien przekracza linię pośrodkową w obrębie <strong>skrzyżowania piramid (decussatio pyramidum)</strong> i zstępuje w sznurach bocznych rdzenia kręgowego jako droga korowo-rdzeniowa boczna do przeciwległej strony ciała. Pozostałe 10–20% biegnie nieskrzyżowanie sznurem przednim (krzyżuje się dopiero segmentalnie na poziomie spoidła białego), sterując mięśniami osiowymi tułowia.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"uklad-pozapiramidowy\">Klinika uszkodzeń: neuron ośrodkowy vs obwodowy oraz jądra podstawy</h2><p>Uszkodzenie <strong>górnego motoneuronu</strong> (np. udar torebki wewnętrznej) wywołuje przeciwstronny niedowład spastyczny, wygórowanie odruchów głębokich i objaw Babińskiego, natomiast uszkodzenie <strong>dolnego motoneuronu &alpha;</strong> daje porażenie wiotkie z zanikiem mięśni i zniesieniem odruchów. Jądra podstawy (prążkowie, gałka blada, istota czarna) selekcjonują programy ruchowe, a móżdżek na bieżąco koryguje równowagę i koordynację.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego udar krwotoczny w lewej torebce wewnętrznej powoduje spastyczny niedowład prawej ręki i prawej nogi?",
+          "answer": "Ponieważ włókna drogi korowo-rdzeniowej opuszczające lewą korę ruchową ulegają skrzyżowaniu dopiero niżej, w skrzyżowaniu piramid rdzenia przedłużonego — uszkodzenie powyżej skrzyżowania daje objawy po przeciwległej (kontrlateralnej) stronie ciała."
+        },
+        {
+          "question": "Jak odróżnić w badaniu neurologicznym uszkodzenie górnego (ośrodkowego) neuronu ruchowego od dolnego (obwodowego)?",
+          "answer": "Uszkodzenie górnego motoneuronu daje wzmożone napięcie mięśni (spastyczność), wygórowane odruchy ścięgniste i patologiczny objaw Babińskiego bez szybkiego zaniku; uszkodzenie dolnego motoneuronu powoduje wiotkość, zanik mięśni i zniesienie odruchów."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Neuroanatomia — Drogi ruchowe OUN",
+        "requirementCodes": [
+          "NEUR-MOT-1",
+          "ANAT-CNS-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-neuro-uklad-limbiczny-emocje-sen-i-fale-eeg",
+    "domainId": "neurobiologia-komorkowa-i-synaptyczna",
+    "domainTitle": "Neurofizjologia błonowa, potencjały i transmisja synaptyczna",
+    "sourcePdf": "OpenStax_PL_Psychologia_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Układ limbiczny (hipokamp i ciało migdałowate), architektura snu NREM/REM oraz rytmy EEG",
+      "toc": [
+        {
+          "title": "Hipokamp w konsolidacji pamięci i ciało migdałowate w emocjach",
+          "anchorId": "uklad-limbiczny"
+        },
+        {
+          "title": "Fale mózgowe EEG: alfa, beta, theta i delta",
+          "anchorId": "fale-eeg"
+        },
+        {
+          "title": "Cykle snu NREM i faza paradoksalna REM",
+          "anchorId": "sen-nrem-rem"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"uklad-limbiczny\">Funkcjonalna anatomia układu limbicznego</h2><p><strong>Układ limbiczny</strong> reguluje pamięć, napęd, lęk i reakcje autonomiczne. <strong>Hipokamp</strong> nie jest magazynem trwałych wspomnień, lecz konwerterem przenoszącym świeżą pamięć deklaratywną do długotrwałych sieci korowych (jego obustronne uszkodzenie wywołuje głęboką amnezję następczą przy zachowanej pamięci proceduralnej).</p><p><strong>Ciało migdałowate (amygdala)</strong> ocenia zagrożenie i uruchamia emocjonalną odpowiedź lękową poprzez projekcje do podwzgórza i pnia mózgu.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"fale-eeg\">Elektroencefalografia i rytmy bioelektryczne mózgu</h2><p>Zapis <strong>EEG</strong> rejestruje sumaryczne postsynaptyczne potencjały korowych neuronów piramidowych: szybkie niesynchroniczne fale <strong>beta (13–30 Hz)</strong> towarzyszą czuwaniu i skupieniu, fale <strong>alfa (8–12 Hz)</strong> pojawiają się przy zamkniętych oczach w relaksie, <strong>theta (4–7 Hz)</strong> dominują w lekkim śnie, a wysokonapięciowe wolne fale <strong>delta (&lt;4 Hz)</strong> charakteryzują najgłębszy sen wolnofalowy (N3).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"sen-nrem-rem\">Architektura snu i rola fazy REM</h2><p>Zdrowy sen przebiega w ~90-minutowych cyklach łączących sen głęboki <strong>NREM</strong> (regeneracja somatyczna, sekrecja hormonu wzrostu, układ glimfatyczny) z fazą <strong>REM</strong> (szybkie ruchy gałek ocznych, marzenia senne, intensywna aktywność cholinergiczna kory przypominająca czuwanie połączona z pniową atonią mięśniową).</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego pacjenci po wycięciu obu hipokampów potrafią nauczyć się nowej sprawności manualnej, choć nie pamiętają samego faktu odbycia treningu?",
+          "answer": "Hipokamp jest niezbędny do konsolidacji pamięci deklaratywnej (epizodycznej i faktów), natomiast pamięć proceduralna (nawyki ruchowe) jest kodowana niezależnie w jądrach podstawy oraz móżdżku."
+        },
+        {
+          "question": "Jaką funkcję pełni atonia mięśni szkieletowych podczas fazy snu REM?",
+          "answer": "Hamowanie motoneuronów rdzenia kręgowego przez jądra mostu i rdzenia przedłużonego zapobiega fizycznemu odgrywaniu marzeń sennych mimo bardzo wysokiej aktywności kory ruchowej."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Neurobiologia — Układ limbiczny i sen",
+        "requirementCodes": [
+          "NEUR-LIMB-1",
+          "NEUR-EEG-2"
+        ],
         "status": "core"
       }
     }

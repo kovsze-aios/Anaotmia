@@ -58,7 +58,7 @@ export function CourseDetailView({ course }: { course: SportNotesCourse }) {
   };
 
   return (
-    <div className="l-container py-10">
+    <div className="l-container pb-10 pt-[max(2.25rem,calc(env(safe-area-inset-top)+1rem))]">
       {/* Breadcrumb Bar */}
       <nav aria-label="Okruszki" className="pb-4 text-sm">
         <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">

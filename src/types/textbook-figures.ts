@@ -50,6 +50,11 @@ export type SvgSchematicTheme =
   | "acid-base-titration"
   | "inclined-plane-projectile"
   | "rlc-electromagnetic-induction"
+  | "corticospinal-tract"
+  | "beta-oxidation"
+  | "snell-optics"
+  | "pharmacokinetics-first-order"
+  | "binary-heap-tree"
   | "generic";
 
 export interface TextbookFigure {

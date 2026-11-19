@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function MaturaPage() {
   return (
-    <div className="l-container py-10">
+    <div className="l-container pb-10 pt-[max(2.25rem,calc(env(safe-area-inset-top)+1rem))]">
       {/* Top Global Navigation Strip */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 pb-3 dark:border-zinc-800">
         <div className="flex flex-wrap items-center gap-2 text-xs font-medium">
@@ -43,13 +43,13 @@ export default function MaturaPage() {
         <div className="flex flex-wrap items-center gap-2 text-xs">
           <Link
             href="/matura/biologia"
-            className="focus-ring rounded-lg border border-emerald-800/50 bg-emerald-950/30 px-2.5 py-1 text-emerald-700 transition-colors hover:bg-emerald-950/50 dark:text-emerald-300"
+            className="focus-ring rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
             📝 Arkusze Biologia (1:1)
           </Link>
           <Link
             href="/matura/chemia"
-            className="focus-ring rounded-lg border border-sky-800/50 bg-sky-950/30 px-2.5 py-1 text-sky-700 transition-colors hover:bg-sky-950/50 dark:text-sky-300"
+            className="focus-ring rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
             🧪 Arkusze Chemia (1:1)
           </Link>
@@ -152,7 +152,7 @@ export default function MaturaPage() {
           <span className="matura-card__icon">📝</span>
           <h3 className="matura-card__title">Arkusze CKE — Biologia</h3>
           <p className="matura-card__desc">
-            Kompletne 60-punktowe arkusze CKE (2023–2024) oraz roczniki 2015–2022: oryginalne ryciny PNG, interaktywne tabele P/F, widok Split-View 1:1 oraz 4-etapowy player klucza CKE.
+            Kompletne 60-punktowe arkusze CKE (2023–2024) oraz roczniki 2015–2022: oryginalne strony arkuszy (WebP), interaktywne tabele P/F, podgląd 1:1 oraz 4-etapowy klucz CKE.
           </p>
           <span className="matura-card__cta">Przejdź do arkuszy 1:1 →</span>
         </Link>

@@ -8,9 +8,18 @@
     "data": {
       "chapterTitle": "Farmakokinetyka ADME: wchłanianie, jonizacja pKa, cytochrom CYP450 i objętość dystrybucji",
       "toc": [
-        { "title": "Dyfuzja bierna i równanie Hendersona–Hasselbalcha", "anchorId": "jonizacja-pka" },
-        { "title": "Efekt pierwszego przejścia i objętość dystrybucji Vd", "anchorId": "dystrybucja-vd" },
-        { "title": "Faza I i II biotransformacji (CYP450) oraz wydalanie", "anchorId": "metabolizm-cyp" }
+        {
+          "title": "Dyfuzja bierna i równanie Hendersona–Hasselbalcha",
+          "anchorId": "jonizacja-pka"
+        },
+        {
+          "title": "Efekt pierwszego przejścia i objętość dystrybucji Vd",
+          "anchorId": "dystrybucja-vd"
+        },
+        {
+          "title": "Faza I i II biotransformacji (CYP450) oraz wydalanie",
+          "anchorId": "metabolizm-cyp"
+        }
       ],
       "pages": [
         {
@@ -38,9 +47,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Farmakologia — Farmakokinetyka ADME",
-        "requirementCodes": ["FARM-ADME-1", "FARM-CYP-2"],
+        "requirementCodes": [
+          "FARM-ADME-1",
+          "FARM-CYP-2"
+        ],
         "status": "core"
       }
     }
@@ -54,9 +70,18 @@
     "data": {
       "chapterTitle": "Kinetyka eliminacji I i 0 rzędu, okres półtrwania t₁/₂ oraz stan stacjonarny (Css)",
       "toc": [
-        { "title": "Eliminacja I rzędu vs kinetyka nasycalna (0 rzędu)", "anchorId": "rzedowosc-kinetyki" },
-        { "title": "Okres półtrwania, dawka podtrzymująca i wysycająca", "anchorId": "dawkowanie-css" },
-        { "title": "Wskaźnik terapeutyczny (TI) i pole pod krzywą AUC", "anchorId": "indeks-terapeutyczny" }
+        {
+          "title": "Eliminacja I rzędu vs kinetyka nasycalna (0 rzędu)",
+          "anchorId": "rzedowosc-kinetyki"
+        },
+        {
+          "title": "Okres półtrwania, dawka podtrzymująca i wysycająca",
+          "anchorId": "dawkowanie-css"
+        },
+        {
+          "title": "Wskaźnik terapeutyczny (TI) i pole pod krzywą AUC",
+          "anchorId": "indeks-terapeutyczny"
+        }
       ],
       "pages": [
         {
@@ -84,9 +109,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Farmakologia — Kinetyka eliminacji",
-        "requirementCodes": ["FARM-KIN-1", "FARM-CSS-2"],
+        "requirementCodes": [
+          "FARM-KIN-1",
+          "FARM-CSS-2"
+        ],
         "status": "core"
       }
     }
@@ -100,9 +132,18 @@
     "data": {
       "chapterTitle": "Farmakodynamika: krzywe dawka–odpowiedź, siła (EC₅₀) vs skuteczność (Emax) oraz antagonizm",
       "toc": [
-        { "title": "Siła działania EC₅₀ vs skuteczność maksymalna Eₘₐₓ", "anchorId": "ec50-emax" },
-        { "title": "Agonista pełny, częściowy oraz odwrotny", "anchorId": "rodzaje-agonistow" },
-        { "title": "Antagonizm kompetycyjny vs niekompetycyjny", "anchorId": "antagonizm" }
+        {
+          "title": "Siła działania EC₅₀ vs skuteczność maksymalna Eₘₐₓ",
+          "anchorId": "ec50-emax"
+        },
+        {
+          "title": "Agonista pełny, częściowy oraz odwrotny",
+          "anchorId": "rodzaje-agonistow"
+        },
+        {
+          "title": "Antagonizm kompetycyjny vs niekompetycyjny",
+          "anchorId": "antagonizm"
+        }
       ],
       "pages": [
         {
@@ -130,9 +171,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Farmakologia — Farmakodynamika",
-        "requirementCodes": ["FARM-DYN-1", "FARM-REC-2"],
+        "requirementCodes": [
+          "FARM-DYN-1",
+          "FARM-REC-2"
+        ],
         "status": "core"
       }
     }
@@ -146,9 +194,18 @@
     "data": {
       "chapterTitle": "Farmakologia autonomicznego układu nerwowego: receptory M₁–M₃, α i β oraz sympatyko- i parasympatykolityki",
       "toc": [
-        { "title": "Cholinomimetyki i antycholinergiki (atropina)", "anchorId": "uklad-cholinergiczny" },
-        { "title": "Katecholaminy i selektywność receptorów α₁, α₂, β₁, β₂", "anchorId": "uklad-adrenergiczny" },
-        { "title": "Kliniczne zastosowanie β-blokerów i α-blokerów", "anchorId": "blokery-autonomiczne" }
+        {
+          "title": "Cholinomimetyki i antycholinergiki (atropina)",
+          "anchorId": "uklad-cholinergiczny"
+        },
+        {
+          "title": "Katecholaminy i selektywność receptorów α₁, α₂, β₁, β₂",
+          "anchorId": "uklad-adrenergiczny"
+        },
+        {
+          "title": "Kliniczne zastosowanie β-blokerów i α-blokerów",
+          "anchorId": "blokery-autonomiczne"
+        }
       ],
       "pages": [
         {
@@ -176,9 +233,16 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Farmakologia — Układ autonomiczny",
-        "requirementCodes": ["FARM-AUN-1", "FARM-ADR-2"],
+        "requirementCodes": [
+          "FARM-AUN-1",
+          "FARM-ADR-2"
+        ],
         "status": "core"
       }
     }
@@ -192,9 +256,18 @@
     "data": {
       "chapterTitle": "Leki przeciwzapalne i przeciwbólowe: szlak COX-1/COX-2 (NLPZ), glikokortykosteroidy oraz opioidy",
       "toc": [
-        { "title": "Szlak kwasu arachidonowego i izoenzymy COX", "anchorId": "szlak-cox" },
-        { "title": "Aspiryna, paracetamol i blokada fosfolipazy A₂", "anchorId": "nlpz-gks" },
-        { "title": "Receptory opioidowe μ i antidotum nalokson", "anchorId": "opioidy-nalokson" }
+        {
+          "title": "Szlak kwasu arachidonowego i izoenzymy COX",
+          "anchorId": "szlak-cox"
+        },
+        {
+          "title": "Aspiryna, paracetamol i blokada fosfolipazy A₂",
+          "anchorId": "nlpz-gks"
+        },
+        {
+          "title": "Receptory opioidowe μ i antidotum nalokson",
+          "anchorId": "opioidy-nalokson"
+        }
       ],
       "pages": [
         {
@@ -222,9 +295,136 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Farmakologia — Leki przeciwzapalne i opioidy",
-        "requirementCodes": ["FARM-NLPZ-1", "FARM-OPI-2"],
+        "requirementCodes": [
+          "FARM-NLPZ-1",
+          "FARM-OPI-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-farm-antybiotyki-mechanizmy-dzialania-i-opornosc",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka (LADME) i farmakodynamika receptorowa",
+    "sourcePdf": "OpenStax_Pharmacology_for_Nurses_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Farmakologia przeciwbakteryjna: antybiotyki β-laktamowe, hamujące syntezę białek, chinolony i lekooporność",
+      "toc": [
+        {
+          "title": "β-laktamy (penicyliny, cefalosporyny) i wankomycyna",
+          "anchorId": "antybiotyki-sciana"
+        },
+        {
+          "title": "Inhibitory rybosomu 30S/50S oraz gyrazy DNA",
+          "anchorId": "antybiotyki-rybosom"
+        },
+        {
+          "title": "Mechanizmy oporności bakteryjnej (ESBL, MRSA, pompy)",
+          "anchorId": "mechanizmy-opornosci"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"antybiotyki-sciana\">Antybiotyki hamujące syntezę ściany komórkowej</h2><p>Selektywna toksyczność <strong>&beta;-laktamów</strong> (penicyliny, cefalosporyny, karbapenemy) wynika z faktu, że komórki ludzkie nie posiadają peptydoglikanu. Antybiotyki te wiążą białka <strong>PBP (transpeptydazy)</strong>, blokując sieciowanie mureiny i wywołując lizę osmotyczną bakterii (działanie bakteriobójcze w fazie wzrostu).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"antybiotyki-rybosom\">Selektywne cele wewnątrzkomórkowe (rybosomy 70S i topoizomerazy)</h2><p>Różnice między rybosomem bakteryjnym <strong>70S (30S+50S)</strong> a ludzkim 80S umożliwiają działanie antybiotyków hamujących translację: tetracykliny i aminoglikozydy wiążą podjednostkę 30S, natomiast makrolidy (azytromycyna) i klindamycyna blokują 50S. <strong>Fluorochinolony</strong> (cyprofloksacyna) hamują bakteryjną gyrazę DNA (topoizomerazę II).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"mechanizmy-opornosci\">Cztery główne strategie oporności drobnoustrojów</h2><ul><li><strong>Enzymatyczna hydroliza:</strong> &beta;-laktamazy (w tym ESBL) rozcinają pierścień &beta;-laktamowy (stąd kojarzenie amoksycyliny z kwasem klawulanowym).</li><li><strong>Modyfikacja miejsca docelowego:</strong> zmienione białko PBP2a w gronkowcu <strong>MRSA</strong> uodparnia go na większość &beta;-laktamów.</li><li><strong>Pompy wyrzutowe (efflux pumps)</strong> i utrata poryn w ścianie Gram-ujemnej.</li></ul>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Dlaczego do amoksycyliny dodaje się kwas klawulanowy?",
+          "answer": "Kwas klawulanowy jest nieodwracalnym inhibitorem bakteryjnych β-laktamaz ('inhibitorem samobójczym'): sam ma minimalne działanie przeciwbakteryjne, lecz chroni pierścień β-laktamowy amoksycyliny przed enzymatycznym rozkładem."
+        },
+        {
+          "question": "Dlaczego antybiotyków bakteriostatycznych hamujących syntezę białek zwykle nie łączy się bezrefleksyjnie z bakteriobójczymi β-laktamami przy jednym wskazaniu?",
+          "answer": "β-laktamy wymagają aktywnego podziału i syntezy ściany komórkowej bakterii do wywołania lizy; zahamowanie wzrostu przez lek bakteriostatyczny zmniejsza odsetek dzielących się komórek i może osłabiać bakteriobójczość."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Farmakologia kliniczna — Chemioterapia zakażeń",
+        "requirementCodes": [
+          "FARM-ABX-1",
+          "MICRO-RES-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-farm-interakcje-lekow-i-monitoring-terapeutyczny",
+    "domainId": "farmakologia-kinetyka-i-dynamika",
+    "domainTitle": "Farmakokinetyka (LADME) i farmakodynamika receptorowa",
+    "sourcePdf": "Principles_of_Pharmacology_Rosow_CC-BY-NC-SA.pdf",
+    "processingMode": "CONCEPT_SYNTHESIS",
+    "data": {
+      "chapterTitle": "Stan stacjonarny C_ss, dawka nasycająca oraz kliniczne interakcje leków na poziomie CYP450",
+      "toc": [
+        {
+          "title": "Stan stacjonarny (steady state) po 4–5 okresach półtrwania",
+          "anchorId": "stan-stacjonarny"
+        },
+        {
+          "title": "Dawka nasycająca vs dawka podtrzymująca",
+          "anchorId": "dawka-nasycajaca"
+        },
+        {
+          "title": "Inhibitory i induktory enzymatyczne CYP450",
+          "anchorId": "interakcje-cyp450"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"stan-stacjonarny\">Kinetyka wielokrotnego dawkowania i czas osiągnięcia C<sub>ss</sub></h2><p>W kinetyce liniowej I rzędu szybkość eliminacji jest wprost proporcjonalna do stężenia leku. Przy regularnym podawaniu stałej dawki co okres &tau;, stężenie we krwi rośnie aż szybkość eliminacji zrówna się z szybkością podawania — jest to <strong>stan stacjonarny (C<sub>ss</sub>)</strong>. Czas dojścia do 90–97% C<sub>ss</sub> zależy wyłącznie od biologicznego okresu półtrwania leku i wynosi zawsze <strong>4 do 5 okresów t<sub>1/2</sub></strong> (niezależnie od wielkości dawki).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"dawka-nasycajaca\">Dawka nasycająca i objętość dystrybucji V<sub>d</sub></h2><p>Gdy t<sub>1/2</sub> leku jest bardzo długi (np. amiodaron, digoksyna), czekanie 5 okresów półtrwania trwałoby dni lub tygodnie. W stanach nagłych stosuje się <strong>dawkę nasycającą</strong> (zależną głównie od objętości dystrybucji: <code>D<sub>nas</sub> &approx; C<sub>cel</sub> &middot; V<sub>d</sub> / F</code>), by natychmiast wypełnić kompartment tkankowy, a następnie utrzymuje się stężenie <strong>dawką podtrzymującą</strong> równoważną klirensowi (<em>CL</em>).</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"interakcje-cyp450\">Interakcje lekowe: indukcja vs inhibicja CYP450</h2><p>Silne <strong>inhibitory CYP3A4</strong> (np. klarytromycyna, sok grejpfrutowy, azole) gwałtownie i niemal natychmiast podnoszą stężenie leków towarzyszących aż do toksyczności. Z kolei <strong>induktory</strong> (np. ryfampicyna, karbamazepina, ziele dziurawca) wzmagają transkrypcję genów CYP w ciągu dni–tygodni, przyspieszając klirens antykoncepcji czy warfaryny i prowadząc do utraty skuteczności leczenia.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Od jakiego jedynego parametru farmakokinetycznego zależy czas potrzebny do osiągnięcia stanu stacjonarnego (C_ss) podczas podawania stałej dawki doustnej w kinetyce I rzędu?",
+          "answer": "Wyłącznie od okresu półtrwania eliminacji (t_1/2) — po 4–5 okresach półtrwania układ osiąga 94–97% stanu stacjonarnego niezależnie od wysokości zastosowanej dawki."
+        },
+        {
+          "question": "Jak zmienia się dawka nasycająca oraz podtrzymująca u pacjenta z ciężką niewydolnością nerek dla leku wydalanego nerkowo?",
+          "answer": "Dawka nasycająca pozostaje zazwyczaj niezmieniona (zależy od objętości dystrybucji V_d), natomiast dawkę podtrzymującą trzeba zmniejszyć lub wydłużyć odstęp dawkowania proporcjonalnie do spadku klirensu (CL)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "academic-extra",
+        "formulas": [
+          "academic"
+        ],
+        "sectionCode": "Farmakokinetyka kliniczna — Stężenie stacjonarne i CYP450",
+        "requirementCodes": [
+          "FARM-PK-SS",
+          "FARM-INT-2"
+        ],
         "status": "core"
       }
     }

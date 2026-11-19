@@ -1,0 +1,509 @@
+[
+  {
+    "id": "fig-neuro-droga-piramidowa",
+    "subject": "neurobiologia",
+    "chapterIds": [
+      "oer-neuro-drogi-piramidowe-i-uklad-pozapiramidowy",
+      "oer-neuro-rdzen-kregowy-luki-odruchowe-i-drogi"
+    ],
+    "titlePl": "Droga piramidowa (szlak korowo-rdzeniowy) i skrzyżowanie piramid",
+    "titleLat": "Tractus corticospinalis et decussatio pyramidum",
+    "caption": "Przebieg górnego neuronu ruchowego z kory M1 przez torebkę wewnętrzną, skrzyżowanie piramid rdzenia przedłużonego aż do synapsy z dolnym motoneuronem α.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "corticospinal-tract",
+      "elementsSummary": "Kora ruchowa M1, torebka wewnętrzna, rdzeń przedłużony ze skrzyżowaniem piramid oraz rogi przednie rdzenia kręgowego."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room Synthesis na podstawie neuroanatomii klinicznej)",
+    "hotspots": [
+      {
+        "id": "hs-pyr-kora",
+        "labelPl": "Pierwotna kora ruchowa (M1, komórki Betza)",
+        "labelLat": "Gyrus praecentralis",
+        "x": 38,
+        "y": 24,
+        "description": "Somatotopowa mapa ruchowa (homunkulus ruchowy) inicjująca dowolne ruchy precyzyjne kończyn.",
+        "clinicalNote": "Udar w zakresie tętnicy środkowej mózgu uszkadza korę odpowiadającą za twarz i kończynę górną po stronie przeciwnej."
+      },
+      {
+        "id": "hs-pyr-torebka",
+        "labelPl": "Odnoga tylna torebki wewnętrznej",
+        "labelLat": "Capsula interna",
+        "x": 50,
+        "y": 39,
+        "description": "Wąskie pasmo istoty białej skupiające aksony drogi korowo-rdzeniowej; nawet niewielkie krwawienie daje tu głęboki niedowład połowiczy.",
+        "clinicalNote": "Najczęstsza lokalizacja udarów lakunarnych."
+      },
+      {
+        "id": "hs-pyr-skrzyz",
+        "labelPl": "Skrzyżowanie piramid w rdzeniu przedłużonym",
+        "labelLat": "Decussatio pyramidum",
+        "x": 50,
+        "y": 56,
+        "description": "Miejsce przejścia ok. 85% włókien na stronę przeciwległą (szlak korowo-rdzeniowy boczny).",
+        "clinicalNote": "Wyjaśnia, dlaczego prawa półkula mózgu kontroluje lewą rękę."
+      },
+      {
+        "id": "hs-pyr-motoneuron",
+        "labelPl": "Dolny motoneuron α w rogu przednim rdzenia",
+        "labelLat": "Cornu anterius medullae spinalis",
+        "x": 62,
+        "y": 78,
+        "description": "Drugi neuron łańcucha przekazujący pobudzenie acetylocholiną bezpośrednio do włókien mięśni szkieletowych.",
+        "clinicalNote": "Uszkodzenie daje porażenie wiotkie i zniesienie odruchów głębokich."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Inicjacja impulsu w korze ruchowej M1",
+        "explanationHtml": "<p>Olbrzymie neurony piramidowe kory M1 generują salwę potencjałów czynnościowych schodzących do torebki wewnętrznej.</p>",
+        "activeHotspotIds": [
+          "hs-pyr-kora",
+          "hs-pyr-torebka"
+        ],
+        "flowArrow": [
+          38,
+          24,
+          50,
+          39
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Kontrlateralne przejście w skrzyżowaniu piramid",
+        "explanationHtml": "<p>Większość włókien krzyżuje się na granicy rdzenia przedłużonego i kręgowego, przechodząc na stronę przeciwną.</p>",
+        "activeHotspotIds": [
+          "hs-pyr-skrzyz"
+        ],
+        "flowArrow": [
+          38,
+          44,
+          56,
+          60
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Pobudzenie dolnego motoneuronu α i mięśnia",
+        "explanationHtml": "<p>Synapsa z motoneuronem α w rogu przednim wyzwala skurcz mięśnia szkieletowego po przeciwnej stronie ciała.</p>",
+        "activeHotspotIds": [
+          "hs-pyr-motoneuron"
+        ],
+        "flowArrow": [
+          62,
+          78,
+          80,
+          85
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fig-biochem-beta-oksydacja",
+    "subject": "biochemia",
+    "chapterIds": [
+      "oer-biochem-beta-oksydacja-kwasow-tluszczowych-i-ketogeneza",
+      "oer-biochem-synteza-kwasow-tluszczowych-i-lipoproteiny"
+    ],
+    "titlePl": "Spirala β-oksydacji kwasów tłuszczowych (szlak Lynena) w macierzy mitochondrium",
+    "titleLat": "Beta-oxidatio acidorum pinguium",
+    "caption": "Cztery powtarzalne etapy skracania łańcucha acylo-CoA o dwuwęglowy acetylo-CoA wraz z wytwarzaniem FADH₂ oraz NADH + H⁺.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "beta-oxidation",
+      "elementsSummary": "Cykl czterech reakcji (dehydrogenacja FAD, uwodnienie, dehydrogenacja NAD+, tioliza z CoA-SH) generujący acetylo-CoA."
+    },
+    "licenseAttribution": "Schemat wektorowy SportNotes (Clean-Room Synthesis na podstawie enzymologii mitochondrialnej)",
+    "hotspots": [
+      {
+        "id": "hs-beta-acylo",
+        "labelPl": "Acylo-CoA i pierwsza dehydrogenacja (FAD → FADH₂)",
+        "labelLat": "Acylo-CoA dehydrogenase",
+        "x": 25,
+        "y": 27,
+        "description": "Dehydrogenaza acylo-CoA wprowadza wiązanie podwójne w pozycji α-β, redukując koenzym FAD do FADH₂ przekazywanego później na kompleks II.",
+        "clinicalNote": "Niedobór MCAD upośledza ten etap podczas głodzenia u niemowląt."
+      },
+      {
+        "id": "hs-beta-enoilo",
+        "labelPl": "Uwodnienie trans-enoilo-CoA",
+        "labelLat": "Enoyl-CoA hydratase",
+        "x": 70,
+        "y": 27,
+        "description": "Hydrataza przyłącza cząsteczkę wody do wiązania podwójnego, tworząc L-3-hydroksyacylo-CoA.",
+        "clinicalNote": "Stereospecyficzna reakcja wymaga izomeru trans."
+      },
+      {
+        "id": "hs-beta-nad",
+        "labelPl": "Utlenianie z NAD⁺ → NADH + H⁺",
+        "labelLat": "3-hydroxyacyl-CoA dehydrogenase",
+        "x": 26,
+        "y": 51,
+        "description": "Grupa hydroksylowa zostaje utleniona do ketonu (β-ketoacylo-CoA), co dostarcza 1 cząsteczki NADH dla kompleksu I.",
+        "clinicalNote": "Wysoki stosunek NADH/NAD+ hamuje ten krok."
+      },
+      {
+        "id": "hs-beta-tioliza",
+        "labelPl": "Rozszczepienie tiolityczne → Acetylo-CoA (C₂)",
+        "labelLat": "Thiolase (β-ketothiolase)",
+        "x": 65,
+        "y": 72,
+        "description": "Tiolaza przy pomocy CoA-SH odszczepia dwuwęglowy acetylo-CoA gotowy do wejścia do cyklu Krebsa lub ketogenezy, pozostawiając skrócony o 2C acylo-CoA.",
+        "clinicalNote": "Kwas palmitynowy (C16) przechodzi 7 cykli dając 8 cząsteczek acetylo-CoA."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Wytworzenie FADH₂ przez dehydrogenazę acylo-CoA",
+        "explanationHtml": "<p>Acylo-CoA po transporcie przez mostek karnitynowy CPT-1 oddaje 2 elektrony na FAD.</p>",
+        "activeHotspotIds": [
+          "hs-beta-acylo"
+        ],
+        "flowArrow": [
+          25,
+          27,
+          56,
+          27
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Uwodnienie i utlenienie grupy β z redukcją NAD⁺",
+        "explanationHtml": "<p>Po przyłączeniu H₂O grupa hydroksylowa w pozycji β zostaje utleniona do ketonu kosztem NAD⁺ → NADH.</p>",
+        "activeHotspotIds": [
+          "hs-beta-enoilo",
+          "hs-beta-nad"
+        ],
+        "flowArrow": [
+          70,
+          46,
+          38,
+          51
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Tioliza i odłączenie Acetylo-CoA",
+        "explanationHtml": "<p>Tiolaza odcina fragment <strong>acetylo-CoA (C₂)</strong> do cyklu Krebsa, a skrócony łańcuch wraca do kolejnego obrotu spirali.</p>",
+        "activeHotspotIds": [
+          "hs-beta-tioliza"
+        ],
+        "flowArrow": [
+          26,
+          56,
+          65,
+          72
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fig-fiz-optyka-snell",
+    "subject": "fizyka",
+    "chapterIds": [
+      "oer-fizy-optyka-geometryczna-falowa-i-fizyka-oka",
+      "oer-fizy-optyka-falowa-dyfrakcja-polaryzacja-i-rozdzielczosc"
+    ],
+    "titlePl": "Prawo Snella i ogniskowanie światła na siatkówce oka",
+    "titleLat": "Lex Snellii et refractio ocularis",
+    "caption": "Załamanie promienia na granicy ośrodków o różnych współczynnikach załamania n₁/n₂ oraz skupienie wiązki przez soczewkę oczną.",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "snell-optics",
+      "elementsSummary": "Granica ośrodków z załamaniem Snella oraz soczewka skupiająca kierująca wiązki równoległe na siatkówkę."
+    },
+    "licenseAttribution": "Opracowano na podstawie zasobów OpenStax Fizyka dla szkół wyższych Tom 3 (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-snell-granica",
+        "labelPl": "Załamanie na granicy n₁ / n₂ (Prawo Snella)",
+        "labelLat": "n₁ sin α₁ = n₂ sin α₂",
+        "x": 30,
+        "y": 50,
+        "description": "Zmiana prędkości fazowej światła przy wejściu do ośrodka o wyższym n₂ załamuje promień ku normalnej.",
+        "clinicalNote": "Największa moc łamiąca oka przypada na granicę powietrze–rogówka (~43 D), a nie samą soczewkę."
+      },
+      {
+        "id": "hs-snell-soczewka",
+        "labelPl": "Soczewka skupiająca i akomodacja",
+        "labelLat": "Lens cristallina",
+        "x": 58,
+        "y": 50,
+        "description": "Zmiana krzywizny soczewki przez mięsień rzęskowy precyzyjnie reguluje zdolność skupiającą przy patrzeniu z bliska.",
+        "clinicalNote": "Utrata elastyczności soczewki z wiekiem powoduje prezbiopię."
+      },
+      {
+        "id": "hs-snell-ognisko",
+        "labelPl": "Ognisko rzeczywiste w plamce żółtej",
+        "labelLat": "Macula lutea (F)",
+        "x": 84,
+        "y": 50,
+        "description": "Promienie równoległe przecinają się dokładnie w płaszczyźnie siatkówki, dając odwrócony, pomniejszony obraz rzeczywisty.",
+        "clinicalNote": "W krótkowzroczności ognisko powstaje przed siatkówką i wymaga soczewek rozpraszających (−)."
+      },
+      {
+        "id": "hs-snell-siatkowka",
+        "labelPl": "Siatkówka z fotoreceptorami (czopki i pręciki)",
+        "labelLat": "Retina",
+        "x": 88,
+        "y": 35,
+        "description": "Warstwa neurosensoryczna przekształcająca energię kwantów światła w impulsację nerwu wzrokowego (II).",
+        "clinicalNote": "Zdolność rozdzielcza zależy od średnicy źrenicy i długości fali wg kryterium Rayleigha."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Załamanie promienia zgodnie z prawem Snella",
+        "explanationHtml": "<p>Wiązka przekracza granicę ośrodków spełniając równanie <code>n₁·sin α₁ = n₂·sin α₂</code>.</p>",
+        "activeHotspotIds": [
+          "hs-snell-granica"
+        ],
+        "flowArrow": [
+          12,
+          30,
+          30,
+          50
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Załamanie przez soczewkę skupiającą",
+        "explanationHtml": "<p>Soczewka skupiająca kieruje promienie równoległe zbieżnie do osi optycznej.</p>",
+        "activeHotspotIds": [
+          "hs-snell-soczewka"
+        ],
+        "flowArrow": [
+          44,
+          36,
+          58,
+          36
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Ogniskowanie ostrego obrazu na siatkówce",
+        "explanationHtml": "<p>Prawidłowo dopasowana moc optyczna skupia promienie dokładnie na siatkówce.</p>",
+        "activeHotspotIds": [
+          "hs-snell-ognisko",
+          "hs-snell-siatkowka"
+        ],
+        "flowArrow": [
+          58,
+          36,
+          84,
+          50
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fig-farm-kinetyka-i-rzad",
+    "subject": "matematyka",
+    "chapterIds": [
+      "mat-pochodna-i-dynamika-wzrostu",
+      "oer-mat-rownania-rozniczkowe-w-dynamice-populacji",
+      "oer-farm-kinetyka-pierwszego-i-zerowego-rzedu-auc",
+      "oer-farm-interakcje-lekow-i-monitoring-terapeutyczny"
+    ],
+    "titlePl": "Model wykładniczy I rzędu: biologiczny okres półtrwania t₁/₂ i stan stacjonarny C_ss",
+    "titleLat": "Cinetica ordinis primi",
+    "caption": "Rozwiązanie równania różniczkowego dC/dt = −k·C wyznaczające t₁/₂ = ln(2)/k oraz czas osiągnięcia stężenia stacjonarnego (~4–5 t₁/₂).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "pharmacokinetics-first-order",
+      "elementsSummary": "Krzywa rozpadu wykładniczego C(t), punkt połowicznej eliminacji t_1/2 oraz asymptota plateau stanu stacjonarnego C_ss."
+    },
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Równania różniczkowe zwyczajne (Licencja CC BY-SA 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-pk-c0",
+        "labelPl": "Stężenie początkowe C₀ i nachylenie −k·C",
+        "labelLat": "t = 0",
+        "x": 16,
+        "y": 24,
+        "description": "Maksymalna szybkość eliminacji występuje zaraz po podaniu i maleje proporcjonalnie do stężenia.",
+        "clinicalNote": "Stały ułamek leku znika z osocza w każdej jednostce czasu."
+      },
+      {
+        "id": "hs-pk-thalf",
+        "labelPl": "Okres półtrwania t₁/₂ = ln(2) / k",
+        "labelLat": "C(t₁/₂) = 0,5 C₀",
+        "x": 36,
+        "y": 52,
+        "description": "Czas potrzebny do spadku stężenia dokładnie o 50% pozostaje stały niezależnie od podanej dawki.",
+        "clinicalNote": "Wyznacza interwał między kolejnymi dawkami podtrzymującymi."
+      },
+      {
+        "id": "hs-pk-css",
+        "labelPl": "Plateau stężenia stacjonarnego C_ss",
+        "labelLat": "Steady state (4–5 t₁/₂)",
+        "x": 70,
+        "y": 34,
+        "description": "Równowaga między szybkością podawania a szybkością wydalania (94–97% plateau po 4–5 okresach t₁/₂).",
+        "clinicalNote": "W stanach nagłych omija się ten okres oczekiwania podając dawkę nasycającą."
+      },
+      {
+        "id": "hs-pk-washout",
+        "labelPl": "Całkowita eliminacja (> 97% po 5 t₁/₂)",
+        "labelLat": "Eliminatio",
+        "x": 84,
+        "y": 78,
+        "description": "Asymptotyczne zbliżanie stężenia do zera: po 5 t₁/₂ pozostaje zaledwie 3,125% dawki początkowej.",
+        "clinicalNote": "Kluczowe przy planowaniu przerw między lekami (wash-out)."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Równanie dC/dt = −k·C w punkcie startowym",
+        "explanationHtml": "<p>Od stężenia początkowego <strong>C₀</strong> ubytek następuje wykładniczo według wzoru <code>C(t) = C₀·e<sup>−kt</sup></code>.</p>",
+        "activeHotspotIds": [
+          "hs-pk-c0"
+        ],
+        "flowArrow": [
+          16,
+          24,
+          24,
+          38
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Stały okres półtrwania t₁/₂ = 0,693 / k",
+        "explanationHtml": "<p>W każdym przedziale czasu <strong>t₁/₂</strong> stężenie w osoczu obniża się dokładnie o połowę.</p>",
+        "activeHotspotIds": [
+          "hs-pk-thalf"
+        ],
+        "flowArrow": [
+          16,
+          52,
+          36,
+          52
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Osiągnięcie plateau C_ss po 4–5 okresach t₁/₂",
+        "explanationHtml": "<p>Zarówno wysycanie do stanu <strong>C_ss</strong>, jak i całkowite wypłukanie leku wymagają 4–5 t₁/₂.</p>",
+        "activeHotspotIds": [
+          "hs-pk-css",
+          "hs-pk-washout"
+        ],
+        "flowArrow": [
+          36,
+          52,
+          84,
+          78
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fig-inf-kopiec-binarny",
+    "subject": "informatyka",
+    "chapterIds": [
+      "oer-inf-kopce-binarne-kolejki-priorytetowe-i-heapsort",
+      "oer-inf-drzewa-binarne-grafy-i-algorytmy-sciezek"
+    ],
+    "titlePl": "Struktura kopca binarnego (Min-Heap) i indeksowanie w tablicy ciągłej",
+    "titleLat": "Cumulus binarius",
+    "caption": "Drzewo kompletne z minimalnym kluczem w korzeniu (indeks 0), gdzie dzieci leżą pod 2i+1 i 2i+2, gwarantujące operacje kolejki priorytetowej w O(log n).",
+    "renderMode": "cleanroom-svg-schematic",
+    "svgSchematicSpec": {
+      "viewBox": "0 0 100 100",
+      "theme": "binary-heap-tree",
+      "elementsSummary": "Kompletne drzewo Min-Heap (korzeń 4, dzieci 9/12, liście 15/18/21/30) ze wzorami indeksowania tablicowego."
+    },
+    "licenseAttribution": "Opracowano na podstawie zasobów Open Data Structures — Pat Morin (Licencja CC BY 4.0)",
+    "hotspots": [
+      {
+        "id": "hs-heap-root",
+        "labelPl": "Korzeń kopca (minimum = 4, indeks 0)",
+        "labelLat": "min() → O(1)",
+        "x": 50,
+        "y": 22,
+        "description": "Wartość minimalna zawsze spoczywa w korzeniu (indeks 0), co pozwala na natychmiastowy podgląd najmniejszego elementu w czasie stałym.",
+        "clinicalNote": "Podstawa harmonogramów czasu rzeczywistego i algorytmu Dijkstry."
+      },
+      {
+        "id": "hs-heap-left",
+        "labelPl": "Lewe dziecko (indeks 2i + 1 = 1)",
+        "labelLat": "parent(1) = 0",
+        "x": 30,
+        "y": 44,
+        "description": "Klucz rodzica (4) pozostaje ≤ od klucza dziecka (9). Brak wskaźników lewy/prawy oszczędza połowę pamięci RAM.",
+        "clinicalNote": "Własność niezmiennika kopca dotyczy relacji pionowej, nie poziomej między rodzeństwem."
+      },
+      {
+        "id": "hs-heap-right",
+        "labelPl": "Prawe dziecko (indeks 2i + 2 = 2)",
+        "labelLat": "parent(2) = 0",
+        "x": 70,
+        "y": 44,
+        "description": "Każdy podkopiec spełnia rekurencyjnie warunek kopca; wysokość zbalansowanego drzewa kompletnego wynosi ⌊log₂ n⌋.",
+        "clinicalNote": "Liczba porównań przy wstawieniu nigdy nie przekracza log₂ n."
+      },
+      {
+        "id": "hs-heap-leaf",
+        "labelPl": "Poziom liści i przesiewanie sift-up / sift-down",
+        "labelLat": "O(log n)",
+        "x": 40,
+        "y": 66,
+        "description": "Nowy element trafia na koniec tablicy (poziom liści) i wspina się zamieniając z większym rodzicem aż do przywrócenia porządku.",
+        "clinicalNote": "Algorytm Floyda buduje cały kopiec w czasie O(n)."
+      }
+    ],
+    "animationSteps": [
+      {
+        "stepNumber": 1,
+        "title": "Krok 1: Stały czas odczytu minimum O(1) z korzenia",
+        "explanationHtml": "<p>Minimum struktury jest zawsze gwarantowane w elemencie o indeksie <code>0</code>.</p>",
+        "activeHotspotIds": [
+          "hs-heap-root"
+        ],
+        "flowArrow": [
+          50,
+          22,
+          50,
+          22
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Krok 2: Relacja rodzic–dziecko i indeksowanie tablicowe",
+        "explanationHtml": "<p>Dostęp do dzieci węzła <code>i</code> jest czystą arytmetyką indeksów <code>2i+1</code> oraz <code>2i+2</code> bez żadnych wskaźników.</p>",
+        "activeHotspotIds": [
+          "hs-heap-left",
+          "hs-heap-right"
+        ],
+        "flowArrow": [
+          50,
+          22,
+          30,
+          44
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Krok 3: Przywracanie niezmiennika kopca w O(log n)",
+        "explanationHtml": "<p>Podczas <code>pop()</code> element z liści schodzi jedną ścieżką w dół o długości <code>O(log n)</code>.</p>",
+        "activeHotspotIds": [
+          "hs-heap-leaf"
+        ],
+        "flowArrow": [
+          50,
+          22,
+          40,
+          66
+        ]
+      }
+    ]
+  }
+]

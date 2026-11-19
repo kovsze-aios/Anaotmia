@@ -81,10 +81,8 @@ export const viewport = {
 // wrong theme and dark-mode users don't get a light flash on reload.
 const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}})();`;
 
-// Corrects `<html lang>` before paint. The shell's *text* is still English
-// until hydration — only a dynamic render could fix that, and it would cost us
-// static generation — but the language attribute itself is right immediately,
-// which is what assistive tech and translation tooling read.
+// Corrects `<html lang>` before paint if the visitor picked another language,
+// defaulting to Polish (`pl`).
 const localeInitScript = `(function(){try{var l=localStorage.getItem("locale");if(l&&["en","pl","de","fr","it","es"].indexOf(l)>-1){document.documentElement.lang=l}}catch(e){}})();`;
 
 export default function RootLayout({
@@ -94,7 +92,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pl"
       suppressHydrationWarning
       className={`${plutoSansLight.variable} ${plutoSansRegular.variable} ${plutoSansMedium.variable} ${plutoLightItalic.variable} ${caveatHandwriting.variable}`}
     >

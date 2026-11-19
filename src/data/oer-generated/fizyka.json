@@ -10,9 +10,18 @@
     "data": {
       "chapterTitle": "Wprowadzenie do fizyki opartej na rachunku różniczkowym i całkowym – adaptacja OER",
       "toc": [
-        { "title": "Metoda aktywnego uczenia się w fizyce", "anchorId": "dlaczego-napisano-ksiazke" },
-        { "title": "Zasady analizy zadań czytelniczych", "anchorId": "wymagania-czytelnicze" },
-        { "title": "Zasady zachowania przed kinematyką", "anchorId": "konflikt-czytelnictwo-uczenie" }
+        {
+          "title": "Metoda aktywnego uczenia się w fizyce",
+          "anchorId": "dlaczego-napisano-ksiazke"
+        },
+        {
+          "title": "Zasady analizy zadań czytelniczych",
+          "anchorId": "wymagania-czytelnicze"
+        },
+        {
+          "title": "Zasady zachowania przed kinematyką",
+          "anchorId": "konflikt-czytelnictwo-uczenie"
+        }
       ],
       "pages": [
         {
@@ -40,9 +49,15 @@
       ],
       "ckeMetadata": {
         "tier": "academic-extra",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Fizyka i Biofizyka (OER) – Mechanika klasyczna",
-        "requirementCodes": ["OER-1"],
+        "requirementCodes": [
+          "OER-1"
+        ],
         "status": "core"
       }
     }
@@ -57,9 +72,18 @@
     "data": {
       "chapterTitle": "Kinematyka wektorowa, rzut ukośny oraz rozkład sił na równi pochyłej",
       "toc": [
-        { "title": "Zasada niezależności ruchów w rzucie ukośnym", "anchorId": "rzut-ukosny" },
-        { "title": "Rozkład sił na równi pochyłej z tarciem", "anchorId": "rownia-pochyla" },
-        { "title": "Zastosowanie w biomechanice stawów i kręgosłupa", "anchorId": "biomechanika-sil" }
+        {
+          "title": "Zasada niezależności ruchów w rzucie ukośnym",
+          "anchorId": "rzut-ukosny"
+        },
+        {
+          "title": "Rozkład sił na równi pochyłej z tarciem",
+          "anchorId": "rownia-pochyla"
+        },
+        {
+          "title": "Zastosowanie w biomechanice stawów i kręgosłupa",
+          "anchorId": "biomechanika-sil"
+        }
       ],
       "pages": [
         {
@@ -87,9 +111,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Fizyka — Kinematyka i dynamika bryły (Open AGH / OpenStax Tom 1)",
-        "requirementCodes": ["FIZ-KIN-1", "FIZ-DYN-2"],
+        "requirementCodes": [
+          "FIZ-KIN-1",
+          "FIZ-DYN-2"
+        ],
         "status": "core"
       }
     }
@@ -104,9 +135,18 @@
     "data": {
       "chapterTitle": "Drgania harmoniczne, fale mechaniczne, efekt Dopplera i ultrasonografia (USG)",
       "toc": [
-        { "title": "Oscylator harmoniczny prosty i rezonans", "anchorId": "oscylator-harmoniczny" },
-        { "title": "Fale akustyczne i natężenie dźwięku (decybele)", "anchorId": "akustyka-i-usg" },
-        { "title": "Efekt Dopplera w pomiarze przepływu krwi", "anchorId": "doppler-medyczny" }
+        {
+          "title": "Oscylator harmoniczny prosty i rezonans",
+          "anchorId": "oscylator-harmoniczny"
+        },
+        {
+          "title": "Fale akustyczne i natężenie dźwięku (decybele)",
+          "anchorId": "akustyka-i-usg"
+        },
+        {
+          "title": "Efekt Dopplera w pomiarze przepływu krwi",
+          "anchorId": "doppler-medyczny"
+        }
       ],
       "pages": [
         {
@@ -134,9 +174,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Fizyka — Ruch drgający i akustyka (OpenStax Tom 1)",
-        "requirementCodes": ["FIZ-DRG-1", "FIZ-FAL-2"],
+        "requirementCodes": [
+          "FIZ-DRG-1",
+          "FIZ-FAL-2"
+        ],
         "status": "core"
       }
     }
@@ -151,9 +198,18 @@
     "data": {
       "chapterTitle": "Pole elektryczne, prawo Coulomba, kondensator i model elektryczny błony komórkowej",
       "toc": [
-        { "title": "Prawo Coulomba, natężenie i potencjał pola", "anchorId": "pole-elektryczne" },
-        { "title": "Pojemność kondensatora i stała czasowa RC", "anchorId": "kondensator-rc" },
-        { "title": "Dwuwarstwa lipidowa jako kondensator biofizyczny", "anchorId": "blona-jako-kondensator" }
+        {
+          "title": "Prawo Coulomba, natężenie i potencjał pola",
+          "anchorId": "pole-elektryczne"
+        },
+        {
+          "title": "Pojemność kondensatora i stała czasowa RC",
+          "anchorId": "kondensator-rc"
+        },
+        {
+          "title": "Dwuwarstwa lipidowa jako kondensator biofizyczny",
+          "anchorId": "blona-jako-kondensator"
+        }
       ],
       "pages": [
         {
@@ -181,9 +237,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Fizyka — Elektrostatyka i bioelektryczność (Open AGH)",
-        "requirementCodes": ["FIZ-EL-1", "FIZ-OBW-2"],
+        "requirementCodes": [
+          "FIZ-EL-1",
+          "FIZ-OBW-2"
+        ],
         "status": "core"
       }
     }
@@ -198,9 +261,18 @@
     "data": {
       "chapterTitle": "Indukcja elektromagnetyczna Faradaya, prawo Lenza oraz obwody prądu przemiennego RLC",
       "toc": [
-        { "title": "Strumień magnetyczny i prawo indukcji Faradaya", "anchorId": "indukcja-faradaya" },
-        { "title": "Reguła Lenza i prądy wirowe", "anchorId": "regula-lenza" },
-        { "title": "Impedancja i rezonans w obwodzie RLC", "anchorId": "rezonans-rlc" }
+        {
+          "title": "Strumień magnetyczny i prawo indukcji Faradaya",
+          "anchorId": "indukcja-faradaya"
+        },
+        {
+          "title": "Reguła Lenza i prądy wirowe",
+          "anchorId": "regula-lenza"
+        },
+        {
+          "title": "Impedancja i rezonans w obwodzie RLC",
+          "anchorId": "rezonans-rlc"
+        }
       ],
       "pages": [
         {
@@ -228,9 +300,16 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Fizyka — Indukcja i prąd przemienny (Open AGH)",
-        "requirementCodes": ["FIZ-MAG-2", "FIZ-IND-1"],
+        "requirementCodes": [
+          "FIZ-MAG-2",
+          "FIZ-IND-1"
+        ],
         "status": "core"
       }
     }
@@ -245,9 +324,18 @@
     "data": {
       "chapterTitle": "Optyka geometryczna i falowa: równanie soczewki, zdolność skupiająca i fizyka oka ludzkiego",
       "toc": [
-        { "title": "Prawo Snella, równanie soczewki i powiększenie", "anchorId": "rownanie-soczewki" },
-        { "title": "Optyka narządu wzroku — krótkowzroczność i nadwzroczność", "anchorId": "optyka-oka" },
-        { "title": "Dyfrakcja na szczelinie i granica rozdzielczości mikroskopu", "anchorId": "dyfrakcja-mikroskop" }
+        {
+          "title": "Prawo Snella, równanie soczewki i powiększenie",
+          "anchorId": "rownanie-soczewki"
+        },
+        {
+          "title": "Optyka narządu wzroku — krótkowzroczność i nadwzroczność",
+          "anchorId": "optyka-oka"
+        },
+        {
+          "title": "Dyfrakcja na szczelinie i granica rozdzielczości mikroskopu",
+          "anchorId": "dyfrakcja-mikroskop"
+        }
       ],
       "pages": [
         {
@@ -275,9 +363,142 @@
       ],
       "ckeMetadata": {
         "tier": "cke-core",
-        "formulas": ["2015", "2023", "academic"],
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
         "sectionCode": "Fizyka — Optyka geometryczna i falowa (OpenStax Tom 3)",
-        "requirementCodes": ["FIZ-OPT-1", "FIZ-FAL-3"],
+        "requirementCodes": [
+          "FIZ-OPT-1",
+          "FIZ-FAL-3"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-efekt-fotoelektryczny-promieniowanie-x-i-lasery",
+    "domainId": "fizyka-elektromagnetyzm-i-obrazowanie",
+    "domainTitle": "Elektromagnetyzm, optyka i fizyka obrazowania medycznego",
+    "sourcePdf": "OpenAGH_Elementy_Fizyki_Wspolczesnej_PL_CC-BY-SA.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów Open AGH — Elementy fizyki współczesnej (Licencja CC BY-SA 4.0)",
+    "data": {
+      "chapterTitle": "Zjawisko fotoelektryczne Einsteina, dualizm korpuskularno-falowy de Broglie'a i kwanty promieniowania X",
+      "toc": [
+        {
+          "title": "Równanie Einsteina dla efektu fotoelektrycznego",
+          "anchorId": "efekt-fotoelektryczny"
+        },
+        {
+          "title": "Fale materii de Broglie'a i mikroskopia elektronowa",
+          "anchorId": "de-broglie-tem"
+        },
+        {
+          "title": "Odwrócony efekt fotoelektryczny w lampie rentgenowskiej",
+          "anchorId": "lampy-rtg-widmo"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"efekt-fotoelektryczny\">Kwantowa natura światła w zjawisku fotoelektrycznym</h2><p>Fala elektromagnetyczna przenosi energię w dyskretnych porcjach — fotonach o energii <code>E = h&nu; = hc/&lambda;</code>. Aby wybić elektron z powierzchni metalu o pracy wyjścia <em>W</em>, pojedynczy foton musi przekazać energię co najmniej równą <em>W</em> (<code>&nu; &ge; &nu;<sub>gr</sub></code>).</p><p>Nadwyżka energii fotonu zamienia się w maksymalną energię kinetyczną fotoelektronu: <code>h&nu; = W + E<sub>k,max</sub></code>, gdzie <code>E<sub>k,max</sub> = eU<sub>h</sub></code> (U<sub>h</sub> to napięcie hamowania). Zwiększenie natężenia światła przy stałej barwie podwaja liczbę wybijanych elektronów na sekundę (fotoprąd nasycenia), nie zmieniając jednak maksymalnej energii pojedynczego elektronu.</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"de-broglie-tem\">Długość fali de Broglie'a a zdolność rozdzielcza mikroskopów</h2><p>Louis de Broglie wykazał, że każdej cząstce obdarzonej pędem <em>p</em> odpowiada długość fali materii <code>&lambda; = h / p</code>. Przyspieszając elektrony napięciem kilkudziesięciu kilowoltów w mikroskopie elektronowym (TEM/SEM), uzyskuje się długość fali rzędu pikometrów — wielokrotnie krótszą od światła widzialnego, co znosi dyfrakcyjny limit mikroskopii optycznej.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"lampy-rtg-widmo\">Widmo ciągłe hamowania i linie charakterystyczne X</h2><p>W lampie rentgenowskiej elektrony o energii kinetycznej <code>eU</code> hamujące gwałtownie w polu jąder anody wolframowej emitują ciągłe widmo hamowania o ostrym obcięciu krótkofalowym <code>&lambda;<sub>min</sub> = hc/(eU)</code> oraz ostre piki promieniowania charakterystycznego przy przeskokach elektronów między powłokami K, L i M.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak zmieni się maksymalna energia kinetyczna fotoelektronów, jeśli zwiększymy dwukrotnie natężenie wiązki światła monochromatycznego o tej samej długości fali?",
+          "answer": "Nie zmieni się — E_k,max = hc/λ − W zależy wyłącznie od częstotliwości (długości fali) pojedynczego fotonu oraz pracy wyjścia metalu; wzrost natężenia zwiększa jedynie liczbę fotoelektronów emitowanych w jednostce czasu."
+        },
+        {
+          "question": "Co decyduje o granicznej najkrótszej długości fali λ_min promieniowania rentgenowskiego w lampie TK?",
+          "answer": "Napięcie przyspieszające U między katodą a anodą (λ_min = hc / eU): powstaje wtedy, gdy cała energia kinetyczna elektronu zostanie w jednym zderzeniu zamieniona na jeden foton X."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
+        "sectionCode": "Fizyka współczesna — Fotonika i fizyka jądrowa (Open AGH CC BY-SA 4.0)",
+        "requirementCodes": [
+          "FIZ-CKE-KWANT",
+          "MED-IMG-2"
+        ],
+        "status": "core"
+      }
+    }
+  },
+  {
+    "id": "oer-fizy-optyka-falowa-dyfrakcja-polaryzacja-i-rozdzielczosc",
+    "domainId": "fizyka-elektromagnetyzm-i-obrazowanie",
+    "domainTitle": "Elektromagnetyzm, optyka i fizyka obrazowania medycznego",
+    "sourcePdf": "OpenStax_PL_Fizyka_dla_szkol_wyzszych_Tom_3.pdf",
+    "processingMode": "DIRECT_ADAPTATION",
+    "licenseAttribution": "Opracowano na podstawie zasobów OpenStax Fizyka dla szkół wyższych Tom 3 (Licencja CC BY 4.0)",
+    "data": {
+      "chapterTitle": "Optyka falowa: interferencja, siatka dyfrakcyjna, polaryzacja oraz kryterium Rayleigha w diagnostyce",
+      "toc": [
+        {
+          "title": "Doświadczenie Younga i siatka dyfrakcyjna",
+          "anchorId": "interferencja-dyfrakcja"
+        },
+        {
+          "title": "Kryterium Rayleigha i granica dyfrakcyjna oka",
+          "anchorId": "kryterium-rayleigha"
+        },
+        {
+          "title": "Polaryzacja światła, prawo Malusa i aktywność optyczna",
+          "anchorId": "polaryzacja-malus"
+        }
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "htmlContent": "<h2 id=\"interferencja-dyfrakcja\">Spójna interferencja i równanie siatki dyfrakcyjnej</h2><p>Wzmocnienie interferencyjne fal spójnych następuje wtedy, gdy różnica dróg optycznych jest całkowitą wielokrotnością długości fali (<code>&Delta;r = k&lambda;</code>). Dla siatki dyfrakcyjnej o stałej <em>d</em> kierunki maksimów głównych spełniają równanie <code>d&middot;sin&theta; = k&lambda;</code> — fale dłuższe (czerwone) uginają się pod większym kątem niż fale krótsze (fioletowe).</p>"
+        },
+        {
+          "pageNumber": 2,
+          "htmlContent": "<h2 id=\"kryterium-rayleigha\">Zdolność rozdzielcza i kryterium Rayleigha</h2><p>Ze względu na dyfrakcję na okrągłej aperturze (źrenicy oka lub obiektywie mikroskopu o średnicy <em>D</em>) obraz punktu jest rozmytym krążkiem Airy'ego. Dwa bliskie obiekty dają się rozróżnić jako oddzielne, gdy minimalny kąt wynosi <code>&theta;<sub>min</sub> &approx; 1,22&middot;&lambda;/D</code>. Stosowanie krótszej fali (np. UV/laser niebieski) lub immersji o wysokim współczynniku załamania istotnie poprawia rozdzielczość mikroskopów.</p>"
+        },
+        {
+          "pageNumber": 3,
+          "htmlContent": "<h2 id=\"polaryzacja-malus\">Polaryzacja poprzecznych fal świetlnych i polarymetria cukrów</h2><p>Zjawisko polaryzacji dowodzi poprzecznej natury fal elektromagnetycznych. Natężenie światła spolaryzowanego liniowo po przejściu przez analizator opisuje prawo Malusa: <code>I = I<sub>0</sub>&middot;cos<sup>2</sup>&theta;</code>. W chemii biomedycznej skręcanie płaszczyzny polaryzacji przez roztwory chiralnych cukrów i aminokwasów pozwala oznaczać stężenie optycznie czynnych izomerów D/L.</p>"
+        }
+      ],
+      "chapterQuiz": [
+        {
+          "question": "Jak zmienia się kąt odchylenia pierwszego rzędu na siatce dyfrakcyjnej przy zamianie lasera zielonego (532 nm) na czerwony (650 nm)?",
+          "answer": "Kąt odchylenia θ wzrośnie, ponieważ sin θ = λ / d rośnie proporcjonalnie do długości fali światła λ przy stałej stałej siatki d."
+        },
+        {
+          "question": "Dlaczego polaryzacja jest możliwa dla światła widzialnego, a nie występuje dla fali dźwiękowej w powietrzu?",
+          "answer": "Światło jest falą poprzeczną (drgania pola E są prostopadłe do kierunku rozchodzenia), natomiast dźwięk w powietrzu to fala podłużna (drgania cząsteczek zachodzą wyłącznie równolegle do kierunku propagacji)."
+        }
+      ],
+      "ckeMetadata": {
+        "tier": "cke-core",
+        "formulas": [
+          "2015",
+          "2023",
+          "academic"
+        ],
+        "sectionCode": "Fizyka — Optyka falowa (OpenStax Tom 3 CC BY 4.0)",
+        "requirementCodes": [
+          "FIZ-CKE-FAL",
+          "FIZ-OPT-2"
+        ],
         "status": "core"
       }
     }

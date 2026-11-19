@@ -199,7 +199,7 @@ function MaturaSubjectViewInner({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <Link
               href="/"
-              className="focus-ring inline-flex items-center gap-1 rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-xs font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+              className="focus-ring inline-flex items-center gap-1 rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
               title="Wróć na stronę główną platformy"
             >
               <Home className="size-3.5" aria-hidden="true" />
@@ -207,7 +207,7 @@ function MaturaSubjectViewInner({
             </Link>
             <Link
               href="/matura"
-              className="focus-ring rounded-md border border-zinc-800 bg-zinc-900/70 px-2 py-1 text-xs text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+              className="focus-ring rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/70 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
             >
               ← Matura
             </Link>
@@ -234,8 +234,8 @@ function MaturaSubjectViewInner({
                   <span
                     className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-mono ${
                       entry.kind === "cke-sheet"
-                        ? "border border-zinc-700 bg-zinc-800 text-zinc-200"
-                        : "border border-zinc-800 bg-zinc-900 text-zinc-400"
+                        ? "border border-zinc-300 bg-zinc-100 text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"
+                        : "border border-zinc-200 bg-white text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400"
                     }`}
                   >
                     {entry.badge}
@@ -295,16 +295,16 @@ function MaturaSubjectViewInner({
             </div>
           ) : null}
 
-          <div className="flex flex-col gap-1.5 border-t border-zinc-800/80 pt-3">
+          <div className="flex flex-col gap-1.5 border-t border-zinc-200 pt-3 dark:border-zinc-800/80">
             <Link
               href={`/theory/${subjectKey}-matura-2023`}
-              className="focus-ring rounded-md border border-zinc-800 bg-zinc-900/60 px-2.5 py-1.5 text-xs text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+              className="focus-ring rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
             >
               📘 Podręcznik {subjectName} 2023+
             </Link>
             <Link
               href="/atlas"
-              className="focus-ring rounded-md border border-zinc-800 bg-zinc-900/60 px-2.5 py-1.5 text-xs text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+              className="focus-ring rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
             >
               🫀 Interaktywny Atlas 3D Pro
             </Link>

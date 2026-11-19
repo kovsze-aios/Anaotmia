@@ -101,7 +101,7 @@ export function ChapterNav({
                   }`}
                   onClick={() => onSectionSelect(domain.id, section.id)}
                 >
-                  <span className="truncate text-left">{section.title}</span>
+                  <span className="text-left leading-snug break-words">{section.title}</span>
                 </button>
               ))}
             </div>
@@ -110,20 +110,20 @@ export function ChapterNav({
       ))}
 
       {isMaturaSubject && maturaLandingPath && (
-        <div className="mt-4 border-t border-zinc-800 px-3 pt-4">
-          <p className="pb-2 text-[11px] font-semibold uppercase tracking-widest text-zinc-400">
+        <div className="mt-4 border-t border-zinc-200 px-3 pt-4 dark:border-zinc-800">
+          <p className="pb-2 text-[11px] font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
             Matura
           </p>
           <div className="flex flex-col gap-1">
             <Link
               href={`${maturaLandingPath}?formula=2023#sekcja-matura`}
-              className="rounded-md px-2 py-1.5 text-xs text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+              className="rounded-md px-2 py-1.5 text-xs text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-ring dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
             >
               Formuła 2023+ (2015+)
             </Link>
             <Link
               href={`${maturaLandingPath}?formula=2015#sekcja-matura`}
-              className="rounded-md px-2 py-1.5 text-xs text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-zinc-100 focus-ring"
+              className="rounded-md px-2 py-1.5 text-xs text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-ring dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
             >
               Formuła 2015
             </Link>

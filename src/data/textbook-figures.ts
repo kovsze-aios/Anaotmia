@@ -3,6 +3,7 @@ import anatomiaFiguresJson from "./oer-generated/textbook-figures-anatomia.json"
 import fizjologiaFiguresJson from "./oer-generated/textbook-figures-fizjologia.json";
 import biologiaFiguresJson from "./oer-generated/textbook-figures-biologia.json";
 import chemiaFiguresJson from "./oer-generated/textbook-figures-chemia.json";
+import oerFiguresJson from "./oer-generated/textbook-figures-oer.json";
 
 export const ANATOMIA_TEXTBOOK_FIGURES: TextbookFigure[] =
   anatomiaFiguresJson as TextbookFigure[];
@@ -16,18 +17,23 @@ export const BIOLOGIA_TEXTBOOK_FIGURES: TextbookFigure[] =
 export const CHEMIA_TEXTBOOK_FIGURES: TextbookFigure[] =
   chemiaFiguresJson as TextbookFigure[];
 
+export const OER_TEXTBOOK_FIGURES: TextbookFigure[] =
+  oerFiguresJson as TextbookFigure[];
+
 export const ALL_TEXTBOOK_FIGURES: TextbookFigure[] = [
   ...ANATOMIA_TEXTBOOK_FIGURES,
   ...FIZJOLOGIA_TEXTBOOK_FIGURES,
   ...BIOLOGIA_TEXTBOOK_FIGURES,
   ...CHEMIA_TEXTBOOK_FIGURES,
+  ...OER_TEXTBOOK_FIGURES,
 ];
 
 type FigureSubjectScope =
   | "bioAnatPhysio"
   | "chemBiochem"
   | "bioChemBoth"
-  | "physics";
+  | "physics"
+  | "mathCS";
 
 const FIGURE_KEYWORD_RULES: Array<{
   figureId: string;
@@ -386,6 +392,59 @@ const FIGURE_KEYWORD_RULES: Array<{
       "lenz",
     ],
   },
+  {
+    figureId: "fig-neuro-droga-piramidowa",
+    scope: "bioAnatPhysio",
+    keywords: [
+      "droga piramidowa",
+      "drogi-piramidowe",
+      "skrzyzowanie-piramid",
+      "korowo-rdzeniow",
+    ],
+  },
+  {
+    figureId: "fig-biochem-beta-oksydacja",
+    scope: "chemBiochem",
+    keywords: [
+      "beta-oksydacj",
+      "β-oksydacj",
+      "lynen",
+      "karnitynow",
+      "ketogenez",
+    ],
+  },
+  {
+    figureId: "fig-fiz-optyka-snell",
+    scope: "physics",
+    keywords: [
+      "snell",
+      "optyka-geometryczna",
+      "optyka-falowa",
+      "fizyka-oka",
+      "rayleigh",
+    ],
+  },
+  {
+    figureId: "fig-farm-kinetyka-i-rzad",
+    scope: "mathCS",
+    keywords: [
+      "kinetyka",
+      "okres poltrwania",
+      "stan stacjonarny",
+      "c_ss",
+      "rownania-rozniczkowe",
+    ],
+  },
+  {
+    figureId: "fig-inf-kopiec-binarny",
+    scope: "mathCS",
+    keywords: [
+      "kopiec",
+      "kopce-binarne",
+      "heapsort",
+      "kolejki-priorytetowe",
+    ],
+  },
 ];
 
 export function getFigureById(id: string): TextbookFigure | undefined {
@@ -416,8 +475,13 @@ export function getFiguresForChapter(options: {
   const isChemBiochem =
     !subj || subj.startsWith("chemia") || subj.startsWith("biochemia");
   const isPhysics = !subj || subj.startsWith("fizyka");
+  const isMathCS =
+    !subj ||
+    subj.startsWith("matematyka") ||
+    subj.startsWith("informatyka") ||
+    subj.startsWith("farmakologia");
 
-  if (!isBioAnatPhysio && !isChemBiochem && !isPhysics) {
+  if (!isBioAnatPhysio && !isChemBiochem && !isPhysics && !isMathCS) {
     return [];
   }
 
@@ -446,6 +510,7 @@ export function getFiguresForChapter(options: {
     if (rule.scope === "chemBiochem" && !isChemBiochem) continue;
     if (rule.scope === "bioChemBoth" && !isBioAnatPhysio && !isChemBiochem) continue;
     if (rule.scope === "physics" && !isPhysics) continue;
+    if (rule.scope === "mathCS" && !isMathCS) continue;
     if (rule.keywords.some((kw) => haystack.includes(kw))) {
       const fig = getFigureById(rule.figureId);
       if (fig) {
