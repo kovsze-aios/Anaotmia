@@ -24,11 +24,11 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"nernst-spoczynkowy\">Potencjał równowagi jonowej i polaryzacja spoczynkowa</h2><p>W stanie spoczynku wnętrze neuronu wykazuje ujemny potencjał względem przestrzeni pozakomórkowej (około <strong>&minus;70 mV</strong>). Stan ten wynika ze współdziałania asymetrycznej pompy sodowo-potasowej (<strong>3 Na<sup>+</sup> na zewnątrz / 2 K<sup>+</sup> do wewnątrz</strong> kosztem hydrolizy ATP) oraz dużej przepuszczalności błony dla jonów potasu przez kanały wyciekowe.</p><p>Teoretyczny potencjał równowagi pojedynczego jonu opisuje <strong>równanie Nernsta</strong> (w 37 &deg;C dla jonu jednowartościowego: <code>E<sub>ion</sub> = 61,5 &middot; log<sub>10</sub>([ion]<sub>zewn</sub> / [ion]<sub>wewn</sub>)</code>), natomiast wypadkowy potencjał błonowy uwzględniający względne przepuszczalności wielu jonów wyraża równanie Goldmana–Hodgkina–Katza.</p>"
+          "htmlContent": "<h2 id=\"nernst-spoczynkowy\">Potencjał równowagi jonowej i polaryzacja spoczynkowa</h2><p>W stanie spoczynku wnętrze neuronu wykazuje ujemny potencjał względem przestrzeni pozakomórkowej (około <strong>−70 mV</strong>). Stan ten wynika ze współdziałania asymetrycznej pompy sodowo-potasowej (<strong>3 Na<sup>+</sup> na zewnątrz / 2 K<sup>+</sup> do wewnątrz</strong> kosztem hydrolizy ATP) oraz dużej przepuszczalności błony dla jonów potasu przez kanały wyciekowe.</p><p>Teoretyczny potencjał równowagi pojedynczego jonu opisuje <strong>równanie Nernsta</strong> (w 37 °C dla jonu jednowartościowego: <code>E<sub>ion</sub> = 61,5 · log<sub>10</sub>([ion]<sub>zewn</sub> / [ion]<sub>wewn</sub>)</code>), natomiast wypadkowy potencjał błonowy uwzględniający względne przepuszczalności wielu jonów wyraża równanie Goldmana–Hodgkina–Katza.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"fazy-ap\">Kaskada kanałów bramkowanych napięciem i prawo „wszystko albo nic”</h2><p>Po osiągnięciu potencjału progowego (ok. <strong>&minus;55 mV</strong>) na wzgórku aksonu dochodzi do gwałtownego otwarcia szybkich bramkowanych napięciem kanałów sodowych (<strong>Na<sub>V</sub></strong>) i masywnego napływu Na<sup>+</sup> (faza depolaryzacji do ok. +30…+40 mV).</p><p>W szczycie pobudzenia bramka inaktywacyjna kanału Na<sub>V</sub> zamyka światło kanału od strony cytoplazmy, a jednocześnie z opóźnieniem otwierają się kanały potasowe (<strong>K<sub>V</sub></strong>), prowadząc do repolaryzacji i przejściowej hiperpolaryzacji następczej.</p>"
+          "htmlContent": "<h2 id=\"fazy-ap\">Kaskada kanałów bramkowanych napięciem i prawo „wszystko albo nic”</h2><p>Po osiągnięciu potencjału progowego (ok. <strong>−55 mV</strong>) na wzgórku aksonu dochodzi do gwałtownego otwarcia szybkich bramkowanych napięciem kanałów sodowych (<strong>Na<sub>V</sub></strong>) i masywnego napływu Na<sup>+</sup> (faza depolaryzacji do ok. +30…+40 mV).</p><p>W szczycie pobudzenia bramka inaktywacyjna kanału Na<sub>V</sub> zamyka światło kanału od strony cytoplazmy, a jednocześnie z opóźnieniem otwierają się kanały potasowe (<strong>K<sub>V</sub></strong>), prowadząc do repolaryzacji i przejściowej hiperpolaryzacji następczej.</p>"
         },
         {
           "pageNumber": 3,
@@ -148,11 +148,11 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"anatomia-rdzenia\">Segmentarna budowa rdzenia i korzenie rdzeniowe</h2><p>W przekroju poprzecznym rdzenia kręgowego centralnie położona <strong>istota szara</strong> tworzy kształt litery H: rogi tylne (grzbietowe) odbierają informację czuciową, natomiast rogi przednie (brzuszne) zawierają ciała motoneuronów &alpha; i &gamma; unerwiających mięśnie szkieletowe.</p><p>Zgodnie z <strong>prawem Bella–Magendiego</strong> korzenie grzbietowe prowadzą wyłącznie włókna aferentne (czuciowe, z ciałami w zwoju rdzeniowym), a korzenie brzuszne wyłącznie włókna eferentne (ruchowe).</p>"
+          "htmlContent": "<h2 id=\"anatomia-rdzenia\">Segmentarna budowa rdzenia i korzenie rdzeniowe</h2><p>W przekroju poprzecznym rdzenia kręgowego centralnie położona <strong>istota szara</strong> tworzy kształt litery H: rogi tylne (grzbietowe) odbierają informację czuciową, natomiast rogi przednie (brzuszne) zawierają ciała motoneuronów α i γ unerwiających mięśnie szkieletowe.</p><p>Zgodnie z <strong>prawem Bella–Magendiego</strong> korzenie grzbietowe prowadzą wyłącznie włókna aferentne (czuciowe, z ciałami w zwoju rdzeniowym), a korzenie brzuszne wyłącznie włókna eferentne (ruchowe).</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"luk-odruchowy\">Łuki odruchowe — odruch kolanowy i odruch wycofania</h2><p><strong>Odruch na rozciąganie</strong> (np. kolanowy) jest łukiem <em>monosynaptycznym</em>: rozciągnięcie wrzeciona nerwowo-mięśniowego pobudza włókno Ia, które bezpośrednio pobudza motoneuron &alpha; mięśnia prostownika oraz przez interneuron hamujący (glicyna) hamuje mięsień zginacz (<strong>hamowanie recyprokalne</strong>).</p><p>Odruch bólowy wycofania kończyny jest natomiast łukiem <em>polisynaptycznym</em>, angażującym kilka interneuronów w celu szybkiego zgięcia kończyny po stronie bodźca oraz skrzyżowanego wyprostu kończyny przeciwstronnej dla zachowania równowagi.</p>"
+          "htmlContent": "<h2 id=\"luk-odruchowy\">Łuki odruchowe — odruch kolanowy i odruch wycofania</h2><p><strong>Odruch na rozciąganie</strong> (np. kolanowy) jest łukiem <em>monosynaptycznym</em>: rozciągnięcie wrzeciona nerwowo-mięśniowego pobudza włókno Ia, które bezpośrednio pobudza motoneuron α mięśnia prostownika oraz przez interneuron hamujący (glicyna) hamuje mięsień zginacz (<strong>hamowanie recyprokalne</strong>).</p><p>Odruch bólowy wycofania kończyny jest natomiast łukiem <em>polisynaptycznym</em>, angażującym kilka interneuronów w celu szybkiego zgięcia kończyny po stronie bodźca oraz skrzyżowanego wyprostu kończyny przeciwstronnej dla zachowania równowagi.</p>"
         },
         {
           "pageNumber": 3,
@@ -210,7 +210,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"fototransdukcja\">Paradox fotoreceptora — hiperpolaryzacja pod wpływem światła</h2><p>W przeciwieństwie do większości receptorów czuciowych, fotoreceptory siatkówki (<strong>pręciki i czopki</strong>) są w ciemności stale zdepolaryzowane przez napływ kationów przez kanały otwarte przez <strong>cGMP</strong>.</p><p>Pochłonięcie fotonu przez retinal w rodopsynie aktywuje białko G (<strong>transducynę</strong>) oraz fosfodiesterazę rozkładającą cGMP do 5&prime;-GMP. Kanały kationowe zamykają się, co wywołuje <strong>hiperpolaryzację</strong> komórki i zmniejszenie uwalniania glutaminianu do komórek dwubiegunowych.</p>"
+          "htmlContent": "<h2 id=\"fototransdukcja\">Paradox fotoreceptora — hiperpolaryzacja pod wpływem światła</h2><p>W przeciwieństwie do większości receptorów czuciowych, fotoreceptory siatkówki (<strong>pręciki i czopki</strong>) są w ciemności stale zdepolaryzowane przez napływ kationów przez kanały otwarte przez <strong>cGMP</strong>.</p><p>Pochłonięcie fotonu przez retinal w rodopsynie aktywuje białko G (<strong>transducynę</strong>) oraz fosfodiesterazę rozkładającą cGMP do 5′-GMP. Kanały kationowe zamykają się, co wywołuje <strong>hiperpolaryzację</strong> komórki i zmniejszenie uwalniania glutaminianu do komórek dwubiegunowych.</p>"
         },
         {
           "pageNumber": 2,
@@ -342,7 +342,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"uklad-pozapiramidowy\">Klinika uszkodzeń: neuron ośrodkowy vs obwodowy oraz jądra podstawy</h2><p>Uszkodzenie <strong>górnego motoneuronu</strong> (np. udar torebki wewnętrznej) wywołuje przeciwstronny niedowład spastyczny, wygórowanie odruchów głębokich i objaw Babińskiego, natomiast uszkodzenie <strong>dolnego motoneuronu &alpha;</strong> daje porażenie wiotkie z zanikiem mięśni i zniesieniem odruchów. Jądra podstawy (prążkowie, gałka blada, istota czarna) selekcjonują programy ruchowe, a móżdżek na bieżąco koryguje równowagę i koordynację.</p>"
+          "htmlContent": "<h2 id=\"uklad-pozapiramidowy\">Klinika uszkodzeń: neuron ośrodkowy vs obwodowy oraz jądra podstawy</h2><p>Uszkodzenie <strong>górnego motoneuronu</strong> (np. udar torebki wewnętrznej) wywołuje przeciwstronny niedowład spastyczny, wygórowanie odruchów głębokich i objaw Babińskiego, natomiast uszkodzenie <strong>dolnego motoneuronu α</strong> daje porażenie wiotkie z zanikiem mięśni i zniesieniem odruchów. Jądra podstawy (prążkowie, gałka blada, istota czarna) selekcjonują programy ruchowe, a móżdżek na bieżąco koryguje równowagę i koordynację.</p>"
         }
       ],
       "chapterQuiz": [
@@ -398,7 +398,7 @@
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"fale-eeg\">Elektroencefalografia i rytmy bioelektryczne mózgu</h2><p>Zapis <strong>EEG</strong> rejestruje sumaryczne postsynaptyczne potencjały korowych neuronów piramidowych: szybkie niesynchroniczne fale <strong>beta (13–30 Hz)</strong> towarzyszą czuwaniu i skupieniu, fale <strong>alfa (8–12 Hz)</strong> pojawiają się przy zamkniętych oczach w relaksie, <strong>theta (4–7 Hz)</strong> dominują w lekkim śnie, a wysokonapięciowe wolne fale <strong>delta (&lt;4 Hz)</strong> charakteryzują najgłębszy sen wolnofalowy (N3).</p>"
+          "htmlContent": "<h2 id=\"fale-eeg\">Elektroencefalografia i rytmy bioelektryczne mózgu</h2><p>Zapis <strong>EEG</strong> rejestruje sumaryczne postsynaptyczne potencjały korowych neuronów piramidowych: szybkie niesynchroniczne fale <strong>beta (13–30 Hz)</strong> towarzyszą czuwaniu i skupieniu, fale <strong>alfa (8–12 Hz)</strong> pojawiają się przy zamkniętych oczach w relaksie, <strong>theta (4–7 Hz)</strong> dominują w lekkim śnie, a wysokonapięciowe wolne fale <strong>delta (<4 Hz)</strong> charakteryzują najgłębszy sen wolnofalowy (N3).</p>"
         },
         {
           "pageNumber": 3,

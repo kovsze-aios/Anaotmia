@@ -145,7 +145,7 @@ export function getSidebarNavigation(): SidebarNavigation {
       const first = domain.sections[0];
       return {
         href: first ? `/theory/${subject}/${first.id}` : `/theory/${subject}`,
-        label: `${domain.icon ?? "📚"} ${domain.shortTitle}`,
+        label: domain.icon ? `${domain.icon} ${domain.shortTitle}` : domain.shortTitle,
       };
     });
 

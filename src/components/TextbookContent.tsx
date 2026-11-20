@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { Clock, FileText } from "lucide-react";
 import { TableOfContents, ToCItem } from "./TableOfContents";
 import { ActiveRecall } from "./ActiveRecall";
 import { AnatomyFigure } from "./AnatomyFigure";
@@ -316,13 +317,14 @@ export function TextbookContent({
     !section.pages || section.pages.length === 0 ? chapterFigures : [];
 
   return (
-    <article className="textbook-article relative pt-4">
+    <article className="textbook-article relative min-w-0 pt-4">
       <ScrollProgressBar />
 
       <div className="mb-6 flex flex-wrap items-center gap-3">
         <h1 className="textbook-article__title !mb-0">{section.title}</h1>
-        <span className="whitespace-nowrap rounded-full border border-zinc-200 bg-zinc-100 px-2 py-1 text-xs font-medium text-zinc-500 dark:border-zinc-700 dark:bg-zinc-800">
-          ⏱ Czas czytania: ~{readingTime} min
+        <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-zinc-200 bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
+          <Clock className="size-3.5 shrink-0" aria-hidden="true" />
+          Czas czytania: ~{readingTime} min
         </span>
       </div>
 
@@ -537,9 +539,10 @@ export function TextbookContent({
       {(section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution) && (
         <footer
           data-testid="license-attribution-footer"
-          className="mt-8 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-2.5 text-xs text-zinc-600 dark:border-zinc-800/80 dark:bg-zinc-950/60 dark:text-zinc-400"
+          className="mt-8 flex items-start gap-2 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-2.5 text-xs text-zinc-600 dark:border-zinc-800/80 dark:bg-zinc-950/60 dark:text-zinc-400"
         >
-          📜 {section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution}
+          <FileText className="mt-0.5 size-3.5 shrink-0 text-zinc-500 dark:text-zinc-400" aria-hidden="true" />
+          <span>{section.licenseAttribution ?? section.ckeMetadata?.licenseAttribution}</span>
         </footer>
       )}
     </article>

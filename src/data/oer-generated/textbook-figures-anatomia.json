@@ -809,7 +809,7 @@
       {
         "stepNumber": 3,
         "title": "Krok 3: Odpowiedź odśrodkowa do mięśnia efektora",
-        "explanationHtml": "<p>Akson <strong>motoneuronu &alpha;</strong> opuszcza rdzeń korzeniem brzusznym i pobudza skurcz mięśnia efektora.</p>",
+        "explanationHtml": "<p>Akson <strong>motoneuronu α</strong> opuszcza rdzeń korzeniem brzusznym i pobudza skurcz mięśnia efektora.</p>",
         "activeHotspotIds": ["hs-reflex-motor", "hs-reflex-effector"],
         "flowArrow": [52, 60, 86, 54]
       }

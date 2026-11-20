@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function MaturaBiologiaPage() {
   return (
     <MaturaSubjectView
-      sidebarTitle="🧬 Biologia"
+      sidebarTitle="Biologia"
       subjectName="Biologia"
       records={getMaturaRecords("biologia")}
     />

@@ -21,6 +21,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -379,6 +380,7 @@ def normalize_sci_unicode(text: str) -> str:
     """Normalizes chemistry/physics formulas, ions, arrows, and Wingdings PDF symbols into clean Unicode."""
     if not text:
         return ""
+    text = html.unescape(text)
     # Replace private-use PDF Symbol/Wingdings glyphs often emitted by CKE keys
     glyph_map = {
         "\uf0de": " ⇒ ",

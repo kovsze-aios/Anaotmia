@@ -22,7 +22,7 @@ export default function Home() {
   const navigation = getSidebarNavigation();
 
   return (
-    <main>
+    <main className="overflow-x-clip">
       <Topbar navigation={navigation} />
       {/*
         The atlas is the flagship feature, but the WebGL viewer and its ~30 MB of

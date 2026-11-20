@@ -59,7 +59,16 @@ const CHEM_ICONS: Record<string, string> = {
 };
 
 function excerpt(html: string, limit = 300): string {
-  const text = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  const text = html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
   if (text.length <= limit) return text;
   const cut = text.lastIndexOf(" ", limit);
   return text.slice(0, cut > 0 ? cut : limit) + "…";
@@ -110,7 +119,7 @@ export function buildCkeGuidelinesPageHtml(
   ].join("");
 
   return [
-    `<h3 id="wytyczne-cke-i-pewniaki-maturalne">🎯 Wytyczne CKE i Pewniaki Maturalne</h3>`,
+    `<h3 id="wytyczne-cke-i-pewniaki-maturalne">Wytyczne CKE i Pewniaki Maturalne</h3>`,
     `<p><strong>Status w podstawie programowej:</strong> <em>${statusBadge}</em> — <strong>${sectionCurr.sectionCode}</strong> (${meta.requirementCodes.join(", ")}). Temat: <strong>${chapterTitle}</strong>.</p>`,
     `<h4>1. Wymagania szczegółowe CKE dla tego działu</h4>`,
     `<ul>${reqItems}</ul>`,
@@ -1042,7 +1051,7 @@ function ensureEnrichedSection(
       htmlContent: ckeHtml,
     });
     toc.push({
-      title: "🎯 Wytyczne CKE i Pewniaki Maturalne",
+      title: "Wytyczne CKE i Pewniaki Maturalne",
       anchorId: "wytyczne-cke-i-pewniaki-maturalne",
     });
   }

@@ -15,9 +15,9 @@ export default function TheoryIndexPage() {
   const navigation = getSidebarNavigation();
 
   return (
-    <main>
+    <main className="overflow-x-clip">
       <Topbar navigation={navigation} />
-      <div className="l-container">
+      <div className="l-container pb-16 sm:pb-24">
         <TheoryIndex />
       </div>
       <Footer />

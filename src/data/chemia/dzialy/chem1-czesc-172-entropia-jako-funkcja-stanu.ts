@@ -23,7 +23,7 @@ export const chem1_czesc_172_entropiaJakoFunkcjaStanuData: StructuredChapter = {
     },
     {
       "pageNumber": 2,
-      "htmlContent": "<h3 id=\"zmiana-entropii-procesy\">Zmiana entropii w procesach odwracalnych i nieodwracalnych</h3><p>W praktyce obliczenie zmiany entropii dla procesu nieodwracalnego jest możliwe tylko wtedy, gdy potraktujemy go jako ciąg stanów równowagi, czyli zastąpimy go procesem odwracalnym prowadzącym między tymi samymi stanami początkowym i końcowym. Dla procesu nieodwracalnego zachodzi nierówność:</p><p>dq<sub>nieodwr</sub> / T &lt; dq<sub>odwr</sub> / T = dS</p><p>Oznacza to, że w procesie nieodwracalnym rzeczywista zmiana entropii jest większa niż wynikająca z wymiany ciepła nieodwracalnego; dlatego do obliczeń zawsze wykorzystuje się ciepło procesu odwracalnego.</p>"
+      "htmlContent": "<h3 id=\"zmiana-entropii-procesy\">Zmiana entropii w procesach odwracalnych i nieodwracalnych</h3><p>W praktyce obliczenie zmiany entropii dla procesu nieodwracalnego jest możliwe tylko wtedy, gdy potraktujemy go jako ciąg stanów równowagi, czyli zastąpimy go procesem odwracalnym prowadzącym między tymi samymi stanami początkowym i końcowym. Dla procesu nieodwracalnego zachodzi nierówność:</p><p>dq<sub>nieodwr</sub> / T < dq<sub>odwr</sub> / T = dS</p><p>Oznacza to, że w procesie nieodwracalnym rzeczywista zmiana entropii jest większa niż wynikająca z wymiany ciepła nieodwracalnego; dlatego do obliczeń zawsze wykorzystuje się ciepło procesu odwracalnego.</p>"
     },
     {
       "pageNumber": 3,

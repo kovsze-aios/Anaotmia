@@ -25,15 +25,15 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"granica-ciagu-e\">Granice ciągów i liczba e w naukach przyrodniczych</h2><p>Ciąg liczbowy <em>(a<sub>n</sub>)</em> jest zbieżny do granicy <em>g</em>, gdy niemal wszystkie jego wyrazy leżą w dowolnie małym otoczeniu liczby <em>g</em>. Szczególną rolę w analizie procesów ciągłego wzrostu oraz kapitalizacji odgrywa granica definiująca liczbę Eulera:</p><p><code>lim<sub>n&rarr;&infin;</sub> (1 + 1/n)<sup>n</sup> = e &approx; 2,71828</code></p><p>Dla ilorazów wielomianów przy <code>n &rarr; &infin;</code> o granicy decydują współczynniki przy najwyższych potęgach zmiennej <em>n</em>.</p>"
+          "htmlContent": "<h2 id=\"granica-ciagu-e\">Granice ciągów i liczba e w naukach przyrodniczych</h2><p>Ciąg liczbowy <em>(a<sub>n</sub>)</em> jest zbieżny do granicy <em>g</em>, gdy niemal wszystkie jego wyrazy leżą w dowolnie małym otoczeniu liczby <em>g</em>. Szczególną rolę w analizie procesów ciągłego wzrostu oraz kapitalizacji odgrywa granica definiująca liczbę Eulera:</p><p><code>lim<sub>n→∞</sub> (1 + 1/n)<sup>n</sup> = e ≈ 2,71828</code></p><p>Dla ilorazów wielomianów przy <code>n → ∞</code> o granicy decydują współczynniki przy najwyższych potęgach zmiennej <em>n</em>.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"szereg-geometryczny\">Szeregi zbieżne i model stacjonarny podawania leku</h2><p>Nieskończony szereg geometryczny <code>&Sigma;<sub>n=0..&infin;</sub> a<sub>1</sub>&middot;q<sup>n</sup></code> jest zbieżny wtedy i tylko wtedy, gdy <code>|q| &lt; 1</code>, a jego suma wynosi <code>S = a<sub>1</sub> / (1 &minus; q)</code>.</p><p>W farmakokinetyce wielokrotnych dawek, jeżeli po każdym odstępie dawkowania w organizmie pozostaje ułamek <em>f = e<sup>&minus;kT</sup></em> poprzedniej dawki D, to stężenie maksymalne po bardzo wielu dawkach dąży do granicy szeregu geometrycznego <code>D<sub>max</sub> = D / (1 &minus; f)</code> (stan stacjonarny, <em>steady state</em>).</p>"
+          "htmlContent": "<h2 id=\"szereg-geometryczny\">Szeregi zbieżne i model stacjonarny podawania leku</h2><p>Nieskończony szereg geometryczny <code>Σ<sub>n=0..∞</sub> a<sub>1</sub>·q<sup>n</sup></code> jest zbieżny wtedy i tylko wtedy, gdy <code>|q| < 1</code>, a jego suma wynosi <code>S = a<sub>1</sub> / (1 − q)</code>.</p><p>W farmakokinetyce wielokrotnych dawek, jeżeli po każdym odstępie dawkowania w organizmie pozostaje ułamek <em>f = e<sup>−kT</sup></em> poprzedniej dawki D, to stężenie maksymalne po bardzo wielu dawkach dąży do granicy szeregu geometrycznego <code>D<sub>max</sub> = D / (1 − f)</code> (stan stacjonarny, <em>steady state</em>).</p>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"ciaglosc-darboux\">Ciągłość funkcji oraz własność Darboux</h2><p>Funkcja jest ciągła w punkcie <em>x<sub>0</sub></em>, gdy jej granice jednostronne są równe wartości funkcji w tym punkcie (<code>lim<sub>x&rarr;x0&minus;</sub> f(x) = lim<sub>x&rarr;x0+</sub> f(x) = f(x<sub>0</sub>)</code>). Twierdzenie Darboux (o wartości pośredniej) gwarantuje, że funkcja ciągła na przedziale domkniętym &langle;a, b&rangle; przyjmująca wartości różnych znaków na końcach przedziału (<code>f(a)&middot;f(b) &lt; 0</code>) ma co najmniej jedno miejsce zerowe wewnątrz tego przedziału.</p>"
+          "htmlContent": "<h2 id=\"ciaglosc-darboux\">Ciągłość funkcji oraz własność Darboux</h2><p>Funkcja jest ciągła w punkcie <em>x<sub>0</sub></em>, gdy jej granice jednostronne są równe wartości funkcji w tym punkcie (<code>lim<sub>x→x0−</sub> f(x) = lim<sub>x→x0+</sub> f(x) = f(x<sub>0</sub>)</code>). Twierdzenie Darboux (o wartości pośredniej) gwarantuje, że funkcja ciągła na przedziale domkniętym ⟨a, b⟩ przyjmująca wartości różnych znaków na końcach przedziału (<code>f(a)·f(b) < 0</code>) ma co najmniej jedno miejsce zerowe wewnątrz tego przedziału.</p>"
         }
       ],
       "chapterQuiz": [
@@ -88,15 +88,15 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"calka-nieoznaczona\">Funkcja pierwotna, całkowanie przez podstawianie i przez części</h2><p>Funkcję <em>F(x)</em> nazywamy funkcją pierwotną funkcji <em>f(x)</em>, jeśli <code>F'(x) = f(x)</code>. Zbiór wszystkich funkcji pierwotnych wyznacza całka nieoznaczona <code>&int; f(x) dx = F(x) + C</code>.</p><ul><li><strong>Podstawianie:</strong> odwrócenie reguły pochodnej funkcji złożonej (<code>t = g(x), dt = g'(x)dx</code>).</li><li><strong>Całkowanie przez części:</strong> <code>&int; u(x)&middot;v'(x) dx = u(x)&middot;v(x) &minus; &int; u'(x)&middot;v(x) dx</code>, szczególnie użyteczne dla iloczynów wielomianów i funkcji wykładniczych lub logarytmicznych.</li></ul>"
+          "htmlContent": "<h2 id=\"calka-nieoznaczona\">Funkcja pierwotna, całkowanie przez podstawianie i przez części</h2><p>Funkcję <em>F(x)</em> nazywamy funkcją pierwotną funkcji <em>f(x)</em>, jeśli <code>F'(x) = f(x)</code>. Zbiór wszystkich funkcji pierwotnych wyznacza całka nieoznaczona <code>∫ f(x) dx = F(x) + C</code>.</p><ul><li><strong>Podstawianie:</strong> odwrócenie reguły pochodnej funkcji złożonej (<code>t = g(x), dt = g'(x)dx</code>).</li><li><strong>Całkowanie przez części:</strong> <code>∫ u(x)·v'(x) dx = u(x)·v(x) − ∫ u'(x)·v(x) dx</code>, szczególnie użyteczne dla iloczynów wielomianów i funkcji wykładniczych lub logarytmicznych.</li></ul>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"newton-leibniz\">Całka oznaczona Riemanna i twierdzenie Newtona–Leibniza</h2><p>Całka oznaczona na przedziale &langle;a, b&rangle; stanowi granicę sum Riemanna przy podziale przedziału na coraz węższe podprzedziały i dla funkcji nieujemnej opisuje pole powierzchni pod wykresem funkcji. Zgodnie ze wzorem Newtona–Leibniza:</p><p><code>&int;<sub>a</sub><sup>b</sup> f(x) dx = F(b) &minus; F(a)</code></p><p>Pozwala ona wyznaczyć m.in. całkowitą pracę zmiennej siły w fizyce lub całkowitą ilość wytworzonego produktu reakcji na podstawie chwilowej szybkości reakcji <em>v(t)</em>.</p>"
+          "htmlContent": "<h2 id=\"newton-leibniz\">Całka oznaczona Riemanna i twierdzenie Newtona–Leibniza</h2><p>Całka oznaczona na przedziale ⟨a, b⟩ stanowi granicę sum Riemanna przy podziale przedziału na coraz węższe podprzedziały i dla funkcji nieujemnej opisuje pole powierzchni pod wykresem funkcji. Zgodnie ze wzorem Newtona–Leibniza:</p><p><code>∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) − F(a)</code></p><p>Pozwala ona wyznaczyć m.in. całkowitą pracę zmiennej siły w fizyce lub całkowitą ilość wytworzonego produktu reakcji na podstawie chwilowej szybkości reakcji <em>v(t)</em>.</p>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"pole-auc\">Pole pod krzywą (AUC) w farmakologii i ocenie testów ROC</h2><p>Całka oznaczona ze stężenia leku w osoczu względem czasu <code>AUC = &int;<sub>0</sub><sup>&infin;</sup> C(t) dt</code> mierzy całkowitą ekspozycję organizmu na lek i służy do wyznaczania biodostępności względnej preparatu generycznego względem oryginalnego (metoda trapezów numerycznie przybliża wartość całki z pomiarów krwi).</p>"
+          "htmlContent": "<h2 id=\"pole-auc\">Pole pod krzywą (AUC) w farmakologii i ocenie testów ROC</h2><p>Całka oznaczona ze stężenia leku w osoczu względem czasu <code>AUC = ∫<sub>0</sub><sup>∞</sup> C(t) dt</code> mierzy całkowitą ekspozycję organizmu na lek i służy do wyznaczania biodostępności względnej preparatu generycznego względem oryginalnego (metoda trapezów numerycznie przybliża wartość całki z pomiarów krwi).</p>"
         }
       ],
       "chapterQuiz": [
@@ -148,15 +148,15 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"macierze-wyznacznik\">Rachunek macierzowy i macierz odwrotna</h2><p>Macierz o wymiarach <em>m &times; n</em> porządkuje dane liniowe w <em>m</em> wierszach i <em>n</em> kolumnach. Mnożenie macierzy <code>A&middot;B</code> wymaga zgodności liczby kolumn A z liczbą wierszy B i w ogólności <strong>nie jest przemienne</strong> (<code>A&middot;B &ne; B&middot;A</code>).</p><p>Macierz kwadratowa <em>A</em> posiada macierz odwrotną <em>A<sup>&minus;1</sup></em> wtedy i tylko wtedy, gdy jest nieosobliwa (<code>det(A) &ne; 0</code>).</p>"
+          "htmlContent": "<h2 id=\"macierze-wyznacznik\">Rachunek macierzowy i macierz odwrotna</h2><p>Macierz o wymiarach <em>m × n</em> porządkuje dane liniowe w <em>m</em> wierszach i <em>n</em> kolumnach. Mnożenie macierzy <code>A·B</code> wymaga zgodności liczby kolumn A z liczbą wierszy B i w ogólności <strong>nie jest przemienne</strong> (<code>A·B ≠ B·A</code>).</p><p>Macierz kwadratowa <em>A</em> posiada macierz odwrotną <em>A<sup>−1</sup></em> wtedy i tylko wtedy, gdy jest nieosobliwa (<code>det(A) ≠ 0</code>).</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"uklady-rownan\">Rozwiązywanie układów równań liniowych — Gauss i Capelli</h2><p>Układ równań liniowych <code>A&middot;x = b</code> ma rozwiązanie wtedy i tylko wtedy, gdy rząd macierzy głównej równy jest rzędowi macierzy rozszerzonej (<code>rz(A) = rz([A|b])</code> — <strong>twierdzenie Kroneckera–Capellego</strong>). Jeśli dodatkowo rząd równa się liczbie niewiadomych <em>n</em>, układ jest oznaczony (jedno rozwiązanie).</p>"
+          "htmlContent": "<h2 id=\"uklady-rownan\">Rozwiązywanie układów równań liniowych — Gauss i Capelli</h2><p>Układ równań liniowych <code>A·x = b</code> ma rozwiązanie wtedy i tylko wtedy, gdy rząd macierzy głównej równy jest rzędowi macierzy rozszerzonej (<code>rz(A) = rz([A|b])</code> — <strong>twierdzenie Kroneckera–Capellego</strong>). Jeśli dodatkowo rząd równa się liczbie niewiadomych <em>n</em>, układ jest oznaczony (jedno rozwiązanie).</p>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"wartosci-wlasne\">Wektory własne i PCA w analizie danych medycznych</h2><p>Wektor niezerowy <em>v</em> nazywamy wektorem własnym macierzy <em>A</em> odpowiadającym wartości własnej &lambda;, jeśli <code>A&middot;v = &lambda;&middot;v</code>. Rozkład macierzy kowariancji na wartości i wektory własne leży u podstaw <strong>analizy głównych składowych (PCA)</strong> stosowanej m.in. do redukcji wymiarowości ekspresji tysięcy genów w transkryptomice lub rotacji kamery i modeli siatek 3D.</p>"
+          "htmlContent": "<h2 id=\"wartosci-wlasne\">Wektory własne i PCA w analizie danych medycznych</h2><p>Wektor niezerowy <em>v</em> nazywamy wektorem własnym macierzy <em>A</em> odpowiadającym wartości własnej λ, jeśli <code>A·v = λ·v</code>. Rozkład macierzy kowariancji na wartości i wektory własne leży u podstaw <strong>analizy głównych składowych (PCA)</strong> stosowanej m.in. do redukcji wymiarowości ekspresji tysięcy genów w transkryptomice lub rotacji kamery i modeli siatek 3D.</p>"
         }
       ],
       "chapterQuiz": [
@@ -208,15 +208,15 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"rozdzielanie-zmiennych\">Równania różniczkowe I rzędu o zmiennych rozdzielonych</h2><p>Równanie różniczkowe wiąże nieznaną funkcję <em>y(t)</em> z jej pochodną <em>dy/dt</em>. Postać <code>dy/dt = f(t)&middot;g(y)</code> rozwiązujemy przez rozdzielenie zmiennych i obustronne całkowanie: <code>&int; (1/g(y)) dy = &int; f(t) dt + C</code>.</p>"
+          "htmlContent": "<h2 id=\"rozdzielanie-zmiennych\">Równania różniczkowe I rzędu o zmiennych rozdzielonych</h2><p>Równanie różniczkowe wiąże nieznaną funkcję <em>y(t)</em> z jej pochodną <em>dy/dt</em>. Postać <code>dy/dt = f(t)·g(y)</code> rozwiązujemy przez rozdzielenie zmiennych i obustronne całkowanie: <code>∫ (1/g(y)) dy = ∫ f(t) dt + C</code>.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"krzywa-logistyczna\">Od modelu Malthusa do równania logistycznego Verhulsta</h2><p>Przy nieograniczonych zasobach tempo wzrostu populacji jest proporcjonalne do jej liczebności (<code>dN/dt = r&middot;N</code>), co daje wzrost wykładniczy. W rzeczywistości ograniczenia środowiska wprowadzają <strong>pojemność środowiska <em>K</em></strong> w równaniu logistycznym:</p><p><code>dN/dt = r&middot;N&middot;(1 &minus; N/K)</code></p><p>Krzywa logistyczna ma kształt litery S (sigmoida): największą szybkość wzrostu populacja osiąga dokładnie w połowie pojemności (<code>N = K/2</code>).</p>"
+          "htmlContent": "<h2 id=\"krzywa-logistyczna\">Od modelu Malthusa do równania logistycznego Verhulsta</h2><p>Przy nieograniczonych zasobach tempo wzrostu populacji jest proporcjonalne do jej liczebności (<code>dN/dt = r·N</code>), co daje wzrost wykładniczy. W rzeczywistości ograniczenia środowiska wprowadzają <strong>pojemność środowiska <em>K</em></strong> w równaniu logistycznym:</p><p><code>dN/dt = r·N·(1 − N/K)</code></p><p>Krzywa logistyczna ma kształt litery S (sigmoida): największą szybkość wzrostu populacja osiąga dokładnie w połowie pojemności (<code>N = K/2</code>).</p>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"model-sir\">Układ równań różniczkowych SIR w epidemiologii</h2><p>Dynamikę chorób zakaźnych opisuje układ trzech równań dzielący populację na podatnych (<em>S</em>), zakażonych (<em>I</em>) i ozdrowieńców/uodpornionych (<em>R</em>): <code>dS/dt = &minus;&beta;SI</code>, <code>dI/dt = &beta;SI &minus; &gamma;I</code>, <code>dR/dt = &gamma;I</code>. Epidemia narasta, gdy bazowy współczynnik reprodukcji <code>R<sub>0</sub> = (&beta;&middot;S<sub>0</sub>)/&gamma; &gt; 1</code>.</p>"
+          "htmlContent": "<h2 id=\"model-sir\">Układ równań różniczkowych SIR w epidemiologii</h2><p>Dynamikę chorób zakaźnych opisuje układ trzech równań dzielący populację na podatnych (<em>S</em>), zakażonych (<em>I</em>) i ozdrowieńców/uodpornionych (<em>R</em>): <code>dS/dt = −βSI</code>, <code>dI/dt = βSI − γI</code>, <code>dR/dt = γI</code>. Epidemia narasta, gdy bazowy współczynnik reprodukcji <code>R<sub>0</sub> = (β·S<sub>0</sub>)/γ > 1</code>.</p>"
         }
       ],
       "chapterQuiz": [
@@ -268,15 +268,15 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"rozklad-normalny\">Krzywa dzwonowa Gaussa i reguła trzech sigm</h2><p>Wiele cech biologicznych (wzrost, ciśnienie krwi, stężenia metabolitów) wykazuje rozkład normalny <code>N(&mu;, &sigma;)</code>. Reguła empiryczna mówi, że w przedziale <code>&mu; &plusmn; 1&sigma;</code> mieści się ok. <strong>68,3%</strong> obserwacji, w <code>&mu; &plusmn; 2&sigma;</code> ok. <strong>95,4%</strong>, a w <code>&mu; &plusmn; 3&sigma;</code> aż <strong>99,7%</strong>.</p><p>Standaryzacja <code>Z = (X &minus; &mu;) / &sigma;</code> sprowadza dowolny rozkład normalny do standardowego <code>N(0, 1)</code>.</p>"
+          "htmlContent": "<h2 id=\"rozklad-normalny\">Krzywa dzwonowa Gaussa i reguła trzech sigm</h2><p>Wiele cech biologicznych (wzrost, ciśnienie krwi, stężenia metabolitów) wykazuje rozkład normalny <code>N(μ, σ)</code>. Reguła empiryczna mówi, że w przedziale <code>μ ± 1σ</code> mieści się ok. <strong>68,3%</strong> obserwacji, w <code>μ ± 2σ</code> ok. <strong>95,4%</strong>, a w <code>μ ± 3σ</code> aż <strong>99,7%</strong>.</p><p>Standaryzacja <code>Z = (X − μ) / σ</code> sprowadza dowolny rozkład normalny do standardowego <code>N(0, 1)</code>.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"ctg-i-przedzial-ufnosci\">Błąd standardowy średniej i przedział ufności (CI)</h2><p>Zgodnie z <strong>Centralnym Twierdzeniem Granicznym</strong> rozkład średnich z dużych prób (<em>n &ge; 30</em>) dąży do rozkładu normalnego niezależnie od kształtu rozkładu w populacji, a odchylenie standardowe średniej (błąd standardowy, SE) maleje jak <code>SE = &sigma; / &radic;n</code>.</p><p>95-procentowy przedział ufności dla średniej z próby określa zakres parametrów populacyjnych zgodnych z danymi: jeśli przedział ufności dla różnicy między lekiem a placebo nie zawiera zera (lub dla ilorazu szans OR nie zawiera 1), wynik jest istotny statystycznie na poziomie &alpha; = 0,05.</p>"
+          "htmlContent": "<h2 id=\"ctg-i-przedzial-ufnosci\">Błąd standardowy średniej i przedział ufności (CI)</h2><p>Zgodnie z <strong>Centralnym Twierdzeniem Granicznym</strong> rozkład średnich z dużych prób (<em>n ≥ 30</em>) dąży do rozkładu normalnego niezależnie od kształtu rozkładu w populacji, a odchylenie standardowe średniej (błąd standardowy, SE) maleje jak <code>SE = σ / √n</code>.</p><p>95-procentowy przedział ufności dla średniej z próby określa zakres parametrów populacyjnych zgodnych z danymi: jeśli przedział ufności dla różnicy między lekiem a placebo nie zawiera zera (lub dla ilorazu szans OR nie zawiera 1), wynik jest istotny statystycznie na poziomie α = 0,05.</p>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"bledy-i-moc-testu\">Błąd I rodzaju (α), błąd II rodzaju (β) i moc testu</h2><ul><li><strong>Błąd I rodzaju (&alpha;):</strong> fałszywe odrzucenie prawdziwej hipotezy zerowej (uznanie nieskutecznego leku za skuteczny).</li><li><strong>Błąd II rodzaju (&beta;):</strong> nieodrzucenie fałszywej hipotezy zerowej (przegapienie prawdziwego efektu z powodu zbyt małej próby).</li><li><strong>Moc testu (1 &minus; &beta;):</strong> prawdopodobieństwo wykrycia istniejącego efektu (w badaniach klinicznych standardowo wymaga się mocy &ge; 80%).</li></ul>"
+          "htmlContent": "<h2 id=\"bledy-i-moc-testu\">Błąd I rodzaju (α), błąd II rodzaju (β) i moc testu</h2><ul><li><strong>Błąd I rodzaju (α):</strong> fałszywe odrzucenie prawdziwej hipotezy zerowej (uznanie nieskutecznego leku za skuteczny).</li><li><strong>Błąd II rodzaju (β):</strong> nieodrzucenie fałszywej hipotezy zerowej (przegapienie prawdziwego efektu z powodu zbyt małej próby).</li><li><strong>Moc testu (1 − β):</strong> prawdopodobieństwo wykrycia istniejącego efektu (w badaniach klinicznych standardowo wymaga się mocy ≥ 80%).</li></ul>"
         }
       ],
       "chapterQuiz": [
@@ -330,15 +330,15 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"rownanie-wlasne\">Wektory niezmieniające kierunku pod wpływem przekształcenia liniowego</h2><p>Niezerowy wektor <strong>v</strong> nazywamy wektorem własnym macierzy kwadratowej <em>A</em> odpowiadającym wartości własnej &lambda;, jeśli zachodzi relacja <code>A&middot;v = &lambda;&middot;v</code>. Wartości własne wyznacza się jako pierwiastki równania charakterystycznego: <code>det(A &minus; &lambda;I) = 0</code>.</p>"
+          "htmlContent": "<h2 id=\"rownanie-wlasne\">Wektory niezmieniające kierunku pod wpływem przekształcenia liniowego</h2><p>Niezerowy wektor <strong>v</strong> nazywamy wektorem własnym macierzy kwadratowej <em>A</em> odpowiadającym wartości własnej λ, jeśli zachodzi relacja <code>A·v = λ·v</code>. Wartości własne wyznacza się jako pierwiastki równania charakterystycznego: <code>det(A − λI) = 0</code>.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"diagonalizacja\">Diagonalizacja i szybkie potęgowanie układów dyskretnych</h2><p>Jeśli macierz rozmiaru <em>n &times; n</em> posiada <em>n</em> liniowo niezależnych wektorów własnych, daje się rozłożyć do postaci <code>A = P&middot;D&middot;P<sup>&minus;1</sup></code>, gdzie <em>D</em> jest macierzą diagonalną z wartościami &lambda;<sub>i</sub> na przekątnej. Pozwala to natychmiast obliczać ewolucję układów po wielu krokach czasu (np. macierze przejścia w populacjach komórkowych: <code>A<sup>k</sup> = P&middot;D<sup>k</sup>&middot;P<sup>&minus;1</sup></code>).</p>"
+          "htmlContent": "<h2 id=\"diagonalizacja\">Diagonalizacja i szybkie potęgowanie układów dyskretnych</h2><p>Jeśli macierz rozmiaru <em>n × n</em> posiada <em>n</em> liniowo niezależnych wektorów własnych, daje się rozłożyć do postaci <code>A = P·D·P<sup>−1</sup></code>, gdzie <em>D</em> jest macierzą diagonalną z wartościami λ<sub>i</sub> na przekątnej. Pozwala to natychmiast obliczać ewolucję układów po wielu krokach czasu (np. macierze przejścia w populacjach komórkowych: <code>A<sup>k</sup> = P·D<sup>k</sup>·P<sup>−1</sup></code>).</p>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"pca-biomedycyna\">Redukcja wymiarowości danych w transkryptomice i EEG (PCA)</h2><p>W analizie ekspresji tysięcy genów macierz kowariancji danych jest macierzą symetryczną. Jej wektory własne wskazują ortogonalne kierunki maksymalnej wariancji (główne składowe PC1, PC2), a największe wartości własne &lambda; informują, jaką część zmienności biologicznej zachowuje dany wymiar.</p>"
+          "htmlContent": "<h2 id=\"pca-biomedycyna\">Redukcja wymiarowości danych w transkryptomice i EEG (PCA)</h2><p>W analizie ekspresji tysięcy genów macierz kowariancji danych jest macierzą symetryczną. Jej wektory własne wskazują ortogonalne kierunki maksymalnej wariancji (główne składowe PC1, PC2), a największe wartości własne λ informują, jaką część zmienności biologicznej zachowuje dany wymiar.</p>"
         }
       ],
       "chapterQuiz": [
@@ -391,7 +391,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"test-chi-kwadrat\">Test χ² — analiza cech jakościowych i genetyka populacji</h2><p>Test <strong>&chi;<sup>2</sup></strong> porównuje obserwowane liczności (<em>O</em>) z oczekiwanymi pod hipotezą zerową (<em>E</em>): <code>&chi;<sup>2</sup> = &Sigma; (O &minus; E)<sup>2</sup> / E</code>. W genetyce i badaniach medycznych służy do weryfikacji, czy badana populacja pozostaje w równowadze Hardy'ego–Weinberga albo czy lek zmienia odsetek wyleczeń.</p>"
+          "htmlContent": "<h2 id=\"test-chi-kwadrat\">Test χ² — analiza cech jakościowych i genetyka populacji</h2><p>Test <strong>χ<sup>2</sup></strong> porównuje obserwowane liczności (<em>O</em>) z oczekiwanymi pod hipotezą zerową (<em>E</em>): <code>χ<sup>2</sup> = Σ (O − E)<sup>2</sup> / E</code>. W genetyce i badaniach medycznych służy do weryfikacji, czy badana populacja pozostaje w równowadze Hardy'ego–Weinberga albo czy lek zmienia odsetek wyleczeń.</p>"
         },
         {
           "pageNumber": 2,
@@ -399,7 +399,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"moc-badania\">Planowanie wielkości próby: błąd α, β i moc statystyczna</h2><p><strong>Błąd I rodzaju (&alpha;)</strong> polega na odrzuceniu prawdziwej hipotezy zerowej (fałszywy alarm), zaś <strong>błąd II rodzaju (&beta;)</strong> — na przeoczeniu istniejącego efektu leku. <strong>Moc testu (1 &minus; &beta;)</strong> (zwykle planowana na &ge; 80%) rośnie wraz ze zwiększeniem liczebności próby <em>n</em> oraz wielkości efektu klinicznego.</p>"
+          "htmlContent": "<h2 id=\"moc-badania\">Planowanie wielkości próby: błąd α, β i moc statystyczna</h2><p><strong>Błąd I rodzaju (α)</strong> polega na odrzuceniu prawdziwej hipotezy zerowej (fałszywy alarm), zaś <strong>błąd II rodzaju (β)</strong> — na przeoczeniu istniejącego efektu leku. <strong>Moc testu (1 − β)</strong> (zwykle planowana na ≥ 80%) rośnie wraz ze zwiększeniem liczebności próby <em>n</em> oraz wielkości efektu klinicznego.</p>"
         }
       ],
       "chapterQuiz": [

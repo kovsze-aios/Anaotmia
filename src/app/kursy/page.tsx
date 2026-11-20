@@ -17,7 +17,7 @@ export default function KursyPage() {
   const navigation = getSidebarNavigation();
 
   return (
-    <main>
+    <main className="overflow-x-clip">
       <Topbar navigation={navigation} />
       <CoursesCatalogView />
       <Footer />

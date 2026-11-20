@@ -91,7 +91,7 @@
       {
         "stepNumber": 4,
         "title": "Krok 4: Zestawienie z profilem endotermicznym (ΔH > 0)",
-        "explanationHtml": "<p>Gdy produkty mają wyższą entalpię niż substraty (<strong>ΔH &gt; 0</strong>), reakcja jest endotermiczna i wymaga ciągłego pobierania energii z otoczenia.</p>",
+        "explanationHtml": "<p>Gdy produkty mają wyższą entalpię niż substraty (<strong>ΔH > 0</strong>), reakcja jest endotermiczna i wymaga ciągłego pobierania energii z otoczenia.</p>",
         "activeHotspotIds": ["hs-chem-endo"],
         "flowArrow": [60, 26, 76, 22]
       }
@@ -355,7 +355,7 @@
       {
         "stepNumber": 2,
         "title": "Krok 2: Ustalenie równowagi dynamicznej",
-        "explanationHtml": "<p>Od chwili <strong>t<sub>równowagi</sub></strong> zachodzi <code>v<sub>1</sub> = v<sub>2</sub> &ne; 0</code> — stężenia makroskopowe są stałe.</p>",
+        "explanationHtml": "<p>Od chwili <strong>t<sub>równowagi</sub></strong> zachodzi <code>v<sub>1</sub> = v<sub>2</sub> ≠ 0</code> — stężenia makroskopowe są stałe.</p>",
         "activeHotspotIds": ["hs-eq-point"],
         "flowArrow": [56, 46, 76, 46]
       },
@@ -420,14 +420,14 @@
       {
         "stepNumber": 1,
         "title": "Krok 1: Bufor octanowy w połowie drogi (pH = pKa)",
-        "explanationHtml": "<p>Częściowe zobojętnienie tworzy <strong>roztwór buforowy (HA + A<sup>&minus;</sup>)</strong> stabilizujący pH podczas dodawania kolejnej objętości NaOH.</p>",
+        "explanationHtml": "<p>Częściowe zobojętnienie tworzy <strong>roztwór buforowy (HA + A<sup>−</sup>)</strong> stabilizujący pH podczas dodawania kolejnej objętości NaOH.</p>",
         "activeHotspotIds": ["hs-tit-start", "hs-tit-buffer"],
         "flowArrow": [20, 66, 38, 58]
       },
       {
         "stepNumber": 2,
         "title": "Krok 2: Gwałtowny skok pH w punkcie równoważnikowym (PR > 7)",
-        "explanationHtml": "<p>Ze względu na hydrolizę anionową soli słabego kwasu i mocnej zasady, punkt równoważnikowy leży w środowisku <strong>zasadowym (pH &gt; 7)</strong>.</p>",
+        "explanationHtml": "<p>Ze względu na hydrolizę anionową soli słabego kwasu i mocnej zasady, punkt równoważnikowy leży w środowisku <strong>zasadowym (pH > 7)</strong>.</p>",
         "activeHotspotIds": ["hs-tit-pr"],
         "flowArrow": [54, 52, 58, 36]
       },
@@ -494,7 +494,7 @@
       {
         "stepNumber": 1,
         "title": "Krok 1: Rozkład ciężaru na równi pochyłej",
-        "explanationHtml": "<p>Wektor <strong>mg</strong> rozkłada się na składową wzdłuż równi (<strong>mg&middot;sin&alpha;</strong>) oraz docisk równoległy do normalnej <strong>N</strong>.</p>",
+        "explanationHtml": "<p>Wektor <strong>mg</strong> rozkłada się na składową wzdłuż równi (<strong>mg·sinα</strong>) oraz docisk równoległy do normalnej <strong>N</strong>.</p>",
         "activeHotspotIds": ["hs-fiz-mg", "hs-fiz-normal"],
         "flowArrow": [22, 49, 22, 66]
       },
@@ -508,7 +508,7 @@
       {
         "stepNumber": 3,
         "title": "Krok 3: Upadek końcowy i zasięg Z",
-        "explanationHtml": "<p>Symetria toru w próżni sprawia, że czas wznoszenia równa się czasowi spadania, dając zasięg maksymalny dla <strong>&alpha; = 45&deg;</strong>.</p>",
+        "explanationHtml": "<p>Symetria toru w próżni sprawia, że czas wznoszenia równa się czasowi spadania, dając zasięg maksymalny dla <strong>α = 45°</strong>.</p>",
         "activeHotspotIds": ["hs-fiz-range"],
         "flowArrow": [72, 45, 92, 76]
       }
@@ -568,21 +568,21 @@
       {
         "stepNumber": 1,
         "title": "Krok 1: Zmiana strumienia magnetycznego indukuje SEM",
-        "explanationHtml": "<p>Szybkość zmiany strumienia <strong>&Delta;&Phi;/&Delta;t</strong> w zwojnicy generuje napięcie przemienne przeciwstawiające się zmianie pola.</p>",
+        "explanationHtml": "<p>Szybkość zmiany strumienia <strong>ΔΦ/Δt</strong> w zwojnicy generuje napięcie przemienne przeciwstawiające się zmianie pola.</p>",
         "activeHotspotIds": ["hs-rlc-faraday"],
         "flowArrow": [12, 35, 34, 35]
       },
       {
         "stepNumber": 2,
         "title": "Krok 2: Przesunięcia fazowe na cewce L i kondensatorze C",
-        "explanationHtml": "<p>Wektor napięcia na cewce (<strong>+90&deg;</strong>) i kondensatorze (<strong>&minus;90&deg;</strong>) są skierowane dokładnie przeciwnie.</p>",
+        "explanationHtml": "<p>Wektor napięcia na cewce (<strong>+90°</strong>) i kondensatorze (<strong>−90°</strong>) są skierowane dokładnie przeciwnie.</p>",
         "activeHotspotIds": ["hs-rlc-r", "hs-rlc-l"],
         "flowArrow": [59, 24, 78, 24]
       },
       {
         "stepNumber": 3,
         "title": "Krok 3: Warunek rezonansu napięć (XL = XC)",
-        "explanationHtml": "<p>W częstości rezonansowej <code>&omega;<sub>0</sub> = 1/&radic;(LC)</code> składowe reaktancyjne znoszą się wzajemnie (<code>Z = R</code>).</p>",
+        "explanationHtml": "<p>W częstości rezonansowej <code>ω<sub>0</sub> = 1/√(LC)</code> składowe reaktancyjne znoszą się wzajemnie (<code>Z = R</code>).</p>",
         "activeHotspotIds": ["hs-rlc-c"],
         "flowArrow": [78, 24, 68, 60]
       }

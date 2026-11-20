@@ -27,7 +27,7 @@ export const chem1_czesc_68_homojadroweCzasteczkiDwuatomoweZOrbitalamiIData: Str
     },
     {
       "pageNumber": 3,
-      "htmlContent": "<h3 id=\"porzadek-poziomow-energetycznych-n2\">Porządek poziomów energetycznych orbitali w N₂</h3><p>Poziomy energetyczne orbitali molekularnych w cząsteczce N₂ można uszeregować według wzrastającej energii: σ2s &lt; σ*2s &lt; π2p<sub>y</sub> = π2p<sub>z</sub> &lt; σ2p<sub>x</sub> &lt; π*2p<sub>y</sub> = π*2p<sub>z</sub> &lt; σ*2p<sub>x</sub>. Poziomy π2p<sub>y</sub> i π2p<sub>z</sub> są zdegenerowane (mają jednakową energię), podobnie jak antywiążące π*2p<sub>y</sub> i π*2p<sub>z</sub>. Poziomy σ2s, σ*2s, σ2p<sub>x</sub> i σ*2p<sub>x</sub> są niezdegenerowane.</p><p>Elektrony walencyjne atomów azotu (łącznie 10 elektronów) obsadzają orbitale zgodnie z regułą Aufbau, zaczynając od najniższego poziomu. W cząsteczce N₂ wszystkie orbitale wiążące są zapełnione, a orbitale antywiążące pozostają puste, co prowadzi do powstania potrójnego wiązania (jedno σ i dwa π) i wyjaśnia dużą trwałość tej cząsteczki.</p>"
+      "htmlContent": "<h3 id=\"porzadek-poziomow-energetycznych-n2\">Porządek poziomów energetycznych orbitali w N₂</h3><p>Poziomy energetyczne orbitali molekularnych w cząsteczce N₂ można uszeregować według wzrastającej energii: σ2s < σ*2s < π2p<sub>y</sub> = π2p<sub>z</sub> < σ2p<sub>x</sub> < π*2p<sub>y</sub> = π*2p<sub>z</sub> < σ*2p<sub>x</sub>. Poziomy π2p<sub>y</sub> i π2p<sub>z</sub> są zdegenerowane (mają jednakową energię), podobnie jak antywiążące π*2p<sub>y</sub> i π*2p<sub>z</sub>. Poziomy σ2s, σ*2s, σ2p<sub>x</sub> i σ*2p<sub>x</sub> są niezdegenerowane.</p><p>Elektrony walencyjne atomów azotu (łącznie 10 elektronów) obsadzają orbitale zgodnie z regułą Aufbau, zaczynając od najniższego poziomu. W cząsteczce N₂ wszystkie orbitale wiążące są zapełnione, a orbitale antywiążące pozostają puste, co prowadzi do powstania potrójnego wiązania (jedno σ i dwa π) i wyjaśnia dużą trwałość tej cząsteczki.</p>"
     }
   ],
   "chapterQuiz": [
@@ -41,7 +41,7 @@ export const chem1_czesc_68_homojadroweCzasteczkiDwuatomoweZOrbitalamiIData: Str
     },
     {
       "question": "Uszereguj orbitale molekularne N₂ według wzrastającej energii.",
-      "answer": "Kolejność: σ2s &lt; σ*2s &lt; π2p<sub>y</sub> = π2p<sub>z</sub> &lt; σ2p<sub>x</sub> &lt; π*2p<sub>y</sub> = π*2p<sub>z</sub> &lt; σ*2p<sub>x</sub>."
+      "answer": "Kolejność: σ2s < σ*2s < π2p<sub>y</sub> = π2p<sub>z</sub> < σ2p<sub>x</sub> < π*2p<sub>y</sub> = π*2p<sub>z</sub> < σ*2p<sub>x</sub>."
     }
   ]
 };

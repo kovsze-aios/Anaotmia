@@ -13,9 +13,9 @@ export interface ReaderPaginationProps {
   basePath: string;
 }
 
-/** 44px minimum in both axes, matching the touch-target floor used elsewhere. */
+/** 44px minimum height, strict symmetry inside CSS Grid cells (`min-w-0`). */
 const CONTROL =
-  "group flex min-h-11 flex-1 items-center gap-3 rounded-xl border px-4 py-3 " +
+  "group flex h-full min-h-[4.5rem] w-full min-w-0 items-center justify-between gap-3 rounded-xl border px-4 py-3.5 " +
   "transition-colors focus-ring";
 
 /**
@@ -33,16 +33,16 @@ export function ReaderPagination({ position, basePath }: ReaderPaginationProps) 
   return (
     <nav
       aria-label={t.reader.jumpToChapter}
-      className="mx-auto mt-12 w-full max-w-3xl px-4 pb-16"
+      className="mx-auto mt-12 w-full max-w-3xl px-4 pb-16 sm:pb-24"
     >
-      <p className="mb-3 text-center text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
+      <p className="mb-4 text-center text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
         {t.reader.chapterOf
           .replace("{current}", n(position.order))
           .replace("{total}", n(position.totalChapters))}
       </p>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
-        {prev ? (
+      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+        {prev && (
           <Link
             href={`${basePath}/${prev.id}`}
             rel="prev"
@@ -56,51 +56,42 @@ export function ReaderPagination({ position, basePath }: ReaderPaginationProps) 
               className="size-5 shrink-0 text-zinc-400 transition-transform group-hover:-translate-x-0.5 dark:text-zinc-500"
               aria-hidden="true"
             />
-            <span className="min-w-0 text-left">
+            <span className="min-w-0 flex-1 text-left">
               <span className="block text-[11px] uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
                 {t.reader.previous}
               </span>
-              <span className="block truncate text-sm text-zinc-800 dark:text-zinc-200">
+              <span className="mt-0.5 block break-words line-clamp-2 text-sm font-medium leading-snug text-zinc-800 dark:text-zinc-200">
                 {prev.title}
               </span>
               {prev.crossesVolume && (
-                <span className="block truncate text-[11px] text-zinc-400 dark:text-zinc-500">
+                <span className="mt-0.5 block truncate text-[11px] text-zinc-400 dark:text-zinc-500">
                   {prev.volumeShortTitle}
                 </span>
               )}
             </span>
           </Link>
-        ) : (
-          <div
-            className={cn(CONTROL, "border-dashed border-zinc-200 dark:border-zinc-800")}
-            aria-hidden="true"
-          >
-            <ChevronLeft className="size-5 shrink-0 text-zinc-300 dark:text-zinc-700" />
-            <span className="text-sm text-zinc-400 dark:text-zinc-600">
-              {t.reader.startOfBook}
-            </span>
-          </div>
         )}
 
-        {next ? (
+        {next && (
           <Link
             href={`${basePath}/${next.id}`}
             rel="next"
             className={cn(
               CONTROL,
-              "justify-end border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50",
+              !prev && "sm:col-start-2",
+              "border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50",
               "dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/60",
             )}
           >
-            <span className="min-w-0 text-right">
+            <span className="min-w-0 flex-1 text-right">
               <span className="block text-[11px] uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
                 {t.reader.next}
               </span>
-              <span className="block truncate text-sm text-zinc-800 dark:text-zinc-200">
+              <span className="mt-0.5 block break-words line-clamp-2 text-sm font-medium leading-snug text-zinc-800 dark:text-zinc-200">
                 {next.title}
               </span>
               {next.crossesVolume && (
-                <span className="block truncate text-[11px] text-zinc-400 dark:text-zinc-500">
+                <span className="mt-0.5 block truncate text-[11px] text-zinc-400 dark:text-zinc-500">
                   {t.reader.newVolume} {next.volumeShortTitle}
                 </span>
               )}
@@ -110,19 +101,6 @@ export function ReaderPagination({ position, basePath }: ReaderPaginationProps) 
               aria-hidden="true"
             />
           </Link>
-        ) : (
-          <div
-            className={cn(
-              CONTROL,
-              "justify-end border-dashed border-zinc-200 dark:border-zinc-800",
-            )}
-            aria-hidden="true"
-          >
-            <span className="text-sm text-zinc-400 dark:text-zinc-600">
-              {t.reader.endOfBook}
-            </span>
-            <ChevronRight className="size-5 shrink-0 text-zinc-300 dark:text-zinc-700" />
-          </div>
         )}
       </div>
     </nav>

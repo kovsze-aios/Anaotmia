@@ -612,9 +612,10 @@ export function CkeExamTasksSection({
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <h2
           id="cke-chapter-tasks-heading"
-          className="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
+          className="inline-flex items-center gap-2 text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
         >
-          📄 Zadania Maturalne CKE z tego tematu
+          <FileText className="size-4 shrink-0" aria-hidden="true" />
+          Zadania Maturalne CKE z tego tematu
         </h2>
         <span className="rounded-full border border-zinc-800 bg-zinc-950 px-2.5 py-0.5 text-xs font-medium text-zinc-400">
           {tasks.length} {tasks.length === 1 ? "wiązka CKE" : "wiązek CKE"}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Home } from "lucide-react";
+import { BookOpen, Box, Home } from "lucide-react";
 import { ActiveRecall } from "@/components/ActiveRecall";
 import { CkeSolvedPdfSheetViewer } from "@/components/matura/CkeExamTasksSection";
 import { getCkeExamSheets } from "@/data/cke-exams";
@@ -298,15 +298,17 @@ function MaturaSubjectViewInner({
           <div className="flex flex-col gap-1.5 border-t border-zinc-200 pt-3 dark:border-zinc-800/80">
             <Link
               href={`/theory/${subjectKey}-matura-2023`}
-              className="focus-ring rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
+              className="focus-ring inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
             >
-              📘 Podręcznik {subjectName} 2023+
+              <BookOpen className="size-3.5 shrink-0" aria-hidden="true" />
+              <span>Podręcznik {subjectName} 2023+</span>
             </Link>
             <Link
               href="/atlas"
-              className="focus-ring rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
+              className="focus-ring inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-xs text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-zinc-100"
             >
-              🫀 Interaktywny Atlas 3D Pro
+              <Box className="size-3.5 shrink-0" aria-hidden="true" />
+              <span>Interaktywny Atlas 3D Pro</span>
             </Link>
           </div>
         </div>
@@ -317,7 +319,7 @@ function MaturaSubjectViewInner({
         <div className="matura-content__inner">
           {/* Unified Breadcrumb Navigation Bar matching TheoryReaderPage */}
           <nav aria-label="Okruszki" className="mb-3 w-full text-sm">
-            <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
+            <ol className="flex min-w-0 flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
               <li>
                 <Link
                   href="/"
@@ -347,7 +349,7 @@ function MaturaSubjectViewInner({
               <li aria-hidden="true">/</li>
               <li
                 aria-current="page"
-                className="truncate font-medium text-zinc-800 dark:text-zinc-200"
+                className="min-w-0 truncate font-medium text-zinc-800 dark:text-zinc-200"
               >
                 {selectedExamLabel}
               </li>

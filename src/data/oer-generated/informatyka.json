@@ -25,7 +25,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"notacja-big-o\">Asymptotyczna złożoność czasowa i pamięciowa</h2><p>Do oceny skalowalności algorytmów względem rozmiaru danych wejściowych <em>n</em> stosuje się <strong>notację Big-O</strong> opisującą górne ograniczenie tempa wzrostu czasu wykonania lub zużycia pamięci przy <em>n &rarr; &infin;</em>. Stałe czynniki i wyrazy niższego rzędu pomija się (<code>O(3n² + 12n + 5) = O(n²)</code>).</p><p>W praktyce rozróżniamy złożoność pesymistyczną (najgorszy przypadek), oczekiwaną (dla algorytmów randomizowanych) oraz <strong>zamortyzowaną</strong> — uśredniającą sporadycznie kosztowne operacje (np. podwajanie tablicy dynamicznej) na ciąg <em>m</em> operacji, co daje zamortyzowany czas <code>O(1)</code> dla operacji <code>append</code>.</p>"
+          "htmlContent": "<h2 id=\"notacja-big-o\">Asymptotyczna złożoność czasowa i pamięciowa</h2><p>Do oceny skalowalności algorytmów względem rozmiaru danych wejściowych <em>n</em> stosuje się <strong>notację Big-O</strong> opisującą górne ograniczenie tempa wzrostu czasu wykonania lub zużycia pamięci przy <em>n → ∞</em>. Stałe czynniki i wyrazy niższego rzędu pomija się (<code>O(3n² + 12n + 5) = O(n²)</code>).</p><p>W praktyce rozróżniamy złożoność pesymistyczną (najgorszy przypadek), oczekiwaną (dla algorytmów randomizowanych) oraz <strong>zamortyzowaną</strong> — uśredniającą sporadycznie kosztowne operacje (np. podwajanie tablicy dynamicznej) na ciąg <em>m</em> operacji, co daje zamortyzowany czas <code>O(1)</code> dla operacji <code>append</code>.</p>"
         },
         {
           "pageNumber": 2,
@@ -33,7 +33,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"tablice-mieszajace\">Haszowanie i oczekiwany czas O(1) dla słowników</h2><p><strong>Tablica mieszająca (Hash Table)</strong> mapuje klucz ze zbioru o dowolnym rozmiarze na indeks małej tablicy kubełków za pomocą funkcji skrótu <code>h(k)</code>. Aby uniknąć degeneracji w przypadku kolizji, stosuje się <strong>łańcuchowanie (chaining)</strong> lub adresowanie otwarte (np. próbkowanie liniowe).</p><p>Przy utrzymaniu współczynnika wypełnienia <code>&lambda; = n / m &le; O(1)</code> (poprzez automatyczne przehaszowanie przy powiększeniu tablicy) oczekiwany czas wyszukania, wstawienia i usunięcia klucza wynosi <code>O(1)</code>.</p>"
+          "htmlContent": "<h2 id=\"tablice-mieszajace\">Haszowanie i oczekiwany czas O(1) dla słowników</h2><p><strong>Tablica mieszająca (Hash Table)</strong> mapuje klucz ze zbioru o dowolnym rozmiarze na indeks małej tablicy kubełków za pomocą funkcji skrótu <code>h(k)</code>. Aby uniknąć degeneracji w przypadku kolizji, stosuje się <strong>łańcuchowanie (chaining)</strong> lub adresowanie otwarte (np. próbkowanie liniowe).</p><p>Przy utrzymaniu współczynnika wypełnienia <code>λ = n / m ≤ O(1)</code> (poprzez automatyczne przehaszowanie przy powiększeniu tablicy) oczekiwany czas wyszukania, wstawienia i usunięcia klucza wynosi <code>O(1)</code>.</p>"
         }
       ],
       "chapterQuiz": [
@@ -151,7 +151,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"klucze-join\">Klucze, integralność referencyjna i zapytania JOIN</h2><p>W relacyjnej bazie danych wiersze (krotki) tabeli jednoznacznie identyfikuje <strong>klucz główny (PRIMARY KEY)</strong>, a powiązania między tabelami zapewnia <strong>klucz obcy (FOREIGN KEY)</strong> pilnujący integralności referencyjnej (brak osieroconych rekordów).</p><p>Łączenie danych między encjami (np. pacjent &rarr; wyniki badań laboratoryjnych) realizują złączenia <code>INNER JOIN</code> (tylko pasujące pary), <code>LEFT JOIN</code> (wszystkie rekordy z tabeli lewej mimo braku dopasowania) oraz grupowanie z agregacjami <code>GROUP BY</code> i filtrowaniem grup <code>HAVING</code>.</p>"
+          "htmlContent": "<h2 id=\"klucze-join\">Klucze, integralność referencyjna i zapytania JOIN</h2><p>W relacyjnej bazie danych wiersze (krotki) tabeli jednoznacznie identyfikuje <strong>klucz główny (PRIMARY KEY)</strong>, a powiązania między tabelami zapewnia <strong>klucz obcy (FOREIGN KEY)</strong> pilnujący integralności referencyjnej (brak osieroconych rekordów).</p><p>Łączenie danych między encjami (np. pacjent → wyniki badań laboratoryjnych) realizują złączenia <code>INNER JOIN</code> (tylko pasujące pary), <code>LEFT JOIN</code> (wszystkie rekordy z tabeli lewej mimo braku dopasowania) oraz grupowanie z agregacjami <code>GROUP BY</code> i filtrowaniem grup <code>HAVING</code>.</p>"
         },
         {
           "pageNumber": 2,
@@ -213,7 +213,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"przetwarzanie-fasta\">Reprezentacja sekwencji biologicznych i statystyka k-merów</h2><p>Sekwencje nukleotydowe w bioinformatyce reprezentowane są jako niezmienne łańcuchy znaków z alfabetu <code>{A, C, G, T, N}</code> w plikach tekstowych <strong>FASTA</strong> (nagłówek <code>&gt;</code> i ciąg zasad). Obliczanie zawartości par <strong>G+C</strong> (wyznaczającej temperaturę topnienia T<sub>m</sub> starterów PCR) czy transkrypcja do nici komplementarnej przebiega liniowo w czasie <code>O(n)</code> z użyciem map słownikowych parowania zasad.</p>"
+          "htmlContent": "<h2 id=\"przetwarzanie-fasta\">Reprezentacja sekwencji biologicznych i statystyka k-merów</h2><p>Sekwencje nukleotydowe w bioinformatyce reprezentowane są jako niezmienne łańcuchy znaków z alfabetu <code>{A, C, G, T, N}</code> w plikach tekstowych <strong>FASTA</strong> (nagłówek <code>></code> i ciąg zasad). Obliczanie zawartości par <strong>G+C</strong> (wyznaczającej temperaturę topnienia T<sub>m</sub> starterów PCR) czy transkrypcja do nici komplementarnej przebiega liniowo w czasie <code>O(n)</code> z użyciem map słownikowych parowania zasad.</p>"
         },
         {
           "pageNumber": 2,
@@ -221,7 +221,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"programowanie-dynamiczne\">Programowanie dynamiczne — dopasowanie globalne i dystans edycyjny</h2><p>Porównywanie homologicznych genów uwzględniające mutacje punktowe (substytucje) oraz insercje/delecje (<em>indels</em>) nie może polegać na prostym porównaniu znak-po-znaku. Zamiast wykładniczego sprawdzania wszystkich kombinacji stosuje się <strong>programowanie dynamiczne</strong>.</p><p>Algorytm <strong>Needlemana–Wunscha</strong> (dopasowanie globalne) oraz <strong>Smitha–Watermana</strong> (dopasowanie lokalne) wypełnia macierz punktacji o wymiarach <code>(n+1) &times; (m+1)</code> w czasie <code>O(n&middot;m)</code>, wyznaczając optymalne wyrównanie sekwencji metodą wstecznego śledzenia (traceback).</p>"
+          "htmlContent": "<h2 id=\"programowanie-dynamiczne\">Programowanie dynamiczne — dopasowanie globalne i dystans edycyjny</h2><p>Porównywanie homologicznych genów uwzględniające mutacje punktowe (substytucje) oraz insercje/delecje (<em>indels</em>) nie może polegać na prostym porównaniu znak-po-znaku. Zamiast wykładniczego sprawdzania wszystkich kombinacji stosuje się <strong>programowanie dynamiczne</strong>.</p><p>Algorytm <strong>Needlemana–Wunscha</strong> (dopasowanie globalne) oraz <strong>Smitha–Watermana</strong> (dopasowanie lokalne) wypełnia macierz punktacji o wymiarach <code>(n+1) × (m+1)</code> w czasie <code>O(n·m)</code>, wyznaczając optymalne wyrównanie sekwencji metodą wstecznego śledzenia (traceback).</p>"
         }
       ],
       "chapterQuiz": [
@@ -338,7 +338,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"kopiec-tablica\">Kompletne drzewo binarne bez wskaźników</h2><p><strong>Kopiec binarny (Min-Heap)</strong> przechowuje elementy w kompletnej strukturze drzewiastej, gdzie klucz każdego rodzica jest &le; od kluczy jego dzieci. Dzięki kompletności całe drzewo mieści się w zwykłej ciągłej tablicy o indeksach od 0 bez narzutu pamięciowego na wskaźniki: dla węzła <code>i</code> rodzic leży pod indeksem <code>(i &minus; 1) // 2</code>, a dzieci pod <code>2i + 1</code> oraz <code>2i + 2</code>.</p>"
+          "htmlContent": "<h2 id=\"kopiec-tablica\">Kompletne drzewo binarne bez wskaźników</h2><p><strong>Kopiec binarny (Min-Heap)</strong> przechowuje elementy w kompletnej strukturze drzewiastej, gdzie klucz każdego rodzica jest ≤ od kluczy jego dzieci. Dzięki kompletności całe drzewo mieści się w zwykłej ciągłej tablicy o indeksach od 0 bez narzutu pamięciowego na wskaźniki: dla węzła <code>i</code> rodzic leży pod indeksem <code>(i − 1) // 2</code>, a dzieci pod <code>2i + 1</code> oraz <code>2i + 2</code>.</p>"
         },
         {
           "pageNumber": 2,
@@ -346,7 +346,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"heapsort-floyd\">Budowa kopca algorytmem Floyda w O(n) i Heapsort</h2><p>Zbudowanie kopca z dowolnej tablicy od dołu w górę (od indeksu <code>n // 2 &minus; 1</code> do 0 metodą <em>sift-down</em>) ma złożoność liniową <strong>O(n)</strong>, bo większość węzłów znajduje się blisko liści. Następnie wielokrotne zdjęcie maksimum w Max-Heap daje sortowanie <strong>Heapsort</strong> gwarantujące <code>O(n log n)</code> w najgorszym przypadku przy stałej pamięci <code>O(1)</code> w miejscu.</p>"
+          "htmlContent": "<h2 id=\"heapsort-floyd\">Budowa kopca algorytmem Floyda w O(n) i Heapsort</h2><p>Zbudowanie kopca z dowolnej tablicy od dołu w górę (od indeksu <code>n // 2 − 1</code> do 0 metodą <em>sift-down</em>) ma złożoność liniową <strong>O(n)</strong>, bo większość węzłów znajduje się blisko liści. Następnie wielokrotne zdjęcie maksimum w Max-Heap daje sortowanie <strong>Heapsort</strong> gwarantujące <code>O(n log n)</code> w najgorszym przypadku przy stałej pamięci <code>O(1)</code> w miejscu.</p>"
         }
       ],
       "chapterQuiz": [

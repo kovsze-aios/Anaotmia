@@ -24,11 +24,11 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"jonizacja-pka\">Przenikanie przez błony i zjawisko pułapki jonowej</h2><p>Większość leków to słabe kwasy lub słabe zasady, które przenikają przez błony lipidowe metodą dyfuzji biernej głównie w formie <strong>niezjonizowanej (lipofilnej)</strong>. Stosunek formy zjonizowanej do niezjonizowanej w danym pH określa równanie <strong>Hendersona–Hasselbalcha</strong>:</p><p><code>pH &minus; pK<sub>a</sub> = log<sub>10</sub>([A<sup>&minus;</sup>]/[HA])</code> (dla słabych kwasów) oraz <code>pH &minus; pK<sub>a</sub> = log<sub>10</sub>([B]/[BH<sup>+</sup>])</code> (dla słabych zasad).</p><p>Zjawisko <strong>pułapki jonowej</strong> wykorzystuje się klinicznie w toksykologii: alkalizacja moczu wodorowęglanem sodu zwiększa jonizację słabego kwasu (np. salicylanów w nerkach), zapobiegając jego resorpcji zwrotnej w kanalikach i przyspieszając wydalanie.</p>"
+          "htmlContent": "<h2 id=\"jonizacja-pka\">Przenikanie przez błony i zjawisko pułapki jonowej</h2><p>Większość leków to słabe kwasy lub słabe zasady, które przenikają przez błony lipidowe metodą dyfuzji biernej głównie w formie <strong>niezjonizowanej (lipofilnej)</strong>. Stosunek formy zjonizowanej do niezjonizowanej w danym pH określa równanie <strong>Hendersona–Hasselbalcha</strong>:</p><p><code>pH − pK<sub>a</sub> = log<sub>10</sub>([A<sup>−</sup>]/[HA])</code> (dla słabych kwasów) oraz <code>pH − pK<sub>a</sub> = log<sub>10</sub>([B]/[BH<sup>+</sup>])</code> (dla słabych zasad).</p><p>Zjawisko <strong>pułapki jonowej</strong> wykorzystuje się klinicznie w toksykologii: alkalizacja moczu wodorowęglanem sodu zwiększa jonizację słabego kwasu (np. salicylanów w nerkach), zapobiegając jego resorpcji zwrotnej w kanalikach i przyspieszając wydalanie.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"dystrybucja-vd\">Biodostępność (F), efekt pierwszego przejścia i objętość dystrybucji</h2><p>Po podaniu doustnym lek wchłaniany w jelicie cienkim trafia żyłą wrotną do wątroby, gdzie część dawki może ulec unieczynnieniu jeszcze przed wejściem do krążenia systemowego (<strong>efekt pierwszego przejścia</strong>). Podanie dożylne daje 100% biodostępności (<em>F = 1</em>).</p><p><strong>Pozorna objętość dystrybucji (V<sub>d</sub>)</strong> wyraża stosunek ilości leku w ustroju do jego stężenia w osoczu (<code>V<sub>d</sub> = Dawka / C<sub>0</sub></code>). Leki silnie związane z albuminami osocza mają niskie V<sub>d</sub> (&approx; 4–5 l), natomiast związki bardzo lipofilne kumulujące się w tkance tłuszczowej lub mięśniach osiągają V<sub>d</sub> przekraczające objętość całego ciała (np. &gt; 200 l).</p>"
+          "htmlContent": "<h2 id=\"dystrybucja-vd\">Biodostępność (F), efekt pierwszego przejścia i objętość dystrybucji</h2><p>Po podaniu doustnym lek wchłaniany w jelicie cienkim trafia żyłą wrotną do wątroby, gdzie część dawki może ulec unieczynnieniu jeszcze przed wejściem do krążenia systemowego (<strong>efekt pierwszego przejścia</strong>). Podanie dożylne daje 100% biodostępności (<em>F = 1</em>).</p><p><strong>Pozorna objętość dystrybucji (V<sub>d</sub>)</strong> wyraża stosunek ilości leku w ustroju do jego stężenia w osoczu (<code>V<sub>d</sub> = Dawka / C<sub>0</sub></code>). Leki silnie związane z albuminami osocza mają niskie V<sub>d</sub> (≈ 4–5 l), natomiast związki bardzo lipofilne kumulujące się w tkance tłuszczowej lub mięśniach osiągają V<sub>d</sub> przekraczające objętość całego ciała (np. > 200 l).</p>"
         },
         {
           "pageNumber": 3,
@@ -86,11 +86,11 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"rzedowosc-kinetyki\">Kinetyka I rzędu vs nasycalna eliminacja 0 rzędu</h2><p>W większości terapii eliminacja przebiega zgodnie z <strong>kinetyką I rzędu</strong>: w jednostce czasu usuwany jest stały <em>ułamek</em> aktualnej ilości leku w ustroju, a okres półtrwania <code>t<sub>1/2</sub> = (0,693 &middot; V<sub>d</sub>) / CL</code> nie zależy od dawki.</p><p>Wybrane substancje wysycające enzymy metabolizujące (klasycznie <strong>etanol, fenytoina w dawkach terapeutycznych, wysokie dawki salicylanów</strong>) przechodzą w <strong>kinetykę 0 rzędu</strong> (liniowy spadek stężenia — stała ilość na godzinę niezależnie od stężenia). Nawet niewielkie zwiększenie dawki w kinetyce nasycalnej powoduje nieproporcjonalnie gwałtowny skok stężenia we krwi.</p>"
+          "htmlContent": "<h2 id=\"rzedowosc-kinetyki\">Kinetyka I rzędu vs nasycalna eliminacja 0 rzędu</h2><p>W większości terapii eliminacja przebiega zgodnie z <strong>kinetyką I rzędu</strong>: w jednostce czasu usuwany jest stały <em>ułamek</em> aktualnej ilości leku w ustroju, a okres półtrwania <code>t<sub>1/2</sub> = (0,693 · V<sub>d</sub>) / CL</code> nie zależy od dawki.</p><p>Wybrane substancje wysycające enzymy metabolizujące (klasycznie <strong>etanol, fenytoina w dawkach terapeutycznych, wysokie dawki salicylanów</strong>) przechodzą w <strong>kinetykę 0 rzędu</strong> (liniowy spadek stężenia — stała ilość na godzinę niezależnie od stężenia). Nawet niewielkie zwiększenie dawki w kinetyce nasycalnej powoduje nieproporcjonalnie gwałtowny skok stężenia we krwi.</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"dawkowanie-css\">Osiąganie stanu stacjonarnego (Css) i dawki nasycające</h2><p>Przy regularnym dawkowaniu w kinetyce I rzędu organizm osiąga <strong>stan stacjonarny (C<sub>ss</sub>)</strong> po upływie około <strong>4–5 okresów półtrwania (t<sub>1/2</sub>)</strong> — niezależnie od wielkości pojedynczej dawki (dawka reguluje wysokość poziomu C<sub>ss</sub>, nie czas jego osiągnięcia).</p><p>Gdy potrzebny jest natychmiastowy efekt (np. lidokaina, amiodaron), stosuje się jednorazową <strong>dawkę nasycającą</strong> zależną wyłącznie od objętości dystrybucji: <code>D<sub>L</sub> = (C<sub>ss</sub> &middot; V<sub>d</sub>) / F</code>, natomiast dawkę podtrzymującą wyznacza klirens: <code>D<sub>M</sub> = (C<sub>ss</sub> &middot; CL &middot; &tau;) / F</code>.</p>"
+          "htmlContent": "<h2 id=\"dawkowanie-css\">Osiąganie stanu stacjonarnego (Css) i dawki nasycające</h2><p>Przy regularnym dawkowaniu w kinetyce I rzędu organizm osiąga <strong>stan stacjonarny (C<sub>ss</sub>)</strong> po upływie około <strong>4–5 okresów półtrwania (t<sub>1/2</sub>)</strong> — niezależnie od wielkości pojedynczej dawki (dawka reguluje wysokość poziomu C<sub>ss</sub>, nie czas jego osiągnięcia).</p><p>Gdy potrzebny jest natychmiastowy efekt (np. lidokaina, amiodaron), stosuje się jednorazową <strong>dawkę nasycającą</strong> zależną wyłącznie od objętości dystrybucji: <code>D<sub>L</sub> = (C<sub>ss</sub> · V<sub>d</sub>) / F</code>, natomiast dawkę podtrzymującą wyznacza klirens: <code>D<sub>M</sub> = (C<sub>ss</sub> · CL · τ) / F</code>.</p>"
         },
         {
           "pageNumber": 3,
@@ -152,7 +152,7 @@
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"rodzaje-agonistow\">Spektrum aktywności wewnętrznej (&alpha;)</h2><p><strong>Agonista pełny</strong> (&alpha; = 1) stabilizuje aktywną konformację receptora i osiąga pełne E<sub>max</sub> tkanki. <strong>Agonista częściowy</strong> (0 &lt; &alpha; &lt; 1, np. buprenorfina, aripiprazol) wykazuje niższe E<sub>max</sub>, a w obecności wysokich stężeń agonisty pełnego może zachowywać się jak <em>antagonista kompetycyjny</em>.</p><p><strong>Agonista odwrotny</strong> stabilizuje nieaktywny stan receptora wykazującego konstytutywną aktywność podstawową, obniżając odpowiedź poniżej poziomu bazowego.</p>"
+          "htmlContent": "<h2 id=\"rodzaje-agonistow\">Spektrum aktywności wewnętrznej (α)</h2><p><strong>Agonista pełny</strong> (α = 1) stabilizuje aktywną konformację receptora i osiąga pełne E<sub>max</sub> tkanki. <strong>Agonista częściowy</strong> (0 < α < 1, np. buprenorfina, aripiprazol) wykazuje niższe E<sub>max</sub>, a w obecności wysokich stężeń agonisty pełnego może zachowywać się jak <em>antagonista kompetycyjny</em>.</p><p><strong>Agonista odwrotny</strong> stabilizuje nieaktywny stan receptora wykazującego konstytutywną aktywność podstawową, obniżając odpowiedź poniżej poziomu bazowego.</p>"
         },
         {
           "pageNumber": 3,
@@ -214,11 +214,11 @@
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"uklad-adrenergiczny\">Podtypy receptorów adrenergicznych i efekty narządowe</h2><ul><li><strong>&alpha;<sub>1</sub> (G<sub>q</sub>):</strong> skurcz naczyń oporowych (wzrost ciśnienia tętniczego), skurcz zwieracza pęcherza i rozwieracza źrenicy.</li><li><strong>&alpha;<sub>2</sub> (G<sub>i</sub>):</strong> autoreceptor presynaptyczny hamujący uwalnianie noradrenaliny w OUN i na obwodzie (wykorzystywany przez klonidynę i metyldopę).</li><li><strong>&beta;<sub>1</sub> (G<sub>s</sub>):</strong> wzrost częstości (chronotropizm +), siły skurczu (inotropizm +) serca oraz uwalniania reniny w nerkach.</li><li><strong>&beta;<sub>2</sub> (G<sub>s</sub>):</strong> rozszerzenie oskrzeli (salbutamol w astmie) oraz naczyń mięśni szkieletowych, glikogenoliza.</li></ul>"
+          "htmlContent": "<h2 id=\"uklad-adrenergiczny\">Podtypy receptorów adrenergicznych i efekty narządowe</h2><ul><li><strong>α<sub>1</sub> (G<sub>q</sub>):</strong> skurcz naczyń oporowych (wzrost ciśnienia tętniczego), skurcz zwieracza pęcherza i rozwieracza źrenicy.</li><li><strong>α<sub>2</sub> (G<sub>i</sub>):</strong> autoreceptor presynaptyczny hamujący uwalnianie noradrenaliny w OUN i na obwodzie (wykorzystywany przez klonidynę i metyldopę).</li><li><strong>β<sub>1</sub> (G<sub>s</sub>):</strong> wzrost częstości (chronotropizm +), siły skurczu (inotropizm +) serca oraz uwalniania reniny w nerkach.</li><li><strong>β<sub>2</sub> (G<sub>s</sub>):</strong> rozszerzenie oskrzeli (salbutamol w astmie) oraz naczyń mięśni szkieletowych, glikogenoliza.</li></ul>"
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"blokery-autonomiczne\">Kardioselektywne β₁-blokery i przeciwwskazania</h2><p>Antagoniści receptorów adrenergicznych dzielą się na nieselektywne (&beta;<sub>1</sub>/&beta;<sub>2</sub>, np. propranolol) oraz kardioselektywne (&beta;<sub>1</sub>, np. bisoprolol, metoprolol). Kardioselektywność minimalizuje ryzyko skurczu oskrzeli u chorych z POChP lub łagodną astmą.</p><p>Przykładowa interakcja diagnostyczna: podanie nieselektywnego &beta;-blokera może maskować tachykardię wywołaną przez hipoglikemię u pacjentów z cukrzycą, opóźniając rozpoznanie niedocukrzenia.</p>"
+          "htmlContent": "<h2 id=\"blokery-autonomiczne\">Kardioselektywne β₁-blokery i przeciwwskazania</h2><p>Antagoniści receptorów adrenergicznych dzielą się na nieselektywne (β<sub>1</sub>/β<sub>2</sub>, np. propranolol) oraz kardioselektywne (β<sub>1</sub>, np. bisoprolol, metoprolol). Kardioselektywność minimalizuje ryzyko skurczu oskrzeli u chorych z POChP lub łagodną astmą.</p><p>Przykładowa interakcja diagnostyczna: podanie nieselektywnego β-blokera może maskować tachykardię wywołaną przez hipoglikemię u pacjentów z cukrzycą, opóźniając rozpoznanie niedocukrzenia.</p>"
         }
       ],
       "chapterQuiz": [
@@ -280,7 +280,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"opioidy-nalokson\">Analgezja opioidowa i odwracanie depresji oddechowej</h2><p>Silne leki przeciwbólowe (morfina, oksykodon, fentanyl) są agonistami receptorów opioidowych <strong>&mu; (G<sub>i</sub>)</strong>: otwierają kanały potasowe K<sup>+</sup> na błonie postsynaptycznej i hamują presynaptyczne kanały Ca<sup>2+</sup>, wygaszając transmisję bodźców nocyceptywnych w rogu tylnym rdzenia i śródmózgowiu.</p><p>Najgroźniejszym skutkiem przedawkowania jest hamowanie wrażliwości ośrodka oddechowego w pniu mózgu na CO<sub>2</sub>. Szybko działającym kompetycyjnym antagonistą o krótkim okresie półtrwania (wymagającym powtarzania dawek przy opioidach długodziałających) jest <strong>nalokson</strong>.</p>"
+          "htmlContent": "<h2 id=\"opioidy-nalokson\">Analgezja opioidowa i odwracanie depresji oddechowej</h2><p>Silne leki przeciwbólowe (morfina, oksykodon, fentanyl) są agonistami receptorów opioidowych <strong>μ (G<sub>i</sub>)</strong>: otwierają kanały potasowe K<sup>+</sup> na błonie postsynaptycznej i hamują presynaptyczne kanały Ca<sup>2+</sup>, wygaszając transmisję bodźców nocyceptywnych w rogu tylnym rdzenia i śródmózgowiu.</p><p>Najgroźniejszym skutkiem przedawkowania jest hamowanie wrażliwości ośrodka oddechowego w pniu mózgu na CO<sub>2</sub>. Szybko działającym kompetycyjnym antagonistą o krótkim okresie półtrwania (wymagającym powtarzania dawek przy opioidach długodziałających) jest <strong>nalokson</strong>.</p>"
         }
       ],
       "chapterQuiz": [
@@ -334,7 +334,7 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"antybiotyki-sciana\">Antybiotyki hamujące syntezę ściany komórkowej</h2><p>Selektywna toksyczność <strong>&beta;-laktamów</strong> (penicyliny, cefalosporyny, karbapenemy) wynika z faktu, że komórki ludzkie nie posiadają peptydoglikanu. Antybiotyki te wiążą białka <strong>PBP (transpeptydazy)</strong>, blokując sieciowanie mureiny i wywołując lizę osmotyczną bakterii (działanie bakteriobójcze w fazie wzrostu).</p>"
+          "htmlContent": "<h2 id=\"antybiotyki-sciana\">Antybiotyki hamujące syntezę ściany komórkowej</h2><p>Selektywna toksyczność <strong>β-laktamów</strong> (penicyliny, cefalosporyny, karbapenemy) wynika z faktu, że komórki ludzkie nie posiadają peptydoglikanu. Antybiotyki te wiążą białka <strong>PBP (transpeptydazy)</strong>, blokując sieciowanie mureiny i wywołując lizę osmotyczną bakterii (działanie bakteriobójcze w fazie wzrostu).</p>"
         },
         {
           "pageNumber": 2,
@@ -342,7 +342,7 @@
         },
         {
           "pageNumber": 3,
-          "htmlContent": "<h2 id=\"mechanizmy-opornosci\">Cztery główne strategie oporności drobnoustrojów</h2><ul><li><strong>Enzymatyczna hydroliza:</strong> &beta;-laktamazy (w tym ESBL) rozcinają pierścień &beta;-laktamowy (stąd kojarzenie amoksycyliny z kwasem klawulanowym).</li><li><strong>Modyfikacja miejsca docelowego:</strong> zmienione białko PBP2a w gronkowcu <strong>MRSA</strong> uodparnia go na większość &beta;-laktamów.</li><li><strong>Pompy wyrzutowe (efflux pumps)</strong> i utrata poryn w ścianie Gram-ujemnej.</li></ul>"
+          "htmlContent": "<h2 id=\"mechanizmy-opornosci\">Cztery główne strategie oporności drobnoustrojów</h2><ul><li><strong>Enzymatyczna hydroliza:</strong> β-laktamazy (w tym ESBL) rozcinają pierścień β-laktamowy (stąd kojarzenie amoksycyliny z kwasem klawulanowym).</li><li><strong>Modyfikacja miejsca docelowego:</strong> zmienione białko PBP2a w gronkowcu <strong>MRSA</strong> uodparnia go na większość β-laktamów.</li><li><strong>Pompy wyrzutowe (efflux pumps)</strong> i utrata poryn w ścianie Gram-ujemnej.</li></ul>"
         }
       ],
       "chapterQuiz": [
@@ -394,11 +394,11 @@
       "pages": [
         {
           "pageNumber": 1,
-          "htmlContent": "<h2 id=\"stan-stacjonarny\">Kinetyka wielokrotnego dawkowania i czas osiągnięcia C<sub>ss</sub></h2><p>W kinetyce liniowej I rzędu szybkość eliminacji jest wprost proporcjonalna do stężenia leku. Przy regularnym podawaniu stałej dawki co okres &tau;, stężenie we krwi rośnie aż szybkość eliminacji zrówna się z szybkością podawania — jest to <strong>stan stacjonarny (C<sub>ss</sub>)</strong>. Czas dojścia do 90–97% C<sub>ss</sub> zależy wyłącznie od biologicznego okresu półtrwania leku i wynosi zawsze <strong>4 do 5 okresów t<sub>1/2</sub></strong> (niezależnie od wielkości dawki).</p>"
+          "htmlContent": "<h2 id=\"stan-stacjonarny\">Kinetyka wielokrotnego dawkowania i czas osiągnięcia C<sub>ss</sub></h2><p>W kinetyce liniowej I rzędu szybkość eliminacji jest wprost proporcjonalna do stężenia leku. Przy regularnym podawaniu stałej dawki co okres τ, stężenie we krwi rośnie aż szybkość eliminacji zrówna się z szybkością podawania — jest to <strong>stan stacjonarny (C<sub>ss</sub>)</strong>. Czas dojścia do 90–97% C<sub>ss</sub> zależy wyłącznie od biologicznego okresu półtrwania leku i wynosi zawsze <strong>4 do 5 okresów t<sub>1/2</sub></strong> (niezależnie od wielkości dawki).</p>"
         },
         {
           "pageNumber": 2,
-          "htmlContent": "<h2 id=\"dawka-nasycajaca\">Dawka nasycająca i objętość dystrybucji V<sub>d</sub></h2><p>Gdy t<sub>1/2</sub> leku jest bardzo długi (np. amiodaron, digoksyna), czekanie 5 okresów półtrwania trwałoby dni lub tygodnie. W stanach nagłych stosuje się <strong>dawkę nasycającą</strong> (zależną głównie od objętości dystrybucji: <code>D<sub>nas</sub> &approx; C<sub>cel</sub> &middot; V<sub>d</sub> / F</code>), by natychmiast wypełnić kompartment tkankowy, a następnie utrzymuje się stężenie <strong>dawką podtrzymującą</strong> równoważną klirensowi (<em>CL</em>).</p>"
+          "htmlContent": "<h2 id=\"dawka-nasycajaca\">Dawka nasycająca i objętość dystrybucji V<sub>d</sub></h2><p>Gdy t<sub>1/2</sub> leku jest bardzo długi (np. amiodaron, digoksyna), czekanie 5 okresów półtrwania trwałoby dni lub tygodnie. W stanach nagłych stosuje się <strong>dawkę nasycającą</strong> (zależną głównie od objętości dystrybucji: <code>D<sub>nas</sub> ≈ C<sub>cel</sub> · V<sub>d</sub> / F</code>), by natychmiast wypełnić kompartment tkankowy, a następnie utrzymuje się stężenie <strong>dawką podtrzymującą</strong> równoważną klirensowi (<em>CL</em>).</p>"
         },
         {
           "pageNumber": 3,

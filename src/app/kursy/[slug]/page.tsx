@@ -45,7 +45,7 @@ export default async function KursDetailPage({
   const navigation = getSidebarNavigation();
 
   return (
-    <main>
+    <main className="overflow-x-clip">
       <Topbar navigation={navigation} />
       <CourseDetailView course={course} />
       <Footer />

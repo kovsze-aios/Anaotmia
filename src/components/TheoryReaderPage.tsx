@@ -95,9 +95,9 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
   };
 
   return (
-    <div className="min-h-screen pb-10 pt-[max(1rem,env(safe-area-inset-top))]">
+    <div className="min-h-screen overflow-x-clip pb-16 pt-[max(1rem,env(safe-area-inset-top))]">
       <nav aria-label="Okruszki" className="mx-auto w-full max-w-3xl px-4 pb-2 text-sm">
-        <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
+        <ol className="flex min-w-0 flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
           <li>
             <Link href="/" className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100">
               Strona główna
@@ -110,7 +110,7 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
             </Link>
           </li>
           <li aria-hidden="true">/</li>
-          <li className="truncate">
+          <li className="min-w-0 truncate">
             <Link
               href={`${basePath}/${domain.sections[0]?.id ?? ""}`}
               className="focus-ring rounded-sm hover:text-zinc-900 dark:hover:text-zinc-100"
@@ -119,7 +119,7 @@ export function TheoryReaderPage({ subject, subjectLabel, id }: TheoryReaderPage
             </Link>
           </li>
           <li aria-hidden="true">/</li>
-          <li aria-current="page" className="truncate text-zinc-900 dark:text-zinc-100">
+          <li aria-current="page" className="min-w-0 truncate text-zinc-900 dark:text-zinc-100">
             {section.title}
           </li>
         </ol>

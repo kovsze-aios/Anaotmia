@@ -170,7 +170,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -181,17 +181,19 @@
     letter-spacing: -0.16px;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
   }
 }
 
-/* Kenhub utility classes */
-.l-container {
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 0;
+@layer components {
+  /* Kenhub container — lives in @layer components so Tailwind spacing utilities (pb-*, pt-*) can override it. */
+  .l-container {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-inline: 16px;
+  }
 }
 
 .btn {
@@ -1219,6 +1221,7 @@ main hr {
 .textbook-layout {
   display: flex;
   min-height: 100vh;
+  overflow-x: clip;
   background: #000000;
 }
 
@@ -1366,6 +1369,7 @@ main hr {
 /* Main Content */
 .textbook-content {
   flex: 1;
+  min-width: 0;
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 32px 80px;
@@ -1777,7 +1781,7 @@ main hr {
 .footer-minimal {
   width: 100%;
   background: #fafafa;
-  padding: 40px 0;
+  padding: 44px 0 max(84px, calc(env(safe-area-inset-bottom) + 64px));
   border-top: 1px solid #e4e4e7;
 }
 
@@ -1819,6 +1823,13 @@ main hr {
     flex-direction: column-reverse;
     gap: 20px;
     text-align: center;
+  }
+}
+
+/* Give the right-hand Donate button extra clearance from the fixed Zofia TTS button on medium viewports. */
+@media (min-width: 641px) and (max-width: 1120px) {
+  .footer-minimal__bar {
+    padding-right: 60px;
   }
 }
 
@@ -1988,6 +1999,7 @@ main hr {
 .matura-layout {
   display: flex;
   min-height: calc(100vh - 60px);
+  overflow-x: clip;
   background: #000000;
 }
 
@@ -2116,6 +2128,7 @@ main hr {
 /* Main content */
 .matura-content {
   flex: 1;
+  min-width: 0;
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 32px 80px;

@@ -8050,7 +8050,7 @@
         "pointsLabel": "0–1 pkt",
         "operationalVerb": "Rozwiąż",
         "answerText": "0,25 (mg/l)",
-        "marginNote": "[Rozwiąż] wartość MIC: • 0,25 (mg/l) • 0,125 &lt; MIC ≤ 0,25 (mg/l) wartość MBC: • 2,0 (mg/l) • 1,0 &lt; MBC ≤ 2,0 (mg/l)"
+        "marginNote": "[Rozwiąż] wartość MIC: • 0,25 (mg/l) • 0,125 < MIC ≤ 0,25 (mg/l) wartość MBC: • 2,0 (mg/l) • 1,0 < MBC ≤ 2,0 (mg/l)"
       },
       {
         "id": "biologia-2022-maj-f2015-p6-z6.2",
@@ -12031,7 +12031,7 @@
         "pointsLabel": "0–2 pkt",
         "operationalVerb": "Oblicz",
         "answerText": "Sposób I + [NH ] 100% α 4 ⋅ = c NH 3 K K c c < ⇒ = ⇒ = ⇒ 2 b b NH NH α 5% α α 3 3 5 4 2 − − − 1,8 10 α 1,8 10 1,3 10 0,1 ⋅ = = ⋅ = ⋅ = 1,3% Sposób II = = ≈ ⇒ + − x c [NH ] [OH ] i [NH ] 4 3 NH 3 2 5 3 b b NH NH x K x K c x c = ⇒ = ⋅ ⇒ = ⋅ ⋅ = ⋅ − − 1,8 10 0,1 1,3 10 3 3 x c + % NH 100% = ⋅ 4 NH 3 3 − + 1,3 10 % NH 100% 0,1 ⋅ = ⋅ = 1,3% 4",
-        "marginNote": "[Oblicz] Sposób I + [NH ] 100% α 4 ⋅ = c NH 3 K K c c &lt; ⇒ = ⇒ = ⇒ 2 b b NH NH α 5% α α 3 3 5 4 2 − − − 1,8 10 α 1,8 10 1,3 10 0,1 ⋅ = = ⋅ = ⋅ = 1,3% Sposób II = = ≈ ⇒ + − x c [NH ] [OH ] i [NH ] 4 3 NH 3 2 5 3 b b NH..."
+        "marginNote": "[Oblicz] Sposób I + [NH ] 100% α 4 ⋅ = c NH 3 K K c c < ⇒ = ⇒ = ⇒ 2 b b NH NH α 5% α α 3 3 5 4 2 − − − 1,8 10 α 1,8 10 1,3 10 0,1 ⋅ = = ⋅ = ⋅ = 1,3% Sposób II = = ≈ ⇒ + − x c [NH ] [OH ] i [NH ] 4 3 NH 3 2 5 3 b b NH..."
       }
     ],
     "6": [
@@ -12606,7 +12606,7 @@
         "pointsLabel": "0–2 pkt",
         "operationalVerb": "Oceń P/F / Oblicz",
         "answerText": "Ponieważ w obu przypadkach α < 5% ⇒ K = α2·cₒ + = c α ] H [ ⇒ α K = +] H [ ο Roztwór II: 2 4 10 43 0 0043 0 0415 0 10 8,1 ] H [ − − + ⋅ = = ⋅ = ⇒ 2 10 43 0 log pH − ⋅ − = pH = 2,4 Ocena, np.: Wyższa wartość stopnia dysocjacji kwasu w roztworze nie oznacza, że roztwór ma bardziej kwasowy odczyn.",
-        "marginNote": "[Oceń P/F / Oblicz] e Ponieważ w obu przypadkach α &lt; 5% ⇒ K = α2·cₒ + = c α ] H [ ⇒ α K = +] H [ ο Roztwór II: 2 4 10 43 ,0 0043 ,0 0415 ,0 10 8,1 ] H [ − − + ⋅ = = ⋅ = ⇒ 2 10 43 ,0 log pH − ⋅ − = pH = 2,4 Ocena, np.: Wyższa wa..."
+        "marginNote": "[Oceń P/F / Oblicz] e Ponieważ w obu przypadkach α < 5% ⇒ K = α2·cₒ + = c α ] H [ ⇒ α K = +] H [ ο Roztwór II: 2 4 10 43 ,0 0043 ,0 0415 ,0 10 8,1 ] H [ − − + ⋅ = = ⋅ = ⇒ 2 10 43 ,0 log pH − ⋅ − = pH = 2,4 Ocena, np.: Wyższa wa..."
       },
       {
         "id": "chemia-2016-maj-f2015-p19-z32",
@@ -13481,7 +13481,7 @@
         "pointsLabel": "0–1 pkt",
         "operationalVerb": "Uzasadnij / Określ",
         "answerText": "Przykłady poprawnej odpowiedzi",
-        "marginNote": "[Uzasadnij / Określ] Zadanie 24 Schemat punktowania 1 p. – za poprawne określenie, czy dla opisanej reakcji ΔH &lt; 0, czy ΔH &gt; 0 i poprawne uzasadnienie odwołujące się do stopnia przemiany metanu lub wydajności procesu. 0 p. – ..."
+        "marginNote": "[Uzasadnij / Określ] Zadanie 24 Schemat punktowania 1 p. – za poprawne określenie, czy dla opisanej reakcji ΔH < 0, czy ΔH > 0 i poprawne uzasadnienie odwołujące się do stopnia przemiany metanu lub wydajności procesu. 0 p. – ..."
       }
     ],
     "15": [
@@ -17507,7 +17507,7 @@
         "pointsLabel": "0–2 pkt",
         "operationalVerb": "Napisz",
         "answerText": "Uszeregowanie: C, A, B Równanie reakcji: H2AsO4 + H₂O ⇌ HAsO4 2– + H₃O⁺ ALBO H2AsO4 ⇌ HAsO4 2– + H⁺ Jon, który może pełnić wyłącznie funkcję kwasu Brønsteda: H₃O⁺",
-        "marginNote": "[Napisz] Uszeregowanie: C, A, B Równanie reakcji: H2AsO4 – + H₂O ⇌ HAsO4 2– + H₃O⁺ ALBO H2AsO4 – ⇌ HAsO4 2– + H⁺ Jon, który może pełnić wyłącznie funkcję kwasu Brønsteda: H₃O⁺ Uwaga: Dopuszcza się odpowiedź: B &gt; A &g..."
+        "marginNote": "[Napisz] Uszeregowanie: C, A, B Równanie reakcji: H2AsO4 – + H₂O ⇌ HAsO4 2– + H₃O⁺ ALBO H2AsO4 – ⇌ HAsO4 2– + H⁺ Jon, który może pełnić wyłącznie funkcję kwasu Brønsteda: H₃O⁺ Uwaga: Dopuszcza się odpowiedź: B > A &g..."
       }
     ],
     "11": [
@@ -20599,7 +20599,7 @@
         "pointsLabel": "0–2 pkt",
         "operationalVerb": "Oblicz",
         "answerText": "𝑀CaC2 = 64 g ∙ mol−1 𝑀CH2=CHCl = 62,5 g ∙ mol−1 𝑚PVC = 𝑚CH2=CHCl = 100 g 64 𝑥 100 g => x = 102,4 g 62,5 = 102,4 g 131,3 g 0,78 = 131,3 g 𝑚karbidu = 0,82 = 160 (g) W = 78 % => 𝑚CaC2 =",
-        "marginNote": "[Oblicz] Sposób 1. 𝑀CaC2 = 64 g ∙ mol−1 𝑀CH2=CHCl = 62,5 g ∙ mol−1 𝑚PVC = 𝑚CH2=CHCl = 100 g 64 𝑥 100 g =&gt; x = 102,4 g 62,5 = 102,4 g 131,3 g 0,78 = 131,3 g 𝑚karbidu = 0,82 = 160 (g) W = 78 % =&gt; 𝑚CaC2 = Sposób 2. 𝑀..."
+        "marginNote": "[Oblicz] Sposób 1. 𝑀CaC2 = 64 g ∙ mol−1 𝑀CH2=CHCl = 62,5 g ∙ mol−1 𝑚PVC = 𝑚CH2=CHCl = 100 g 64 𝑥 100 g => x = 102,4 g 62,5 = 102,4 g 131,3 g 0,78 = 131,3 g 𝑚karbidu = 0,82 = 160 (g) W = 78 % => 𝑚CaC2 = Sposób 2. 𝑀..."
       }
     ],
     "20": [

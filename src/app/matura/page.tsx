@@ -1,5 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  Atom,
+  Beaker,
+  BookOpen,
+  Box,
+  Dna,
+  FileText,
+  FlaskConical,
+  GraduationCap,
+  Home,
+  Leaf,
+} from "lucide-react";
 import { CkeStatusBadge } from "@/components/matura/CkeFormulaControls";
 
 export const metadata: Metadata = {
@@ -13,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function MaturaPage() {
   return (
-    <div className="l-container pb-10 pt-[max(2.25rem,calc(env(safe-area-inset-top)+1rem))]">
+    <div className="l-container overflow-x-clip pb-16 sm:pb-24 pt-[max(2.25rem,calc(env(safe-area-inset-top)+1rem))]">
       {/* Top Global Navigation Strip */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 pb-3 dark:border-zinc-800">
         <div className="flex flex-wrap items-center gap-2 text-xs font-medium">
@@ -21,21 +33,21 @@ export default function MaturaPage() {
             href="/"
             className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
-            <span aria-hidden="true">⌂</span>
+            <Home className="size-3.5 shrink-0" aria-hidden="true" />
             Strona główna
           </Link>
           <Link
             href="/theory"
             className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
-            <span aria-hidden="true">📖</span>
+            <BookOpen className="size-3.5 shrink-0" aria-hidden="true" />
             Podręcznik (Teoria)
           </Link>
           <Link
             href="/atlas"
             className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
-            <span aria-hidden="true">🫀</span>
+            <Box className="size-3.5 shrink-0" aria-hidden="true" />
             Atlas 3D Pro
           </Link>
         </div>
@@ -43,22 +55,24 @@ export default function MaturaPage() {
         <div className="flex flex-wrap items-center gap-2 text-xs">
           <Link
             href="/matura/biologia"
-            className="focus-ring rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
+            className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
-            📝 Arkusze Biologia (1:1)
+            <FileText className="size-3.5 shrink-0" aria-hidden="true" />
+            Arkusze Biologia (1:1)
           </Link>
           <Link
             href="/matura/chemia"
-            className="focus-ring rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
+            className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-700 dark:hover:text-white"
           >
-            🧪 Arkusze Chemia (1:1)
+            <FlaskConical className="size-3.5 shrink-0" aria-hidden="true" />
+            Arkusze Chemia (1:1)
           </Link>
         </div>
       </div>
 
       {/* Unified Top Breadcrumb Bar matching TheoryReaderPage */}
       <nav aria-label="Okruszki" className="pb-4 text-sm">
-        <ol className="flex flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
+        <ol className="flex min-w-0 flex-wrap items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
           <li>
             <Link
               href="/"
@@ -70,7 +84,7 @@ export default function MaturaPage() {
           <li aria-hidden="true">/</li>
           <li
             aria-current="page"
-            className="truncate font-medium text-zinc-800 dark:text-zinc-200"
+            className="min-w-0 truncate font-medium text-zinc-800 dark:text-zinc-200"
           >
             Trening Maturalny
           </li>
@@ -83,8 +97,9 @@ export default function MaturaPage() {
           <CkeStatusBadge status="2023-only" />
           <CkeStatusBadge status="2015-only" />
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
-          🎓 Centrum Maturalne CKE — Podręczniki i Arkusze
+        <h1 className="flex items-center gap-2.5 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
+          <GraduationCap className="size-7 shrink-0 text-zinc-700 dark:text-zinc-300 sm:size-8" aria-hidden="true" />
+          <span>Centrum Maturalne CKE — Podręczniki i Arkusze</span>
         </h1>
         <p className="mt-2 max-w-3xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
           Wybierz dedykowany podręcznik dopasowany do Twojej formuły egzaminacyjnej (Nowa Matura 2023+ lub Formuła 2015) lub rozwiąż pełne 60-punktowe arkusze CKE 1:1 z wyciętymi rycinami, interaktywnymi tabelami P/F i animowanym kluczem <em>lemo-opuscar</em>.
@@ -95,9 +110,11 @@ export default function MaturaPage() {
         1. Podręczniki Maturalne CKE (Poziom Rozszerzony)
       </h2>
       <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <Link href="/theory/biologia-matura-2023" className="matura-card">
+        <Link href="/theory/biologia-matura-2023" className="matura-card min-w-0">
           <div className="mb-2 flex items-center justify-between">
-            <span className="matura-card__icon">🧬</span>
+            <span className="matura-card__icon inline-flex items-center justify-center">
+              <Dna className="size-6 text-zinc-700 dark:text-zinc-300" aria-hidden="true" />
+            </span>
             <CkeStatusBadge status="2023-only" />
           </div>
           <h3 className="matura-card__title">Biologia — Matura Nowa Podstawa (2023+)</h3>
@@ -107,9 +124,11 @@ export default function MaturaPage() {
           <span className="matura-card__cta">Otwórz podręcznik 2023+ →</span>
         </Link>
 
-        <Link href="/theory/biologia-matura-2015" className="matura-card">
+        <Link href="/theory/biologia-matura-2015" className="matura-card min-w-0">
           <div className="mb-2 flex items-center justify-between">
-            <span className="matura-card__icon">🌿</span>
+            <span className="matura-card__icon inline-flex items-center justify-center">
+              <Leaf className="size-6 text-zinc-700 dark:text-zinc-300" aria-hidden="true" />
+            </span>
             <CkeStatusBadge status="2015-only" />
           </div>
           <h3 className="matura-card__title">Biologia — Matura Formuła 2015</h3>
@@ -119,9 +138,11 @@ export default function MaturaPage() {
           <span className="matura-card__cta">Otwórz podręcznik 2015 →</span>
         </Link>
 
-        <Link href="/theory/chemia-matura-2023" className="matura-card">
+        <Link href="/theory/chemia-matura-2023" className="matura-card min-w-0">
           <div className="mb-2 flex items-center justify-between">
-            <span className="matura-card__icon">⚛️</span>
+            <span className="matura-card__icon inline-flex items-center justify-center">
+              <Atom className="size-6 text-zinc-700 dark:text-zinc-300" aria-hidden="true" />
+            </span>
             <CkeStatusBadge status="2023-only" />
           </div>
           <h3 className="matura-card__title">Chemia — Matura Nowa Podstawa (2023+)</h3>
@@ -131,9 +152,11 @@ export default function MaturaPage() {
           <span className="matura-card__cta">Otwórz podręcznik 2023+ →</span>
         </Link>
 
-        <Link href="/theory/chemia-matura-2015" className="matura-card">
+        <Link href="/theory/chemia-matura-2015" className="matura-card min-w-0">
           <div className="mb-2 flex items-center justify-between">
-            <span className="matura-card__icon">⚗️</span>
+            <span className="matura-card__icon inline-flex items-center justify-center">
+              <Beaker className="size-6 text-zinc-700 dark:text-zinc-300" aria-hidden="true" />
+            </span>
             <CkeStatusBadge status="2015-only" />
           </div>
           <h3 className="matura-card__title">Chemia — Matura Formuła 2015</h3>
@@ -148,8 +171,10 @@ export default function MaturaPage() {
         2. Autentyczne Arkusze Egzaminacyjne CKE 1:1 (2015–2024)
       </h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <Link href="/matura/biologia" className="matura-card">
-          <span className="matura-card__icon">📝</span>
+        <Link href="/matura/biologia" className="matura-card min-w-0">
+          <span className="matura-card__icon inline-flex items-center justify-center">
+            <FileText className="size-6 text-zinc-700 dark:text-zinc-300" aria-hidden="true" />
+          </span>
           <h3 className="matura-card__title">Arkusze CKE — Biologia</h3>
           <p className="matura-card__desc">
             Kompletne 60-punktowe arkusze CKE (2023–2024) oraz roczniki 2015–2022: oryginalne strony arkuszy (WebP), interaktywne tabele P/F, podgląd 1:1 oraz 4-etapowy klucz CKE.
@@ -157,8 +182,10 @@ export default function MaturaPage() {
           <span className="matura-card__cta">Przejdź do arkuszy 1:1 →</span>
         </Link>
 
-        <Link href="/matura/chemia" className="matura-card">
-          <span className="matura-card__icon">🧪</span>
+        <Link href="/matura/chemia" className="matura-card min-w-0">
+          <span className="matura-card__icon inline-flex items-center justify-center">
+            <FlaskConical className="size-6 text-zinc-700 dark:text-zinc-300" aria-hidden="true" />
+          </span>
           <h3 className="matura-card__title">Arkusze CKE — Chemia</h3>
           <p className="matura-card__desc">
             Kompletne 60-punktowe arkusze CKE (2023–2024) oraz roczniki 2015–2022: wykresy, wzory strukturalne, brudnopis stechiometryczny, widok Split-View 1:1 i animowany klucz CKE.
